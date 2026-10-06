@@ -73,6 +73,8 @@ whatever web tool is available, or to the bundled notes alone.
 
 ## Network and privacy
 
+Full details: [PRIVACY.md](PRIVACY.md).
+
 - Each run fetches the target's vendor documentation pages (and model-list
   pages) over HTTPS with an identifying user agent,
   `promptgremlin/2.0 (+https://github.com/dean815/promptgremlin)`. It does not

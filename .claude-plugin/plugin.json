@@ -7,5 +7,8 @@
   },
   "license": "MIT",
   "repository": "https://github.com/dean815/promptgremlin",
-  "homepage": "https://github.com/dean815/promptgremlin"
+  "homepage": "https://github.com/dean815/promptgremlin",
+  "privacyPolicyUrl": "https://github.com/dean815/promptgremlin/blob/main/PRIVACY.md",
+  "supportUrl": "https://github.com/dean815/promptgremlin/issues",
+  "documentationUrl": "https://github.com/dean815/promptgremlin#readme"
 }
