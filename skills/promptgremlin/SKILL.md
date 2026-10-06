@@ -54,8 +54,11 @@ id or alias, before building the command. Pass each as a single-quoted
 argument containing only letters, digits, dot, dash, space; strip anything
 else. Never paste raw user text into the command line.
 
-Read all of the output. The header says which model and flagship were used and whether
-sources were checked live. Flags:
+Read all of the output. The header says which model and flagship were used and how fresh
+the sources are: `live <date> <time>` (fetched this run), `cached <date> <time>` (a
+fetch under 24 hours old, no new request), `stale <date>` (cache served because
+the fetch failed or offline), or `notes-only`. It shows the worst state. Only
+`live` means checked this run. Flags:
 
 - `NEW MODEL <id>`: the vendor lists a model the notes don't cover. If it is
   the chosen model, write from the family-wide notes plus any changed text,

@@ -65,7 +65,7 @@ def test_flags_new_retired_and_unfingerprinted_drift():
     assert "model=claude-opus-5-5" in text and "flagship=claude-fable-5-1" in text
     assert "opus delta" in text and "old model rule" not in text
     assert "use /effort" in text and "Say it." in text
-    assert "live 2026-10-01" in text
+    assert "live 2026-10-01 09:00" in text
 
 
 def test_commit_makes_next_run_clean_and_archives_retired():
@@ -165,7 +165,7 @@ def test_cache_fallback_flagged_when_online():
                       today=dt.date(2026, 10, 3), now=NOW + dt.timedelta(days=2))
     text, flags = report.target_report("anthropic", None, ctx2)
     assert "FETCH-FAIL best-practices" in flags, f"flags: {flags}"
-    assert "cache 2026-10-01" in text
+    assert "stale 2026-10-01" in text
 
 
 def test_refresh_commit_needs_all_sources_live():
@@ -332,6 +332,78 @@ def test_two_spec_lineup_one_failing_flags_fetch_fail_and_keeps_other_models():
     assert f.error and f.text is not None
 
 
+def _ctx_with_omni_notes():
+    """Notes cover both specs' models, so a failed spec retires 2 of 4 (below the suspect-parse bar)."""
+    n = dict(NOTES)
+    n["anthropic"] += "\n## omni-2-flash\n- omni rule\n\n## omni-1-flash\n- omni old\n"
+    return _ctx(notes_text=n)
+
+
+def _two_spec_failing_second(ctx):
+    """Two-spec lineup [omni, claude]; the claude spec (second) raises on fetch."""
+    PAGES["https://v/omni.md"] = "## Omni\nomni-2-flash omni-1-flash"
+    ctx.reg["anthropic"]["lineup"] = [
+        {"url": "https://v/omni.md", "format": "md", "model_regex": r"omni-\d+-flash"},
+        {"url": LINEUP_URL, "format": "md", "model_regex": r"claude-(?:opus|fable)-\d+(?:-\d{1,2})?(?!\d)"}]
+    real = fetch._http_get
+
+    def get(url):
+        if url == LINEUP_URL:
+            raise OSError("503 " + url)
+        return real(url)
+    fetch._http_get = get
+
+
+def test_two_spec_lineup_one_failing_does_not_retire_noted_models():
+    ctx = _ctx_with_omni_notes()
+    try:
+        _two_spec_failing_second(ctx)
+        text, flags = report.target_report("anthropic", "claude-opus-5-5", ctx)
+    finally:
+        PAGES.pop("https://v/omni.md", None)
+    assert "FETCH-FAIL anthropic lineup" in flags, flags
+    assert not [f for f in flags if f.startswith("RETIRED")], flags
+    assert "opus delta" in text  # the noted block still prints when chosen
+
+
+def test_two_spec_lineup_failing_spec_falls_back_to_stale_cache_with_error_does_not_retire():
+    """Failed spec served from stale cache (error set): models come from the cache, so NEW MODEL
+    from it is still reported, but retirement is withheld because the lineup is not clean."""
+    ctx = _ctx_with_omni_notes()
+    try:
+        PAGES["https://v/omni.md"] = "## Omni\nomni-2-flash omni-1-flash"
+        ctx.reg["anthropic"]["lineup"] = [
+            {"url": "https://v/omni.md", "format": "md", "model_regex": r"omni-\d+-flash"},
+            {"url": LINEUP_URL, "format": "md", "model_regex": r"claude-(?:opus|fable)-\d+(?:-\d{1,2})?(?!\d)"}]
+        report.target_report("anthropic", None, ctx)  # seed the cache
+        real = fetch._http_get
+
+        def get(url):
+            if url == LINEUP_URL:
+                raise OSError("503 " + url)
+            return real(url)
+        fetch._http_get = get
+        later = ctx.now + dt.timedelta(days=2)
+        ctx = ctx._replace(now=later, today=later.date())
+        text, flags = report.target_report("anthropic", "claude-opus-5-5", ctx)
+    finally:
+        PAGES.pop("https://v/omni.md", None)
+    assert "FETCH-FAIL anthropic lineup" in flags, flags
+    assert "NEW MODEL claude-fable-5-1" in flags, flags
+    assert not [f for f in flags if f.startswith("RETIRED")], flags
+    assert "opus delta" in text
+
+
+def test_refresh_with_failed_lineup_spec_prints_no_retired():
+    ctx = _ctx_with_omni_notes()
+    try:
+        _two_spec_failing_second(ctx)
+        out = report.refresh("anthropic", ctx, commit=False)
+    finally:
+        PAGES.pop("https://v/omni.md", None)
+    assert "retired: -" in out, out
+
+
 def test_empty_lineup_parse_flags_in_report_refresh_and_blocks_commit():
     ctx = _ctx()
     PAGES[LINEUP_URL_EMPTY] = "## Models\nnothing recognizable here"
@@ -483,5 +555,111 @@ def test_output_budget_holds_when_a_big_section_has_drifted():
     PAGES_BP = "## Be clear\n" + ("Changed vendor sentence. " * 80 + "\n\n") * 6
     fetch._http_get = lambda url: PAGES_BP if url == BP_URL else PAGES[url]
     text, flags = report.target_report("anthropic", "opus 5.5", ctx)
-    assert "DRIFT best-practices#Be clear" in flags and "<<<vendor-text" in text
-    assert len(text) < 7400, len(text)
+    assert "DRIFT best-practices#Be clear" in flags
+    assert len(text) <= report.OUTPUT_BUDGET, len(text)
+    assert "Omitted (budget):" not in text or "<<<vendor-text" in text
+
+
+def test_refresh_commit_refuses_when_watched_heading_missing():
+    ctx = _ctx()
+    report.refresh("anthropic", ctx, commit=True)
+    reg_before = ctx.reg_path.read_text()
+    fps_before = repr(ctx.reg["anthropic"]["fingerprints"])
+    lv_before = notes.load(ctx.notes_dir / "anthropic.md").meta["last_verified"]
+    ctx.reg["anthropic"]["sources"]["best-practices"]["watch"] = ["Be clear", "Missing heading"]
+    ctx = ctx._replace(today=dt.date(2026, 10, 2))
+    try:
+        report.refresh("anthropic", ctx, commit=True)
+        assert False, "should have raised SystemExit"
+    except SystemExit as e:
+        assert "best-practices#Missing heading" in str(e)
+    assert ctx.reg_path.read_text() == reg_before
+    assert repr(ctx.reg["anthropic"]["fingerprints"]) == fps_before
+    assert notes.load(ctx.notes_dir / "anthropic.md").meta["last_verified"] == lv_before
+    # non-commit still reports the MISSING line
+    assert "MISSING watched headings: Missing heading" in report.refresh("anthropic", ctx)
+
+
+def test_refresh_commit_succeeds_when_all_watched_headings_present():
+    ctx = _ctx()
+    ctx.reg["anthropic"]["sources"]["best-practices"]["watch"] = ["Be clear"]
+    out = report.refresh("anthropic", ctx, commit=True)
+    assert "COMMITTED" in out and "MISSING" not in out
+
+
+def _many_sections_ctx(n=30, cited=None):
+    nt = dict(NOTES)
+    if cited:
+        nt["anthropic"] = nt["anthropic"].replace("- be direct", f"- be direct ({cited})")
+    ctx = _ctx(notes_text=nt)
+    ctx.reg["anthropic"]["sources"]["best-practices"]["watch"] = ["##"]
+    page = "".join(f"## Sec{i:02d}\n" + ("Large changed vendor sentence. " * 60 + "\n\n") for i in range(n))
+    fetch._http_get = lambda url: page if url == BP_URL else PAGES[url]
+    return ctx
+
+
+def test_many_changed_sections_stay_within_total_budget():
+    text, flags = report.target_report("anthropic", "opus 5.5", _many_sections_ctx(30))
+    assert len(text) <= report.OUTPUT_BUDGET, len(text)
+    flags_line = next(l for l in text.splitlines() if l.startswith("FLAGS: "))
+    for i in range(30):
+        assert f"DRIFT best-practices#Sec{i:02d}" in flags
+        assert f"DRIFT best-practices#Sec{i:02d}" in flags_line
+    assert "Omitted (budget):" in text
+    assert "guidance.py --refresh anthropic" in text
+
+
+def test_cited_changed_section_is_included_before_uncited_ones():
+    ctx = _many_sections_ctx(30, cited="best-practices#Sec29")
+    text, _ = report.target_report("anthropic", "opus 5.5", ctx)
+    assert len(text) <= report.OUTPUT_BUDGET
+    first = text.index('<<<vendor-text source="')
+    assert text[first:].startswith('<<<vendor-text source="best-practices#Sec29">>>')
+
+
+def test_few_small_changes_are_all_included_without_omission():
+    ctx = _many_sections_ctx(3)
+    page = "".join(f"## Sec{i:02d}\nsmall change {i}\n\n" for i in range(3))
+    fetch._http_get = lambda url: page if url == BP_URL else PAGES[url]
+    text, _ = report.target_report("anthropic", "opus 5.5", ctx)
+    assert "Omitted (budget)" not in text
+    for i in range(3):
+        assert f"small change {i}" in text
+    assert len(text) <= report.OUTPUT_BUDGET
+
+
+def test_included_sections_stay_fenced_under_budget_pressure():
+    text, _ = report.target_report("anthropic", "opus 5.5", _many_sections_ctx(30))
+    opens = text.count("<<<vendor-text source=")
+    assert opens >= 1
+    assert opens == text.count("<<<end vendor-text>>>")
+
+
+def test_state_summary_orders_stale_cached_live_and_notes_only():
+    F = fetch.Fetched
+    live = F("t", "live", "2026-10-02", None, "10:30")
+    cached = F("t", "cached", "2026-10-01", None, "08:15")
+    stale = F("t", "stale", "2026-09-28", "OSError: x", "07:00")
+    assert report._state_summary([live, cached, stale]) == "stale 2026-09-28"
+    assert report._state_summary([live, cached]) == "cached 2026-10-01 08:15"
+    assert report._state_summary([live]) == "live 2026-10-02 10:30"
+    assert report._state_summary([F("t", "live", "2026-10-02", None, None)]) == "live 2026-10-02"
+    assert report._state_summary([]) == "notes-only"
+
+
+def test_second_run_header_says_cached_and_not_stale_flag():
+    ctx = _ctx()
+    t1, _ = report.target_report("anthropic", "opus 5.5", ctx)
+    assert "live 2026-10-01" in t1
+    fetch._http_get = lambda u: (_ for _ in ()).throw(AssertionError("network called"))
+    t2, flags = report.target_report("anthropic", "opus 5.5", ctx)
+    assert "cached 2026-10-01 09:00" in t2
+    assert not any(x.startswith("STALE") for x in flags)
+
+
+def test_lineup_aggregate_state_worst_wins():
+    F = fetch.Fetched
+    assert report._worst_state(["live", "cached"]) == "cached"
+    assert report._worst_state(["live", "cached", "stale"]) == "stale"
+    assert report._worst_state(["live"]) == "live"
+    assert report._worst_state([]) == "missing"

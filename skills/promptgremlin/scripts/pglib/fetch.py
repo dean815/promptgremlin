@@ -1,4 +1,8 @@
-"""HTTP fetch with a 24-hour disk cache. A fresh cache hit counts as live."""
+"""HTTP fetch with a 24-hour disk cache.
+
+States: live (network fetch succeeded this run), cached (fresh <24h cache hit, no request),
+stale (cache served after a failed fetch or offline), missing.
+"""
 import datetime as dt
 import hashlib
 import json
@@ -18,9 +22,10 @@ DEFAULT_UA = "promptgremlin/2.0 (+https://github.com/dean815/promptgremlin)"
 
 class Fetched(NamedTuple):
     text: Optional[str]
-    state: str            # "live" | "cache" | "missing"
+    state: str            # "live" | "cached" | "stale" | "missing"
     date: Optional[str]   # ISO date the text was fetched
     error: Optional[str] = None
+    time: Optional[str] = None  # HH:MM the text was fetched
 
 
 def _http_get(url):
@@ -58,7 +63,8 @@ def fetch(url, fmt, offline=False, now=None, get=None, force=False):
     get = get or _http_get
     cached = _read_cache(url)
     if cached and not offline and not force and now - cached[1] < MAX_AGE:
-        return Fetched(cached[0], "live", cached[1].date().isoformat())
+        return Fetched(cached[0], "cached", cached[1].date().isoformat(), None,
+                       cached[1].strftime("%H:%M"))
     error = None
     if not offline:
         try:
@@ -68,9 +74,10 @@ def fetch(url, fmt, offline=False, now=None, get=None, force=False):
             body.write_text(text, encoding="utf-8")
             meta.write_text(json.dumps({"url": url, "fetched_at": now.isoformat(timespec="seconds")}),
                             encoding="utf-8")
-            return Fetched(text, "live", now.date().isoformat())
+            return Fetched(text, "live", now.date().isoformat(), None, now.strftime("%H:%M"))
         except Exception as e:
             error = f"{type(e).__name__}: {e}"[:200]
     if cached:
-        return Fetched(cached[0], "cache", cached[1].date().isoformat(), error)
+        return Fetched(cached[0], "stale", cached[1].date().isoformat(), error,
+                       cached[1].strftime("%H:%M"))
     return Fetched(None, "missing", None, error)

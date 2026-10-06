@@ -76,7 +76,9 @@ whatever web tool is available, or to the bundled notes alone.
   `promptgremlin/2.0 (+https://github.com/dean815/promptgremlin)`. It does not
   pretend to be a browser.
 - Responses are cached in `~/.cache/promptgremlin` for 24 hours. Override the
-  location with `PROMPTGREMLIN_CACHE`.
+  location with `PROMPTGREMLIN_CACHE`. The briefing header labels each state:
+  `live` (fetched this run), `cached` (under 24 hours old, no request made),
+  `stale` (cache served after a failed fetch or offline).
 - Nothing you write is sent anywhere: requests carry only the vendor page URLs.
 - The Midjourney and Runway notes are fetched from those vendors' public
   help-center JSON API.
@@ -115,6 +117,14 @@ its standard input. Set it only to a command you trust.
 
 A weekly GitHub Action runs the check and keeps one issue updated when anything
 drifts.
+
+## Evals
+
+`evals/RESULTS.md` reports 98% of assertions passed with the skill versus 50% without. That
+measures compliance with the skill's output contract and targeted behaviour checks (10 evals,
+several runs each, model-graded against fixed assertions). It does not show that the rewritten
+prompts give better downstream answers; a benchmark for that is planned. Runs used a personal
+config and run artifacts are not published.
 
 ## Tests
 

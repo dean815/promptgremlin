@@ -10,8 +10,12 @@ from . import registry as R
 from . import sections as S
 
 CHANGED_CAP = 1500   # per changed section, at most
-OUTPUT_BUDGET = 7400  # whole per-target briefing; changed sections shrink to fit
-MIN_CHANGED = 300
+# OUTPUT_BUDGET is a hard cap on the briefing. The header, FLAGS line and notes parts always print
+# in full; if they alone exceed it, the budget only governs the changed-section block (which then
+# shrinks to nothing and is replaced by the Omitted line).
+OUTPUT_BUDGET = 7400
+MIN_SECTION = 300     # smallest slice worth showing; below this a section is omitted instead
+OMIT_RESERVE = 400    # room kept for the "Omitted (budget)" line when sections are dropped
 
 
 class Ctx(NamedTuple):
@@ -49,9 +53,20 @@ def _lineup(entry, ctx):
     return _lineup_full(entry, ctx)[:3]
 
 
-def _lineup_full(entry, ctx):
-    """_lineup plus a 4th item: True when any spec loaded text but parsed to no models.
+def _worst_state(states):
+    """Aggregate of loaded states: stale < cached < live; "missing" when none loaded."""
+    for st in ("stale", "cached", "live"):
+        if st in states:
+            return st
+    return "missing"
 
+
+def _lineup_full(entry, ctx):
+    """_lineup plus two items: `empty` (a spec loaded text but parsed to no models) and
+    `complete` (every spec loaded text with no error).
+
+    Retirement is only safe when the lineup is complete: a spec that failed leaves its models
+    out of `models`, which would otherwise read as RETIRED.
 
     entry["lineup"] may be one spec or a list of specs. Models from every spec that loaded are
     concatenated in order and de-duplicated; the flagship comes from the first spec that yields
@@ -60,7 +75,7 @@ def _lineup_full(entry, ctx):
     """
     specs = entry.get("lineup")
     if not specs:
-        return [], None, None, False
+        return [], None, None, False, False
     if isinstance(specs, dict):
         specs = [specs]
     models, flagship, fetched, empty = [], None, [], False
@@ -73,17 +88,18 @@ def _lineup_full(entry, ctx):
         empty = empty or not found
         flagship = flagship or L.flagship(found, spec)
         models += [m for m in found if m not in models]
+    complete = all(f.text is not None and not f.error for f in fetched)
     if len(fetched) == 1:
-        return models, flagship, fetched[0], empty
+        return models, flagship, fetched[0], empty, complete
     loaded = [f for f in fetched if f.text is not None]
     errors = [f.error for f in fetched if f.error or f.text is None]
     states = {f.state for f in loaded}
     agg = F.Fetched(
         "\n".join(f.text for f in loaded) if loaded else None,
-        "cache" if "cache" in states else ("live" if loaded else "missing"),
+        _worst_state(states),
         min((f.date for f in loaded), default=None),
         "; ".join(e or "no text" for e in errors) or None)
-    return models, flagship, agg, empty
+    return models, flagship, agg, empty, complete
 
 
 def _source_urls(name, src, model_ids):
@@ -112,7 +128,7 @@ def _collect(key, model, ctx, expand_all=False):
     note_ids = N.model_ids(notes)
     flags, changed, states = [], [], []
 
-    models, flagship, lf, empty = _lineup_full(entry, ctx)
+    models, flagship, lf, empty, complete = _lineup_full(entry, ctx)
     if empty:
         flags.append(f"FETCH-FAIL {key} lineup (empty parse)")
     if lf is not None:
@@ -131,6 +147,8 @@ def _collect(key, model, ctx, expand_all=False):
             retired = []  # Don't retire on suspect parse
         else:
             new, retired = L.compare(models, note_ids)
+            if not complete:
+                retired = []  # a failed spec's models are missing, not retired
             flags += [f"NEW MODEL {m}" for m in new] + [f"RETIRED {m}" for m in retired]
 
     chosen = None
@@ -166,7 +184,8 @@ def _collect(key, model, ctx, expand_all=False):
             if f.error and not ctx.offline and not quiet:
                 flags.append(f"FETCH-FAIL {fp_key}")
             states.append(f)
-            if f.state == "live" and not src.get("optional"):
+            # cached = verified live < 24h ago, so it still counts as recently verified
+            if f.state in ("live", "cached") and not src.get("optional"):
                 live_ok = True
             if "url_pattern" in src and fp_key not in stored_fps:
                 # notes for this model were never verified against its page; one flag, no dump
@@ -200,14 +219,71 @@ def _collect(key, model, ctx, expand_all=False):
 
 
 def _state_summary(states):
-    """Report worst state: cache (oldest date) < live (newest date) < notes-only."""
-    cache = [s.date for s in states if s.state == "cache"]
-    if cache:
-        return f"cache {min(cache)}"
-    live = [s.date for s in states if s.state == "live"]
-    if live:
-        return f"live {max(live)}"
+    """Report the worst state: stale < cached < live < notes-only.
+
+    Uses that state's actual retrieval date (oldest for stale, cached; newest for live) and
+    HH:MM when the cache metadata has it.
+    """
+    for st, pick in (("stale", min), ("cached", min), ("live", max)):
+        group = [s for s in states if s.state == st and s.date]
+        if group:
+            best = pick(group, key=lambda s: (s.date, s.time or ""))
+            return f"{st} {best.date}" + (f" {best.time}" if best.time and st != "stale" else "")
     return "notes-only"
+
+
+def _changed_block(key, c, base):
+    """Changed-section block that keeps len(base + block) <= OUTPUT_BUDGET where possible.
+
+    Sections cited by an origin tag in the printed notes come first, then the rest in order.
+    Each gets its cleaned text capped to the remaining room (at least MIN_SECTION); once one
+    cannot fit, the remainder is listed on an Omitted line.
+    """
+    heading = "## Changed since notes were written"
+    notes_text = "\n\n".join(c.parts)
+    ordered = [x for x in c.changed if x[0] in notes_text] + [x for x in c.changed if x[0] not in notes_text]
+    wrap_overhead = len(_wrap_vendor_text("", ""))
+
+    def build(room):
+        out, omitted = [], []
+        for i, (d, b) in enumerate(ordered):
+            body = S.clean(b)
+            head = f"### {d}\n\n"
+            avail = room - 2 - len(head) - wrap_overhead   # 2 = joining blank line
+            need = min(MIN_SECTION, len(body))
+            if avail < need:
+                omitted = [x[0] for x in ordered[i:]]
+                break
+            limit = min(CHANGED_CAP, avail)
+            while True:
+                entry = head + _wrap_vendor_text(d, S.cap(body, limit))
+                if len(entry) + 2 <= room or limit <= need:
+                    break
+                limit = max(need, limit - (len(entry) + 2 - room))
+            if len(entry) + 2 > room:
+                omitted = [x[0] for x in ordered[i:]]
+                break
+            out.append(entry)
+            room -= len(entry) + 2
+        return out, omitted
+
+    room = OUTPUT_BUDGET - len(base) - 2 - len(heading)
+    entries, omitted = build(room)
+    if omitted:
+        entries, omitted = build(room - OMIT_RESERVE)
+    parts = [heading] + entries
+    if omitted:
+        tail = f" — run guidance.py --refresh {key} for full text."
+        names, more = list(omitted), 0
+        while True:
+            extra = f" and {more} more" if more else ""
+            line = "Omitted (budget): " + ", ".join(names) + extra + tail
+            if len(line) <= OMIT_RESERVE or len(names) <= 1:
+                break
+            names.pop()
+            more += 1
+        parts.append(line)
+    return "\n\n".join(parts)
 
 
 def target_report(key, model, ctx):
@@ -218,11 +294,7 @@ def target_report(key, model, ctx):
         lines.append("FLAGS: " + "; ".join(c.flags))
     lines += c.parts
     if c.changed:
-        lines.append("## Changed since notes were written")
-        used = len("\n\n".join(lines)) + sum(130 + 2 * len(d) for d, _ in c.changed)   # headings and delimiters
-        used += 100   # slack for the truncation note
-        cap = max(MIN_CHANGED, min(CHANGED_CAP, (OUTPUT_BUDGET - used) // len(c.changed)))
-        lines += [f"### {d}\n\n{_wrap_vendor_text(d, S.cap(S.clean(b), cap))}" for d, b in c.changed]
+        lines.append(_changed_block(key, c, "\n\n".join(lines)))
     return "\n\n".join(lines), c.flags
 
 
@@ -250,7 +322,7 @@ def lineup_report(ctx):
         entry = ctx.reg[key]
         if not entry.get("lineup"):
             continue
-        models, flagship, f, empty = _lineup_full(entry, ctx)
+        models, flagship, f, empty, _ = _lineup_full(entry, ctx)
         if f is not None and f.text is None:
             lines.append(f"{key}: (lineup unavailable: {f.error})")
         else:
@@ -267,7 +339,7 @@ def refresh(key, ctx, commit=False):
     path = ctx.notes_dir / f"{key}.md"
     notes = N.load(path) if path.exists() else None
     note_ids = N.model_ids(notes) if notes else []
-    models, flagship, lf, empty = _lineup_full(entry, ctx)
+    models, flagship, lf, empty, complete = _lineup_full(entry, ctx)
 
     # Check lineup validity for commit
     if commit and lf and lf.error:
@@ -292,7 +364,7 @@ def refresh(key, ctx, commit=False):
         matched = sum(1 for m in note_ids if m in models)
         out.append(f"FETCH-FAIL {key} lineup (suspect parse: matched {matched} of {len(note_ids)} noted models)")
     else:
-        retired = [m for m in note_ids if models and m not in models]
+        retired = [m for m in note_ids if models and complete and m not in models]
         keep = [m for m in note_ids if m not in retired] if notes else models
         out = [f"# refresh {key}", f"lineup: {', '.join(models) or '(none)'}",
                f"flagship: {flagship or '-'}", f"retired: {', '.join(retired) or '-'}"]
@@ -300,6 +372,7 @@ def refresh(key, ctx, commit=False):
         out.append(f"FETCH-FAIL {key} lineup (empty parse)")
     fps = {}
     not_live_sources = []
+    missing_watched = []
     for name, src in entry.get("sources", {}).items():
         for fp_key, url in _source_urls(name, src, keep):
             f = _get(url, src["format"], ctx)
@@ -316,6 +389,7 @@ def refresh(key, ctx, commit=False):
             out.append("headings: " + (" | ".join(heads) or "(none)"))
             if missing:
                 out.append("MISSING watched headings: " + ", ".join(missing))
+                missing_watched += [f"{fp_key}#{h}" for h in missing]
             out += [f"### {t}\n\n{S.clean(b)}" for t, b in found.items()]
             fps[fp_key] = {"sections": {t: S.fingerprint(b) for t, b in found.items()},
                            "headings": heads}
@@ -325,6 +399,9 @@ def refresh(key, ctx, commit=False):
             raise SystemExit(f"promptgremlin: write targets/{key}.md before --commit")
         if not_live_sources:
             raise SystemExit(f"promptgremlin: --commit needs every source live; not live: {', '.join(not_live_sources)}")
+        if missing_watched:
+            raise SystemExit(f"promptgremlin: --commit refused; watched headings missing: {', '.join(missing_watched)}; "
+                             "update the watch list in sources.json (and the notes) first")
         merged = {**entry.get("fingerprints", {}), **fps}
         entry["fingerprints"] = {k: v for k, v in merged.items()
                                  if not any(k.endswith(":" + m) for m in retired)}

@@ -29,7 +29,7 @@ def test_live_fetch_converts():
         return "# Hi\n<Tip>\nbody\n</Tip>"
 
     r = f.fetch("https://x/a.md", "md", get=get, now=NOW)
-    assert r.state == "live" and r.date == "2026-10-01"
+    assert r.state == "live" and r.date == "2026-10-01" and r.time == "09:00"
     assert "body" in r.text and "<Tip>" not in r.text
     assert calls == ["https://x/a.md"]
 
@@ -38,14 +38,15 @@ def test_fresh_cache_skips_network():
     _fresh_cache()
     f.fetch("u", "md", get=lambda u: "# A", now=NOW)
     r = f.fetch("u", "md", get=_boom, now=NOW + dt.timedelta(hours=3))
-    assert r.state == "live" and r.text == "# A"
+    assert r.state == "cached" and r.text == "# A"
+    assert r.date == "2026-10-01" and r.time == "09:00" and r.error is None
 
 
 def test_stale_cache_served_when_network_fails():
     _fresh_cache()
     f.fetch("u", "md", get=lambda u: "# A", now=NOW)
     r = f.fetch("u", "md", get=_down, now=NOW + dt.timedelta(days=2))
-    assert r.state == "cache" and r.date == "2026-10-01"
+    assert r.state == "stale" and r.date == "2026-10-01"
     assert "OSError" in r.error
 
 
@@ -53,7 +54,7 @@ def test_offline_uses_old_cache_without_network():
     _fresh_cache()
     f.fetch("u", "md", get=lambda u: "# A", now=NOW)
     r = f.fetch("u", "md", offline=True, get=_boom, now=NOW + dt.timedelta(days=30))
-    assert r.state == "cache" and r.text == "# A"
+    assert r.state == "stale" and r.text == "# A"
 
 
 def test_missing_when_no_network_and_no_cache():
@@ -109,7 +110,7 @@ def test_bot_challenge_with_cache_returns_cache_with_error():
     _fresh_cache()
     f.fetch("u", "html", get=lambda u: "<html><body><h1>Doc</h1><p>Real.</p></body></html>", now=NOW)
     r = f.fetch("u", "html", get=lambda u: CHALLENGE, now=NOW + dt.timedelta(days=2))
-    assert r.state == "cache" and "bot challenge page" in r.error
+    assert r.state == "stale" and "bot challenge page" in r.error
     assert "Real." in r.text
 
 
@@ -131,7 +132,7 @@ def test_force_falls_back_to_cache_with_error_when_network_fails():
     _fresh_cache()
     f.fetch("u", "md", get=lambda u: "# Old", now=NOW)
     r = f.fetch("u", "md", force=True, get=_down, now=NOW + dt.timedelta(hours=1))
-    assert r.state == "cache" and r.text == "# Old" and "OSError" in r.error
+    assert r.state == "stale" and r.text == "# Old" and "OSError" in r.error
 
 
 def test_http_get_sends_only_the_honest_identifying_ua():

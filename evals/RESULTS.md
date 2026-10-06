@@ -4,6 +4,16 @@ Date: 2026-10-01 (full run), 2026-10-06 (re-check of evals 2, 4 and 8). Model fo
 graders: claude-sonnet-5-5. The 10 evals and their assertions are in `evals.json`; evals 1 and 2
 use generic example projects.
 
+## What this measures
+
+The pass rate is compliance with the skill's output contract plus targeted behaviour checks
+(splitting, porting, autopsy, injection handling, effort lines, Jev spec shape), on 10 evals
+with several runs each, graded by a model against the fixed assertions in `evals.json`. It does
+not measure whether the rewritten prompts produce better downstream answers. The without-skill
+baseline mostly fails because it does not follow the skill's output format, so the gap is not
+evidence of better prompts. Runs used a personal config, and run artifacts are not published.
+A downstream-quality benchmark is planned.
+
 ## Method
 
 - Executors ran headless (`claude -p`, tools limited to Bash and Read, no MCP servers, so no
@@ -20,11 +30,11 @@ use generic example projects.
 
 | Metric | With skill | Without skill | Delta |
 |---|---|---|---|
-| Pass rate | 98% ± 5% | 50% ± 24% | +0.49 |
+| Assertion pass rate | 98% ± 5% | 50% ± 24% | +0.49 |
 | Time per run | 17.7 s ± 5.0 s | 8.7 s ± 2.0 s | +9.0 s |
 | Tokens per run | 41,878 ± 15,145 | 13,963 ± 3,224 | +27,914 |
 
-Bar (with_skill >= 0.90 and above baseline): met. Time and tokens include the forked-skill
+Bar (with_skill >= 0.90 and above baseline, on these assertions): met. Time and tokens include the forked-skill
 overhead; the baseline is a single model turn, so the deltas are expected.
 
 Per eval, with vs without the skill:
