@@ -1,0 +1,12 @@
+{
+  "name": "promptgremlin",
+  "owner": { "name": "dean815" },
+  "description": "Turn braindumps into paste-ready prompts for any AI model or tool, using each vendor's current official guidance.",
+  "plugins": [
+    {
+      "name": "promptgremlin",
+      "source": "./",
+      "description": "Turn braindumps into paste-ready prompts for any AI model or tool, using each vendor's current official guidance."
+    }
+  ]
+}

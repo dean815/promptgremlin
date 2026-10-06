@@ -1,0 +1,11 @@
+{
+  "name": "promptgremlin",
+  "version": "2.0.0",
+  "description": "Turn braindumps into paste-ready prompts for any AI model or tool, using each vendor's current official guidance.",
+  "author": {
+    "name": "dean815"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/dean815/promptgremlin",
+  "homepage": "https://github.com/dean815/promptgremlin"
+}

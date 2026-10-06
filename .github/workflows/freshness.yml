@@ -1,0 +1,57 @@
+name: freshness
+on:
+  schedule:
+    - cron: "17 13 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Unit tests
+        run: python3 skills/promptgremlin/scripts/run_tests.py
+      - name: Freshness check
+        id: check
+        run: |
+          set +e
+          python3 skills/promptgremlin/scripts/guidance.py --check-all > report.txt 2>&1
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+          cat report.txt
+      - name: Open or update the freshness issue
+        if: steps.check.outputs.code != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Freshness: sources or lineups changed"
+          num=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
+          {
+            echo "Weekly check $(date -u +%F). For each flagged target: \`guidance.py --refresh <target>\`, update \`targets/<target>.md\`, then \`--refresh <target> --commit\`."
+            echo
+            echo '```'
+            grep -v ': OK$' report.txt
+            echo '```'
+          } > body.md
+          # One open issue, rewritten in place each week (no comment pile-up).
+          if [ -n "$num" ]; then gh issue edit "$num" --body-file body.md
+          else gh issue create --title "$title" --body-file body.md; fi
+      - name: Close the freshness issue when clean
+        if: steps.check.outputs.code == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Freshness: sources or lineups changed"
+          num=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$num" ]; then
+            gh issue close "$num" --comment "Clean as of $(date -u +%F)."
+          fi
+      - name: Fail the job if the check itself broke
+        if: steps.check.outputs.code != '0' && steps.check.outputs.code != '1'
+        run: |
+          echo "guidance.py --check-all exited ${{ steps.check.outputs.code }} (expected 0 or 1)"
+          exit 1

@@ -1,0 +1,3134 @@
+{
+  "anthropic": {
+    "kind": "family",
+    "aliases": [
+      "claude",
+      "claude-ai",
+      "claude-api"
+    ],
+    "lineup": {
+      "url": "https://platform.claude.com/docs/en/about-claude/models/overview.md",
+      "format": "md",
+      "model_regex": "claude-[a-z]+-\\d+(?:-\\d{1,2})?(?!\\d)"
+    },
+    "sources": {
+      "best-practices": {
+        "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices.md",
+        "format": "md",
+        "watch": [
+          "Be clear and direct",
+          "Add context to improve performance",
+          "Use examples effectively",
+          "Structure prompts with XML tags",
+          "Give Claude a role",
+          "Long context prompting",
+          "Communication style and verbosity",
+          "Control the format of responses",
+          "Tool usage",
+          "Optimize parallel tool calling",
+          "Overthinking and excessive thoroughness",
+          "Long-horizon reasoning and state tracking",
+          "Balancing autonomy and safety",
+          "Subagent orchestration",
+          "Chain complex prompts",
+          "Reduce file creation in agentic coding",
+          "Overeagerness",
+          "Avoid focusing on passing tests and hardcoding",
+          "Minimizing hallucinations in agentic coding"
+        ]
+      },
+      "model-pages": {
+        "url_pattern": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-{model}.md",
+        "format": "md",
+        "optional": true
+      },
+      "effort": {
+        "url": "https://platform.claude.com/docs/en/build-with-claude/effort.md",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "best-practices": {
+        "sections": {
+          "Be clear and direct": "sha256:31efd4c8ec235b6b",
+          "Add context to improve performance": "sha256:61bfb9c786b32839",
+          "Use examples effectively": "sha256:e921e86eed6cd9c7",
+          "Structure prompts with XML tags": "sha256:b1d01aa9ff218e21",
+          "Give Claude a role": "sha256:84ffb3c38a3326cc",
+          "Long context prompting": "sha256:eee32ec09cfc5955",
+          "Communication style and verbosity": "sha256:213f8b8b1c9c9a9b",
+          "Control the format of responses": "sha256:49bf1aa183ad8e6c",
+          "Tool usage": "sha256:562bb0fdd9887ef1",
+          "Optimize parallel tool calling": "sha256:1a49b6457c27ced9",
+          "Overthinking and excessive thoroughness": "sha256:4d979d45997c89fb",
+          "Long-horizon reasoning and state tracking": "sha256:595031d553149200",
+          "Balancing autonomy and safety": "sha256:40ab906f2fb9fb80",
+          "Subagent orchestration": "sha256:c6f846f86a253180",
+          "Chain complex prompts": "sha256:60048ffb2f01c6a6",
+          "Reduce file creation in agentic coding": "sha256:5f7fa925a409c013",
+          "Overeagerness": "sha256:1e593f63a409abdf",
+          "Avoid focusing on passing tests and hardcoding": "sha256:550d26f3cd0d0195",
+          "Minimizing hallucinations in agentic coding": "sha256:7c26933f7162458b"
+        },
+        "headings": [
+          "Model-specific guidance",
+          "General principles",
+          "Be clear and direct",
+          "Add context to improve performance",
+          "Use examples effectively",
+          "Structure prompts with XML tags",
+          "Give Claude a role",
+          "Long context prompting",
+          "Model self-knowledge",
+          "Output and formatting",
+          "Communication style and verbosity",
+          "Control the format of responses",
+          "LaTeX output",
+          "Document creation",
+          "Migrating away from prefilled responses",
+          "Tool use",
+          "Tool usage",
+          "Optimize parallel tool calling",
+          "Thinking and reasoning",
+          "Overthinking and excessive thoroughness",
+          "Leverage thinking & interleaved thinking capabilities",
+          "Agentic systems",
+          "Long-horizon reasoning and state tracking",
+          "Balancing autonomy and safety",
+          "Research and information gathering",
+          "Subagent orchestration",
+          "Chain complex prompts",
+          "Reduce file creation in agentic coding",
+          "Overeagerness",
+          "Avoid focusing on passing tests and hardcoding",
+          "Minimizing hallucinations in agentic coding",
+          "Capability-specific tips",
+          "Improved vision capabilities",
+          "Frontend design",
+          "Migration considerations",
+          "Migrating to Claude Sonnet 5.5",
+          "Next steps"
+        ]
+      },
+      "model-pages:claude-fable-5-1": {
+        "sections": {
+          "Consider all effort levels": "sha256:d8f247aee3e117e1",
+          "Ask for user-facing progress updates": "sha256:3066c457e0fff9db",
+          "Batch independent tool calls in agent loops": "sha256:637ebab1e38c17be",
+          "Keep the conversation history append-only": "sha256:eb65ef364d7e2177",
+          "Writing density": "sha256:7819a3bebb945b09",
+          "Formatting in chat": "sha256:561fcf38a48e0b36",
+          "Quoting retrieved sources": "sha256:d8a49308421529f0",
+          "Finish the whole task": "sha256:11275acb9cdb15df",
+          "Tell the model what to preserve in compaction summaries": "sha256:2d5986e3c0ba1073",
+          "Keep changes and tests to what the task asks for": "sha256:4dbe6e89fd708e45",
+          "Search triggering at low effort": "sha256:c02e2e4676ddba3a",
+          "Reduce safeguard false positives": "sha256:8ada3ee233daddcc",
+          "Prefer targeted edits over whole-file rewrites": "sha256:fe585e55616095f5",
+          "Leave room for long outputs at xhigh and max effort": "sha256:2a7e9c9dec6ad344",
+          "Let the lead agent keep working while subagents run": "sha256:e27166e8ba946a33",
+          "Give vision work tools to crop and zoom": "sha256:79e02dd747d82979"
+        },
+        "headings": [
+          "Consider all effort levels",
+          "Ask for user-facing progress updates",
+          "Batch independent tool calls in agent loops",
+          "Keep the conversation history append-only",
+          "Writing density",
+          "Formatting in chat",
+          "Quoting retrieved sources",
+          "Finish the whole task",
+          "Tell the model what to preserve in compaction summaries",
+          "Keep changes and tests to what the task asks for",
+          "Search triggering at low effort",
+          "Reduce safeguard false positives",
+          "Prefer targeted edits over whole-file rewrites",
+          "Leave room for long outputs at xhigh and max effort",
+          "Let the lead agent keep working while subagents run",
+          "Give vision work tools to crop and zoom"
+        ]
+      },
+      "model-pages:claude-opus-5-5": {
+        "sections": {
+          "Capabilities relevant to prompting": "sha256:25e80e255b415674",
+          "Calibrate effort": "sha256:dbd0b5bdc13c7288",
+          "Prompts written for thinking disabled": "sha256:bcc19f3f5d8ad953",
+          "Unattended agentic runs": "sha256:f4213f88bec12bea",
+          "Safeguard refusals": "sha256:32b93e4c1ace2007",
+          "User-facing progress updates": "sha256:f21579fe8cffd1b3",
+          "Explore context in multi-app workflows": "sha256:974912549c950a7c",
+          "Time signals for multiagent harnesses": "sha256:8195f0bdaa147803",
+          "Thinking instructions in chat system prompts": "sha256:386faa7be5bc6ee7",
+          "Mark pasted text in user messages": "sha256:24fec6b0b4bd8578",
+          "Tools for complex visual inputs": "sha256:0928ca59528b4ed4",
+          "Frontend design defaults": "sha256:ea232f231446bd71"
+        },
+        "headings": [
+          "Capabilities relevant to prompting",
+          "Calibrate effort",
+          "Prompts written for thinking disabled",
+          "Unattended agentic runs",
+          "Safeguard refusals",
+          "User-facing progress updates",
+          "Explore context in multi-app workflows",
+          "Time signals for multiagent harnesses",
+          "Thinking instructions in chat system prompts",
+          "Mark pasted text in user messages",
+          "Tools for complex visual inputs",
+          "Frontend design defaults"
+        ]
+      },
+      "model-pages:claude-sonnet-5-5": {
+        "sections": {
+          "Calibrate effort": "sha256:062b4b735715e87b",
+          "Steer initiative and scope": "sha256:327bb362aada5f94",
+          "Running without up-front thinking": "sha256:7ee0169fef404909",
+          "Reasoning tasks with JSON output": "sha256:beccc4f754766c31",
+          "User-facing progress updates": "sha256:4ec708edeb4ea04d",
+          "Tool use in chat and knowledge work": "sha256:90d91bc8c26f72f0",
+          "Mid-turn user messages": "sha256:3b2ac43a1564effe",
+          "Verification on coding tasks": "sha256:da208cc6f7045bf9",
+          "Tolerant tool-call handling": "sha256:45058e40bf9a9c26",
+          "Tools for complex visual inputs": "sha256:bf0ac46e5543e322",
+          "Safeguard refusals": "sha256:96fe26c47b959821"
+        },
+        "headings": [
+          "Calibrate effort",
+          "Steer initiative and scope",
+          "Running without up-front thinking",
+          "Reasoning tasks with JSON output",
+          "User-facing progress updates",
+          "Tool use in chat and knowledge work",
+          "Mid-turn user messages",
+          "Verification on coding tasks",
+          "Tolerant tool-call handling",
+          "Tools for complex visual inputs",
+          "Safeguard refusals"
+        ]
+      },
+      "effort": {
+        "sections": {
+          "Set the effort level": "sha256:d86dabf9d7f47847",
+          "How effort works": "sha256:7b975e2aecc1ee0d",
+          "Effort with tool use": "sha256:12964e12d097890a",
+          "Effort with thinking": "sha256:96ab26343374953c",
+          "Change effort mid-conversation": "sha256:c860f8cc268d989f",
+          "Best practices": "sha256:7ddd4eecea4570f4",
+          "Next steps": "sha256:a9624fb45a84825c"
+        },
+        "headings": [
+          "Set the effort level",
+          "How effort works",
+          "Effort levels",
+          "Recommended effort levels for Claude Fable 5.1",
+          "Recommended effort levels for Claude Fable 5",
+          "Recommended effort levels for Claude Opus 5.5",
+          "Recommended effort levels for Claude Opus 5",
+          "Recommended effort levels for Claude Opus 4.8",
+          "Recommended effort levels for Claude Opus 4.7",
+          "Recommended effort levels for Claude Sonnet 5.5",
+          "Recommended effort levels for Claude Sonnet 5",
+          "Recommended effort levels for Claude Sonnet 4.6",
+          "Effort with tool use",
+          "Effort with thinking",
+          "Change effort mid-conversation",
+          "Per-message effort (beta)",
+          "Top-level effort on the next request",
+          "Best practices",
+          "Next steps"
+        ]
+      }
+    }
+  },
+  "openai": {
+    "kind": "family",
+    "aliases": [
+      "gpt",
+      "chatgpt",
+      "openai-api"
+    ],
+    "lineup": {
+      "url": "https://developers.openai.com/api/docs/models.md",
+      "format": "md",
+      "model_regex": "gpt-\\d+(?:\\.\\d+)?(?:-[a-z]+|(?-i: [A-Z][a-z]+))?",
+      "section": "Featured models"
+    },
+    "sources": {
+      "prompt-engineering": {
+        "url": "https://developers.openai.com/api/docs/guides/prompt-engineering.md",
+        "format": "md"
+      },
+      "latest-model": {
+        "url": "https://developers.openai.com/api/docs/guides/latest-model.md",
+        "format": "md"
+      },
+      "reasoning": {
+        "url": "https://developers.openai.com/api/docs/guides/reasoning-best-practices.md",
+        "format": "md"
+      },
+      "chatgpt": {
+        "url": "https://developers.openai.com/cookbook/examples/chatgpt/chatgpt_prompt_guide/chatgpt_prompt_guide.md",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "prompt-engineering": {
+        "sections": {
+          "Choosing a model": "sha256:9e9201752807973e",
+          "Prompt engineering": "sha256:528dab1592ed8aa3",
+          "Message roles and instruction following": "sha256:b276150816aabcc4",
+          "Version prompts in code": "sha256:d19b9aeef77ac752",
+          "Message formatting with Markdown and XML": "sha256:5d958678959dc67c",
+          "Few-shot learning": "sha256:af38b205594d3ce3",
+          "Include relevant context information": "sha256:17fee901b1f5e655",
+          "Prompting current models": "sha256:86700e94a682ac08",
+          "Prompting reasoning models": "sha256:1611fe304a1b6c31",
+          "Next steps": "sha256:59106d9f12aa4bd2",
+          "Other resources": "sha256:c16b5a619c14d254"
+        },
+        "headings": [
+          "Choosing a model",
+          "Prompt engineering",
+          "Message roles and instruction following",
+          "Version prompts in code",
+          "Message formatting with Markdown and XML",
+          "Few-shot learning",
+          "Include relevant context information",
+          "Prompting current models",
+          "Prompting best practices for the latest model",
+          "Prompting reasoning models",
+          "Next steps",
+          "Other resources"
+        ]
+      },
+      "latest-model": {
+        "sections": {
+          "What's new": "sha256:d5c66dc3ff035f36",
+          "Limitations": "sha256:205f9a1643544fca",
+          "Prompting best practices": "sha256:d79c15ee87ac62d0",
+          "Migration quickstart": "sha256:1bdf23554e37f67a"
+        },
+        "headings": [
+          "GPT-6 Astra",
+          "GPT-6.1 Sol",
+          "What's new",
+          "Limitations",
+          "Prompting best practices",
+          "GPT-6 Astra behavior",
+          "Initiative and follow-through",
+          "Instruction following",
+          "Personality and writing style",
+          "Subagent delegation",
+          "Testing and verification",
+          "Migration quickstart",
+          "Migrate with Codex",
+          "Update API and model parameters"
+        ]
+      },
+      "reasoning": {
+        "sections": {
+          "Reasoning models vs. GPT models": "sha256:c1d7ecbb74ed6584",
+          "When to use our reasoning models": "sha256:18fd49e8772607b4",
+          "How to prompt reasoning models effectively": "sha256:f83286f3dd62c7ea",
+          "How to keep costs low and accuracy high": "sha256:9217b4ced413db03",
+          "Other resources": "sha256:b698fcd48fb3c703"
+        },
+        "headings": [
+          "Reasoning models vs. GPT models",
+          "How to choose",
+          "When to use our reasoning models",
+          "1. Navigating ambiguous tasks",
+          "2. Finding a needle in a haystack",
+          "3. Finding relationships and nuance across a large dataset",
+          "4. Multistep agentic planning",
+          "5. Visual reasoning",
+          "6. Reviewing, debugging, and improving code quality",
+          "7. Evaluation and benchmarking for other model responses",
+          "How to prompt reasoning models effectively",
+          "How to keep costs low and accuracy high",
+          "Other resources"
+        ]
+      },
+      "chatgpt": {
+        "sections": {
+          "**Table of Contents**": "sha256:e08eb239cbd5e59e",
+          "1. Introduction": "sha256:952db679a579bb12",
+          "2. Mindset": "sha256:295e2462086ee4c1",
+          "3. Scope the problem": "sha256:3b66c3ed079eb35b",
+          "4. Write the prompt clearly": "sha256:51c39f1081a7828d",
+          "5. Use ChatGPT to help you prompt (meta-prompting)": "sha256:e596ed62692f46c0",
+          "6. Improve accuracy": "sha256:8d08818b95789958",
+          "7. Conclusion": "sha256:97609a4b33a315c0",
+          "Prompting 101 Examples": "sha256:fd6ead7b0fbcff2f"
+        },
+        "headings": [
+          "**Table of Contents**",
+          "1. Introduction",
+          "2. Mindset",
+          "3. Scope the problem",
+          "A. Before you write anything, think carefully",
+          "B. Scope the problem to what a prompt can do",
+          "4. Write the prompt clearly",
+          "Context",
+          "Instructions",
+          "Additional Information",
+          "5. Use ChatGPT to help you prompt (meta-prompting)",
+          "6. Improve accuracy",
+          "7. Conclusion",
+          "Prompting 101 Examples",
+          "1. Summarize a Document",
+          "2. Search for (Apps)",
+          "3. Adopt a Persona",
+          "4. Research for… (Deep Research)"
+        ]
+      }
+    }
+  },
+  "gemini": {
+    "kind": "family",
+    "aliases": [
+      "google-gemini",
+      "gemini-api"
+    ],
+    "lineup": [
+      {
+        "url": "https://ai.google.dev/gemini-api/docs/models.md.txt",
+        "format": "md.txt",
+        "section": "Stable",
+        "model_regex": "gemini-\\d+(?:\\.\\d+)?-(?:pro|flash)(?:-lite)?(?:-preview)?(?![\\w-]|\\.\\d)"
+      },
+      {
+        "url": "https://ai.google.dev/gemini-api/docs/models.md.txt",
+        "format": "md.txt",
+        "section": "Preview",
+        "model_regex": "gemini-\\d+(?:\\.\\d+)?-(?:pro|flash)(?:-lite)?(?:-preview)?(?![\\w-]|\\.\\d)"
+      }
+    ],
+    "sources": {
+      "prompting-strategies": {
+        "url": "https://ai.google.dev/gemini-api/docs/prompting-strategies.md.txt",
+        "format": "md.txt"
+      },
+      "latest-model": {
+        "url": "https://ai.google.dev/gemini-api/docs/latest-model.md.txt",
+        "format": "md.txt"
+      },
+      "whats-new-3-5": {
+        "url": "https://ai.google.dev/gemini-api/docs/whats-new-gemini-3.5.md.txt",
+        "format": "md.txt"
+      },
+      "thinking": {
+        "url": "https://ai.google.dev/gemini-api/docs/thinking.md.txt",
+        "format": "md.txt"
+      }
+    },
+    "fingerprints": {
+      "prompting-strategies": {
+        "sections": {
+          "Topic-specific prompt guides": "sha256:ecfc9586348354f4",
+          "Clear and specific instructions": "sha256:0f93892dab913d00",
+          "Zero-shot vs few-shot prompts": "sha256:bbbc386a592e0d13",
+          "Add context": "sha256:b2acd7e05c1c9ce7",
+          "Break down prompts into components": "sha256:9544a82f5be54326",
+          "Experiment with model parameters": "sha256:f5814a7acdd45f14",
+          "Prompt iteration strategies": "sha256:fc7c3c100635234b",
+          "Fallback responses": "sha256:d6f2f6829eacb94c",
+          "Grounding and code execution": "sha256:dba3dbfef14e6bd6",
+          "Gemini 3": "sha256:e7c9f8fec3907325",
+          "Agentic workflows": "sha256:aaaf1f2dbee47856",
+          "Next steps": "sha256:8d2ba83b6d6c2663"
+        },
+        "headings": [
+          "Topic-specific prompt guides",
+          "Clear and specific instructions",
+          "Input",
+          "Constraints",
+          "Response format",
+          "Zero-shot vs few-shot prompts",
+          "Optimal number of examples",
+          "Consistent formatting",
+          "Add context",
+          "Break down prompts into components",
+          "Experiment with model parameters",
+          "Prompt iteration strategies",
+          "Fallback responses",
+          "Grounding and code execution",
+          "Gemini 3",
+          "Core prompting principles",
+          "Gemini 3 Flash strategies",
+          "Enhancing reasoning and planning",
+          "Structured prompting examples",
+          "Example template combining best practices",
+          "Agentic workflows",
+          "Reasoning and strategy",
+          "Execution and reliability",
+          "Interaction and output",
+          "System instruction template",
+          "Next steps"
+        ]
+      },
+      "latest-model": {
+        "sections": {
+          "New model": "sha256:8dbfa27ae01b7678",
+          "Quickstart": "sha256:007fde35b2109de2",
+          "What's new in Gemini 3.8 Flash": "sha256:544b95744d529c9e",
+          "Understanding reasoning levels": "sha256:ef004d43d3c98bba",
+          "Updated Antigravity agent": "sha256:6d0048cea192774d",
+          "Migration checklist": "sha256:b63ef8f92565df2e",
+          "Pricing": "sha256:d67af93677a7b9b7",
+          "Next steps": "sha256:fba340f00fac78a4"
+        },
+        "headings": [
+          "New model",
+          "Quickstart",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "What's new in Gemini 3.8 Flash",
+          "Understanding reasoning levels",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Updated Antigravity agent",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Migration checklist",
+          "Migrate to gemini-3.8-flash",
+          "Pricing",
+          "Next steps"
+        ]
+      },
+      "whats-new-3-5": {
+        "sections": {
+          "New model": "sha256:974dc998986f3aa3",
+          "Quickstart": "sha256:8b4d6e880e57f402",
+          "What's new": "sha256:f5a65d3fbea7ddb6",
+          "Behavioral changes": "sha256:8350003609103543",
+          "Parameter updates and best practices in Gemini 3.x": "sha256:6d056490b057a7ad",
+          "Migration checklist": "sha256:96d754ff4afc9f8b",
+          "Gemini 3 family features": "sha256:37e7c1a9ee2331e5",
+          "Prompting best practices": "sha256:a05747933f9c9bf4",
+          "Limitations": "sha256:d4728451a3d78466",
+          "FAQ": "sha256:65fa4b7647d2d8ea",
+          "Next steps": "sha256:e269679d5fd15794"
+        },
+        "headings": [
+          "New model",
+          "Quickstart",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "What's new",
+          "Choosing the right Flash model",
+          "Behavioral changes",
+          "New default effort level: `medium`",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Thought preservation",
+          "Parameter updates and best practices in Gemini 3.x",
+          "Sampling parameters (no longer recommended)",
+          "`thinking_budget` (no longer recommended)",
+          "Function calling: strict response matching",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Multimodal function responses",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "Inline instructions in function responses",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "Reducing unnecessary tool calls",
+          "Migration checklist",
+          "Migrate from Gemini 3 Flash Preview",
+          "Migrate from Gemini 2.5",
+          "Gemini 3 family features",
+          "Prompting best practices",
+          "Limitations",
+          "FAQ",
+          "Next steps"
+        ]
+      },
+      "thinking": {
+        "sections": {
+          "Interactions with thinking": "sha256:16e413cfeb1b5ccf",
+          "Thought summaries": "sha256:1dd80c1c9824b1c7",
+          "Streaming with thinking": "sha256:f866e4e0b9e4e8a5",
+          "Controlling thinking": "sha256:eca566452c2b4e53",
+          "Thought signatures": "sha256:92bf005f716541ee",
+          "Pricing": "sha256:9846e257e7334e42",
+          "Best practices": "sha256:2b64171ad0905615",
+          "What's next": "sha256:241940a4d9b3bc00"
+        },
+        "headings": [
+          "Interactions with thinking",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Thought summaries",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Streaming with thinking",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Controlling thinking",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Token limits and `max_output_tokens`",
+          "Thought signatures",
+          "Stateful mode (Recommended)",
+          "Stateless mode",
+          "Pricing",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "Best practices",
+          "What's next"
+        ]
+      }
+    }
+  },
+  "xai": {
+    "kind": "family",
+    "aliases": [
+      "grok",
+      "x-ai"
+    ],
+    "lineup": {
+      "url": "https://docs.x.ai/developers/models",
+      "format": "md",
+      "model_regex": "grok-\\d+(?:\\.\\d+)?",
+      "section": "Which model should I choose"
+    },
+    "sources": {
+      "model-pages": {
+        "url_pattern": "https://docs.x.ai/developers/{model}",
+        "format": "md",
+        "optional": true
+      },
+      "reasoning": {
+        "url": "https://docs.x.ai/developers/model-capabilities/text/reasoning",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "model-pages:grok-4-7": {
+        "sections": {
+          "Using the API": "sha256:12a8781178dcb2ce",
+          "At a glance": "sha256:d2f89334b0308c29",
+          "Important details": "sha256:c34b2667a90ff0f2",
+          "Fast variant": "sha256:41a2a0d36347d4f9",
+          "Where it runs": "sha256:0e6c19d7d624801d",
+          "Learn more": "sha256:5814703b247115f3"
+        },
+        "headings": [
+          "Using the API",
+          "At a glance",
+          "Important details",
+          "Fast variant",
+          "Where it runs",
+          "Learn more"
+        ]
+      },
+      "reasoning": {
+        "sections": {
+          "Key Features": "sha256:e7f81fa27d432797",
+          "The `reasoning_effort` parameter": "sha256:65c96e3723676216",
+          "Summarized Reasoning Content": "sha256:aa728989a05494f1"
+        },
+        "headings": [
+          "Key Features",
+          "Encrypted Reasoning Content",
+          "The `reasoning_effort` parameter",
+          "Effort levels",
+          "Setting reasoning effort",
+          "Multi-agent model",
+          "Summary table",
+          "Summarized Reasoning Content",
+          "Sample Output"
+        ]
+      }
+    }
+  },
+  "zhipu": {
+    "kind": "family",
+    "aliases": [
+      "glm",
+      "z-ai",
+      "zai"
+    ],
+    "lineup": {
+      "url": "https://docs.z.ai/guides/overview/overview.md",
+      "format": "md",
+      "model_regex": "(?m)(?<=^\\| )glm-\\d+(?:\\.\\d+)?(?:-[a-z]+)?(?![\\w-]|\\.\\d)",
+      "flagship": "glm-\\d+(?:-\\d+)?"
+    },
+    "sources": {
+      "glm-flagship": {
+        "url": "https://docs.z.ai/guides/llm/glm-5.3.md",
+        "format": "md"
+      },
+      "glm-flash": {
+        "url": "https://docs.z.ai/guides/vlm/glm-5.3-flash.md",
+        "format": "md"
+      },
+      "migration": {
+        "url": "https://docs.z.ai/guides/overview/migrate-to-glm-new.md",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "glm-flagship": {
+        "sections": {
+          "Overview": "sha256:a6c9ecffa9f1f6f4",
+          "Feature Changes": "sha256:eec790b81687a202",
+          "How to Use": "sha256:b84b1c4fc83ab880",
+          "Capability Support": "sha256:eb75cbb02c6ad6b7",
+          "Key Advancements": "sha256:8d8c69006c4e8677",
+          "Quick Start": "sha256:409d151c178041f4"
+        },
+        "headings": [
+          "Overview",
+          "Feature Changes",
+          "How to Use",
+          "Capability Support",
+          "Key Advancements",
+          "Quick Start"
+        ]
+      },
+      "glm-flash": {
+        "sections": {
+          "Model Overview": "sha256:44fe5ac962492ef5",
+          "How to Use": "sha256:03cdcbd1f80c6983",
+          "Capabilities": "sha256:995e56e0fa22e7be",
+          "Best Practices": "sha256:1cf531e3d10d093a",
+          "Key Advancements": "sha256:c8a919d87b39f017"
+        },
+        "headings": [
+          "Model Overview",
+          "How to Use",
+          "Capabilities",
+          "Best Practices",
+          "Key Advancements"
+        ]
+      },
+      "migration": {
+        "sections": {
+          "GLM-5.3 Features": "sha256:d535e444fb19e37d",
+          "Migration Checklist": "sha256:f7f53237126e60ca",
+          "Start Migration": "sha256:6addfb45b2227e70",
+          "More Resources": "sha256:d778de64246f7ae2"
+        },
+        "headings": [
+          "GLM-5.3 Features",
+          "Migration Checklist",
+          "Start Migration",
+          "1. Update Model Identifier",
+          "2. Update Sampling Parameters",
+          "3. Deep Thinking (Forced)",
+          "4. Streaming Output and Tool Calls (Optional)",
+          "5. Testing and Regression",
+          "More Resources"
+        ]
+      }
+    }
+  },
+  "qwen": {
+    "kind": "family",
+    "aliases": [
+      "alibaba",
+      "qwen-api"
+    ],
+    "lineup": {
+      "url": "https://www.alibabacloud.com/help/en/model-studio/models.md",
+      "format": "md",
+      "model_regex": "qwen\\d+(?:\\.\\d+)?-[a-z]+(?![\\w-]|\\.\\d)",
+      "section": "Text generation"
+    },
+    "sources": {
+      "prompt-guide": {
+        "url": "https://www.alibabacloud.com/help/en/model-studio/prompt-engineering-guide.md",
+        "format": "md"
+      },
+      "open-weights-card": {
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B/raw/main/README.md",
+        "format": "text"
+      }
+    },
+    "fingerprints": {
+      "prompt-guide": {
+        "sections": {
+          "Design prompts": "sha256:6f6186e7cf34d698",
+          "Optimize prompts": "sha256:f4e444d3c0d1df58",
+          "Prompt testing and iteration": "sha256:2ab1caa3e2f0d721",
+          "Optimization case: Guide AI assistant to output multilingual content for a multinational company": "sha256:c88605efc6044273",
+          "Optimization case: Extracting multi-dimensional analysis results from conversations and outputting JSON": "sha256:bb3c6342e4c1e2bb"
+        },
+        "headings": [
+          "Design prompts",
+          "Build clear and specific prompts",
+          "Use prompt frameworks",
+          "Optimize prompts",
+          "Tip 1: Provide output examples",
+          "Tip 2: Set steps for tasks",
+          "Tip 3: Use separators to distinguish units",
+          "Tip 4: Guide the model to \"think\"",
+          "Prompt testing and iteration",
+          "Optimization case: Guide AI assistant to output multilingual content for a multinational company",
+          "Optimization case: Extracting multi-dimensional analysis results from conversations and outputting JSON"
+        ]
+      },
+      "open-weights-card": {
+        "sections": {
+          "Qwen3.8 Highlights": "sha256:46b23644c56d5e59",
+          "Model Overview": "sha256:c31cca58b472657a",
+          "Benchmark Results": "sha256:bcf6c9b128d66591",
+          "Quickstart": "sha256:7e9d779bd4bb2755",
+          "Best Practices": "sha256:a3e6f1cc57572419",
+          "Citation": "sha256:9e49e7c6570ca958"
+        },
+        "headings": [
+          "Qwen3.8 Highlights",
+          "Model Overview",
+          "Benchmark Results",
+          "Text Performance",
+          "VL Performance",
+          "Quickstart",
+          "Serving Qwen3.8",
+          "API Usage",
+          "Best Practices",
+          "Citation"
+        ]
+      }
+    }
+  },
+  "deepseek": {
+    "kind": "family",
+    "aliases": [
+      "deepseek-api"
+    ],
+    "lineup": {
+      "url": "https://api-docs.deepseek.com/quick_start/pricing",
+      "format": "html",
+      "model_regex": "(?-i:deepseek-(?:v\\d+(?:\\.\\d+)?-)?[a-z]+)",
+      "section": "Model Details",
+      "flagship": "deepseek-.*pro",
+      "exclude": [
+        "deepseek-v4-flash"
+      ]
+    },
+    "sources": {
+      "thinking-mode": {
+        "url": "https://api-docs.deepseek.com/guides/thinking_mode",
+        "format": "html"
+      }
+    },
+    "fingerprints": {
+      "thinking-mode": {
+        "sections": {
+          "Thinking Mode Toggle and Effort Control​": "sha256:c39a422c547f0ea7",
+          "Input and Output Parameters​": "sha256:25e74bb36926e043",
+          "Multi-turn Conversation​": "sha256:6afa48a21ae19240",
+          "Tool Calls​": "sha256:ac471f165ba3ccda"
+        },
+        "headings": [
+          "Thinking Mode Toggle and Effort Control​",
+          "Input and Output Parameters​",
+          "Multi-turn Conversation​",
+          "Sample Code​",
+          "Tool Calls​",
+          "Sample Code​"
+        ]
+      }
+    }
+  },
+  "mistral": {
+    "kind": "family",
+    "aliases": [
+      "mistral-ai"
+    ],
+    "lineup": {
+      "url": "https://docs.mistral.ai/getting-started/models/",
+      "format": "html",
+      "model_regex": "mistral[ -](?!moderation|embed)[a-z]+[ -]\\d+(?:\\.\\d+)?(?!\\d)",
+      "section": "mistral"
+    },
+    "sources": {
+      "prompting": {
+        "url": "https://docs.mistral.ai/studio/conversations/chat-completion/prompting.md",
+        "format": "md"
+      },
+      "reasoning": {
+        "url": "https://docs.mistral.ai/studio/conversations/reasoning.md",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "prompting": {
+        "sections": {
+          "*": "sha256:9de7804491e770b8"
+        },
+        "headings": [
+          "The Art of Crafting Prompts",
+          "What you should Avoid",
+          "Include a confidence score",
+          "Introduce an evaluation step",
+          "Employ another LLM for evaluation"
+        ]
+      },
+      "reasoning": {
+        "sections": {
+          "*": "sha256:11b3b75fb2af164a"
+        },
+        "headings": [
+          "Model"
+        ]
+      }
+    }
+  },
+  "meta": {
+    "kind": "family",
+    "aliases": [
+      "muse",
+      "llama",
+      "meta-ai"
+    ],
+    "lineup": {
+      "url": "https://dev.meta.ai/docs/models.md",
+      "format": "md",
+      "model_regex": "(?m)muse-(?!image)[a-z]+-\\d+\\.\\d+(?![\\w.-])|(?<=^## )muse [a-z]+$",
+      "exclude": [
+        "muse-spark",
+        "muse-image"
+      ]
+    },
+    "sources": {
+      "reasoning": {
+        "url": "https://dev.meta.ai/docs/reasoning.md",
+        "format": "md"
+      },
+      "glimmer-prompting": {
+        "url": "https://dev.meta.ai/docs/muse-glimmer/prompting.md",
+        "format": "md"
+      },
+      "llama-prompting": {
+        "url": "https://www.llama.com/docs/how-to-guides/prompting/",
+        "format": "html",
+        "watch": [
+          "What is prompt engineering?",
+          "Crafting effective prompts",
+          "Stylization",
+          "Formatting",
+          "Restrictions",
+          "Zero- and few-shot prompting",
+          "Role-based prompts",
+          "Chain-of-thought prompting",
+          "Self-consistency",
+          "Retrieval-augmented generation",
+          "Limiting extraneous tokens"
+        ]
+      }
+    },
+    "fingerprints": {
+      "reasoning": {
+        "sections": {
+          "How it works": "sha256:71929368fa224c2f",
+          "Usage": "sha256:646c351a5e001997",
+          "Multi-turn reasoning": "sha256:acc0300ba47298e3",
+          "Reasoning summaries": "sha256:897ecdcd783ba0be",
+          "Token usage": "sha256:1ae5bdbb757563c3",
+          "When to reach for reasoning": "sha256:34353d4af45b2655",
+          "Constraints": "sha256:d8424ebd3b114e1d",
+          "Next steps": "sha256:e04bbbfc1d82735e"
+        },
+        "headings": [
+          "How it works",
+          "Usage",
+          "Chat Completions",
+          "Responses API",
+          "Log probabilities",
+          "Multi-turn reasoning",
+          "Responses API",
+          "Chat Completions",
+          "Reasoning summaries",
+          "Token usage",
+          "When to reach for reasoning",
+          "Constraints",
+          "Next steps"
+        ]
+      },
+      "glimmer-prompting": {
+        "sections": {
+          "Chat template": "sha256:95b6aff93448b049",
+          "Special tokens": "sha256:1df4453a3b8ca21d",
+          "Roles and recipients": "sha256:09af9b1a31a944c0",
+          "System prompts": "sha256:c5f71c874c3aa9f8",
+          "Reasoning and chain-of-thought": "sha256:cecbf2b29419ba90",
+          "Tool calling": "sha256:7bfe70dc3f374772",
+          "Multimodal input": "sha256:ee5393829e1353d7",
+          "Multi-turn conversations": "sha256:35aafbb329950e20",
+          "Temperature and sampling": "sha256:5578253c7fb5f03d",
+          "Common pitfalls": "sha256:6697817a7be72855",
+          "Next steps": "sha256:48be75d1fb5bc5c1"
+        },
+        "headings": [
+          "Chat template",
+          "Special tokens",
+          "Roles and recipients",
+          "System prompts",
+          "Effective system prompts",
+          "Reasoning and chain-of-thought",
+          "Tool calling",
+          "Multimodal input",
+          "Multi-turn conversations",
+          "Temperature and sampling",
+          "Common pitfalls",
+          "Next steps"
+        ]
+      },
+      "llama-prompting": {
+        "sections": {
+          "What is prompt engineering?": "sha256:688e7b94da97be50",
+          "Crafting effective prompts": "sha256:c160e009cbe1d109",
+          "Stylization": "sha256:17dd322c533506c0",
+          "Formatting": "sha256:bbc875c000e0679c",
+          "Restrictions": "sha256:a47f1a4a56a8ba79",
+          "Zero- and few-shot prompting": "sha256:2184b0f87601ed74",
+          "Role-based prompts": "sha256:4f8bc770ced5c413",
+          "Chain-of-thought prompting": "sha256:89f3fa4c79d9f810",
+          "Self-consistency": "sha256:2ffa47e0d7ba0d40",
+          "Retrieval-augmented generation": "sha256:7d32b0f4fd97d7e0",
+          "Limiting extraneous tokens": "sha256:1eaeaf9b525ce4a0"
+        },
+        "headings": [
+          "Please confirm your identity",
+          "What is prompt engineering?",
+          "Crafting effective prompts",
+          "Stylization",
+          "Formatting",
+          "Restrictions",
+          "Prompting techniques",
+          "Zero- and few-shot prompting",
+          "Role-based prompts",
+          "Chain-of-thought prompting",
+          "Self-consistency",
+          "Retrieval-augmented generation",
+          "Limiting extraneous tokens",
+          "Program-aided language models",
+          "Reducing hallucinations"
+        ]
+      }
+    }
+  },
+  "kimi": {
+    "kind": "family",
+    "aliases": [
+      "moonshot",
+      "kimi-api"
+    ],
+    "lineup": {
+      "url": "https://platform.kimi.ai/docs/models.md",
+      "format": "md",
+      "model_regex": "kimi-k\\d+(?:\\.\\d+)?(?:-[a-z]+)?(?![\\w-]|\\.\\d)",
+      "section": "Multi-modal Model"
+    },
+    "sources": {
+      "best-practice": {
+        "url": "https://platform.kimi.ai/docs/guide/prompt-best-practice.md",
+        "format": "md"
+      },
+      "effort": {
+        "url": "https://platform.kimi.ai/docs/guide/use-reasoning-effort.md",
+        "format": "md"
+      },
+      "k3-quickstart": {
+        "url": "https://platform.kimi.ai/docs/guide/kimi-k3-quickstart.md",
+        "format": "md"
+      },
+      "thinking": {
+        "url": "https://platform.kimi.ai/docs/guide/use-thinking-models.md",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "best-practice": {
+        "sections": {
+          "Write Clear Instructions": "sha256:b900fd2f0f8b95df",
+          "Provide Reference Text": "sha256:c0019a81b5c55a07",
+          "Break Down Complex Tasks": "sha256:323979a8867852d2"
+        },
+        "headings": [
+          "Write Clear Instructions",
+          "Including More Details in Your Request Can Yield More Relevant Responses",
+          "Requesting the Model to Assume a Role Can Yield More Accurate Output",
+          "Using Delimiters in Your Request to Clearly Distinguish Different Parts of the Input",
+          "Clearly Define the Steps Needed to Complete the Task",
+          "Provide Examples of Desired Output to the Model",
+          "Specify the Desired Length of the Model's Output",
+          "Provide Reference Text",
+          "Guide the Model to Use Reference Text to Answer Questions",
+          "Break Down Complex Tasks",
+          "Categorize to Identify Instructions Relevant to User Queries",
+          "For Long-Running Dialog Applications, Summarize or Filter Previous Conversations",
+          "Chunk and Recursively Build a Complete Summary for Long Documents"
+        ]
+      },
+      "effort": {
+        "sections": {
+          "Set the reasoning effort": "sha256:90cfeec670193935",
+          "Fields": "sha256:007ed91a3d1fce69",
+          "Related reading": "sha256:4afc1f51456b8739"
+        },
+        "headings": [
+          "Set the reasoning effort",
+          "Fields",
+          "Related reading"
+        ]
+      },
+      "k3-quickstart": {
+        "sections": {
+          "Introducing Kimi K3": "sha256:40930704e68a10a1",
+          "Access requirements": "sha256:d261eb3d8148c8a6",
+          "Get started": "sha256:9fcf792c207d0921",
+          "Basic call": "sha256:a8dbde8c9faf7ab8",
+          "Reasoning effort": "sha256:500fc4552ed4b33c",
+          "Streaming": "sha256:a42b38b1c2f78b77",
+          "Vision input": "sha256:386a7e0b10a9d03a",
+          "Structured output": "sha256:2de7912687060773",
+          "Partial Mode": "sha256:4f4ffd5815d87154",
+          "Custom tools and `tool_choice`": "sha256:fe12135e1e5b572c",
+          "Dynamic tool loading": "sha256:e538953758784edc",
+          "1M context and TTL caching": "sha256:fca35a0784882c42",
+          "Official tools": "sha256:fea73892aa4ac6d9",
+          "Important limits": "sha256:5fdd53f09afcc414",
+          "FAQ": "sha256:85a474c601737aec",
+          "Model Pricing": "sha256:9b93756ddb5b4ea3",
+          "Related docs": "sha256:95322dda3edbcb10"
+        },
+        "headings": [
+          "Introducing Kimi K3",
+          "A 3-trillion-scale open-source model",
+          "Coding",
+          "Knowledge work",
+          "Access requirements",
+          "Get started",
+          "Basic call",
+          "Reasoning effort",
+          "Streaming",
+          "Vision input",
+          "Structured output",
+          "Partial Mode",
+          "Custom tools and `tool_choice`",
+          "Dynamic tool loading",
+          "1M context and TTL caching",
+          "Official tools",
+          "Important limits",
+          "FAQ",
+          "Model Pricing",
+          "Related docs"
+        ]
+      },
+      "thinking": {
+        "sections": {
+          "Choose the right thinking model": "sha256:bcd86f9cca540b73",
+          "Basic calls": "sha256:50f375d61548dc40",
+          "Control thinking behavior": "sha256:379615b8814c411b",
+          "Read reasoning\\_content from the response": "sha256:b17c1080891a0344",
+          "Configure multi-step tool calls": "sha256:831589e7026d93c7",
+          "Preserve thinking across turns (Preserved Thinking)": "sha256:859a8b8e1d84e917",
+          "Frequently Asked Questions": "sha256:c65503ab949f1f1c"
+        },
+        "headings": [
+          "Choose the right thinking model",
+          "Basic calls",
+          "Call kimi-k3",
+          "Call kimi-k2.7-code: no thinking parameter needed",
+          "Call kimi-k2.6: reasoning output by default",
+          "Control thinking behavior",
+          "K3: adjust reasoning effort with `reasoning_effort`",
+          "Control kimi-k2.6 thinking with the thinking parameter",
+          "Read reasoning\\_content from the response",
+          "Configure multi-step tool calls",
+          "Complete example: generate a daily news report",
+          "Preserve thinking across turns (Preserved Thinking)",
+          "Frequently Asked Questions",
+          "Q1: Why should I keep `reasoning_content`?",
+          "Q2: Does `reasoning_content` consume extra tokens?"
+        ]
+      }
+    }
+  },
+  "claude-code": {
+    "kind": "tool",
+    "aliases": [
+      "cc"
+    ],
+    "uses": [
+      "anthropic"
+    ],
+    "sources": {
+      "best-practices": {
+        "url": "https://code.claude.com/docs/en/best-practices.md",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "best-practices": {
+        "sections": {
+          "Give Claude a way to verify its work": "sha256:f7f6616e9a8590ae",
+          "Explore first, then plan, then code": "sha256:13ab7a0db7d9c695",
+          "Provide specific context in your prompts": "sha256:ecd99ff8af87c653",
+          "Configure your environment": "sha256:0bd7b6555c140939",
+          "Communicate effectively": "sha256:60288580ea0cdd9f",
+          "Manage your session": "sha256:5c0f2e0f4f164368",
+          "Automate and scale": "sha256:3fa3cd806802fa4d",
+          "Avoid common failure patterns": "sha256:2ee8ba02e90049ec",
+          "Develop your intuition": "sha256:2242cd045f74bcdc",
+          "Related resources": "sha256:b1f55e9c6073bf39"
+        },
+        "headings": [
+          "Give Claude a way to verify its work",
+          "Explore first, then plan, then code",
+          "Provide specific context in your prompts",
+          "Provide rich content",
+          "Configure your environment",
+          "Write an effective CLAUDE.md",
+          "Configure permissions",
+          "Use CLI tools",
+          "Connect MCP servers",
+          "Set up hooks",
+          "Create skills",
+          "Create custom subagents",
+          "Install plugins",
+          "Communicate effectively",
+          "Ask codebase questions",
+          "Let Claude interview you",
+          "Manage your session",
+          "Course-correct early and often",
+          "Manage context aggressively",
+          "Use subagents for investigation",
+          "Rewind with checkpoints",
+          "Resume conversations",
+          "Automate and scale",
+          "Run non-interactive mode",
+          "Run multiple Claude sessions",
+          "Fan out across files",
+          "Run autonomously with auto mode",
+          "Add an adversarial review step",
+          "Avoid common failure patterns",
+          "Develop your intuition",
+          "Related resources"
+        ]
+      }
+    }
+  },
+  "codex": {
+    "kind": "tool",
+    "aliases": [
+      "codex-cli",
+      "openai-codex"
+    ],
+    "uses": [
+      "openai"
+    ],
+    "sources": {
+      "best-practices": {
+        "url": "https://learn.chatgpt.com/guides/best-practices",
+        "format": "html"
+      },
+      "prompting": {
+        "url": "https://learn.chatgpt.com/docs/prompting.md",
+        "format": "md"
+      },
+      "codex-models": {
+        "url": "https://developers.openai.com/cookbook/examples/gpt-5/codex_prompting_guide.md",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "best-practices": {
+        "sections": {
+          "Search developer resources": "sha256:3d5e84633595d98a",
+          "Strong first use: Context and prompts": "sha256:659db842790d8a85",
+          "Plan first for difficult tasks": "sha256:2e8369ad025af605",
+          "Make guidance reusable with AGENTS.md": "sha256:990b6b169f5e3687",
+          "Configure Codex for consistency": "sha256:1e818be4df614551",
+          "Improve reliability with testing and review": "sha256:b1472f3535454679",
+          "Use MCPs for external context": "sha256:b534dc869b29891c",
+          "Turn repeatable work into skills": "sha256:88ae7a58abceabc3",
+          "Use scheduled tasks for repeated work": "sha256:dee2893851ef5b6a",
+          "Organize long-running chats": "sha256:38f81dc9f0e5d29c",
+          "Common mistakes": "sha256:3d386d3539f6904b"
+        },
+        "headings": [
+          "Search developer resources",
+          "Suggested",
+          "Suggested",
+          "Get started",
+          "Core concepts",
+          "SDKs and CLI",
+          "Resources",
+          "Legacy APIs",
+          "Choose a model",
+          "Text and code",
+          "Prompting",
+          "Reasoning",
+          "Images",
+          "Realtime and audio",
+          "Specialized models",
+          "Agents API",
+          "Agents SDK",
+          "ChatKit",
+          "Search and retrieval",
+          "Connect tools and data",
+          "Build tool workflows",
+          "Computer and code",
+          "Media",
+          "GPT-Live",
+          "Realtime API",
+          "Build with voice",
+          "Connections",
+          "Audio processing",
+          "Go live",
+          "Performance and quality",
+          "Cost and throughput",
+          "Safety and governance",
+          "Infrastructure and access",
+          "Operations",
+          "Identity",
+          "ChatGPT plan usage",
+          "Core concepts",
+          "Plan",
+          "Build",
+          "Test and publish",
+          "Conversion specs",
+          "Guides",
+          "Resources",
+          "Get started",
+          "Guides",
+          "File Upload",
+          "API",
+          "Measurement",
+          "Advertiser API",
+          "API Reference",
+          "Get started",
+          "Foundations",
+          "Explore",
+          "Available on",
+          "Releases",
+          "Workflows",
+          "Capabilities",
+          "dots",
+          "ChatGPT Space",
+          "Reference",
+          "Customization",
+          "Config file",
+          "Agent configuration",
+          "Extend ChatGPT and Codex",
+          "Linux",
+          "Windows",
+          "Development workflows",
+          "Extend and automate",
+          "Environments",
+          "Codex Cloud",
+          "Build with Codex",
+          "Third-party integrations",
+          "Reference",
+          "Permissions",
+          "Codex Security",
+          "Cyber safety",
+          "Getting started",
+          "Identity and access",
+          "Deployment and configuration",
+          "ChatGPT Work",
+          "Collaboration and sharing",
+          "Plugins and connections",
+          "Usage and analytics",
+          "Security and compliance",
+          "Community",
+          "Blog",
+          "Community",
+          "Blog",
+          "Recent",
+          "Topics",
+          "Topics",
+          "Contribute",
+          "Categories",
+          "Topics",
+          "Programs",
+          "Spaces",
+          "Strong first use: Context and prompts",
+          "Plan first for difficult tasks",
+          "Make guidance reusable with AGENTS.md",
+          "Configure Codex for consistency",
+          "Improve reliability with testing and review",
+          "Use MCPs for external context",
+          "Turn repeatable work into skills",
+          "Use scheduled tasks for repeated work",
+          "Organize long-running chats",
+          "Common mistakes"
+        ]
+      },
+      "prompting": {
+        "sections": {
+          "Prompting overview": "sha256:52f08c58b6fc6a9c",
+          "Describe the result you need": "sha256:0686fc16bf30dc22",
+          "Add useful context": "sha256:b0a789de8e9391fa",
+          "Set boundaries that prevent real problems": "sha256:9d66c76f3270751b",
+          "Make the result ready to use": "sha256:f3e884157f358fec",
+          "Improve the result with follow-up messages": "sha256:6c8c012d7c9fabfa",
+          "Put the pieces together": "sha256:639fb66f33208b99",
+          "Use voice dictation": "sha256:69a16892fae0b152",
+          "Prompting examples for Chat": "sha256:efda6a4f1831a5f8",
+          "Prompting for ChatGPT Work": "sha256:9d7b130ec1ae6819",
+          "Prompting Codex": "sha256:d0952caf5aa702cd"
+        },
+        "headings": [
+          "Prompting overview",
+          "Describe the result you need",
+          "Add useful context",
+          "Use connected sources",
+          "Use plugins",
+          "Personalize ChatGPT",
+          "Set boundaries that prevent real problems",
+          "Make the result ready to use",
+          "Improve the result with follow-up messages",
+          "Steering and queuing",
+          "Put the pieces together",
+          "Use voice dictation",
+          "Prompting examples for Chat",
+          "Understand a topic",
+          "Draft and refine writing",
+          "Compare options",
+          "Make a practical plan",
+          "Prompting for ChatGPT Work",
+          "Use ChatGPT Work efficiently",
+          "Turn source material into finished files",
+          "Research a decision",
+          "Coordinate a launch",
+          "Prompting Codex",
+          "How to read these examples",
+          "Explain a codebase",
+          "Fix a bug",
+          "Write a test",
+          "Prototype from a screenshot",
+          "Iterate on UI with live updates",
+          "Delegate refactor to the cloud",
+          "Do a local code review",
+          "Review a GitHub pull request",
+          "Update documentation"
+        ]
+      },
+      "codex-models": {
+        "sections": {
+          "Recommended Starter Prompt": "sha256:a52bfbac03d0b634",
+          "Mid-Rollout User Updates": "sha256:6d4d2e53e3e5a2ec",
+          "Using agents.md": "sha256:74656b4d39fb6963",
+          "Dedicated terminal-wrapping tools": "sha256:395d942a26e9231c",
+          "Other Custom Tools (web search, semantic search, memory, etc.)": "sha256:638e0f4d013e7ae1",
+          "Parallel Tool Calling": "sha256:11d1eae6dcb6c2ca",
+          "Tool Response Truncation": "sha256:e18b4b77c8ff4018",
+          "New features in GPT-5.3 Codex": "sha256:2256cf78be7e9ddb"
+        },
+        "headings": [
+          "Recommended Starter Prompt",
+          "Mid-Rollout User Updates",
+          "Using agents.md",
+          "Apply\\_patch",
+          "Shell\\_command",
+          "Update Plan",
+          "View\\_image",
+          "Dedicated terminal-wrapping tools",
+          "Other Custom Tools (web search, semantic search, memory, etc.)",
+          "Parallel Tool Calling",
+          "Tool Response Truncation",
+          "New features in GPT-5.3 Codex",
+          "Preamble messages",
+          "Phase",
+          "Preambles & Personality",
+          "Troubleshooting & Metaprompting"
+        ]
+      }
+    }
+  },
+  "gemini-cli": {
+    "kind": "tool",
+    "aliases": [
+      "gemini-code"
+    ],
+    "uses": [
+      "gemini"
+    ],
+    "sources": {
+      "gemini-md": {
+        "url": "https://geminicli.com/docs/cli/gemini-md.md",
+        "format": "md"
+      },
+      "plan-mode": {
+        "url": "https://geminicli.com/docs/cli/plan-mode.md",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "gemini-md": {
+        "sections": {
+          "Understand the context hierarchy": "sha256:80db112b05760ecd",
+          "Manage context with the `/memory` command": "sha256:3101c3524e316106",
+          "Modularize context with imports": "sha256:e233eb26011537bb",
+          "Customize the context file name": "sha256:1340351a10beef36",
+          "Next steps": "sha256:843cae4608868c6d"
+        },
+        "headings": [
+          "Understand the context hierarchy",
+          "Example `GEMINI.md` file",
+          "Manage context with the `/memory` command",
+          "Modularize context with imports",
+          "Customize the context file name",
+          "Next steps"
+        ]
+      },
+      "plan-mode": {
+        "sections": {
+          "How to enter Plan Mode": "sha256:15d24d325337cc70",
+          "How to use Plan Mode": "sha256:53cc6546f1da9534",
+          "How to exit Plan Mode": "sha256:eecdd3e795f63793",
+          "Tool Restrictions": "sha256:237779f8a2fd1f92",
+          "Customization and best practices": "sha256:4a0ad712ede4d6bf",
+          "Commands": "sha256:6dfd7fd893a316fe",
+          "Planning workflows": "sha256:30dbedb67439ac82",
+          "Automatic Model Routing": "sha256:db68bb7f94fb9b07",
+          "Cleanup": "sha256:7b1260a7b2d8714b",
+          "Non-interactive execution": "sha256:5c3a86b677507280"
+        },
+        "headings": [
+          "How to enter Plan Mode",
+          "Launch in Plan Mode",
+          "Enter Plan Mode manually",
+          "How to use Plan Mode",
+          "Collaborative plan editing",
+          "How to exit Plan Mode",
+          "Tool Restrictions",
+          "Customization and best practices",
+          "Custom planning with skills",
+          "Custom policies",
+          "Custom plan directory and policies",
+          "Using hooks with Plan Mode",
+          "Commands",
+          "Planning workflows",
+          "Built-in planning workflow",
+          "Custom planning workflows",
+          "Automatic Model Routing",
+          "Cleanup",
+          "Non-interactive execution"
+        ]
+      }
+    }
+  },
+  "cursor": {
+    "kind": "tool",
+    "aliases": [
+      "cursor-agent",
+      "windsurf"
+    ],
+    "sources": {
+      "prompting": {
+        "url": "https://cursor.com/docs/agent/prompting",
+        "format": "md"
+      },
+      "rules": {
+        "url": "https://cursor.com/docs/rules",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "prompting": {
+        "sections": {
+          "@ mentions": "sha256:051c66bff1875189",
+          "Custom Modes": "sha256:59659df9af8ea9b1",
+          "Image input": "sha256:9fc01154d1895318",
+          "Voice input": "sha256:e5bde9e972a43ee9",
+          "Context usage": "sha256:0770e67b350c9242",
+          "Changing models": "sha256:85ea2edbd0677daa",
+          "Sitemap": "sha256:67cf6c8b4ed863f1"
+        },
+        "headings": [
+          "@ mentions",
+          "Custom Modes",
+          "Image input",
+          "Voice input",
+          "Context usage",
+          "Changing models",
+          "Sitemap"
+        ]
+      },
+      "rules": {
+        "sections": {
+          "How rules work": "sha256:8d2b6bc5e232b9e4",
+          "Project rules": "sha256:80d3f247593d9145",
+          "Best practices": "sha256:05279ace045d6751",
+          "Rule file format": "sha256:d0239cd99a0576b4",
+          "Examples": "sha256:55898da1e8337f27",
+          "Team Rules": "sha256:ebc7ce15b71944ab",
+          "Importing rules from a repository": "sha256:99d75370e052e312",
+          "AGENTS.md": "sha256:499982a72dc9378f",
+          "User Rules": "sha256:b3c287566351b362",
+          "FAQ": "sha256:aee9aae8bba9c5b9",
+          "Related": "sha256:6cf8a748437dff04",
+          "Sitemap": "sha256:67cf6c8b4ed863f1"
+        },
+        "headings": [
+          "Project Rules",
+          "User Rules",
+          "Team Rules",
+          "AGENTS.md",
+          "How rules work",
+          "Project rules",
+          "Rule file structure",
+          "Rule anatomy",
+          "Glob pattern examples",
+          "Creating a rule",
+          "Best practices",
+          "What to avoid in rules",
+          "Rule file format",
+          "Examples",
+          "Standards for frontend components and API validation",
+          "Templates for Express services and React components",
+          "Automating development workflows and documentation generation",
+          "Adding a new setting in Cursor",
+          "Team Rules",
+          "Managing Team Rules",
+          "Activation and enforcement",
+          "Format and how Team Rules are applied",
+          "Importing rules from a repository",
+          "AGENTS.md",
+          "Improvements",
+          "Nested AGENTS.md support",
+          "User Rules",
+          "FAQ",
+          "Why isn't my rule being applied?",
+          "Can rules reference other rules or files?",
+          "Can I create a rule from chat?",
+          "Do rules impact Cursor Tab or other AI features?",
+          "Do User Rules apply to Inline Edit (Cmd/Ctrl+K)?",
+          "Related",
+          "Sitemap"
+        ]
+      }
+    }
+  },
+  "copilot": {
+    "kind": "tool",
+    "aliases": [
+      "github-copilot"
+    ],
+    "sources": {
+      "chat": {
+        "url": "https://docs.github.com/api/article/body?pathname=/en/copilot/concepts/prompting/prompt-engineering",
+        "format": "github-api"
+      },
+      "agent": {
+        "url": "https://docs.github.com/api/article/body?pathname=/en/copilot/tutorials/coding-agent/get-the-best-results",
+        "format": "github-api"
+      }
+    },
+    "fingerprints": {
+      "chat": {
+        "sections": {
+          "Start general, then get specific": "sha256:56f8e3424405de66",
+          "Give examples": "sha256:49fdf0bb16727f64",
+          "Break complex tasks into simpler tasks": "sha256:5a82377abde44a75",
+          "Avoid ambiguity": "sha256:90e1fc74d118b34d",
+          "Indicate relevant code": "sha256:47930adfafe1f564",
+          "Experiment and iterate": "sha256:230468b99e24647c",
+          "Keep history relevant": "sha256:a785b701e5064feb",
+          "Follow good coding practices": "sha256:b524167bfe46c4ba",
+          "Further reading": "sha256:53feb1df9eb18f4f"
+        },
+        "headings": [
+          "Start general, then get specific",
+          "Give examples",
+          "Break complex tasks into simpler tasks",
+          "Avoid ambiguity",
+          "Indicate relevant code",
+          "Experiment and iterate",
+          "Keep history relevant",
+          "Follow good coding practices",
+          "Further reading"
+        ]
+      },
+      "agent": {
+        "sections": {
+          "Making sure your issues are well-scoped": "sha256:ad8dec5d84b8cc8e",
+          "Choosing the right type of tasks to give to Copilot": "sha256:319069b0b51bca2f",
+          "Researching, planning, and iterating before opening a pull request": "sha256:65e4a31932687131",
+          "Using comments to iterate on a pull request": "sha256:8466b8310e8a8fd3",
+          "Adding custom instructions to your repository": "sha256:7fe89977d3614b48",
+          "Organization-wide custom instructions": "sha256:5a2d56227a52e79d",
+          "Using the Model Context Protocol (MCP)": "sha256:037258247b9f1290",
+          "Creating custom agents": "sha256:c73276d6c5b71bfc",
+          "Pre-installing dependencies in GitHub Copilot's environment": "sha256:b2d33ce315a882d7"
+        },
+        "headings": [
+          "Making sure your issues are well-scoped",
+          "Choosing the right type of tasks to give to Copilot",
+          "Researching, planning, and iterating before opening a pull request",
+          "Using comments to iterate on a pull request",
+          "Adding custom instructions to your repository",
+          "Repository-wide instructions",
+          "Path-specific instructions",
+          "Organization-wide custom instructions",
+          "Using the Model Context Protocol (MCP)",
+          "Creating custom agents",
+          "Pre-installing dependencies in GitHub Copilot's environment"
+        ]
+      }
+    }
+  },
+  "lovable": {
+    "kind": "tool",
+    "aliases": [
+      "lovable-dev"
+    ],
+    "sources": {
+      "prompting": {
+        "url": "https://docs.lovable.dev/prompting/prompting-one.md",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "prompting": {
+        "sections": {
+          "Make Lovable ask clarifying questions": "sha256:31ad6b4ee36bf4ba",
+          "Phase 1: Lay the foundation": "sha256:84679c8cdb5fe239",
+          "Phase 2: Think in systems": "sha256:a64a9f2049fec9db",
+          "Phase 3: Build with precision": "sha256:2b6aa870c457744a",
+          "Phase 4: Iterate and ship": "sha256:c9c0398c10e95bfb",
+          "Related topics": "sha256:7ea1c962ef3a65fe"
+        },
+        "headings": [
+          "Make Lovable ask clarifying questions",
+          "Phase 1: Lay the foundation",
+          "Plan before you prompt",
+          "Map the user journey visually",
+          "Get the design right first",
+          "Phase 2: Think in systems",
+          "Prompt by component, not page",
+          "Design with real content",
+          "Speak atomic: buttons, cards, modals",
+          "Use buzzwords to dial in aesthetic",
+          "Phase 3: Build with precision",
+          "Use prompt patterns for layouts",
+          "Add visuals via URL",
+          "Say what to change and what to leave alone",
+          "Point at elements with the preview toolbar",
+          "Phase 4: Iterate and ship",
+          "Build with the backend in mind",
+          "Iterate with version history",
+          "Related topics"
+        ]
+      }
+    }
+  },
+  "replit": {
+    "kind": "tool",
+    "aliases": [
+      "replit-agent"
+    ],
+    "sources": {
+      "prompting": {
+        "url": "https://docs.replit.com/learn/effective-prompting.md",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "prompting": {
+        "sections": {
+          "Quick examples": "sha256:7a1bbeac88a4924e",
+          "Core principles": "sha256:db0f014f05b861ec",
+          "Working with context": "sha256:905d27e4bd709edd",
+          "Debugging effectively": "sha256:45e7276068e08dca",
+          "Ask for guidance": "sha256:199c31b9b2f9a825",
+          "Iterate on your prompts": "sha256:fb27f92bceee4afe",
+          "Summary": "sha256:10580fa0e98ad036"
+        },
+        "headings": [
+          "Quick examples",
+          "Core principles",
+          "Plan first",
+          "Build incrementally",
+          "Be specific",
+          "Use positive language",
+          "Keep it simple",
+          "Working with context",
+          "Provide relevant files",
+          "Show examples",
+          "Debugging effectively",
+          "Ask for guidance",
+          "Iterate on your prompts",
+          "Summary"
+        ]
+      }
+    }
+  },
+  "perplexity": {
+    "kind": "tool",
+    "aliases": [
+      "pplx"
+    ],
+    "sources": {
+      "agent-prompt-guide": {
+        "url": "https://docs.perplexity.ai/docs/agent-api/prompt-guide.md",
+        "format": "md"
+      },
+      "prompt-the-agent": {
+        "url": "https://docs.perplexity.ai/docs/agent-api/building-agents/prompt-the-agent.md",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "agent-prompt-guide": {
+        "sections": {
+          "Instructions": "sha256:b56686c35d3ce898",
+          "Input": "sha256:fcd5a19eda2680ec",
+          "API Example": "sha256:0c78779534aa19ec",
+          "Best Practices": "sha256:ac2abaf47ab59352",
+          "Reading Sources from the Response": "sha256:f0499ddf626f5af9",
+          "Reduce Hallucinations": "sha256:ff14374b9e9d35c9",
+          "Use Parameters, Not Prose, for Hard Constraints": "sha256:7dafe520e22cf0d2",
+          "Next Steps": "sha256:f17f327b9d740e40"
+        },
+        "headings": [
+          "Instructions",
+          "Input",
+          "API Example",
+          "Best Practices",
+          "Reading Sources from the Response",
+          "Reduce Hallucinations",
+          "Use Parameters, Not Prose, for Hard Constraints",
+          "Next Steps"
+        ]
+      },
+      "prompt-the-agent": {
+        "sections": {
+          "`instructions` vs `input`": "sha256:b1bac4903073d7e7",
+          "Ground the run": "sha256:f8f72a66fb9ef6d7",
+          "Read the sources back": "sha256:6165497bc736c3b7",
+          "Next steps": "sha256:d0c8906888e57e2d"
+        },
+        "headings": [
+          "`instructions` vs `input`",
+          "Ground the run",
+          "Read the sources back",
+          "Next steps"
+        ]
+      }
+    }
+  },
+  "manus": {
+    "kind": "tool",
+    "aliases": [
+      "manus-ai"
+    ],
+    "sources": {
+      "beginner-prompts": {
+        "url": "https://manus.im/blog/manus-beginner-prompts",
+        "format": "html"
+      },
+      "projects": {
+        "url": "https://manus.im/docs/features/projects.md",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "beginner-prompts": {
+        "sections": {
+          "How to Use These Prompts": "sha256:0aa879a0381420dd",
+          "Daily Life Automation": "sha256:14c7476e39c98d5d",
+          "Life Admin Agents": "sha256:4e30aeb2db11e1ec",
+          "Work & Productivity Agents": "sha256:1ab90206a419331c",
+          "Research & Monitoring Agents": "sha256:cec20fcf4450c939",
+          "Personal Support Agents": "sha256:5a9c41628fd267cb",
+          "When You’re Not Sure What to Ask": "sha256:27eb31e54628d931",
+          "Key Tip for Agent Prompts": "sha256:48d3a4778dbe4244",
+          "Less structure,": "sha256:270f54fbd4105dbe"
+        },
+        "headings": [
+          "How to Use These Prompts",
+          "Daily Life Automation",
+          "Life Admin Agents",
+          "Work & Productivity Agents",
+          "Research & Monitoring Agents",
+          "Personal Support Agents",
+          "When You’re Not Sure What to Ask",
+          "Key Tip for Agent Prompts",
+          "Download desktop & mobile app",
+          "Less structure,",
+          "Product",
+          "Resources",
+          "Community",
+          "Compare",
+          "Download",
+          "Business",
+          "Company"
+        ]
+      },
+      "projects": {
+        "sections": {
+          "What it is": "sha256:5ad950273d0a96de",
+          "How to use it": "sha256:ee96266eeddaddee",
+          "What You Need to Know": "sha256:8cd38df0e521767a",
+          "Tips": "sha256:73918536651a532e",
+          "FAQ": "sha256:8a61e4ea34309baf"
+        },
+        "headings": [
+          "What it is",
+          "How to use it",
+          "Creating a Project",
+          "Pinning a Project",
+          "Drag and Drop to Organize",
+          "Filtering Tasks",
+          "What You Need to Know",
+          "Collaboration and Privacy",
+          "Configuration Updates",
+          "Availability",
+          "Tips",
+          "FAQ"
+        ]
+      }
+    }
+  },
+  "nano-banana": {
+    "kind": "tool",
+    "aliases": [
+      "nanobanana",
+      "gemini-image"
+    ],
+    "lineup": {
+      "url": "https://ai.google.dev/gemini-api/docs/image-generation.md.txt",
+      "format": "md.txt",
+      "model_regex": "gemini-\\d+(?:\\.\\d+)?(?:-[a-z]+)+-image(?![\\w-]|\\.\\d)",
+      "exclude": [
+        "gemini-2.5-flash-image"
+      ],
+      "flagship": "gemini-\\d+(?:-\\d+)?-pro-image"
+    },
+    "sources": {
+      "image-generation": {
+        "url": "https://ai.google.dev/gemini-api/docs/image-generation.md.txt",
+        "format": "md.txt"
+      }
+    },
+    "fingerprints": {
+      "image-generation": {
+        "sections": {
+          "Image generation (text-to-image)": "sha256:01375cf83f6d0248",
+          "Image editing (text-and-image-to-image)": "sha256:f1d8231399d710df",
+          "New with Gemini 3 image models": "sha256:b3d71c2bb0bfda96",
+          "Other image generation modes": "sha256:3d9c0ad41f609818",
+          "Generate images in batch": "sha256:7216575129325984",
+          "Prompting guide and strategies": "sha256:05ef529ae5dcb9b9",
+          "Limitations": "sha256:95a400bb801703d4",
+          "Optional configurations": "sha256:245178ebf1e6a453",
+          "Model selection": "sha256:faaab6b052069a21",
+          "What's next": "sha256:0d426d63c3ba090e"
+        },
+        "headings": [
+          "Image generation (text-to-image)",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Image editing (text-and-image-to-image)",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Multi-turn image editing",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "New with Gemini 3 image models",
+          "Use up to 14 reference images",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Grounding with Google Search",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Grounding with Google Search for images (3.1 Flash)",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Video-to-image generation (3.1 Flash and 3.1 Flash Lite)",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Generate images up to 4K resolution",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Thinking process",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Other image generation modes",
+          "Generate images in batch",
+          "Prompting guide and strategies",
+          "Prompts for generating images",
+          "Template",
+          "Prompt",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Template",
+          "Prompt",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Template",
+          "Prompt",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Template",
+          "Prompt",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Template",
+          "Prompt",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Template",
+          "Prompt",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Prompt",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Prompts for editing images",
+          "Template",
+          "Prompt",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Template",
+          "Prompt",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Template",
+          "Prompt",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Template",
+          "Prompt",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Template",
+          "Prompt",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Template",
+          "Prompt",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Template",
+          "Prompt",
+          "Python",
+          "Best practices",
+          "Limitations",
+          "Optional configurations",
+          "Output format",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Aspect ratios and image size",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "3.1 Flash Image",
+          "3.1 Pro Image",
+          "Gemini 2.5 Flash Image",
+          "Model selection",
+          "When to use Imagen",
+          "What's next"
+        ]
+      }
+    }
+  },
+  "gpt-image": {
+    "kind": "tool",
+    "aliases": [
+      "openai-image",
+      "dall-e"
+    ],
+    "lineup": {
+      "url": "https://developers.openai.com/api/docs/guides/image-prompting.md",
+      "format": "md",
+      "model_regex": "gpt[ -]image[ -]\\d+(?:\\.\\d+)?[ -](?-i:[A-Z][a-z]+)",
+      "section": "Choose a model"
+    },
+    "sources": {
+      "image-prompting": {
+        "url": "https://developers.openai.com/api/docs/guides/image-prompting.md",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "image-prompting": {
+        "sections": {
+          "Overview": "sha256:8192f89a3f88c893",
+          "Choose a model": "sha256:a67dd8c424f6e672",
+          "Model parameters": "sha256:0f7001f382167c4b",
+          "Migrate an existing workflow": "sha256:0aba9ffbf180d2dd",
+          "Prompting fundamentals": "sha256:e43a33e0104284ed",
+          "Generate images": "sha256:bb787ea27f8243b5",
+          "Edit images": "sha256:6dc3d6976a6a1098",
+          "Refine an image across turns": "sha256:6800915c2e2e7643",
+          "More workflows": "sha256:f0513ab594768288",
+          "Run a complete example": "sha256:5b792d26e02b0bec",
+          "Check the result": "sha256:6cdbc82b362e101b"
+        },
+        "headings": [
+          "Overview",
+          "Choose a model",
+          "Model parameters",
+          "Migrate an existing workflow",
+          "Prompting fundamentals",
+          "Generate images",
+          "Control style and lighting",
+          "Explain a process visually",
+          "Render exact text",
+          "Design a reusable logo",
+          "Use historical and real-world context",
+          "Turn a story into a comic strip",
+          "Create an interface preview",
+          "Create scientific and educational visuals",
+          "Build slides, diagrams, and charts",
+          "Edit images",
+          "Translate while preserving layout",
+          "Transfer a visual style",
+          "Preserve identity and change clothing",
+          "Combine references",
+          "Create a transparent product cutout",
+          "Turn a drawing into a realistic image",
+          "Remove an object",
+          "Insert a person into a scene",
+          "Refine an image across turns",
+          "Create the starting image",
+          "Change one condition",
+          "Keep a character consistent",
+          "More workflows",
+          "Change furniture in a room",
+          "Design a holiday card",
+          "Design collectible merchandise",
+          "Run a complete example",
+          "View the complete example",
+          "Check the result",
+          "Overview",
+          "Model parameters",
+          "Overview",
+          "Model parameters",
+          "Overview",
+          "Model parameters"
+        ]
+      }
+    }
+  },
+  "midjourney": {
+    "kind": "tool",
+    "aliases": [
+      "mj"
+    ],
+    "lineup": {
+      "url": "https://docs.midjourney.com/api/v2/help_center/en-us/articles/32199405667853.json",
+      "format": "json-helpcenter",
+      "model_regex": "(?m)(?<=^## )v\\d+(?:\\.\\d+)?$",
+      "exclude": [
+        "v6",
+        "v6-1"
+      ]
+    },
+    "sources": {
+      "prompt-basics": {
+        "url": "https://docs.midjourney.com/api/v2/help_center/en-us/articles/32023408776205.json",
+        "format": "json-helpcenter"
+      },
+      "parameters": {
+        "url": "https://docs.midjourney.com/api/v2/help_center/en-us/articles/32859204029709.json",
+        "format": "json-helpcenter"
+      },
+      "versions": {
+        "url": "https://docs.midjourney.com/api/v2/help_center/en-us/articles/32199405667853.json",
+        "format": "json-helpcenter"
+      }
+    },
+    "fingerprints": {
+      "prompt-basics": {
+        "sections": {
+          "What is a Prompt?": "sha256:740847f47ac67081",
+          "Prompting Tips & Tricks": "sha256:881b86606d72afc9",
+          "Advanced Prompts": "sha256:d6634c24ead4dafc",
+          "More Prompt Help": "sha256:c2d15763c13bfb6f"
+        },
+        "headings": [
+          "A prompt is your creative starting point—learn how to turn words into unique and exciting images!",
+          "What is a Prompt?",
+          "Prompting Tips & Tricks",
+          "Advanced Prompts",
+          "More Prompt Help"
+        ]
+      },
+      "parameters": {
+        "sections": {
+          "What are Parameters?": "sha256:0dca8fdbc32a5b3f",
+          "Using Parameters": "sha256:dcb48ef6f7461a5f",
+          "Full Parameter List": "sha256:d1c158a4a6a7f716"
+        },
+        "headings": [
+          "Control, customize, and enhance your images with parameters!",
+          "What are Parameters?",
+          "Using Parameters",
+          "Full Parameter List"
+        ]
+      },
+      "versions": {
+        "sections": {
+          "What are Versions?": "sha256:2a5a2949e7d76261",
+          "Setting a Version": "sha256:71c535acd5eb334a",
+          "V8.2": "sha256:4dc10efb983146b6",
+          "V8.1": "sha256:1bbc9e50ca9951f8",
+          "V7": "sha256:4f378807233f16ce",
+          "V6.1": "sha256:8f9246a1a74302e3",
+          "V6": "sha256:403fa7357c07f251",
+          "Niji 7": "sha256:e5f584a22b5e1e10"
+        },
+        "headings": [
+          "Explore and switch between Midjourney versions using the version parameter: --version or --v",
+          "What are Versions?",
+          "Setting a Version",
+          "V8.2",
+          "V8.1",
+          "V7",
+          "V6.1",
+          "V6",
+          "Niji 7"
+        ]
+      }
+    }
+  },
+  "google-video": {
+    "kind": "tool",
+    "aliases": [
+      "veo",
+      "flow",
+      "omni",
+      "gemini-omni",
+      "google-flow"
+    ],
+    "lineup": [
+      {
+        "url": "https://ai.google.dev/gemini-api/docs/omni.md.txt",
+        "format": "md.txt",
+        "model_regex": "gemini-omni-\\d+(?:\\.\\d+)?-[a-z]+(?![\\w-]|\\.\\d)"
+      },
+      {
+        "url": "https://ai.google.dev/gemini-api/docs/veo.md.txt",
+        "format": "md.txt",
+        "model_regex": "veo-\\d+(?:\\.\\d+)?(?:-[a-z]+)*-generate(?:-preview|-\\d+)?(?![\\w-]|\\.\\d)",
+        "exclude": [
+          "veo-3.0-generate-001",
+          "veo-3.0-fast-generate-001"
+        ]
+      }
+    ],
+    "sources": {
+      "veo": {
+        "url": "https://ai.google.dev/gemini-api/docs/veo.md.txt",
+        "format": "md.txt"
+      },
+      "omni": {
+        "url": "https://ai.google.dev/gemini-api/docs/omni.md.txt",
+        "format": "md.txt"
+      },
+      "flow": {
+        "url": "https://support.google.com/flow/answer/16353334",
+        "format": "html",
+        "watch": [
+          "Add start & end frames to your prompt",
+          "Add characters to your prompt",
+          "Add visual references to your prompt",
+          "Add voice references to your prompt",
+          "Best practices & advanced tips when generating in Google Flow"
+        ]
+      }
+    },
+    "fingerprints": {
+      "veo": {
+        "sections": {
+          "Text to video generation": "sha256:f8bbe87b9b2cfbad",
+          "Control the aspect ratio": "sha256:f30f6ccd08b5d652",
+          "Control the resolution": "sha256:d9361247e119147c",
+          "Image to video generation": "sha256:229776c0f90f1242",
+          "Extending Veo videos": "sha256:61adcbbf905f15c6",
+          "Handling asynchronous operations": "sha256:d9c82adb3974b27c",
+          "Veo API parameters and specifications": "sha256:04ba20045ec4e245",
+          "Model features": "sha256:4ace7f05601d3d7b",
+          "Limitations": "sha256:82a659b8be355394",
+          "Veo prompt guide": "sha256:9d641918dd250387",
+          "Model versions": "sha256:0d58bde774fc44a6",
+          "What's next": "sha256:2b815c6e07d791fc"
+        },
+        "headings": [
+          "Text to video generation",
+          "Dialogue \\& sound effects",
+          "Python",
+          "JavaScript",
+          "Go",
+          "Java",
+          "REST",
+          "Cinematic realism",
+          "Python",
+          "JavaScript",
+          "Go",
+          "Java",
+          "REST",
+          "Creative animation",
+          "Python",
+          "JavaScript",
+          "Go",
+          "Java",
+          "REST",
+          "Control the aspect ratio",
+          "Python",
+          "JavaScript",
+          "Go",
+          "REST",
+          "Control the resolution",
+          "Python",
+          "JavaScript",
+          "Go",
+          "REST",
+          "Image to video generation",
+          "Python",
+          "JavaScript",
+          "Go",
+          "Java",
+          "Using reference images",
+          "Python",
+          "JavaScript",
+          "Go",
+          "REST",
+          "Using first and last frames",
+          "Python",
+          "JavaScript",
+          "Go",
+          "REST",
+          "Extending Veo videos",
+          "Python",
+          "JavaScript",
+          "Go",
+          "REST",
+          "Handling asynchronous operations",
+          "Python",
+          "JavaScript",
+          "Go",
+          "Java",
+          "REST",
+          "Veo API parameters and specifications",
+          "Model features",
+          "Limitations",
+          "Veo prompt guide",
+          "Safety filters",
+          "Prompt writing basics",
+          "Prompting for audio",
+          "Prompting with reference images",
+          "Prompting for extension",
+          "Example prompts and output",
+          "Examples by writing elements",
+          "Aspect ratios",
+          "Model versions",
+          "Veo 3.1 Preview",
+          "Veo 3.1 Fast Preview",
+          "Veo 3.1 Lite Preview",
+          "Veo 3 (Deprecated)",
+          "Veo 3 Fast (Deprecated)",
+          "What's next"
+        ]
+      },
+      "omni": {
+        "sections": {
+          "Text to video generation": "sha256:91a47f743cc7232d",
+          "Image to video generation": "sha256:db7e263145f1defe",
+          "Stateful video editing": "sha256:b69a2f28a67e1bfc",
+          "Retrieving videos with an URI": "sha256:4482e4b1011761f9",
+          "Video extension": "sha256:8da025d54adea961",
+          "Best practices": "sha256:b9fdaecc54c66bdd",
+          "Limitations": "sha256:babdc00c4709c7c1",
+          "Technical details": "sha256:f9f6b1c9ba805a6a",
+          "Gemini Omni Flash prompt guide": "sha256:e78b024e4643ddc3",
+          "What's next": "sha256:f45ad34960535868"
+        },
+        "headings": [
+          "Text to video generation",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "REST response schema",
+          "Control aspect ratio",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Output resolution",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Image to video generation",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "First and last frame interpolation",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Subject reference",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Tasks parameter",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Stateful video editing",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Edit your own videos",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Retrieving videos with an URI",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Video extension",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Extending with reference media",
+          "Python",
+          "JavaScript",
+          "Java",
+          "Go",
+          "REST",
+          "Extension constraints and guidelines",
+          "Best practices",
+          "Limitations",
+          "Technical details",
+          "Gemini Omni Flash prompt guide",
+          "Single scene",
+          "Removing unwanted elements",
+          "Prompts for editing",
+          "Prompting the audio",
+          "Timing events",
+          "Meta prompting",
+          "Text in videos",
+          "Prompts for extending a video",
+          "Using tags in prompts to set image and video roles",
+          "What's next"
+        ]
+      },
+      "flow": {
+        "sections": {
+          "Add start & end frames to your prompt": "sha256:0b150cc5f52e32c3",
+          "Add characters to your prompt": "sha256:9c82cf32dff97ac9",
+          "Add visual references to your prompt": "sha256:1ae514d9432fa491",
+          "Add voice references to your prompt": "sha256:d2a9a47258308d15",
+          "Best practices & advanced tips when generating in Google Flow": "sha256:121ac0aa64b9e0f7"
+        },
+        "headings": [
+          "Create video clips in Google Flow",
+          "Create videos with the Google Flow Agent",
+          "Create videos with the standard Google Flow prompt box",
+          "Add start & end frames to your prompt",
+          "Add references to your prompt",
+          "Add characters to your prompt",
+          "Add visual references to your prompt",
+          "Add voice references to your prompt",
+          "Best practices & advanced tips when generating in Google Flow"
+        ]
+      }
+    }
+  },
+  "sora": {
+    "kind": "tool",
+    "aliases": [
+      "openai-video"
+    ],
+    "lineup": {
+      "url": "https://developers.openai.com/cookbook/examples/sora/sora2_prompting_guide.md",
+      "format": "md",
+      "model_regex": "sora-\\d+(?:-[a-z]+)?"
+    },
+    "sources": {
+      "prompting-guide": {
+        "url": "https://developers.openai.com/cookbook/examples/sora/sora2_prompting_guide.md",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "prompting-guide": {
+        "sections": {
+          "Updated - March 2026": "sha256:df5dca0b6e3a6738",
+          "Before you prompt": "sha256:8996ae882323e755",
+          "API Parameters": "sha256:9418972c5495220f",
+          "Endpoints": "sha256:2b419431097a36ac",
+          "Prompt anatomy that works": "sha256:7fcf1e7165eee112",
+          "Visual cues that steer the look": "sha256:d79ec50b46e20709",
+          "Control motion and timing": "sha256:f27592ddff8dcf4a",
+          "Lighting and color consistency": "sha256:51cdfee3f33cc4eb",
+          "Use image input for more control": "sha256:67d4dc084ec991e3",
+          "Dialogue and Audio": "sha256:d01bf13594044a0d",
+          "Iterate with video edits": "sha256:d10771679ffdbaff",
+          "Characters": "sha256:e08f7b90d7c58472",
+          "Extend a video": "sha256:57a24a81635ec4af",
+          "Prompt Structure": "sha256:7f9ce9e142edb97b",
+          "Prompt Examples": "sha256:f0f0c92ca8e46d19"
+        },
+        "headings": [
+          "Updated - March 2026",
+          "Before you prompt",
+          "API Parameters",
+          "Video Resolution",
+          "Video Length",
+          "Endpoints",
+          "Prompt anatomy that works",
+          "Going Ultra-Detailed",
+          "Visual cues that steer the look",
+          "Control motion and timing",
+          "Lighting and color consistency",
+          "Use image input for more control",
+          "Experimentation tip",
+          "Dialogue and Audio",
+          "Iterate with video edits",
+          "Characters",
+          "Create a character",
+          "Generate using a character",
+          "Extend a video",
+          "Prompt Structure",
+          "Prompt Examples",
+          "Example 1",
+          "Example 2"
+        ]
+      }
+    }
+  },
+  "runway": {
+    "kind": "tool",
+    "aliases": [
+      "runwayml"
+    ],
+    "lineup": {
+      "url": "https://help.runwayml.com/api/v2/help_center/en-us/articles/47313737321107.json",
+      "format": "json-helpcenter",
+      "model_regex": "gen-\\d+(?:\\.\\d+)?(?:-[a-z]+)?"
+    },
+    "sources": {
+      "text-to-video": {
+        "url": "https://help.runwayml.com/api/v2/help_center/en-us/articles/47313737321107.json",
+        "format": "json-helpcenter"
+      },
+      "image-to-video": {
+        "url": "https://help.runwayml.com/api/v2/help_center/en-us/articles/48324313115155.json",
+        "format": "json-helpcenter",
+        "watch": [
+          "*"
+        ]
+      }
+    },
+    "fingerprints": {
+      "text-to-video": {
+        "sections": {
+          "*": "sha256:d6cf73cf4d8f6204"
+        },
+        "headings": [
+          "Related articles"
+        ]
+      },
+      "image-to-video": {
+        "sections": {
+          "*": "sha256:b9c45c51e7a3ff08"
+        },
+        "headings": [
+          "Related articles",
+          "Text prompt",
+          "Image prompt"
+        ]
+      }
+    }
+  },
+  "kling": {
+    "kind": "tool",
+    "aliases": [
+      "kling-ai"
+    ],
+    "sources": {
+      "user-guide": {
+        "url": "https://kling.ai/quickstart/klingai-video-3-model-user-guide",
+        "format": "html",
+        "watch": [
+          "1. Multi-Shot Narratives",
+          "2. Image-to-Video & Element Reference",
+          "3. Native Audio Output",
+          "4. Native-Level Text Capabilities",
+          "5. 15-Second Long-Shot Generation",
+          "Kling VIDEO 3.0 Model Pricing"
+        ]
+      }
+    },
+    "fingerprints": {
+      "user-guide": {
+        "sections": {
+          "1. Multi-Shot Narratives": "sha256:8fbb717c2d4bad42",
+          "2. Image-to-Video & Element Reference": "sha256:4b5767e282c21466",
+          "3. Native Audio Output": "sha256:6528ecbf60369827",
+          "4. Native-Level Text Capabilities": "sha256:b4bada3e91068473",
+          "5. 15-Second Long-Shot Generation": "sha256:30beb7c1e06a2f3b",
+          "Kling VIDEO 3.0 Model Pricing": "sha256:e37c209ad23e80be"
+        },
+        "headings": [
+          "1. Multi-Shot: AI Director Onboard, One-Click Cinematic Output",
+          "2. World's First: Image-to-Video + Enhanced Subject Consistency, Core Elements Locked In",
+          "3. Upgraded Native Audio Output with Character Referencing & More Languages",
+          "4. Native-Level Text Output with Precise Lettering Capabilities",
+          "5. 15-Second Generation: More Creativity per Output",
+          "1. Multi-Shot Narratives",
+          "2. Image-to-Video & Element Reference",
+          "3. Native Audio Output",
+          "4. Native-Level Text Capabilities",
+          "5. 15-Second Long-Shot Generation",
+          "You might also like",
+          "Kling Element Library User Guide",
+          "KLING VIDEO O1 User Guide",
+          "KLING O1 User Guide (Image O1)",
+          "Kling AI Avatar 2.0 User Guide"
+        ]
+      }
+    }
+  },
+  "higgsfield": {
+    "kind": "tool",
+    "aliases": [
+      "higgsfield-ai"
+    ],
+    "sources": {
+      "sora-2-guide": {
+        "url": "https://higgsfield.ai/sora-2-prompt-guide",
+        "format": "html",
+        "watch": [
+          "A prompt guide from a platform trusted by 25 million creators",
+          "Explore more AI features"
+        ]
+      }
+    },
+    "fingerprints": {
+      "sora-2-guide": {
+        "sections": {
+          "A prompt guide from a platform trusted by 25 million creators": "sha256:47b227d4e2123677",
+          "Explore more AI features": "sha256:0076fcdaf64fd78b"
+        },
+        "headings": [
+          "Short prompts",
+          "Watch us build it live",
+          "A prompt guide from a platform trusted by 25 million creators",
+          "Explore more AI features"
+        ]
+      }
+    }
+  },
+  "elevenlabs": {
+    "kind": "tool",
+    "aliases": [
+      "eleven-labs",
+      "11labs"
+    ],
+    "lineup": {
+      "url": "https://elevenlabs.io/docs/overview/capabilities/text-to-speech/best-practices.md",
+      "format": "md",
+      "model_regex": "eleven[ _-](?:[a-z]+[ _-])?v\\d+(?:[._]\\d+)?(?!\\w)"
+    },
+    "sources": {
+      "tts": {
+        "url": "https://elevenlabs.io/docs/overview/capabilities/text-to-speech/best-practices.md",
+        "format": "md"
+      },
+      "music": {
+        "url": "https://elevenlabs.io/docs/overview/capabilities/music/best-practices.md",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "tts": {
+        "sections": {
+          "Controls": "sha256:e91f2f912f98e898",
+          "Text normalization": "sha256:0009efd49b29e764",
+          "Prompting Eleven v4": "sha256:fbdd954999af92c9",
+          "Prompting Eleven v3": "sha256:649ae141e66f6f48"
+        },
+        "headings": [
+          "Controls",
+          "Pauses",
+          "Pronunciation",
+          "Emotion",
+          "Pace",
+          "Tips",
+          "Creative control",
+          "Narrative styling",
+          "Layered outputs",
+          "Phonetic experimentation",
+          "Manual adjustments",
+          "Feedback iteration",
+          "Text normalization",
+          "Why do models read out inputs differently?",
+          "Mitigation",
+          "Prompting Eleven v4",
+          "Voice selection",
+          "Audio tags",
+          "Punctuation",
+          "Single speaker examples",
+          "Multi-speaker dialogue",
+          "Enhancing input",
+          "Tips",
+          "Examples",
+          "Prompting Eleven v3"
+        ]
+      },
+      "music": {
+        "sections": {
+          "How the Model Reads a Prompt": "sha256:1fbb06340cf35f2d",
+          "Genre & Creativity": "sha256:5da9b7b168de9a49",
+          "Production Vocabulary": "sha256:087e04f798d8c22c",
+          "Musical Control": "sha256:e42691e99655bb79",
+          "Arrangement": "sha256:45278cc86ec1ee29",
+          "Loops": "sha256:e781f1f909feaf10",
+          "Structural Timing & Lyrics": "sha256:542afbd3c1bb22b6",
+          "Instrument & Vocal Isolation": "sha256:c97c1327012ad23c",
+          "Sound Design": "sha256:30f227b3b158ae1a",
+          "Audio Reference": "sha256:d9532f45e42c3185",
+          "Sample Prompts": "sha256:41f826e33e349e04",
+          "Summary": "sha256:d1048f7dd93a1c9e",
+          "Advanced: Composition plans": "sha256:18f002904c9a844a"
+        },
+        "headings": [
+          "How the Model Reads a Prompt",
+          "Genre & Creativity",
+          "Production Vocabulary",
+          "Musical Control",
+          "Arrangement",
+          "Loops",
+          "Structural Timing & Lyrics",
+          "Instrument & Vocal Isolation",
+          "Sound Design",
+          "Audio Reference",
+          "Sample Prompts",
+          "Summary",
+          "Advanced: Composition plans"
+        ]
+      }
+    }
+  },
+  "n8n": {
+    "kind": "tool",
+    "aliases": [
+      "n8n-ai"
+    ],
+    "sources": {
+      "tools-agent": {
+        "url": "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/tools-agent.md",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "tools-agent": {
+        "sections": {
+          "Node parameters": "sha256:f8bd915790573745",
+          "Node options": "sha256:f64b25fa67def25f",
+          "Templates and examples": "sha256:22848961d63ec17d",
+          "Dynamic parameters for tools with `$fromAI()`": "sha256:61bc9119a176b4fc",
+          "Human review for tool calls": "sha256:b0be0b7629bc4775",
+          "Common issues": "sha256:04a64ce2c4c6ac32"
+        },
+        "headings": [
+          "Node parameters",
+          "Prompt",
+          "Require Specific Output Format",
+          "Node options",
+          "System Message",
+          "Max Iterations",
+          "Return Intermediate Steps",
+          "Tracing Metadata",
+          "Automatically Passthrough Binary Images",
+          "Enable Streaming",
+          "Templates and examples",
+          "Dynamic parameters for tools with `$fromAI()`",
+          "Human review for tool calls",
+          "Common issues"
+        ]
+      }
+    }
+  },
+  "gamma": {
+    "kind": "tool",
+    "aliases": [
+      "gamma-app"
+    ],
+    "sources": {
+      "agent": {
+        "url": "https://help.gamma.app/en/articles/15002203-how-do-i-create-with-agent-in-gamma.md",
+        "format": "md"
+      },
+      "api-parameters": {
+        "url": "https://developers.gamma.app/guides/generate-api-parameters-explained.md",
+        "format": "md",
+        "watch": [
+          "Quick reference",
+          "Top-level parameters"
+        ]
+      }
+    },
+    "fingerprints": {
+      "agent": {
+        "sections": {
+          "Step 1: Start with a prompt": "sha256:668730734fb9d904",
+          "Step 2: Answer a few quick questions": "sha256:43a238f0fc5a56c5",
+          "Step 3: Review the plan": "sha256:6fd7d9488bbf2a34",
+          "Step 4: Let the agent build": "sha256:2ac69f6c8cb91487"
+        },
+        "headings": [
+          "Step 1: Start with a prompt",
+          "Step 2: Answer a few quick questions",
+          "Step 3: Review the plan",
+          "Step 4: Let the agent build"
+        ]
+      },
+      "api-parameters": {
+        "sections": {
+          "Quick reference": "sha256:5f6e1ad56242d1b7",
+          "Top-level parameters": "sha256:5eebdfbc597a658e"
+        },
+        "headings": [
+          "Quick reference",
+          "Top-level parameters",
+          "Related",
+          "Querying This Documentation"
+        ]
+      }
+    }
+  },
+  "notion-ai": {
+    "kind": "tool",
+    "aliases": [
+      "notion",
+      "notion-agents"
+    ],
+    "sources": {
+      "custom-agent": {
+        "url": "https://www.notion.com/help/guides/build-your-first-custom-agent",
+        "format": "html"
+      }
+    },
+    "fingerprints": {
+      "custom-agent": {
+        "sections": {
+          "Build Custom Agents that automate recurring workflows for your entire team. One person sets it up, everyone benefits from the work that happens automatically.": "sha256:90a6c391e501ad97",
+          "Identify a workflow your Custom Agent can automate": "sha256:27bf6fa6e3a24c4b",
+          "How to build a Custom Agent": "sha256:c9f5e3dec2684139",
+          "Add event-based or scheduled triggers": "sha256:16bae808449146a3",
+          "Review your Custom Agent instructions": "sha256:22b9e2c1c7c2b458",
+          "Connect tools and check that your Custom Agent has access to them": "sha256:bfca3e88beb8a7cc",
+          "Safely test, iterate, and revert changes if needed": "sha256:18d1ffa3a0c39b54",
+          "Save and share your agent with your team": "sha256:93255700bb4a8a4e",
+          "Start with a template": "sha256:e8e313bd3e9831e1"
+        },
+        "headings": [
+          "Build Custom Agents that automate recurring workflows for your entire team. One person sets it up, everyone benefits from the work that happens automatically.",
+          "Identify a workflow your Custom Agent can automate",
+          "How to build a Custom Agent",
+          "Add event-based or scheduled triggers",
+          "Review your Custom Agent instructions",
+          "Connect tools and check that your Custom Agent has access to them",
+          "Safely test, iterate, and revert changes if needed",
+          "Save and share your agent with your team",
+          "Was this resource helpful?",
+          "Start with a template"
+        ]
+      }
+    }
+  },
+  "jev": {
+    "kind": "tool",
+    "aliases": [
+      "typesafe"
+    ],
+    "lineup": {
+      "url": "https://docs.typesafe.ai/models.md",
+      "format": "md",
+      "model_regex": "jev-\\d+\\.\\d+\\.\\d+",
+      "section": "Current models"
+    },
+    "sources": {
+      "models": {
+        "url": "https://docs.typesafe.ai/models.md",
+        "format": "md"
+      },
+      "primitives": {
+        "url": "https://docs.typesafe.ai/primitives.md",
+        "format": "md",
+        "watch": [
+          "Ask for one snap judgment per question",
+          "Define a question",
+          "Choose a question type",
+          "What comes back",
+          "Reference specific fields",
+          "Ask multiple questions together",
+          "Ask speculative questions",
+          "Split a complex judgment into several questions",
+          "When one question depends on another"
+        ]
+      }
+    },
+    "fingerprints": {
+      "models": {
+        "sections": {
+          "Current models": "sha256:5d50bf03db6a9e36",
+          "Aliases": "sha256:db66d90df1f7fae7",
+          "Customizing Jev": "sha256:9a3e1c0988a003a6",
+          "Language support": "sha256:2b146214d467cb35",
+          "Data handling": "sha256:98a31468e9ea0572",
+          "Listing models": "sha256:53f87840aa2a3d91"
+        },
+        "headings": [
+          "Current models",
+          "Aliases",
+          "Customizing Jev",
+          "Language support",
+          "Data handling",
+          "Listing models"
+        ]
+      },
+      "primitives": {
+        "sections": {
+          "Ask for one snap judgment per question": "sha256:eadad308b8606942",
+          "Define a question": "sha256:e87d16611476b0a9",
+          "Choose a question type": "sha256:0d79365fd0e703e9",
+          "What comes back": "sha256:e43a008fedc17965",
+          "Reference specific fields": "sha256:1d41b1f214a8082b",
+          "Ask multiple questions together": "sha256:beb27f7b0aaea4cc",
+          "Ask speculative questions": "sha256:f5e15c540eb9d2f5",
+          "Split a complex judgment into several questions": "sha256:d13a2b785757ab87",
+          "When one question depends on another": "sha256:22801b67557db860"
+        },
+        "headings": [
+          "Ask for one snap judgment per question",
+          "Define a question",
+          "Choose a question type",
+          "What comes back",
+          "Reference specific fields",
+          "Ask multiple questions together",
+          "Ask speculative questions",
+          "Split a complex judgment into several questions",
+          "When one question depends on another",
+          "Next steps"
+        ]
+      }
+    }
+  },
+  "grok-bot": {
+    "kind": "tool",
+    "aliases": [
+      "grokbot",
+      "grok-bots"
+    ],
+    "uses": [
+      "xai"
+    ],
+    "sources": {
+      "bots": {
+        "url": "https://docs.x.ai/grok-bot/bots",
+        "format": "md"
+      },
+      "overview": {
+        "url": "https://docs.x.ai/grok-bot/overview",
+        "format": "md"
+      }
+    },
+    "fingerprints": {
+      "bots": {
+        "sections": {
+          "Give each Bot a clear job": "sha256:ceaa2083bf5f59de",
+          "Create a Bot": "sha256:93f1815f5fe763ff",
+          "Edit a Bot": "sha256:f1fea89fadf247dd",
+          "Pin or hide a Bot": "sha256:3fb1bccef14a8a93",
+          "Duplicate a Bot": "sha256:3537c8e0efd96137",
+          "Share a Bot": "sha256:5c5c05cb18ef10c2",
+          "Delete a Bot": "sha256:0fde2eef52530bfb",
+          "What a Bot remembers": "sha256:49c18dcfd4a67596",
+          "Organize a team of Bots": "sha256:5cb733ce67ef0d9b"
+        },
+        "headings": [
+          "Give each Bot a clear job",
+          "Create a Bot",
+          "Edit a Bot",
+          "Pin or hide a Bot",
+          "Duplicate a Bot",
+          "Share a Bot",
+          "Delete a Bot",
+          "What a Bot remembers",
+          "Organize a team of Bots"
+        ]
+      },
+      "overview": {
+        "sections": {
+          "What makes Grok Bot different": "sha256:571c237b58778289",
+          "Your Bots share one computer": "sha256:cb8a5811d525094a",
+          "A good first handoff": "sha256:bccea49145b668cf",
+          "FAQ": "sha256:11e9a25ebc920988",
+          "Next steps": "sha256:2229bbedba59e8d6"
+        },
+        "headings": [
+          "What makes Grok Bot different",
+          "Your Bots share one computer",
+          "A good first handoff",
+          "FAQ",
+          "Does Grok Bot keep working when my laptop is closed?",
+          "Can several Bots work at the same time?",
+          "What does a Bot remember?",
+          "Can a Bot use any website?",
+          "Which platforms are supported?",
+          "How much does Grok Bot cost?",
+          "Next steps"
+        ]
+      }
+    }
+  }
+}
