@@ -1,5 +1,7 @@
 # promptgremlin
 
+![promptgremlin: a gremlin turning crumpled notes into structured prompts](assets/promptgremlin-banner.webp)
+
 Turns a braindump, rough notes, or a weak prompt into a paste-ready prompt for
 any registered AI model or tool, written to that vendor's current official
 guidance. Every run checks the vendor's model list and watched doc sections,
