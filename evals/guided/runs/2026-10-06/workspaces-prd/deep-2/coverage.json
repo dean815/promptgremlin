@@ -1,0 +1,47 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt says 'a B2B note-taking app'.\"},{\"status\":\"stated\",\"note\":\"The prompt says the PRD is for engineering and design leads, for a kickoff.\"},{\"status\":\"stated\",\"note\":\"v1 lists creating a workspace, inviting members by email and shared notes.\"},{\"status\":\"stated\",\"note\":\"The prompt says 'two roles only: admin and member' and asks for their permissions to be stated explicitly.\"},{\"status\":\"stated\",\"note\":\"Out of v1 lists billing changes, SSO and guest access.\"},{\"status\":\"stated\",\"note\":\"The primary target is stated exactly as the person gave it, with no change.\"},{\"status\":\"stated\",\"note\":\"The prompt says 'at most about 2 pages'.\"},{\"status\":\"stated\",\"note\":\"Migration is kept as an open question, and the prompt says not to propose an answer.\"}],\"invented\":[\"It says the readers 'will read it to decide whether the v1 scope is clear enough to start work, and what still needs resolving first'. The person only said the PRD was for a kickoff, not that it would be used for this go/no-go decision.\",\"It frames the problem as 'teams using a note-taking app have no shared space of their own'. This is a claim about the current situation that the person never made, and it sits awkwardly with the existing shared notes they mentioned.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt says 'a B2B note-taking app'."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says the PRD is for engineering and design leads, for a kickoff."
+      },
+      {
+        "status": "stated",
+        "note": "v1 lists creating a workspace, inviting members by email and shared notes."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says 'two roles only: admin and member' and asks for their permissions to be stated explicitly."
+      },
+      {
+        "status": "stated",
+        "note": "Out of v1 lists billing changes, SSO and guest access."
+      },
+      {
+        "status": "stated",
+        "note": "The primary target is stated exactly as the person gave it, with no change."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says 'at most about 2 pages'."
+      },
+      {
+        "status": "stated",
+        "note": "Migration is kept as an open question, and the prompt says not to propose an answer."
+      }
+    ],
+    "invented": [
+      "It says the readers 'will read it to decide whether the v1 scope is clear enough to start work, and what still needs resolving first'. The person only said the PRD was for a kickoff, not that it would be used for this go/no-go decision.",
+      "It frames the problem as 'teams using a note-taking app have no shared space of their own'. This is a claim about the current situation that the person never made, and it sits awkwardly with the existing shared notes they mentioned."
+    ]
+  },
+  "session": "e29b5117-db30-462b-8e53-c95c17617c6d",
+  "cost_usd": 0.0332826,
+  "output_tokens": 834,
+  "denials": []
+}

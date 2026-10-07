@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never asks whether the July Pro price increase from $49 to $69 drove Pro churn. It only mentions a price tier as one example of a possible pattern, and asks broadly what is driving churn.\"},{\"status\":\"stated\",\"note\":\"Step 1 says to exclude trial accounts (price 0) and report the exclusion.\"},{\"status\":\"stated\",\"note\":\"Step 1 says to exclude the @ourco.test internal accounts.\"},{\"status\":\"stated\",\"note\":\"The prompt says a blank cancel_month means the account is still active, so having a cancel_month means the account churned.\"},{\"status\":\"missing\",\"note\":\"The prompt never says the audience is the CEO.\"},{\"status\":\"contradicted\",\"note\":\"The person wanted at most 5 bullets. The prompt asks for a 3\u20135 sentence summary plus compact tables, a list of exclusions and open questions, which is a much longer output in a different format.\"},{\"status\":\"missing\",\"note\":\"The prompt does not ask for a suggested chart.\"},{\"status\":\"stated\",\"note\":\"The prompt asks the receiver to flag groups too small for a rate to mean much and to separate what the data supports from what is only a hypothesis. This roughly covers stating confidence given the small sample, though it never asks for an overall confidence level for the conclusion.\"}],\"invented\":[\"Claims the person believes the @ourco.test emails are their QA accounts ('which I believe are our QA accounts'). The person never said this.\",\"States the person's goal as knowing 'whether the churn is real, where it is concentrated, and what is likely driving it', which is not what they said and not their actual goal.\",\"Requires a specific output format: compact tables for each breakdown, a list of exclusions and a list of open questions. The person asked for none of these.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never asks whether the July Pro price increase from $49 to $69 drove Pro churn. It only mentions a price tier as one example of a possible pattern, and asks broadly what is driving churn."
+      },
+      {
+        "status": "stated",
+        "note": "Step 1 says to exclude trial accounts (price 0) and report the exclusion."
+      },
+      {
+        "status": "stated",
+        "note": "Step 1 says to exclude the @ourco.test internal accounts."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says a blank cancel_month means the account is still active, so having a cancel_month means the account churned."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt never says the audience is the CEO."
+      },
+      {
+        "status": "contradicted",
+        "note": "The person wanted at most 5 bullets. The prompt asks for a 3\u20135 sentence summary plus compact tables, a list of exclusions and open questions, which is a much longer output in a different format."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt does not ask for a suggested chart."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks the receiver to flag groups too small for a rate to mean much and to separate what the data supports from what is only a hypothesis. This roughly covers stating confidence given the small sample, though it never asks for an overall confidence level for the conclusion."
+      }
+    ],
+    "invented": [
+      "Claims the person believes the @ourco.test emails are their QA accounts ('which I believe are our QA accounts'). The person never said this.",
+      "States the person's goal as knowing 'whether the churn is real, where it is concentrated, and what is likely driving it', which is not what they said and not their actual goal.",
+      "Requires a specific output format: compact tables for each breakdown, a list of exclusions and a list of open questions. The person asked for none of these."
+    ]
+  },
+  "session": "6341faf9-48bc-493d-81a2-de86009c099c",
+  "cost_usd": 0.0514546,
+  "output_tokens": 1195,
+  "denials": []
+}

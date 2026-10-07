@@ -1,0 +1,49 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never says the product is a B2B note-taking app. It only says \\\"this product\\\" and talks about generic \\\"resources\\\".\"},{\"status\":\"missing\",\"note\":\"The prompt mentions a team reviewing the PRD before engineering starts, but it never names the engineering and design leads as readers or says this is for a kickoff.\"},{\"status\":\"missing\",\"note\":\"The v1 scope isn't stated. Creating a workspace, inviting members by email and shared notes are never named. The prompt only speaks generally about sharing and managing resources.\"},{\"status\":\"missing\",\"note\":\"The prompt lists roles as an interview topic to ask about. It doesn't say v1 has only admin and member.\"},{\"status\":\"missing\",\"note\":\"Billing changes, SSO and guest access are not listed as out of scope. The prompt even asks for a Billing and limits section, while the user wants billing changes excluded.\"},{\"status\":\"missing\",\"note\":\"The success metric is left as an interview topic. The prompt never states the target of 20% of paid accounts creating a workspace within 60 days.\"},{\"status\":\"contradicted\",\"note\":\"The prompt asks for ten sections and a document that takes about 10 minutes to read. That is clearly longer than the user's limit of about 2 pages.\"},{\"status\":\"missing\",\"note\":\"Migration of existing shared notes isn't marked as an open question. Migration of individual accounts is only an interview topic, and the prompt asks for a section on data model and migration impact.\"}],\"invented\":[\"Nothing is approved to build yet (used as the reason for documentation only)\",\"The PRD is for review before any engineering starts\",\"Workspaces are framed as replacing a model where each user works in an individual account and shares/manages generic 'resources'\",\"Billing and limits may apply to workspaces (a billing section is requested even though the user puts billing changes out of scope)\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never says the product is a B2B note-taking app. It only says \"this product\" and talks about generic \"resources\"."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt mentions a team reviewing the PRD before engineering starts, but it never names the engineering and design leads as readers or says this is for a kickoff."
+      },
+      {
+        "status": "missing",
+        "note": "The v1 scope isn't stated. Creating a workspace, inviting members by email and shared notes are never named. The prompt only speaks generally about sharing and managing resources."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt lists roles as an interview topic to ask about. It doesn't say v1 has only admin and member."
+      },
+      {
+        "status": "missing",
+        "note": "Billing changes, SSO and guest access are not listed as out of scope. The prompt even asks for a Billing and limits section, while the user wants billing changes excluded."
+      },
+      {
+        "status": "missing",
+        "note": "The success metric is left as an interview topic. The prompt never states the target of 20% of paid accounts creating a workspace within 60 days."
+      },
+      {
+        "status": "contradicted",
+        "note": "The prompt asks for ten sections and a document that takes about 10 minutes to read. That is clearly longer than the user's limit of about 2 pages."
+      },
+      {
+        "status": "missing",
+        "note": "Migration of existing shared notes isn't marked as an open question. Migration of individual accounts is only an interview topic, and the prompt asks for a section on data model and migration impact."
+      }
+    ],
+    "invented": [
+      "Nothing is approved to build yet (used as the reason for documentation only)",
+      "The PRD is for review before any engineering starts",
+      "Workspaces are framed as replacing a model where each user works in an individual account and shares/manages generic 'resources'",
+      "Billing and limits may apply to workspaces (a billing section is requested even though the user puts billing changes out of scope)"
+    ]
+  },
+  "session": "025cd5d2-f4b3-4d17-97bb-53bc74c92d44",
+  "cost_usd": 0.0370946,
+  "output_tokens": 1127,
+  "denials": []
+}

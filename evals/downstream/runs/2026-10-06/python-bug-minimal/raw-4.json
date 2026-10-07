@@ -1,0 +1,9 @@
+{
+  "text": "**Why it happens:** The default `cart=[]` is created once, when the function is defined, not on each call. Every call that doesn't pass a `cart` reuses that same list, so items accumulate. Your second call returns 12 (2 + 10) instead of 10.\n\n**Minimal fix:** use `None` as the default and create a fresh list inside the function.\n\n```python\ndef add_order(item, price, cart=None):\n    if cart is None:\n        cart = []\n    cart.append((item, price))\n    return sum(p for _, p in cart)\n\nprint(add_order('pen', 2))    # 2\nprint(add_order('book', 10))  # 10\n```\n\nIf you do want a running cart across calls, pass one in explicitly: `my_cart = []` then `add_order('pen', 2, my_cart)`.",
+  "structured": null,
+  "cost_usd": 0.005854,
+  "tokens": 1079,
+  "output_tokens": 257,
+  "denials": [],
+  "sent": "why does this function give wrong totals when i call it more than once? fix it but change as little as possible\n\ndef add_order(item, price, cart=[]):\n    cart.append((item, price))\n    return sum(p for _, p in cart)\n\nprint(add_order('pen', 2))\nprint(add_order('book', 10))"
+}

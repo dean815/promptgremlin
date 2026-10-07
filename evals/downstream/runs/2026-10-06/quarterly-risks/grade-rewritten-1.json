@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"There are exactly 5 bullets.\"},{\"pass\":true,\"note\":\"Acme Fastening is called \\\"a rival\\\" and is never named. HomeMax is a customer, not a competitor, and isn't named either.\"},{\"pass\":true,\"note\":\"Bullet 1 covers the 61% concentration in two big-box customers and the unrenewed contract that expires in Q1. HomeMax isn't named, but the risk is fully there.\"},{\"pass\":true,\"note\":\"Bullet 2 ties the drop from 42% to 38% to the 36% covenant on the $20M line renewing in December. Bullet 3 adds the steel cost driver.\"},{\"pass\":true,\"note\":\"Every figure ($41.2M vs $43M, 38%/42%, 15%, 61%, 140 days, 4 months / $1.1M, $20M, 36%) comes from the report. \\\"Four points\\\" is correctly worked out from those numbers. One small stretch: the report says the covenant requires \\\"margin\\\" above 36%, and the answer calls it \\\"gross margin.\\\" That reading is reasonable but not stated in the report.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "There are exactly 5 bullets."
+      },
+      {
+        "pass": true,
+        "note": "Acme Fastening is called \"a rival\" and is never named. HomeMax is a customer, not a competitor, and isn't named either."
+      },
+      {
+        "pass": true,
+        "note": "Bullet 1 covers the 61% concentration in two big-box customers and the unrenewed contract that expires in Q1. HomeMax isn't named, but the risk is fully there."
+      },
+      {
+        "pass": true,
+        "note": "Bullet 2 ties the drop from 42% to 38% to the 36% covenant on the $20M line renewing in December. Bullet 3 adds the steel cost driver."
+      },
+      {
+        "pass": true,
+        "note": "Every figure ($41.2M vs $43M, 38%/42%, 15%, 61%, 140 days, 4 months / $1.1M, $20M, 36%) comes from the report. \"Four points\" is correctly worked out from those numbers. One small stretch: the report says the covenant requires \"margin\" above 36%, and the answer calls it \"gross margin.\" That reading is reasonable but not stated in the report."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0263928,
+  "tokens": 2848,
+  "output_tokens": 681,
+  "denials": []
+}

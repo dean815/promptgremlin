@@ -1,0 +1,52 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"Landlord's name (Ms. Alvarez) not given\"},{\"status\":\"missing\",\"note\":\"Apartment 4B not mentioned\"},{\"status\":\"missing\",\"note\":\"Date the heater failed (October 2) not mentioned\"},{\"status\":\"missing\",\"note\":\"Phone report on October 3 with no response not mentioned\"},{\"status\":\"missing\",\"note\":\"Overnight temperatures in the 40s \u00b0F not mentioned\"},{\"status\":\"missing\",\"note\":\"48-hour repair request not mentioned\"},{\"status\":\"missing\",\"note\":\"Lease section 12 heat requirement not mentioned\"},{\"status\":\"missing\",\"note\":\"Polite but firm tone not specified\"},{\"status\":\"missing\",\"note\":\"No instruction to avoid threatening to withhold rent\"},{\"status\":\"missing\",\"note\":\"Under-150-word limit not specified\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "Landlord's name (Ms. Alvarez) not given"
+      },
+      {
+        "status": "missing",
+        "note": "Apartment 4B not mentioned"
+      },
+      {
+        "status": "missing",
+        "note": "Date the heater failed (October 2) not mentioned"
+      },
+      {
+        "status": "missing",
+        "note": "Phone report on October 3 with no response not mentioned"
+      },
+      {
+        "status": "missing",
+        "note": "Overnight temperatures in the 40s \u00b0F not mentioned"
+      },
+      {
+        "status": "missing",
+        "note": "48-hour repair request not mentioned"
+      },
+      {
+        "status": "missing",
+        "note": "Lease section 12 heat requirement not mentioned"
+      },
+      {
+        "status": "missing",
+        "note": "Polite but firm tone not specified"
+      },
+      {
+        "status": "missing",
+        "note": "No instruction to avoid threatening to withhold rent"
+      },
+      {
+        "status": "missing",
+        "note": "Under-150-word limit not specified"
+      }
+    ],
+    "invented": []
+  },
+  "session": "42d14667-f0da-4723-83d5-6fae4ef6957a",
+  "cost_usd": 0.016362599999999998,
+  "output_tokens": 358,
+  "denials": []
+}

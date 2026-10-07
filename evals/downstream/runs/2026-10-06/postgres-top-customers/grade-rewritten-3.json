@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"The query is valid PostgreSQL. It uses only customers(id, name), orders(id, customer_id, created_at, status) and order_items(order_id, quantity, unit_price_cents). The joins and GROUP BY are correct, and the alias total_revenue can legally be used in ORDER BY.\"},{\"pass\":true,\"note\":\"Revenue is SUM(oi.quantity::bigint * oi.unit_price_cents), grouped by customer. Casting to bigint prevents int overflow. Dividing by 100.0 only changes the display to currency units and keeps the ranking the same.\"},{\"pass\":true,\"note\":\"The filter is o.created_at >= now() - INTERVAL '90 days', which is a correct rolling 90-day window on orders.created_at.\"},{\"pass\":true,\"note\":\"o.status = 'paid' excludes refunded orders. It also drops cancelled orders, which goes slightly beyond the literal ask. That's a reasonable call, since cancelled orders aren't revenue, and the answer says it does this.\"},{\"pass\":true,\"note\":\"Uses ORDER BY total_revenue DESC, c.id ASC LIMIT 5. The c.id tiebreaker makes the result deterministic.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "The query is valid PostgreSQL. It uses only customers(id, name), orders(id, customer_id, created_at, status) and order_items(order_id, quantity, unit_price_cents). The joins and GROUP BY are correct, and the alias total_revenue can legally be used in ORDER BY."
+      },
+      {
+        "pass": true,
+        "note": "Revenue is SUM(oi.quantity::bigint * oi.unit_price_cents), grouped by customer. Casting to bigint prevents int overflow. Dividing by 100.0 only changes the display to currency units and keeps the ranking the same."
+      },
+      {
+        "pass": true,
+        "note": "The filter is o.created_at >= now() - INTERVAL '90 days', which is a correct rolling 90-day window on orders.created_at."
+      },
+      {
+        "pass": true,
+        "note": "o.status = 'paid' excludes refunded orders. It also drops cancelled orders, which goes slightly beyond the literal ask. That's a reasonable call, since cancelled orders aren't revenue, and the answer says it does this."
+      },
+      {
+        "pass": true,
+        "note": "Uses ORDER BY total_revenue DESC, c.id ASC LIMIT 5. The c.id tiebreaker makes the result deterministic."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0252608,
+  "tokens": 2747,
+  "output_tokens": 654,
+  "denials": []
+}

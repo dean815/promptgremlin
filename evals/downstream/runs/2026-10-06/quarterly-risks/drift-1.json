@@ -1,0 +1,22 @@
+{
+  "text": "{\"dropped\":[],\"added_harmful\":[\"States as fact that the list will be shared outside the company, a reason the user never gave.\",\"Says the list must 'use no outside names', which goes beyond the user's ban on competitor names. It could also wrongly stop the model from naming customers, regulators, suppliers or partners.\"],\"added_neutral\":[\"Orders the risks from most significant first.\",\"Limits each bullet to one or two sentences that state the risk and the evidence for it.\",\"Asks for figures from the summary to be included where they exist.\",\"Suggests generic wording for competitors, such as 'a rival' or 'competing offerings'.\",\"Asks for only the 5 bullets, with no introduction or closing remarks.\",\"Frames the user as reviewing a quarterly report.\"]}",
+  "structured": {
+    "dropped": [],
+    "added_harmful": [
+      "States as fact that the list will be shared outside the company, a reason the user never gave.",
+      "Says the list must 'use no outside names', which goes beyond the user's ban on competitor names. It could also wrongly stop the model from naming customers, regulators, suppliers or partners."
+    ],
+    "added_neutral": [
+      "Orders the risks from most significant first.",
+      "Limits each bullet to one or two sentences that state the risk and the evidence for it.",
+      "Asks for figures from the summary to be included where they exist.",
+      "Suggests generic wording for competitors, such as 'a rival' or 'competing offerings'.",
+      "Asks for only the 5 bullets, with no introduction or closing remarks.",
+      "Frames the user as reviewing a quarterly report."
+    ]
+  },
+  "cost_usd": 0.017934,
+  "tokens": 2191,
+  "output_tokens": 444,
+  "denials": []
+}

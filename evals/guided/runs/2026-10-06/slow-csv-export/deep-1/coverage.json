@@ -1,0 +1,54 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt mentions about 2 million rows and says memory grows with the export.\"},{\"status\":\"stated\",\"note\":\"It requires keeping the signature `export_orders_csv(db, path)` and notes that three callers use it.\"},{\"status\":\"stated\",\"note\":\"It requires the exact header and column order, though the header string itself is invented.\"},{\"status\":\"stated\",\"note\":\"It says \\\"Don't add any dependency\\\" and to ask first if one seems needed, which matches the rule.\"},{\"status\":\"stated\",\"note\":\"It names the N+1 per-row customer lookup as the known main cause.\"},{\"status\":\"stated\",\"note\":\"It says to write rows to the file as they are produced instead of building one big string.\"},{\"status\":\"stated\",\"note\":\"It says customer names can contain commas and need proper CSV quoting with the csv module.\"},{\"status\":\"stated\",\"note\":\"It says to run the existing tests in tests/test_export.py without editing them.\"},{\"status\":\"stated\",\"note\":\"It asks for a minimal, targeted change and says not to restructure the module.\"}],\"invented\":[\"The full current source of export_orders_csv is shown, including its exact queries, string building and file write. Neither the request nor the answers provided it.\",\"The exact customer query `SELECT name FROM customers WHERE id = ?` and the orders query with columns id, customer_id, total_cents, created_at.\",\"The exact header string `id,customer_name,total,created_at`.\",\"The current number formatting (`total_cents/100:.2f`, `created_at.isoformat()`) and '\\\\n' line endings in the old output.\",\"The claim that the old code would crash when an order's customer_id has no matching customer.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt mentions about 2 million rows and says memory grows with the export."
+      },
+      {
+        "status": "stated",
+        "note": "It requires keeping the signature `export_orders_csv(db, path)` and notes that three callers use it."
+      },
+      {
+        "status": "stated",
+        "note": "It requires the exact header and column order, though the header string itself is invented."
+      },
+      {
+        "status": "stated",
+        "note": "It says \"Don't add any dependency\" and to ask first if one seems needed, which matches the rule."
+      },
+      {
+        "status": "stated",
+        "note": "It names the N+1 per-row customer lookup as the known main cause."
+      },
+      {
+        "status": "stated",
+        "note": "It says to write rows to the file as they are produced instead of building one big string."
+      },
+      {
+        "status": "stated",
+        "note": "It says customer names can contain commas and need proper CSV quoting with the csv module."
+      },
+      {
+        "status": "stated",
+        "note": "It says to run the existing tests in tests/test_export.py without editing them."
+      },
+      {
+        "status": "stated",
+        "note": "It asks for a minimal, targeted change and says not to restructure the module."
+      }
+    ],
+    "invented": [
+      "The full current source of export_orders_csv is shown, including its exact queries, string building and file write. Neither the request nor the answers provided it.",
+      "The exact customer query `SELECT name FROM customers WHERE id = ?` and the orders query with columns id, customer_id, total_cents, created_at.",
+      "The exact header string `id,customer_name,total,created_at`.",
+      "The current number formatting (`total_cents/100:.2f`, `created_at.isoformat()`) and '\\n' line endings in the old output.",
+      "The claim that the old code would crash when an order's customer_id has no matching customer."
+    ]
+  },
+  "session": "4437f127-72c1-46f4-b245-afad57e1ba02",
+  "cost_usd": 0.0403386,
+  "output_tokens": 994,
+  "denials": []
+}

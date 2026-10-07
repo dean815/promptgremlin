@@ -1,0 +1,57 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Landlord named as Ms. Alvarez, and the email is addressed to her.\"},{\"status\":\"stated\",\"note\":\"Apartment 4B is stated and used in the sign-off.\"},{\"status\":\"stated\",\"note\":\"Heater stopped working on October 2.\"},{\"status\":\"stated\",\"note\":\"Reported by phone on October 3 with no response.\"},{\"status\":\"stated\",\"note\":\"Overnight temperatures in the 40s \u00b0F.\"},{\"status\":\"stated\",\"note\":\"Asks for a repair within 48 hours, specified as 48 hours from the email.\"},{\"status\":\"stated\",\"note\":\"Says to mention lease section 12 requiring heat.\"},{\"status\":\"stated\",\"note\":\"Polite but firm tone.\"},{\"status\":\"stated\",\"note\":\"Says to leave out any threat to withhold rent.\"},{\"status\":\"stated\",\"note\":\"Says the email must be under 150 words.\"}],\"invented\":[\"Claims the tenant wants to stay on good terms with the landlord. The person never said this.\",\"Adds a ban on any legal threat and any promise on the tenant's behalf, and says 'I haven't authorized any of those.' The user only ruled out threatening to withhold rent.\",\"Sets a specific sign-off ('Thank you,' then 'Apartment 4B'). The user never gave one.\",\"Says section 12 should be mentioned only once, as the reason the request is reasonable. The user only asked that it be mentioned.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Landlord named as Ms. Alvarez, and the email is addressed to her."
+      },
+      {
+        "status": "stated",
+        "note": "Apartment 4B is stated and used in the sign-off."
+      },
+      {
+        "status": "stated",
+        "note": "Heater stopped working on October 2."
+      },
+      {
+        "status": "stated",
+        "note": "Reported by phone on October 3 with no response."
+      },
+      {
+        "status": "stated",
+        "note": "Overnight temperatures in the 40s \u00b0F."
+      },
+      {
+        "status": "stated",
+        "note": "Asks for a repair within 48 hours, specified as 48 hours from the email."
+      },
+      {
+        "status": "stated",
+        "note": "Says to mention lease section 12 requiring heat."
+      },
+      {
+        "status": "stated",
+        "note": "Polite but firm tone."
+      },
+      {
+        "status": "stated",
+        "note": "Says to leave out any threat to withhold rent."
+      },
+      {
+        "status": "stated",
+        "note": "Says the email must be under 150 words."
+      }
+    ],
+    "invented": [
+      "Claims the tenant wants to stay on good terms with the landlord. The person never said this.",
+      "Adds a ban on any legal threat and any promise on the tenant's behalf, and says 'I haven't authorized any of those.' The user only ruled out threatening to withhold rent.",
+      "Sets a specific sign-off ('Thank you,' then 'Apartment 4B'). The user never gave one.",
+      "Says section 12 should be mentioned only once, as the reason the request is reasonable. The user only asked that it be mentioned."
+    ]
+  },
+  "session": "dcf0d207-30e0-44c4-bd64-0160eea8d2c0",
+  "cost_usd": 0.0295186,
+  "output_tokens": 741,
+  "denials": []
+}

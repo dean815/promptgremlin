@@ -1,0 +1,43 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"It takes on the price question head-on. Pro at $69 churned 10 of 12, against 1 of 8 at $49, and all of those cancels fall in Aug\u2013Sep. It says honestly that the file has no price history or cancel reasons, so it can't prove the price caused the churn. I re-checked the counts against the data and they are correct.\"},{\"status\":\"met\",\"note\":\"It removes the 15 trial accounts and lists them by ID. All later figures use the cleaned set of 40 accounts.\"},{\"status\":\"met\",\"note\":\"It removes the 5 @ourco.test accounts (IDs 1056\u20131060) and explains how they would have inflated August churn and the $69 rate.\"},{\"status\":\"met\",\"note\":\"It counts churn as any account with a cancel_month, and says these are cumulative rates.\"},{\"status\":\"not_met\",\"note\":\"It isn't written for a CEO. It opens with a note about hand counting and pandas, then runs through many tables, cohort breakdowns and data-engineering open questions. There is no short executive framing.\"},{\"status\":\"not_met\",\"note\":\"It isn't a summary of at most 5 bullets. It has several sections, multiple tables and well over 5 bullets.\"},{\"status\":\"not_met\",\"note\":\"It never suggests a chart or says what to plot.\"},{\"status\":\"met\",\"note\":\"It flags small samples throughout: Pro $49 has n=8, each cohort has n=8, and some months have only one cancel. It also says price as the cause is only a hypothesis the data can't confirm. However, it never gives one overall confidence rating.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "It takes on the price question head-on. Pro at $69 churned 10 of 12, against 1 of 8 at $49, and all of those cancels fall in Aug\u2013Sep. It says honestly that the file has no price history or cancel reasons, so it can't prove the price caused the churn. I re-checked the counts against the data and they are correct."
+      },
+      {
+        "status": "met",
+        "note": "It removes the 15 trial accounts and lists them by ID. All later figures use the cleaned set of 40 accounts."
+      },
+      {
+        "status": "met",
+        "note": "It removes the 5 @ourco.test accounts (IDs 1056\u20131060) and explains how they would have inflated August churn and the $69 rate."
+      },
+      {
+        "status": "met",
+        "note": "It counts churn as any account with a cancel_month, and says these are cumulative rates."
+      },
+      {
+        "status": "not_met",
+        "note": "It isn't written for a CEO. It opens with a note about hand counting and pandas, then runs through many tables, cohort breakdowns and data-engineering open questions. There is no short executive framing."
+      },
+      {
+        "status": "not_met",
+        "note": "It isn't a summary of at most 5 bullets. It has several sections, multiple tables and well over 5 bullets."
+      },
+      {
+        "status": "not_met",
+        "note": "It never suggests a chart or says what to plot."
+      },
+      {
+        "status": "met",
+        "note": "It flags small samples throughout: Pro $49 has n=8, each cohort has n=8, and some months have only one cancel. It also says price as the cause is only a hypothesis the data can't confirm. However, it never gives one overall confidence rating."
+      }
+    ]
+  },
+  "session": "c893e642-a131-4e6a-949c-db703e396ef9",
+  "cost_usd": 0.06673300000000001,
+  "output_tokens": 1492,
+  "denials": []
+}

@@ -1,0 +1,46 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Stated in the opening line: 'a B2B note-taking app that is adding team workspaces'.\"},{\"status\":\"stated\",\"note\":\"Stated: the readers are engineering and design leads, and the purpose is a kickoff.\"},{\"status\":\"stated\",\"note\":\"Scope 'In' lists creating a workspace, inviting members by email, and shared notes.\"},{\"status\":\"stated\",\"note\":\"Stated: 'Roles: admin and member only.'\"},{\"status\":\"stated\",\"note\":\"Scope 'Out of scope' lists billing changes, SSO and guest access.\"},{\"status\":\"stated\",\"note\":\"The metric is stated word for word, and the prompt says to keep the figure exactly as written.\"},{\"status\":\"stated\",\"note\":\"Stated: 'at most about 2 pages'.\"},{\"status\":\"stated\",\"note\":\"The prompt says migration of existing shared notes must stay an open question and must not be resolved or given a recommendation.\"}],\"invented\":[\"Names engineering and design leads as the people who need to weigh in on the migration open question. The user never said who should decide or advise on migration.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Stated in the opening line: 'a B2B note-taking app that is adding team workspaces'."
+      },
+      {
+        "status": "stated",
+        "note": "Stated: the readers are engineering and design leads, and the purpose is a kickoff."
+      },
+      {
+        "status": "stated",
+        "note": "Scope 'In' lists creating a workspace, inviting members by email, and shared notes."
+      },
+      {
+        "status": "stated",
+        "note": "Stated: 'Roles: admin and member only.'"
+      },
+      {
+        "status": "stated",
+        "note": "Scope 'Out of scope' lists billing changes, SSO and guest access."
+      },
+      {
+        "status": "stated",
+        "note": "The metric is stated word for word, and the prompt says to keep the figure exactly as written."
+      },
+      {
+        "status": "stated",
+        "note": "Stated: 'at most about 2 pages'."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says migration of existing shared notes must stay an open question and must not be resolved or given a recommendation."
+      }
+    ],
+    "invented": [
+      "Names engineering and design leads as the people who need to weigh in on the migration open question. The user never said who should decide or advise on migration."
+    ]
+  },
+  "session": "f2d8b8bd-627f-4211-95ba-b50babf22944",
+  "cost_usd": 0.027406599999999996,
+  "output_tokens": 561,
+  "denials": []
+}

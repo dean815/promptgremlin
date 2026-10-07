@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt only says \\\"large order tables\\\". It never mentions the roughly 2 million row scale or that memory use matters. Streaming writes are asked for only as a speed fix.\"},{\"status\":\"stated\",\"note\":\"\\\"Don't... change its signature.\\\" The three callers aren't mentioned, but the requirement itself is there.\"},{\"status\":\"stated\",\"note\":\"It explicitly says to keep the header line and column order.\"},{\"status\":\"missing\",\"note\":\"\\\"Don't add files\\\" isn't the same as \\\"no new dependencies\\\". The prompt never forbids adding libraries.\"},{\"status\":\"stated\",\"note\":\"It names the per-order customer query as the N+1 pattern and the likely cause.\"},{\"status\":\"stated\",\"note\":\"\\\"write rows to the file as you go instead of concatenating a string\\\"\"},{\"status\":\"contradicted\",\"note\":\"The prompt says to only list CSV escaping of names with commas or quotes, not fix it, because the output must stay byte-for-byte the same. The person wants proper CSV quoting.\"},{\"status\":\"stated\",\"note\":\"It says to find the existing tests for the function and run them. It doesn't name tests/test_export.py, but it covers the requirement.\"},{\"status\":\"stated\",\"note\":\"\\\"keeping the change small\\\", \\\"surgical edits, not a rewrite\\\", \\\"edit only export_orders_csv\\\"\"}],\"invented\":[\"The output file must stay byte-for-byte the same, and the output format must not change. This requirement isn't in the request or the material, and it rules out the CSV quoting the person wants.\",\"\\\"everything here is local and reversible\\\": a claim about the person's environment that nothing they provided supports.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt only says \"large order tables\". It never mentions the roughly 2 million row scale or that memory use matters. Streaming writes are asked for only as a speed fix."
+      },
+      {
+        "status": "stated",
+        "note": "\"Don't... change its signature.\" The three callers aren't mentioned, but the requirement itself is there."
+      },
+      {
+        "status": "stated",
+        "note": "It explicitly says to keep the header line and column order."
+      },
+      {
+        "status": "missing",
+        "note": "\"Don't add files\" isn't the same as \"no new dependencies\". The prompt never forbids adding libraries."
+      },
+      {
+        "status": "stated",
+        "note": "It names the per-order customer query as the N+1 pattern and the likely cause."
+      },
+      {
+        "status": "stated",
+        "note": "\"write rows to the file as you go instead of concatenating a string\""
+      },
+      {
+        "status": "contradicted",
+        "note": "The prompt says to only list CSV escaping of names with commas or quotes, not fix it, because the output must stay byte-for-byte the same. The person wants proper CSV quoting."
+      },
+      {
+        "status": "stated",
+        "note": "It says to find the existing tests for the function and run them. It doesn't name tests/test_export.py, but it covers the requirement."
+      },
+      {
+        "status": "stated",
+        "note": "\"keeping the change small\", \"surgical edits, not a rewrite\", \"edit only export_orders_csv\""
+      }
+    ],
+    "invented": [
+      "The output file must stay byte-for-byte the same, and the output format must not change. This requirement isn't in the request or the material, and it rules out the CSV quoting the person wants.",
+      "\"everything here is local and reversible\": a claim about the person's environment that nothing they provided supports."
+    ]
+  },
+  "session": "cb767f71-7bc6-4d30-8c9d-6705f9938375",
+  "cost_usd": 0.03661059999999999,
+  "output_tokens": 1004,
+  "denials": []
+}

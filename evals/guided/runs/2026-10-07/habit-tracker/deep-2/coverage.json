@@ -1,0 +1,56 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"\\\"for just me\\\" and \\\"There are no accounts or login\\\".\"},{\"status\":\"stated\",\"note\":\"\\\"running locally today\\\", \\\"This is an MVP\\\" and \\\"don't write tests\\\".\"},{\"status\":\"stated\",\"note\":\"\\\"a small web app running locally in the browser\\\".\"},{\"status\":\"stated\",\"note\":\"The stack is given as React + Vite + TypeScript.\"},{\"status\":\"stated\",\"note\":\"\\\"Data lives in the browser's localStorage\\\", with no server and deployment out of scope.\"},{\"status\":\"stated\",\"note\":\"Add, edit and delete habits; the check flow adds 2 habits.\"},{\"status\":\"stated\",\"note\":\"\\\"Check off a habit for today.\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"A streak count per habit\\\", and the builder is asked to define the streak rule.\"},{\"status\":\"stated\",\"note\":\"\\\"A simple 30-day history per habit.\\\"\"},{\"status\":\"stated\",\"note\":\"Reminders and notifications are listed as out of scope.\"},{\"status\":\"stated\",\"note\":\"\\\"dark mode by default\\\".\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "\"for just me\" and \"There are no accounts or login\"."
+      },
+      {
+        "status": "stated",
+        "note": "\"running locally today\", \"This is an MVP\" and \"don't write tests\"."
+      },
+      {
+        "status": "stated",
+        "note": "\"a small web app running locally in the browser\"."
+      },
+      {
+        "status": "stated",
+        "note": "The stack is given as React + Vite + TypeScript."
+      },
+      {
+        "status": "stated",
+        "note": "\"Data lives in the browser's localStorage\", with no server and deployment out of scope."
+      },
+      {
+        "status": "stated",
+        "note": "Add, edit and delete habits; the check flow adds 2 habits."
+      },
+      {
+        "status": "stated",
+        "note": "\"Check off a habit for today.\""
+      },
+      {
+        "status": "stated",
+        "note": "\"A streak count per habit\", and the builder is asked to define the streak rule."
+      },
+      {
+        "status": "stated",
+        "note": "\"A simple 30-day history per habit.\""
+      },
+      {
+        "status": "stated",
+        "note": "Reminders and notifications are listed as out of scope."
+      },
+      {
+        "status": "stated",
+        "note": "\"dark mode by default\"."
+      }
+    ],
+    "invented": []
+  },
+  "session": "6c2769d1-2517-4d11-9492-133e89e7a3d0",
+  "cost_usd": 0.0308026,
+  "output_tokens": 744,
+  "denials": []
+}

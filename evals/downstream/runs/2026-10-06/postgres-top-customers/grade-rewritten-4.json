@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"Valid PostgreSQL. It uses only customers(id, name), orders(id, customer_id, created_at, status) and order_items(order_id, quantity, unit_price_cents). The joins follow the stated foreign keys, and GROUP BY c.id, c.name is valid. One small risk: quantity * unit_price_cents is int * int, so a single line item over about 2.1B cents would overflow. That is unlikely and doesn't make the query invalid.\"},{\"pass\":true,\"note\":\"Revenue is SUM(oi.quantity * oi.unit_price_cents), grouped per customer. It is divided by 100.0 to give dollars, which keeps the ranking the same and is explained in the answer.\"},{\"pass\":true,\"note\":\"WHERE o.created_at >= now() - interval '90 days' limits results to the last 90 days on orders.created_at.\"},{\"pass\":true,\"note\":\"o.status = 'paid' excludes 'refunded' orders. It also drops 'cancelled' orders, which is reasonable because they aren't revenue, and the answer says so openly. Because the filter is in WHERE on an inner join, refunded orders contribute nothing.\"},{\"pass\":true,\"note\":\"ORDER BY total_revenue DESC, c.id ASC LIMIT 5 returns the top 5. The tie-breaker makes the result deterministic.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "Valid PostgreSQL. It uses only customers(id, name), orders(id, customer_id, created_at, status) and order_items(order_id, quantity, unit_price_cents). The joins follow the stated foreign keys, and GROUP BY c.id, c.name is valid. One small risk: quantity * unit_price_cents is int * int, so a single line item over about 2.1B cents would overflow. That is unlikely and doesn't make the query invalid."
+      },
+      {
+        "pass": true,
+        "note": "Revenue is SUM(oi.quantity * oi.unit_price_cents), grouped per customer. It is divided by 100.0 to give dollars, which keeps the ranking the same and is explained in the answer."
+      },
+      {
+        "pass": true,
+        "note": "WHERE o.created_at >= now() - interval '90 days' limits results to the last 90 days on orders.created_at."
+      },
+      {
+        "pass": true,
+        "note": "o.status = 'paid' excludes 'refunded' orders. It also drops 'cancelled' orders, which is reasonable because they aren't revenue, and the answer says so openly. Because the filter is in WHERE on an inner join, refunded orders contribute nothing."
+      },
+      {
+        "pass": true,
+        "note": "ORDER BY total_revenue DESC, c.id ASC LIMIT 5 returns the top 5. The tie-breaker makes the result deterministic."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0260848,
+  "tokens": 2766,
+  "output_tokens": 710,
+  "denials": []
+}

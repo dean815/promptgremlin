@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"B\",\"reason\":\"Both meet the constraints: they apologize, offer a replacement without promising a refund, stay under 120 words and sound friendly. A invents commitments the user didn't authorize (no return needed, a photo of the damage), which could clash with company policy and adds friction for an angry repeat customer. B sticks to the brief, references the order number and avoids overpromising.\"}",
+  "structured": {
+    "winner": "B",
+    "reason": "Both meet the constraints: they apologize, offer a replacement without promising a refund, stay under 120 words and sound friendly. A invents commitments the user didn't authorize (no return needed, a photo of the damage), which could clash with company policy and adds friction for an angry repeat customer. B sticks to the brief, references the order number and avoids overpromising."
+  },
+  "cost_usd": 0.032512,
+  "tokens": 2784,
+  "output_tokens": 854,
+  "denials": [],
+  "winner_arm": "rewritten"
+}

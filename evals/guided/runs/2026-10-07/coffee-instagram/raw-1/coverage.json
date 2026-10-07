@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt doesn't name Midjourney or any other tool.\"},{\"status\":\"missing\",\"note\":\"The prompt says 'instagram' but not that it's a feed post or that it should be 4:5 portrait.\"},{\"status\":\"missing\",\"note\":\"There's no subject. The latte, the leaf latte art and the handmade ceramic cup are all absent.\"},{\"status\":\"missing\",\"note\":\"The dark wood counter isn't mentioned.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't describe any lighting, so the warm early-morning window light is missing.\"},{\"status\":\"missing\",\"note\":\"The film-photo look isn't mentioned.\"},{\"status\":\"missing\",\"note\":\"The single autumn leaf on the counter isn't mentioned.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say to leave people out.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say to leave out text or a logo.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt doesn't name Midjourney or any other tool."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt says 'instagram' but not that it's a feed post or that it should be 4:5 portrait."
+      },
+      {
+        "status": "missing",
+        "note": "There's no subject. The latte, the leaf latte art and the handmade ceramic cup are all absent."
+      },
+      {
+        "status": "missing",
+        "note": "The dark wood counter isn't mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't describe any lighting, so the warm early-morning window light is missing."
+      },
+      {
+        "status": "missing",
+        "note": "The film-photo look isn't mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "The single autumn leaf on the counter isn't mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say to leave people out."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say to leave out text or a logo."
+      }
+    ],
+    "invented": []
+  },
+  "session": "6de37608-a16b-4593-bf90-a65c8306cf73",
+  "cost_usd": 0.0183826,
+  "output_tokens": 471,
+  "denials": []
+}

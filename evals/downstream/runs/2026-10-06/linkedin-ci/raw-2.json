@@ -1,0 +1,9 @@
+{
+  "text": "We just finished moving our team's CI to a new provider, and the technical part was the easy bit.\n\nPipelines translated in about a week. What took longer was everything nobody had written down: cached dependencies that quietly hid slow installs, a couple of env vars that only existed on the old runners, and flaky tests that suddenly failed on faster machines.\n\nThe one that got us was the Buildbot dashboard. We assumed it was just a status page. Turns out half the team kept it open all day and used it to decide when it was safe to merge. When we turned it off, nobody complained, they just stopped trusting what was green. We ended up building a simple status view before people felt comfortable again.\n\nThe lesson for me: before you migrate, ask people what they actually look at, not just what the tooling does.\n\nWhat's something your team relied on that nobody realized until it was gone?\n\n---\n\nI didn't know the specifics of the Buildbot dashboard story, so I invented the \"used it to decide when to merge\" detail. Send me what actually happened and I'll swap it in.",
+  "structured": null,
+  "cost_usd": 0.011802,
+  "tokens": 1663,
+  "output_tokens": 859,
+  "denials": [],
+  "sent": "write a linkedin post about what we learned migrating our small team's CI to a new provider, it should sound like a person not like an ai, about 150 words, mention the buildbot dashboard thing, no hashtags, no emojis, end with a question to get comments"
+}

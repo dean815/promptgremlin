@@ -1,0 +1,44 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never mentions the July Pro price increase from 49 to 69 USD or the question of whether it drove Pro churn.\"},{\"status\":\"missing\",\"note\":\"Nothing says to exclude trial accounts (is_trial = yes).\"},{\"status\":\"missing\",\"note\":\"Nothing says to exclude internal test accounts with emails ending in @ourco.test.\"},{\"status\":\"missing\",\"note\":\"Churn is not defined as an account having a cancel_month.\"},{\"status\":\"missing\",\"note\":\"The CEO is not named as the audience.\"},{\"status\":\"missing\",\"note\":\"There is no output format limiting the summary to at most 5 bullets.\"},{\"status\":\"missing\",\"note\":\"There is no request for one suggested chart.\"},{\"status\":\"missing\",\"note\":\"There is no instruction to state how confident the conclusion is given the small sample.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never mentions the July Pro price increase from 49 to 69 USD or the question of whether it drove Pro churn."
+      },
+      {
+        "status": "missing",
+        "note": "Nothing says to exclude trial accounts (is_trial = yes)."
+      },
+      {
+        "status": "missing",
+        "note": "Nothing says to exclude internal test accounts with emails ending in @ourco.test."
+      },
+      {
+        "status": "missing",
+        "note": "Churn is not defined as an account having a cancel_month."
+      },
+      {
+        "status": "missing",
+        "note": "The CEO is not named as the audience."
+      },
+      {
+        "status": "missing",
+        "note": "There is no output format limiting the summary to at most 5 bullets."
+      },
+      {
+        "status": "missing",
+        "note": "There is no request for one suggested chart."
+      },
+      {
+        "status": "missing",
+        "note": "There is no instruction to state how confident the conclusion is given the small sample."
+      }
+    ],
+    "invented": []
+  },
+  "session": "2ba000b1-0fc4-41b7-b345-2ec5cd6a2a7c",
+  "cost_usd": 0.0162826,
+  "output_tokens": 350,
+  "denials": []
+}

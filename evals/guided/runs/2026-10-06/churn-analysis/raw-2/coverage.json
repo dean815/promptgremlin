@@ -1,0 +1,44 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never brings up the July Pro price increase from 49 to 69 USD or asks whether it drove Pro churn.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say to exclude trial accounts (is_trial = yes).\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say to exclude internal test accounts with emails ending in @ourco.test.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't define churn as an account having a cancel_month.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say the audience is the CEO.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't ask for a summary of at most 5 bullets.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't ask for a suggested chart.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't ask how confident the conclusion is given the small sample.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never brings up the July Pro price increase from 49 to 69 USD or asks whether it drove Pro churn."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say to exclude trial accounts (is_trial = yes)."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say to exclude internal test accounts with emails ending in @ourco.test."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't define churn as an account having a cancel_month."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say the audience is the CEO."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't ask for a summary of at most 5 bullets."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't ask for a suggested chart."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't ask how confident the conclusion is given the small sample."
+      }
+    ],
+    "invented": []
+  },
+  "session": "6fc28190-1f81-4191-99dc-f32b135c5f58",
+  "cost_usd": 0.0167946,
+  "output_tokens": 378,
+  "denials": []
+}

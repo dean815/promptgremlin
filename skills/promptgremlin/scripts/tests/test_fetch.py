@@ -157,7 +157,7 @@ def test_http_get_sends_only_the_honest_identifying_ua():
         urllib.request.urlopen = real
     assert seen["user-agent"] == f.DEFAULT_UA
     repo = json.loads((Path(__file__).resolve().parents[4] / ".claude-plugin" / "plugin.json").read_text())["repository"]
-    assert f.DEFAULT_UA == f"promptgremlin/2.0 (+{repo})"
-    assert f.DEFAULT_UA.startswith("promptgremlin/2.0 (+https://github.com/")
+    assert f.DEFAULT_UA == f"promptgremlin/3.0 (+{repo})"
+    assert f.DEFAULT_UA.startswith("promptgremlin/3.0 (+https://github.com/")
     assert "Mozilla" not in seen["user-agent"]
     assert not hasattr(f, "BROWSER_UA")

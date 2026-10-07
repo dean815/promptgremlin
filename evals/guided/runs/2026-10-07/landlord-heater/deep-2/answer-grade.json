@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"The letter is addressed to \\\"Dear Ms. Alvarez.\\\"\"},{\"status\":\"met\",\"note\":\"Apartment 4B appears in both the subject line and the body.\"},{\"status\":\"met\",\"note\":\"It says the heater \\\"stopped working on October 2.\\\"\"},{\"status\":\"met\",\"note\":\"It says \\\"I called you on October 3 and have not had a response.\\\"\"},{\"status\":\"met\",\"note\":\"It says \\\"Overnight temperatures are in the 40s \u00b0F.\\\"\"},{\"status\":\"met\",\"note\":\"It asks to \\\"have the heater repaired within 48 hours.\\\"\"},{\"status\":\"met\",\"note\":\"It says \\\"section 12 of my lease requires you to provide heat.\\\"\"},{\"status\":\"met\",\"note\":\"The tone is polite (\\\"Dear,\\\" \\\"Please,\\\" \\\"Thank you\\\") and firm, with a set deadline and a reference to the lease. The line \\\"no preference on timing\\\" applies only to when the visit happens, so it doesn't weaken the 48-hour demand.\"},{\"status\":\"met\",\"note\":\"The letter does not mention withholding rent or any other threat.\"},{\"status\":\"met\",\"note\":\"The full message is about 80 words, which is under the 150-word limit.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "The letter is addressed to \"Dear Ms. Alvarez.\""
+      },
+      {
+        "status": "met",
+        "note": "Apartment 4B appears in both the subject line and the body."
+      },
+      {
+        "status": "met",
+        "note": "It says the heater \"stopped working on October 2.\""
+      },
+      {
+        "status": "met",
+        "note": "It says \"I called you on October 3 and have not had a response.\""
+      },
+      {
+        "status": "met",
+        "note": "It says \"Overnight temperatures are in the 40s \u00b0F.\""
+      },
+      {
+        "status": "met",
+        "note": "It asks to \"have the heater repaired within 48 hours.\""
+      },
+      {
+        "status": "met",
+        "note": "It says \"section 12 of my lease requires you to provide heat.\""
+      },
+      {
+        "status": "met",
+        "note": "The tone is polite (\"Dear,\" \"Please,\" \"Thank you\") and firm, with a set deadline and a reference to the lease. The line \"no preference on timing\" applies only to when the visit happens, so it doesn't weaken the 48-hour demand."
+      },
+      {
+        "status": "met",
+        "note": "The letter does not mention withholding rent or any other threat."
+      },
+      {
+        "status": "met",
+        "note": "The full message is about 80 words, which is under the 150-word limit."
+      }
+    ]
+  },
+  "session": "ada24534-cd40-47ba-850a-52bd82d2ea7e",
+  "cost_usd": 0.019688999999999998,
+  "output_tokens": 527,
+  "denials": []
+}

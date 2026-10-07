@@ -1,0 +1,47 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"Makes a clear call: keep pgvector. It also names the condition for switching to Qdrant: filtered recall below target, or RAM needs pushing RDS above $500.\"},{\"status\":\"met\",\"note\":\"Sizes for 5M and for 9M after a year of growth (about 31 GB / 55 GB in float32, 28 GB with halfvec). Throughout, it reasons about the 9M working set.\"},{\"status\":\"met\",\"note\":\"Built around RDS PG16: drops pgvectorscale because it can't be installed on RDS, gives RDS instance classes, and says to check the pgvector version supported on the RDS minor version.\"},{\"status\":\"met\",\"note\":\"Estimates monthly cost for each option and flags pgvector as 'likely tight' against $500. Going over budget is one of the conditions for switching. The figures are unverified, but budget is clearly part of the decision.\"},{\"status\":\"met\",\"note\":\"Has a dedicated tenant-filtered search column. Covers post-filter recall loss, iterative_scan, B-tree exact scans for small tenants, and partial indexes or partitions for large ones. Says Qdrant's tenant-optimized payload index is stronger.\"},{\"status\":\"met\",\"note\":\"The table has exactly 4 rows. One inconsistency: Pinecone serverless is listed as 'scanned and dropped' but still appears in the table.\"},{\"status\":\"met\",\"note\":\"Gives a comparison table plus one bolded recommendation (keep pgvector) with tuning steps and a switch condition.\"},{\"status\":\"not_met\",\"note\":\"No sources cited at all. The answer says search was unavailable and marks every claim unverified instead of making up links. That is honest, but the preference for recent sources is still not met.\"},{\"status\":\"met\",\"note\":\"Follows the structure: a broad candidate scan (Pinecone, pgvectorscale, OpenSearch, turbopuffer), then a deeper comparison of pgvector and Qdrant. The scan came from background knowledge, not live research, and the deep dive is fairly shallow.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "Makes a clear call: keep pgvector. It also names the condition for switching to Qdrant: filtered recall below target, or RAM needs pushing RDS above $500."
+      },
+      {
+        "status": "met",
+        "note": "Sizes for 5M and for 9M after a year of growth (about 31 GB / 55 GB in float32, 28 GB with halfvec). Throughout, it reasons about the 9M working set."
+      },
+      {
+        "status": "met",
+        "note": "Built around RDS PG16: drops pgvectorscale because it can't be installed on RDS, gives RDS instance classes, and says to check the pgvector version supported on the RDS minor version."
+      },
+      {
+        "status": "met",
+        "note": "Estimates monthly cost for each option and flags pgvector as 'likely tight' against $500. Going over budget is one of the conditions for switching. The figures are unverified, but budget is clearly part of the decision."
+      },
+      {
+        "status": "met",
+        "note": "Has a dedicated tenant-filtered search column. Covers post-filter recall loss, iterative_scan, B-tree exact scans for small tenants, and partial indexes or partitions for large ones. Says Qdrant's tenant-optimized payload index is stronger."
+      },
+      {
+        "status": "met",
+        "note": "The table has exactly 4 rows. One inconsistency: Pinecone serverless is listed as 'scanned and dropped' but still appears in the table."
+      },
+      {
+        "status": "met",
+        "note": "Gives a comparison table plus one bolded recommendation (keep pgvector) with tuning steps and a switch condition."
+      },
+      {
+        "status": "not_met",
+        "note": "No sources cited at all. The answer says search was unavailable and marks every claim unverified instead of making up links. That is honest, but the preference for recent sources is still not met."
+      },
+      {
+        "status": "met",
+        "note": "Follows the structure: a broad candidate scan (Pinecone, pgvectorscale, OpenSearch, turbopuffer), then a deeper comparison of pgvector and Qdrant. The scan came from background knowledge, not live research, and the deep dive is fairly shallow."
+      }
+    ]
+  },
+  "session": "4ef22ea8-d736-4522-927f-ab1e7e93fd91",
+  "cost_usd": 0.045525,
+  "output_tokens": 1166,
+  "denials": []
+}

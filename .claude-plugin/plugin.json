@@ -1,7 +1,7 @@
 {
   "name": "promptgremlin",
-  "version": "2.0.0",
-  "description": "Turn braindumps into paste-ready prompts for any AI model or tool, using each vendor's current official guidance.",
+  "version": "3.0.0",
+  "description": "Turn a thin request for real work into a targeted, paste-ready prompt for any AI model or tool: a short interview fills the gaps, then the prompt is written to the vendor's current official guidance.",
   "author": {
     "name": "dean815"
   },

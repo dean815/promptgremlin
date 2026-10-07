@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt doesn't frame the choice as staying on pgvector versus moving to a dedicated vector database.\"},{\"status\":\"missing\",\"note\":\"There is no data scale: not the 5M embeddings, the 1536 dimensions, or the growth of 1M per quarter.\"},{\"status\":\"missing\",\"note\":\"It doesn't say the team already runs Postgres 16 on AWS RDS.\"},{\"status\":\"missing\",\"note\":\"The budget limit of under $500 per month is absent.\"},{\"status\":\"missing\",\"note\":\"The need to filter queries by tenant_id for multi-tenancy isn't mentioned.\"},{\"status\":\"missing\",\"note\":\"There is no cap of at most 4 options.\"},{\"status\":\"missing\",\"note\":\"It doesn't ask for a comparison table plus one recommendation.\"},{\"status\":\"missing\",\"note\":\"It gives no preference for sources from the last 12 months.\"},{\"status\":\"missing\",\"note\":\"The approach of a wide scan first, then a deep look at the top 2, isn't specified.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt doesn't frame the choice as staying on pgvector versus moving to a dedicated vector database."
+      },
+      {
+        "status": "missing",
+        "note": "There is no data scale: not the 5M embeddings, the 1536 dimensions, or the growth of 1M per quarter."
+      },
+      {
+        "status": "missing",
+        "note": "It doesn't say the team already runs Postgres 16 on AWS RDS."
+      },
+      {
+        "status": "missing",
+        "note": "The budget limit of under $500 per month is absent."
+      },
+      {
+        "status": "missing",
+        "note": "The need to filter queries by tenant_id for multi-tenancy isn't mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "There is no cap of at most 4 options."
+      },
+      {
+        "status": "missing",
+        "note": "It doesn't ask for a comparison table plus one recommendation."
+      },
+      {
+        "status": "missing",
+        "note": "It gives no preference for sources from the last 12 months."
+      },
+      {
+        "status": "missing",
+        "note": "The approach of a wide scan first, then a deep look at the top 2, isn't specified."
+      }
+    ],
+    "invented": []
+  },
+  "session": "413665e9-ac37-48e1-ae05-38a3aa7f9684",
+  "cost_usd": 0.0175226,
+  "output_tokens": 408,
+  "denials": []
+}

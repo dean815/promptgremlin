@@ -1,0 +1,56 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt doesn't say it's for one person with no accounts or login.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't ask for an MVP that runs today, or say that tests aren't needed.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't name a platform, so a local web app in the browser isn't specified.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't mention TypeScript.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say data stays in the browser with no server or database.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say the app has to track multiple habits.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't mention a daily check-off for each habit.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't mention showing the current streak.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't mention a 30-day history for each habit.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't rule out reminders or notifications.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't mention dark mode.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say it's for one person with no accounts or login."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't ask for an MVP that runs today, or say that tests aren't needed."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't name a platform, so a local web app in the browser isn't specified."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't mention TypeScript."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say data stays in the browser with no server or database."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say the app has to track multiple habits."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't mention a daily check-off for each habit."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't mention showing the current streak."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't mention a 30-day history for each habit."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't rule out reminders or notifications."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't mention dark mode."
+      }
+    ],
+    "invented": []
+  },
+  "session": "5a346cc1-1a29-4e20-8dbf-63f21b021b0b",
+  "cost_usd": 0.024336,
+  "output_tokens": 530,
+  "denials": []
+}

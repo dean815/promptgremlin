@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"The answer has exactly five bullet points.\"},{\"pass\":true,\"note\":\"No competitor is named. Acme Fastening is called \\\"A rival.\\\" HomeMax is named, but it's a customer, not a competitor.\"},{\"pass\":true,\"note\":\"The first bullet covers the 61% concentration in two retailers and HomeMax not renewing before its Q1 expiry.\"},{\"pass\":true,\"note\":\"The second bullet covers the margin drop from 42% to 38% caused by steel costs. The third bullet ties that drop to the 36% covenant on the December credit line and points out the 2-point cushion.\"},{\"pass\":true,\"note\":\"Every figure comes from the report. The 2-point cushion is just 38% minus 36%. Points like \\\"tying up cash\\\" are reasonable inferences, not new numbers.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "The answer has exactly five bullet points."
+      },
+      {
+        "pass": true,
+        "note": "No competitor is named. Acme Fastening is called \"A rival.\" HomeMax is named, but it's a customer, not a competitor."
+      },
+      {
+        "pass": true,
+        "note": "The first bullet covers the 61% concentration in two retailers and HomeMax not renewing before its Q1 expiry."
+      },
+      {
+        "pass": true,
+        "note": "The second bullet covers the margin drop from 42% to 38% caused by steel costs. The third bullet ties that drop to the 36% covenant on the December credit line and points out the 2-point cushion."
+      },
+      {
+        "pass": true,
+        "note": "Every figure comes from the report. The 2-point cushion is just 38% minus 36%. Points like \"tying up cash\" are reasonable inferences, not new numbers."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.022288799999999998,
+  "tokens": 2602,
+  "output_tokens": 503,
+  "denials": []
+}

@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The opening line states the decision: keep using Postgres with pgvector, or adopt a dedicated vector database.\"},{\"status\":\"stated\",\"note\":\"States about 5 million embeddings at 1536 dimensions, growing about 1 million per quarter.\"},{\"status\":\"stated\",\"note\":\"States Postgres 16 on AWS RDS.\"},{\"status\":\"stated\",\"note\":\"States a budget under $500 per month.\"},{\"status\":\"stated\",\"note\":\"States that queries must filter by tenant_id (multi-tenant).\"},{\"status\":\"stated\",\"note\":\"Says to compare at most 4 options: pgvector plus up to 3 dedicated vector databases.\"},{\"status\":\"stated\",\"note\":\"Asks for a comparison table with sources cited, then one clear recommendation.\"},{\"status\":\"stated\",\"note\":\"Says to use only material from the last 12 months. That is stricter than 'prefer', but it matches the 12-month window the person asked for.\"},{\"status\":\"stated\",\"note\":\"The plan is a wide survey of all 4 options, then a deep look at the top 2.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The opening line states the decision: keep using Postgres with pgvector, or adopt a dedicated vector database."
+      },
+      {
+        "status": "stated",
+        "note": "States about 5 million embeddings at 1536 dimensions, growing about 1 million per quarter."
+      },
+      {
+        "status": "stated",
+        "note": "States Postgres 16 on AWS RDS."
+      },
+      {
+        "status": "stated",
+        "note": "States a budget under $500 per month."
+      },
+      {
+        "status": "stated",
+        "note": "States that queries must filter by tenant_id (multi-tenant)."
+      },
+      {
+        "status": "stated",
+        "note": "Says to compare at most 4 options: pgvector plus up to 3 dedicated vector databases."
+      },
+      {
+        "status": "stated",
+        "note": "Asks for a comparison table with sources cited, then one clear recommendation."
+      },
+      {
+        "status": "stated",
+        "note": "Says to use only material from the last 12 months. That is stricter than 'prefer', but it matches the 12-month window the person asked for."
+      },
+      {
+        "status": "stated",
+        "note": "The plan is a wide survey of all 4 options, then a deep look at the top 2."
+      }
+    ],
+    "invented": []
+  },
+  "session": "fdb826cb-d756-488a-adf6-2c30d8d27183",
+  "cost_usd": 0.028358599999999998,
+  "output_tokens": 577,
+  "denials": []
+}

@@ -1,0 +1,19 @@
+{
+  "text": "{\"dropped\":[],\"added_harmful\":[\"States a made-up reason for the no-competitor-names rule: 'the list may be shared beyond the team'. The person never said this.\"],\"added_neutral\":[\"Asks for the bullets to be ranked from most to least significant.\",\"Limits each bullet to one or two sentences: the risk plus supporting evidence from the summary.\",\"Says to refer to competitors generically (e.g., 'a competitor') and to leave out product names as well as company names.\",\"Says the reply should be only the 5 bullets, with no introduction or closing remarks.\"]}",
+  "structured": {
+    "dropped": [],
+    "added_harmful": [
+      "States a made-up reason for the no-competitor-names rule: 'the list may be shared beyond the team'. The person never said this."
+    ],
+    "added_neutral": [
+      "Asks for the bullets to be ranked from most to least significant.",
+      "Limits each bullet to one or two sentences: the risk plus supporting evidence from the summary.",
+      "Says to refer to competitors generically (e.g., 'a competitor') and to leave out product names as well as company names.",
+      "Says the reply should be only the 5 bullets, with no introduction or closing remarks."
+    ]
+  },
+  "cost_usd": 0.018774,
+  "tokens": 2218,
+  "output_tokens": 496,
+  "denials": []
+}

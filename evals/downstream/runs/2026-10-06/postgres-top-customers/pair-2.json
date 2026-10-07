@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"B\",\"reason\":\"The two queries are essentially the same and both correct. B gives more useful notes: it offers `status <> 'refunded'` in case cancelled orders should still count (which matches the literal request), flags the int*int overflow risk with a fix, gives a concrete tie-breaker, explains rolling vs. calendar windows, and suggests indexes. A's notes are accurate but mostly describe the schema and give the person less to act on.\"}",
+  "structured": {
+    "winner": "B",
+    "reason": "The two queries are essentially the same and both correct. B gives more useful notes: it offers `status <> 'refunded'` in case cancelled orders should still count (which matches the literal request), flags the int*int overflow risk with a fix, gives a concrete tie-breaker, explains rolling vs. calendar windows, and suggests indexes. A's notes are accurate but mostly describe the schema and give the person less to act on."
+  },
+  "cost_usd": 0.036656,
+  "tokens": 3488,
+  "output_tokens": 730,
+  "denials": [],
+  "winner_arm": "raw"
+}

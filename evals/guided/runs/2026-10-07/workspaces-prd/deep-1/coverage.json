@@ -1,0 +1,44 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt says 'a B2B note-taking app'. That matches what they said.\"},{\"status\":\"stated\",\"note\":\"The prompt says the readers are engineering and design leads who will use it at a kickoff meeting.\"},{\"status\":\"stated\",\"note\":\"The prompt lists the in-scope items: creating a workspace, inviting members by email and shared notes.\"},{\"status\":\"stated\",\"note\":\"The prompt says 'Roles: admin and member only.'\"},{\"status\":\"stated\",\"note\":\"The prompt lists the out-of-scope items: billing changes, SSO and guest access.\"},{\"status\":\"stated\",\"note\":\"The prompt gives the metric as 20% of paid accounts creating a workspace within 60 days and says to use it exactly as written.\"},{\"status\":\"stated\",\"note\":\"The prompt asks for a standard PRD of about 2 pages at most.\"},{\"status\":\"stated\",\"note\":\"The prompt lists the migration of existing shared notes as an open question. It says to leave it unresolved and not to recommend an answer.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt says 'a B2B note-taking app'. That matches what they said."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says the readers are engineering and design leads who will use it at a kickoff meeting."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt lists the in-scope items: creating a workspace, inviting members by email and shared notes."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says 'Roles: admin and member only.'"
+      },
+      {
+        "status": "stated",
+        "note": "The prompt lists the out-of-scope items: billing changes, SSO and guest access."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt gives the metric as 20% of paid accounts creating a workspace within 60 days and says to use it exactly as written."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks for a standard PRD of about 2 pages at most."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt lists the migration of existing shared notes as an open question. It says to leave it unresolved and not to recommend an answer."
+      }
+    ],
+    "invented": []
+  },
+  "session": "1e1c9be5-1a04-4cca-9b31-eadfa6d17808",
+  "cost_usd": 0.0260506,
+  "output_tokens": 510,
+  "denials": []
+}

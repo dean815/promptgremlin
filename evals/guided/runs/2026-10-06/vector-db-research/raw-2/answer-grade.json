@@ -1,0 +1,15 @@
+{
+  "text": "{\"items\":[{\"status\":\"not_met\",\"note\":\"It never makes the pgvector-versus-dedicated-database decision for this case. It only says, generically, that teams already on Postgres should start with pgvector, and it ends by asking for more information.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "not_met",
+        "note": "It never makes the pgvector-versus-dedicated-database decision for this case. It only says, generically, that teams already on Postgres should start with pgvector, and it ends by asking for more information."
+      }
+    ]
+  },
+  "session": "635e1fad-5945-44b0-9537-7bf10c8535b3",
+  "cost_usd": 0.028236999999999998,
+  "output_tokens": 450,
+  "denials": []
+}

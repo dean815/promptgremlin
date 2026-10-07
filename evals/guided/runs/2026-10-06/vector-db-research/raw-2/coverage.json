@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt doesn't frame the choice as keeping pgvector versus adopting a dedicated vector DB.\"},{\"status\":\"missing\",\"note\":\"It gives no data volume, dimension count or growth rate.\"},{\"status\":\"missing\",\"note\":\"It doesn't mention the existing Postgres 16 on RDS.\"},{\"status\":\"missing\",\"note\":\"It sets no budget.\"},{\"status\":\"missing\",\"note\":\"It doesn't say queries must be filtered by tenant_id.\"},{\"status\":\"missing\",\"note\":\"It sets no limit on how many options to compare.\"},{\"status\":\"missing\",\"note\":\"It doesn't ask for a comparison table or a recommendation.\"},{\"status\":\"missing\",\"note\":\"It says nothing about how recent sources should be.\"},{\"status\":\"missing\",\"note\":\"It doesn't describe the approach of a wide scan followed by a deep dive on the top 2.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt doesn't frame the choice as keeping pgvector versus adopting a dedicated vector DB."
+      },
+      {
+        "status": "missing",
+        "note": "It gives no data volume, dimension count or growth rate."
+      },
+      {
+        "status": "missing",
+        "note": "It doesn't mention the existing Postgres 16 on RDS."
+      },
+      {
+        "status": "missing",
+        "note": "It sets no budget."
+      },
+      {
+        "status": "missing",
+        "note": "It doesn't say queries must be filtered by tenant_id."
+      },
+      {
+        "status": "missing",
+        "note": "It sets no limit on how many options to compare."
+      },
+      {
+        "status": "missing",
+        "note": "It doesn't ask for a comparison table or a recommendation."
+      },
+      {
+        "status": "missing",
+        "note": "It says nothing about how recent sources should be."
+      },
+      {
+        "status": "missing",
+        "note": "It doesn't describe the approach of a wide scan followed by a deep dive on the top 2."
+      }
+    ],
+    "invented": []
+  },
+  "session": "371bdab6-5759-4d4d-b94c-06bc2e14f7a1",
+  "cost_usd": 0.016658600000000003,
+  "output_tokens": 364,
+  "denials": []
+}

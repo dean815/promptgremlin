@@ -1,0 +1,36 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"There are exactly three day sections (Day 1, Day 2 and Day 3), plus general logistics.\"},{\"pass\":false,\"note\":\"Days 1 and 2 have a named food stop at almost every slot, including Olive et Gourmando, Schwartz's, La Banquise, St-Viateur/Fairmount, Olimpico, Jean-Talon and Au Pied de Cochon. Day 3 does not. Only breakfast names a place (Hof Kelsten), and Atwater is an optional market stop. Lunch is just 'Chinatown,' the dessert crawl is generic, and the final dinner gives only categories like 'a Middle Eastern or Syrian spot.' So most of Day 3 lacks named food stops.\"},{\"pass\":true,\"note\":\"The plan mixes cheap classics (bagels, Schwartz's, poutine, market grazing, b\u00e1nh m\u00ec) with one 'splurge-lite' dinner and a cheaper alternative. The budget of about $90\u2013180 CAD per day is clearly mid-range, and BYOB money-saving tips are included.\"},{\"pass\":true,\"note\":\"It gives October temperatures and packing advice, fall foliage timing on Mont-Royal and the Belvedere, Qu\u00e9bec apples and cider at Jean-Talon, a rainy-day museum option, and a note on seasonal hours.\"},{\"pass\":true,\"note\":\"It names many real places: Olive et Gourmando, Notre-Dame Basilica, Schwartz's, Le Vin Papillon, Maison Publique, La Banquise, Dieu du Ciel, St-Viateur, Fairmount, Caf\u00e9 Olimpico, March\u00e9 Jean-Talon, Au Pied de Cochon, MMFA, Hof Kelsten and March\u00e9 Atwater. Day 3 relies more on generic categories.\"}],\"unasked_content\":[\"The Day 3 lunch and farewell dinner are generic categories ('a Middle Eastern or Syrian spot,' 'a bistro with local ingredients'). That weakens a food-focused trip at what is billed as the 'final big meal.'\",\"It suggests the Gay Village's 'outdoor pedestrian streets,' but Ste-Catherine is pedestrianized only in the summer, usually not in October. 'The Village and Gay Village' are also the same area, listed twice.\",\"Day 1 dinner gives a vague 'Plateau bistro with a table d'h\u00f4te' fallback with no named place.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "There are exactly three day sections (Day 1, Day 2 and Day 3), plus general logistics."
+      },
+      {
+        "pass": false,
+        "note": "Days 1 and 2 have a named food stop at almost every slot, including Olive et Gourmando, Schwartz's, La Banquise, St-Viateur/Fairmount, Olimpico, Jean-Talon and Au Pied de Cochon. Day 3 does not. Only breakfast names a place (Hof Kelsten), and Atwater is an optional market stop. Lunch is just 'Chinatown,' the dessert crawl is generic, and the final dinner gives only categories like 'a Middle Eastern or Syrian spot.' So most of Day 3 lacks named food stops."
+      },
+      {
+        "pass": true,
+        "note": "The plan mixes cheap classics (bagels, Schwartz's, poutine, market grazing, b\u00e1nh m\u00ec) with one 'splurge-lite' dinner and a cheaper alternative. The budget of about $90\u2013180 CAD per day is clearly mid-range, and BYOB money-saving tips are included."
+      },
+      {
+        "pass": true,
+        "note": "It gives October temperatures and packing advice, fall foliage timing on Mont-Royal and the Belvedere, Qu\u00e9bec apples and cider at Jean-Talon, a rainy-day museum option, and a note on seasonal hours."
+      },
+      {
+        "pass": true,
+        "note": "It names many real places: Olive et Gourmando, Notre-Dame Basilica, Schwartz's, Le Vin Papillon, Maison Publique, La Banquise, Dieu du Ciel, St-Viateur, Fairmount, Caf\u00e9 Olimpico, March\u00e9 Jean-Talon, Au Pied de Cochon, MMFA, Hof Kelsten and March\u00e9 Atwater. Day 3 relies more on generic categories."
+      }
+    ],
+    "unasked_content": [
+      "The Day 3 lunch and farewell dinner are generic categories ('a Middle Eastern or Syrian spot,' 'a bistro with local ingredients'). That weakens a food-focused trip at what is billed as the 'final big meal.'",
+      "It suggests the Gay Village's 'outdoor pedestrian streets,' but Ste-Catherine is pedestrianized only in the summer, usually not in October. 'The Village and Gay Village' are also the same area, listed twice.",
+      "Day 1 dinner gives a vague 'Plateau bistro with a table d'h\u00f4te' fallback with no named place."
+    ]
+  },
+  "cost_usd": 0.0486688,
+  "tokens": 4575,
+  "output_tokens": 1386,
+  "denials": []
+}

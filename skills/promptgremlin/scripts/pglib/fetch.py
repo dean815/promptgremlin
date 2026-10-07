@@ -17,7 +17,7 @@ CACHE = Path(os.environ.get("PROMPTGREMLIN_CACHE", Path.home() / ".cache" / "pro
 TIMEOUT = 12
 MAX_AGE = dt.timedelta(hours=24)
 # Honest, identifying user agent. Never a browser string.
-DEFAULT_UA = "promptgremlin/2.0 (+https://github.com/dean815/promptgremlin)"
+DEFAULT_UA = "promptgremlin/3.0 (+https://github.com/dean815/promptgremlin)"
 
 
 class Fetched(NamedTuple):

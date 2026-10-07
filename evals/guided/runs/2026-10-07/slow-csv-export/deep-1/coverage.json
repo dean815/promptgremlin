@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never mentions the 2 million row scale or that memory use matters.\"},{\"status\":\"missing\",\"note\":\"The signature appears in the code, but nothing says it must stay unchanged or that three callers use it.\"},{\"status\":\"missing\",\"note\":\"The header string appears in the code, but nothing says the exact header and column order must be kept.\"},{\"status\":\"missing\",\"note\":\"Nothing rules out new dependencies.\"},{\"status\":\"missing\",\"note\":\"The per-row query is visible in the code, but the prompt never names the N+1 customer lookup as the known main cause.\"},{\"status\":\"missing\",\"note\":\"Nothing says to write rows as they're produced instead of building one big string.\"},{\"status\":\"missing\",\"note\":\"Nothing says customer names can contain commas or that values need proper CSV quoting.\"},{\"status\":\"missing\",\"note\":\"tests/test_export.py isn't mentioned, and neither is the rule against editing the tests.\"},{\"status\":\"missing\",\"note\":\"Nothing asks for a minimal change or says not to restructure the module.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never mentions the 2 million row scale or that memory use matters."
+      },
+      {
+        "status": "missing",
+        "note": "The signature appears in the code, but nothing says it must stay unchanged or that three callers use it."
+      },
+      {
+        "status": "missing",
+        "note": "The header string appears in the code, but nothing says the exact header and column order must be kept."
+      },
+      {
+        "status": "missing",
+        "note": "Nothing rules out new dependencies."
+      },
+      {
+        "status": "missing",
+        "note": "The per-row query is visible in the code, but the prompt never names the N+1 customer lookup as the known main cause."
+      },
+      {
+        "status": "missing",
+        "note": "Nothing says to write rows as they're produced instead of building one big string."
+      },
+      {
+        "status": "missing",
+        "note": "Nothing says customer names can contain commas or that values need proper CSV quoting."
+      },
+      {
+        "status": "missing",
+        "note": "tests/test_export.py isn't mentioned, and neither is the rule against editing the tests."
+      },
+      {
+        "status": "missing",
+        "note": "Nothing asks for a minimal change or says not to restructure the module."
+      }
+    ],
+    "invented": []
+  },
+  "session": "32975508-4511-42cc-8561-c597f6067a9a",
+  "cost_usd": 0.0248466,
+  "output_tokens": 501,
+  "denials": []
+}

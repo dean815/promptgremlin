@@ -1,0 +1,36 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"The post body, from 'We just finished...' through the closing question, is about 164 words. That is inside the 120\u2013180 range and close to the requested 150.\"},{\"pass\":true,\"note\":\"A whole paragraph covers the buildbot dashboard: it was kept running 'just in case' and turned out to be the team's daily status view.\"},{\"pass\":true,\"note\":\"There are no hashtags anywhere.\"},{\"pass\":true,\"note\":\"There are no emojis anywhere.\"},{\"pass\":true,\"note\":\"The post ends with 'What's the most surprising thing you've found hiding in your CI setup?', which invites comments. A note to the user follows it, but it is clearly separate from the post.\"},{\"pass\":true,\"note\":\"The tone is plain and conversational. It uses concrete details like the cron job, the secret in one person's head and the flaky test, and has none of the stock AI phrasing like 'fast-paced world', 'game-changer' or 'delve'.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "The post body, from 'We just finished...' through the closing question, is about 164 words. That is inside the 120\u2013180 range and close to the requested 150."
+      },
+      {
+        "pass": true,
+        "note": "A whole paragraph covers the buildbot dashboard: it was kept running 'just in case' and turned out to be the team's daily status view."
+      },
+      {
+        "pass": true,
+        "note": "There are no hashtags anywhere."
+      },
+      {
+        "pass": true,
+        "note": "There are no emojis anywhere."
+      },
+      {
+        "pass": true,
+        "note": "The post ends with 'What's the most surprising thing you've found hiding in your CI setup?', which invites comments. A note to the user follows it, but it is clearly separate from the post."
+      },
+      {
+        "pass": true,
+        "note": "The tone is plain and conversational. It uses concrete details like the cron job, the secret in one person's head and the flaky test, and has none of the stock AI phrasing like 'fast-paced world', 'game-changer' or 'delve'."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0399728,
+  "tokens": 3392,
+  "output_tokens": 1450,
+  "denials": []
+}

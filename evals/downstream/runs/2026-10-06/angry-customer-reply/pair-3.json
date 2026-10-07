@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"A\",\"reason\":\"Both drafts meet the constraints: each apologizes, offers a replacement with no refund promised, is friendly, and stays under 120 words (about 96 vs about 110). B makes promises the person never authorized (\\\"won't need to send the damaged one back,\\\" \\\"priority check\\\"), which could commit the business to policies, and it adds a word-count note after the email. A is safer and more practical because it also asks Jordan to confirm the shipping address.\"}",
+  "structured": {
+    "winner": "A",
+    "reason": "Both drafts meet the constraints: each apologizes, offers a replacement with no refund promised, is friendly, and stays under 120 words (about 96 vs about 110). B makes promises the person never authorized (\"won't need to send the damaged one back,\" \"priority check\"), which could commit the business to policies, and it adds a word-count note after the email. A is safer and more practical because it also asks Jordan to confirm the shipping address."
+  },
+  "cost_usd": 0.036828,
+  "tokens": 2998,
+  "output_tokens": 1071,
+  "denials": [],
+  "winner_arm": "rewritten"
+}

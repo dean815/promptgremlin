@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt treats this as an open choice of a vector database. It never says the real decision is whether to stay on pgvector or move to a dedicated vector DB. pgvector is just one of six candidates, and the question about Postgres doesn't fill the gap.\"},{\"status\":\"missing\",\"note\":\"It asks for the vector count and dimensions in the interview, but never states 5M vectors at 1536 dimensions or growth of about 1M per quarter.\"},{\"status\":\"missing\",\"note\":\"It asks whether the team already runs Postgres, but never states Postgres 16 on AWS RDS.\"},{\"status\":\"missing\",\"note\":\"Budget is only asked about. The under-$500-per-month limit is never given.\"},{\"status\":\"missing\",\"note\":\"It asks about filtering support in general, but never says queries must filter by tenant_id or that the system is multi-tenant.\"},{\"status\":\"contradicted\",\"note\":\"The person wanted at most 4 options. The prompt requires 6 candidates (pgvector, Qdrant, Weaviate, Milvus, Pinecone, Chroma) and allows a 7th.\"},{\"status\":\"stated\",\"note\":\"It asks for a comparison table and one primary recommendation. Adding a runner-up and risks doesn't undercut the single clear pick.\"},{\"status\":\"missing\",\"note\":\"It says the space changes quickly and asks for current sources, but never sets a 12-month recency limit.\"},{\"status\":\"missing\",\"note\":\"It never says to do a wide scan and then go deep on the top 2. Instead, every candidate gets the same depth.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt treats this as an open choice of a vector database. It never says the real decision is whether to stay on pgvector or move to a dedicated vector DB. pgvector is just one of six candidates, and the question about Postgres doesn't fill the gap."
+      },
+      {
+        "status": "missing",
+        "note": "It asks for the vector count and dimensions in the interview, but never states 5M vectors at 1536 dimensions or growth of about 1M per quarter."
+      },
+      {
+        "status": "missing",
+        "note": "It asks whether the team already runs Postgres, but never states Postgres 16 on AWS RDS."
+      },
+      {
+        "status": "missing",
+        "note": "Budget is only asked about. The under-$500-per-month limit is never given."
+      },
+      {
+        "status": "missing",
+        "note": "It asks about filtering support in general, but never says queries must filter by tenant_id or that the system is multi-tenant."
+      },
+      {
+        "status": "contradicted",
+        "note": "The person wanted at most 4 options. The prompt requires 6 candidates (pgvector, Qdrant, Weaviate, Milvus, Pinecone, Chroma) and allows a 7th."
+      },
+      {
+        "status": "stated",
+        "note": "It asks for a comparison table and one primary recommendation. Adding a runner-up and risks doesn't undercut the single clear pick."
+      },
+      {
+        "status": "missing",
+        "note": "It says the space changes quickly and asks for current sources, but never sets a 12-month recency limit."
+      },
+      {
+        "status": "missing",
+        "note": "It never says to do a wide scan and then go deep on the top 2. Instead, every candidate gets the same depth."
+      }
+    ],
+    "invented": []
+  },
+  "session": "2a9b29d2-025f-4b20-9698-b7ad0d59b37a",
+  "cost_usd": 0.0342306,
+  "output_tokens": 1001,
+  "denials": []
+}

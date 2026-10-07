@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"A\",\"reason\":\"Both meet the formal rules: about 150-170 words, no hashtags or emojis, the Buildbot dashboard is mentioned, and each ends with a question. A has concrete details (env vars, flaky tests, people losing trust in green builds) and a clear dashboard story, so it sounds far more like a real person. It openly says it invented one detail and offers to swap in the real one. B is vague, gives the dashboard no outcome, and leans on general reflection that reads as AI-written, which the user explicitly wanted to avoid.\"}",
+  "structured": {
+    "winner": "A",
+    "reason": "Both meet the formal rules: about 150-170 words, no hashtags or emojis, the Buildbot dashboard is mentioned, and each ends with a question. A has concrete details (env vars, flaky tests, people losing trust in green builds) and a clear dashboard story, so it sounds far more like a real person. It openly says it invented one detail and offers to swap in the real one. B is vague, gives the dashboard no outcome, and leans on general reflection that reads as AI-written, which the user explicitly wanted to avoid."
+  },
+  "cost_usd": 0.031304,
+  "tokens": 2789,
+  "output_tokens": 750,
+  "denials": [],
+  "winner_arm": "raw"
+}

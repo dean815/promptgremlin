@@ -1,0 +1,47 @@
+{
+  "text": "{\"items\":[{\"status\":\"not_met\",\"note\":\"The answer doesn't decide between pgvector and a dedicated vector database. It holds off all research and only asks scoping questions.\"},{\"status\":\"not_met\",\"note\":\"It asks again about scale and dimensions, which the user already gave. Its default of 5M vectors at 1024 dimensions growing to 20M contradicts the stated 1536 dimensions and growth of about 1M per quarter.\"},{\"status\":\"not_met\",\"note\":\"It asks whether the user runs Postgres even though the prompt already said Postgres 16 on AWS RDS. The default only says 'you run Postgres' and drops the version and RDS details.\"},{\"status\":\"not_met\",\"note\":\"It asks about budget again. The default of about $500/month roughly matches, but no option is costed or checked against the under-$500 limit.\"},{\"status\":\"not_met\",\"note\":\"It mentions metadata filtering only in general terms. It never addresses filtering by tenant_id or multi-tenant isolation.\"},{\"status\":\"not_met\",\"note\":\"It plans to research 'all six candidates', which breaks the limit of comparing at most 4 options.\"},{\"status\":\"not_met\",\"note\":\"There is no comparison table and no recommendation.\"},{\"status\":\"not_met\",\"note\":\"It cites no sources and doesn't mention preferring sources from the last 12 months.\"},{\"status\":\"not_met\",\"note\":\"It does no wide scan and no deep dive on the top 2. The stated plan is to research all six candidates without narrowing to two.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "not_met",
+        "note": "The answer doesn't decide between pgvector and a dedicated vector database. It holds off all research and only asks scoping questions."
+      },
+      {
+        "status": "not_met",
+        "note": "It asks again about scale and dimensions, which the user already gave. Its default of 5M vectors at 1024 dimensions growing to 20M contradicts the stated 1536 dimensions and growth of about 1M per quarter."
+      },
+      {
+        "status": "not_met",
+        "note": "It asks whether the user runs Postgres even though the prompt already said Postgres 16 on AWS RDS. The default only says 'you run Postgres' and drops the version and RDS details."
+      },
+      {
+        "status": "not_met",
+        "note": "It asks about budget again. The default of about $500/month roughly matches, but no option is costed or checked against the under-$500 limit."
+      },
+      {
+        "status": "not_met",
+        "note": "It mentions metadata filtering only in general terms. It never addresses filtering by tenant_id or multi-tenant isolation."
+      },
+      {
+        "status": "not_met",
+        "note": "It plans to research 'all six candidates', which breaks the limit of comparing at most 4 options."
+      },
+      {
+        "status": "not_met",
+        "note": "There is no comparison table and no recommendation."
+      },
+      {
+        "status": "not_met",
+        "note": "It cites no sources and doesn't mention preferring sources from the last 12 months."
+      },
+      {
+        "status": "not_met",
+        "note": "It does no wide scan and no deep dive on the top 2. The stated plan is to research all six candidates without narrowing to two."
+      }
+    ]
+  },
+  "session": "8a4cfe5d-658b-4ebe-861b-f7c9ba053a77",
+  "cost_usd": 0.029005000000000003,
+  "output_tokens": 834,
+  "denials": []
+}

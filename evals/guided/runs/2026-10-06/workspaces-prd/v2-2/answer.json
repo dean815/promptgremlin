@@ -1,0 +1,8 @@
+{
+  "text": "<invoke name=\"Bash\">\n<parameter name=\"command\">cd /private/tmp/pgbench/cwd-guided && find . -type f -not -path './.git/*' -not -path './node_modules/*' | head -60</parameter>\n</invoke>",
+  "structured": null,
+  "session": "86f2be0b-351a-4921-8d85-fddf611c0894",
+  "cost_usd": 1.2975444,
+  "output_tokens": 128088,
+  "denials": []
+}

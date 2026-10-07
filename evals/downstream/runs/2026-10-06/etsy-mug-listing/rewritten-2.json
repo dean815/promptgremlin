@@ -1,0 +1,9 @@
+{
+  "text": "This mug is handmade from ceramic, made with care and a lot of love for the little rituals that fill a day. Every piece is shaped by hand, so it carries the charm that only comes from being made by a person rather than a machine.\n\nIt's easy to look after, too. Go ahead and pop it in the dishwasher when you're done, but please keep it out of the microwave. Treat it kindly, and it will be ready for your next cup.",
+  "structured": null,
+  "cost_usd": 0.005032,
+  "tokens": 1055,
+  "output_tokens": 136,
+  "denials": [],
+  "sent": "I'm listing a handmade ceramic mug on Etsy and need the description text, which shoppers will read on the listing page. Write a short description in exactly 2 short paragraphs of plain flowing prose, in a warm, friendly voice that suits a handmade shop. Mention that the mug is handmade and ceramic, and that it is dishwasher safe but not microwave safe. Use only those facts: I haven't given you the size, materials, glaze, color, capacity or any other details, so don't invent or imply any, because buyers would rely on them. Reply with the two paragraphs only, with no title, preamble, or notes after them."
+}

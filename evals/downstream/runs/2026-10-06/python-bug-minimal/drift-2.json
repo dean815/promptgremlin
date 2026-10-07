@@ -1,0 +1,25 @@
+{
+  "text": "{\"dropped\":[],\"added_harmful\":[\"Says the first call looks right. The user never said this. They only said totals are wrong when the function is called more than once.\",\"Says the repeated calls happen 'in the same run'. The user didn't say how or when the calls happen.\"],\"added_neutral\":[\"Gives a reason for the minimal change ('keep the rest of my code as it is'). This is consistent with 'change as little as possible'.\",\"Asks for a fixed three-part reply: cause, fix, then example.\",\"Limits the explanation of the cause to one to three sentences and asks it to name the exact line or construct.\",\"Asks the model to state its assumptions if the cause depends on how the function is called.\",\"Asks for the corrected function back, with each changed line marked by a comment.\",\"Bans renaming, reformatting, restructuring and adding features.\",\"Asks for a two-line example of two consecutive calls with the expected totals.\",\"Tells the model to say so and ask for one thing if the cause isn't clear, instead of guessing.\",\"Tells the model to stop after the third part.\"]}",
+  "structured": {
+    "dropped": [],
+    "added_harmful": [
+      "Says the first call looks right. The user never said this. They only said totals are wrong when the function is called more than once.",
+      "Says the repeated calls happen 'in the same run'. The user didn't say how or when the calls happen."
+    ],
+    "added_neutral": [
+      "Gives a reason for the minimal change ('keep the rest of my code as it is'). This is consistent with 'change as little as possible'.",
+      "Asks for a fixed three-part reply: cause, fix, then example.",
+      "Limits the explanation of the cause to one to three sentences and asks it to name the exact line or construct.",
+      "Asks the model to state its assumptions if the cause depends on how the function is called.",
+      "Asks for the corrected function back, with each changed line marked by a comment.",
+      "Bans renaming, reformatting, restructuring and adding features.",
+      "Asks for a two-line example of two consecutive calls with the expected totals.",
+      "Tells the model to say so and ask for one thing if the cause isn't clear, instead of guessing.",
+      "Tells the model to stop after the third part."
+    ]
+  },
+  "cost_usd": 0.022573999999999997,
+  "tokens": 2447,
+  "output_tokens": 660,
+  "denials": []
+}

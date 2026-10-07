@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"A\",\"reason\":\"Both meet the hard constraints (about 150 words, no hashtags or emojis, mentions the Buildbot dashboard, ends with a question). A sounds much more human and actually shares concrete lessons, including a vivid dashboard anecdote and a clear takeaway. It openly flags that it guessed the dashboard details and offers to revise them. B is vague and generic, never says what happened with the dashboard or what was learned, and reads like hedged AI filler, which goes against the 'sound like a person' request.\"}",
+  "structured": {
+    "winner": "A",
+    "reason": "Both meet the hard constraints (about 150 words, no hashtags or emojis, mentions the Buildbot dashboard, ends with a question). A sounds much more human and actually shares concrete lessons, including a vivid dashboard anecdote and a clear takeaway. It openly flags that it guessed the dashboard details and offers to revise them. B is vague and generic, never says what happened with the dashboard or what was learned, and reads like hedged AI filler, which goes against the 'sound like a person' request."
+  },
+  "cost_usd": 0.031228,
+  "tokens": 2811,
+  "output_tokens": 729,
+  "denials": [],
+  "winner_arm": "raw"
+}

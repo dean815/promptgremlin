@@ -1,0 +1,47 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Opens with 'our B2B note-taking app'.\"},{\"status\":\"stated\",\"note\":\"The PRD is for engineering and design leads to read at the kickoff meeting.\"},{\"status\":\"stated\",\"note\":\"In scope: creating a workspace, inviting members by email, and shared notes within a workspace.\"},{\"status\":\"stated\",\"note\":\"Roles are limited to 'admin and member only'.\"},{\"status\":\"stated\",\"note\":\"Out of scope: billing changes, SSO, guest access.\"},{\"status\":\"stated\",\"note\":\"Primary metric is 20% of paid accounts creating a workspace within 60 days.\"},{\"status\":\"stated\",\"note\":\"Asks for about 2 pages, using tight bullets.\"},{\"status\":\"stated\",\"note\":\"Migration of existing shared notes is listed as an open question, with an instruction not to propose an answer.\"}],\"invented\":[\"Says the user 'hasn't decided' whether cross-workspace sharing is in or out and makes it an open question. The user only wrote '(not cross-workspace sharing)' next to guest access, which most likely meant it is not excluded. They never called it undecided.\",\"Says the leads will use the PRD 'to decide whether the v1 scope is clear enough to start design and engineering work'. The user only said it is for a kickoff and never gave this purpose.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Opens with 'our B2B note-taking app'."
+      },
+      {
+        "status": "stated",
+        "note": "The PRD is for engineering and design leads to read at the kickoff meeting."
+      },
+      {
+        "status": "stated",
+        "note": "In scope: creating a workspace, inviting members by email, and shared notes within a workspace."
+      },
+      {
+        "status": "stated",
+        "note": "Roles are limited to 'admin and member only'."
+      },
+      {
+        "status": "stated",
+        "note": "Out of scope: billing changes, SSO, guest access."
+      },
+      {
+        "status": "stated",
+        "note": "Primary metric is 20% of paid accounts creating a workspace within 60 days."
+      },
+      {
+        "status": "stated",
+        "note": "Asks for about 2 pages, using tight bullets."
+      },
+      {
+        "status": "stated",
+        "note": "Migration of existing shared notes is listed as an open question, with an instruction not to propose an answer."
+      }
+    ],
+    "invented": [
+      "Says the user 'hasn't decided' whether cross-workspace sharing is in or out and makes it an open question. The user only wrote '(not cross-workspace sharing)' next to guest access, which most likely meant it is not excluded. They never called it undecided.",
+      "Says the leads will use the PRD 'to decide whether the v1 scope is clear enough to start design and engineering work'. The user only said it is for a kickoff and never gave this purpose."
+    ]
+  },
+  "session": "9236f95b-4596-4106-a44b-acb2be97a3a3",
+  "cost_usd": 0.0329146,
+  "output_tokens": 790,
+  "denials": []
+}

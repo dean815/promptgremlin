@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"A\",\"reason\":\"A gives a detailed plan with times, named restaurants, addresses, a cost per person and a list of what to book ahead. It's grouped by neighbourhood, fits a mid-budget food trip and includes October fall colours and rain backups. B has good general tips, but much of it is vague, especially Day 3 (for example, \\\"a Middle Eastern spot\\\" or \\\"a popular brunch spot\\\"), which leaves the user to do more of the planning. A has small problems, such as a possibly wrong Qing Hua address and an expensive splurge dinner, but it's much more useful overall.\"}",
+  "structured": {
+    "winner": "A",
+    "reason": "A gives a detailed plan with times, named restaurants, addresses, a cost per person and a list of what to book ahead. It's grouped by neighbourhood, fits a mid-budget food trip and includes October fall colours and rain backups. B has good general tips, but much of it is vague, especially Day 3 (for example, \"a Middle Eastern spot\" or \"a popular brunch spot\"), which leaves the user to do more of the planning. A has small problems, such as a possibly wrong Qing Hua address and an expensive splurge dinner, but it's much more useful overall."
+  },
+  "cost_usd": 0.064924,
+  "tokens": 6600,
+  "output_tokens": 1011,
+  "denials": [],
+  "winner_arm": "rewritten"
+}

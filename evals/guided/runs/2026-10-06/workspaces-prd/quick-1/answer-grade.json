@@ -1,0 +1,43 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"The PRD never uses the words \\\"B2B note-taking app\\\", but it clearly treats the product that way: a team-owned space for notes, members of the same company, and paid accounts.\"},{\"status\":\"met\",\"note\":\"The status is \\\"Draft for kickoff\\\", and the Next Steps section is addressed to the engineering and design leads. It includes open decisions that bear on the data model, design and engineering estimates.\"},{\"status\":\"met\",\"note\":\"The In (v1) scope lists creating a workspace, inviting members by email, and shared notes. Each has its own requirements subsection.\"},{\"status\":\"met\",\"note\":\"The PRD states \\\"Two roles only: Admin and Member\\\", and the permission table uses only those two.\"},{\"status\":\"met\",\"note\":\"The Out (v1) list names billing changes, SSO and guest access.\"},{\"status\":\"met\",\"note\":\"The primary metric is \\\"20% of paid accounts create a workspace within 60 days\\\", stated exactly. It also flags that \\\"paid account\\\" and the start of the 60-day window still need definitions.\"},{\"status\":\"not_met\",\"note\":\"The document is about 1,000\u20131,100 words across nine sections, with a 9-row table and many numbered lists. Rendered, that likely runs closer to 3 pages than 2. Some content pads the length, such as the five-item evidence-gap list, the risks marked as assumptions, and requirements that repeat the role table.\"},{\"status\":\"met\",\"note\":\"Migration is Open Question 1, marked \\\"Left open; no answer proposed or assumed\\\". The PRD lists what the question blocks but doesn't resolve it.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "The PRD never uses the words \"B2B note-taking app\", but it clearly treats the product that way: a team-owned space for notes, members of the same company, and paid accounts."
+      },
+      {
+        "status": "met",
+        "note": "The status is \"Draft for kickoff\", and the Next Steps section is addressed to the engineering and design leads. It includes open decisions that bear on the data model, design and engineering estimates."
+      },
+      {
+        "status": "met",
+        "note": "The In (v1) scope lists creating a workspace, inviting members by email, and shared notes. Each has its own requirements subsection."
+      },
+      {
+        "status": "met",
+        "note": "The PRD states \"Two roles only: Admin and Member\", and the permission table uses only those two."
+      },
+      {
+        "status": "met",
+        "note": "The Out (v1) list names billing changes, SSO and guest access."
+      },
+      {
+        "status": "met",
+        "note": "The primary metric is \"20% of paid accounts create a workspace within 60 days\", stated exactly. It also flags that \"paid account\" and the start of the 60-day window still need definitions."
+      },
+      {
+        "status": "not_met",
+        "note": "The document is about 1,000\u20131,100 words across nine sections, with a 9-row table and many numbered lists. Rendered, that likely runs closer to 3 pages than 2. Some content pads the length, such as the five-item evidence-gap list, the risks marked as assumptions, and requirements that repeat the role table."
+      },
+      {
+        "status": "met",
+        "note": "Migration is Open Question 1, marked \"Left open; no answer proposed or assumed\". The PRD lists what the question blocks but doesn't resolve it."
+      }
+    ]
+  },
+  "session": "529a3dca-9a13-4420-a6b6-adb4c6022180",
+  "cost_usd": 0.048057,
+  "output_tokens": 1189,
+  "denials": []
+}

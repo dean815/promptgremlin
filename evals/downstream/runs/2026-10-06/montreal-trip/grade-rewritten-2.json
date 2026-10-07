@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"There are exactly three days (Day 1, Day 2 and Day 3), each with a morning-to-evening schedule.\"},{\"pass\":true,\"note\":\"Every day has a named breakfast, lunch, afternoon snack or drink stop, and dinner. Day 3 is built around Jean-Talon Market. Sightseeing fills the gaps between food stops.\"},{\"pass\":true,\"note\":\"There's one splurge (Au Pied de Cochon, ~$90-120). The rest are mid-priced spots like Schwartz's, La Banquise, L'Express and Brasserie T!. The food total of ~$350-440 per person for 3 days fits a mid-range budget.\"},{\"pass\":true,\"note\":\"It covers fall foliage spots (Mont-Royal, McGill, Parc La Fontaine), gives rain plans for each day, and notes harvest season at Jean-Talon (apples, cider). It also flags Canadian Thanksgiving closures on Oct 12, 2026, and that date is correct.\"},{\"pass\":true,\"note\":\"It names real places with addresses, such as St-Viateur Bagel, Olimpico, Schwartz's, Dieu du Ciel!, Au Pied de Cochon, Olive + Gourmando, Time Out Market, Myriade, Hof Kelsten, Fromagerie Hamel, La Banquise and L'Express. It also says to confirm that Brasserie T! is still open.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "There are exactly three days (Day 1, Day 2 and Day 3), each with a morning-to-evening schedule."
+      },
+      {
+        "pass": true,
+        "note": "Every day has a named breakfast, lunch, afternoon snack or drink stop, and dinner. Day 3 is built around Jean-Talon Market. Sightseeing fills the gaps between food stops."
+      },
+      {
+        "pass": true,
+        "note": "There's one splurge (Au Pied de Cochon, ~$90-120). The rest are mid-priced spots like Schwartz's, La Banquise, L'Express and Brasserie T!. The food total of ~$350-440 per person for 3 days fits a mid-range budget."
+      },
+      {
+        "pass": true,
+        "note": "It covers fall foliage spots (Mont-Royal, McGill, Parc La Fontaine), gives rain plans for each day, and notes harvest season at Jean-Talon (apples, cider). It also flags Canadian Thanksgiving closures on Oct 12, 2026, and that date is correct."
+      },
+      {
+        "pass": true,
+        "note": "It names real places with addresses, such as St-Viateur Bagel, Olimpico, Schwartz's, Dieu du Ciel!, Au Pied de Cochon, Olive + Gourmando, Time Out Market, Myriade, Hof Kelsten, Fromagerie Hamel, La Banquise and L'Express. It also says to confirm that Brasserie T! is still open."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0589608,
+  "tokens": 5503,
+  "output_tokens": 1625,
+  "denials": []
+}

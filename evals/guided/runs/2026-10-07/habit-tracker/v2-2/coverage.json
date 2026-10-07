@@ -1,0 +1,59 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"Single user with no accounts is never stated. The prompt leaves it open by asking 'local only, or an account and sync'.\"},{\"status\":\"contradicted\",\"note\":\"'Small, working app' fits an MVP, and nothing says it must run today. Step 4 also requires tests and makes passing tests a condition for being done, which goes against 'no tests required'.\"},{\"status\":\"missing\",\"note\":\"The platform is left as an interview question (web, mobile, desktop or CLI). A local browser web app is never stated.\"},{\"status\":\"missing\",\"note\":\"TypeScript is not mentioned. The language is left as an interview question.\"},{\"status\":\"missing\",\"note\":\"Local browser storage is not stated. It is offered only as one option in a question.\"},{\"status\":\"missing\",\"note\":\"Tracking several habits is never stated. The prompt only mentions 'creating a habit'.\"},{\"status\":\"stated\",\"note\":\"Daily check-ins appear as an example feature, and the tests must cover 'checking it off for a day'.\"},{\"status\":\"stated\",\"note\":\"The tests must cover computing streaks, and 'streaks' is listed as a feature.\"},{\"status\":\"missing\",\"note\":\"The 30-day history is not stated. 'Stats views' appears only as a generic example.\"},{\"status\":\"missing\",\"note\":\"Reminders are listed as a possible v1 feature, not marked out of scope. This is an option rather than a requirement, so it counts as missing rather than contradicted.\"},{\"status\":\"missing\",\"note\":\"Dark mode is not mentioned. Styling is left to the receiver's judgment.\"}],\"invented\":[\"The user is starting in an empty directory.\",\"Tests for core logic (creating a habit, check-off, streaks with a missed day and a day boundary) are required and must pass before the work is done.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "Single user with no accounts is never stated. The prompt leaves it open by asking 'local only, or an account and sync'."
+      },
+      {
+        "status": "contradicted",
+        "note": "'Small, working app' fits an MVP, and nothing says it must run today. Step 4 also requires tests and makes passing tests a condition for being done, which goes against 'no tests required'."
+      },
+      {
+        "status": "missing",
+        "note": "The platform is left as an interview question (web, mobile, desktop or CLI). A local browser web app is never stated."
+      },
+      {
+        "status": "missing",
+        "note": "TypeScript is not mentioned. The language is left as an interview question."
+      },
+      {
+        "status": "missing",
+        "note": "Local browser storage is not stated. It is offered only as one option in a question."
+      },
+      {
+        "status": "missing",
+        "note": "Tracking several habits is never stated. The prompt only mentions 'creating a habit'."
+      },
+      {
+        "status": "stated",
+        "note": "Daily check-ins appear as an example feature, and the tests must cover 'checking it off for a day'."
+      },
+      {
+        "status": "stated",
+        "note": "The tests must cover computing streaks, and 'streaks' is listed as a feature."
+      },
+      {
+        "status": "missing",
+        "note": "The 30-day history is not stated. 'Stats views' appears only as a generic example."
+      },
+      {
+        "status": "missing",
+        "note": "Reminders are listed as a possible v1 feature, not marked out of scope. This is an option rather than a requirement, so it counts as missing rather than contradicted."
+      },
+      {
+        "status": "missing",
+        "note": "Dark mode is not mentioned. Styling is left to the receiver's judgment."
+      }
+    ],
+    "invented": [
+      "The user is starting in an empty directory.",
+      "Tests for core logic (creating a habit, check-off, streaks with a missed day and a day boundary) are required and must pass before the work is done."
+    ]
+  },
+  "session": "d9dfa09e-4a77-4f96-b88e-3487972e5d0b",
+  "cost_usd": 0.041244,
+  "output_tokens": 1129,
+  "denials": []
+}

@@ -1,0 +1,37 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"The itinerary covers exactly Day 1, Day 2 and Day 3, and the lodging estimate is for 2 nights, which matches.\"},{\"pass\":true,\"note\":\"Every day has named stops for breakfast, lunch, a snack or afternoon treat, and dinner. Sightseeing fits in around the meals.\"},{\"pass\":true,\"note\":\"Most dinners are $50\u201390 per person, and the cheap staples (bagels, Schwartz's, Chinatown, poutine) are balanced by one optional splurge. The total of about $800\u20131,200 per person is reasonably mid-range.\"},{\"pass\":true,\"note\":\"It covers fall foliage, 10\u201314\u00b0C highs, layers and a rain jacket, late-harvest apples and pumpkins at Jean-Talon, and foliage views from Mount Royal.\"},{\"pass\":true,\"note\":\"Almost everything is a named, real place: Olive et Gourmando, Schwartz's, St-Viateur, Fairmount, Au Pied de Cochon, Jean-Talon, Joe Beef, Damas, La Banquise and others. The weakest item is \\\"Toqu\u00e9!'s more casual sibling options\\\", which is vague.\"}],\"unasked_content\":[\"Day 1 lunch suggestion \\\"Garde Manger or Toqu\u00e9!'s more casual sibling options\\\" doesn't name a place you can book. Garde Manger is also a pricier dinner spot, not a natural lunch stop.\",\"Day 3 has a lot of backtracking: Chinatown, then Atwater/Saint-Henri, then La Banquise in the Plateau, then Joe Beef in Little Burgundy. It also puts a poutine stop right before the splurge dinner.\",\"$80\u2013120 per person likely underestimates Joe Beef with drinks, which makes the splurge look cheaper than it is.\",\"Kem CoBa is a seasonal ice cream shop that may be closing or closed in October. The answer doesn't flag this, even though the trip is in October.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "The itinerary covers exactly Day 1, Day 2 and Day 3, and the lodging estimate is for 2 nights, which matches."
+      },
+      {
+        "pass": true,
+        "note": "Every day has named stops for breakfast, lunch, a snack or afternoon treat, and dinner. Sightseeing fits in around the meals."
+      },
+      {
+        "pass": true,
+        "note": "Most dinners are $50\u201390 per person, and the cheap staples (bagels, Schwartz's, Chinatown, poutine) are balanced by one optional splurge. The total of about $800\u20131,200 per person is reasonably mid-range."
+      },
+      {
+        "pass": true,
+        "note": "It covers fall foliage, 10\u201314\u00b0C highs, layers and a rain jacket, late-harvest apples and pumpkins at Jean-Talon, and foliage views from Mount Royal."
+      },
+      {
+        "pass": true,
+        "note": "Almost everything is a named, real place: Olive et Gourmando, Schwartz's, St-Viateur, Fairmount, Au Pied de Cochon, Jean-Talon, Joe Beef, Damas, La Banquise and others. The weakest item is \"Toqu\u00e9!'s more casual sibling options\", which is vague."
+      }
+    ],
+    "unasked_content": [
+      "Day 1 lunch suggestion \"Garde Manger or Toqu\u00e9!'s more casual sibling options\" doesn't name a place you can book. Garde Manger is also a pricier dinner spot, not a natural lunch stop.",
+      "Day 3 has a lot of backtracking: Chinatown, then Atwater/Saint-Henri, then La Banquise in the Plateau, then Joe Beef in Little Burgundy. It also puts a poutine stop right before the splurge dinner.",
+      "$80\u2013120 per person likely underestimates Joe Beef with drinks, which makes the splurge look cheaper than it is.",
+      "Kem CoBa is a seasonal ice cream shop that may be closing or closed in October. The answer doesn't flag this, even though the trip is in October."
+    ]
+  },
+  "cost_usd": 0.0504688,
+  "tokens": 4830,
+  "output_tokens": 1366,
+  "denials": []
+}

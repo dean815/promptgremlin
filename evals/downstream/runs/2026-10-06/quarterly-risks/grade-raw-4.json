@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"The answer has exactly five bullet points.\"},{\"pass\":true,\"note\":\"Acme Fastening is never named; the answer calls it \\\"a rival.\\\" HomeMax is named, but it is a customer, not a competitor.\"},{\"pass\":true,\"note\":\"Bullet 1 covers the 61% concentration in two big-box retailers and HomeMax not renewing its contract, which expires in Q1.\"},{\"pass\":true,\"note\":\"Bullet 2 covers the margin drop from 42% to 38%. Bullet 3 ties it to the covenant floor of 36%, noting a 2-point cushion on a declining trend.\"},{\"pass\":true,\"note\":\"Every figure comes from the report. The 2-point cushion is simple arithmetic (38% minus 36%). The comments on volume and on passing through steel costs are reasonable inferences, not new figures.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "The answer has exactly five bullet points."
+      },
+      {
+        "pass": true,
+        "note": "Acme Fastening is never named; the answer calls it \"a rival.\" HomeMax is named, but it is a customer, not a competitor."
+      },
+      {
+        "pass": true,
+        "note": "Bullet 1 covers the 61% concentration in two big-box retailers and HomeMax not renewing its contract, which expires in Q1."
+      },
+      {
+        "pass": true,
+        "note": "Bullet 2 covers the margin drop from 42% to 38%. Bullet 3 ties it to the covenant floor of 36%, noting a 2-point cushion on a declining trend."
+      },
+      {
+        "pass": true,
+        "note": "Every figure comes from the report. The 2-point cushion is simple arithmetic (38% minus 36%). The comments on volume and on passing through steel costs are reasonable inferences, not new figures."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.023444800000000002,
+  "tokens": 2658,
+  "output_tokens": 562,
+  "denials": []
+}

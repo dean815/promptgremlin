@@ -1,0 +1,34 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"It opens with \\\"I'm so sorry your kettle arrived with a cracked lid again\\\" and acknowledges the customer's frustration.\"},{\"pass\":true,\"note\":\"Refunds and money back are never mentioned, and nothing suggests one is coming. The draft goes straight to a replacement.\"},{\"pass\":true,\"note\":\"It offers a free replacement kettle with extra packing, and the customer doesn't have to return the damaged one.\"},{\"pass\":true,\"note\":\"The email is about 95 words, or about 103 with the subject line. Either way it's under 120.\"},{\"pass\":true,\"note\":\"The tone is warm. It notes this is the second time (\\\"again\\\") and mentions the four years of loyalty twice.\"}],\"unasked_content\":[\"Mild friction: the draft makes the replacement depend on the customer sending a photo first (\\\"If you could reply with a quick photo... I'll get the replacement shipped\\\"). For a customer who is already angry and says they're 'done', that's an extra step, and it works a little against the friendly, make-it-right tone that was asked for.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "It opens with \"I'm so sorry your kettle arrived with a cracked lid again\" and acknowledges the customer's frustration."
+      },
+      {
+        "pass": true,
+        "note": "Refunds and money back are never mentioned, and nothing suggests one is coming. The draft goes straight to a replacement."
+      },
+      {
+        "pass": true,
+        "note": "It offers a free replacement kettle with extra packing, and the customer doesn't have to return the damaged one."
+      },
+      {
+        "pass": true,
+        "note": "The email is about 95 words, or about 103 with the subject line. Either way it's under 120."
+      },
+      {
+        "pass": true,
+        "note": "The tone is warm. It notes this is the second time (\"again\") and mentions the four years of loyalty twice."
+      }
+    ],
+    "unasked_content": [
+      "Mild friction: the draft makes the replacement depend on the customer sending a photo first (\"If you could reply with a quick photo... I'll get the replacement shipped\"). For a customer who is already angry and says they're 'done', that's an extra step, and it works a little against the friendly, make-it-right tone that was asked for."
+    ]
+  },
+  "cost_usd": 0.027748800000000004,
+  "tokens": 2746,
+  "output_tokens": 862,
+  "denials": []
+}

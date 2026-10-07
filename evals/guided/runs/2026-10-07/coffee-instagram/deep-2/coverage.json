@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Midjourney syntax (--ar, --no) used.\"},{\"status\":\"stated\",\"note\":\"--ar 4:5 portrait; Instagram itself not named but irrelevant to the image tool.\"},{\"status\":\"stated\",\"note\":\"Latte with leaf latte art in a handmade ceramic cup stated verbatim.\"},{\"status\":\"stated\",\"note\":\"On a dark wood counter.\"},{\"status\":\"stated\",\"note\":\"Warm early-morning window light.\"},{\"status\":\"stated\",\"note\":\"Analog film photograph, visible film grain.\"},{\"status\":\"stated\",\"note\":\"A single autumn leaf on the counter.\"},{\"status\":\"stated\",\"note\":\"--no people.\"},{\"status\":\"stated\",\"note\":\"--no text, logo.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Midjourney syntax (--ar, --no) used."
+      },
+      {
+        "status": "stated",
+        "note": "--ar 4:5 portrait; Instagram itself not named but irrelevant to the image tool."
+      },
+      {
+        "status": "stated",
+        "note": "Latte with leaf latte art in a handmade ceramic cup stated verbatim."
+      },
+      {
+        "status": "stated",
+        "note": "On a dark wood counter."
+      },
+      {
+        "status": "stated",
+        "note": "Warm early-morning window light."
+      },
+      {
+        "status": "stated",
+        "note": "Analog film photograph, visible film grain."
+      },
+      {
+        "status": "stated",
+        "note": "A single autumn leaf on the counter."
+      },
+      {
+        "status": "stated",
+        "note": "--no people."
+      },
+      {
+        "status": "stated",
+        "note": "--no text, logo."
+      }
+    ],
+    "invented": []
+  },
+  "session": "25c50961-9a5f-490c-80f8-6661ce8e4040",
+  "cost_usd": 0.032214599999999996,
+  "output_tokens": 1053,
+  "denials": []
+}

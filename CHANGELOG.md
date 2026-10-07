@@ -1,5 +1,29 @@
 # Changelog
 
+## 3.0.0
+
+Guided sharpening: the skill now interviews before it writes.
+
+- Classifies each request into a task type (build, change-code, research, analyze-data,
+  product-doc, image, video, draft, agent, judgment, general); each type lists what an agent
+  needs, the question for each gap, and a prompt skeleton (`skills/promptgremlin/types/`).
+- Interview depth: `quick` (default, one round of up to 4 questions with suggested answers),
+  `deep` ("interview me"), or `skip` ("just write it"). Set a default with the `interview`
+  config key.
+- No guessing: every fact in the prompt traces to the request, the answers, or an accepted
+  default. A source check strips made-up purposes, reasons and relationships, and never turns
+  "no preference" into a rule.
+- The interview runs in the conversation (the skill no longer forks); a `promptgremlin-writer`
+  agent loads guidance and writes, keeping vendor notes out of the main context. Without the
+  agent (claude.ai), the skill follows `writer.md` itself.
+- Draft prompts include human-voice rules and an edit pass; image and video prompts list what
+  to change first if the result misses.
+- The skill hands over the prompt and stops; it never carries out the task itself.
+- Output: "Assumptions" is replaced by Confirmed / Defaults.
+- New benchmarks with published method and run output: `evals/downstream/` (raw vs one-shot
+  rewrite) and `evals/guided/` (hidden requirements, simulated person).
+- User agent is now `promptgremlin/3.0`.
+
 ## 2.0.0
 
 First public release.

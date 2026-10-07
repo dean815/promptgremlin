@@ -1,0 +1,50 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never mentions that exports can reach about 2 million rows or that memory use matters. Streaming the writes is asked for, but only as a speed fix, and 'or in chunks' is offered as an alternative without any reason tied to memory.\"},{\"status\":\"stated\",\"note\":\"'Keep the signature ... exactly as they are.' The three callers are not mentioned.\"},{\"status\":\"stated\",\"note\":\"The prompt says to keep the header line and the column order exactly as they are.\"},{\"status\":\"missing\",\"note\":\"Nothing says not to add dependencies. 'Do not create new files' is a different restriction.\"},{\"status\":\"stated\",\"note\":\"The prompt names the per-row customer lookup (N+1 query) as the likely cause and makes removing it the main task.\"},{\"status\":\"stated\",\"note\":\"'Write rows to the file as you go (or in chunks) instead of concatenating one large string.'\"},{\"status\":\"contradicted\",\"note\":\"The prompt says the missing CSV escaping for commas and quotes should be reported but not fixed, and it requires byte-identical output. The person wants values to be properly CSV-quoted.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't point to tests/test_export.py. It only says 'if a test suite exists, run it' and even suggests a test may need to be created. Its main check is a byte-identical comparison against a fixture.\"},{\"status\":\"stated\",\"note\":\"'Make a surgical edit, not a rewrite' and 'edit only export_orders_csv'.\"}],\"invented\":[\"The reason given for keeping the output format, 'because other code or consumers may read this file', is a guess. The person's real reason is that three callers use the function signature.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never mentions that exports can reach about 2 million rows or that memory use matters. Streaming the writes is asked for, but only as a speed fix, and 'or in chunks' is offered as an alternative without any reason tied to memory."
+      },
+      {
+        "status": "stated",
+        "note": "'Keep the signature ... exactly as they are.' The three callers are not mentioned."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to keep the header line and the column order exactly as they are."
+      },
+      {
+        "status": "missing",
+        "note": "Nothing says not to add dependencies. 'Do not create new files' is a different restriction."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt names the per-row customer lookup (N+1 query) as the likely cause and makes removing it the main task."
+      },
+      {
+        "status": "stated",
+        "note": "'Write rows to the file as you go (or in chunks) instead of concatenating one large string.'"
+      },
+      {
+        "status": "contradicted",
+        "note": "The prompt says the missing CSV escaping for commas and quotes should be reported but not fixed, and it requires byte-identical output. The person wants values to be properly CSV-quoted."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't point to tests/test_export.py. It only says 'if a test suite exists, run it' and even suggests a test may need to be created. Its main check is a byte-identical comparison against a fixture."
+      },
+      {
+        "status": "stated",
+        "note": "'Make a surgical edit, not a rewrite' and 'edit only export_orders_csv'."
+      }
+    ],
+    "invented": [
+      "The reason given for keeping the output format, 'because other code or consumers may read this file', is a guess. The person's real reason is that three callers use the function signature."
+    ]
+  },
+  "session": "445a4b33-fa84-4fda-a08d-2e04b126a2d8",
+  "cost_usd": 0.0430826,
+  "output_tokens": 1234,
+  "denials": []
+}

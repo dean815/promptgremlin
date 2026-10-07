@@ -1,0 +1,20 @@
+{
+  "text": "{\"dropped\":[],\"added_harmful\":[],\"added_neutral\":[\"States a purpose the person never gave: catching up without reading the notes in full\",\"Each bullet must be a single sentence\",\"Bullets must be ordered by importance\",\"The summary must cover decisions, action items with owners and deadlines, and open questions\",\"Use only what the notes say and leave out anything they don't state\",\"Reply with only the 5 bullets and nothing else\",\"Turns '5 bullets' into 'exactly 5 bullets'\"]}",
+  "structured": {
+    "dropped": [],
+    "added_harmful": [],
+    "added_neutral": [
+      "States a purpose the person never gave: catching up without reading the notes in full",
+      "Each bullet must be a single sentence",
+      "Bullets must be ordered by importance",
+      "The summary must cover decisions, action items with owners and deadlines, and open questions",
+      "Use only what the notes say and leave out anything they don't state",
+      "Reply with only the 5 bullets and nothing else",
+      "Turns '5 bullets' into 'exactly 5 bullets'"
+    ]
+  },
+  "cost_usd": 0.016730000000000002,
+  "tokens": 2063,
+  "output_tokens": 429,
+  "denials": []
+}

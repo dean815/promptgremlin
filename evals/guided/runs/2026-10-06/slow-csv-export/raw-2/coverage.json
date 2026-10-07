@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"Says nothing about the ~2M row size or memory use.\"},{\"status\":\"missing\",\"note\":\"Doesn't say to keep the export_orders_csv(db, path) signature or mention its callers.\"},{\"status\":\"missing\",\"note\":\"Doesn't say to keep the header or column order.\"},{\"status\":\"missing\",\"note\":\"Doesn't rule out new dependencies.\"},{\"status\":\"missing\",\"note\":\"Doesn't name the N+1 customer lookup as the cause.\"},{\"status\":\"missing\",\"note\":\"Doesn't ask for rows to be streamed as they're produced.\"},{\"status\":\"missing\",\"note\":\"Doesn't mention CSV quoting or that customer names can contain commas.\"},{\"status\":\"missing\",\"note\":\"Doesn't point to tests/test_export.py.\"},{\"status\":\"missing\",\"note\":\"Doesn't ask for a minimal change or say to leave the module structure alone.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "Says nothing about the ~2M row size or memory use."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't say to keep the export_orders_csv(db, path) signature or mention its callers."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't say to keep the header or column order."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't rule out new dependencies."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't name the N+1 customer lookup as the cause."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't ask for rows to be streamed as they're produced."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't mention CSV quoting or that customer names can contain commas."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't point to tests/test_export.py."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't ask for a minimal change or say to leave the module structure alone."
+      }
+    ],
+    "invented": []
+  },
+  "session": "fe5a42c3-1f8e-46b5-8cd5-1158412d144e",
+  "cost_usd": 0.016730599999999998,
+  "output_tokens": 368,
+  "denials": []
+}

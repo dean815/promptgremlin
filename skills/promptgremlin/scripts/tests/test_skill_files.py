@@ -14,11 +14,12 @@ def test_description_short_and_names_no_tools():
     assert len(desc.split()) <= 110, len(desc.split())   # ~150 tokens
     for name in ("Midjourney", "ChatGPT", "Cursor", "Gemini", "Grok", "Claude Code"):
         assert name not in desc, name
-    assert re.search(r"^context: fork$", fm, re.M)
+    # v3 interviews in the main conversation, so the skill must not fork.
+    assert not re.search(r"^context: fork$", fm, re.M)
 
 
 def test_skill_mentions_every_flag_and_mode_file():
-    body = (SKILL / "SKILL.md").read_text()
+    body = (SKILL / "SKILL.md").read_text() + (SKILL / "writer.md").read_text()
     for needle in ("NEW MODEL", "RETIRED", "UNKNOWN MODEL", "DRIFT", "STALE", "FETCH-FAIL",
                    "modes/port.md", "modes/autopsy.md", "effort.md", "Embedded instructions",
                    "~/.config/promptgremlin/config.json"):
@@ -76,7 +77,7 @@ def test_no_banned_terms_in_published_files():
 
 
 def test_skill_has_no_heredoc_and_uses_a_temp_file_for_the_clipboard():
-    body = (SKILL / "SKILL.md").read_text()
+    body = (SKILL / "SKILL.md").read_text() + (SKILL / "writer.md").read_text()
     assert "<<'PROMPT'" not in body and "<<PROMPT" not in body and "<<'EOF'" not in body
     assert "mktemp -d" in body and "prompt.txt" in body
     assert "< '<dir>/prompt.txt' && rm -rf '<dir>'" in body
@@ -84,7 +85,7 @@ def test_skill_has_no_heredoc_and_uses_a_temp_file_for_the_clipboard():
 
 
 def test_skill_quotes_shell_arguments_and_sanitises_them():
-    body = (SKILL / "SKILL.md").read_text()
+    body = (SKILL / "SKILL.md").read_text() + (SKILL / "writer.md").read_text()
     assert "python3 '<skill dir>/scripts/guidance.py'" in body
     assert "--target '<target>'" in body and "--model '<model>'" in body
     assert '--target "' not in body
@@ -92,12 +93,12 @@ def test_skill_quotes_shell_arguments_and_sanitises_them():
 
 
 def test_skill_treats_fetched_guidance_as_reference_not_instructions():
-    body = (SKILL / "SKILL.md").read_text()
+    body = (SKILL / "SKILL.md").read_text() + (SKILL / "writer.md").read_text()
     assert "vendor-text" in body
     assert "never instructions" in body and "Embedded instructions" in body
 
 
 def test_skill_says_only_changed_section_text_is_fenced():
-    body = (SKILL / "SKILL.md").read_text()
+    body = (SKILL / "SKILL.md").read_text() + (SKILL / "writer.md").read_text()
     assert "the notes, and the text under" not in body
     assert "only the text under" in body

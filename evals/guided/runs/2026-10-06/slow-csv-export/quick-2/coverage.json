@@ -1,0 +1,52 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Says exports can reach about 2 million rows, so memory use matters too.\"},{\"status\":\"stated\",\"note\":\"Keep the signature export_orders_csv(db, path) unchanged, because three callers use it.\"},{\"status\":\"stated\",\"note\":\"Keep the header line and column order id,customer_name,total,created_at unchanged.\"},{\"status\":\"stated\",\"note\":\"Says no new dependencies, and notes that the csv module is stdlib.\"},{\"status\":\"stated\",\"note\":\"Names the per-row customer lookup (N+1) as the known main cause and says not to benchmark.\"},{\"status\":\"stated\",\"note\":\"Write each row as it is produced instead of building one large string.\"},{\"status\":\"stated\",\"note\":\"Customer names can contain commas, so every value must be properly CSV-quoted.\"},{\"status\":\"stated\",\"note\":\"Verify by running the existing tests in tests/test_export.py, and don't do a byte-identical check.\"},{\"status\":\"stated\",\"note\":\"Asks for a minimal, targeted edit and says not to restructure the module.\"}],\"invented\":[\"The function lives in app/export.py. The person never gave this path.\",\"The specific current code, including the db.query_one SQL and the orders SELECT columns. The request and answers don't contain it, though it may have come from looking at the codebase.\",\"That the person 'did not object to' the total formatting (:.2f), the isoformat timestamps, and keeping the current row order. They only said they had no preference on the rest.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Says exports can reach about 2 million rows, so memory use matters too."
+      },
+      {
+        "status": "stated",
+        "note": "Keep the signature export_orders_csv(db, path) unchanged, because three callers use it."
+      },
+      {
+        "status": "stated",
+        "note": "Keep the header line and column order id,customer_name,total,created_at unchanged."
+      },
+      {
+        "status": "stated",
+        "note": "Says no new dependencies, and notes that the csv module is stdlib."
+      },
+      {
+        "status": "stated",
+        "note": "Names the per-row customer lookup (N+1) as the known main cause and says not to benchmark."
+      },
+      {
+        "status": "stated",
+        "note": "Write each row as it is produced instead of building one large string."
+      },
+      {
+        "status": "stated",
+        "note": "Customer names can contain commas, so every value must be properly CSV-quoted."
+      },
+      {
+        "status": "stated",
+        "note": "Verify by running the existing tests in tests/test_export.py, and don't do a byte-identical check."
+      },
+      {
+        "status": "stated",
+        "note": "Asks for a minimal, targeted edit and says not to restructure the module."
+      }
+    ],
+    "invented": [
+      "The function lives in app/export.py. The person never gave this path.",
+      "The specific current code, including the db.query_one SQL and the orders SELECT columns. The request and answers don't contain it, though it may have come from looking at the codebase.",
+      "That the person 'did not object to' the total formatting (:.2f), the isoformat timestamps, and keeping the current row order. They only said they had no preference on the rest."
+    ]
+  },
+  "session": "f88af7b5-0aa3-4f09-ae30-fc7d0192f23b",
+  "cost_usd": 0.0364186,
+  "output_tokens": 872,
+  "denials": []
+}

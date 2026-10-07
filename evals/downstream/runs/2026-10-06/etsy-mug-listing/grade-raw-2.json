@@ -1,0 +1,34 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"Exactly two short paragraphs.\"},{\"pass\":true,\"note\":\"Says \\\"it's dishwasher safe\\\" in the second paragraph.\"},{\"pass\":true,\"note\":\"Says \\\"it is not microwave safe\\\" and suggests heating the drink separately.\"},{\"pass\":true,\"note\":\"Names no clay type, glaze, colour, dimensions or capacity. \\\"Each piece is one of a kind\\\" with finish variations is a general claim about handmade work, not a made-up material or size.\"},{\"pass\":true,\"note\":\"Warm, clear and ready to paste into an Etsy listing.\"}],\"unasked_content\":[\"\\\"Each piece is one of a kind\\\" and \\\"small variations in the finish\\\" assume this is a unique or small-batch piece. The user didn't say that, and it could be wrong if they make repeat designs. It's minor and isn't a material or size detail.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "Exactly two short paragraphs."
+      },
+      {
+        "pass": true,
+        "note": "Says \"it's dishwasher safe\" in the second paragraph."
+      },
+      {
+        "pass": true,
+        "note": "Says \"it is not microwave safe\" and suggests heating the drink separately."
+      },
+      {
+        "pass": true,
+        "note": "Names no clay type, glaze, colour, dimensions or capacity. \"Each piece is one of a kind\" with finish variations is a general claim about handmade work, not a made-up material or size."
+      },
+      {
+        "pass": true,
+        "note": "Warm, clear and ready to paste into an Etsy listing."
+      }
+    ],
+    "unasked_content": [
+      "\"Each piece is one of a kind\" and \"small variations in the finish\" assume this is a unique or small-batch piece. The user didn't say that, and it could be wrong if they make repeat designs. It's minor and isn't a material or size detail."
+    ]
+  },
+  "cost_usd": 0.019524800000000002,
+  "tokens": 2252,
+  "output_tokens": 506,
+  "denials": []
+}

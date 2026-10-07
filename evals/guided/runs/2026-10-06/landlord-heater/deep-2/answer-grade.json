@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"Addressed 'Dear Ms. Alvarez.'\"},{\"status\":\"met\",\"note\":\"Apartment 4B is in the subject, the body and the signature.\"},{\"status\":\"met\",\"note\":\"Says the heater 'has been out since October 2.'\"},{\"status\":\"met\",\"note\":\"Says 'I phoned you on October 3 and haven't heard back.'\"},{\"status\":\"met\",\"note\":\"Says 'Overnight temperatures are in the 40s \u00b0F now.'\"},{\"status\":\"met\",\"note\":\"Asks 'Could the repair be done within 48 hours?'\"},{\"status\":\"met\",\"note\":\"Says Section 12 of the lease requires the landlord to provide heat.\"},{\"status\":\"not_met\",\"note\":\"Polite but not firm. The lease point is softened by 'I'm hoping we can get this sorted quickly,' and the 48-hour deadline is a mild question rather than a clear request. Nothing presses the urgency of having no heat for several days.\"},{\"status\":\"met\",\"note\":\"Never mentions withholding rent.\"},{\"status\":\"met\",\"note\":\"About 100 words including the subject line, well under 150.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "Addressed 'Dear Ms. Alvarez.'"
+      },
+      {
+        "status": "met",
+        "note": "Apartment 4B is in the subject, the body and the signature."
+      },
+      {
+        "status": "met",
+        "note": "Says the heater 'has been out since October 2.'"
+      },
+      {
+        "status": "met",
+        "note": "Says 'I phoned you on October 3 and haven't heard back.'"
+      },
+      {
+        "status": "met",
+        "note": "Says 'Overnight temperatures are in the 40s \u00b0F now.'"
+      },
+      {
+        "status": "met",
+        "note": "Asks 'Could the repair be done within 48 hours?'"
+      },
+      {
+        "status": "met",
+        "note": "Says Section 12 of the lease requires the landlord to provide heat."
+      },
+      {
+        "status": "not_met",
+        "note": "Polite but not firm. The lease point is softened by 'I'm hoping we can get this sorted quickly,' and the 48-hour deadline is a mild question rather than a clear request. Nothing presses the urgency of having no heat for several days."
+      },
+      {
+        "status": "met",
+        "note": "Never mentions withholding rent."
+      },
+      {
+        "status": "met",
+        "note": "About 100 words including the subject line, well under 150."
+      }
+    ]
+  },
+  "session": "36b104d7-3039-4449-8e13-743cb6c2e580",
+  "cost_usd": 0.034577000000000004,
+  "output_tokens": 1253,
+  "denials": []
+}

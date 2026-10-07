@@ -1,0 +1,47 @@
+{
+  "text": "{\"items\":[{\"status\":\"not_met\",\"note\":\"No decision is made for this case. The answer is a general overview, and the closest it gets is a generic rule ('Already on Postgres, moderate scale: start with pgvector'). It then asks the user for their requirements, even though they were already given.\"},{\"status\":\"not_met\",\"note\":\"The 5M \u00d7 1536-dim scale and the growth of 1M per quarter are never addressed. Scale is only discussed in generic bands, and the answer asks the user for vector count and dimensionality.\"},{\"status\":\"not_met\",\"note\":\"The existing Postgres 16 on AWS RDS setup is never considered. Nothing covers whether pgvector or pgvectorscale is available on RDS, which pgvector version RDS ships, or what the instance should look like. The answer instead asks whether the user already runs Postgres.\"},{\"status\":\"not_met\",\"note\":\"The budget under $500/month is never used. There are no cost estimates for any option, and the answer asks for the budget.\"},{\"status\":\"not_met\",\"note\":\"Multi-tenancy and filtered search are mentioned only as general concepts. Nothing analyzes how each option handles tenant_id filtering for this workload, such as partial indexes, partitioning, iterative scans, or Qdrant payload indexes and tenant handling.\"},{\"status\":\"not_met\",\"note\":\"The table compares 6 purpose-built systems and the text names many more extensions and libraries. That is well over the 4-option limit.\"},{\"status\":\"not_met\",\"note\":\"There is a landscape table, but it is not a comparison against the user's criteria. Instead of one clear recommendation, it gives several conditional recommendations.\"},{\"status\":\"not_met\",\"note\":\"No sources are cited. The answer says it relies on internal knowledge and did not browse.\"},{\"status\":\"not_met\",\"note\":\"There is something like a broad scan, but no deep dive on the top 2 candidates followed.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "not_met",
+        "note": "No decision is made for this case. The answer is a general overview, and the closest it gets is a generic rule ('Already on Postgres, moderate scale: start with pgvector'). It then asks the user for their requirements, even though they were already given."
+      },
+      {
+        "status": "not_met",
+        "note": "The 5M \u00d7 1536-dim scale and the growth of 1M per quarter are never addressed. Scale is only discussed in generic bands, and the answer asks the user for vector count and dimensionality."
+      },
+      {
+        "status": "not_met",
+        "note": "The existing Postgres 16 on AWS RDS setup is never considered. Nothing covers whether pgvector or pgvectorscale is available on RDS, which pgvector version RDS ships, or what the instance should look like. The answer instead asks whether the user already runs Postgres."
+      },
+      {
+        "status": "not_met",
+        "note": "The budget under $500/month is never used. There are no cost estimates for any option, and the answer asks for the budget."
+      },
+      {
+        "status": "not_met",
+        "note": "Multi-tenancy and filtered search are mentioned only as general concepts. Nothing analyzes how each option handles tenant_id filtering for this workload, such as partial indexes, partitioning, iterative scans, or Qdrant payload indexes and tenant handling."
+      },
+      {
+        "status": "not_met",
+        "note": "The table compares 6 purpose-built systems and the text names many more extensions and libraries. That is well over the 4-option limit."
+      },
+      {
+        "status": "not_met",
+        "note": "There is a landscape table, but it is not a comparison against the user's criteria. Instead of one clear recommendation, it gives several conditional recommendations."
+      },
+      {
+        "status": "not_met",
+        "note": "No sources are cited. The answer says it relies on internal knowledge and did not browse."
+      },
+      {
+        "status": "not_met",
+        "note": "There is something like a broad scan, but no deep dive on the top 2 candidates followed."
+      }
+    ]
+  },
+  "session": "6e9626e8-f0c5-4a9a-8399-021001524060",
+  "cost_usd": 0.043165,
+  "output_tokens": 988,
+  "denials": []
+}

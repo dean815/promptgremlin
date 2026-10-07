@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"not_met\",\"note\":\"The landlord's name, Ms. Alvarez, isn't used. The email has a placeholder, [landlord name], instead.\"},{\"status\":\"not_met\",\"note\":\"Apartment 4B isn't mentioned. The email has a placeholder, [unit/address], instead.\"},{\"status\":\"not_met\",\"note\":\"The October 2 date isn't given. The email has a placeholder, [date], instead.\"},{\"status\":\"not_met\",\"note\":\"The email doesn't mention the October 3 phone report or the lack of response.\"},{\"status\":\"not_met\",\"note\":\"The email doesn't mention overnight temperatures in the 40s \u00b0F. It only says 'heating season underway.'\"},{\"status\":\"not_met\",\"note\":\"The email asks for a repair 'within the next few days,' not within 48 hours.\"},{\"status\":\"not_met\",\"note\":\"The email doesn't mention the lease or section 12.\"},{\"status\":\"not_met\",\"note\":\"The tone is polite but not firm. It asks for a repair 'soon' or 'within the next few days' and gives no firm deadline, no legal basis and no record of the earlier report.\"},{\"status\":\"met\",\"note\":\"The email doesn't threaten to withhold rent.\"},{\"status\":\"met\",\"note\":\"The email itself is about 135 words, which is under 150. The 'blanks to fill in' note after it is separate from the email.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "not_met",
+        "note": "The landlord's name, Ms. Alvarez, isn't used. The email has a placeholder, [landlord name], instead."
+      },
+      {
+        "status": "not_met",
+        "note": "Apartment 4B isn't mentioned. The email has a placeholder, [unit/address], instead."
+      },
+      {
+        "status": "not_met",
+        "note": "The October 2 date isn't given. The email has a placeholder, [date], instead."
+      },
+      {
+        "status": "not_met",
+        "note": "The email doesn't mention the October 3 phone report or the lack of response."
+      },
+      {
+        "status": "not_met",
+        "note": "The email doesn't mention overnight temperatures in the 40s \u00b0F. It only says 'heating season underway.'"
+      },
+      {
+        "status": "not_met",
+        "note": "The email asks for a repair 'within the next few days,' not within 48 hours."
+      },
+      {
+        "status": "not_met",
+        "note": "The email doesn't mention the lease or section 12."
+      },
+      {
+        "status": "not_met",
+        "note": "The tone is polite but not firm. It asks for a repair 'soon' or 'within the next few days' and gives no firm deadline, no legal basis and no record of the earlier report."
+      },
+      {
+        "status": "met",
+        "note": "The email doesn't threaten to withhold rent."
+      },
+      {
+        "status": "met",
+        "note": "The email itself is about 135 words, which is under 150. The 'blanks to fill in' note after it is separate from the email."
+      }
+    ]
+  },
+  "session": "3835b8a7-12e6-4380-9840-8fcbeff391fe",
+  "cost_usd": 0.035201,
+  "output_tokens": 1235,
+  "denials": []
+}

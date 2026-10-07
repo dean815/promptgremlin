@@ -1,0 +1,56 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"\\\"It's just for me: one user, no accounts\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"Speed mode: MVP. Build the thinnest working version... don't write tests.\\\" It doesn't say \\\"today\\\", but the MVP scope and the no-tests rule are both there.\"},{\"status\":\"stated\",\"note\":\"React + Vite, local only, run with `npm run dev` in the browser\"},{\"status\":\"stated\",\"note\":\"\\\"React + Vite with TypeScript (I asked for TypeScript)\\\"\"},{\"status\":\"stated\",\"note\":\"Data is kept in browser localStorage, with no backend or database\"},{\"status\":\"stated\",\"note\":\"\\\"Add, edit, and delete habits\\\" covers multiple habits\"},{\"status\":\"stated\",\"note\":\"\\\"Daily check-off: mark a habit done for today\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"Streak counter per habit\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"Simple 30-day history per habit\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"Out of scope: reminders and notifications\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"dark mode by default\\\"\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "\"It's just for me: one user, no accounts\""
+      },
+      {
+        "status": "stated",
+        "note": "\"Speed mode: MVP. Build the thinnest working version... don't write tests.\" It doesn't say \"today\", but the MVP scope and the no-tests rule are both there."
+      },
+      {
+        "status": "stated",
+        "note": "React + Vite, local only, run with `npm run dev` in the browser"
+      },
+      {
+        "status": "stated",
+        "note": "\"React + Vite with TypeScript (I asked for TypeScript)\""
+      },
+      {
+        "status": "stated",
+        "note": "Data is kept in browser localStorage, with no backend or database"
+      },
+      {
+        "status": "stated",
+        "note": "\"Add, edit, and delete habits\" covers multiple habits"
+      },
+      {
+        "status": "stated",
+        "note": "\"Daily check-off: mark a habit done for today\""
+      },
+      {
+        "status": "stated",
+        "note": "\"Streak counter per habit\""
+      },
+      {
+        "status": "stated",
+        "note": "\"Simple 30-day history per habit\""
+      },
+      {
+        "status": "stated",
+        "note": "\"Out of scope: reminders and notifications\""
+      },
+      {
+        "status": "stated",
+        "note": "\"dark mode by default\""
+      }
+    ],
+    "invented": []
+  },
+  "session": "e129d8fa-8c98-4653-899e-2f890d86f259",
+  "cost_usd": 0.0297346,
+  "output_tokens": 723,
+  "denials": []
+}

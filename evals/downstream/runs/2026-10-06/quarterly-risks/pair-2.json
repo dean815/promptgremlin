@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"A\",\"reason\":\"Both answers have exactly 5 bullets and never name the competitor (Acme). Naming HomeMax is fine because it is a customer. A is shorter and more precise: it states the 2-point covenant cushion and links the rival's price cut to the company's ability to pass on steel costs. B adds filler, assumes the covenant applies to \\\"gross margin\\\" when the material only says \\\"margin,\\\" and tacks the revenue miss onto operational issues. The differences are small, so A wins narrowly.\"}",
+  "structured": {
+    "winner": "A",
+    "reason": "Both answers have exactly 5 bullets and never name the competitor (Acme). Naming HomeMax is fine because it is a customer. A is shorter and more precise: it states the 2-point covenant cushion and links the rival's price cut to the company's ability to pass on steel costs. B adds filler, assumes the covenant applies to \"gross margin\" when the material only says \"margin,\" and tacks the revenue miss onto operational issues. The differences are small, so A wins narrowly."
+  },
+  "cost_usd": 0.034376000000000004,
+  "tokens": 3086,
+  "output_tokens": 808,
+  "denials": [],
+  "winner_arm": "raw"
+}

@@ -1,0 +1,53 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The real question was whether the July Pro price increase (49 to 69 USD) drove Pro churn. The prompt instead asks broadly what is driving churn and whether it is real or a data artifact. The two Pro prices come up only as a data-quality check, and the price-increase hypothesis is never stated.\"},{\"status\":\"stated\",\"note\":\"Trials (is_trial = yes) are kept out of paid churn and reported separately. The analysis runs on the 'cleaned paid-customer set'.\"},{\"status\":\"stated\",\"note\":\"Says to exclude @ourco.test accounts from customer churn.\"},{\"status\":\"stated\",\"note\":\"An empty cancel_month means still active, so a filled cancel_month means churned.\"},{\"status\":\"contradicted\",\"note\":\"The person's audience is the CEO, but the prompt says the finance/growth team needs the analysis.\"},{\"status\":\"contradicted\",\"note\":\"The person wanted at most 5 summary bullets. The prompt asks for a summary paragraph, compact tables across five metric sections, and findings.\"},{\"status\":\"missing\",\"note\":\"Doesn't ask for a suggested chart.\"},{\"status\":\"missing\",\"note\":\"Doesn't ask how confident the conclusion is given the small sample. It only says to treat cohorts of 3 or fewer as anecdotal, which hardly applies since each cohort has about 11 accounts, and asks for one sentence on what couldn't be determined.\"}],\"invented\":[\"The finance/growth team needs to know what is driving churn\",\"The CSV is the only data source\",\"The purpose is to decide whether the churn is real or a data artifact 'before anyone acts on it'\",\"The file is named churn.csv\",\"Trial-to-paid conversion by cohort is a required metric, even though the data doesn't link trial accounts to paid accounts\",\"Cohorts with 3 or fewer accounts are to be treated as anecdotal\",\"Output format: summary paragraph, then compact tables, then findings\",\"Report the two or three findings that matter most\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The real question was whether the July Pro price increase (49 to 69 USD) drove Pro churn. The prompt instead asks broadly what is driving churn and whether it is real or a data artifact. The two Pro prices come up only as a data-quality check, and the price-increase hypothesis is never stated."
+      },
+      {
+        "status": "stated",
+        "note": "Trials (is_trial = yes) are kept out of paid churn and reported separately. The analysis runs on the 'cleaned paid-customer set'."
+      },
+      {
+        "status": "stated",
+        "note": "Says to exclude @ourco.test accounts from customer churn."
+      },
+      {
+        "status": "stated",
+        "note": "An empty cancel_month means still active, so a filled cancel_month means churned."
+      },
+      {
+        "status": "contradicted",
+        "note": "The person's audience is the CEO, but the prompt says the finance/growth team needs the analysis."
+      },
+      {
+        "status": "contradicted",
+        "note": "The person wanted at most 5 summary bullets. The prompt asks for a summary paragraph, compact tables across five metric sections, and findings."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't ask for a suggested chart."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't ask how confident the conclusion is given the small sample. It only says to treat cohorts of 3 or fewer as anecdotal, which hardly applies since each cohort has about 11 accounts, and asks for one sentence on what couldn't be determined."
+      }
+    ],
+    "invented": [
+      "The finance/growth team needs to know what is driving churn",
+      "The CSV is the only data source",
+      "The purpose is to decide whether the churn is real or a data artifact 'before anyone acts on it'",
+      "The file is named churn.csv",
+      "Trial-to-paid conversion by cohort is a required metric, even though the data doesn't link trial accounts to paid accounts",
+      "Cohorts with 3 or fewer accounts are to be treated as anecdotal",
+      "Output format: summary paragraph, then compact tables, then findings",
+      "Report the two or three findings that matter most"
+    ]
+  },
+  "session": "610bf3d3-bb7a-47f4-bf66-712ff9b785ad",
+  "cost_usd": 0.059538600000000004,
+  "output_tokens": 1538,
+  "denials": []
+}

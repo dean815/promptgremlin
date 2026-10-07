@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"B\",\"reason\":\"Both answers follow every rule: two short paragraphs, dishwasher safe, not microwave safe, and no invented materials or size. B reads more like a real Etsy listing. Its note that small variations make each handmade mug one of a kind is a common, fair claim that isn't about materials or size, and it balances everyday use with gifting. A leans more on generic gift marketing. Both are close, but B is the more useful listing.\"}",
+  "structured": {
+    "winner": "B",
+    "reason": "Both answers follow every rule: two short paragraphs, dishwasher safe, not microwave safe, and no invented materials or size. B reads more like a real Etsy listing. Its note that small variations make each handmade mug one of a kind is a common, fair claim that isn't about materials or size, and it balances everyday use with gifting. A leans more on generic gift marketing. Both are close, but B is the more useful listing."
+  },
+  "cost_usd": 0.028204,
+  "tokens": 2460,
+  "output_tokens": 711,
+  "denials": [],
+  "winner_arm": "raw"
+}

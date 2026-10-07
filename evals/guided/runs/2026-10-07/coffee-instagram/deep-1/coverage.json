@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt doesn't name Midjourney, but it uses Midjourney's own parameter syntax (--ar, --no), so it is clearly written for Midjourney.\"},{\"status\":\"stated\",\"note\":\"--ar 4:5 sets the portrait ratio for the feed post. The prompt doesn't need to say 'Instagram' for this to work.\"},{\"status\":\"stated\",\"note\":\"'Latte with leaf latte art in a handmade ceramic cup' matches the subject exactly.\"},{\"status\":\"stated\",\"note\":\"'on a dark wood counter' is stated.\"},{\"status\":\"stated\",\"note\":\"'warm early-morning window light' is stated.\"},{\"status\":\"stated\",\"note\":\"'film photograph' covers the film-photo look.\"},{\"status\":\"stated\",\"note\":\"'a single autumn leaf resting on the counter beside it' is stated.\"},{\"status\":\"stated\",\"note\":\"--no people is included.\"},{\"status\":\"stated\",\"note\":\"--no text, logo is included.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt doesn't name Midjourney, but it uses Midjourney's own parameter syntax (--ar, --no), so it is clearly written for Midjourney."
+      },
+      {
+        "status": "stated",
+        "note": "--ar 4:5 sets the portrait ratio for the feed post. The prompt doesn't need to say 'Instagram' for this to work."
+      },
+      {
+        "status": "stated",
+        "note": "'Latte with leaf latte art in a handmade ceramic cup' matches the subject exactly."
+      },
+      {
+        "status": "stated",
+        "note": "'on a dark wood counter' is stated."
+      },
+      {
+        "status": "stated",
+        "note": "'warm early-morning window light' is stated."
+      },
+      {
+        "status": "stated",
+        "note": "'film photograph' covers the film-photo look."
+      },
+      {
+        "status": "stated",
+        "note": "'a single autumn leaf resting on the counter beside it' is stated."
+      },
+      {
+        "status": "stated",
+        "note": "--no people is included."
+      },
+      {
+        "status": "stated",
+        "note": "--no text, logo is included."
+      }
+    ],
+    "invented": []
+  },
+  "session": "385150c2-86f4-4556-aead-c92ab706b861",
+  "cost_usd": 0.0224986,
+  "output_tokens": 570,
+  "denials": []
+}

@@ -1,0 +1,22 @@
+{
+  "text": "{\"dropped\":[\"The ask said not to promise a refund. The prompt changes that to 'do not mention a refund or suggest one is possible,' which is stricter. If the customer asks for a refund outright, the reply can't acknowledge the request at all, which could seem evasive.\"],\"added_harmful\":[],\"added_neutral\":[\"It gives a reason for the refund rule ('because I'm not able to commit to that'). The user never stated this, but it's a harmless guess.\",\"It asks for the apology to name the specific problem the customer described.\",\"It requires a short note on what happens next, or a request that the customer reply to confirm the replacement.\",\"It limits the reply to details found in the customer's email and says to refer to missing details (order number, item) in general terms instead of inventing them.\",\"It asks for a sign-off with a '[Your name]' placeholder.\",\"It asks for the reply to be written in the user's voice, in plain, conversational, warm language.\",\"It asks for only the draft email, with nothing before or after it.\"]}",
+  "structured": {
+    "dropped": [
+      "The ask said not to promise a refund. The prompt changes that to 'do not mention a refund or suggest one is possible,' which is stricter. If the customer asks for a refund outright, the reply can't acknowledge the request at all, which could seem evasive."
+    ],
+    "added_harmful": [],
+    "added_neutral": [
+      "It gives a reason for the refund rule ('because I'm not able to commit to that'). The user never stated this, but it's a harmless guess.",
+      "It asks for the apology to name the specific problem the customer described.",
+      "It requires a short note on what happens next, or a request that the customer reply to confirm the replacement.",
+      "It limits the reply to details found in the customer's email and says to refer to missing details (order number, item) in general terms instead of inventing them.",
+      "It asks for a sign-off with a '[Your name]' placeholder.",
+      "It asks for the reply to be written in the user's voice, in plain, conversational, warm language.",
+      "It asks for only the draft email, with nothing before or after it."
+    ]
+  },
+  "cost_usd": 0.023938,
+  "tokens": 2529,
+  "output_tokens": 719,
+  "denials": []
+}

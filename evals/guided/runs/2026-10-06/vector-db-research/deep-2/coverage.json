@@ -1,0 +1,50 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt asks whether to keep using Postgres with pgvector or move to a dedicated vector database.\"},{\"status\":\"stated\",\"note\":\"It gives about 5 million embeddings at 1536 dimensions, adding roughly 1 million per quarter. The ~9M figure for next year follows from that.\"},{\"status\":\"stated\",\"note\":\"It says the data is in Postgres 16 on AWS RDS.\"},{\"status\":\"stated\",\"note\":\"It sets a total budget under $500 per month.\"},{\"status\":\"stated\",\"note\":\"It says every query filters by tenant_id because the system is multi-tenant.\"},{\"status\":\"stated\",\"note\":\"It allows at most 4 options, with pgvector as the baseline.\"},{\"status\":\"stated\",\"note\":\"It asks for a comparison table plus one clear recommendation. It also adds a list of unknowns.\"},{\"status\":\"stated\",\"note\":\"It limits sources to the last 12 months (roughly October 2025 onward).\"},{\"status\":\"stated\",\"note\":\"It asks for a wide scan first, then a deep dive on the top 2.\"}],\"invented\":[\"It says filtered-search performance and recall 'matter as much as unfiltered speed'. The person never ranked these against each other, so this is an added assumption.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt asks whether to keep using Postgres with pgvector or move to a dedicated vector database."
+      },
+      {
+        "status": "stated",
+        "note": "It gives about 5 million embeddings at 1536 dimensions, adding roughly 1 million per quarter. The ~9M figure for next year follows from that."
+      },
+      {
+        "status": "stated",
+        "note": "It says the data is in Postgres 16 on AWS RDS."
+      },
+      {
+        "status": "stated",
+        "note": "It sets a total budget under $500 per month."
+      },
+      {
+        "status": "stated",
+        "note": "It says every query filters by tenant_id because the system is multi-tenant."
+      },
+      {
+        "status": "stated",
+        "note": "It allows at most 4 options, with pgvector as the baseline."
+      },
+      {
+        "status": "stated",
+        "note": "It asks for a comparison table plus one clear recommendation. It also adds a list of unknowns."
+      },
+      {
+        "status": "stated",
+        "note": "It limits sources to the last 12 months (roughly October 2025 onward)."
+      },
+      {
+        "status": "stated",
+        "note": "It asks for a wide scan first, then a deep dive on the top 2."
+      }
+    ],
+    "invented": [
+      "It says filtered-search performance and recall 'matter as much as unfiltered speed'. The person never ranked these against each other, so this is an added assumption."
+    ]
+  },
+  "session": "e351b323-c0f3-471e-a816-2f3c917d5ca3",
+  "cost_usd": 0.0328706,
+  "output_tokens": 701,
+  "denials": []
+}

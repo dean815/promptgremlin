@@ -1,0 +1,12 @@
+{
+  "text": "Subject: Heater not working in Apartment 4B\n\nDear Ms. Alvarez,\n\nThe heater in Apartment 4B stopped working on October 2. I called on October 3 to report it and haven't heard back since.\n\nOvernight temperatures are now in the 40s, and the apartment gets cold enough that it's hard to sleep. As a reminder, section 12 of the lease covers the landlord providing heat.\n\nCould the heater be repaired within 48 hours of this email? A quick reply confirming when someone will come would be appreciated.\n\nThank you,\nApartment 4B",
+  "structured": null,
+  "session": "64c17c43-c0fe-4450-a6a8-be6a29dec1cb",
+  "cost_usd": 0.01296,
+  "output_tokens": 226,
+  "denials": [],
+  "follow_up": {
+    "question": "What name should I sign with? If you'd rather not give one, I'll sign off with \"Apartment 4B\".",
+    "answer": "I'd rather not give a name, so just sign off with \"Apartment 4B\"."
+  }
+}

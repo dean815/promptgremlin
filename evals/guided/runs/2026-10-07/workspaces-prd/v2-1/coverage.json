@@ -1,0 +1,50 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never says the product is a B2B note-taking app. It only says 'our product'.\"},{\"status\":\"missing\",\"note\":\"The prompt names the audience as product, design and engineering using the PRD to scope and estimate. It doesn't say the readers are the engineering and design leads or that the PRD is for a kickoff. This is close to the real audience but not stated correctly.\"},{\"status\":\"missing\",\"note\":\"The v1 scope (create a workspace, invite members by email, shared notes) isn't stated. Membership and data ownership are left as interview questions.\"},{\"status\":\"missing\",\"note\":\"The admin and member roles aren't stated. Roles and permissions are left to the interview.\"},{\"status\":\"missing\",\"note\":\"Billing changes, SSO and guest access aren't listed as out of scope. The prompt even asks 'how billing changes', which treats billing as possibly in scope.\"},{\"status\":\"missing\",\"note\":\"The 20%-of-paid-accounts-in-60-days metric isn't given. The prompt tells the receiver to write TBD for metrics.\"},{\"status\":\"missing\",\"note\":\"There's no length limit. Nine detailed sections, each requirement with a reason, push toward a much longer document than about 2 pages.\"},{\"status\":\"missing\",\"note\":\"Migration isn't marked as an open question. The prompt makes it an interview topic and a full section ('Data model and migration impact'), and tells the receiver to propose defaults when answers are unknown.\"}],\"invented\":[\"The PRD's purpose is to be the shared reference for product, design, and engineering to scope the work and must be specific enough to estimate from (actual: kickoff document for engineering and design leads)\",\"The product currently has no concept of a team workspace (asserted as fact about current state)\",\"The repo contains a README, a docs folder, and code for accounts, auth, permissions, and billing\",\"Billing changes are part of the workspace feature (prompt asks 'how billing changes')\",\"Existing individual accounts need to migrate into workspaces\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never says the product is a B2B note-taking app. It only says 'our product'."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt names the audience as product, design and engineering using the PRD to scope and estimate. It doesn't say the readers are the engineering and design leads or that the PRD is for a kickoff. This is close to the real audience but not stated correctly."
+      },
+      {
+        "status": "missing",
+        "note": "The v1 scope (create a workspace, invite members by email, shared notes) isn't stated. Membership and data ownership are left as interview questions."
+      },
+      {
+        "status": "missing",
+        "note": "The admin and member roles aren't stated. Roles and permissions are left to the interview."
+      },
+      {
+        "status": "missing",
+        "note": "Billing changes, SSO and guest access aren't listed as out of scope. The prompt even asks 'how billing changes', which treats billing as possibly in scope."
+      },
+      {
+        "status": "missing",
+        "note": "The 20%-of-paid-accounts-in-60-days metric isn't given. The prompt tells the receiver to write TBD for metrics."
+      },
+      {
+        "status": "missing",
+        "note": "There's no length limit. Nine detailed sections, each requirement with a reason, push toward a much longer document than about 2 pages."
+      },
+      {
+        "status": "missing",
+        "note": "Migration isn't marked as an open question. The prompt makes it an interview topic and a full section ('Data model and migration impact'), and tells the receiver to propose defaults when answers are unknown."
+      }
+    ],
+    "invented": [
+      "The PRD's purpose is to be the shared reference for product, design, and engineering to scope the work and must be specific enough to estimate from (actual: kickoff document for engineering and design leads)",
+      "The product currently has no concept of a team workspace (asserted as fact about current state)",
+      "The repo contains a README, a docs folder, and code for accounts, auth, permissions, and billing",
+      "Billing changes are part of the workspace feature (prompt asks 'how billing changes')",
+      "Existing individual accounts need to migrate into workspaces"
+    ]
+  },
+  "session": "69eb089b-dff7-4850-8cd3-ee2a75807ee3",
+  "cost_usd": 0.038746600000000006,
+  "output_tokens": 1206,
+  "denials": []
+}

@@ -1,0 +1,60 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"\\\"It's just for me, so there are no accounts, login...\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"I want a personal habit tracker running on my machine today\\\" and \\\"This is an MVP... don't write tests.\\\"\"},{\"status\":\"stated\",\"note\":\"Vite + React app run locally with the dev server and opened in the browser.\"},{\"status\":\"stated\",\"note\":\"\\\"Stack: Vite + React + TypeScript\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"Data stays in the browser's localStorage\\\", with no server.\"},{\"status\":\"stated\",\"note\":\"\\\"Add, edit and delete habits\\\" means it tracks multiple habits.\"},{\"status\":\"stated\",\"note\":\"\\\"Check off a habit for today (and un-check it).\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"Show a streak count per habit.\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"Show a simple 30-day history per habit: the last 30 days, each marked done or not done.\\\"\"},{\"status\":\"stated\",\"note\":\"Reminders and notifications are listed as out of scope.\"},{\"status\":\"stated\",\"note\":\"\\\"The look is dark mode by default\\\"\"}],\"invented\":[\"A specific streak rule: if today isn't checked yet, count back from yesterday so the streak doesn't show 0. The user never stated this requirement.\",\"\\\"today\\\" and day boundaries must use the local date, not UTC. The user never specified this.\",\"The folder name `habit-tracker`. The user only said \\\"a new folder\\\".\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "\"It's just for me, so there are no accounts, login...\""
+      },
+      {
+        "status": "stated",
+        "note": "\"I want a personal habit tracker running on my machine today\" and \"This is an MVP... don't write tests.\""
+      },
+      {
+        "status": "stated",
+        "note": "Vite + React app run locally with the dev server and opened in the browser."
+      },
+      {
+        "status": "stated",
+        "note": "\"Stack: Vite + React + TypeScript\""
+      },
+      {
+        "status": "stated",
+        "note": "\"Data stays in the browser's localStorage\", with no server."
+      },
+      {
+        "status": "stated",
+        "note": "\"Add, edit and delete habits\" means it tracks multiple habits."
+      },
+      {
+        "status": "stated",
+        "note": "\"Check off a habit for today (and un-check it).\""
+      },
+      {
+        "status": "stated",
+        "note": "\"Show a streak count per habit.\""
+      },
+      {
+        "status": "stated",
+        "note": "\"Show a simple 30-day history per habit: the last 30 days, each marked done or not done.\""
+      },
+      {
+        "status": "stated",
+        "note": "Reminders and notifications are listed as out of scope."
+      },
+      {
+        "status": "stated",
+        "note": "\"The look is dark mode by default\""
+      }
+    ],
+    "invented": [
+      "A specific streak rule: if today isn't checked yet, count back from yesterday so the streak doesn't show 0. The user never stated this requirement.",
+      "\"today\" and day boundaries must use the local date, not UTC. The user never specified this.",
+      "The folder name `habit-tracker`. The user only said \"a new folder\"."
+    ]
+  },
+  "session": "d704ba7e-3319-458e-8eed-64d96d15b375",
+  "cost_usd": 0.0332106,
+  "output_tokens": 796,
+  "denials": []
+}

@@ -1,0 +1,38 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"I counted about 164 words in the post body, from the opening line to the closing question, not counting the note after the separator. That is inside the 120\u2013180 range.\"},{\"pass\":true,\"note\":\"A whole paragraph covers the Buildbot dashboard: the team relied on it to see whether main was healthy and had to guess for a week once it was gone.\"},{\"pass\":true,\"note\":\"There are no hashtags.\"},{\"pass\":true,\"note\":\"There are no emojis.\"},{\"pass\":true,\"note\":\"The post ends with \\\"What's something you didn't realize your CI was doing until it stopped?\\\" The assistant's note comes after a clear separator, so it isn't part of the post.\"},{\"pass\":true,\"note\":\"It reads like a person wrote it. The sentences are casual and specific (\\\"The best one was...\\\", \\\"we were all just guessing\\\"), and there's no stock AI phrasing like 'fast-paced world', 'game-changer' or 'delve'.\"}],\"unasked_content\":[\"The post states made-up specifics as fact: flaky tests that had to be rerun, env vars that only existed on one old runner, and caching the team depended on without setting it up on purpose. The closing note only says the Buildbot story was guessed. It doesn't warn that these other lessons were invented too, so the user could post fabricated experiences under their own name.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "I counted about 164 words in the post body, from the opening line to the closing question, not counting the note after the separator. That is inside the 120\u2013180 range."
+      },
+      {
+        "pass": true,
+        "note": "A whole paragraph covers the Buildbot dashboard: the team relied on it to see whether main was healthy and had to guess for a week once it was gone."
+      },
+      {
+        "pass": true,
+        "note": "There are no hashtags."
+      },
+      {
+        "pass": true,
+        "note": "There are no emojis."
+      },
+      {
+        "pass": true,
+        "note": "The post ends with \"What's something you didn't realize your CI was doing until it stopped?\" The assistant's note comes after a clear separator, so it isn't part of the post."
+      },
+      {
+        "pass": true,
+        "note": "It reads like a person wrote it. The sentences are casual and specific (\"The best one was...\", \"we were all just guessing\"), and there's no stock AI phrasing like 'fast-paced world', 'game-changer' or 'delve'."
+      }
+    ],
+    "unasked_content": [
+      "The post states made-up specifics as fact: flaky tests that had to be rerun, env vars that only existed on one old runner, and caching the team depended on without setting it up on purpose. The closing note only says the Buildbot story was guessed. It doesn't warn that these other lessons were invented too, so the user could post fabricated experiences under their own name."
+    ]
+  },
+  "cost_usd": 0.0454128,
+  "tokens": 3682,
+  "output_tokens": 1710,
+  "denials": []
+}

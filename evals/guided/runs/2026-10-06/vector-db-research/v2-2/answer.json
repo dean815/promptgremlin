@@ -1,0 +1,8 @@
+{
+  "text": "Progress note: I haven't started researching yet, because I need your answers first to scope the recommendation.\n\nThe AskUserQuestion tool isn't available in this session, so I'm asking the questions here as plain text. This is the one round of five. Answer briefly, and \"don't know\" is fine for any of them. Where you do, I'll use the default shown in brackets and state it in the report.\n\n1. **Workload:** Is this RAG, semantic search, recommendations, or a mix? [Default: RAG plus semantic search over documents.]\n2. **Scale and shape:** How many vectors do you expect now and in 12 months, and what dimensionality (for example 768, 1024, 1536, or 3072)? [Default: 5M vectors, 1024 dimensions, growing to 20M.]\n3. **Performance targets:** What query latency (for example p95 under 100 ms) and QPS do you need? Do you need filtered or hybrid keyword-plus-vector queries? [Default: p95 under 100 ms, 50 QPS, with metadata filtering and hybrid search required.]\n4. **Existing stack:** Do you already run Postgres or another datastore that could hold the vectors? [Default: you run Postgres.]\n5. **Hosting and budget:** Do you want to self-host or use a managed service, and what is your approximate monthly budget? [Default: managed preferred, self-hosting acceptable, about $500/month.]\n\nOnce you reply, I'll research all six candidates from vendor docs and pricing pages and deliver the table, the recommendation with risks, and the sources.",
+  "structured": null,
+  "session": "65677d61-8c1a-46b5-a039-d5bf582c30e1",
+  "cost_usd": 0.014450000000000001,
+  "output_tokens": 911,
+  "denials": []
+}

@@ -1,0 +1,12 @@
+{
+  "text": "Subject: Heater out in 4B since October 2\n\nDear Ms. Alvarez,\n\nThe heater in apartment 4B has been out since October 2. I phoned you on October 3 and haven't heard back.\n\nOvernight temperatures are in the 40s \u00b0F now. Section 12 of my lease requires the landlord to provide heat, so I'm hoping we can get this sorted quickly. Could the repair be done within 48 hours?\n\nIf a technician needs to come in, send me a time and I'll make sure I'm home. Replying to this email is the easiest way to reach me.\n\nThank you,\n[name]\nApartment 4B",
+  "structured": null,
+  "session": "44b51312-e66e-4344-a46d-e036479df301",
+  "cost_usd": 0.017816,
+  "output_tokens": 756,
+  "denials": [],
+  "follow_up": {
+    "question": "What name would you like on the email, and which phone number or email address should Ms. Alvarez use to reach you?",
+    "answer": "I don't have a preference on the contact details. Just sign it from me, and Ms. Alvarez can reply to this email address."
+  }
+}

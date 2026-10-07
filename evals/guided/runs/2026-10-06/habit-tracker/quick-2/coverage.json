@@ -1,0 +1,60 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"'It's just for me: no accounts'\"},{\"status\":\"stated\",\"note\":\"'running ... today', 'This is an MVP', 'don't write tests'\"},{\"status\":\"stated\",\"note\":\"'running locally in my browser'\"},{\"status\":\"stated\",\"note\":\"Stack: Vite + React + TypeScript\"},{\"status\":\"stated\",\"note\":\"'no server', 'all data stored in localStorage'\"},{\"status\":\"stated\",\"note\":\"'Add multiple habits'\"},{\"status\":\"stated\",\"note\":\"'Check off each habit for today'\"},{\"status\":\"stated\",\"note\":\"'streak counter per habit'\"},{\"status\":\"stated\",\"note\":\"'simple 30-day history per habit'\"},{\"status\":\"stated\",\"note\":\"Out of scope list includes reminders and notifications\"},{\"status\":\"stated\",\"note\":\"'Dark mode by default'\"}],\"invented\":[\"The project folder must be called 'habit-tracker' and 'nothing exists there yet' \u2013 the user never said either.\",\"It declares editing/deleting habits, weekly/monthly calendar views, and charts/stats out of scope. The user only said they had 'no preference on the other options' and didn't exclude these.\",\"It defines the streak as consecutive checked days 'ending today or yesterday'. The user didn't specify this rule.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "'It's just for me: no accounts'"
+      },
+      {
+        "status": "stated",
+        "note": "'running ... today', 'This is an MVP', 'don't write tests'"
+      },
+      {
+        "status": "stated",
+        "note": "'running locally in my browser'"
+      },
+      {
+        "status": "stated",
+        "note": "Stack: Vite + React + TypeScript"
+      },
+      {
+        "status": "stated",
+        "note": "'no server', 'all data stored in localStorage'"
+      },
+      {
+        "status": "stated",
+        "note": "'Add multiple habits'"
+      },
+      {
+        "status": "stated",
+        "note": "'Check off each habit for today'"
+      },
+      {
+        "status": "stated",
+        "note": "'streak counter per habit'"
+      },
+      {
+        "status": "stated",
+        "note": "'simple 30-day history per habit'"
+      },
+      {
+        "status": "stated",
+        "note": "Out of scope list includes reminders and notifications"
+      },
+      {
+        "status": "stated",
+        "note": "'Dark mode by default'"
+      }
+    ],
+    "invented": [
+      "The project folder must be called 'habit-tracker' and 'nothing exists there yet' \u2013 the user never said either.",
+      "It declares editing/deleting habits, weekly/monthly calendar views, and charts/stats out of scope. The user only said they had 'no preference on the other options' and didn't exclude these.",
+      "It defines the streak as consecutive checked days 'ending today or yesterday'. The user didn't specify this rule."
+    ]
+  },
+  "session": "fcf80440-9bd8-4e80-97e6-4f8e5825a638",
+  "cost_usd": 0.029578599999999997,
+  "output_tokens": 692,
+  "denials": []
+}

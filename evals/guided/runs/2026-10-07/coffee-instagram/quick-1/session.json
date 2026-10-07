@@ -1,0 +1,25 @@
+{
+  "final_prompt": "Latte with leaf latte art in a handmade ceramic cup, film photograph, warm early-morning window light, visible analog film grain --ar 4:5 --no text, logo",
+  "final_reply": "```\nLatte with leaf latte art in a handmade ceramic cup, film photograph, warm early-morning window light, visible analog film grain --ar 4:5 --no text, logo\n```\n\n**If the result misses, change these first**\n- **Leaf art or cup is wrong:** Move \"handmade ceramic cup\" up next to \"latte\". You can also add \"rosetta\" or \"fern-like leaf pattern\" for a specific leaf shape.\n- **Still too clean or digital:** Add `--raw` for less default styling. Raising `--stylize` gives a more styled look, so lower it if the result is too polished.\n- **Light isn't right:** Reword it, for example \"low sun streaming through a window\" or \"soft morning light from the left\".\n\n**Confirmed**\n- Midjourney\n- A latte with leaf latte art in a handmade ceramic cup\n- Warm early-morning window light with a film-photo look\n- No text and no logo\n- 4:5 portrait for the Instagram feed\n\n**Unconfirmed defaults**\n- Composition is left to Midjourney's default.\n- There's no variation plan.\n\nTell me if you want a specific shot, such as overhead or close-up, and I'll add it.\n\n**Changes**\n- The exclusions go in `--no text, logo` at the end instead of the description, because naming them in the text can make them appear.\n- The description is one short, noun-led line, with the subject and cup first, then medium, light and grain.\n- `--ar 4:5` goes after the last word of the description, in Midjourney's parameter syntax.\n\nThe guidance was cached 2026-10-06 and targets Midjourney model v8-2, with no extra flags.",
+  "transcript": [
+    [
+      "person",
+      "make an image for my coffee shop's instagram"
+    ],
+    [
+      "tool",
+      "Quick questions so the prompt describes your image and not a guess. I couldn't read the config file, so I'm using the defaults.\n\n1. **Tool**: [Nano Banana, because an Instagram image often has text on it and it renders text well]. Other options: GPT Image, Midjourney (best for stylised art), or another tool.\n2. **Subject and must-get-right**: [a single drink, such as a latte with latte art, as the hero, with the cup and latte art looking right]. What should be in the image, and what one detail has to be right?\n3. **Style and mood**: [a warm, natural-light photo, because it suits a cozy caf\u00e9 feed]. Other options: a flat illustration, a bold graphic or poster look, or your own description.\n4. **Text in the image**: [none, so there's no risk of garbled lettering]. If you want text, give me the exact words, such as your shop name or a promo line.\n\nI'll default the format to an Instagram feed post at 4:5 unless you say otherwise.\n\nReply with numbers and changes, \"ok\" to accept all suggestions, or \"interview me\" for more detail."
+    ],
+    [
+      "person",
+      "1. Midjourney, not Nano Banana.\n2. Yes, a latte with leaf latte art, in a handmade ceramic cup.\n3. Warm early-morning window light, with a film-photo look, not a clean digital one.\n4. No text, and no logo either.\n\nFormat of 4:5 portrait is fine."
+    ],
+    [
+      "tool",
+      "```\nLatte with leaf latte art in a handmade ceramic cup, film photograph, warm early-morning window light, visible analog film grain --ar 4:5 --no text, logo\n```\n\n**If the result misses, change these first**\n- **Leaf art or cup is wrong:** Move \"handmade ceramic cup\" up next to \"latte\". You can also add \"rosetta\" or \"fern-like leaf pattern\" for a specific leaf shape.\n- **Still too clean or digital:** Add `--raw` for less default styling. Raising `--stylize` gives a more styled look, so lower it if the result is too polished.\n- **Light isn't right:** Reword it, for example \"low sun streaming through a window\" or \"soft morning light from the left\".\n\n**Confirmed**\n- Midjourney\n- A latte with leaf latte art in a handmade ceramic cup\n- Warm early-morning window light with a film-photo look\n- No text and no logo\n- 4:5 portrait for the Instagram feed\n\n**Unconfirmed defaults**\n- Composition is left to Midjourney's default.\n- There's no variation plan.\n\nTell me if you want a specific shot, such as overhead or close-up, and I'll add it.\n\n**Changes**\n- The exclusions go in `--no text, logo` at the end instead of the description, because naming them in the text can make them appear.\n- The description is one short, noun-led line, with the subject and cup first, then medium, light and grain.\n- `--ar 4:5` goes after the last word of the description, in Midjourney's parameter syntax.\n\nThe guidance was cached 2026-10-06 and targets Midjourney model v8-2, with no extra flags."
+    ]
+  ],
+  "rounds": 1,
+  "cost_usd": 0.12872860000000003,
+  "session": "a13988a2-2a55-43f6-b728-f9496021535e"
+}

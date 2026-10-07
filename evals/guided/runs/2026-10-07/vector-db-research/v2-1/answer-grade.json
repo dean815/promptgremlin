@@ -1,0 +1,47 @@
+{
+  "text": "{\"items\":[{\"status\":\"not_met\",\"note\":\"It never makes the call. It gives a generic rule ('pgvector if\u2026, Qdrant if\u2026') and says it can't tie the choice to the user's needs, even though the user stated them.\"},{\"status\":\"not_met\",\"note\":\"It ignores the stated scale (5M vectors at 1536 dimensions, growing about 1M per quarter) and lists scale as 'unknown'. It doesn't check what this growth means for index memory or capacity.\"},{\"status\":\"not_met\",\"note\":\"It says the stack is unknown and asks whether the user runs Postgres at all, though they said Postgres 16 on RDS. It doesn't cover pgvector support on RDS or instance sizing.\"},{\"status\":\"not_met\",\"note\":\"It doesn't use the $500/month budget. It explicitly leaves out cost estimates and checks no option against the budget.\"},{\"status\":\"not_met\",\"note\":\"Filtering only comes up in general terms. It doesn't address tenant_id multi-tenancy: partitioning, per-tenant indexes, iterative scans, Qdrant multitenancy, or namespaces.\"},{\"status\":\"not_met\",\"note\":\"It compares 6 options (pgvector, Qdrant, Weaviate, Milvus, Pinecone, Chroma), which breaks the limit of 4.\"},{\"status\":\"not_met\",\"note\":\"There is a table, but no single clear recommendation. The recommendation is conditional, splitting between pgvector, Qdrant and Pinecone.\"},{\"status\":\"not_met\",\"note\":\"It cites no sources and says nothing was checked against current sources, so recent sources weren't used.\"},{\"status\":\"not_met\",\"note\":\"The wide table works as a shallow scan, but there is no deep dive on the top 2 options.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "not_met",
+        "note": "It never makes the call. It gives a generic rule ('pgvector if\u2026, Qdrant if\u2026') and says it can't tie the choice to the user's needs, even though the user stated them."
+      },
+      {
+        "status": "not_met",
+        "note": "It ignores the stated scale (5M vectors at 1536 dimensions, growing about 1M per quarter) and lists scale as 'unknown'. It doesn't check what this growth means for index memory or capacity."
+      },
+      {
+        "status": "not_met",
+        "note": "It says the stack is unknown and asks whether the user runs Postgres at all, though they said Postgres 16 on RDS. It doesn't cover pgvector support on RDS or instance sizing."
+      },
+      {
+        "status": "not_met",
+        "note": "It doesn't use the $500/month budget. It explicitly leaves out cost estimates and checks no option against the budget."
+      },
+      {
+        "status": "not_met",
+        "note": "Filtering only comes up in general terms. It doesn't address tenant_id multi-tenancy: partitioning, per-tenant indexes, iterative scans, Qdrant multitenancy, or namespaces."
+      },
+      {
+        "status": "not_met",
+        "note": "It compares 6 options (pgvector, Qdrant, Weaviate, Milvus, Pinecone, Chroma), which breaks the limit of 4."
+      },
+      {
+        "status": "not_met",
+        "note": "There is a table, but no single clear recommendation. The recommendation is conditional, splitting between pgvector, Qdrant and Pinecone."
+      },
+      {
+        "status": "not_met",
+        "note": "It cites no sources and says nothing was checked against current sources, so recent sources weren't used."
+      },
+      {
+        "status": "not_met",
+        "note": "The wide table works as a shallow scan, but there is no deep dive on the top 2 options."
+      }
+    ]
+  },
+  "session": "047fe946-cd98-4f59-9ef0-752aa70e53d6",
+  "cost_usd": 0.037681000000000006,
+  "output_tokens": 917,
+  "denials": []
+}

@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt uses Midjourney parameter syntax (--ar, --no), so it is written for Midjourney.\"},{\"status\":\"stated\",\"note\":\"--ar 4:5 sets the portrait format. It doesn't name Instagram, but the aspect ratio covers the requirement.\"},{\"status\":\"stated\",\"note\":\"'Latte with a leaf latte art pattern in a handmade ceramic cup' is in the prompt.\"},{\"status\":\"missing\",\"note\":\"The dark wood counter setting isn't mentioned.\"},{\"status\":\"stated\",\"note\":\"'warm early-morning window light' is in the prompt.\"},{\"status\":\"stated\",\"note\":\"'film photograph' gives the film-photo look.\"},{\"status\":\"missing\",\"note\":\"The single autumn leaf on the counter isn't mentioned.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't exclude people. 'people' isn't in the --no list.\"},{\"status\":\"stated\",\"note\":\"'--no text, logo' excludes text and logos.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt uses Midjourney parameter syntax (--ar, --no), so it is written for Midjourney."
+      },
+      {
+        "status": "stated",
+        "note": "--ar 4:5 sets the portrait format. It doesn't name Instagram, but the aspect ratio covers the requirement."
+      },
+      {
+        "status": "stated",
+        "note": "'Latte with a leaf latte art pattern in a handmade ceramic cup' is in the prompt."
+      },
+      {
+        "status": "missing",
+        "note": "The dark wood counter setting isn't mentioned."
+      },
+      {
+        "status": "stated",
+        "note": "'warm early-morning window light' is in the prompt."
+      },
+      {
+        "status": "stated",
+        "note": "'film photograph' gives the film-photo look."
+      },
+      {
+        "status": "missing",
+        "note": "The single autumn leaf on the counter isn't mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't exclude people. 'people' isn't in the --no list."
+      },
+      {
+        "status": "stated",
+        "note": "'--no text, logo' excludes text and logos."
+      }
+    ],
+    "invented": []
+  },
+  "session": "0e75ec3e-2f29-4b67-a5da-2f7d5f3bf06c",
+  "cost_usd": 0.0212626,
+  "output_tokens": 559,
+  "denials": []
+}

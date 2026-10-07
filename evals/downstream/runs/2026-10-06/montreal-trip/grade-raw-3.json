@@ -1,0 +1,38 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"Exactly three days (Day 1\u20133), each split into time blocks, plus a general tips section.\"},{\"pass\":true,\"note\":\"Every time block has a named food or drink stop, and markets and bakeries anchor whole sections. Sightseeing fits around the meals.\"},{\"pass\":true,\"note\":\"Mostly mid-range picks (Schwartz's, Jean-Talon, bagels, Pastaga, Candide, Satay Brothers) with a $150\u2013220 CAD/day estimate. Splurges (Au Pied de Cochon, Toqu\u00e9!, Joe Beef) are flagged, and cheaper alternatives are given.\"},{\"pass\":true,\"note\":\"Covers October temperatures, rain and layers, peak foliage on Mont Royal, cider donuts, Gardens of Light, the Lachine Canal in fall, a rainy-day fallback (Underground City), and the Canadian Thanksgiving weekend.\"},{\"pass\":true,\"note\":\"Names many real places (Olive et Gourmando, Schwartz's, St-Viateur, Fairmount, March\u00e9 Jean-Talon, Atwater, Joe Beef, Dieu du Ciel!, R\u00e9gine Caf\u00e9, and others). A few names are uncertain, such as 'Bar Grumeau'.\"}],\"unasked_content\":[\"Wrong fact: it says the Montreal Museum of Fine Arts is free for under 31s. Free entry is for ages 20 and under; ages 21\u201330 pay a reduced price.\",\"Toqu\u00e9! is offered as a full tasting-menu splurge on Day 2 without a clear note that it goes well beyond a mid-range budget.\",\"Caf\u00e9 Olimpico is suggested on both Day 1 and Day 2, which wastes a food slot on a food-focused trip.\",\"Day 1 directions are off: it says to 'walk up St-Laurent' from Schwartz's to the Quartier des Spectacles, which is actually downhill to the south. Dunn's and Reuben's are listed as nearby alternatives but are downtown, not next to Schwartz's.\",\"'Bar Grumeau' may not be a real venue. Damas is described as 'Syrian-Persian' when it is a Syrian restaurant.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "Exactly three days (Day 1\u20133), each split into time blocks, plus a general tips section."
+      },
+      {
+        "pass": true,
+        "note": "Every time block has a named food or drink stop, and markets and bakeries anchor whole sections. Sightseeing fits around the meals."
+      },
+      {
+        "pass": true,
+        "note": "Mostly mid-range picks (Schwartz's, Jean-Talon, bagels, Pastaga, Candide, Satay Brothers) with a $150\u2013220 CAD/day estimate. Splurges (Au Pied de Cochon, Toqu\u00e9!, Joe Beef) are flagged, and cheaper alternatives are given."
+      },
+      {
+        "pass": true,
+        "note": "Covers October temperatures, rain and layers, peak foliage on Mont Royal, cider donuts, Gardens of Light, the Lachine Canal in fall, a rainy-day fallback (Underground City), and the Canadian Thanksgiving weekend."
+      },
+      {
+        "pass": true,
+        "note": "Names many real places (Olive et Gourmando, Schwartz's, St-Viateur, Fairmount, March\u00e9 Jean-Talon, Atwater, Joe Beef, Dieu du Ciel!, R\u00e9gine Caf\u00e9, and others). A few names are uncertain, such as 'Bar Grumeau'."
+      }
+    ],
+    "unasked_content": [
+      "Wrong fact: it says the Montreal Museum of Fine Arts is free for under 31s. Free entry is for ages 20 and under; ages 21\u201330 pay a reduced price.",
+      "Toqu\u00e9! is offered as a full tasting-menu splurge on Day 2 without a clear note that it goes well beyond a mid-range budget.",
+      "Caf\u00e9 Olimpico is suggested on both Day 1 and Day 2, which wastes a food slot on a food-focused trip.",
+      "Day 1 directions are off: it says to 'walk up St-Laurent' from Schwartz's to the Quartier des Spectacles, which is actually downhill to the south. Dunn's and Reuben's are listed as nearby alternatives but are downtown, not next to Schwartz's.",
+      "'Bar Grumeau' may not be a real venue. Damas is described as 'Syrian-Persian' when it is a Syrian restaurant."
+    ]
+  },
+  "cost_usd": 0.0616448,
+  "tokens": 5426,
+  "output_tokens": 1900,
+  "denials": []
+}

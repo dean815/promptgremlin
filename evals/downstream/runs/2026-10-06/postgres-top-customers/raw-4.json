@@ -1,0 +1,9 @@
+{
+  "text": "```sql\nSELECT\n    c.id,\n    c.name,\n    c.email,\n    SUM(oi.quantity * oi.unit_price_cents) AS revenue_cents,\n    ROUND(SUM(oi.quantity * oi.unit_price_cents) / 100.0, 2) AS revenue\nFROM customers c\nJOIN orders o       ON o.customer_id = c.id\nJOIN order_items oi ON oi.order_id = o.id\nWHERE o.created_at >= now() - interval '90 days'\n  AND o.status = 'paid'\nGROUP BY c.id, c.name, c.email\nORDER BY revenue_cents DESC\nLIMIT 5;\n```\n\nNotes:\n\n- **Status filter:** I used `status = 'paid'` rather than `status <> 'refunded'`, since that also excludes `cancelled` orders, which shouldn't count as revenue. If you actually want to include cancelled ones, change it to `o.status <> 'refunded'`.\n- **Cast to bigint:** `SUM` of `int` products returns `bigint` in Postgres, so overflow isn't a concern here.\n- **Window:** `now() - interval '90 days'` is a rolling 90-day window. For calendar-day boundaries, use `date_trunc('day', now()) - interval '90 days'` instead.\n- **Ties:** If ties at rank 5 matter, add a tiebreaker like `, c.id` to the `ORDER BY` for deterministic results, or use `RANK()` in a CTE to return all tied customers.\n- **Index:** An index on `orders (created_at)` or `orders (status, created_at)` and on `order_items (order_id)` will help on larger tables.",
+  "structured": null,
+  "cost_usd": 0.00919,
+  "tokens": 1445,
+  "output_tokens": 569,
+  "denials": [],
+  "sent": "write a postgres query for the top 5 customers by revenue in the last 90 days, excluding refunded orders. schema below\n\ncustomers(id bigint pk, name text, email text)\norders(id bigint pk, customer_id bigint fk -> customers.id, created_at timestamptz, status text -- one of 'paid','refunded','cancelled')\norder_items(id bigint pk, order_id bigint fk -> orders.id, quantity int, unit_price_cents int)"
+}

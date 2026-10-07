@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"The email is addressed to \\\"Dear Ms. Alvarez.\\\"\"},{\"status\":\"met\",\"note\":\"Apartment 4B is named in the subject line and in the first sentence.\"},{\"status\":\"met\",\"note\":\"It says \\\"stopped working on October 2.\\\"\"},{\"status\":\"met\",\"note\":\"It says \\\"I called you about it on October 3 and haven't heard back since.\\\"\"},{\"status\":\"met\",\"note\":\"It says \\\"Overnight temperatures are now in the 40s.\\\" It doesn't write \u00b0F, but for a US landlord the meaning is clear.\"},{\"status\":\"met\",\"note\":\"It asks for the heater to be \\\"repaired within 48 hours of this email,\\\" and the subject line says the same.\"},{\"status\":\"met\",\"note\":\"It says \\\"Section 12 of my lease requires the landlord to provide heat.\\\"\"},{\"status\":\"met\",\"note\":\"The tone is polite: it offers to give the technician access and asks for a confirmation. It is also firm: it gives a clear deadline and cites the lease.\"},{\"status\":\"met\",\"note\":\"Rent is never mentioned, and there are no threats.\"},{\"status\":\"met\",\"note\":\"The email is about 102 words, or about 113 with the subject line. Both are under 150.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "The email is addressed to \"Dear Ms. Alvarez.\""
+      },
+      {
+        "status": "met",
+        "note": "Apartment 4B is named in the subject line and in the first sentence."
+      },
+      {
+        "status": "met",
+        "note": "It says \"stopped working on October 2.\""
+      },
+      {
+        "status": "met",
+        "note": "It says \"I called you about it on October 3 and haven't heard back since.\""
+      },
+      {
+        "status": "met",
+        "note": "It says \"Overnight temperatures are now in the 40s.\" It doesn't write \u00b0F, but for a US landlord the meaning is clear."
+      },
+      {
+        "status": "met",
+        "note": "It asks for the heater to be \"repaired within 48 hours of this email,\" and the subject line says the same."
+      },
+      {
+        "status": "met",
+        "note": "It says \"Section 12 of my lease requires the landlord to provide heat.\""
+      },
+      {
+        "status": "met",
+        "note": "The tone is polite: it offers to give the technician access and asks for a confirmation. It is also firm: it gives a clear deadline and cites the lease."
+      },
+      {
+        "status": "met",
+        "note": "Rent is never mentioned, and there are no threats."
+      },
+      {
+        "status": "met",
+        "note": "The email is about 102 words, or about 113 with the subject line. Both are under 150."
+      }
+    ]
+  },
+  "session": "64d863b0-7e72-4cc7-a1f2-b8c6dd6eae52",
+  "cost_usd": 0.033073,
+  "output_tokens": 1169,
+  "denials": []
+}

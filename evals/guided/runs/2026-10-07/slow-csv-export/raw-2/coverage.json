@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt doesn't mention the roughly 2M-row size or that memory use matters.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say to keep the signature export_orders_csv(db, path), and it doesn't mention the three callers.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say to keep the exact header and column order.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't rule out new dependencies.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't name the N+1 per-row customer lookup as the main cause.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say to write rows as they're produced instead of building one big string.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say that customer names can contain commas or that values need CSV quoting.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say to verify with tests/test_export.py.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't ask for a minimal change or say to leave the module structure alone.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt doesn't mention the roughly 2M-row size or that memory use matters."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say to keep the signature export_orders_csv(db, path), and it doesn't mention the three callers."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say to keep the exact header and column order."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't rule out new dependencies."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't name the N+1 per-row customer lookup as the main cause."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say to write rows as they're produced instead of building one big string."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say that customer names can contain commas or that values need CSV quoting."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say to verify with tests/test_export.py."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't ask for a minimal change or say to leave the module structure alone."
+      }
+    ],
+    "invented": []
+  },
+  "session": "c08ecd46-ee1c-4a40-979d-0600e46e3348",
+  "cost_usd": 0.0194306,
+  "output_tokens": 421,
+  "denials": []
+}

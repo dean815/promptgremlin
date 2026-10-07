@@ -1,0 +1,46 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The opening sentence asks whether the July 2026 Pro price increase (49 to 69 USD) drove Pro churn.\"},{\"status\":\"stated\",\"note\":\"The prompt says to exclude trials (is_trial = yes).\"},{\"status\":\"stated\",\"note\":\"The prompt says to exclude internal test accounts (emails ending in @ourco.test).\"},{\"status\":\"stated\",\"note\":\"The prompt says an account has churned if it has a cancel_month.\"},{\"status\":\"stated\",\"note\":\"The question is framed as the CEO's, and the output is to be written for the CEO.\"},{\"status\":\"stated\",\"note\":\"The prompt asks for a summary of at most 5 bullets.\"},{\"status\":\"stated\",\"note\":\"The prompt asks for one suggested chart and says to specify the axes, the groups and the metric.\"},{\"status\":\"stated\",\"note\":\"The prompt notes the sample is small and asks how confident the conclusion is and why.\"}],\"invented\":[\"The prompt says to drop both trials and test accounts silently and not report the excluded rows. The user only said the @ourco.test accounts need no separate reporting. They said nothing about leaving trials unreported.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The opening sentence asks whether the July 2026 Pro price increase (49 to 69 USD) drove Pro churn."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to exclude trials (is_trial = yes)."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to exclude internal test accounts (emails ending in @ourco.test)."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says an account has churned if it has a cancel_month."
+      },
+      {
+        "status": "stated",
+        "note": "The question is framed as the CEO's, and the output is to be written for the CEO."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks for a summary of at most 5 bullets."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks for one suggested chart and says to specify the axes, the groups and the metric."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt notes the sample is small and asks how confident the conclusion is and why."
+      }
+    ],
+    "invented": [
+      "The prompt says to drop both trials and test accounts silently and not report the excluded rows. The user only said the @ourco.test accounts need no separate reporting. They said nothing about leaving trials unreported."
+    ]
+  },
+  "session": "ac94b869-71e8-4ba7-898d-aa7a86dc5639",
+  "cost_usd": 0.0575626,
+  "output_tokens": 684,
+  "denials": []
+}

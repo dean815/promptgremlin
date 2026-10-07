@@ -1,0 +1,46 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never says the product is a B2B note-taking app. It tells the receiver the product is unknown and to mark it as a gap, even though the user's answer 1 '(a)' likely confirmed it.\"},{\"status\":\"stated\",\"note\":\"Says the readers are the engineering and design leads at a kickoff meeting.\"},{\"status\":\"stated\",\"note\":\"Lists creating a workspace, inviting members by email and shared notes as in scope for v1.\"},{\"status\":\"stated\",\"note\":\"Says there are only two roles, admin and member, and that this is settled for v1.\"},{\"status\":\"stated\",\"note\":\"Lists billing changes, SSO and guest access as explicitly out of scope.\"},{\"status\":\"stated\",\"note\":\"Gives the target of 20% of paid accounts creating a workspace within 60 days, to be presented as given.\"},{\"status\":\"contradicted\",\"note\":\"The user wanted at most about 2 pages, but the prompt says 'No length limit.'\"},{\"status\":\"stated\",\"note\":\"Puts migration of existing shared notes under open questions, says it is not out of scope, and says not to pick an answer.\"}],\"invented\":[\"It says the leads will use the PRD to decide whether to build this at all. The user only said it was for a kickoff, which suggests building is already decided.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never says the product is a B2B note-taking app. It tells the receiver the product is unknown and to mark it as a gap, even though the user's answer 1 '(a)' likely confirmed it."
+      },
+      {
+        "status": "stated",
+        "note": "Says the readers are the engineering and design leads at a kickoff meeting."
+      },
+      {
+        "status": "stated",
+        "note": "Lists creating a workspace, inviting members by email and shared notes as in scope for v1."
+      },
+      {
+        "status": "stated",
+        "note": "Says there are only two roles, admin and member, and that this is settled for v1."
+      },
+      {
+        "status": "stated",
+        "note": "Lists billing changes, SSO and guest access as explicitly out of scope."
+      },
+      {
+        "status": "stated",
+        "note": "Gives the target of 20% of paid accounts creating a workspace within 60 days, to be presented as given."
+      },
+      {
+        "status": "contradicted",
+        "note": "The user wanted at most about 2 pages, but the prompt says 'No length limit.'"
+      },
+      {
+        "status": "stated",
+        "note": "Puts migration of existing shared notes under open questions, says it is not out of scope, and says not to pick an answer."
+      }
+    ],
+    "invented": [
+      "It says the leads will use the PRD to decide whether to build this at all. The user only said it was for a kickoff, which suggests building is already decided."
+    ]
+  },
+  "session": "4b4431c1-9eda-435b-9bef-b83abeb19f15",
+  "cost_usd": 0.0301026,
+  "output_tokens": 679,
+  "denials": []
+}

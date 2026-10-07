@@ -1,0 +1,9 @@
+{
+  "text": "Subject: Re: Broken on arrival AGAIN\n\nHi Jordan,\n\nI'm so sorry your kettle arrived with a cracked lid again. That's frustrating, especially after four years of being a loyal customer, and it's not the experience you should have had.\n\nI'd like to send you a replacement for order #58213, and we'll take extra care this time. If you reply to confirm you'd like that, I'll get it moving right away.\n\nThank you for sticking with us, and again, I'm truly sorry for the trouble.\n\nWarmly,\n[Your name]",
+  "structured": null,
+  "cost_usd": 0.00609,
+  "tokens": 1252,
+  "output_tokens": 181,
+  "denials": [],
+  "sent": "A customer has written in with a complaint, and I need to reply to them. The email is pasted directly below this message. Draft my reply, written as me, in a friendly, warm tone.\n\nIn the reply:\n1. Apologize sincerely for the specific problem the customer describes.\n2. Offer to send a replacement. Do not mention a refund or suggest one is possible, because I'm not able to commit to that.\n3. Say briefly what happens next, or ask them to reply to confirm the replacement. Use only details that appear in their email.\n\nKeep the reply under 120 words, since it goes straight into an email. Use plain, conversational language, and sign off with a placeholder \"[Your name]\". If the email leaves out something I'd need (such as the order number or the item), refer to it generally and don't invent details.\n\nReply with the draft email only, with nothing before or after it.\n\nSubject: Broken on arrival AGAIN\n\nThis is the second kettle from you that arrived with a cracked lid. I've been a customer for 4 years and I'm honestly done. I want my money back. Order #58213.\n- Jordan"
+}

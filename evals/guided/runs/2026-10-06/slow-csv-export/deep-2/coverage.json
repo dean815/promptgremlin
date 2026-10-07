@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt says exports can reach about 2 million rows, so memory use matters as well as speed.\"},{\"status\":\"stated\",\"note\":\"The prompt says the signature export_orders_csv(db, path) must stay identical because three callers depend on it.\"},{\"status\":\"stated\",\"note\":\"The prompt says the header line id,customer_name,total,created_at and the column order must stay identical.\"},{\"status\":\"stated\",\"note\":\"The prompt says to ask before adding a dependency and that none are wanted. It also says the standard-library csv module is fine.\"},{\"status\":\"stated\",\"note\":\"The prompt names the N+1 query (a per-row db.query_one customer lookup) as the known main cause.\"},{\"status\":\"stated\",\"note\":\"The prompt says to avoid building the whole output in one string and to write rows to the file as you go.\"},{\"status\":\"stated\",\"note\":\"The prompt says customer names can contain commas, so values must be quoted properly, and that this is the only output change.\"},{\"status\":\"stated\",\"note\":\"The prompt says to run tests/test_export.py and show the command and its result.\"},{\"status\":\"stated\",\"note\":\"The prompt asks for a minimal, targeted fix and says not to restructure the module or add abstractions.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt says exports can reach about 2 million rows, so memory use matters as well as speed."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says the signature export_orders_csv(db, path) must stay identical because three callers depend on it."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says the header line id,customer_name,total,created_at and the column order must stay identical."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to ask before adding a dependency and that none are wanted. It also says the standard-library csv module is fine."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt names the N+1 query (a per-row db.query_one customer lookup) as the known main cause."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to avoid building the whole output in one string and to write rows to the file as you go."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says customer names can contain commas, so values must be quoted properly, and that this is the only output change."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to run tests/test_export.py and show the command and its result."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks for a minimal, targeted fix and says not to restructure the module or add abstractions."
+      }
+    ],
+    "invented": []
+  },
+  "session": "a149dd5c-6392-477e-a03e-4b05d5a0191b",
+  "cost_usd": 0.0326986,
+  "output_tokens": 592,
+  "denials": []
+}

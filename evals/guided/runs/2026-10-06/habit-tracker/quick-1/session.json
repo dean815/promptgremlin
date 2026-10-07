@@ -1,0 +1,65 @@
+{
+  "final_prompt": null,
+  "final_reply": "Bye!",
+  "transcript": [
+    [
+      "person",
+      "build me a habit tracker app"
+    ],
+    [
+      "tool",
+      "I'm building a prompt for Claude Code to build your habit tracker. I have four quick questions. The suggested answer is in brackets.\n\n1. **Speed:** Do you want an MVP or a solid v1?\n   1. [MVP, the thinnest working version, because \"build me a habit tracker\" sounds like a personal try-out]\n   2. Solid v1, with tests and error handling\n   3. Interview me more\n\n2. **Stack:**\n   1. [Small web app with plain HTML, JS and TypeScript or React (Vite), storing data in the browser's localStorage. It needs no server and can be scaffolded in one session.]\n   2. Python backend with SQLite and a simple web UI\n   3. Mobile app (React Native or Expo)\n   4. Your call, whichever is simplest\n\n3. **v1 features:** Pick the ones you want. Anything you don't pick goes in the out-of-scope list.\n   1. [Add and delete habits]\n   2. [Daily check-off]\n   3. [Streak counter]\n   4. Weekly or monthly history view\n   5. Reminders or notifications\n   6. Charts and stats\n\n4. **Users and data:**\n   1. [Just you, with data stored locally and no accounts]\n   2. Accounts and a server, so it syncs across devices\n\nReply with numbers and changes, \"ok\" to accept all suggestions, or \"interview me\" for more detail."
+    ],
+    [
+      "person",
+      "1. MVP, no tests needed. I want it running today.\n2. Option 1, but TypeScript please. It should run locally in the browser.\n3. Add and delete habits, daily check-off, and streak counter are fine. I also want a simple 30-day history per habit. No reminders or notifications.\n4. Option 1: just me, data stored locally in the browser, no accounts or login.\n\nOne more thing: dark mode by default."
+    ],
+    [
+      "tool",
+      "I want a personal habit tracker that I can run locally in my browser today. It's just for me: no accounts, no login, and all data stays in this browser's localStorage. This is an MVP, so aim for the thinnest working slice. Throwaway structure is fine, and please don't build abstractions, extra layers, or config I didn't ask for.\n\nStack: a small web app using Vite with TypeScript and plain HTML/DOM code (no UI framework), with localStorage for storage. Keep it to what one session can scaffold. Use the Vite vanilla-ts template or equivalent.\n\nBuild it in a new folder called `habit-tracker` inside the current working directory. Don't touch anything outside that folder.\n\nv1 features (all four are required):\n- [ ] Add a habit by name, and delete a habit.\n- [ ] Check off a habit for today, and undo the check-off.\n- [ ] A streak counter per habit: consecutive days checked off, ending today (or yesterday if today isn't checked yet, so the streak doesn't show as broken before the day is over).\n- [ ] A simple 30-day history per habit: the last 30 days, each marked done or not done.\n\nLook and feel: dark mode by default. Keep the styling simple.\n\nOut of scope. Do not build these, and report them to me instead of adding them if you think they're needed:\n- reminders or notifications (I explicitly declined them)\n- charts or stats\n- weekly or monthly views beyond the 30-day history\n- accounts, a backend, deployment, and tests (this is an MVP, so no test files)\n\nUse the local calendar date (YYYY-MM-DD in the browser's timezone) as the key for each day, not UTC, so that \"today\" matches my clock.\n\nVerify by running it, not just by writing it. Start the dev server and click through this flow in a real browser if you can (a browser-automation tool or a headless browser is fine). If you can't, say so plainly and give me the exact steps to do it:\n1. Add a habit.\n2. Check it off and see the streak become 1.\n3. See the 30-day history show today as done.\n4. Reload the page and confirm the habit and its check-off persist.\n5. Delete the habit and confirm it's gone after another reload.\n\nAlso run `npm run build` and confirm it succeeds with no TypeScript errors. Report the commands you ran and what they showed. If something fails, fix the root cause rather than hiding the error.\n\nAsk me only if something blocks you or would change the scope. For everything else, such as naming, layout, and small styling choices, decide and keep going. I'm not watching, so proceed on reversible local steps. Post a one-line note before you start, and finish with a short recap of what you built, how to run it (`npm install`, then `npm run dev`), and the results of the checks above.\n\nYou're done when the app runs locally, the click-through above passes including persistence after reload, `npm run build` succeeds, and you've reported the results.\n\n**Effort:** medium (Claude Code: `/effort`). This is a small single-session MVP with little ambiguity and a quick run-through to check it.\n\n**Confirmed:** MVP with no tests, wanted running today. Vite and TypeScript with plain DOM code, running locally with localStorage. Features are add/delete habits, daily check-off, streak counter and 30-day history. Reminders, notifications, charts/stats and longer views are out. Just you, no accounts. Dark mode by default.\n\n**Defaults (unconfirmed, correct in one reply):**\n- The done check is the click-through in the prompt: add, check off, streak, history, delete, reload to confirm persistence.\n- Build in a new `habit-tracker` folder in the current directory. The writer picked the folder name.\n- Local only, no deploy.\n- The streak rule counts yesterday when today is unchecked, and uses local-timezone dates. The writer added both because your answers didn't say.\n- Check-off can be undone, so a mis-click can be fixed. The writer added this.\n- `npm run build` must pass. The writer added this as an extra check beyond the click-through.\n\n**Changes:**\n- The prompt names the folder, forbids touching anything outside it, and lists out-of-scope items to report rather than build.\n- It says throwaway structure is fine, so the agent doesn't over-build.\n- It adds a runnable check with evidence and a stop condition, and says to fix root causes.\n- It says to decide small things and ask only on blockers, post progress notes, and give a recap.\n\n**Guidance:** cached 2026-10-05 21:47, for model claude-fable-5-1 (the flagship, used because no model was named). Two sections were flagged as drifted: \"Provide specific context in your prompts\" and \"Configure your environment\". The changed text was omitted for budget, so those two sections rest on the bundled notes.\n\nI haven't built anything. To use this, paste the prompt into a fresh Claude Code session. I can also sharpen it further if you want to change any of the defaults."
+    ],
+    [
+      "person",
+      "Looks good, ok to all the defaults."
+    ],
+    [
+      "tool",
+      "All the defaults are confirmed, and the prompt above needs no changes. Paste it into a fresh Claude Code session. I won't build the app here, because my job ends once you have the prompt.\n\nIf you want it adjusted before you run it, I can sharpen it. The options are a different folder name, a stricter streak rule, or a different stack."
+    ],
+    [
+      "person",
+      "Thanks, that's all I need. I'll paste it into Claude Code now."
+    ],
+    [
+      "tool",
+      "You're welcome. Good luck with the build, and come back if you want the prompt adjusted."
+    ],
+    [
+      "person",
+      "Thanks, that's all I need."
+    ],
+    [
+      "tool",
+      "You're welcome. Enjoy the habit tracker."
+    ],
+    [
+      "person",
+      "Thanks, bye!"
+    ],
+    [
+      "tool",
+      "Bye!"
+    ],
+    [
+      "person",
+      "Bye!"
+    ],
+    [
+      "tool",
+      "Bye!"
+    ]
+  ],
+  "rounds": 6,
+  "cost_usd": 0.9340608,
+  "session": "84b82c98-fc6f-4aac-8b94-e499c970b2a4"
+}

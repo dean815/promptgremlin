@@ -12,7 +12,7 @@ with several runs each, graded by a model against the fixed assertions in `evals
 not measure whether the rewritten prompts produce better downstream answers. The without-skill
 baseline mostly fails because it does not follow the skill's output format, so the gap is not
 evidence of better prompts. Runs used a personal config, and run artifacts are not published.
-A downstream-quality benchmark is planned.
+A downstream-quality benchmark is in [downstream/RESULTS.md](downstream/RESULTS.md); on its first run the rewrites showed no measurable gain.
 
 ## Method
 

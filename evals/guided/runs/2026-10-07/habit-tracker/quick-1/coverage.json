@@ -1,0 +1,59 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"\\\"for personal use: just me, no accounts or login\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"Speed mode is MVP... don't write tests unless I ask.\\\" The prompt doesn't say it should be running today, but MVP plus no tests covers it.\"},{\"status\":\"stated\",\"note\":\"\\\"new small web app... running in the browser\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"React + Vite with TypeScript\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"all data stored locally in the browser\\\" and \\\"all data in localStorage\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"Support multiple habits at once.\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"Daily check-off: mark each habit done for today.\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"Streak counter per habit.\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"Simple 30-day history per habit.\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"Do not build reminders or notifications.\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"The app is dark mode by default.\\\"\"}],\"invented\":[\"Lists 'Add a habit and delete a habit' as a required feature. The user only said 'features 1, 2 and 3' without naming them, and never asked for deleting habits.\",\"Says the app goes in a new 'habit-tracker/' folder in the current working directory and that 'There is no existing code to touch.' The user said neither.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "\"for personal use: just me, no accounts or login\""
+      },
+      {
+        "status": "stated",
+        "note": "\"Speed mode is MVP... don't write tests unless I ask.\" The prompt doesn't say it should be running today, but MVP plus no tests covers it."
+      },
+      {
+        "status": "stated",
+        "note": "\"new small web app... running in the browser\""
+      },
+      {
+        "status": "stated",
+        "note": "\"React + Vite with TypeScript\""
+      },
+      {
+        "status": "stated",
+        "note": "\"all data stored locally in the browser\" and \"all data in localStorage\""
+      },
+      {
+        "status": "stated",
+        "note": "\"Support multiple habits at once.\""
+      },
+      {
+        "status": "stated",
+        "note": "\"Daily check-off: mark each habit done for today.\""
+      },
+      {
+        "status": "stated",
+        "note": "\"Streak counter per habit.\""
+      },
+      {
+        "status": "stated",
+        "note": "\"Simple 30-day history per habit.\""
+      },
+      {
+        "status": "stated",
+        "note": "\"Do not build reminders or notifications.\""
+      },
+      {
+        "status": "stated",
+        "note": "\"The app is dark mode by default.\""
+      }
+    ],
+    "invented": [
+      "Lists 'Add a habit and delete a habit' as a required feature. The user only said 'features 1, 2 and 3' without naming them, and never asked for deleting habits.",
+      "Says the app goes in a new 'habit-tracker/' folder in the current working directory and that 'There is no existing code to touch.' The user said neither."
+    ]
+  },
+  "session": "4b69337d-03aa-416e-ae13-acb77d13ebff",
+  "cost_usd": 0.036048,
+  "output_tokens": 788,
+  "denials": []
+}

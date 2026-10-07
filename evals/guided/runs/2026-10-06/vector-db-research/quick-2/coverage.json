@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Stated in the opening: keep vectors in Postgres with pgvector, or move to a dedicated vector database.\"},{\"status\":\"stated\",\"note\":\"About 5M embeddings at 1536 dimensions, growing about 1M per quarter. The 9M and 13M projections follow from that arithmetic.\"},{\"status\":\"stated\",\"note\":\"Says they already run Postgres 16 on AWS RDS.\"},{\"status\":\"stated\",\"note\":\"Budget is under $500/month (the prompt says 'for the vector solution').\"},{\"status\":\"stated\",\"note\":\"Every query must filter by tenant_id (multi-tenant).\"},{\"status\":\"stated\",\"note\":\"Narrow to at most 4 options in total, including pgvector.\"},{\"status\":\"stated\",\"note\":\"Output asks for a comparison table plus one clear recommendation.\"},{\"status\":\"stated\",\"note\":\"Prefer sources from the last 12 months, and flag older ones.\"},{\"status\":\"stated\",\"note\":\"Stage 1 is a wide survey and Stage 2 goes deep on the top 2.\"}],\"invented\":[\"Says Postgres is the 'source of truth' that a dedicated database must stay in sync with. The person never said this.\",\"Says tenant isolation matters 'as much as raw speed'. This ranking of priorities is not in the person's answers.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Stated in the opening: keep vectors in Postgres with pgvector, or move to a dedicated vector database."
+      },
+      {
+        "status": "stated",
+        "note": "About 5M embeddings at 1536 dimensions, growing about 1M per quarter. The 9M and 13M projections follow from that arithmetic."
+      },
+      {
+        "status": "stated",
+        "note": "Says they already run Postgres 16 on AWS RDS."
+      },
+      {
+        "status": "stated",
+        "note": "Budget is under $500/month (the prompt says 'for the vector solution')."
+      },
+      {
+        "status": "stated",
+        "note": "Every query must filter by tenant_id (multi-tenant)."
+      },
+      {
+        "status": "stated",
+        "note": "Narrow to at most 4 options in total, including pgvector."
+      },
+      {
+        "status": "stated",
+        "note": "Output asks for a comparison table plus one clear recommendation."
+      },
+      {
+        "status": "stated",
+        "note": "Prefer sources from the last 12 months, and flag older ones."
+      },
+      {
+        "status": "stated",
+        "note": "Stage 1 is a wide survey and Stage 2 goes deep on the top 2."
+      }
+    ],
+    "invented": [
+      "Says Postgres is the 'source of truth' that a dedicated database must stay in sync with. The person never said this.",
+      "Says tenant isolation matters 'as much as raw speed'. This ranking of priorities is not in the person's answers."
+    ]
+  },
+  "session": "65bee01f-c9db-436b-ad35-548a9be93036",
+  "cost_usd": 0.0338666,
+  "output_tokens": 724,
+  "denials": []
+}

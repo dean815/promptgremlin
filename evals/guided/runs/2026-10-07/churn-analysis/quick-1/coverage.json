@@ -1,0 +1,44 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt asks whether the July Pro price increase from 49 to 69 USD drove Pro churn, and says not to give a general overview.\"},{\"status\":\"stated\",\"note\":\"The prompt says to exclude trials (is_trial = yes).\"},{\"status\":\"stated\",\"note\":\"The prompt says to exclude QA/test accounts with emails ending in @ourco.test.\"},{\"status\":\"stated\",\"note\":\"The prompt says a row with a cancel_month is churned.\"},{\"status\":\"stated\",\"note\":\"The prompt says the result goes to the CEO and the summary is written for the CEO.\"},{\"status\":\"stated\",\"note\":\"The prompt asks for a summary of at most 5 bullets.\"},{\"status\":\"stated\",\"note\":\"The prompt asks for one suggested chart that is described, not built.\"},{\"status\":\"stated\",\"note\":\"The prompt asks how confident the conclusion is given the small sample, and adds what extra data would raise confidence.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt asks whether the July Pro price increase from 49 to 69 USD drove Pro churn, and says not to give a general overview."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to exclude trials (is_trial = yes)."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to exclude QA/test accounts with emails ending in @ourco.test."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says a row with a cancel_month is churned."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says the result goes to the CEO and the summary is written for the CEO."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks for a summary of at most 5 bullets."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks for one suggested chart that is described, not built."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks how confident the conclusion is given the small sample, and adds what extra data would raise confidence."
+      }
+    ],
+    "invented": []
+  },
+  "session": "7b500b27-3e2e-404c-94a1-ba4193e8517b",
+  "cost_usd": 0.0509786,
+  "output_tokens": 428,
+  "denials": []
+}

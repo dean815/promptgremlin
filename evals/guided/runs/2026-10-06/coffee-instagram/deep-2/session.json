@@ -1,0 +1,65 @@
+{
+  "final_prompt": "Latte with leaf latte art in a handmade ceramic cup, dark wood counter, a single autumn leaf resting on the counter, warm early-morning window light, realistic photo shot on film, film grain --ar 4:5 --raw --no people",
+  "final_reply": "You're welcome. Come back if you want the prompt adjusted after you see the result.",
+  "transcript": [
+    [
+      "person",
+      "make an image for my coffee shop's instagram, interview me first, I am not sure about the details"
+    ],
+    [
+      "tool",
+      "I'll interview you in a few rounds. Here is round 1. Suggestions are in brackets.\n\n1. **Tool.** Which image generator will you use?\n   - [GPT Image, because Instagram posts often carry text and it renders text better than most]\n   - Nano Banana\n   - Midjourney (best for stylised art, weaker on exact text)\n   - Not sure yet\n\n2. **Subject.** What should the image show, and what is the one detail that must be right?\n   - [A single hero item, such as a latte with latte art on a caf\u00e9 table, because one clear subject works best in a feed]\n   - The shop's interior or counter\n   - A seasonal drink or pastry\n   - Something else (tell me)\n\n3. **Text in the image.** Should it contain any words?\n   - [None, because you haven't given me a shop name or slogan and I won't invent one]\n   - The shop name only (give me the exact spelling)\n   - A short message, such as a promo or opening hours (give me the exact words)\n\n4. **Format and use.** Where will it be posted?\n   - [Instagram feed post at 4:5 portrait, because it takes up the most screen space in the feed]\n   - Story or Reel cover at 9:16\n   - Square 1:1\n   - Interview me more\n\nReply with numbers and changes, \"ok\" to accept all suggestions, or \"interview me\" for more detail."
+    ],
+    [
+      "person",
+      "1. Midjourney.\n2. A latte with leaf latte art in a handmade ceramic cup. \n3. None, no text or logo.\n4. Instagram feed post, 4:5 portrait. "
+    ],
+    [
+      "tool",
+      "Thanks. Round 2 covers the look of the image. The suggestions are mine, so change any that don't fit.\n\n1. **Composition.** How should the shot be framed?\n   - [Overhead or high three-quarter angle with the cup centred and a little empty space around it. Feed posts crop well that way, and the leaf art stays visible.]\n   - Close-up on the latte art, with the cup filling most of the frame\n   - Eye-level side view, with the caf\u00e9 blurred behind\n   - Wide shot with the cup on a table and the room visible\n\n2. **Style and medium.** What kind of image do you want?\n   - [Realistic photo, because you described a real handmade cup and the latte art should look real]\n   - Illustration or painterly\n   - 3D render\n\n3. **Lighting and mood.** What feeling should it give?\n   - [Soft natural window light with a warm, cozy, calm mood]\n   - Bright and airy morning\n   - Moody and dark, with a caf\u00e9-at-night feel\n\n4. **Palette and surface.** What colors and surface should it have?\n   - [Warm neutrals: cream, caramel, and the ceramic's glaze color. The surface is a plain wood table.]\n   - Pastel\n   - Bold and colorful\n   - Tell me the cup's glaze color and the table material\n\nOther details I'd still like to know are anything to avoid (people, hands, steam, props like beans or pastries) and how many variations you want. Reply with numbers and changes, \"ok\" to accept all suggestions, or tell me the glaze color and any props in your own words."
+    ],
+    [
+      "person",
+      "1. No preference on the framing.\n2. I want a film-photo look, so a realistic photo that looks shot on film.\n3. Warm early-morning window light.\n4. The surface is a dark wood counter. I have no preference on the glaze color. The only prop is a single autumn leaf on the counter.\n\nFor things to avoid: no people. I have no preference on the number of variations."
+    ],
+    [
+      "tool",
+      "```\nLatte with leaf latte art in a handmade ceramic cup, dark wood counter, a single autumn leaf resting on the counter, warm early-morning window light, realistic photo shot on film, film grain --ar 4:5 --raw --no people\n```\n\n**Follow-ups**\nIf the result misses, change these first:\n- **Plastic or over-styled look:** lower `--stylize`, for example `--s 50`. You can also swap \"realistic photo shot on film\" for a named stock such as \"Kodak Portra 400 photo\".\n- **Latte art unclear, or the leaf design is wrong:** put the cup first and tighten it to \"latte with a clear leaf-shaped rosetta pour in a handmade ceramic cup\".\n- **Extra props or several leaves:** add `autumn leaf` to `--no` as a count fix, or write \"one single maple leaf\" with the species you want.\n\n**Confirmed / Defaults**\n- Confirmed: Midjourney, 4:5 Instagram feed, latte with leaf latte art in a handmade ceramic cup, no text or logo, realistic film-photo look, warm early-morning window light, dark wood counter with one autumn leaf as the only prop, no people.\n- Defaults (not confirmed, each correctable in one reply):\n  - Composition is left to Midjourney. Tell me if you want a close-up, overhead or side-on shot.\n  - Glaze color is left open.\n  - `--raw` is added for a less stylized, more photographic result.\n  - The version is left at Midjourney's default, V8.2.\n  - Variations are left open, so one prompt covers it.\n\n**Changes**\n- `--raw` is added because V8.2 defaults to a bolder, edgier look, and `--raw` reduces that for a natural film feel.\n- \"No people\" goes into `--no people` at the end instead of the description, since naming an unwanted thing in the text can make it appear.\n- Descriptors run subject and medium first, then setting, props, light and look. Parameters come last in the exact syntax.\n\nI can sharpen the prompt further if you'd like. For example, I can lock in a composition or glaze color."
+    ],
+    [
+      "person",
+      "This looks good to me. I have no preference on composition, glaze color, or variations, so the defaults are fine. Thanks."
+    ],
+    [
+      "tool",
+      "You're welcome. The prompt above is final, and the defaults you accepted stay as they are. Paste it into Midjourney as written. If the first result misses, start with the follow-ups listed under the prompt."
+    ],
+    [
+      "person",
+      "Thanks, that's all I needed. I'll paste it into Midjourney now."
+    ],
+    [
+      "tool",
+      "Sounds good. Enjoy the coffee shop post!"
+    ],
+    [
+      "person",
+      "Thanks, will do."
+    ],
+    [
+      "tool",
+      "Good luck with it!"
+    ],
+    [
+      "person",
+      "Thanks, that's everything."
+    ],
+    [
+      "tool",
+      "You're welcome. Come back if you want the prompt adjusted after you see the result."
+    ]
+  ],
+  "rounds": 6,
+  "cost_usd": 0.7350645999999998,
+  "session": "cea8d8c4-fe0e-4526-93ce-ea3884f6cabc"
+}

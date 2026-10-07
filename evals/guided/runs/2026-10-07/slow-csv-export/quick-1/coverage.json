@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Says exports can reach about 2 million rows, so memory use matters as well as speed.\"},{\"status\":\"stated\",\"note\":\"Keeps the signature export_orders_csv(db, path). It leaves out why (three callers), but the requirement itself is there.\"},{\"status\":\"stated\",\"note\":\"Keeps the header exactly as id,customer_name,total,created_at with the same column order.\"},{\"status\":\"stated\",\"note\":\"Says to add no new dependencies, and adds that the standard library is fine.\"},{\"status\":\"stated\",\"note\":\"Names the per-row customer lookup (N+1) as the main cause. It's framed as the person's diagnosis to confirm, which fits what they said.\"},{\"status\":\"stated\",\"note\":\"Says to write rows to the file as they're produced instead of building one big string.\"},{\"status\":\"stated\",\"note\":\"Says customer names can contain commas, so values must be CSV-quoted, and calls this a deliberate output change.\"},{\"status\":\"stated\",\"note\":\"Says to verify by running the existing tests in tests/test_export.py and showing the command and its output.\"},{\"status\":\"stated\",\"note\":\"Asks for a minimal, targeted change and says not to restructure the module.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Says exports can reach about 2 million rows, so memory use matters as well as speed."
+      },
+      {
+        "status": "stated",
+        "note": "Keeps the signature export_orders_csv(db, path). It leaves out why (three callers), but the requirement itself is there."
+      },
+      {
+        "status": "stated",
+        "note": "Keeps the header exactly as id,customer_name,total,created_at with the same column order."
+      },
+      {
+        "status": "stated",
+        "note": "Says to add no new dependencies, and adds that the standard library is fine."
+      },
+      {
+        "status": "stated",
+        "note": "Names the per-row customer lookup (N+1) as the main cause. It's framed as the person's diagnosis to confirm, which fits what they said."
+      },
+      {
+        "status": "stated",
+        "note": "Says to write rows to the file as they're produced instead of building one big string."
+      },
+      {
+        "status": "stated",
+        "note": "Says customer names can contain commas, so values must be CSV-quoted, and calls this a deliberate output change."
+      },
+      {
+        "status": "stated",
+        "note": "Says to verify by running the existing tests in tests/test_export.py and showing the command and its output."
+      },
+      {
+        "status": "stated",
+        "note": "Asks for a minimal, targeted change and says not to restructure the module."
+      }
+    ],
+    "invented": []
+  },
+  "session": "888b5c4c-3cb7-41c4-b3e7-e26f935308a6",
+  "cost_usd": 0.034190599999999995,
+  "output_tokens": 763,
+  "denials": []
+}

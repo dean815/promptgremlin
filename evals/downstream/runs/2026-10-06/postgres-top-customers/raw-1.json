@@ -1,0 +1,9 @@
+{
+  "text": "```sql\nSELECT\n    c.id,\n    c.name,\n    c.email,\n    SUM(oi.quantity * oi.unit_price_cents) / 100.0 AS revenue\nFROM customers c\nJOIN orders o       ON o.customer_id = c.id\nJOIN order_items oi ON oi.order_id = o.id\nWHERE o.created_at >= now() - interval '90 days'\n  AND o.status = 'paid'\nGROUP BY c.id, c.name, c.email\nORDER BY revenue DESC\nLIMIT 5;\n```\n\nNotes:\n\n- **Excluding refunds:** I used `status = 'paid'`, which also excludes cancelled orders (which shouldn't count as revenue anyway). If you only want to drop refunded ones, use `o.status <> 'refunded'`, but that would include cancelled orders.\n- **Revenue units:** `unit_price_cents` is an integer, so the sum is done in cents and divided by `100.0` for a numeric dollar amount. Drop the division if you'd rather keep cents.\n- **Window:** `now() - interval '90 days'` is a rolling 90 days from the current moment. For a calendar-day boundary, use `date_trunc('day', now()) - interval '90 days'`.\n- **Ties:** add `c.id` as a secondary sort key (`ORDER BY revenue DESC, c.id`) if you need deterministic results.\n- **Performance:** an index on `orders(created_at)` (or `orders(status, created_at)`) and one on `order_items(order_id)` will help on large tables.",
+  "structured": null,
+  "cost_usd": 0.008774,
+  "tokens": 1404,
+  "output_tokens": 527,
+  "denials": [],
+  "sent": "write a postgres query for the top 5 customers by revenue in the last 90 days, excluding refunded orders. schema below\n\ncustomers(id bigint pk, name text, email text)\norders(id bigint pk, customer_id bigint fk -> customers.id, created_at timestamptz, status text -- one of 'paid','refunded','cancelled')\norder_items(id bigint pk, order_id bigint fk -> orders.id, quantity int, unit_price_cents int)"
+}

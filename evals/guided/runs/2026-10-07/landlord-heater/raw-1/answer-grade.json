@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"not_met\",\"note\":\"Uses placeholder '[Landlord's Name]' instead of Ms. Alvarez.\"},{\"status\":\"not_met\",\"note\":\"Uses placeholder '[address/unit number]' instead of Apartment 4B.\"},{\"status\":\"not_met\",\"note\":\"Uses '[date]' placeholder; October 2 not stated.\"},{\"status\":\"not_met\",\"note\":\"The October 3 phone report and lack of response are absent from the email; only an optional tip mentions it, with the wrong example date (10/1).\"},{\"status\":\"not_met\",\"note\":\"Only says 'with temperatures dropping'; overnight temperatures in the 40s \u00b0F not mentioned.\"},{\"status\":\"not_met\",\"note\":\"Email asks for repair 'as soon as possible'; a 24\u201348 hour window appears only in an optional tip, not in the email.\"},{\"status\":\"not_met\",\"note\":\"No mention of the lease or section 12 requiring heat.\"},{\"status\":\"not_met\",\"note\":\"Tone is polite but soft, not firm; the answer even offers to make it 'firmer' afterward.\"},{\"status\":\"met\",\"note\":\"No threat to withhold rent.\"},{\"status\":\"met\",\"note\":\"Email itself is roughly 140\u2013150 words including placeholder text, so borderline; the full response with tips is well over 150.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "not_met",
+        "note": "Uses placeholder '[Landlord's Name]' instead of Ms. Alvarez."
+      },
+      {
+        "status": "not_met",
+        "note": "Uses placeholder '[address/unit number]' instead of Apartment 4B."
+      },
+      {
+        "status": "not_met",
+        "note": "Uses '[date]' placeholder; October 2 not stated."
+      },
+      {
+        "status": "not_met",
+        "note": "The October 3 phone report and lack of response are absent from the email; only an optional tip mentions it, with the wrong example date (10/1)."
+      },
+      {
+        "status": "not_met",
+        "note": "Only says 'with temperatures dropping'; overnight temperatures in the 40s \u00b0F not mentioned."
+      },
+      {
+        "status": "not_met",
+        "note": "Email asks for repair 'as soon as possible'; a 24\u201348 hour window appears only in an optional tip, not in the email."
+      },
+      {
+        "status": "not_met",
+        "note": "No mention of the lease or section 12 requiring heat."
+      },
+      {
+        "status": "not_met",
+        "note": "Tone is polite but soft, not firm; the answer even offers to make it 'firmer' afterward."
+      },
+      {
+        "status": "met",
+        "note": "No threat to withhold rent."
+      },
+      {
+        "status": "met",
+        "note": "Email itself is roughly 140\u2013150 words including placeholder text, so borderline; the full response with tips is well over 150."
+      }
+    ]
+  },
+  "session": "22e5fc6e-a6fa-422f-b5f3-f8ff975d8c00",
+  "cost_usd": 0.041941000000000006,
+  "output_tokens": 1510,
+  "denials": []
+}

@@ -1,0 +1,27 @@
+{
+  "text": "{\"dropped\":[],\"added_harmful\":[\"Turns 'big on food' into 'food is the main reason I'm going' and says to plan meals first and fit everything else around them. That overstates what the user said and could squeeze out non-food sightseeing.\",\"Makes up a statement from the user: 'I'll check hours and reservations myself.'\"],\"added_neutral\":[\"Treats the trip as 3 full days.\",\"Says to expect cool weather, fall colours and shorter daylight in October, put outdoor activities in the daytime, and give a rainy-day swap for each day.\",\"Defines mid-range as mostly casual and mid-priced restaurants with at most one splurge meal.\",\"Asks for cheap local classics by name: bagels, smoked meat, poutine and market food.\",\"Asks for a rough price range for each meal.\",\"Asks for a mix of Montreal specialties and the current restaurant scene, including markets, bakeries and at least one evening in a bar or restaurant neighbourhood.\",\"Sets the format: a short overview, then morning, afternoon and evening for each day, with named places, what to order and the neighbourhood.\",\"Asks for each day's stops to be grouped by neighbourhood, with walking or transit times between them.\",\"Asks for a closing list of things to book ahead and October closures or seasonal quirks to check.\",\"Asks it to recommend only places it's confident exist and to flag any it's unsure about.\",\"Asks for no follow-up questions, any assumptions stated at the top, and to stop after the final list.\"]}",
+  "structured": {
+    "dropped": [],
+    "added_harmful": [
+      "Turns 'big on food' into 'food is the main reason I'm going' and says to plan meals first and fit everything else around them. That overstates what the user said and could squeeze out non-food sightseeing.",
+      "Makes up a statement from the user: 'I'll check hours and reservations myself.'"
+    ],
+    "added_neutral": [
+      "Treats the trip as 3 full days.",
+      "Says to expect cool weather, fall colours and shorter daylight in October, put outdoor activities in the daytime, and give a rainy-day swap for each day.",
+      "Defines mid-range as mostly casual and mid-priced restaurants with at most one splurge meal.",
+      "Asks for cheap local classics by name: bagels, smoked meat, poutine and market food.",
+      "Asks for a rough price range for each meal.",
+      "Asks for a mix of Montreal specialties and the current restaurant scene, including markets, bakeries and at least one evening in a bar or restaurant neighbourhood.",
+      "Sets the format: a short overview, then morning, afternoon and evening for each day, with named places, what to order and the neighbourhood.",
+      "Asks for each day's stops to be grouped by neighbourhood, with walking or transit times between them.",
+      "Asks for a closing list of things to book ahead and October closures or seasonal quirks to check.",
+      "Asks it to recommend only places it's confident exist and to flag any it's unsure about.",
+      "Asks for no follow-up questions, any assumptions stated at the top, and to stop after the final list."
+    ]
+  },
+  "cost_usd": 0.031330000000000004,
+  "tokens": 3048,
+  "output_tokens": 989,
+  "denials": []
+}

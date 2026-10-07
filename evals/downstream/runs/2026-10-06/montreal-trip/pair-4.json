@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"A\",\"reason\":\"A is the better fit. It builds each day around food, with specific orders, addresses and per-person prices. It groups stops by neighbourhood with travel times and makes Joe Beef a clearly labelled splurge with cheaper backups, which keeps it mid-budget. It also covers October well: sunset times, rain swaps, market stalls shrinking in the cold, and the October 12 Thanksgiving closures. B has a useful budget table and tips, but its days zigzag more (e.g., Day 3), it puts the pricey Au Pied de Cochon on Day 1, and it has a couple of doubtful details (Satay Brothers' location, La Banquise open 24 hours).\"}",
+  "structured": {
+    "winner": "A",
+    "reason": "A is the better fit. It builds each day around food, with specific orders, addresses and per-person prices. It groups stops by neighbourhood with travel times and makes Joe Beef a clearly labelled splurge with cheaper backups, which keeps it mid-budget. It also covers October well: sunset times, rain swaps, market stalls shrinking in the cold, and the October 12 Thanksgiving closures. B has a useful budget table and tips, but its days zigzag more (e.g., Day 3), it puts the pricey Au Pied de Cochon on Day 1, and it has a couple of doubtful details (Satay Brothers' location, La Banquise open 24 hours)."
+  },
+  "cost_usd": 0.069552,
+  "tokens": 6817,
+  "output_tokens": 1252,
+  "denials": [],
+  "winner_arm": "rewritten"
+}

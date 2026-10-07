@@ -1,0 +1,8 @@
+{
+  "text": "**Subject:** Heater repair needed \u2013 [unit/address]\n\nHi [landlord name],\n\nI'm writing to let you know that the heater in my unit, [unit/address], has been [not working at all / not producing heat / making noise] since [date]. [e.g. I've checked the thermostat and breaker, but it hasn't helped / I haven't tried anything yet.]\n\nWith heating season underway, this is affecting the livability of the home, so I'd appreciate getting it fixed soon. Could you arrange a repair or send a technician within the next few days? Please let me know by [reply-by date] when you expect someone to come.\n\nI'm available for access on [days/times], and I'm happy to work around the technician's schedule as well.\n\nThank you for your help. I appreciate your quick attention to this.\n\nBest regards,\n[my name]\n[unit/address]\n\nBlanks to fill in: [landlord name], [my name], [unit/address], the heater problem, [date], what you've tried, [reply-by date], and [days/times] for access.",
+  "structured": null,
+  "session": "31c8a483-b300-4c37-92bd-e2cbc6cea6ac",
+  "cost_usd": 0.00782,
+  "output_tokens": 328,
+  "denials": []
+}

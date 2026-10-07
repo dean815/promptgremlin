@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"The answer has exactly five bullet points.\"},{\"pass\":true,\"note\":\"The answer never names Acme Fastening. It calls the competitor \\\"A rival.\\\" HomeMax is named, but it is a customer, not a competitor.\"},{\"pass\":true,\"note\":\"The first bullet covers the 61% revenue concentration in two big-box retailers and HomeMax's non-renewal ahead of its Q1 expiry.\"},{\"pass\":true,\"note\":\"Bullet 2 covers the margin drop from 42% to 38% caused by steel costs. Bullet 3 links it to the covenant: margin must stay above 36%, leaving a 2-point cushion before the December renewal.\"},{\"pass\":true,\"note\":\"Every figure comes from the report. The '2-point cushion' is calculated correctly from 38% and 36%. The comments that the price cut threatens volume and margin and limits passing through steel costs are reasonable inferences, not made-up numbers.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "The answer has exactly five bullet points."
+      },
+      {
+        "pass": true,
+        "note": "The answer never names Acme Fastening. It calls the competitor \"A rival.\" HomeMax is named, but it is a customer, not a competitor."
+      },
+      {
+        "pass": true,
+        "note": "The first bullet covers the 61% revenue concentration in two big-box retailers and HomeMax's non-renewal ahead of its Q1 expiry."
+      },
+      {
+        "pass": true,
+        "note": "Bullet 2 covers the margin drop from 42% to 38% caused by steel costs. Bullet 3 links it to the covenant: margin must stay above 36%, leaving a 2-point cushion before the December renewal."
+      },
+      {
+        "pass": true,
+        "note": "Every figure comes from the report. The '2-point cushion' is calculated correctly from 38% and 36%. The comments that the price cut threatens volume and margin and limits passing through steel costs are reasonable inferences, not made-up numbers."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0237808,
+  "tokens": 2670,
+  "output_tokens": 582,
+  "denials": []
+}

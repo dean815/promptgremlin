@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"There are exactly two paragraphs, and each is short: two to three sentences.\"},{\"pass\":true,\"note\":\"It says \\\"pop it in the dishwasher when you're done\\\", which clearly tells buyers it's dishwasher safe.\"},{\"pass\":true,\"note\":\"It says \\\"please keep it out of the microwave\\\", which clearly tells buyers not to microwave it.\"},{\"pass\":true,\"note\":\"It mentions only ceramic and handmade, both of which the user gave. It invents no clay type, glaze, color, dimensions or capacity. The line \\\"shaped by hand\\\" is a reasonable restatement of handmade.\"},{\"pass\":true,\"note\":\"It's warm and could be pasted straight into a listing. It's fairly generic and light on specifics, but that follows from being told not to invent details.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "There are exactly two paragraphs, and each is short: two to three sentences."
+      },
+      {
+        "pass": true,
+        "note": "It says \"pop it in the dishwasher when you're done\", which clearly tells buyers it's dishwasher safe."
+      },
+      {
+        "pass": true,
+        "note": "It says \"please keep it out of the microwave\", which clearly tells buyers not to microwave it."
+      },
+      {
+        "pass": true,
+        "note": "It mentions only ceramic and handmade, both of which the user gave. It invents no clay type, glaze, color, dimensions or capacity. The line \"shaped by hand\" is a reasonable restatement of handmade."
+      },
+      {
+        "pass": true,
+        "note": "It's warm and could be pasted straight into a listing. It's fairly generic and light on specifics, but that follows from being told not to invent details."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0205488,
+  "tokens": 2278,
+  "output_tokens": 574,
+  "denials": []
+}

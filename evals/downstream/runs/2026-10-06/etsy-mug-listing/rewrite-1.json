@@ -1,0 +1,17 @@
+{
+  "text": "```\nI'm listing a handmade ceramic mug on Etsy and need the description text, which shoppers will read on the listing page. Write a short description in exactly 2 short paragraphs of plain flowing prose, in a warm, friendly voice that suits a handmade shop. Mention that the mug is handmade and ceramic, and that it is dishwasher safe but not microwave safe. Use only those facts: I haven't given you the size, materials, glaze, color, capacity or any other details, so don't invent or imply any, because buyers would rely on them. Reply with the two paragraphs only, with no title, preamble, or notes after them.\n```\nEffort: not settable here (claude.ai has no effort control). It's a one-reply task, so the default is fine.\n\n**Assumptions**\n- Target is claude.ai chat, with no model named. I used the family-wide notes.\n- The tone (\"warm, friendly, handmade shop\") is my inference from \"Etsy listing\". Tell me if you want something different.\n- No shop name, product name, or other specifics were given, so the prompt uses none.\n\n**Changes**\n- It opens with the situation and where the text will be used, and states the reason for the no-invention rule. (best-practices: Add context to improve performance)\n- It says what to produce (\"two paragraphs of plain flowing prose\") instead of listing things to avoid. (best-practices: Control the format of responses)\n- It ends with a stop condition, \"the two paragraphs only\", and asks for no reasoning. (best-practices: Be clear and direct)\n\n**Guidance:** cached 2026-10-06 13:10. The guidance script's header named claude-fable-5-1 as the flagship, and I used the family-wide notes. No flags.",
+  "structured": null,
+  "cost_usd": 0.0324762,
+  "tokens": 28283,
+  "output_tokens": 1012,
+  "denials": [
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_014WZ3cykpBDC3LNq1deeaKn",
+      "tool_input": {
+        "command": "cat /tmp/pgbench/config.json; python3 '/tmp/pgbench/plugin/skills/promptgremlin/scripts/guidance.py' --target 'claude' 2>&1 | head -150"
+      }
+    }
+  ],
+  "prompt": "I'm listing a handmade ceramic mug on Etsy and need the description text, which shoppers will read on the listing page. Write a short description in exactly 2 short paragraphs of plain flowing prose, in a warm, friendly voice that suits a handmade shop. Mention that the mug is handmade and ceramic, and that it is dishwasher safe but not microwave safe. Use only those facts: I haven't given you the size, materials, glaze, color, capacity or any other details, so don't invent or imply any, because buyers would rely on them. Reply with the two paragraphs only, with no title, preamble, or notes after them."
+}

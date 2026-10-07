@@ -1,0 +1,44 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"Prompt does not say the product is a B2B note-taking app.\"},{\"status\":\"missing\",\"note\":\"Prompt does not say the readers are engineering and design leads or that this is for a kickoff.\"},{\"status\":\"missing\",\"note\":\"Prompt does not give the v1 scope: creating a workspace, inviting members by email, and shared notes.\"},{\"status\":\"missing\",\"note\":\"Prompt does not say v1 has only two roles, admin and member.\"},{\"status\":\"missing\",\"note\":\"Prompt does not list what is out of scope for v1: billing changes, SSO, and guest access.\"},{\"status\":\"missing\",\"note\":\"Prompt does not give the success metric: 20% of paid accounts create a workspace within 60 days.\"},{\"status\":\"missing\",\"note\":\"Prompt does not set the length limit of about 2 pages.\"},{\"status\":\"missing\",\"note\":\"Prompt does not say to leave migration of existing shared notes as an open question.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "Prompt does not say the product is a B2B note-taking app."
+      },
+      {
+        "status": "missing",
+        "note": "Prompt does not say the readers are engineering and design leads or that this is for a kickoff."
+      },
+      {
+        "status": "missing",
+        "note": "Prompt does not give the v1 scope: creating a workspace, inviting members by email, and shared notes."
+      },
+      {
+        "status": "missing",
+        "note": "Prompt does not say v1 has only two roles, admin and member."
+      },
+      {
+        "status": "missing",
+        "note": "Prompt does not list what is out of scope for v1: billing changes, SSO, and guest access."
+      },
+      {
+        "status": "missing",
+        "note": "Prompt does not give the success metric: 20% of paid accounts create a workspace within 60 days."
+      },
+      {
+        "status": "missing",
+        "note": "Prompt does not set the length limit of about 2 pages."
+      },
+      {
+        "status": "missing",
+        "note": "Prompt does not say to leave migration of existing shared notes as an open question."
+      }
+    ],
+    "invented": []
+  },
+  "session": "a34af730-cb64-428b-bf20-7c5920c97dd8",
+  "cost_usd": 0.016806599999999998,
+  "output_tokens": 381,
+  "denials": []
+}

@@ -1,0 +1,43 @@
+{
+  "text": "{\"items\":[{\"status\":\"not_met\",\"note\":\"The PRD only calls it a \\\"note-taking app\\\" and never says B2B. It also lists \\\"Who are the intended users... (Not provided)\\\" as an open question, which means the given B2B context wasn't used.\"},{\"status\":\"met\",\"note\":\"The Overview says the document is for engineering and design leads deciding whether v1 scope is clear enough to start work, which fits a kickoff.\"},{\"status\":\"met\",\"note\":\"Workspace creation, inviting members by email, and shared notes are all in the In v1 scope list, and each has its own requirements section.\"},{\"status\":\"met\",\"note\":\"v1 has only admin and member. Requirement 18 says explicitly that no other roles exist in v1.\"},{\"status\":\"met\",\"note\":\"Billing changes, SSO, and guest access are listed under Out of v1.\"},{\"status\":\"met\",\"note\":\"The primary target is stated exactly: 20% of paid accounts create a workspace within 60 days. The secondary metrics are clearly marked as proposed.\"},{\"status\":\"met\",\"note\":\"At roughly 1,000\u20131,100 words in compact sections, it's about 2 pages.\"},{\"status\":\"met\",\"note\":\"Migration is marked as an open question in both Scope and Section 7, with considerations listed and no decision made. The requirements are written so they don't assume an answer.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "not_met",
+        "note": "The PRD only calls it a \"note-taking app\" and never says B2B. It also lists \"Who are the intended users... (Not provided)\" as an open question, which means the given B2B context wasn't used."
+      },
+      {
+        "status": "met",
+        "note": "The Overview says the document is for engineering and design leads deciding whether v1 scope is clear enough to start work, which fits a kickoff."
+      },
+      {
+        "status": "met",
+        "note": "Workspace creation, inviting members by email, and shared notes are all in the In v1 scope list, and each has its own requirements section."
+      },
+      {
+        "status": "met",
+        "note": "v1 has only admin and member. Requirement 18 says explicitly that no other roles exist in v1."
+      },
+      {
+        "status": "met",
+        "note": "Billing changes, SSO, and guest access are listed under Out of v1."
+      },
+      {
+        "status": "met",
+        "note": "The primary target is stated exactly: 20% of paid accounts create a workspace within 60 days. The secondary metrics are clearly marked as proposed."
+      },
+      {
+        "status": "met",
+        "note": "At roughly 1,000\u20131,100 words in compact sections, it's about 2 pages."
+      },
+      {
+        "status": "met",
+        "note": "Migration is marked as an open question in both Scope and Section 7, with considerations listed and no decision made. The requirements are written so they don't assume an answer."
+      }
+    ]
+  },
+  "session": "aa873ff5-9e34-48ca-ab1f-cda0fac52b92",
+  "cost_usd": 0.040305,
+  "output_tokens": 903,
+  "denials": []
+}

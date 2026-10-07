@@ -1,0 +1,40 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"By my count the post is about 172 words, which is inside the 120\u2013180 range. It runs a bit over the ~150 target but is still within it.\"},{\"pass\":true,\"note\":\"Paragraph two mentions 'the buildbot dashboard' by name. It never says what happened to it, though: whether it was carried over, rebuilt or dropped.\"},{\"pass\":true,\"note\":\"No hashtags anywhere.\"},{\"pass\":true,\"note\":\"No emojis anywhere.\"},{\"pass\":true,\"note\":\"Ends with: 'what's the one thing the old setup was doing that you didn't realize until it was gone?'\"},{\"pass\":true,\"note\":\"None of the listed stock phrases appear, and the tone is plain and conversational. The 'less about the new tool than about...' line is a slightly formulaic pattern, but it isn't one of the flagged phrases.\"}],\"unasked_content\":[\"The buildbot dashboard is mentioned but its outcome is never given. The post asks 'carry it over, rebuild it, or let it go?' and doesn't answer, so the detail the user asked for comes across as filler instead of a real story.\",\"The post was supposed to be about 'what we learned', but it has no concrete lessons. There are no specifics about the new provider, no problems hit, and no results. That makes it feel generic, which weakens the 'sounds like a person' goal.\",\"Hedging, vague lines like 'one of those moments', 'That's probably the main thing' and 'It was just a thing that needed doing' fill space without giving any real content.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "By my count the post is about 172 words, which is inside the 120\u2013180 range. It runs a bit over the ~150 target but is still within it."
+      },
+      {
+        "pass": true,
+        "note": "Paragraph two mentions 'the buildbot dashboard' by name. It never says what happened to it, though: whether it was carried over, rebuilt or dropped."
+      },
+      {
+        "pass": true,
+        "note": "No hashtags anywhere."
+      },
+      {
+        "pass": true,
+        "note": "No emojis anywhere."
+      },
+      {
+        "pass": true,
+        "note": "Ends with: 'what's the one thing the old setup was doing that you didn't realize until it was gone?'"
+      },
+      {
+        "pass": true,
+        "note": "None of the listed stock phrases appear, and the tone is plain and conversational. The 'less about the new tool than about...' line is a slightly formulaic pattern, but it isn't one of the flagged phrases."
+      }
+    ],
+    "unasked_content": [
+      "The buildbot dashboard is mentioned but its outcome is never given. The post asks 'carry it over, rebuild it, or let it go?' and doesn't answer, so the detail the user asked for comes across as filler instead of a real story.",
+      "The post was supposed to be about 'what we learned', but it has no concrete lessons. There are no specifics about the new provider, no problems hit, and no results. That makes it feel generic, which weakens the 'sounds like a person' goal.",
+      "Hedging, vague lines like 'one of those moments', 'That's probably the main thing' and 'It was just a thing that needed doing' fill space without giving any real content."
+    ]
+  },
+  "cost_usd": 0.0437728,
+  "tokens": 3549,
+  "output_tokens": 1662,
+  "denials": []
+}

@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never says the real question is whether the July Pro price increase from 49 to 69 drove Pro churn. It frames the task as finding out what drives churn in general. The two Pro prices come up only as a data-quality check, and the July timing of the increase is never mentioned.\"},{\"status\":\"stated\",\"note\":\"Trial rows are to be reported separately as a conversion failure, not paid churn. The main metrics use the 'cleaned paid-customer set', so trials are effectively excluded.\"},{\"status\":\"stated\",\"note\":\"The prompt says to exclude @ourco.test accounts from customer churn.\"},{\"status\":\"stated\",\"note\":\"The prompt says an empty cancel_month means still active, so an account with a cancel_month counts as churned.\"},{\"status\":\"contradicted\",\"note\":\"The prompt names the finance/growth team as the audience, not the CEO.\"},{\"status\":\"contradicted\",\"note\":\"Instead of at most 5 bullets, the prompt asks for a summary paragraph, several compact tables and a findings section.\"},{\"status\":\"missing\",\"note\":\"The prompt does not ask for a suggested chart.\"},{\"status\":\"missing\",\"note\":\"The prompt only asks to flag cohorts of 3 or fewer as anecdotal and to say what couldn't be determined. It never asks for an overall confidence level for the conclusion given the small sample.\"}],\"invented\":[\"The finance/growth team needs to know what is driving subscriber churn\",\"This CSV is the only source\",\"Cancellations look concentrated in recent months, and there is concern that this is a data artifact rather than real churn\",\"'Before anyone acts on it' (implies a pending decision that the person never mentioned)\",\"Specific data facts: the column list, 60 rows, signups from 2026-03 to 2026-07, cancellations through 2026-09\",\"Trial rows have price 0 and cancel after one month\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never says the real question is whether the July Pro price increase from 49 to 69 drove Pro churn. It frames the task as finding out what drives churn in general. The two Pro prices come up only as a data-quality check, and the July timing of the increase is never mentioned."
+      },
+      {
+        "status": "stated",
+        "note": "Trial rows are to be reported separately as a conversion failure, not paid churn. The main metrics use the 'cleaned paid-customer set', so trials are effectively excluded."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to exclude @ourco.test accounts from customer churn."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says an empty cancel_month means still active, so an account with a cancel_month counts as churned."
+      },
+      {
+        "status": "contradicted",
+        "note": "The prompt names the finance/growth team as the audience, not the CEO."
+      },
+      {
+        "status": "contradicted",
+        "note": "Instead of at most 5 bullets, the prompt asks for a summary paragraph, several compact tables and a findings section."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt does not ask for a suggested chart."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt only asks to flag cohorts of 3 or fewer as anecdotal and to say what couldn't be determined. It never asks for an overall confidence level for the conclusion given the small sample."
+      }
+    ],
+    "invented": [
+      "The finance/growth team needs to know what is driving subscriber churn",
+      "This CSV is the only source",
+      "Cancellations look concentrated in recent months, and there is concern that this is a data artifact rather than real churn",
+      "'Before anyone acts on it' (implies a pending decision that the person never mentioned)",
+      "Specific data facts: the column list, 60 rows, signups from 2026-03 to 2026-07, cancellations through 2026-09",
+      "Trial rows have price 0 and cancel after one month"
+    ]
+  },
+  "session": "7938afd3-fe31-4bba-92ec-8c729f8b35a4",
+  "cost_usd": 0.0417066,
+  "output_tokens": 1340,
+  "denials": []
+}

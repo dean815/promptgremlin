@@ -1,0 +1,9 @@
+{
+  "text": "- **Customer concentration and contract risk:** Two big-box retailers account for 61% of revenue, and one of them, HomeMax, has not renewed its contract, which expires in Q1.\n- **Margin compression:** Gross margin dropped to 38% from 42% as steel input costs rose 15%, and Q3 revenue of $41.2M missed the $43M plan.\n- **Credit facility and covenant risk:** The $20M revolving credit line renews in December, and the covenant requires margin above 36%, leaving only a 2-point cushion on a declining trend.\n- **Competitive pricing pressure:** A rival cut prices 10% in our core category in August, which threatens both volume and margin and limits our ability to pass through steel cost increases.\n- **Operational execution and working capital:** The ERP migration is 4 months late and $1.1M over budget, while inventory has risen to 140 days on hand, tying up cash.",
+  "structured": null,
+  "cost_usd": 0.006902,
+  "tokens": 1269,
+  "output_tokens": 305,
+  "denials": [],
+  "sent": "read this quarterly report summary and list the top risks in exactly 5 bullet points. never mention competitors by name\n\nQ3 summary, Northwind Tools\nRevenue $41.2M (+6% QoQ), below the $43M plan. Gross margin fell to 38% from 42% as steel input costs rose 15%. 61% of revenue comes from two big-box retail customers; one of them, HomeMax, has not renewed its contract, which expires in Q1. Inventory rose to 140 days on hand. Acme Fastening cut prices 10% in our core category in August. The ERP migration is 4 months late and $1.1M over budget. Headcount is flat. A $20M revolving credit line renews in December; the covenant requires margin above 36%."
+}

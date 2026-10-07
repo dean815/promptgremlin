@@ -1,0 +1,43 @@
+{
+  "text": "{\"items\":[{\"status\":\"not_met\",\"note\":\"The PRD is generic. It says it has no product details, never mentions note-taking, and even asks whether the product is B2B or consumer.\"},{\"status\":\"not_met\",\"note\":\"Nothing is aimed at engineering and design leads or framed for a kickoff. It's a general all-audience PRD.\"},{\"status\":\"not_met\",\"note\":\"It covers workspace creation and email invites, but 'shared notes' becomes generic 'resources'. v1 is also padded with billing, migration, invite links and more.\"},{\"status\":\"not_met\",\"note\":\"It defines four roles (Owner, Admin, Member, Viewer/Guest) instead of only admin and member.\"},{\"status\":\"not_met\",\"note\":\"SSO is a non-goal, but billing changes are in v1 scope (section 6.6, P0 workspace billing) and guest/viewer access is included.\"},{\"status\":\"not_met\",\"note\":\"The metric is '% of active users in \u22651 workspace: 20% at 90 days'. It should be 20% of paid accounts creating a workspace within 60 days.\"},{\"status\":\"not_met\",\"note\":\"The document has 15 sections plus tables, far longer than about 2 pages.\"},{\"status\":\"not_met\",\"note\":\"Migration is a P0 requirement (6.4) with a rollout plan, not an open question. It isn't listed in the Open Questions section.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "not_met",
+        "note": "The PRD is generic. It says it has no product details, never mentions note-taking, and even asks whether the product is B2B or consumer."
+      },
+      {
+        "status": "not_met",
+        "note": "Nothing is aimed at engineering and design leads or framed for a kickoff. It's a general all-audience PRD."
+      },
+      {
+        "status": "not_met",
+        "note": "It covers workspace creation and email invites, but 'shared notes' becomes generic 'resources'. v1 is also padded with billing, migration, invite links and more."
+      },
+      {
+        "status": "not_met",
+        "note": "It defines four roles (Owner, Admin, Member, Viewer/Guest) instead of only admin and member."
+      },
+      {
+        "status": "not_met",
+        "note": "SSO is a non-goal, but billing changes are in v1 scope (section 6.6, P0 workspace billing) and guest/viewer access is included."
+      },
+      {
+        "status": "not_met",
+        "note": "The metric is '% of active users in \u22651 workspace: 20% at 90 days'. It should be 20% of paid accounts creating a workspace within 60 days."
+      },
+      {
+        "status": "not_met",
+        "note": "The document has 15 sections plus tables, far longer than about 2 pages."
+      },
+      {
+        "status": "not_met",
+        "note": "Migration is a P0 requirement (6.4) with a rollout plan, not an open question. It isn't listed in the Open Questions section."
+      }
+    ]
+  },
+  "session": "c7481a52-bafb-4657-b86c-275b0badb94b",
+  "cost_usd": 0.053193000000000004,
+  "output_tokens": 815,
+  "denials": []
+}

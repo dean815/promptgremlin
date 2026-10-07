@@ -1,0 +1,21 @@
+{
+  "text": "{\"dropped\":[],\"added_harmful\":[],\"added_neutral\":[\"Placeholder lines in the facts block asking the user to describe what happened with the buildbot dashboard and add more lessons\",\"States that the buildbot dashboard 'came up during the migration' and calls it a 'story'. The ask only says to mention 'the buildbot dashboard thing', so this is an inferred framing\",\"Restricts the post to the listed facts and says to keep missing details general rather than invent numbers, names or outcomes\",\"Asks for first person and plain conversational sentences of mixed length, written 'like a real engineer on a normal afternoon'\",\"Bans stock LinkedIn phrases such as 'thrilled to share', 'game-changer' and 'key takeaways'\",\"Makes the closing question specifically invite readers to share their own CI migration experiences\",\"Asks for the post text only, with no preamble, notes or alternatives\",\"Explains that hashtags and emojis are left out because they don't fit the user's writing style\"]}",
+  "structured": {
+    "dropped": [],
+    "added_harmful": [],
+    "added_neutral": [
+      "Placeholder lines in the facts block asking the user to describe what happened with the buildbot dashboard and add more lessons",
+      "States that the buildbot dashboard 'came up during the migration' and calls it a 'story'. The ask only says to mention 'the buildbot dashboard thing', so this is an inferred framing",
+      "Restricts the post to the listed facts and says to keep missing details general rather than invent numbers, names or outcomes",
+      "Asks for first person and plain conversational sentences of mixed length, written 'like a real engineer on a normal afternoon'",
+      "Bans stock LinkedIn phrases such as 'thrilled to share', 'game-changer' and 'key takeaways'",
+      "Makes the closing question specifically invite readers to share their own CI migration experiences",
+      "Asks for the post text only, with no preamble, notes or alternatives",
+      "Explains that hashtags and emojis are left out because they don't fit the user's writing style"
+    ]
+  },
+  "cost_usd": 0.028754000000000002,
+  "tokens": 2852,
+  "output_tokens": 905,
+  "denials": []
+}

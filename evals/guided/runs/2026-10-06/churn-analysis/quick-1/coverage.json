@@ -1,0 +1,47 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Opening line: did the July Pro increase from 49 to 69 USD drive Pro churn.\"},{\"status\":\"stated\",\"note\":\"Says to exclude every row with is_trial = yes.\"},{\"status\":\"stated\",\"note\":\"Says to exclude emails ending in @ourco.test.\"},{\"status\":\"stated\",\"note\":\"Says an account has churned if it has a cancel_month.\"},{\"status\":\"stated\",\"note\":\"Names the CEO as the reader.\"},{\"status\":\"stated\",\"note\":\"Asks for a summary of at most 5 bullets.\"},{\"status\":\"stated\",\"note\":\"Asks for one suggested chart, described precisely enough to build.\"},{\"status\":\"stated\",\"note\":\"Asks for a confidence statement given the small sample, as the last bullet.\"}],\"invented\":[\"Says the CEO is not technical. The user only said the audience is the CEO.\",\"Says Basic had no price change, as a fact. The user never said this; the data only shows Basic at 19.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Opening line: did the July Pro increase from 49 to 69 USD drive Pro churn."
+      },
+      {
+        "status": "stated",
+        "note": "Says to exclude every row with is_trial = yes."
+      },
+      {
+        "status": "stated",
+        "note": "Says to exclude emails ending in @ourco.test."
+      },
+      {
+        "status": "stated",
+        "note": "Says an account has churned if it has a cancel_month."
+      },
+      {
+        "status": "stated",
+        "note": "Names the CEO as the reader."
+      },
+      {
+        "status": "stated",
+        "note": "Asks for a summary of at most 5 bullets."
+      },
+      {
+        "status": "stated",
+        "note": "Asks for one suggested chart, described precisely enough to build."
+      },
+      {
+        "status": "stated",
+        "note": "Asks for a confidence statement given the small sample, as the last bullet."
+      }
+    ],
+    "invented": [
+      "Says the CEO is not technical. The user only said the audience is the CEO.",
+      "Says Basic had no price change, as a fact. The user never said this; the data only shows Basic at 19."
+    ]
+  },
+  "session": "538c6623-4824-4a5d-88fd-63985322bffd",
+  "cost_usd": 0.0430746,
+  "output_tokens": 626,
+  "denials": []
+}

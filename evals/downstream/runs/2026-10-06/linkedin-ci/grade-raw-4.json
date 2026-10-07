@@ -1,0 +1,36 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"The post body, from 'We just finished' through the closing question, is about 164 words. That is inside the 120\u2013180 range. The note to the user after the post is not part of the body.\"},{\"pass\":true,\"note\":\"The third paragraph is about the buildbot dashboard: the team ran it in parallel, found that half the team relied on it, and replaced it with a status page.\"},{\"pass\":true,\"note\":\"There are no hashtags.\"},{\"pass\":true,\"note\":\"There are no emojis.\"},{\"pass\":true,\"note\":\"The post ends with 'What's the most surprising thing your team discovered during a CI migration?', which invites comments. The assistant's note comes after it, but it is clearly addressed to the user and is not part of the post.\"},{\"pass\":true,\"note\":\"The tone is plain and conversational, with specific details like 'took closer to three' weeks and env vars 'someone set by hand years ago'. There is no stock AI phrasing like 'fast-paced world', 'game-changer' or 'delve', and no buzzword-heavy framing.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "The post body, from 'We just finished' through the closing question, is about 164 words. That is inside the 120\u2013180 range. The note to the user after the post is not part of the body."
+      },
+      {
+        "pass": true,
+        "note": "The third paragraph is about the buildbot dashboard: the team ran it in parallel, found that half the team relied on it, and replaced it with a status page."
+      },
+      {
+        "pass": true,
+        "note": "There are no hashtags."
+      },
+      {
+        "pass": true,
+        "note": "There are no emojis."
+      },
+      {
+        "pass": true,
+        "note": "The post ends with 'What's the most surprising thing your team discovered during a CI migration?', which invites comments. The assistant's note comes after it, but it is clearly addressed to the user and is not part of the post."
+      },
+      {
+        "pass": true,
+        "note": "The tone is plain and conversational, with specific details like 'took closer to three' weeks and env vars 'someone set by hand years ago'. There is no stock AI phrasing like 'fast-paced world', 'game-changer' or 'delve', and no buzzword-heavy framing."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0397328,
+  "tokens": 3380,
+  "output_tokens": 1438,
+  "denials": []
+}

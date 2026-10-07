@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"The SQL is valid PostgreSQL and uses only columns from customers, orders and order_items. One small risk: quantity * unit_price_cents is int * int, so a single line item over about 2.1B cents could overflow. Casting to bigint would prevent that, but it doesn't break the query for normal data.\"},{\"pass\":true,\"note\":\"Revenue is SUM(oi.quantity * oi.unit_price_cents) per customer (GROUP BY c.id, c.name), then divided by 100.0 to convert cents to currency units.\"},{\"pass\":true,\"note\":\"It filters with o.created_at >= CURRENT_DATE - INTERVAL '90 days' on orders.created_at. The window starts at midnight in the session time zone, and the answer says so.\"},{\"pass\":true,\"note\":\"Using o.status = 'paid' excludes refunded orders. It also excludes cancelled orders, which the person didn't ask for but is a reasonable revenue definition, and the answer explains this choice.\"},{\"pass\":true,\"note\":\"It uses ORDER BY total_revenue DESC, c.id LIMIT 5, which returns the top 5 by revenue with a deterministic tie-break.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "The SQL is valid PostgreSQL and uses only columns from customers, orders and order_items. One small risk: quantity * unit_price_cents is int * int, so a single line item over about 2.1B cents could overflow. Casting to bigint would prevent that, but it doesn't break the query for normal data."
+      },
+      {
+        "pass": true,
+        "note": "Revenue is SUM(oi.quantity * oi.unit_price_cents) per customer (GROUP BY c.id, c.name), then divided by 100.0 to convert cents to currency units."
+      },
+      {
+        "pass": true,
+        "note": "It filters with o.created_at >= CURRENT_DATE - INTERVAL '90 days' on orders.created_at. The window starts at midnight in the session time zone, and the answer says so."
+      },
+      {
+        "pass": true,
+        "note": "Using o.status = 'paid' excludes refunded orders. It also excludes cancelled orders, which the person didn't ask for but is a reasonable revenue definition, and the answer explains this choice."
+      },
+      {
+        "pass": true,
+        "note": "It uses ORDER BY total_revenue DESC, c.id LIMIT 5, which returns the top 5 by revenue with a deterministic tie-break."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0292728,
+  "tokens": 3055,
+  "output_tokens": 783,
+  "denials": []
+}

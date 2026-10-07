@@ -1,0 +1,59 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt has a placeholder, [landlord name], instead of Ms. Alvarez.\"},{\"status\":\"missing\",\"note\":\"The prompt has a placeholder, [unit/address], instead of Apartment 4B.\"},{\"status\":\"missing\",\"note\":\"The start date is a placeholder, [date], instead of October 2.\"},{\"status\":\"missing\",\"note\":\"The phone report on October 3 that got no response is never mentioned. The only related slot is 'What I've already tried', which asks about troubleshooting, not earlier contact.\"},{\"status\":\"missing\",\"note\":\"Overnight temperatures in the 40s \u00b0F are never mentioned. The prompt only refers generally to 'heating season'.\"},{\"status\":\"missing\",\"note\":\"It asks for repair 'within a reasonable window' by a date the model picks, not within 48 hours.\"},{\"status\":\"missing\",\"note\":\"Lease section 12 is never mentioned. The instruction 'Don't cite laws' could also lead the model to leave out the lease clause.\"},{\"status\":\"stated\",\"note\":\"It asks for 'polite, firm, and specific'.\"},{\"status\":\"stated\",\"note\":\"'Don't ... threaten action' covers not threatening to withhold rent.\"},{\"status\":\"stated\",\"note\":\"It sets a limit of 'under 150 words'.\"}],\"invented\":[\"The purpose is a dated written record (the person never said this)\",\"The goal is a fast repair 'without souring the relationship'\",\"The broken heater 'affects the home's habitability'\",\"Offer access times for a technician visit\",\"Landlords answer short emails sooner\",\"A 'what I've already tried' troubleshooting detail (thermostat/breaker)\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt has a placeholder, [landlord name], instead of Ms. Alvarez."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt has a placeholder, [unit/address], instead of Apartment 4B."
+      },
+      {
+        "status": "missing",
+        "note": "The start date is a placeholder, [date], instead of October 2."
+      },
+      {
+        "status": "missing",
+        "note": "The phone report on October 3 that got no response is never mentioned. The only related slot is 'What I've already tried', which asks about troubleshooting, not earlier contact."
+      },
+      {
+        "status": "missing",
+        "note": "Overnight temperatures in the 40s \u00b0F are never mentioned. The prompt only refers generally to 'heating season'."
+      },
+      {
+        "status": "missing",
+        "note": "It asks for repair 'within a reasonable window' by a date the model picks, not within 48 hours."
+      },
+      {
+        "status": "missing",
+        "note": "Lease section 12 is never mentioned. The instruction 'Don't cite laws' could also lead the model to leave out the lease clause."
+      },
+      {
+        "status": "stated",
+        "note": "It asks for 'polite, firm, and specific'."
+      },
+      {
+        "status": "stated",
+        "note": "'Don't ... threaten action' covers not threatening to withhold rent."
+      },
+      {
+        "status": "stated",
+        "note": "It sets a limit of 'under 150 words'."
+      }
+    ],
+    "invented": [
+      "The purpose is a dated written record (the person never said this)",
+      "The goal is a fast repair 'without souring the relationship'",
+      "The broken heater 'affects the home's habitability'",
+      "Offer access times for a technician visit",
+      "Landlords answer short emails sooner",
+      "A 'what I've already tried' troubleshooting detail (thermostat/breaker)"
+    ]
+  },
+  "session": "ad13d50d-d745-4aa9-b42c-932179504170",
+  "cost_usd": 0.0347946,
+  "output_tokens": 1126,
+  "denials": []
+}

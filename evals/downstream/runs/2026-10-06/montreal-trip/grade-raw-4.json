@@ -1,0 +1,36 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"Exactly three days (Day 1\u20133), each with a morning-to-night plan.\"},{\"pass\":true,\"note\":\"Each day has named food stops at breakfast, lunch and dinner, plus market grazing and pastry or bagel crawls. Only the afternoon sightseeing blocks have no food.\"},{\"pass\":true,\"note\":\"The plan is mostly mid-range: Schwartz's, bagels, markets, Mastard and BYOB tips. Pricey spots like Au Pied de Cochon and Joe Beef are marked as splurges and come with cheaper alternatives. A daily estimate of about CAD 260\u2013400 fits a mid budget.\"},{\"pass\":true,\"note\":\"Covers October weather (8\u201314\u00b0C, layers, rain jacket), Mont Royal fall colors, October produce at Jean-Talon (apples, squash, cider) and the Botanical Garden's autumn lantern festival.\"},{\"pass\":true,\"note\":\"Nearly every stop is a specific real place (Olive et Gourmando, Schwartz's, St-Viateur, Fairmount, Jean-Talon, Damas, La Banquise, Joe Beef, Qing Hua). Minor accuracy problems: 'R\u00e9giliza' doesn't match any Montreal restaurant I know and may be made up. Satay Brothers is in Saint-Henri near Atwater, not 'the Village'.\"}],\"unasked_content\":[\"Satay Brothers is placed in 'the Village/Atwater area'. It is actually in Saint-Henri, so the Village part could send the traveler to the wrong neighborhood.\",\"'R\u00e9giliza' is offered as a dinner pick but may not be a real restaurant, which would waste a dinner slot.\",\"Lodging is listed at CAD 150\u2013220 per person per day, which looks like a per-room price labeled per person. This could inflate the budget for travelers sharing a room.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "Exactly three days (Day 1\u20133), each with a morning-to-night plan."
+      },
+      {
+        "pass": true,
+        "note": "Each day has named food stops at breakfast, lunch and dinner, plus market grazing and pastry or bagel crawls. Only the afternoon sightseeing blocks have no food."
+      },
+      {
+        "pass": true,
+        "note": "The plan is mostly mid-range: Schwartz's, bagels, markets, Mastard and BYOB tips. Pricey spots like Au Pied de Cochon and Joe Beef are marked as splurges and come with cheaper alternatives. A daily estimate of about CAD 260\u2013400 fits a mid budget."
+      },
+      {
+        "pass": true,
+        "note": "Covers October weather (8\u201314\u00b0C, layers, rain jacket), Mont Royal fall colors, October produce at Jean-Talon (apples, squash, cider) and the Botanical Garden's autumn lantern festival."
+      },
+      {
+        "pass": true,
+        "note": "Nearly every stop is a specific real place (Olive et Gourmando, Schwartz's, St-Viateur, Fairmount, Jean-Talon, Damas, La Banquise, Joe Beef, Qing Hua). Minor accuracy problems: 'R\u00e9giliza' doesn't match any Montreal restaurant I know and may be made up. Satay Brothers is in Saint-Henri near Atwater, not 'the Village'."
+      }
+    ],
+    "unasked_content": [
+      "Satay Brothers is placed in 'the Village/Atwater area'. It is actually in Saint-Henri, so the Village part could send the traveler to the wrong neighborhood.",
+      "'R\u00e9giliza' is offered as a dinner pick but may not be a real restaurant, which would waste a dinner slot.",
+      "Lodging is listed at CAD 150\u2013220 per person per day, which looks like a per-room price labeled per person. This could inflate the budget for travelers sharing a room."
+    ]
+  },
+  "cost_usd": 0.0480248,
+  "tokens": 4535,
+  "output_tokens": 1359,
+  "denials": []
+}

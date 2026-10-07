@@ -1,0 +1,44 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never says the product is a B2B note-taking app.\"},{\"status\":\"missing\",\"note\":\"The audience (engineering and design leads) and the kickoff purpose aren't mentioned.\"},{\"status\":\"missing\",\"note\":\"The v1 scope (creating a workspace, inviting members by email, shared notes) isn't stated.\"},{\"status\":\"missing\",\"note\":\"The admin and member roles aren't mentioned.\"},{\"status\":\"missing\",\"note\":\"The out-of-scope items (billing, SSO, guest access) aren't listed.\"},{\"status\":\"missing\",\"note\":\"The success metric (20% of paid accounts create a workspace within 60 days) is absent.\"},{\"status\":\"missing\",\"note\":\"The length limit of about 2 pages isn't stated.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say to leave migration of existing shared notes as an open question.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never says the product is a B2B note-taking app."
+      },
+      {
+        "status": "missing",
+        "note": "The audience (engineering and design leads) and the kickoff purpose aren't mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "The v1 scope (creating a workspace, inviting members by email, shared notes) isn't stated."
+      },
+      {
+        "status": "missing",
+        "note": "The admin and member roles aren't mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "The out-of-scope items (billing, SSO, guest access) aren't listed."
+      },
+      {
+        "status": "missing",
+        "note": "The success metric (20% of paid accounts create a workspace within 60 days) is absent."
+      },
+      {
+        "status": "missing",
+        "note": "The length limit of about 2 pages isn't stated."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say to leave migration of existing shared notes as an open question."
+      }
+    ],
+    "invented": []
+  },
+  "session": "905bb98c-1791-4485-8577-72927d23d3af",
+  "cost_usd": 0.0164226,
+  "output_tokens": 363,
+  "denials": []
+}

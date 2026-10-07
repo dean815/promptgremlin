@@ -1,0 +1,59 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"Midjourney is never mentioned, and the prompt isn't written in Midjourney syntax (for example, no --ar 4:5).\"},{\"status\":\"stated\",\"note\":\"Says 'Instagram feed post' and '4:5 portrait framing'.\"},{\"status\":\"missing\",\"note\":\"It has a latte with leaf-shaped latte art in a ceramic cup, but the cup isn't described as handmade.\"},{\"status\":\"contradicted\",\"note\":\"Uses a 'worn light-oak caf\u00e9 table' where a dark wood counter was wanted.\"},{\"status\":\"stated\",\"note\":\"'Soft morning window light' plus a warm style and palette roughly cover warm early-morning window light.\"},{\"status\":\"missing\",\"note\":\"There's no film-photo look. It asks for a generic photorealistic image with natural color.\"},{\"status\":\"missing\",\"note\":\"There's no autumn leaf on the counter. It adds a croissant instead and bans any props beyond those described.\"},{\"status\":\"stated\",\"note\":\"Constraints say 'no people'.\"},{\"status\":\"stated\",\"note\":\"Constraints say 'no text, no logos'.\"}],\"invented\":[\"The shop is a 'neighborhood coffee shop'\",\"The goal is to 'make people want to stop in for a morning drink'\",\"A flaky butter croissant on a small plate\",\"A worn light-oak caf\u00e9 table\",\"A blurred caf\u00e9 interior with warm wood, plants and pendant lights in the background\",\"Light comes from the left\",\"Steam rises from the cup\",\"Space is left in the upper third so the shop can add a caption or logo later\",\"The palette is warm creams, caramel browns and muted greens\",\"The cup sits slightly right of center and is shot from a low three-quarter angle\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "Midjourney is never mentioned, and the prompt isn't written in Midjourney syntax (for example, no --ar 4:5)."
+      },
+      {
+        "status": "stated",
+        "note": "Says 'Instagram feed post' and '4:5 portrait framing'."
+      },
+      {
+        "status": "missing",
+        "note": "It has a latte with leaf-shaped latte art in a ceramic cup, but the cup isn't described as handmade."
+      },
+      {
+        "status": "contradicted",
+        "note": "Uses a 'worn light-oak caf\u00e9 table' where a dark wood counter was wanted."
+      },
+      {
+        "status": "stated",
+        "note": "'Soft morning window light' plus a warm style and palette roughly cover warm early-morning window light."
+      },
+      {
+        "status": "missing",
+        "note": "There's no film-photo look. It asks for a generic photorealistic image with natural color."
+      },
+      {
+        "status": "missing",
+        "note": "There's no autumn leaf on the counter. It adds a croissant instead and bans any props beyond those described."
+      },
+      {
+        "status": "stated",
+        "note": "Constraints say 'no people'."
+      },
+      {
+        "status": "stated",
+        "note": "Constraints say 'no text, no logos'."
+      }
+    ],
+    "invented": [
+      "The shop is a 'neighborhood coffee shop'",
+      "The goal is to 'make people want to stop in for a morning drink'",
+      "A flaky butter croissant on a small plate",
+      "A worn light-oak caf\u00e9 table",
+      "A blurred caf\u00e9 interior with warm wood, plants and pendant lights in the background",
+      "Light comes from the left",
+      "Steam rises from the cup",
+      "Space is left in the upper third so the shop can add a caption or logo later",
+      "The palette is warm creams, caramel browns and muted greens",
+      "The cup sits slightly right of center and is shot from a low three-quarter angle"
+    ]
+  },
+  "session": "e2fbf864-64b6-47ad-98a2-791e52308406",
+  "cost_usd": 0.0323586,
+  "output_tokens": 1043,
+  "denials": []
+}

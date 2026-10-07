@@ -1,0 +1,23 @@
+{
+  "text": "{\"dropped\":[],\"added_harmful\":[\"Invents a deadline the user never mentioned: 'I need to answer them today.'\",\"Invents a reason for not refunding: 'because I can't authorize one.' The user never said why.\",\"Requires the reply to 'say what they should do next to get it' (the replacement), but the user gave no replacement process. This pushes the model to make up steps such as return instructions, order numbers or contact methods.\"],\"added_neutral\":[\"Tightens 'don't promise a refund' to also forbid hinting at one.\",\"Says to keep the wording general and not invent details if the email is unclear about the order or the problem.\",\"Asks for plain conversational language and a sincere apology.\",\"Explains the length limit: the reply goes straight into an email, and short replies get read.\",\"Output must be only the email text, ready to send, with a greeting and sign-off, and nothing before or after it.\",\"Says the customer's email is pasted below the instructions.\"]}",
+  "structured": {
+    "dropped": [],
+    "added_harmful": [
+      "Invents a deadline the user never mentioned: 'I need to answer them today.'",
+      "Invents a reason for not refunding: 'because I can't authorize one.' The user never said why.",
+      "Requires the reply to 'say what they should do next to get it' (the replacement), but the user gave no replacement process. This pushes the model to make up steps such as return instructions, order numbers or contact methods."
+    ],
+    "added_neutral": [
+      "Tightens 'don't promise a refund' to also forbid hinting at one.",
+      "Says to keep the wording general and not invent details if the email is unclear about the order or the problem.",
+      "Asks for plain conversational language and a sincere apology.",
+      "Explains the length limit: the reply goes straight into an email, and short replies get read.",
+      "Output must be only the email text, ready to send, with a greeting and sign-off, and nothing before or after it.",
+      "Says the customer's email is pasted below the instructions."
+    ]
+  },
+  "cost_usd": 0.02269,
+  "tokens": 2442,
+  "output_tokens": 673,
+  "denials": []
+}

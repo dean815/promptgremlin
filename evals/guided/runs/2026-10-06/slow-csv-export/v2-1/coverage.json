@@ -1,0 +1,57 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt only says 'large order tables'. It never gives the roughly 2 million row figure or says memory use matters. Streaming the writes is asked for, but only as a speed fix.\"},{\"status\":\"stated\",\"note\":\"It says not to change the signature or touch other callers. The 'three callers' detail is left out.\"},{\"status\":\"stated\",\"note\":\"It lists the header line and column order under behaviour to preserve.\"},{\"status\":\"missing\",\"note\":\"It says 'Don't add files' but never forbids new dependencies.\"},{\"status\":\"stated\",\"note\":\"It names the one-query-per-order N+1 pattern as the likely cause and asks for a JOIN or one batched lookup.\"},{\"status\":\"stated\",\"note\":\"It asks for rows to be written to the file as they are produced instead of concatenating a string.\"},{\"status\":\"contradicted\",\"note\":\"It tells the receiver to list CSV escaping of names with commas as a problem but not fix it, and to keep the output byte-for-byte the same. The person wants proper quoting.\"},{\"status\":\"stated\",\"note\":\"It says to find the existing tests and run them, but doesn't name tests/test_export.py. It also allows a fallback for when there are no tests, though the tests do exist.\"},{\"status\":\"stated\",\"note\":\"It asks for small, surgical edits, not a rewrite, and limits the scope to the one function.\"}],\"invented\":[\"The file path app/export.py\",\"The query text `SELECT name FROM customers`, run once per order\",\"The output is built with `out += ...` before writing\",\"The output file must stay byte-for-byte the same (a requirement the person never gave)\",\"The formatting details `total_cents/100:.2f` and `created_at.isoformat()`\",\"An order with a missing customer raises AttributeError because `cust` is None\",\"The `db` wrapper has `query` and `query_one` methods\",\"Everything is local and reversible\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt only says 'large order tables'. It never gives the roughly 2 million row figure or says memory use matters. Streaming the writes is asked for, but only as a speed fix."
+      },
+      {
+        "status": "stated",
+        "note": "It says not to change the signature or touch other callers. The 'three callers' detail is left out."
+      },
+      {
+        "status": "stated",
+        "note": "It lists the header line and column order under behaviour to preserve."
+      },
+      {
+        "status": "missing",
+        "note": "It says 'Don't add files' but never forbids new dependencies."
+      },
+      {
+        "status": "stated",
+        "note": "It names the one-query-per-order N+1 pattern as the likely cause and asks for a JOIN or one batched lookup."
+      },
+      {
+        "status": "stated",
+        "note": "It asks for rows to be written to the file as they are produced instead of concatenating a string."
+      },
+      {
+        "status": "contradicted",
+        "note": "It tells the receiver to list CSV escaping of names with commas as a problem but not fix it, and to keep the output byte-for-byte the same. The person wants proper quoting."
+      },
+      {
+        "status": "stated",
+        "note": "It says to find the existing tests and run them, but doesn't name tests/test_export.py. It also allows a fallback for when there are no tests, though the tests do exist."
+      },
+      {
+        "status": "stated",
+        "note": "It asks for small, surgical edits, not a rewrite, and limits the scope to the one function."
+      }
+    ],
+    "invented": [
+      "The file path app/export.py",
+      "The query text `SELECT name FROM customers`, run once per order",
+      "The output is built with `out += ...` before writing",
+      "The output file must stay byte-for-byte the same (a requirement the person never gave)",
+      "The formatting details `total_cents/100:.2f` and `created_at.isoformat()`",
+      "An order with a missing customer raises AttributeError because `cust` is None",
+      "The `db` wrapper has `query` and `query_one` methods",
+      "Everything is local and reversible"
+    ]
+  },
+  "session": "fee6c9a4-c37f-4564-966b-f3a5a9c571ad",
+  "cost_usd": 0.037150600000000006,
+  "output_tokens": 1113,
+  "denials": []
+}

@@ -1,0 +1,17 @@
+{
+  "text": "```\nI need a quick risk read on the quarterly report summary pasted below, and the list may be shared beyond the team, so it can't name any competitor. Read the summary, then reply with the top risks it reveals as exactly 5 bullet points, ranked from most to least significant. Make each bullet one or two sentences: the risk, plus the evidence from the summary that supports it. If a risk involves a competitor, refer to it generically (\"a competitor\", \"a rival in this segment\") and leave out company and product names. The reply is the 5 bullets and nothing else, with no introduction and no closing remarks.\n```\nEffort: not settable here (claude.ai has no effort control). The task is a single short reply.\n\n**Assumptions**\n- The summary is pasted right after the prompt, so the prompt says \"pasted below\" and contains no placeholder.\n- You gave no reason for the competitor rule. I assumed the list may be shared outside the team and put that in the prompt. Correct it if the real reason differs.\n- I added \"ranked from most to least significant\" and \"risk plus supporting evidence\", which you didn't ask for. Drop either if you don't want it.\n\n**Changes**\n- The prompt opens with the situation and the reason for the no-competitor rule, and the rule is stated as what to do (\"refer to them generically\"). This follows the Anthropic notes on adding context and stating what to do rather than what to avoid.\n- It gives an explicit reply shape and stop condition (5 bullets, nothing before or after), per \"Be clear and direct\".\n- It uses no shouted emphasis, per the Anthropic notes on emphasis.\n\n**Guidance**: cached 2026-10-06 13:10. The `claude-ai` target resolved to the `anthropic` family notes, with `claude-fable-5-1` as the flagship, and no model was pinned. No flags were raised.",
+  "structured": null,
+  "cost_usd": 0.0337949,
+  "tokens": 27745,
+  "output_tokens": 1162,
+  "denials": [
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_019v8nih5nD1R7FtdpqdaJxb",
+      "tool_input": {
+        "command": "cat /tmp/pgbench/config.json; ls /tmp/pgbench/plugin/skills/promptgremlin; python3 '/tmp/pgbench/plugin/skills/promptgremlin/scripts/guidance.py' --target 'claude-ai'"
+      }
+    }
+  ],
+  "prompt": "I need a quick risk read on the quarterly report summary pasted below, and the list may be shared beyond the team, so it can't name any competitor. Read the summary, then reply with the top risks it reveals as exactly 5 bullet points, ranked from most to least significant. Make each bullet one or two sentences: the risk, plus the evidence from the summary that supports it. If a risk involves a competitor, refer to it generically (\"a competitor\", \"a rival in this segment\") and leave out company and product names. The reply is the 5 bullets and nothing else, with no introduction and no closing remarks."
+}

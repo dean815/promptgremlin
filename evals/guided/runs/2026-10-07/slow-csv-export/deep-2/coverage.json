@@ -1,0 +1,50 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt says exports can reach about 2 million rows and that memory use matters. It also says not to load all rows into memory at once.\"},{\"status\":\"stated\",\"note\":\"The prompt says the signature `export_orders_csv(db, path)` must stay identical. It doesn't give the reason (three callers), but the requirement itself is stated.\"},{\"status\":\"stated\",\"note\":\"The prompt gives the exact header `id,customer_name,total,created_at` and says the column order and value formats must stay identical.\"},{\"status\":\"stated\",\"note\":\"The 'Must stay identical' section includes 'No new dependencies', and the prompt also says to use the standard library only.\"},{\"status\":\"stated\",\"note\":\"The prompt names the N+1 query, one `SELECT name FROM customers` per order row, as the known main cause.\"},{\"status\":\"stated\",\"note\":\"The prompt says to write each row to the file as it is produced and not build one big string.\"},{\"status\":\"stated\",\"note\":\"The prompt says customer names can contain commas, so values need proper CSV quoting.\"},{\"status\":\"stated\",\"note\":\"The prompt says to run the existing tests in tests/test_export.py and treats a passing run as part of being done.\"},{\"status\":\"stated\",\"note\":\"The prompt asks for a minimal change, says not to restructure the module, and says to make no changes beyond what the task needs.\"}],\"invented\":[\"The prompt says 'Customers may be missing for some orders' as if it were a fact about the data. That claim isn't in the request, the material or the answers. The current code would raise an error on a missing customer, so the instruction to keep 'the current behaviour' also has no basis.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt says exports can reach about 2 million rows and that memory use matters. It also says not to load all rows into memory at once."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says the signature `export_orders_csv(db, path)` must stay identical. It doesn't give the reason (three callers), but the requirement itself is stated."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt gives the exact header `id,customer_name,total,created_at` and says the column order and value formats must stay identical."
+      },
+      {
+        "status": "stated",
+        "note": "The 'Must stay identical' section includes 'No new dependencies', and the prompt also says to use the standard library only."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt names the N+1 query, one `SELECT name FROM customers` per order row, as the known main cause."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to write each row to the file as it is produced and not build one big string."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says customer names can contain commas, so values need proper CSV quoting."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to run the existing tests in tests/test_export.py and treats a passing run as part of being done."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks for a minimal change, says not to restructure the module, and says to make no changes beyond what the task needs."
+      }
+    ],
+    "invented": [
+      "The prompt says 'Customers may be missing for some orders' as if it were a fact about the data. That claim isn't in the request, the material or the answers. The current code would raise an error on a missing customer, so the instruction to keep 'the current behaviour' also has no basis."
+    ]
+  },
+  "session": "74c4f26a-1b49-43d2-988d-6b4b23c8d3d3",
+  "cost_usd": 0.0371386,
+  "output_tokens": 810,
+  "denials": []
+}

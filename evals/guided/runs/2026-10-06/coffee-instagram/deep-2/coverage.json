@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt uses Midjourney syntax (--ar, --raw, --no), which matches the Midjourney tool.\"},{\"status\":\"stated\",\"note\":\"--ar 4:5 sets the 4:5 portrait aspect ratio. The Instagram purpose isn't named, but the format is correct.\"},{\"status\":\"stated\",\"note\":\"Says 'Latte with leaf latte art in a handmade ceramic cup'.\"},{\"status\":\"stated\",\"note\":\"Says 'dark wood counter'.\"},{\"status\":\"stated\",\"note\":\"Says 'warm early-morning window light'.\"},{\"status\":\"stated\",\"note\":\"Says 'realistic photo shot on film, film grain'.\"},{\"status\":\"stated\",\"note\":\"Says 'a single autumn leaf resting on the counter'.\"},{\"status\":\"stated\",\"note\":\"Says '--no people'.\"},{\"status\":\"missing\",\"note\":\"Nothing excludes text or logos. The --no parameter lists only people, not text, logo or lettering.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt uses Midjourney syntax (--ar, --raw, --no), which matches the Midjourney tool."
+      },
+      {
+        "status": "stated",
+        "note": "--ar 4:5 sets the 4:5 portrait aspect ratio. The Instagram purpose isn't named, but the format is correct."
+      },
+      {
+        "status": "stated",
+        "note": "Says 'Latte with leaf latte art in a handmade ceramic cup'."
+      },
+      {
+        "status": "stated",
+        "note": "Says 'dark wood counter'."
+      },
+      {
+        "status": "stated",
+        "note": "Says 'warm early-morning window light'."
+      },
+      {
+        "status": "stated",
+        "note": "Says 'realistic photo shot on film, film grain'."
+      },
+      {
+        "status": "stated",
+        "note": "Says 'a single autumn leaf resting on the counter'."
+      },
+      {
+        "status": "stated",
+        "note": "Says '--no people'."
+      },
+      {
+        "status": "missing",
+        "note": "Nothing excludes text or logos. The --no parameter lists only people, not text, logo or lettering."
+      }
+    ],
+    "invented": []
+  },
+  "session": "f043ac05-284a-4ee6-9c57-e3e305d32d7f",
+  "cost_usd": 0.0220146,
+  "output_tokens": 519,
+  "denials": []
+}

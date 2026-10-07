@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"A\",\"reason\":\"A is correct as written. Both queries use the same joins, 90-day window and 'paid' filter. A casts quantity to bigint so the product can't overflow, and adds a tiebreaker so results are deterministic. B's query keeps the int*int overflow risk and has no tiebreaker; it only mentions both in its notes. B's extra notes help, but its query needs edits that A's doesn't.\"}",
+  "structured": {
+    "winner": "A",
+    "reason": "A is correct as written. Both queries use the same joins, 90-day window and 'paid' filter. A casts quantity to bigint so the product can't overflow, and adds a tiebreaker so results are deterministic. B's query keeps the int*int overflow risk and has no tiebreaker; it only mentions both in its notes. B's extra notes help, but its query needs edits that A's doesn't."
+  },
+  "cost_usd": 0.032895999999999995,
+  "tokens": 3138,
+  "output_tokens": 650,
+  "denials": [],
+  "winner_arm": "rewritten"
+}

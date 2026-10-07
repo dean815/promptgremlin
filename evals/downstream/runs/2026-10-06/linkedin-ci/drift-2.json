@@ -1,0 +1,23 @@
+{
+  "text": "{\"dropped\":[],\"added_harmful\":[],\"added_neutral\":[\"Placeholders for the user to fill in: team size, old and new CI providers, what happened with the buildbot dashboard, and 2-3 lessons\",\"Says the post goes out under the user's name to their professional network\",\"Asks for first person and a casual tone, like a colleague telling a story over coffee\",\"Asks for a mix of short and long sentences\",\"Asks for one concrete detail or a small admission of something the team got wrong. This could lead the model to make up a mistake if the user's details don't include one\",\"Bans corporate buzzwords and specific phrases ('excited to share', 'game-changer', 'journey') and tidy three-part lists\",\"Turns 'mention the buildbot dashboard thing' into using it as the memorable moment of the post\",\"No headings or bullets; the post should be a few short paragraphs\",\"The closing question must invite readers to share their own CI migration experiences\",\"Output only the post text, with no preamble, word count or alternatives, and nothing after the question\"]}",
+  "structured": {
+    "dropped": [],
+    "added_harmful": [],
+    "added_neutral": [
+      "Placeholders for the user to fill in: team size, old and new CI providers, what happened with the buildbot dashboard, and 2-3 lessons",
+      "Says the post goes out under the user's name to their professional network",
+      "Asks for first person and a casual tone, like a colleague telling a story over coffee",
+      "Asks for a mix of short and long sentences",
+      "Asks for one concrete detail or a small admission of something the team got wrong. This could lead the model to make up a mistake if the user's details don't include one",
+      "Bans corporate buzzwords and specific phrases ('excited to share', 'game-changer', 'journey') and tidy three-part lists",
+      "Turns 'mention the buildbot dashboard thing' into using it as the memorable moment of the post",
+      "No headings or bullets; the post should be a few short paragraphs",
+      "The closing question must invite readers to share their own CI migration experiences",
+      "Output only the post text, with no preamble, word count or alternatives, and nothing after the question"
+    ]
+  },
+  "cost_usd": 0.029494,
+  "tokens": 2895,
+  "output_tokens": 938,
+  "denials": []
+}

@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"B\",\"reason\":\"B is a complete post that sounds human and meets every constraint: about 150 words, mentions the buildbot dashboard, no hashtags or emojis, and ends with a question. It says it guessed the dashboard details and offers to revise them. A is mostly placeholders, including the dashboard story and the lessons, so the person would have to write most of it themselves.\"}",
+  "structured": {
+    "winner": "B",
+    "reason": "B is a complete post that sounds human and meets every constraint: about 150 words, mentions the buildbot dashboard, no hashtags or emojis, and ends with a question. It says it guessed the dashboard details and offers to revise them. A is mostly placeholders, including the dashboard story and the lessons, so the person would have to write most of it themselves."
+  },
+  "cost_usd": 0.030019999999999998,
+  "tokens": 2720,
+  "output_tokens": 689,
+  "denials": [],
+  "winner_arm": "raw"
+}

@@ -1,0 +1,54 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never mentions the scale of about 2 million rows or that memory use is a concern. Streaming is asked for, but the scale isn't given as the reason.\"},{\"status\":\"stated\",\"note\":\"It says to keep the signature. The three callers aren't mentioned, but the requirement itself is clear.\"},{\"status\":\"stated\",\"note\":\"It explicitly says to keep the header line and column order exactly as they are.\"},{\"status\":\"missing\",\"note\":\"It never says not to add new dependencies.\"},{\"status\":\"stated\",\"note\":\"It names the N+1 per-row customer lookup as the cause and says to remove it. It calls it the 'likely' cause rather than the known one, which is a minor softening.\"},{\"status\":\"stated\",\"note\":\"It says to write rows to the file as you go (or in chunks) instead of building one big string.\"},{\"status\":\"contradicted\",\"note\":\"The person wants values properly CSV-quoted because names contain commas. The prompt instead says to report the missing escaping but not fix it, and requires byte-identical output.\"},{\"status\":\"missing\",\"note\":\"It doesn't name tests/test_export.py. It treats the test suite as uncertain ('if a test suite exists') and even allows creating a new test.\"},{\"status\":\"stated\",\"note\":\"It asks for a surgical edit to only export_orders_csv, not a rewrite.\"}],\"invented\":[\"That the code lives in app/export.py, and the exact source code of export_orders_csv (the queries, the f-string format, the += concatenation)\",\"That the db wrapper exposes query and query_one methods\",\"That the row format is total_cents/100 with two decimals and created_at.isoformat()\",\"That an order with a missing customer currently raises AttributeError on None\",\"That the output must stay byte-identical because other consumers may read the file\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never mentions the scale of about 2 million rows or that memory use is a concern. Streaming is asked for, but the scale isn't given as the reason."
+      },
+      {
+        "status": "stated",
+        "note": "It says to keep the signature. The three callers aren't mentioned, but the requirement itself is clear."
+      },
+      {
+        "status": "stated",
+        "note": "It explicitly says to keep the header line and column order exactly as they are."
+      },
+      {
+        "status": "missing",
+        "note": "It never says not to add new dependencies."
+      },
+      {
+        "status": "stated",
+        "note": "It names the N+1 per-row customer lookup as the cause and says to remove it. It calls it the 'likely' cause rather than the known one, which is a minor softening."
+      },
+      {
+        "status": "stated",
+        "note": "It says to write rows to the file as you go (or in chunks) instead of building one big string."
+      },
+      {
+        "status": "contradicted",
+        "note": "The person wants values properly CSV-quoted because names contain commas. The prompt instead says to report the missing escaping but not fix it, and requires byte-identical output."
+      },
+      {
+        "status": "missing",
+        "note": "It doesn't name tests/test_export.py. It treats the test suite as uncertain ('if a test suite exists') and even allows creating a new test."
+      },
+      {
+        "status": "stated",
+        "note": "It asks for a surgical edit to only export_orders_csv, not a rewrite."
+      }
+    ],
+    "invented": [
+      "That the code lives in app/export.py, and the exact source code of export_orders_csv (the queries, the f-string format, the += concatenation)",
+      "That the db wrapper exposes query and query_one methods",
+      "That the row format is total_cents/100 with two decimals and created_at.isoformat()",
+      "That an order with a missing customer currently raises AttributeError on None",
+      "That the output must stay byte-identical because other consumers may read the file"
+    ]
+  },
+  "session": "eb70f708-1fea-4e5a-939b-9d3f7e43ed4d",
+  "cost_usd": 0.0378826,
+  "output_tokens": 1056,
+  "denials": []
+}

@@ -2,17 +2,40 @@
 
 ![promptgremlin: a gremlin turning crumpled notes into structured prompts](assets/promptgremlin-banner.webp)
 
-Turns a braindump, rough notes, or a weak prompt into a paste-ready prompt for
-any registered AI model or tool, written to that vendor's current official
-guidance. Every run checks the vendor's model list and watched doc sections,
-and flags new releases, retired models, changed guidance, and stale notes.
+Turns a thin request for real work into a targeted, paste-ready prompt for any
+registered AI model or tool. It works out what kind of task you're asking for,
+asks the few questions that would change the result (each with a suggested
+answer), and writes the prompt to that vendor's current official guidance.
+Every run checks the vendor's model list and watched doc sections, and flags
+new releases, retired models, changed guidance, and stale notes.
 
-## What it does
+Built for work that needs steering: coding, building a product, research, data
+analysis, product docs, image and video generation, and drafts that have to
+sound like a person wrote them.
 
-Modes: `rewrite` (default; splits multi-part asks into ordered prompts), `port`
-(move a prompt to another target), `autopsy` (diagnose a weak prompt). Each
-prompt comes with an effort suggestion naming the real control on that surface,
-a short list of assumptions and changes, and a one-line freshness report.
+## How it works
+
+    /promptgremlin build me a habit tracker app
+
+1. **Classify.** The request is matched to a task type (build, change-code,
+   research, analyze-data, product-doc, image, video, draft, agent, judgment,
+   or general). Each type knows what an agent needs for that kind of work.
+2. **Interview.** One round of up to 4 questions about the gaps that matter
+   most, each with a suggested answer and its reason, so "ok" or a few words
+   is enough. Say "interview me" for a deeper walk through every detail, or
+   "just write it" to skip the questions.
+3. **Write.** A writer agent loads the vendor's guidance and writes the
+   prompt. Every fact in it comes from your request, your answers, or a
+   default you accepted; nothing is made up to fill a gap.
+
+Each prompt comes in a code block with an effort suggestion naming the real
+control on that surface, what you confirmed vs what was defaulted, the changes
+made and why, and a one-line freshness report. Draft prompts add an edit pass
+for stripping AI tells; image and video prompts add what to change first if
+the result misses.
+
+Other modes: `port` (move a prompt to another target) and `autopsy` (diagnose
+why a prompt underperforms, using the task type's checklist).
 
 ## Supported targets
 
@@ -77,7 +100,7 @@ Full details: [PRIVACY.md](PRIVACY.md).
 
 - Each run fetches the target's vendor documentation pages (and model-list
   pages) over HTTPS with an identifying user agent,
-  `promptgremlin/2.0 (+https://github.com/dean815/promptgremlin)`. It does not
+  `promptgremlin/3.0 (+https://github.com/dean815/promptgremlin)`. It does not
   pretend to be a browser.
 - Responses are cached in `~/.cache/promptgremlin` for 24 hours. Override the
   location with `PROMPTGREMLIN_CACHE`. The briefing header labels each state:
@@ -96,8 +119,11 @@ Full details: [PRIVACY.md](PRIVACY.md).
       "default_target": "claude-code",
       "pin_model": "opus-5-5",
       "context_sources": ["a skill or folder the prompt may draw on"],
-      "clipboard": "pbcopy"
+      "clipboard": "pbcopy",
+      "interview": "quick"
     }
+
+`interview` sets the default depth: `quick` (one round), `deep`, or `skip`.
 
 `clipboard` is a local command that the skill runs, with the first prompt on
 its standard input. Set it only to a command you trust.
@@ -124,11 +150,16 @@ drifts.
 
 ## Evals
 
-`evals/RESULTS.md` reports 98% of assertions passed with the skill versus 50% without. That
-measures compliance with the skill's output contract and targeted behaviour checks (10 evals,
-several runs each, model-graded against fixed assertions). It does not show that the rewritten
-prompts give better downstream answers; a benchmark for that is planned. Runs used a personal
-config and run artifacts are not published.
+- **Guided benchmark** ([evals/guided/RESULTS.md](evals/guided/RESULTS.md)): seven thin
+  requests with hidden requirements, answered by a simulated person. With the one-round
+  interview, 93% of the hidden requirements reached the prompt (v2's one-shot rewrite: 27%),
+  and answers met 79% of them (the raw request: 23%). Full method, limits and raw run output
+  are published.
+- **Downstream benchmark** ([evals/downstream/RESULTS.md](evals/downstream/RESULTS.md)): v2's
+  one-shot rewrite on simple, complete requests showed no measurable gain and invented
+  context; that result led to the v3 interview.
+- **Output-contract evals** ([evals/RESULTS.md](evals/RESULTS.md)): v2-era checks of format
+  and targeted behaviours. They measure contract compliance, not answer quality.
 
 ## Tests
 

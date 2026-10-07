@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Says exports can reach about 2 million rows, so memory matters, and the fix must not load all rows or build the output in memory.\"},{\"status\":\"stated\",\"note\":\"The signature export_orders_csv(db, path) must stay the same because three callers use it.\"},{\"status\":\"stated\",\"note\":\"Gives the header and column order: id,customer_name,total,created_at.\"},{\"status\":\"stated\",\"note\":\"Says not to add dependencies and to ask before adding any.\"},{\"status\":\"stated\",\"note\":\"Names the per-row customer lookup (N+1 query) as the main cause, as the person reported.\"},{\"status\":\"stated\",\"note\":\"Requires each row to be written to the file as it is produced, not built into one big string.\"},{\"status\":\"stated\",\"note\":\"Says customer names can contain commas, so every value must be properly CSV-quoted.\"},{\"status\":\"stated\",\"note\":\"Requires running the existing tests in tests/test_export.py.\"},{\"status\":\"stated\",\"note\":\"Asks for a minimal change and says not to restructure the module.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Says exports can reach about 2 million rows, so memory matters, and the fix must not load all rows or build the output in memory."
+      },
+      {
+        "status": "stated",
+        "note": "The signature export_orders_csv(db, path) must stay the same because three callers use it."
+      },
+      {
+        "status": "stated",
+        "note": "Gives the header and column order: id,customer_name,total,created_at."
+      },
+      {
+        "status": "stated",
+        "note": "Says not to add dependencies and to ask before adding any."
+      },
+      {
+        "status": "stated",
+        "note": "Names the per-row customer lookup (N+1 query) as the main cause, as the person reported."
+      },
+      {
+        "status": "stated",
+        "note": "Requires each row to be written to the file as it is produced, not built into one big string."
+      },
+      {
+        "status": "stated",
+        "note": "Says customer names can contain commas, so every value must be properly CSV-quoted."
+      },
+      {
+        "status": "stated",
+        "note": "Requires running the existing tests in tests/test_export.py."
+      },
+      {
+        "status": "stated",
+        "note": "Asks for a minimal change and says not to restructure the module."
+      }
+    ],
+    "invented": []
+  },
+  "session": "9f47bd39-2c17-435e-8877-7a1ae6f9297f",
+  "cost_usd": 0.0298706,
+  "output_tokens": 483,
+  "denials": []
+}

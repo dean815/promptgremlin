@@ -1,0 +1,52 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt doesn't name the landlord, Ms. Alvarez.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't give the apartment number, 4B.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say the heater stopped working on October 2.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't mention the October 3 phone report or that it got no response.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't mention overnight temperatures in the 40s \u00b0F.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't ask for a repair within 48 hours.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't cite lease section 12 or the landlord's duty to provide heat.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't ask for a polite but firm tone.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say to avoid threatening to withhold rent.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't set the under-150-word limit.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt doesn't name the landlord, Ms. Alvarez."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't give the apartment number, 4B."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say the heater stopped working on October 2."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't mention the October 3 phone report or that it got no response."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't mention overnight temperatures in the 40s \u00b0F."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't ask for a repair within 48 hours."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't cite lease section 12 or the landlord's duty to provide heat."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't ask for a polite but firm tone."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say to avoid threatening to withhold rent."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't set the under-150-word limit."
+      }
+    ],
+    "invented": []
+  },
+  "session": "8530eda1-2055-460e-8bd9-4c65a25fe145",
+  "cost_usd": 0.017590599999999998,
+  "output_tokens": 421,
+  "denials": []
+}

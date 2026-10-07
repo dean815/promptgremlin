@@ -1,0 +1,19 @@
+{
+  "text": "{\"dropped\":[],\"added_harmful\":[],\"added_neutral\":[\"Asks for a warm, skimmable tone for Etsy shoppers\",\"Says to use plain prose only, with no headings, bullets or title\",\"Assigns the first paragraph to introducing the mug and its appeal, and the second to care instructions\",\"Suggests framing the mug as appealing to use or to give as a gift\",\"Gives examples of details not to invent (glaze, clay, color, capacity, weight, design, process) and explains why: wrong details lead to returns\",\"Asks for only the two paragraphs, with nothing before or after\"]}",
+  "structured": {
+    "dropped": [],
+    "added_harmful": [],
+    "added_neutral": [
+      "Asks for a warm, skimmable tone for Etsy shoppers",
+      "Says to use plain prose only, with no headings, bullets or title",
+      "Assigns the first paragraph to introducing the mug and its appeal, and the second to care instructions",
+      "Suggests framing the mug as appealing to use or to give as a gift",
+      "Gives examples of details not to invent (glaze, clay, color, capacity, weight, design, process) and explains why: wrong details lead to returns",
+      "Asks for only the two paragraphs, with nothing before or after"
+    ]
+  },
+  "cost_usd": 0.018222,
+  "tokens": 2275,
+  "output_tokens": 412,
+  "denials": []
+}

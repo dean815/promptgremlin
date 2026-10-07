@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"\\\"a kickoff for engineering and design leads on a B2B note-taking app\\\"\"},{\"status\":\"stated\",\"note\":\"The prompt names engineering and design leads as the readers, for a kickoff.\"},{\"status\":\"stated\",\"note\":\"In-scope items listed: create a workspace, invite members by email, shared notes inside a workspace.\"},{\"status\":\"stated\",\"note\":\"\\\"Two roles only: admin and member.\\\"\"},{\"status\":\"stated\",\"note\":\"Out-of-scope items listed: billing changes, SSO, guest access.\"},{\"status\":\"stated\",\"note\":\"The metric is given as 20% of paid accounts creating a workspace within 60 days. The prompt adds \\\"of launch\\\", which is a small interpretation.\"},{\"status\":\"stated\",\"note\":\"\\\"Length: at most about 2 pages.\\\"\"},{\"status\":\"stated\",\"note\":\"Migration of existing shared notes stays an open question, with the instruction \\\"do not recommend or decide.\\\"\"}],\"invented\":[\"The kickoff decision is \\\"whether to commit to building team workspaces, and what v1 includes\\\". The user only said the PRD is for a kickoff and never said what decision it supports.\",\"\\\"It is a draft for me to edit.\\\" The user never said this.\",\"The 60-day window is measured \\\"of launch\\\". The user did not give a start point for the 60 days.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "\"a kickoff for engineering and design leads on a B2B note-taking app\""
+      },
+      {
+        "status": "stated",
+        "note": "The prompt names engineering and design leads as the readers, for a kickoff."
+      },
+      {
+        "status": "stated",
+        "note": "In-scope items listed: create a workspace, invite members by email, shared notes inside a workspace."
+      },
+      {
+        "status": "stated",
+        "note": "\"Two roles only: admin and member.\""
+      },
+      {
+        "status": "stated",
+        "note": "Out-of-scope items listed: billing changes, SSO, guest access."
+      },
+      {
+        "status": "stated",
+        "note": "The metric is given as 20% of paid accounts creating a workspace within 60 days. The prompt adds \"of launch\", which is a small interpretation."
+      },
+      {
+        "status": "stated",
+        "note": "\"Length: at most about 2 pages.\""
+      },
+      {
+        "status": "stated",
+        "note": "Migration of existing shared notes stays an open question, with the instruction \"do not recommend or decide.\""
+      }
+    ],
+    "invented": [
+      "The kickoff decision is \"whether to commit to building team workspaces, and what v1 includes\". The user only said the PRD is for a kickoff and never said what decision it supports.",
+      "\"It is a draft for me to edit.\" The user never said this.",
+      "The 60-day window is measured \"of launch\". The user did not give a start point for the 60 days."
+    ]
+  },
+  "session": "fbc05741-48e4-40ad-ae73-81e2ec7b1889",
+  "cost_usd": 0.0312706,
+  "output_tokens": 723,
+  "denials": []
+}

@@ -1,0 +1,50 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never says the product is a B2B note-taking app. It only calls it 'our product'.\"},{\"status\":\"missing\",\"note\":\"The prompt names the readers as product, design, and engineering, and the purpose as scoping and estimating. It never says the readers are the engineering and design leads or that this is for a kickoff.\"},{\"status\":\"missing\",\"note\":\"The v1 scope (create a workspace, invite members by email, shared notes) isn't stated. The prompt leaves it for the interview.\"},{\"status\":\"missing\",\"note\":\"The admin and member roles aren't stated. Roles are left as an interview topic.\"},{\"status\":\"missing\",\"note\":\"Billing, SSO, and guest access aren't listed as out of scope. The prompt even asks 'how billing changes', which suggests billing is in scope.\"},{\"status\":\"missing\",\"note\":\"The success metric (20% of paid accounts create a workspace within 60 days) isn't stated. Metrics are marked TBD.\"},{\"status\":\"missing\",\"note\":\"There's no length limit. Nine detailed sections with numbered requirements will likely run past 2 pages.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say to leave migration as an open question. It asks for migration to be covered in the interview and given a full migration-impact section.\"}],\"invented\":[\"The PRD is a shared reference for product, design, and engineering to scope the work, and must be specific enough to estimate from.\",\"The repo has code for accounts, auth, permissions, and billing, plus a docs folder.\",\"Billing will change as part of this feature.\",\"Existing individual accounts need to be migrated into workspaces.\",\"The product currently has no concept of a team workspace.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never says the product is a B2B note-taking app. It only calls it 'our product'."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt names the readers as product, design, and engineering, and the purpose as scoping and estimating. It never says the readers are the engineering and design leads or that this is for a kickoff."
+      },
+      {
+        "status": "missing",
+        "note": "The v1 scope (create a workspace, invite members by email, shared notes) isn't stated. The prompt leaves it for the interview."
+      },
+      {
+        "status": "missing",
+        "note": "The admin and member roles aren't stated. Roles are left as an interview topic."
+      },
+      {
+        "status": "missing",
+        "note": "Billing, SSO, and guest access aren't listed as out of scope. The prompt even asks 'how billing changes', which suggests billing is in scope."
+      },
+      {
+        "status": "missing",
+        "note": "The success metric (20% of paid accounts create a workspace within 60 days) isn't stated. Metrics are marked TBD."
+      },
+      {
+        "status": "missing",
+        "note": "There's no length limit. Nine detailed sections with numbered requirements will likely run past 2 pages."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say to leave migration as an open question. It asks for migration to be covered in the interview and given a full migration-impact section."
+      }
+    ],
+    "invented": [
+      "The PRD is a shared reference for product, design, and engineering to scope the work, and must be specific enough to estimate from.",
+      "The repo has code for accounts, auth, permissions, and billing, plus a docs folder.",
+      "Billing will change as part of this feature.",
+      "Existing individual accounts need to be migrated into workspaces.",
+      "The product currently has no concept of a team workspace."
+    ]
+  },
+  "session": "cd565fb2-653d-4a33-81ba-d1ef40840ece",
+  "cost_usd": 0.035746599999999996,
+  "output_tokens": 1058,
+  "denials": []
+}

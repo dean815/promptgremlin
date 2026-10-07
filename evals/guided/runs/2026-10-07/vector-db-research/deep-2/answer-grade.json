@@ -1,0 +1,47 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"It gives one clear recommendation: stay on Postgres with pgvector. It also says when to switch to Qdrant.\"},{\"status\":\"met\",\"note\":\"It works out the size of 5M \u00d7 1536-dim vectors and projects growth at 1M per quarter, up to 11M. It then uses that for RAM and cost estimates and covers both with halfvec.\"},{\"status\":\"met\",\"note\":\"The baseline is built around the existing RDS Postgres: instance classes, Multi-AZ and no migration. It doesn't confirm that pgvector 0.8 runs on RDS PG16, but it still treats the existing setup as the starting point.\"},{\"status\":\"met\",\"note\":\"Each option's estimated cost is compared to $500 per month, and it notes where pgvector would go over budget as data grows. Several figures are unverified estimates, but the budget is applied throughout.\"},{\"status\":\"met\",\"note\":\"Tenant_id filtering gets a lot of attention: post-filter recall loss, iterative scans, partitioning, partial indexes, exact scans for small tenants, Qdrant's is_tenant index and Pinecone namespaces. It is also a column in the table.\"},{\"status\":\"met\",\"note\":\"The wide scan looks at more options, but the final comparison table has exactly 4: pgvector, Qdrant, Pinecone and S3 Vectors.\"},{\"status\":\"met\",\"note\":\"It includes a comparison table and one clear recommendation.\"},{\"status\":\"not_met\",\"note\":\"It had no web access, so none of the sources were confirmed to be from the last 12 months. Several are marked [older] and the rest 'date unverified'. It is open about this, but the requirement isn't met.\"},{\"status\":\"met\",\"note\":\"It follows the requested approach: a wide scan of 9 options, then a ranking, then a deep dive on the top 2 (pgvector and Qdrant).\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "It gives one clear recommendation: stay on Postgres with pgvector. It also says when to switch to Qdrant."
+      },
+      {
+        "status": "met",
+        "note": "It works out the size of 5M \u00d7 1536-dim vectors and projects growth at 1M per quarter, up to 11M. It then uses that for RAM and cost estimates and covers both with halfvec."
+      },
+      {
+        "status": "met",
+        "note": "The baseline is built around the existing RDS Postgres: instance classes, Multi-AZ and no migration. It doesn't confirm that pgvector 0.8 runs on RDS PG16, but it still treats the existing setup as the starting point."
+      },
+      {
+        "status": "met",
+        "note": "Each option's estimated cost is compared to $500 per month, and it notes where pgvector would go over budget as data grows. Several figures are unverified estimates, but the budget is applied throughout."
+      },
+      {
+        "status": "met",
+        "note": "Tenant_id filtering gets a lot of attention: post-filter recall loss, iterative scans, partitioning, partial indexes, exact scans for small tenants, Qdrant's is_tenant index and Pinecone namespaces. It is also a column in the table."
+      },
+      {
+        "status": "met",
+        "note": "The wide scan looks at more options, but the final comparison table has exactly 4: pgvector, Qdrant, Pinecone and S3 Vectors."
+      },
+      {
+        "status": "met",
+        "note": "It includes a comparison table and one clear recommendation."
+      },
+      {
+        "status": "not_met",
+        "note": "It had no web access, so none of the sources were confirmed to be from the last 12 months. Several are marked [older] and the rest 'date unverified'. It is open about this, but the requirement isn't met."
+      },
+      {
+        "status": "met",
+        "note": "It follows the requested approach: a wide scan of 9 options, then a ranking, then a deep dive on the top 2 (pgvector and Qdrant)."
+      }
+    ]
+  },
+  "session": "708bef09-20d2-4d37-90ef-a25df5b8f55b",
+  "cost_usd": 0.06300900000000001,
+  "output_tokens": 993,
+  "denials": []
+}

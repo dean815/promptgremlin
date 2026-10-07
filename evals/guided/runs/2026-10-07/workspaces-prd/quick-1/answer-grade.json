@@ -1,0 +1,43 @@
+{
+  "text": "{\"items\":[{\"status\":\"not_met\",\"note\":\"The PRD never says the product is a B2B note-taking app. Section 2 lists 'what the product is' and 'who the users are' as gaps for the author to fill in, so information the person supplied is missing.\"},{\"status\":\"met\",\"note\":\"It is framed as a 'Draft for kickoff review' and repeatedly hands items to the engineering and design leads to flag or decide. The 'Decision requested: whether to build' line is a little odd for a kickoff, but the audience is right.\"},{\"status\":\"met\",\"note\":\"The scope table and requirements R1\u2013R8 cover workspace creation, inviting members by email and shared notes.\"},{\"status\":\"met\",\"note\":\"R9 and R10 set exactly two roles, admin and member, with no others in v1.\"},{\"status\":\"met\",\"note\":\"Billing changes, SSO and guest access are each listed as explicitly out of scope.\"},{\"status\":\"met\",\"note\":\"Section 8 states the primary metric exactly: 20% of paid accounts create a workspace within 60 days.\"},{\"status\":\"not_met\",\"note\":\"The document has ten sections, several tables, a long proposed-metrics list and a repeated gaps/assumptions appendix. That is well over about 2 pages, likely 4\u20135.\"},{\"status\":\"met\",\"note\":\"Migration is open question 1, marked undecided, with no option recommended. It lists illustrative options and things to weigh.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "not_met",
+        "note": "The PRD never says the product is a B2B note-taking app. Section 2 lists 'what the product is' and 'who the users are' as gaps for the author to fill in, so information the person supplied is missing."
+      },
+      {
+        "status": "met",
+        "note": "It is framed as a 'Draft for kickoff review' and repeatedly hands items to the engineering and design leads to flag or decide. The 'Decision requested: whether to build' line is a little odd for a kickoff, but the audience is right."
+      },
+      {
+        "status": "met",
+        "note": "The scope table and requirements R1\u2013R8 cover workspace creation, inviting members by email and shared notes."
+      },
+      {
+        "status": "met",
+        "note": "R9 and R10 set exactly two roles, admin and member, with no others in v1."
+      },
+      {
+        "status": "met",
+        "note": "Billing changes, SSO and guest access are each listed as explicitly out of scope."
+      },
+      {
+        "status": "met",
+        "note": "Section 8 states the primary metric exactly: 20% of paid accounts create a workspace within 60 days."
+      },
+      {
+        "status": "not_met",
+        "note": "The document has ten sections, several tables, a long proposed-metrics list and a repeated gaps/assumptions appendix. That is well over about 2 pages, likely 4\u20135."
+      },
+      {
+        "status": "met",
+        "note": "Migration is open question 1, marked undecided, with no option recommended. It lists illustrative options and things to weigh."
+      }
+    ]
+  },
+  "session": "6d7128b6-1a37-4c2b-9c33-842f3dde7625",
+  "cost_usd": 0.049081,
+  "output_tokens": 723,
+  "denials": []
+}

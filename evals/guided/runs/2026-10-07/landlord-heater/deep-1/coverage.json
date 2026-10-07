@@ -1,0 +1,55 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"\\\"Ms. Alvarez is my landlord.\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"My apartment, 4B\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"has had no heat since October 2\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"I phoned her on October 3 and have heard nothing back\\\", and it asks for a written follow-up.\"},{\"status\":\"stated\",\"note\":\"\\\"Overnight temperatures are in the 40s \u00b0F.\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"Asks for the heater to be repaired within 48 hours.\\\"\"},{\"status\":\"stated\",\"note\":\"Says section 12 of the lease requires the landlord to provide heat and tells the email to cite it.\"},{\"status\":\"stated\",\"note\":\"\\\"Tone: polite but firm.\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"no mention of withholding rent\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"under 150 words in total, subject line and sign-off included\\\"\"}],\"invented\":[\"It bans any mention of the city (\\\"no mention of the city\\\"). The person said they had no preference on mentioning the city, and the prompt does not leave that choice to the receiver.\",\"It bans all threats (\\\"no threats\\\"). The person only ruled out threatening to withhold rent.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "\"Ms. Alvarez is my landlord.\""
+      },
+      {
+        "status": "stated",
+        "note": "\"My apartment, 4B\""
+      },
+      {
+        "status": "stated",
+        "note": "\"has had no heat since October 2\""
+      },
+      {
+        "status": "stated",
+        "note": "\"I phoned her on October 3 and have heard nothing back\", and it asks for a written follow-up."
+      },
+      {
+        "status": "stated",
+        "note": "\"Overnight temperatures are in the 40s \u00b0F.\""
+      },
+      {
+        "status": "stated",
+        "note": "\"Asks for the heater to be repaired within 48 hours.\""
+      },
+      {
+        "status": "stated",
+        "note": "Says section 12 of the lease requires the landlord to provide heat and tells the email to cite it."
+      },
+      {
+        "status": "stated",
+        "note": "\"Tone: polite but firm.\""
+      },
+      {
+        "status": "stated",
+        "note": "\"no mention of withholding rent\""
+      },
+      {
+        "status": "stated",
+        "note": "\"under 150 words in total, subject line and sign-off included\""
+      }
+    ],
+    "invented": [
+      "It bans any mention of the city (\"no mention of the city\"). The person said they had no preference on mentioning the city, and the prompt does not leave that choice to the receiver.",
+      "It bans all threats (\"no threats\"). The person only ruled out threatening to withhold rent."
+    ]
+  },
+  "session": "8acef6dd-2905-494c-8b5d-f1c1779a3ed6",
+  "cost_usd": 0.029790599999999997,
+  "output_tokens": 725,
+  "denials": []
+}

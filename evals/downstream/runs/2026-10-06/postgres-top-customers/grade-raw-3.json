@@ -1,0 +1,34 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"The query is valid PostgreSQL. It uses only customers(id, name, email), orders(id, customer_id, created_at, status) and order_items(order_id, quantity, unit_price_cents). ROUND(numeric, 2) works because the bigint sum divided by 100.0 gives a numeric. The GROUP BY is valid.\"},{\"pass\":true,\"note\":\"Revenue is SUM(oi.quantity * oi.unit_price_cents), grouped by customer. A dollar version is also provided. The overflow note is accurate: int * int is evaluated in int and can overflow before SUM.\"},{\"pass\":true,\"note\":\"The filter o.created_at >= now() - interval '90 days' is a correct rolling 90-day window on orders.created_at. The note offers a midnight-aligned alternative.\"},{\"pass\":true,\"note\":\"Using status = 'paid' excludes refunded orders. It also excludes cancelled ones, which goes beyond the literal request. The choice is reasonable, since cancelled orders aren't revenue, and the answer states it openly and gives the literal alternative (status <> 'refunded').\"},{\"pass\":true,\"note\":\"Ends with ORDER BY revenue_cents DESC LIMIT 5. The tie-breaking caveat is a useful extra.\"}],\"unasked_content\":[\"The default filter (status = 'paid') also drops cancelled orders, which is narrower than the literal ask of excluding only refunded orders. This is minor because the answer says so and gives the one-line change to match the literal ask.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "The query is valid PostgreSQL. It uses only customers(id, name, email), orders(id, customer_id, created_at, status) and order_items(order_id, quantity, unit_price_cents). ROUND(numeric, 2) works because the bigint sum divided by 100.0 gives a numeric. The GROUP BY is valid."
+      },
+      {
+        "pass": true,
+        "note": "Revenue is SUM(oi.quantity * oi.unit_price_cents), grouped by customer. A dollar version is also provided. The overflow note is accurate: int * int is evaluated in int and can overflow before SUM."
+      },
+      {
+        "pass": true,
+        "note": "The filter o.created_at >= now() - interval '90 days' is a correct rolling 90-day window on orders.created_at. The note offers a midnight-aligned alternative."
+      },
+      {
+        "pass": true,
+        "note": "Using status = 'paid' excludes refunded orders. It also excludes cancelled ones, which goes beyond the literal request. The choice is reasonable, since cancelled orders aren't revenue, and the answer states it openly and gives the literal alternative (status <> 'refunded')."
+      },
+      {
+        "pass": true,
+        "note": "Ends with ORDER BY revenue_cents DESC LIMIT 5. The tie-breaking caveat is a useful extra."
+      }
+    ],
+    "unasked_content": [
+      "The default filter (status = 'paid') also drops cancelled orders, which is narrower than the literal ask of excluding only refunded orders. This is minor because the answer says so and gives the one-line change to match the literal ask."
+    ]
+  },
+  "cost_usd": 0.031912800000000005,
+  "tokens": 3214,
+  "output_tokens": 897,
+  "denials": []
+}

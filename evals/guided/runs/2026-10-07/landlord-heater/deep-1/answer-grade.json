@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"The email is addressed \\\"Dear Ms. Alvarez.\\\"\"},{\"status\":\"met\",\"note\":\"Apartment 4B is named in the subject line and in the body.\"},{\"status\":\"met\",\"note\":\"It says the heat \\\"has been out since October 2.\\\"\"},{\"status\":\"met\",\"note\":\"It mentions the October 3 phone call and says \\\"I haven't heard back from you since I called.\\\"\"},{\"status\":\"met\",\"note\":\"It says overnight temperatures are \\\"in the 40s.\\\" It doesn't write \u00b0F, but the meaning is clear.\"},{\"status\":\"met\",\"note\":\"It asks for the heater to be repaired \\\"within 48 hours of receiving this email.\\\"\"},{\"status\":\"met\",\"note\":\"It says \\\"Section 12 of my lease requires the landlord to provide heat.\\\"\"},{\"status\":\"met\",\"note\":\"The tone is courteous (it thanks her and offers to sort out any delay), but the request is clear and has a deadline.\"},{\"status\":\"met\",\"note\":\"It doesn't mention rent, so there's no threat to withhold it.\"},{\"status\":\"met\",\"note\":\"It's about 105 words with the subject line, which is under 150.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "The email is addressed \"Dear Ms. Alvarez.\""
+      },
+      {
+        "status": "met",
+        "note": "Apartment 4B is named in the subject line and in the body."
+      },
+      {
+        "status": "met",
+        "note": "It says the heat \"has been out since October 2.\""
+      },
+      {
+        "status": "met",
+        "note": "It mentions the October 3 phone call and says \"I haven't heard back from you since I called.\""
+      },
+      {
+        "status": "met",
+        "note": "It says overnight temperatures are \"in the 40s.\" It doesn't write \u00b0F, but the meaning is clear."
+      },
+      {
+        "status": "met",
+        "note": "It asks for the heater to be repaired \"within 48 hours of receiving this email.\""
+      },
+      {
+        "status": "met",
+        "note": "It says \"Section 12 of my lease requires the landlord to provide heat.\""
+      },
+      {
+        "status": "met",
+        "note": "The tone is courteous (it thanks her and offers to sort out any delay), but the request is clear and has a deadline."
+      },
+      {
+        "status": "met",
+        "note": "It doesn't mention rent, so there's no threat to withhold it."
+      },
+      {
+        "status": "met",
+        "note": "It's about 105 words with the subject line, which is under 150."
+      }
+    ]
+  },
+  "session": "d02e513a-8ce9-4fb1-a2cb-89c4b89360e5",
+  "cost_usd": 0.023937,
+  "output_tokens": 723,
+  "denials": []
+}

@@ -1,0 +1,19 @@
+{
+  "text": "{\"dropped\":[],\"added_harmful\":[\"Makes up a reason for the summary that the user never gave: 'A teammate who missed this meeting needs to catch up quickly.'\"],\"added_neutral\":[\"Says the bullets should cover decisions, action items with owners and due dates, and open questions.\",\"Limits the summary to what the notes say and leaves out anything unclear instead of guessing.\",\"Asks for only the 5 bullets, with no introduction or closing remarks.\",\"Turns '5 bullets' into 'exactly 5 bullets.'\"]}",
+  "structured": {
+    "dropped": [],
+    "added_harmful": [
+      "Makes up a reason for the summary that the user never gave: 'A teammate who missed this meeting needs to catch up quickly.'"
+    ],
+    "added_neutral": [
+      "Says the bullets should cover decisions, action items with owners and due dates, and open questions.",
+      "Limits the summary to what the notes say and leaves out anything unclear instead of guessing.",
+      "Asks for only the 5 bullets, with no introduction or closing remarks.",
+      "Turns '5 bullets' into 'exactly 5 bullets.'"
+    ]
+  },
+  "cost_usd": 0.016998,
+  "tokens": 2086,
+  "output_tokens": 436,
+  "denials": []
+}

@@ -1,0 +1,46 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Prompt says the CEO wants to know whether the Pro churn jump is tied to the July 49\u219269 USD price increase, and the first bullet has to answer that.\"},{\"status\":\"stated\",\"note\":\"Prompt says to exclude every row where is_trial is yes.\"},{\"status\":\"stated\",\"note\":\"Prompt says to exclude every row whose email ends in @ourco.test, which it calls internal test accounts.\"},{\"status\":\"stated\",\"note\":\"Prompt defines churn as an account having a cancel_month.\"},{\"status\":\"stated\",\"note\":\"Prompt says the output is for a CEO audience.\"},{\"status\":\"stated\",\"note\":\"Prompt asks for a summary of at most 5 bullets.\"},{\"status\":\"stated\",\"note\":\"Prompt asks for one suggested chart that is described but not drawn (axes, series, takeaway).\"},{\"status\":\"stated\",\"note\":\"Prompt asks for a low, medium or high confidence level, with a reason tied to the counts and the small sample.\"}],\"invented\":[\"Claims that 'Pro cancellations appear to have jumped in August and September 2026'. The user never said this. They only asked whether the price increase drove Pro churn.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Prompt says the CEO wants to know whether the Pro churn jump is tied to the July 49\u219269 USD price increase, and the first bullet has to answer that."
+      },
+      {
+        "status": "stated",
+        "note": "Prompt says to exclude every row where is_trial is yes."
+      },
+      {
+        "status": "stated",
+        "note": "Prompt says to exclude every row whose email ends in @ourco.test, which it calls internal test accounts."
+      },
+      {
+        "status": "stated",
+        "note": "Prompt defines churn as an account having a cancel_month."
+      },
+      {
+        "status": "stated",
+        "note": "Prompt says the output is for a CEO audience."
+      },
+      {
+        "status": "stated",
+        "note": "Prompt asks for a summary of at most 5 bullets."
+      },
+      {
+        "status": "stated",
+        "note": "Prompt asks for one suggested chart that is described but not drawn (axes, series, takeaway)."
+      },
+      {
+        "status": "stated",
+        "note": "Prompt asks for a low, medium or high confidence level, with a reason tied to the counts and the small sample."
+      }
+    ],
+    "invented": [
+      "Claims that 'Pro cancellations appear to have jumped in August and September 2026'. The user never said this. They only asked whether the price increase drove Pro churn."
+    ]
+  },
+  "session": "36e34778-477e-426b-bf1e-0848ac277df1",
+  "cost_usd": 0.0444826,
+  "output_tokens": 644,
+  "denials": []
+}

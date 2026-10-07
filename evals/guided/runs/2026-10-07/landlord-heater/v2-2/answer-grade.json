@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"not_met\",\"note\":\"Ms. Alvarez's name is missing. The draft just says \\\"[landlord's name]\\\".\"},{\"status\":\"not_met\",\"note\":\"Apartment 4B isn't mentioned. There's only a \\\"[address]\\\" blank in the subject line.\"},{\"status\":\"not_met\",\"note\":\"October 2 isn't given. The draft says \\\"[date]\\\" instead.\"},{\"status\":\"not_met\",\"note\":\"The October 3 phone call and the lack of any reply aren't mentioned at all.\"},{\"status\":\"not_met\",\"note\":\"There's no mention of overnight temperatures in the 40s \u00b0F. It only offers a generic \\\"[cold weather / ...]\\\" blank.\"},{\"status\":\"not_met\",\"note\":\"The 48-hour deadline is only a bracketed suggestion (\\\"[e.g. 48 hours]\\\"), not a firm request.\"},{\"status\":\"not_met\",\"note\":\"The lease (section 12) and the landlord's duty to provide heat aren't mentioned.\"},{\"status\":\"not_met\",\"note\":\"The tone is polite but too soft. Without the lease clause, the earlier unanswered report, or a firm deadline, it comes across as a gentle request rather than polite but firm.\"},{\"status\":\"met\",\"note\":\"There's no threat to withhold rent.\"},{\"status\":\"met\",\"note\":\"It's about 110 words, so it's under the 150-word limit.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "not_met",
+        "note": "Ms. Alvarez's name is missing. The draft just says \"[landlord's name]\"."
+      },
+      {
+        "status": "not_met",
+        "note": "Apartment 4B isn't mentioned. There's only a \"[address]\" blank in the subject line."
+      },
+      {
+        "status": "not_met",
+        "note": "October 2 isn't given. The draft says \"[date]\" instead."
+      },
+      {
+        "status": "not_met",
+        "note": "The October 3 phone call and the lack of any reply aren't mentioned at all."
+      },
+      {
+        "status": "not_met",
+        "note": "There's no mention of overnight temperatures in the 40s \u00b0F. It only offers a generic \"[cold weather / ...]\" blank."
+      },
+      {
+        "status": "not_met",
+        "note": "The 48-hour deadline is only a bracketed suggestion (\"[e.g. 48 hours]\"), not a firm request."
+      },
+      {
+        "status": "not_met",
+        "note": "The lease (section 12) and the landlord's duty to provide heat aren't mentioned."
+      },
+      {
+        "status": "not_met",
+        "note": "The tone is polite but too soft. Without the lease clause, the earlier unanswered report, or a firm deadline, it comes across as a gentle request rather than polite but firm."
+      },
+      {
+        "status": "met",
+        "note": "There's no threat to withhold rent."
+      },
+      {
+        "status": "met",
+        "note": "It's about 110 words, so it's under the 150-word limit."
+      }
+    ]
+  },
+  "session": "26a85dab-ed0c-4e48-b5a0-b1b91c32916f",
+  "cost_usd": 0.029877,
+  "output_tokens": 1008,
+  "denials": []
+}

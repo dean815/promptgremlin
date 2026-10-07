@@ -1,0 +1,19 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt treats this as a general vector database pick. pgvector is one of six candidates, but the decision is never put as 'keep Postgres with pgvector, or adopt a dedicated vector database'.\"}],\"invented\":[\"The fixed list of six candidates (pgvector, Qdrant, Weaviate, Milvus, Pinecone, Chroma) is set as the required scope. The person never named any candidates.\",\"The cost benchmarks at 1M and 100M vectors are invented scale points. They don't come from the person's real 5M-vector scale, and the prompt presents them as the scales that matter.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt treats this as a general vector database pick. pgvector is one of six candidates, but the decision is never put as 'keep Postgres with pgvector, or adopt a dedicated vector database'."
+      }
+    ],
+    "invented": [
+      "The fixed list of six candidates (pgvector, Qdrant, Weaviate, Milvus, Pinecone, Chroma) is set as the required scope. The person never named any candidates.",
+      "The cost benchmarks at 1M and 100M vectors are invented scale points. They don't come from the person's real 5M-vector scale, and the prompt presents them as the scales that matter."
+    ]
+  },
+  "session": "5b059d98-3fbe-41ff-9350-4885c44f7463",
+  "cost_usd": 0.029162599999999997,
+  "output_tokens": 736,
+  "denials": []
+}

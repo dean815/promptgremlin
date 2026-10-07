@@ -1,0 +1,47 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt says 'our B2B note-taking app'.\"},{\"status\":\"stated\",\"note\":\"The prompt names a kickoff for engineering and design leads.\"},{\"status\":\"stated\",\"note\":\"The v1 in-scope list has creating a workspace, inviting members by email, and shared notes inside a workspace.\"},{\"status\":\"stated\",\"note\":\"The prompt says 'Two roles only: admin and member.'\"},{\"status\":\"stated\",\"note\":\"The prompt lists billing changes, SSO, and guest access explicitly as non-goals.\"},{\"status\":\"stated\",\"note\":\"The prompt gives 20% of paid accounts creating a workspace within 60 days and presents it as the person's own target. It adds 'of launch' as the starting point for the 60 days.\"},{\"status\":\"stated\",\"note\":\"The prompt asks for about 2 pages, not 3, and turns that into roughly 900 to 1,100 words.\"},{\"status\":\"stated\",\"note\":\"The prompt says to keep migration open and not resolve it, and to state the question and why it matters.\"}],\"invented\":[\"The PRD's purpose is said to be helping the leads 'decide whether to start v1 and what to scope first' and to be read before the meeting. The person only said it was for a kickoff.\",\"The 60-day window is measured 'of launch', a starting point the person never gave.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt says 'our B2B note-taking app'."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt names a kickoff for engineering and design leads."
+      },
+      {
+        "status": "stated",
+        "note": "The v1 in-scope list has creating a workspace, inviting members by email, and shared notes inside a workspace."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says 'Two roles only: admin and member.'"
+      },
+      {
+        "status": "stated",
+        "note": "The prompt lists billing changes, SSO, and guest access explicitly as non-goals."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt gives 20% of paid accounts creating a workspace within 60 days and presents it as the person's own target. It adds 'of launch' as the starting point for the 60 days."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks for about 2 pages, not 3, and turns that into roughly 900 to 1,100 words."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to keep migration open and not resolve it, and to state the question and why it matters."
+      }
+    ],
+    "invented": [
+      "The PRD's purpose is said to be helping the leads 'decide whether to start v1 and what to scope first' and to be read before the meeting. The person only said it was for a kickoff.",
+      "The 60-day window is measured 'of launch', a starting point the person never gave."
+    ]
+  },
+  "session": "3d6a75b7-cf28-41e1-9800-9ffd0640a607",
+  "cost_usd": 0.0303786,
+  "output_tokens": 654,
+  "denials": []
+}

@@ -1,0 +1,9 @@
+{
+  "text": "**Subject: Re: Broken on arrival AGAIN**\n\nHi Jordan,\n\nI'm so sorry, two cracked lids in a row is frustrating, and I completely understand why you're upset, especially after four years as a customer.\n\nI'd like to make this right. I'm happy to send a replacement kettle for order #58213, shipped with extra protective packaging and a priority check on our end before it goes out. You won't need to send the damaged one back.\n\nIf you could reply with a quick photo of the cracked lid, I'll get the replacement moving right away.\n\nThank you for sticking with us, and again, I'm truly sorry for the trouble.\n\nWarmly,\n[Your name]\n\n---\n\n*(~110 words)*",
+  "structured": null,
+  "cost_usd": 0.005690000000000001,
+  "tokens": 1077,
+  "output_tokens": 231,
+  "denials": [],
+  "sent": "draft a reply to this customer email. apologize, but don't promise a refund, offer a replacement instead. keep it under 120 words and friendly\n\nSubject: Broken on arrival AGAIN\n\nThis is the second kettle from you that arrived with a cracked lid. I've been a customer for 4 years and I'm honestly done. I want my money back. Order #58213.\n- Jordan"
+}

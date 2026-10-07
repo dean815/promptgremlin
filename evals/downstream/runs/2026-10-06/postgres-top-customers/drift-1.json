@@ -1,0 +1,23 @@
+{
+  "text": "{\"dropped\":[],\"added_harmful\":[\"Invented purpose: 'I'm building a report of our best customers.' The person never said this.\",\"Invented reason: 'so the totals reflect money we kept.' The person only asked to exclude refunded orders. This wording could push the model to subtract partial refunds from revenue, which changes what is being measured.\",\"'Return exactly 5 rows' promises something the query may not deliver. Fewer than 5 customers could qualify, and ties at 5th place aren't addressed. The person only said 'top 5'.\"],\"added_neutral\":[\"Defines 'last 90 days' as order_date >= CURRENT_DATE - INTERVAL '90 days'.\",\"Defines revenue as the sum of order amounts. This may not fit if the schema stores line items.\",\"Requires a single query, sorted by revenue from highest to lowest.\",\"Output columns: customer id, customer name if the schema has one, and total revenue.\",\"Tells the model to resolve unclear points and state its assumptions: whether refunds are a status or a separate table, partial refunds, and whether amounts include tax or shipping.\",\"Output format: one SQL code block, then a short list of assumptions, and nothing after it.\"]}",
+  "structured": {
+    "dropped": [],
+    "added_harmful": [
+      "Invented purpose: 'I'm building a report of our best customers.' The person never said this.",
+      "Invented reason: 'so the totals reflect money we kept.' The person only asked to exclude refunded orders. This wording could push the model to subtract partial refunds from revenue, which changes what is being measured.",
+      "'Return exactly 5 rows' promises something the query may not deliver. Fewer than 5 customers could qualify, and ties at 5th place aren't addressed. The person only said 'top 5'."
+    ],
+    "added_neutral": [
+      "Defines 'last 90 days' as order_date >= CURRENT_DATE - INTERVAL '90 days'.",
+      "Defines revenue as the sum of order amounts. This may not fit if the schema stores line items.",
+      "Requires a single query, sorted by revenue from highest to lowest.",
+      "Output columns: customer id, customer name if the schema has one, and total revenue.",
+      "Tells the model to resolve unclear points and state its assumptions: whether refunds are a status or a separate table, partial refunds, and whether amounts include tax or shipping.",
+      "Output format: one SQL code block, then a short list of assumptions, and nothing after it."
+    ]
+  },
+  "cost_usd": 0.030522000000000004,
+  "tokens": 2908,
+  "output_tokens": 1015,
+  "denials": []
+}

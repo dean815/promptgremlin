@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"The description has exactly two short paragraphs: one about use and gifting, and one about care.\"},{\"pass\":true,\"note\":\"It says \\\"this mug is dishwasher safe.\\\"\"},{\"pass\":true,\"note\":\"It says \\\"It is not microwave safe\\\" and suggests heating the drink another way.\"},{\"pass\":true,\"note\":\"It gives no clay type, glaze, color, dimensions or capacity. Suggested drinks and gift occasions describe uses, not product details.\"},{\"pass\":true,\"note\":\"It's warm and clear and could be pasted into an Etsy listing as is. It's a little generic, but it works.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "The description has exactly two short paragraphs: one about use and gifting, and one about care."
+      },
+      {
+        "pass": true,
+        "note": "It says \"this mug is dishwasher safe.\""
+      },
+      {
+        "pass": true,
+        "note": "It says \"It is not microwave safe\" and suggests heating the drink another way."
+      },
+      {
+        "pass": true,
+        "note": "It gives no clay type, glaze, color, dimensions or capacity. Suggested drinks and gift occasions describe uses, not product details."
+      },
+      {
+        "pass": true,
+        "note": "It's warm and clear and could be pasted into an Etsy listing as is. It's a little generic, but it works."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0175688,
+  "tokens": 2147,
+  "output_tokens": 413,
+  "denials": []
+}

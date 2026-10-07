@@ -1,0 +1,50 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt states the decision: keep using Postgres with pgvector or adopt a dedicated vector database.\"},{\"status\":\"stated\",\"note\":\"The prompt states about 5 million embeddings at 1536 dimensions, growing about 1 million per quarter.\"},{\"status\":\"stated\",\"note\":\"The prompt says they already run Postgres 16 on AWS RDS.\"},{\"status\":\"stated\",\"note\":\"The prompt states a budget under $500 per month, though it adds the word 'all-in'.\"},{\"status\":\"stated\",\"note\":\"The prompt says every query must filter by tenant_id because the system is multi-tenant.\"},{\"status\":\"stated\",\"note\":\"The prompt caps the comparison at 4 options in total, with pgvector included.\"},{\"status\":\"stated\",\"note\":\"The output order puts a comparison table first and one clear recommendation third.\"},{\"status\":\"stated\",\"note\":\"The prompt limits sources to the last 12 months (since October 2025) and labels any older sources separately.\"},{\"status\":\"stated\",\"note\":\"The steps run a wide scan first, then a deep dive on the top 2.\"}],\"invented\":[\"The budget is described as 'all-in'. The person only said under $500 per month and never said what the figure covers.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt states the decision: keep using Postgres with pgvector or adopt a dedicated vector database."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt states about 5 million embeddings at 1536 dimensions, growing about 1 million per quarter."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says they already run Postgres 16 on AWS RDS."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt states a budget under $500 per month, though it adds the word 'all-in'."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says every query must filter by tenant_id because the system is multi-tenant."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt caps the comparison at 4 options in total, with pgvector included."
+      },
+      {
+        "status": "stated",
+        "note": "The output order puts a comparison table first and one clear recommendation third."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt limits sources to the last 12 months (since October 2025) and labels any older sources separately."
+      },
+      {
+        "status": "stated",
+        "note": "The steps run a wide scan first, then a deep dive on the top 2."
+      }
+    ],
+    "invented": [
+      "The budget is described as 'all-in'. The person only said under $500 per month and never said what the figure covers."
+    ]
+  },
+  "session": "3140fa52-a8ae-4a7f-9b6c-874174c64bcc",
+  "cost_usd": 0.0329426,
+  "output_tokens": 657,
+  "denials": []
+}

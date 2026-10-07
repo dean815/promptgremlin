@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never says the product is a B2B note-taking app. It only says \\\"this product\\\" and \\\"resources\\\", and leaves the receiver to work it out from the repo.\"},{\"status\":\"missing\",\"note\":\"The readers are never named as the engineering and design leads, and the doc is never framed as a kickoff. The prompt only says \\\"the team can review before any engineering starts\\\".\"},{\"status\":\"missing\",\"note\":\"The v1 scope (creating a workspace, inviting members by email, shared notes) is not stated. The receiver has to infer it or ask.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say v1 has only admin and member roles. It lists roles as an interview topic instead.\"},{\"status\":\"missing\",\"note\":\"Billing changes, SSO and guest access are not listed as out of scope. The prompt even asks for a Billing and limits section, which invites the receiver to cover billing.\"},{\"status\":\"missing\",\"note\":\"The success metric (20% of paid accounts create a workspace within 60 days) is not given. It is only listed as an interview topic.\"},{\"status\":\"contradicted\",\"note\":\"The prompt asks for something a reviewer can read in about 10 minutes, across ten required sections. That is well beyond the person's limit of about 2 pages.\"},{\"status\":\"missing\",\"note\":\"Migration comes up only as an interview topic about individual accounts. The prompt never says to leave migration of existing shared notes as an open question.\"}],\"invented\":[\"The motivation is that multiple users can share and manage resources together instead of each working in an individual account.\",\"Nothing is approved to build yet, and the PRD is for review before any engineering starts.\",\"Billing and limits, and a rollout plan, are treated as relevant sections of the PRD.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never says the product is a B2B note-taking app. It only says \"this product\" and \"resources\", and leaves the receiver to work it out from the repo."
+      },
+      {
+        "status": "missing",
+        "note": "The readers are never named as the engineering and design leads, and the doc is never framed as a kickoff. The prompt only says \"the team can review before any engineering starts\"."
+      },
+      {
+        "status": "missing",
+        "note": "The v1 scope (creating a workspace, inviting members by email, shared notes) is not stated. The receiver has to infer it or ask."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say v1 has only admin and member roles. It lists roles as an interview topic instead."
+      },
+      {
+        "status": "missing",
+        "note": "Billing changes, SSO and guest access are not listed as out of scope. The prompt even asks for a Billing and limits section, which invites the receiver to cover billing."
+      },
+      {
+        "status": "missing",
+        "note": "The success metric (20% of paid accounts create a workspace within 60 days) is not given. It is only listed as an interview topic."
+      },
+      {
+        "status": "contradicted",
+        "note": "The prompt asks for something a reviewer can read in about 10 minutes, across ten required sections. That is well beyond the person's limit of about 2 pages."
+      },
+      {
+        "status": "missing",
+        "note": "Migration comes up only as an interview topic about individual accounts. The prompt never says to leave migration of existing shared notes as an open question."
+      }
+    ],
+    "invented": [
+      "The motivation is that multiple users can share and manage resources together instead of each working in an individual account.",
+      "Nothing is approved to build yet, and the PRD is for review before any engineering starts.",
+      "Billing and limits, and a rollout plan, are treated as relevant sections of the PRD."
+    ]
+  },
+  "session": "aa951110-8cf1-44ad-976c-6999d9da44fa",
+  "cost_usd": 0.0363986,
+  "output_tokens": 1095,
+  "denials": []
+}

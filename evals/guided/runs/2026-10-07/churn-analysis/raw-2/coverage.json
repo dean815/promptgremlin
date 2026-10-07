@@ -1,0 +1,44 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never brings up the July Pro price increase from 49 to 69, and it doesn't ask whether that increase drove churn.\"},{\"status\":\"missing\",\"note\":\"Nothing in the prompt says to exclude trial accounts.\"},{\"status\":\"missing\",\"note\":\"Nothing in the prompt says to exclude internal @ourco.test accounts.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't define churn as having a cancel_month.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say the audience is the CEO.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't ask for a summary of at most 5 bullets.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't ask for a suggested chart.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't ask how confident the conclusion is given the small sample.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never brings up the July Pro price increase from 49 to 69, and it doesn't ask whether that increase drove churn."
+      },
+      {
+        "status": "missing",
+        "note": "Nothing in the prompt says to exclude trial accounts."
+      },
+      {
+        "status": "missing",
+        "note": "Nothing in the prompt says to exclude internal @ourco.test accounts."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't define churn as having a cancel_month."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say the audience is the CEO."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't ask for a summary of at most 5 bullets."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't ask for a suggested chart."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't ask how confident the conclusion is given the small sample."
+      }
+    ],
+    "invented": []
+  },
+  "session": "c1d00c10-a194-4349-99a4-e16d52638c34",
+  "cost_usd": 0.030370599999999998,
+  "output_tokens": 364,
+  "denials": []
+}

@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"It apologizes clearly twice: \\\"I'm so sorry your kettle arrived with a cracked lid again\\\" and \\\"I'm truly sorry for the trouble.\\\"\"},{\"pass\":true,\"note\":\"It never mentions a refund, money back or reimbursement, and nothing in it suggests one is coming.\"},{\"pass\":true,\"note\":\"It offers a replacement plainly: \\\"I'd like to send you a replacement for order #58213,\\\" and says how to accept it.\"},{\"pass\":true,\"note\":\"About 86 words including the subject and sign-off, or about 81 for the body alone. Well under 120.\"},{\"pass\":true,\"note\":\"The tone is warm and friendly, ending with \\\"Warmly.\\\" It notes this is the second time (\\\"cracked lid again\\\") and the customer's loyalty (\\\"four years of being a loyal customer,\\\" \\\"Thank you for sticking with us\\\").\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "It apologizes clearly twice: \"I'm so sorry your kettle arrived with a cracked lid again\" and \"I'm truly sorry for the trouble.\""
+      },
+      {
+        "pass": true,
+        "note": "It never mentions a refund, money back or reimbursement, and nothing in it suggests one is coming."
+      },
+      {
+        "pass": true,
+        "note": "It offers a replacement plainly: \"I'd like to send you a replacement for order #58213,\" and says how to accept it."
+      },
+      {
+        "pass": true,
+        "note": "About 86 words including the subject and sign-off, or about 81 for the body alone. Well under 120."
+      },
+      {
+        "pass": true,
+        "note": "The tone is warm and friendly, ending with \"Warmly.\" It notes this is the second time (\"cracked lid again\") and the customer's loyalty (\"four years of being a loyal customer,\" \"Thank you for sticking with us\")."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0268248,
+  "tokens": 2662,
+  "output_tokens": 841,
+  "denials": []
+}

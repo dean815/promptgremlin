@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never names Midjourney or any other tool.\"},{\"status\":\"missing\",\"note\":\"The prompt mentions Instagram but doesn't say it's a feed post or give the 4:5 portrait aspect ratio.\"},{\"status\":\"missing\",\"note\":\"The subject isn't described: no latte, no leaf latte art, no handmade ceramic cup.\"},{\"status\":\"missing\",\"note\":\"There's no setting, so the dark wood counter is missing.\"},{\"status\":\"missing\",\"note\":\"There's no lighting direction, so the warm early-morning window light is missing.\"},{\"status\":\"missing\",\"note\":\"There's no style direction, so the film-photo look is missing.\"},{\"status\":\"missing\",\"note\":\"The single autumn leaf on the counter isn't mentioned.\"},{\"status\":\"missing\",\"note\":\"It doesn't say to leave people out of the image.\"},{\"status\":\"missing\",\"note\":\"It doesn't say to leave text or a logo out of the image.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never names Midjourney or any other tool."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt mentions Instagram but doesn't say it's a feed post or give the 4:5 portrait aspect ratio."
+      },
+      {
+        "status": "missing",
+        "note": "The subject isn't described: no latte, no leaf latte art, no handmade ceramic cup."
+      },
+      {
+        "status": "missing",
+        "note": "There's no setting, so the dark wood counter is missing."
+      },
+      {
+        "status": "missing",
+        "note": "There's no lighting direction, so the warm early-morning window light is missing."
+      },
+      {
+        "status": "missing",
+        "note": "There's no style direction, so the film-photo look is missing."
+      },
+      {
+        "status": "missing",
+        "note": "The single autumn leaf on the counter isn't mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "It doesn't say to leave people out of the image."
+      },
+      {
+        "status": "missing",
+        "note": "It doesn't say to leave text or a logo out of the image."
+      }
+    ],
+    "invented": []
+  },
+  "session": "c690a4a8-0707-4eef-afb5-7c471be81e1b",
+  "cost_usd": 0.0177386,
+  "output_tokens": 438,
+  "denials": []
+}

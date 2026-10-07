@@ -1,0 +1,132 @@
+{
+  "about": "Guided benchmark tasks. 'ask' is what the person types. 'intent' is what they actually want but did not type; only the simulated person sees it.",
+  "tasks": [
+    {
+      "id": "habit-tracker",
+      "type": "build",
+      "ask": "build me a habit tracker app",
+      "material": null,
+      "execute": false,
+      "intent": [
+        "It's for personal use only: one user, no accounts or login",
+        "Wants something running today: an MVP, not a polished product; no tests required",
+        "Web app that runs locally in the browser",
+        "Prefers TypeScript",
+        "Data stored locally in the browser (no server or database)",
+        "Track multiple habits",
+        "Daily check-off for each habit",
+        "Shows the current streak for each habit",
+        "Shows a simple 30-day history per habit",
+        "Out of scope: reminders or notifications",
+        "Dark mode by default"
+      ]
+    },
+    {
+      "id": "slow-csv-export",
+      "type": "change-code",
+      "ask": "the csv export is slow, fix it",
+      "execute": false,
+      "material": "# app/export.py\ndef export_orders_csv(db, path):\n    rows = db.query(\"SELECT id, customer_id, total_cents, created_at FROM orders\")\n    out = \"id,customer_name,total,created_at\\n\"\n    for r in rows:\n        cust = db.query_one(\"SELECT name FROM customers WHERE id = ?\", r.customer_id)\n        out += f\"{r.id},{cust.name},{r.total_cents/100:.2f},{r.created_at.isoformat()}\\n\"\n    with open(path, \"w\") as f:\n        f.write(out)",
+      "intent": [
+        "Exports can reach about 2 million rows, so memory use matters",
+        "Keep the function signature export_orders_csv(db, path) unchanged; three callers use it",
+        "Keep the exact header and column order",
+        "No new dependencies",
+        "The per-row customer lookup (N+1 query) is the known main cause",
+        "Write rows as they are produced instead of building one big string",
+        "Customer names can contain commas, so values must be properly CSV-quoted",
+        "Verify with the existing tests in tests/test_export.py",
+        "Minimal change; don't restructure the module"
+      ]
+    },
+    {
+      "id": "vector-db-research",
+      "type": "research",
+      "ask": "research vector databases for us",
+      "material": null,
+      "execute": true,
+      "intent": [
+        "The decision: keep using Postgres with pgvector, or adopt a dedicated vector database",
+        "About 5 million embeddings of 1536 dimensions, growing about 1 million per quarter",
+        "The team already runs Postgres 16 on AWS RDS",
+        "Budget under $500 per month",
+        "Queries must filter by tenant_id (multi-tenant)",
+        "Compare at most 4 options",
+        "Output: a comparison table plus one clear recommendation",
+        "Prefer sources from the last 12 months",
+        "Approach: a wide scan first, then go deep on the top 2"
+      ]
+    },
+    {
+      "id": "churn-analysis",
+      "type": "analyze-data",
+      "ask": "analyze this churn data and tell me what's going on",
+      "material": "account_id,email,plan,is_trial,signup_month,cancel_month,monthly_price_usd\n1001,user1000@example.com,Basic,no,2026-03,,19\n1002,user1001@example.com,Basic,no,2026-03,,19\n1003,user1002@example.com,Basic,no,2026-03,,19\n1004,user1003@example.com,Basic,no,2026-03,,19\n1005,user1004@example.com,Pro,no,2026-03,2026-08,69\n1006,user1005@example.com,Pro,no,2026-03,2026-08,69\n1007,user1006@example.com,Pro,no,2026-03,,49\n1008,user1007@example.com,Pro,no,2026-03,2026-09,69\n1009,trial1008@example.com,Pro,yes,2026-03,2026-04,0\n1010,trial1009@example.com,Pro,yes,2026-03,2026-04,0\n1011,trial1010@example.com,Pro,yes,2026-03,2026-04,0\n1012,user1011@example.com,Basic,no,2026-04,,19\n1013,user1012@example.com,Basic,no,2026-04,,19\n1014,user1013@example.com,Basic,no,2026-04,,19\n1015,user1014@example.com,Basic,no,2026-04,2026-06,19\n1016,user1015@example.com,Pro,no,2026-04,2026-08,69\n1017,user1016@example.com,Pro,no,2026-04,,49\n1018,user1017@example.com,Pro,no,2026-04,2026-05,49\n1019,user1018@example.com,Pro,no,2026-04,2026-08,69\n1020,trial1019@example.com,Pro,yes,2026-04,2026-05,0\n1021,trial1020@example.com,Pro,yes,2026-04,2026-05,0\n1022,trial1021@example.com,Pro,yes,2026-04,2026-05,0\n1023,user1022@example.com,Basic,no,2026-05,,19\n1024,user1023@example.com,Basic,no,2026-05,2026-07,19\n1025,user1024@example.com,Basic,no,2026-05,,19\n1026,user1025@example.com,Basic,no,2026-05,,19\n1027,user1026@example.com,Pro,no,2026-05,2026-08,69\n1028,user1027@example.com,Pro,no,2026-05,,49\n1029,user1028@example.com,Pro,no,2026-05,,49\n1030,user1029@example.com,Pro,no,2026-05,,49\n1031,trial1030@example.com,Pro,yes,2026-05,2026-06,0\n1032,trial1031@example.com,Pro,yes,2026-05,2026-06,0\n1033,trial1032@example.com,Pro,yes,2026-05,2026-06,0\n1034,user1033@example.com,Basic,no,2026-06,,19\n1035,user1034@example.com,Basic,no,2026-06,2026-08,19\n1036,user1035@example.com,Basic,no,2026-06,,19\n1037,user1036@example.com,Basic,no,2026-06,2026-08,19\n1038,user1037@example.com,Pro,no,2026-06,2026-08,69\n1039,user1038@example.com,Pro,no,2026-06,2026-09,69\n1040,user1039@example.com,Pro,no,2026-06,,49\n1041,user1040@example.com,Pro,no,2026-06,,49\n1042,trial1041@example.com,Pro,yes,2026-06,2026-07,0\n1043,trial1042@example.com,Pro,yes,2026-06,2026-07,0\n1044,trial1043@example.com,Pro,yes,2026-06,2026-07,0\n1045,user1044@example.com,Basic,no,2026-07,,19\n1046,user1045@example.com,Basic,no,2026-07,,19\n1047,user1046@example.com,Basic,no,2026-07,,19\n1048,user1047@example.com,Basic,no,2026-07,,19\n1049,user1048@example.com,Pro,no,2026-07,,69\n1050,user1049@example.com,Pro,no,2026-07,,69\n1051,user1050@example.com,Pro,no,2026-07,2026-08,69\n1052,user1051@example.com,Pro,no,2026-07,2026-09,69\n1053,trial1052@example.com,Pro,yes,2026-07,2026-08,0\n1054,trial1053@example.com,Pro,yes,2026-07,2026-08,0\n1055,trial1054@example.com,Pro,yes,2026-07,2026-08,0\n1056,qa0@ourco.test,Pro,no,2026-07,2026-08,69\n1057,qa1@ourco.test,Pro,no,2026-07,2026-08,69\n1058,qa2@ourco.test,Pro,no,2026-07,2026-08,69\n1059,qa3@ourco.test,Pro,no,2026-07,2026-08,69\n1060,qa4@ourco.test,Pro,no,2026-07,2026-08,69",
+      "execute": true,
+      "intent": [
+        "The real question: did the July Pro price increase (49 to 69 USD) drive Pro churn?",
+        "Exclude trial accounts (is_trial = yes)",
+        "Exclude internal test accounts (emails ending in @ourco.test)",
+        "Churn means the account has a cancel_month",
+        "Audience is the CEO",
+        "Output: a summary of at most 5 bullets",
+        "Include one suggested chart (what to plot)",
+        "Say how confident the conclusion is given the small sample"
+      ]
+    },
+    {
+      "id": "workspaces-prd",
+      "type": "product-doc",
+      "ask": "write a PRD for adding team workspaces",
+      "material": null,
+      "execute": true,
+      "intent": [
+        "The product is a B2B note-taking app",
+        "Readers are the engineering and design leads, for a kickoff",
+        "v1 includes creating a workspace, inviting members by email, and shared notes",
+        "Roles in v1: admin and member only",
+        "Out of scope for v1: billing changes, SSO, guest access",
+        "Success metric: 20% of paid accounts create a workspace within 60 days",
+        "At most about 2 pages",
+        "Leave migration of existing shared notes as an open question"
+      ]
+    },
+    {
+      "id": "coffee-instagram",
+      "type": "image",
+      "ask": "make an image for my coffee shop's instagram",
+      "material": null,
+      "execute": false,
+      "intent": [
+        "Tool: Midjourney",
+        "Instagram feed post, 4:5 portrait",
+        "Subject: a latte with leaf latte art in a handmade ceramic cup",
+        "Setting: dark wood counter",
+        "Warm early-morning window light",
+        "Film-photo look",
+        "A single autumn leaf on the counter",
+        "No people in the image",
+        "No text or logo in the image"
+      ]
+    },
+    {
+      "id": "landlord-heater",
+      "type": "draft",
+      "ask": "draft an email to my landlord about the broken heater",
+      "material": null,
+      "execute": true,
+      "intent": [
+        "Landlord is Ms. Alvarez",
+        "Apartment 4B",
+        "The heater stopped working on October 2",
+        "Reported by phone on October 3 with no response",
+        "Overnight temperatures are in the 40s \u00b0F",
+        "Ask for a repair within 48 hours",
+        "Mention that the lease (section 12) requires the landlord to provide heat",
+        "Polite but firm tone",
+        "Do not threaten to withhold rent",
+        "Under 150 words"
+      ]
+    }
+  ]
+}

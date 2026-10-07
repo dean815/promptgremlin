@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"A\",\"reason\":\"A is a tightly routed plan grouped by neighbourhood, with travel times, CAD price estimates for each stop and a single planned splurge, so it fits the mid budget. It also gives a rainy-day swap for each day, notes October daylight and closures, and has the correct Thanksgiving date. B gives more options and a useful daily budget figure, but its routing doubles back (Old Montreal, then Schwartz's, back to Old Montreal, then Mile End). It also lists several splurge restaurants and has small errors, such as calling Candide an affordable pick. A is the more workable and budget-appropriate food itinerary.\"}",
+  "structured": {
+    "winner": "A",
+    "reason": "A is a tightly routed plan grouped by neighbourhood, with travel times, CAD price estimates for each stop and a single planned splurge, so it fits the mid budget. It also gives a rainy-day swap for each day, notes October daylight and closures, and has the correct Thanksgiving date. B gives more options and a useful daily budget figure, but its routing doubles back (Old Montreal, then Schwartz's, back to Old Montreal, then Mile End). It also lists several splurge restaurants and has small errors, such as calling Candide an affordable pick. A is the more workable and budget-appropriate food itinerary."
+  },
+  "cost_usd": 0.074116,
+  "tokens": 7398,
+  "output_tokens": 1245,
+  "denials": [],
+  "winner_arm": "rewritten"
+}

@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"There are exactly two paragraphs and both are short. The first covers the mug and how to use it, and the second covers care.\"},{\"pass\":true,\"note\":\"It says plainly that \\\"this mug is dishwasher safe.\\\"\"},{\"pass\":true,\"note\":\"It says plainly that \\\"it is not microwave safe\\\" and adds a short tip about heating the drink another way.\"},{\"pass\":true,\"note\":\"It names no clay type, glaze, colour, dimensions or capacity. The line about small variations from handmaking is general and true of any handmade piece, not a made-up specific.\"},{\"pass\":true,\"note\":\"It's warm and clear, mentions the mug's uses and that it makes a good gift, and could be pasted straight into an Etsy listing.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "There are exactly two paragraphs and both are short. The first covers the mug and how to use it, and the second covers care."
+      },
+      {
+        "pass": true,
+        "note": "It says plainly that \"this mug is dishwasher safe.\""
+      },
+      {
+        "pass": true,
+        "note": "It says plainly that \"it is not microwave safe\" and adds a short tip about heating the drink another way."
+      },
+      {
+        "pass": true,
+        "note": "It names no clay type, glaze, colour, dimensions or capacity. The line about small variations from handmaking is general and true of any handmade piece, not a made-up specific."
+      },
+      {
+        "pass": true,
+        "note": "It's warm and clear, mentions the mug's uses and that it makes a good gift, and could be pasted straight into an Etsy listing."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0175808,
+  "tokens": 2141,
+  "output_tokens": 418,
+  "denials": []
+}

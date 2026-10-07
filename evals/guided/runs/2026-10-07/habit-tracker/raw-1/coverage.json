@@ -1,0 +1,56 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"Doesn't say it's for one person with no accounts or login.\"},{\"status\":\"missing\",\"note\":\"Doesn't ask for a quick MVP running today, and doesn't say tests can be skipped.\"},{\"status\":\"missing\",\"note\":\"Doesn't say it should be a web app that runs locally in the browser.\"},{\"status\":\"missing\",\"note\":\"Doesn't name TypeScript as the language.\"},{\"status\":\"missing\",\"note\":\"Doesn't say data should be stored locally in the browser with no server or database.\"},{\"status\":\"missing\",\"note\":\"Doesn't say it should track more than one habit.\"},{\"status\":\"missing\",\"note\":\"Doesn't mention checking off each habit daily.\"},{\"status\":\"missing\",\"note\":\"Doesn't mention showing a current streak for each habit.\"},{\"status\":\"missing\",\"note\":\"Doesn't mention a 30-day history for each habit.\"},{\"status\":\"missing\",\"note\":\"Doesn't rule out reminders or notifications.\"},{\"status\":\"missing\",\"note\":\"Doesn't ask for dark mode by default.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "Doesn't say it's for one person with no accounts or login."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't ask for a quick MVP running today, and doesn't say tests can be skipped."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't say it should be a web app that runs locally in the browser."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't name TypeScript as the language."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't say data should be stored locally in the browser with no server or database."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't say it should track more than one habit."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't mention checking off each habit daily."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't mention showing a current streak for each habit."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't mention a 30-day history for each habit."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't rule out reminders or notifications."
+      },
+      {
+        "status": "missing",
+        "note": "Doesn't ask for dark mode by default."
+      }
+    ],
+    "invented": []
+  },
+  "session": "ce3ef029-5016-4dd9-838d-80dffdc5e1d3",
+  "cost_usd": 0.023496,
+  "output_tokens": 488,
+  "denials": []
+}

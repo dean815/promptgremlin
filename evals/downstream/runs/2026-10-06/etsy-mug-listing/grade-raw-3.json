@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"The answer has exactly two paragraphs. The first is three sentences and the second is two, which counts as short for a listing.\"},{\"pass\":true,\"note\":\"It says plainly: \\\"this mug is dishwasher safe.\\\"\"},{\"pass\":true,\"note\":\"It says plainly: \\\"it is not microwave safe,\\\" and adds sensible advice to heat the drink separately.\"},{\"pass\":true,\"note\":\"It invents no clay type, glaze, color, dimensions or capacity. The line about small variations follows from the mug being handmade, which the user stated.\"},{\"pass\":true,\"note\":\"It's warm, generic Etsy-style copy that could be pasted straight into a listing. The 'thoughtful gift' line is normal listing language.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "The answer has exactly two paragraphs. The first is three sentences and the second is two, which counts as short for a listing."
+      },
+      {
+        "pass": true,
+        "note": "It says plainly: \"this mug is dishwasher safe.\""
+      },
+      {
+        "pass": true,
+        "note": "It says plainly: \"it is not microwave safe,\" and adds sensible advice to heat the drink separately."
+      },
+      {
+        "pass": true,
+        "note": "It invents no clay type, glaze, color, dimensions or capacity. The line about small variations follows from the mug being handmade, which the user stated."
+      },
+      {
+        "pass": true,
+        "note": "It's warm, generic Etsy-style copy that could be pasted straight into a listing. The 'thoughtful gift' line is normal listing language."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0182888,
+  "tokens": 2180,
+  "output_tokens": 451,
+  "denials": []
+}

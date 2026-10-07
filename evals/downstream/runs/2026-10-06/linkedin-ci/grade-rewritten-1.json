@@ -1,0 +1,42 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"The body is about 165 words, inside the 120\u2013180 range.\"},{\"pass\":true,\"note\":\"The second paragraph says 'The buildbot dashboard came up partway through.' It's named, but the post never says what actually happened with it.\"},{\"pass\":true,\"note\":\"There are no hashtags.\"},{\"pass\":true,\"note\":\"There are no emojis.\"},{\"pass\":true,\"note\":\"The last line is 'If you've migrated CI before, what was the thing that surprised you most?'\"},{\"pass\":true,\"note\":\"None of the listed stock phrases appear ('fast-paced world', 'game-changer', 'delve'). The tone is plain and conversational.\"}],\"unasked_content\":[\"The user asked for a post about what the team learned, but it contains no concrete lessons. It only gestures at learning ('made us look at parts of our setup', 'learning how it actually works') and never says what was learned.\",\"The buildbot dashboard mention is hollow. It says the dashboard 'came up' and raised a question, but never says what the 'dashboard thing' was or how it was resolved. The user referred to a specific incident, and the post skips it.\",\"'I'm still sorting out what I'd do differently next time' goes against the request, since the post was supposed to be about what was learned.\",\"'Mostly I'm curious about everyone else's experience' is filler. It repeats the closing question and takes words away from real content.\",\"The opening and the 'uncomfortable at first, but I'd take it over the alternative' line are generic hedges. They read as safe, non-committal phrasing rather than a person describing a specific experience, which works against 'sound like a person'.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "The body is about 165 words, inside the 120\u2013180 range."
+      },
+      {
+        "pass": true,
+        "note": "The second paragraph says 'The buildbot dashboard came up partway through.' It's named, but the post never says what actually happened with it."
+      },
+      {
+        "pass": true,
+        "note": "There are no hashtags."
+      },
+      {
+        "pass": true,
+        "note": "There are no emojis."
+      },
+      {
+        "pass": true,
+        "note": "The last line is 'If you've migrated CI before, what was the thing that surprised you most?'"
+      },
+      {
+        "pass": true,
+        "note": "None of the listed stock phrases appear ('fast-paced world', 'game-changer', 'delve'). The tone is plain and conversational."
+      }
+    ],
+    "unasked_content": [
+      "The user asked for a post about what the team learned, but it contains no concrete lessons. It only gestures at learning ('made us look at parts of our setup', 'learning how it actually works') and never says what was learned.",
+      "The buildbot dashboard mention is hollow. It says the dashboard 'came up' and raised a question, but never says what the 'dashboard thing' was or how it was resolved. The user referred to a specific incident, and the post skips it.",
+      "'I'm still sorting out what I'd do differently next time' goes against the request, since the post was supposed to be about what was learned.",
+      "'Mostly I'm curious about everyone else's experience' is filler. It repeats the closing question and takes words away from real content.",
+      "The opening and the 'uncomfortable at first, but I'd take it over the alternative' line are generic hedges. They read as safe, non-committal phrasing rather than a person describing a specific experience, which works against 'sound like a person'."
+    ]
+  },
+  "cost_usd": 0.043712799999999996,
+  "tokens": 3555,
+  "output_tokens": 1653,
+  "denials": []
+}

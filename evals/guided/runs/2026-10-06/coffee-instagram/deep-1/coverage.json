@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Midjourney isn't named, but the prompt uses Midjourney-only parameter syntax (--ar, --no), so it's written for Midjourney.\"},{\"status\":\"stated\",\"note\":\"--ar 4:5 sets the portrait feed ratio. Instagram isn't named, but the format matches.\"},{\"status\":\"stated\",\"note\":\"A latte with clear leaf latte art in a handmade ceramic cup, with extra handmade detail (glaze, irregular shape).\"},{\"status\":\"stated\",\"note\":\"\\\"on a dark wood counter\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"warm early-morning window light\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"film photograph with visible grain\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"a single autumn leaf beside the cup\\\"\"},{\"status\":\"stated\",\"note\":\"--no people, hands\"},{\"status\":\"stated\",\"note\":\"--no text, logos\"}],\"invented\":[\"Specific colour palette \\\"cream, caramel and warm brown tones\\\" (the user only asked for warm and cozy)\",\"Excluding \\\"clutter\\\" via --no (the user never mentioned clutter)\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Midjourney isn't named, but the prompt uses Midjourney-only parameter syntax (--ar, --no), so it's written for Midjourney."
+      },
+      {
+        "status": "stated",
+        "note": "--ar 4:5 sets the portrait feed ratio. Instagram isn't named, but the format matches."
+      },
+      {
+        "status": "stated",
+        "note": "A latte with clear leaf latte art in a handmade ceramic cup, with extra handmade detail (glaze, irregular shape)."
+      },
+      {
+        "status": "stated",
+        "note": "\"on a dark wood counter\""
+      },
+      {
+        "status": "stated",
+        "note": "\"warm early-morning window light\""
+      },
+      {
+        "status": "stated",
+        "note": "\"film photograph with visible grain\""
+      },
+      {
+        "status": "stated",
+        "note": "\"a single autumn leaf beside the cup\""
+      },
+      {
+        "status": "stated",
+        "note": "--no people, hands"
+      },
+      {
+        "status": "stated",
+        "note": "--no text, logos"
+      }
+    ],
+    "invented": [
+      "Specific colour palette \"cream, caramel and warm brown tones\" (the user only asked for warm and cozy)",
+      "Excluding \"clutter\" via --no (the user never mentioned clutter)"
+    ]
+  },
+  "session": "0b5ad9eb-b806-4ff4-ba78-465e86d84dc7",
+  "cost_usd": 0.0255506,
+  "output_tokens": 689,
+  "denials": []
+}

@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"The email is addressed 'Dear Ms. Alvarez'.\"},{\"status\":\"met\",\"note\":\"Apartment 4B appears in the subject line, the body and the sign-off.\"},{\"status\":\"met\",\"note\":\"It says the heater 'stopped working on October 2'.\"},{\"status\":\"met\",\"note\":\"It says the tenant called on October 3 and 'haven't heard back since.'\"},{\"status\":\"met\",\"note\":\"It says overnight temperatures are 'in the 40s'. The \u00b0F unit is left out, but that's clear for a US letter.\"},{\"status\":\"met\",\"note\":\"It asks for the repair 'within 48 hours of this email.'\"},{\"status\":\"not_met\",\"note\":\"It cites section 12, but says the section 'covers the landlord providing heat' instead of saying the lease requires the landlord to provide heat. The word 'covers' weakens the obligation the user wanted stated.\"},{\"status\":\"met\",\"note\":\"The tone is polite and gives a firm 48-hour deadline. It's on the softer side, though, with a question-form request and 'would be appreciated'.\"},{\"status\":\"met\",\"note\":\"Rent isn't mentioned, and there are no threats.\"},{\"status\":\"met\",\"note\":\"The email is about 95 words, well under 150.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "The email is addressed 'Dear Ms. Alvarez'."
+      },
+      {
+        "status": "met",
+        "note": "Apartment 4B appears in the subject line, the body and the sign-off."
+      },
+      {
+        "status": "met",
+        "note": "It says the heater 'stopped working on October 2'."
+      },
+      {
+        "status": "met",
+        "note": "It says the tenant called on October 3 and 'haven't heard back since.'"
+      },
+      {
+        "status": "met",
+        "note": "It says overnight temperatures are 'in the 40s'. The \u00b0F unit is left out, but that's clear for a US letter."
+      },
+      {
+        "status": "met",
+        "note": "It asks for the repair 'within 48 hours of this email.'"
+      },
+      {
+        "status": "not_met",
+        "note": "It cites section 12, but says the section 'covers the landlord providing heat' instead of saying the lease requires the landlord to provide heat. The word 'covers' weakens the obligation the user wanted stated."
+      },
+      {
+        "status": "met",
+        "note": "The tone is polite and gives a firm 48-hour deadline. It's on the softer side, though, with a question-form request and 'would be appreciated'."
+      },
+      {
+        "status": "met",
+        "note": "Rent isn't mentioned, and there are no threats."
+      },
+      {
+        "status": "met",
+        "note": "The email is about 95 words, well under 150."
+      }
+    ]
+  },
+  "session": "45a4f3ba-89a5-4bff-a82c-25341359cfdf",
+  "cost_usd": 0.026125000000000002,
+  "output_tokens": 836,
+  "denials": []
+}

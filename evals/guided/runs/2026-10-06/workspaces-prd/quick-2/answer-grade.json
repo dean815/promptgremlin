@@ -1,0 +1,43 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"The overview says outright that the product is a B2B note-taking app.\"},{\"status\":\"met\",\"note\":\"The audience is the engineering and design leads, and the migration question explains why it matters to each group. One small issue: the document calls itself a pre-read for deciding whether to start, rather than a kickoff document.\"},{\"status\":\"met\",\"note\":\"Creating a workspace, inviting members by email and shared notes are all in scope, and each has its own requirements section.\"},{\"status\":\"met\",\"note\":\"The only roles are admin and member, and 5.4.5 says there are no others in v1.\"},{\"status\":\"met\",\"note\":\"The non-goals list covers billing changes, SSO and guest access.\"},{\"status\":\"met\",\"note\":\"The metric is stated exactly: 20% of paid accounts create a workspace within 60 days.\"},{\"status\":\"not_met\",\"note\":\"The document is about 1,300\u20131,400 words plus a permissions table, with long lists of evidence gaps and assumptions. That is roughly 3\u20134 pages, well over the limit of about 2.\"},{\"status\":\"met\",\"note\":\"Q1 states that the migration question is kept open. It lists the options without recommending one and explains what it means for engineering and design.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "The overview says outright that the product is a B2B note-taking app."
+      },
+      {
+        "status": "met",
+        "note": "The audience is the engineering and design leads, and the migration question explains why it matters to each group. One small issue: the document calls itself a pre-read for deciding whether to start, rather than a kickoff document."
+      },
+      {
+        "status": "met",
+        "note": "Creating a workspace, inviting members by email and shared notes are all in scope, and each has its own requirements section."
+      },
+      {
+        "status": "met",
+        "note": "The only roles are admin and member, and 5.4.5 says there are no others in v1."
+      },
+      {
+        "status": "met",
+        "note": "The non-goals list covers billing changes, SSO and guest access."
+      },
+      {
+        "status": "met",
+        "note": "The metric is stated exactly: 20% of paid accounts create a workspace within 60 days."
+      },
+      {
+        "status": "not_met",
+        "note": "The document is about 1,300\u20131,400 words plus a permissions table, with long lists of evidence gaps and assumptions. That is roughly 3\u20134 pages, well over the limit of about 2."
+      },
+      {
+        "status": "met",
+        "note": "Q1 states that the migration question is kept open. It lists the options without recommending one and explains what it means for engineering and design."
+      }
+    ]
+  },
+  "session": "256cc3cf-8ad8-4130-a6ac-b8f2ef599568",
+  "cost_usd": 0.041477,
+  "output_tokens": 724,
+  "denials": []
+}

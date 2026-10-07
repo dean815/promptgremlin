@@ -1,0 +1,47 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The opening line frames the question as whether the July 2026 Pro increase from 49 to 69 USD drove Pro churn.\"},{\"status\":\"stated\",\"note\":\"It says to drop every row where is_trial is \\\"yes\\\".\"},{\"status\":\"stated\",\"note\":\"It says to drop every row whose email ends in @ourco.test.\"},{\"status\":\"stated\",\"note\":\"It defines churn as an account that has a cancel_month.\"},{\"status\":\"stated\",\"note\":\"It says this is a CEO briefing and that the CEO will read the summary.\"},{\"status\":\"stated\",\"note\":\"It asks for a summary of at most 5 bullets.\"},{\"status\":\"stated\",\"note\":\"It asks for one suggested chart, described in words only.\"},{\"status\":\"stated\",\"note\":\"It requires one bullet giving confidence in the conclusion and the effect of the small sample.\"}],\"invented\":[\"It requires a lost-MRR figure: 'Also report lost MRR' and 'One bullet must give lost MRR'. The person never asked for revenue impact.\",\"It calls the prices '49 to 69 USD per month'. The person gave the prices but never said they were monthly; this was inferred from the column name.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The opening line frames the question as whether the July 2026 Pro increase from 49 to 69 USD drove Pro churn."
+      },
+      {
+        "status": "stated",
+        "note": "It says to drop every row where is_trial is \"yes\"."
+      },
+      {
+        "status": "stated",
+        "note": "It says to drop every row whose email ends in @ourco.test."
+      },
+      {
+        "status": "stated",
+        "note": "It defines churn as an account that has a cancel_month."
+      },
+      {
+        "status": "stated",
+        "note": "It says this is a CEO briefing and that the CEO will read the summary."
+      },
+      {
+        "status": "stated",
+        "note": "It asks for a summary of at most 5 bullets."
+      },
+      {
+        "status": "stated",
+        "note": "It asks for one suggested chart, described in words only."
+      },
+      {
+        "status": "stated",
+        "note": "It requires one bullet giving confidence in the conclusion and the effect of the small sample."
+      }
+    ],
+    "invented": [
+      "It requires a lost-MRR figure: 'Also report lost MRR' and 'One bullet must give lost MRR'. The person never asked for revenue impact.",
+      "It calls the prices '49 to 69 USD per month'. The person gave the prices but never said they were monthly; this was inferred from the column name."
+    ]
+  },
+  "session": "63998da5-9186-4e1e-b7a3-fce13ff9cc7b",
+  "cost_usd": 0.047906599999999994,
+  "output_tokens": 762,
+  "denials": []
+}

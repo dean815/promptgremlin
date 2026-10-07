@@ -1,0 +1,52 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The 2-million-row scale and the concern about memory never appear. The prompt is only the current code, with no instructions.\"},{\"status\":\"missing\",\"note\":\"The code shows the signature export_orders_csv(db, path), but nothing says it must stay unchanged or that three callers depend on it.\"},{\"status\":\"missing\",\"note\":\"The header line appears in the code, but there is no instruction to keep the exact header and column order.\"},{\"status\":\"missing\",\"note\":\"Nothing says not to add new dependencies.\"},{\"status\":\"missing\",\"note\":\"The code contains the per-row query, but the prompt never names the N+1 customer lookup as the known main cause.\"},{\"status\":\"missing\",\"note\":\"There is no instruction to write rows as they are produced instead of building one big string.\"},{\"status\":\"missing\",\"note\":\"There is no mention that customer names can contain commas or that values need proper CSV quoting.\"},{\"status\":\"missing\",\"note\":\"There is no mention of verifying with tests/test_export.py.\"},{\"status\":\"missing\",\"note\":\"There is no instruction to keep the change minimal or to leave the module structure alone.\"}],\"invented\":[\"The file location app/export.py does not appear in the request or answers.\",\"The function body, including the SQL queries, the table and column names (orders, customers, customer_id, total_cents, created_at), the formatting of total_cents/100, and created_at.isoformat(), comes from neither the request nor the answers. It may be real repository code, but the person did not supply it.\",\"The header text 'id,customer_name,total,created_at' was not given by the person.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The 2-million-row scale and the concern about memory never appear. The prompt is only the current code, with no instructions."
+      },
+      {
+        "status": "missing",
+        "note": "The code shows the signature export_orders_csv(db, path), but nothing says it must stay unchanged or that three callers depend on it."
+      },
+      {
+        "status": "missing",
+        "note": "The header line appears in the code, but there is no instruction to keep the exact header and column order."
+      },
+      {
+        "status": "missing",
+        "note": "Nothing says not to add new dependencies."
+      },
+      {
+        "status": "missing",
+        "note": "The code contains the per-row query, but the prompt never names the N+1 customer lookup as the known main cause."
+      },
+      {
+        "status": "missing",
+        "note": "There is no instruction to write rows as they are produced instead of building one big string."
+      },
+      {
+        "status": "missing",
+        "note": "There is no mention that customer names can contain commas or that values need proper CSV quoting."
+      },
+      {
+        "status": "missing",
+        "note": "There is no mention of verifying with tests/test_export.py."
+      },
+      {
+        "status": "missing",
+        "note": "There is no instruction to keep the change minimal or to leave the module structure alone."
+      }
+    ],
+    "invented": [
+      "The file location app/export.py does not appear in the request or answers.",
+      "The function body, including the SQL queries, the table and column names (orders, customers, customer_id, total_cents, created_at), the formatting of total_cents/100, and created_at.isoformat(), comes from neither the request nor the answers. It may be real repository code, but the person did not supply it.",
+      "The header text 'id,customer_name,total,created_at' was not given by the person."
+    ]
+  },
+  "session": "659ae486-e0cb-42f3-9f1b-5dee84d69e15",
+  "cost_usd": 0.0293706,
+  "output_tokens": 868,
+  "denials": []
+}

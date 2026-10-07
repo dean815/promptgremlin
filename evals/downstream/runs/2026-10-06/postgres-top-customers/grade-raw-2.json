@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"The SQL is valid PostgreSQL. It uses only customers(id, name, email), orders(id, customer_id, created_at, status) and order_items(order_id, quantity, unit_price_cents). The joins and GROUP BY are correct.\"},{\"pass\":true,\"note\":\"Revenue is SUM(oi.quantity * oi.unit_price_cents), grouped per customer. Dividing by 100.0 to get dollars does not change the ranking, and the answer says so clearly.\"},{\"pass\":true,\"note\":\"o.created_at >= now() - interval '90 days' restricts orders to a rolling 90-day window on orders.created_at.\"},{\"pass\":true,\"note\":\"status = 'paid' leaves out refunded orders. It also leaves out cancelled ones, which is reasonable for revenue. The answer says this openly and gives the <> 'refunded' option if cancelled orders should stay in.\"},{\"pass\":true,\"note\":\"ORDER BY revenue DESC LIMIT 5 returns the top 5. The answer also suggests a tie-breaker for deterministic results.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "The SQL is valid PostgreSQL. It uses only customers(id, name, email), orders(id, customer_id, created_at, status) and order_items(order_id, quantity, unit_price_cents). The joins and GROUP BY are correct."
+      },
+      {
+        "pass": true,
+        "note": "Revenue is SUM(oi.quantity * oi.unit_price_cents), grouped per customer. Dividing by 100.0 to get dollars does not change the ranking, and the answer says so clearly."
+      },
+      {
+        "pass": true,
+        "note": "o.created_at >= now() - interval '90 days' restricts orders to a rolling 90-day window on orders.created_at."
+      },
+      {
+        "pass": true,
+        "note": "status = 'paid' leaves out refunded orders. It also leaves out cancelled ones, which is reasonable for revenue. The answer says this openly and gives the <> 'refunded' option if cancelled orders should stay in."
+      },
+      {
+        "pass": true,
+        "note": "ORDER BY revenue DESC LIMIT 5 returns the top 5. The answer also suggests a tie-breaker for deterministic results."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0268848,
+  "tokens": 2980,
+  "output_tokens": 634,
+  "denials": []
+}

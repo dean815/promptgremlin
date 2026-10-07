@@ -1,0 +1,59 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The landlord's name is a blank, [landlord name]. Ms. Alvarez is never named.\"},{\"status\":\"missing\",\"note\":\"The unit is a blank, [unit/address]. Apartment 4B is not given.\"},{\"status\":\"missing\",\"note\":\"The start date is a blank, [date]. October 2 is not given.\"},{\"status\":\"missing\",\"note\":\"The phone report on October 3 that got no response is not mentioned. The only related slot asks what the tenant tried themselves, such as the thermostat or breaker.\"},{\"status\":\"missing\",\"note\":\"Overnight temperatures in the 40s \u00b0F are not mentioned. The prompt only says it is 'heating season'.\"},{\"status\":\"missing\",\"note\":\"The prompt asks for a repair 'within a reasonable window' by a date the writer picks, not within 48 hours.\"},{\"status\":\"missing\",\"note\":\"Section 12 of the lease is never mentioned. The prompt says 'don't cite laws', which could also stop the writer from citing the lease.\"},{\"status\":\"stated\",\"note\":\"The prompt says 'Be polite, firm, and specific.'\"},{\"status\":\"stated\",\"note\":\"'Don't ... threaten action' covers not threatening to withhold rent, though it doesn't name rent specifically.\"},{\"status\":\"stated\",\"note\":\"The prompt says 'Keep it under 150 words.'\"}],\"invented\":[\"The tenant's purpose is to create a dated written record.\",\"The goal is to avoid souring the relationship with the landlord.\",\"The email should say the broken heater affects the home's habitability.\",\"The email should offer access times for a technician visit.\",\"Landlords answer short emails sooner.\",\"Laws must not be cited because the tenant hasn't said what their local rules are.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The landlord's name is a blank, [landlord name]. Ms. Alvarez is never named."
+      },
+      {
+        "status": "missing",
+        "note": "The unit is a blank, [unit/address]. Apartment 4B is not given."
+      },
+      {
+        "status": "missing",
+        "note": "The start date is a blank, [date]. October 2 is not given."
+      },
+      {
+        "status": "missing",
+        "note": "The phone report on October 3 that got no response is not mentioned. The only related slot asks what the tenant tried themselves, such as the thermostat or breaker."
+      },
+      {
+        "status": "missing",
+        "note": "Overnight temperatures in the 40s \u00b0F are not mentioned. The prompt only says it is 'heating season'."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt asks for a repair 'within a reasonable window' by a date the writer picks, not within 48 hours."
+      },
+      {
+        "status": "missing",
+        "note": "Section 12 of the lease is never mentioned. The prompt says 'don't cite laws', which could also stop the writer from citing the lease."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says 'Be polite, firm, and specific.'"
+      },
+      {
+        "status": "stated",
+        "note": "'Don't ... threaten action' covers not threatening to withhold rent, though it doesn't name rent specifically."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says 'Keep it under 150 words.'"
+      }
+    ],
+    "invented": [
+      "The tenant's purpose is to create a dated written record.",
+      "The goal is to avoid souring the relationship with the landlord.",
+      "The email should say the broken heater affects the home's habitability.",
+      "The email should offer access times for a technician visit.",
+      "Landlords answer short emails sooner.",
+      "Laws must not be cited because the tenant hasn't said what their local rules are."
+    ]
+  },
+  "session": "eb6d1fd7-5ce9-4a91-ae23-f609d00f2b63",
+  "cost_usd": 0.0339226,
+  "output_tokens": 1078,
+  "denials": []
+}

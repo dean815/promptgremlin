@@ -1,0 +1,17 @@
+{
+  "text": "```\nA customer has written in with a complaint, and I need to answer them today. Their email is pasted directly below these instructions. Draft my reply to it.\n\nApologize sincerely for the problem they describe. Do not promise or hint at a refund, because I can't authorize one. Offer to send a replacement instead and say what they should do next to get it. If the email doesn't make clear what they ordered or what went wrong, keep the wording general rather than inventing details.\n\nKeep the tone warm and friendly, in plain conversational language. The reply must be under 120 words, since it goes straight into an email and short replies get read.\n\nGive me only the email text, ready to send, with a greeting and a sign-off. Put nothing before or after it.\n```\nEffort: low (claude.ai: not settable here). This is a single short reply with no ambiguity and a trivial cost if it's wrong.\n\n**Assumptions**\n- The reply is signed off generically. Add your name or company when you paste it in, or tell me and I'll add it.\n- Nothing says how the customer gets the replacement, such as a reply email or a form. The prompt tells Claude to say what they should do next, so it may invent a step. Tell me the real process and I'll add it.\n\n**Changes**\n- The prompt opens with the situation and reason instead of \"Write...\". It gives the reasons for the refund ban and the word limit. (anthropic: Add context to improve performance)\n- It says what to do, which is offer a replacement, and not only what to avoid. It uses action verbs (\"Draft my reply\"). (anthropic: Be clear and direct, Use action verbs)\n- It ends with a stop condition: only the email text, with nothing before or after. The pasted email goes after the instructions, as you said it would.\n\n**Guidance:** cached 2026-10-06 13:10. The target was resolved to the Anthropic family notes, using the flagship model claude-fable-5-1. No flags were raised.",
+  "structured": null,
+  "cost_usd": 0.033506900000000006,
+  "tokens": 27726,
+  "output_tokens": 1133,
+  "denials": [
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_011RSZZpALP1e9Zx5i7rAcNi",
+      "tool_input": {
+        "command": "cat /tmp/pgbench/config.json 2>/dev/null; python3 '/tmp/pgbench/plugin/skills/promptgremlin/scripts/guidance.py' --target 'claude-ai'"
+      }
+    }
+  ],
+  "prompt": "A customer has written in with a complaint, and I need to answer them today. Their email is pasted directly below these instructions. Draft my reply to it.\n\nApologize sincerely for the problem they describe. Do not promise or hint at a refund, because I can't authorize one. Offer to send a replacement instead and say what they should do next to get it. If the email doesn't make clear what they ordered or what went wrong, keep the wording general rather than inventing details.\n\nKeep the tone warm and friendly, in plain conversational language. The reply must be under 120 words, since it goes straight into an email and short replies get read.\n\nGive me only the email text, ready to send, with a greeting and a sign-off. Put nothing before or after it."
+}

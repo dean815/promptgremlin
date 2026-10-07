@@ -1,0 +1,59 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never says it's for one user with no accounts. It treats 'local only, or an account and sync' as an open question.\"},{\"status\":\"contradicted\",\"note\":\"The prompt does ask for a 'small, working app' v1, but Step 4 requires writing and running tests for the core logic. That conflicts with 'no tests required'. Nothing says it's needed today.\"},{\"status\":\"missing\",\"note\":\"The platform is left as a question (web, mobile, desktop or CLI). Nothing says it should be a local browser web app.\"},{\"status\":\"missing\",\"note\":\"Language and framework are left as a question. TypeScript isn't mentioned.\"},{\"status\":\"missing\",\"note\":\"Where data lives is left as a question. Browser-local storage with no server isn't stated.\"},{\"status\":\"missing\",\"note\":\"The prompt only mentions 'creating a habit'. It never says the app must track several habits.\"},{\"status\":\"stated\",\"note\":\"Daily check-ins appear as an example feature, and the Step 4 tests require 'checking it off for a day'.\"},{\"status\":\"stated\",\"note\":\"Streaks are listed as a feature, and the tests require computing them, including a missed day and a day boundary.\"},{\"status\":\"missing\",\"note\":\"There's only a vague 'stats views' example. A 30-day history per habit isn't specified.\"},{\"status\":\"missing\",\"note\":\"Reminders are offered as a possible v1 feature instead of being marked out of scope. This isn't a direct contradiction because it's only a question.\"},{\"status\":\"missing\",\"note\":\"Styling is left to the receiver. Dark mode by default isn't mentioned.\"}],\"invented\":[\"The person is starting in an empty directory.\",\"A wrong guess about platform or stack would cost real rework (a stated consequence the person never gave).\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never says it's for one user with no accounts. It treats 'local only, or an account and sync' as an open question."
+      },
+      {
+        "status": "contradicted",
+        "note": "The prompt does ask for a 'small, working app' v1, but Step 4 requires writing and running tests for the core logic. That conflicts with 'no tests required'. Nothing says it's needed today."
+      },
+      {
+        "status": "missing",
+        "note": "The platform is left as a question (web, mobile, desktop or CLI). Nothing says it should be a local browser web app."
+      },
+      {
+        "status": "missing",
+        "note": "Language and framework are left as a question. TypeScript isn't mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "Where data lives is left as a question. Browser-local storage with no server isn't stated."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt only mentions 'creating a habit'. It never says the app must track several habits."
+      },
+      {
+        "status": "stated",
+        "note": "Daily check-ins appear as an example feature, and the Step 4 tests require 'checking it off for a day'."
+      },
+      {
+        "status": "stated",
+        "note": "Streaks are listed as a feature, and the tests require computing them, including a missed day and a day boundary."
+      },
+      {
+        "status": "missing",
+        "note": "There's only a vague 'stats views' example. A 30-day history per habit isn't specified."
+      },
+      {
+        "status": "missing",
+        "note": "Reminders are offered as a possible v1 feature instead of being marked out of scope. This isn't a direct contradiction because it's only a question."
+      },
+      {
+        "status": "missing",
+        "note": "Styling is left to the receiver. Dark mode by default isn't mentioned."
+      }
+    ],
+    "invented": [
+      "The person is starting in an empty directory.",
+      "A wrong guess about platform or stack would cost real rework (a stated consequence the person never gave)."
+    ]
+  },
+  "session": "ff8ecfea-6f27-4acc-a890-9c0e72df7b50",
+  "cost_usd": 0.0360226,
+  "output_tokens": 1093,
+  "denials": []
+}

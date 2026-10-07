@@ -1,0 +1,60 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"Single user with no accounts is never stated. The prompt leaves 'a backend and accounts' as an open interview question.\"},{\"status\":\"contradicted\",\"note\":\"The prompt asks 'whether I want a minimal first version' but never says it's an MVP needed today. It also requires tests ('Add tests for the streak and completion logic'), which goes against 'no tests required'.\"},{\"status\":\"missing\",\"note\":\"The platform (web, running locally in the browser) is left as an interview question.\"},{\"status\":\"missing\",\"note\":\"TypeScript is never mentioned. Language and framework are left as open questions.\"},{\"status\":\"missing\",\"note\":\"Browser-local storage is not stated. It appears only as an option to ask about ('local only, or a backend').\"},{\"status\":\"missing\",\"note\":\"Tracking multiple habits is never stated. The verification step only says 'create a habit'.\"},{\"status\":\"missing\",\"note\":\"'Daily check-ins' appears only as a candidate feature to ask about, not as a requirement.\"},{\"status\":\"missing\",\"note\":\"Streaks are listed as a candidate feature. Verification does mention confirming the streak updates, but per-habit streaks are never stated as a requirement.\"},{\"status\":\"missing\",\"note\":\"The 30-day history per habit is not stated. Only a vague 'stats or charts' option is offered.\"},{\"status\":\"missing\",\"note\":\"Reminders are not excluded. They are listed as a possible core feature to ask about.\"},{\"status\":\"missing\",\"note\":\"Dark mode by default is never mentioned.\"}],\"invented\":[\"Says the person is 'not sure yet about platform, stack, or feature set'. They actually have clear preferences.\",\"Says 'a wrong stack choice means rework', presented as the person's concern.\",\"Requires unit tests for streak and completion logic, but the person said no tests are needed.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "Single user with no accounts is never stated. The prompt leaves 'a backend and accounts' as an open interview question."
+      },
+      {
+        "status": "contradicted",
+        "note": "The prompt asks 'whether I want a minimal first version' but never says it's an MVP needed today. It also requires tests ('Add tests for the streak and completion logic'), which goes against 'no tests required'."
+      },
+      {
+        "status": "missing",
+        "note": "The platform (web, running locally in the browser) is left as an interview question."
+      },
+      {
+        "status": "missing",
+        "note": "TypeScript is never mentioned. Language and framework are left as open questions."
+      },
+      {
+        "status": "missing",
+        "note": "Browser-local storage is not stated. It appears only as an option to ask about ('local only, or a backend')."
+      },
+      {
+        "status": "missing",
+        "note": "Tracking multiple habits is never stated. The verification step only says 'create a habit'."
+      },
+      {
+        "status": "missing",
+        "note": "'Daily check-ins' appears only as a candidate feature to ask about, not as a requirement."
+      },
+      {
+        "status": "missing",
+        "note": "Streaks are listed as a candidate feature. Verification does mention confirming the streak updates, but per-habit streaks are never stated as a requirement."
+      },
+      {
+        "status": "missing",
+        "note": "The 30-day history per habit is not stated. Only a vague 'stats or charts' option is offered."
+      },
+      {
+        "status": "missing",
+        "note": "Reminders are not excluded. They are listed as a possible core feature to ask about."
+      },
+      {
+        "status": "missing",
+        "note": "Dark mode by default is never mentioned."
+      }
+    ],
+    "invented": [
+      "Says the person is 'not sure yet about platform, stack, or feature set'. They actually have clear preferences.",
+      "Says 'a wrong stack choice means rework', presented as the person's concern.",
+      "Requires unit tests for streak and completion logic, but the person said no tests are needed."
+    ]
+  },
+  "session": "c5535f79-9bc5-4a6b-b094-096775984ad8",
+  "cost_usd": 0.041428,
+  "output_tokens": 1153,
+  "denials": []
+}

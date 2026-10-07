@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"B\",\"reason\":\"The two queries are nearly identical and both are correct. B is more useful because it gives an exact way to drop only refunded orders (o.status <> 'refunded'), which is what the person literally asked for. It also explains the rolling and calendar-day window options and adds index tips. A puts the tie-break in the query itself, but some of its notes are filler. B wins narrowly.\"}",
+  "structured": {
+    "winner": "B",
+    "reason": "The two queries are nearly identical and both are correct. B is more useful because it gives an exact way to drop only refunded orders (o.status <> 'refunded'), which is what the person literally asked for. It also explains the rolling and calendar-day window options and adds index tips. A puts the tie-break in the query itself, but some of its notes are filler. B wins narrowly."
+  },
+  "cost_usd": 0.036868,
+  "tokens": 3405,
+  "output_tokens": 803,
+  "denials": [],
+  "winner_arm": "raw"
+}

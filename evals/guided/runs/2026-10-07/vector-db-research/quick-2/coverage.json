@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt opens with the decision: keep Postgres with pgvector or adopt a dedicated vector database.\"},{\"status\":\"stated\",\"note\":\"It lists about 5M embeddings at 1536 dimensions, growing about 1M per quarter.\"},{\"status\":\"stated\",\"note\":\"It gives Postgres 16 on AWS RDS as the current setup.\"},{\"status\":\"stated\",\"note\":\"It sets the budget under $500/month and asks for cost to be checked against it.\"},{\"status\":\"stated\",\"note\":\"It says every query must filter by tenant_id (multi-tenant).\"},{\"status\":\"stated\",\"note\":\"It caps the comparison at 4 options, with pgvector counting as one.\"},{\"status\":\"stated\",\"note\":\"It asks for a comparison table plus one clear recommendation.\"},{\"status\":\"stated\",\"note\":\"It says to prefer sources from the last 12 months and to flag older ones.\"},{\"status\":\"stated\",\"note\":\"It asks for a wide scan first, then a deep dive on the top 2.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt opens with the decision: keep Postgres with pgvector or adopt a dedicated vector database."
+      },
+      {
+        "status": "stated",
+        "note": "It lists about 5M embeddings at 1536 dimensions, growing about 1M per quarter."
+      },
+      {
+        "status": "stated",
+        "note": "It gives Postgres 16 on AWS RDS as the current setup."
+      },
+      {
+        "status": "stated",
+        "note": "It sets the budget under $500/month and asks for cost to be checked against it."
+      },
+      {
+        "status": "stated",
+        "note": "It says every query must filter by tenant_id (multi-tenant)."
+      },
+      {
+        "status": "stated",
+        "note": "It caps the comparison at 4 options, with pgvector counting as one."
+      },
+      {
+        "status": "stated",
+        "note": "It asks for a comparison table plus one clear recommendation."
+      },
+      {
+        "status": "stated",
+        "note": "It says to prefer sources from the last 12 months and to flag older ones."
+      },
+      {
+        "status": "stated",
+        "note": "It asks for a wide scan first, then a deep dive on the top 2."
+      }
+    ],
+    "invented": []
+  },
+  "session": "064d641b-8754-42fb-a5cc-68eecca7d399",
+  "cost_usd": 0.0255866,
+  "output_tokens": 460,
+  "denials": []
+}

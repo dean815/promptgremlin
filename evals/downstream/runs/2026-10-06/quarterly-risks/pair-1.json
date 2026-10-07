@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"B\",\"reason\":\"Both answers have exactly 5 bullets and avoid naming the competitor (Acme Fastening); A names HomeMax, which is a customer, not a competitor, so that's allowed. B is slightly more useful: it explains the consequences of each risk, ranks the credit-line covenant risk higher, and groups the revenue miss with the execution problems instead of putting it in the margin bullet, where it doesn't fit. A is tighter and states the 2-point covenant cushion outright, but B's explanations are clearer.\"}",
+  "structured": {
+    "winner": "B",
+    "reason": "Both answers have exactly 5 bullets and avoid naming the competitor (Acme Fastening); A names HomeMax, which is a customer, not a competitor, so that's allowed. B is slightly more useful: it explains the consequences of each risk, ranks the credit-line covenant risk higher, and groups the revenue miss with the execution problems instead of putting it in the margin bullet, where it doesn't fit. A is tighter and states the 2-point covenant cushion outright, but B's explanations are clearer."
+  },
+  "cost_usd": 0.033839999999999995,
+  "tokens": 3076,
+  "output_tokens": 770,
+  "denials": [],
+  "winner_arm": "rewritten"
+}

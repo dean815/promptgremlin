@@ -1,0 +1,41 @@
+{
+  "text": "{\"checks\":[{\"pass\":false,\"note\":\"No post was written. The answer is a request for more information, so there is no post body to measure, let alone one of 120\u2013180 words.\"},{\"pass\":false,\"note\":\"The buildbot dashboard comes up only in a question back to the user. It isn't part of any post.\"},{\"pass\":true,\"note\":\"The answer contains no hashtags. This passes only because no post was produced.\"},{\"pass\":true,\"note\":\"The answer contains no emojis. This passes only because no post was produced.\"},{\"pass\":false,\"note\":\"The answer ends with \\\"with just the post text and nothing else.\\\" That is a statement, not a question meant to draw comments, and there is no post anyway.\"},{\"pass\":false,\"note\":\"There is no post to judge for a human voice. The reply avoids the stock phrases listed, but the check is about the post, which doesn't exist.\"}],\"unasked_content\":[\"It claims the user's message \\\"came through as unfilled template brackets.\\\" That isn't true: the request contains no brackets or placeholders, so the stated reason for not writing the post is made up.\",\"It declines to write the post at all. It could have drafted one with clearly marked placeholders, or a plausible draft for the user to edit.\",\"It asks a list of five questions, which adds back-and-forth the user didn't ask for. The request was a single deliverable.\",\"It promises the post later instead of delivering it now.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": false,
+        "note": "No post was written. The answer is a request for more information, so there is no post body to measure, let alone one of 120\u2013180 words."
+      },
+      {
+        "pass": false,
+        "note": "The buildbot dashboard comes up only in a question back to the user. It isn't part of any post."
+      },
+      {
+        "pass": true,
+        "note": "The answer contains no hashtags. This passes only because no post was produced."
+      },
+      {
+        "pass": true,
+        "note": "The answer contains no emojis. This passes only because no post was produced."
+      },
+      {
+        "pass": false,
+        "note": "The answer ends with \"with just the post text and nothing else.\" That is a statement, not a question meant to draw comments, and there is no post anyway."
+      },
+      {
+        "pass": false,
+        "note": "There is no post to judge for a human voice. The reply avoids the stock phrases listed, but the check is about the post, which doesn't exist."
+      }
+    ],
+    "unasked_content": [
+      "It claims the user's message \"came through as unfilled template brackets.\" That isn't true: the request contains no brackets or placeholders, so the stated reason for not writing the post is made up.",
+      "It declines to write the post at all. It could have drafted one with clearly marked placeholders, or a plausible draft for the user to edit.",
+      "It asks a list of five questions, which adds back-and-forth the user didn't ask for. The request was a single deliverable.",
+      "It promises the post later instead of delivering it now."
+    ]
+  },
+  "cost_usd": 0.025352799999999998,
+  "tokens": 2589,
+  "output_tokens": 767,
+  "denials": []
+}

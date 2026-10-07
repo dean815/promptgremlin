@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"There are exactly five bullet points.\"},{\"pass\":true,\"note\":\"No competitor is named. Acme Fastening is called only \\\"a rival in the core category.\\\" HomeMax is a customer, not a competitor, and it isn't named either.\"},{\"pass\":true,\"note\":\"Bullet 2 covers the 61% concentration in two big-box retail customers and one customer's non-renewal before the contract expires in Q1. It doesn't name HomeMax, but the risk itself is fully covered.\"},{\"pass\":true,\"note\":\"Bullet 1 explicitly links the margin falling to 38% with the 36% covenant floor on the $20M credit line that renews in December. Bullet 3 covers the drop from 42% to 38%, which was driven by steel costs.\"},{\"pass\":true,\"note\":\"Every figure ($41.2M, $43M, 38%, 42%, 15%, 61%, 140 days, 10%, 4 months, $1.1M, $20M, 36%, December, Q1) matches the report. No figures were invented. The interpretive remarks (\\\"limits pass-through,\\\" \\\"no sign of offsetting actions\\\") are reasonable inferences, not made-up data.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "There are exactly five bullet points."
+      },
+      {
+        "pass": true,
+        "note": "No competitor is named. Acme Fastening is called only \"a rival in the core category.\" HomeMax is a customer, not a competitor, and it isn't named either."
+      },
+      {
+        "pass": true,
+        "note": "Bullet 2 covers the 61% concentration in two big-box retail customers and one customer's non-renewal before the contract expires in Q1. It doesn't name HomeMax, but the risk itself is fully covered."
+      },
+      {
+        "pass": true,
+        "note": "Bullet 1 explicitly links the margin falling to 38% with the 36% covenant floor on the $20M credit line that renews in December. Bullet 3 covers the drop from 42% to 38%, which was driven by steel costs."
+      },
+      {
+        "pass": true,
+        "note": "Every figure ($41.2M, $43M, 38%, 42%, 15%, 61%, 140 days, 10%, 4 months, $1.1M, $20M, 36%, December, Q1) matches the report. No figures were invented. The interpretive remarks (\"limits pass-through,\" \"no sign of offsetting actions\") are reasonable inferences, not made-up data."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0264048,
+  "tokens": 2815,
+  "output_tokens": 704,
+  "denials": []
+}

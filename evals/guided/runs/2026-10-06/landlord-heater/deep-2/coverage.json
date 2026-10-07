@@ -1,0 +1,57 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Landlord named as Ms. Alvarez.\"},{\"status\":\"stated\",\"note\":\"Apartment 4B stated.\"},{\"status\":\"stated\",\"note\":\"Heater out since October 2.\"},{\"status\":\"stated\",\"note\":\"Phoned October 3, no reply.\"},{\"status\":\"stated\",\"note\":\"Overnight temps in the 40s \u00b0F.\"},{\"status\":\"stated\",\"note\":\"Repair requested within 48 hours.\"},{\"status\":\"stated\",\"note\":\"Lease section 12 requires the landlord to provide heat.\"},{\"status\":\"stated\",\"note\":\"Tone is polite but firm (also urgent).\"},{\"status\":\"stated\",\"note\":\"Says not to threaten anything and specifically not to mention withholding rent.\"},{\"status\":\"stated\",\"note\":\"Under 150 words. The prompt adds that the subject line counts toward the limit.\"}],\"invented\":[\"The tenant's relationship with the landlord is decent and they want to keep it that way.\",\"The tenant needs an email they can send today.\",\"The 150-word limit includes the subject line.\",\"Do not blame the landlord for the delay. This may come from the unseen suggestion A, but the user's answers never say it.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Landlord named as Ms. Alvarez."
+      },
+      {
+        "status": "stated",
+        "note": "Apartment 4B stated."
+      },
+      {
+        "status": "stated",
+        "note": "Heater out since October 2."
+      },
+      {
+        "status": "stated",
+        "note": "Phoned October 3, no reply."
+      },
+      {
+        "status": "stated",
+        "note": "Overnight temps in the 40s \u00b0F."
+      },
+      {
+        "status": "stated",
+        "note": "Repair requested within 48 hours."
+      },
+      {
+        "status": "stated",
+        "note": "Lease section 12 requires the landlord to provide heat."
+      },
+      {
+        "status": "stated",
+        "note": "Tone is polite but firm (also urgent)."
+      },
+      {
+        "status": "stated",
+        "note": "Says not to threaten anything and specifically not to mention withholding rent."
+      },
+      {
+        "status": "stated",
+        "note": "Under 150 words. The prompt adds that the subject line counts toward the limit."
+      }
+    ],
+    "invented": [
+      "The tenant's relationship with the landlord is decent and they want to keep it that way.",
+      "The tenant needs an email they can send today.",
+      "The 150-word limit includes the subject line.",
+      "Do not blame the landlord for the delay. This may come from the unseen suggestion A, but the user's answers never say it."
+    ]
+  },
+  "session": "639f3c28-6e1b-408d-a689-58dfc55caedd",
+  "cost_usd": 0.0286506,
+  "output_tokens": 686,
+  "denials": []
+}

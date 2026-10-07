@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"A\",\"reason\":\"Both drafts meet every constraint: under 120 words, friendly, they apologize, they don't promise a refund, and they offer a replacement. A edges ahead because it says the replacement is at no cost and commits to checking the packaging so it doesn't happen a third time, which speaks directly to the repeat problem. B usefully asks Jordan to confirm the shipping address, but its offer is a little less reassuring overall.\"}",
+  "structured": {
+    "winner": "A",
+    "reason": "Both drafts meet every constraint: under 120 words, friendly, they apologize, they don't promise a refund, and they offer a replacement. A edges ahead because it says the replacement is at no cost and commits to checking the packaging so it doesn't happen a third time, which speaks directly to the repeat problem. B usefully asks Jordan to confirm the shipping address, but its offer is a little less reassuring overall."
+  },
+  "cost_usd": 0.040576,
+  "tokens": 3177,
+  "output_tokens": 1264,
+  "denials": [],
+  "winner_arm": "raw"
+}

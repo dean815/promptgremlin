@@ -1,0 +1,43 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"It answers the question head-on: Pro at $69 churned 10 of 12 (83%), against 1 of 8 (12.5%) at $49, and it calls the $69 price the main driver. The counts check out. It never ties this to the July increase, though. It guesses at a price change 'around August' and opens with overall churn instead of the Pro question.\"},{\"status\":\"met\",\"note\":\"It removes the 15 trial accounts and explains why.\"},{\"status\":\"met\",\"note\":\"It removes the 5 @ourco.test QA accounts (1056-1060).\"},{\"status\":\"met\",\"note\":\"Churn is counted as any account with a cancel_month.\"},{\"status\":\"not_met\",\"note\":\"It reads like an analyst report, not a CEO brief. It is full of account IDs, several tables, cohort detail and data-cleaning notes.\"},{\"status\":\"not_met\",\"note\":\"The limit was at most 5 bullets. The answer has several sections, tables and a 5-item recommendation list on top of that.\"},{\"status\":\"not_met\",\"note\":\"It doesn't suggest any chart.\"},{\"status\":\"met\",\"note\":\"The caveats say the sample is small (40 accounts), the percentages are noisy, and the result is a strong correlation, not a proven cause. That covers confidence, though without a clear confidence level.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "It answers the question head-on: Pro at $69 churned 10 of 12 (83%), against 1 of 8 (12.5%) at $49, and it calls the $69 price the main driver. The counts check out. It never ties this to the July increase, though. It guesses at a price change 'around August' and opens with overall churn instead of the Pro question."
+      },
+      {
+        "status": "met",
+        "note": "It removes the 15 trial accounts and explains why."
+      },
+      {
+        "status": "met",
+        "note": "It removes the 5 @ourco.test QA accounts (1056-1060)."
+      },
+      {
+        "status": "met",
+        "note": "Churn is counted as any account with a cancel_month."
+      },
+      {
+        "status": "not_met",
+        "note": "It reads like an analyst report, not a CEO brief. It is full of account IDs, several tables, cohort detail and data-cleaning notes."
+      },
+      {
+        "status": "not_met",
+        "note": "The limit was at most 5 bullets. The answer has several sections, tables and a 5-item recommendation list on top of that."
+      },
+      {
+        "status": "not_met",
+        "note": "It doesn't suggest any chart."
+      },
+      {
+        "status": "met",
+        "note": "The caveats say the sample is small (40 accounts), the percentages are noisy, and the result is a strong correlation, not a proven cause. That covers confidence, though without a clear confidence level."
+      }
+    ]
+  },
+  "session": "a3e3691a-0efa-40ca-b723-df5f2892629b",
+  "cost_usd": 0.053409,
+  "output_tokens": 1129,
+  "denials": []
+}

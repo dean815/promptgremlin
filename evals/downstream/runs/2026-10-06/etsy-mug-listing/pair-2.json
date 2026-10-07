@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"B\",\"reason\":\"Both follow all the rules: two short paragraphs, dishwasher safe but not microwave safe, and no invented materials or size. B states the care notes more plainly, adds a practical microwave tip, names everyday uses and adds a gift angle, so it works better as an Etsy listing. B's notes on finish variation are standard for handmade pieces and don't break the rules.\"}",
+  "structured": {
+    "winner": "B",
+    "reason": "Both follow all the rules: two short paragraphs, dishwasher safe but not microwave safe, and no invented materials or size. B states the care notes more plainly, adds a practical microwave tip, names everyday uses and adds a gift angle, so it works better as an Etsy listing. B's notes on finish variation are standard for handmade pieces and don't break the rules."
+  },
+  "cost_usd": 0.02882,
+  "tokens": 2486,
+  "output_tokens": 745,
+  "denials": [],
+  "winner_arm": "raw"
+}

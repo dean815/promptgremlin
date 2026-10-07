@@ -1,0 +1,60 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"Midjourney is never named, and the prompt uses no Midjourney syntax or parameters.\"},{\"status\":\"missing\",\"note\":\"The prompt says 'Instagram feed photo' but never gives the 4:5 portrait aspect ratio (e.g. --ar 4:5).\"},{\"status\":\"stated\",\"note\":\"The latte with leaf latte art in a ceramic cup is there, but 'handmade' is dropped.\"},{\"status\":\"contradicted\",\"note\":\"The prompt asks for a 'worn wooden caf\u00e9 table' instead of a dark wood counter. The wood isn't specified as dark, and it's a table, not a counter.\"},{\"status\":\"stated\",\"note\":\"'Soft, warm morning window light from the left' covers warm morning window light. 'Early' is not stated explicitly.\"},{\"status\":\"missing\",\"note\":\"No film-photo look is asked for. The prompt only says photorealistic or 'a real photograph'.\"},{\"status\":\"missing\",\"note\":\"There is no autumn leaf on the counter. The prompt puts scattered coffee beans there instead.\"},{\"status\":\"contradicted\",\"note\":\"The prompt includes a hand resting on the cup handle, and 'no extra people' implies a person is present.\"},{\"status\":\"stated\",\"note\":\"'No text, no logos, no watermarks' covers this.\"}],\"invented\":[\"The shop is an 'independent' coffee shop\",\"Purpose: 'make followers want to stop in for a drink'\",\"A fresh croissant on a small plate behind the cup\",\"A hand resting on the cup handle\",\"Coffee beans scattered on the wood\",\"A saucer under the cup\",\"Background of a blurred cozy caf\u00e9 interior with plants\",\"The upper third left calm for a caption or sticker added later\",\"The cup seen from above at a 45-degree angle\",\"Steam rising above the cup\",\"Creamy off-white and caramel-brown color palette\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "Midjourney is never named, and the prompt uses no Midjourney syntax or parameters."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt says 'Instagram feed photo' but never gives the 4:5 portrait aspect ratio (e.g. --ar 4:5)."
+      },
+      {
+        "status": "stated",
+        "note": "The latte with leaf latte art in a ceramic cup is there, but 'handmade' is dropped."
+      },
+      {
+        "status": "contradicted",
+        "note": "The prompt asks for a 'worn wooden caf\u00e9 table' instead of a dark wood counter. The wood isn't specified as dark, and it's a table, not a counter."
+      },
+      {
+        "status": "stated",
+        "note": "'Soft, warm morning window light from the left' covers warm morning window light. 'Early' is not stated explicitly."
+      },
+      {
+        "status": "missing",
+        "note": "No film-photo look is asked for. The prompt only says photorealistic or 'a real photograph'."
+      },
+      {
+        "status": "missing",
+        "note": "There is no autumn leaf on the counter. The prompt puts scattered coffee beans there instead."
+      },
+      {
+        "status": "contradicted",
+        "note": "The prompt includes a hand resting on the cup handle, and 'no extra people' implies a person is present."
+      },
+      {
+        "status": "stated",
+        "note": "'No text, no logos, no watermarks' covers this."
+      }
+    ],
+    "invented": [
+      "The shop is an 'independent' coffee shop",
+      "Purpose: 'make followers want to stop in for a drink'",
+      "A fresh croissant on a small plate behind the cup",
+      "A hand resting on the cup handle",
+      "Coffee beans scattered on the wood",
+      "A saucer under the cup",
+      "Background of a blurred cozy caf\u00e9 interior with plants",
+      "The upper third left calm for a caption or sticker added later",
+      "The cup seen from above at a 45-degree angle",
+      "Steam rising above the cup",
+      "Creamy off-white and caramel-brown color palette"
+    ]
+  },
+  "session": "90994970-a525-4c4c-bd7d-f71401b77862",
+  "cost_usd": 0.0364706,
+  "output_tokens": 1243,
+  "denials": []
+}

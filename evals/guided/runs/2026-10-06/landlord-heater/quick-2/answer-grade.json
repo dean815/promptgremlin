@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"The letter is addressed to \\\"Dear Ms. Alvarez.\\\"\"},{\"status\":\"met\",\"note\":\"Apartment 4B appears in the subject, the body and the signature.\"},{\"status\":\"met\",\"note\":\"It says the heater \\\"stopped working on October 2.\\\"\"},{\"status\":\"met\",\"note\":\"It says \\\"I called you about it on October 3 and haven't heard back.\\\"\"},{\"status\":\"met\",\"note\":\"It says \\\"Overnight temperatures are now in the 40s \u00b0F.\\\"\"},{\"status\":\"met\",\"note\":\"It asks for the repair \\\"within 48 hours of receiving this email,\\\" and the subject line repeats the deadline.\"},{\"status\":\"met\",\"note\":\"It says \\\"Section 12 of my lease requires the landlord to provide heat.\\\"\"},{\"status\":\"met\",\"note\":\"The tone is courteous and offers to arrange access. The firmness comes from the clear deadline and the lease citation.\"},{\"status\":\"met\",\"note\":\"Rent is never mentioned, and there are no threats.\"},{\"status\":\"met\",\"note\":\"About 110 words including the subject and signature, which is under the 150-word limit.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "The letter is addressed to \"Dear Ms. Alvarez.\""
+      },
+      {
+        "status": "met",
+        "note": "Apartment 4B appears in the subject, the body and the signature."
+      },
+      {
+        "status": "met",
+        "note": "It says the heater \"stopped working on October 2.\""
+      },
+      {
+        "status": "met",
+        "note": "It says \"I called you about it on October 3 and haven't heard back.\""
+      },
+      {
+        "status": "met",
+        "note": "It says \"Overnight temperatures are now in the 40s \u00b0F.\""
+      },
+      {
+        "status": "met",
+        "note": "It asks for the repair \"within 48 hours of receiving this email,\" and the subject line repeats the deadline."
+      },
+      {
+        "status": "met",
+        "note": "It says \"Section 12 of my lease requires the landlord to provide heat.\""
+      },
+      {
+        "status": "met",
+        "note": "The tone is courteous and offers to arrange access. The firmness comes from the clear deadline and the lease citation."
+      },
+      {
+        "status": "met",
+        "note": "Rent is never mentioned, and there are no threats."
+      },
+      {
+        "status": "met",
+        "note": "About 110 words including the subject and signature, which is under the 150-word limit."
+      }
+    ]
+  },
+  "session": "f0b20ec7-5814-48f6-9ade-947eedfbbe63",
+  "cost_usd": 0.024600999999999998,
+  "output_tokens": 743,
+  "denials": []
+}

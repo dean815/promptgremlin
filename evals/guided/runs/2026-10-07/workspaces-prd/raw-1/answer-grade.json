@@ -1,0 +1,43 @@
+{
+  "text": "{\"items\":[{\"status\":\"not_met\",\"note\":\"The PRD says it is written for a generic SaaS app because it has no product details. It never mentions note-taking or B2B notes, and it talks about generic 'resources'.\"},{\"status\":\"not_met\",\"note\":\"It is written as a long general PRD. Nothing frames it for engineering and design leads or for a kickoff.\"},{\"status\":\"not_met\",\"note\":\"Creating a workspace and inviting by email are covered. 'Shared notes' never appears, only generic shared resources, and v1 also takes on a lot more, such as billing, the audit log and resource moves.\"},{\"status\":\"not_met\",\"note\":\"It defines four roles (Owner, Admin, Member, Viewer) plus a Guest persona. v1 was meant to have only admin and member.\"},{\"status\":\"not_met\",\"note\":\"SSO is listed as out of scope. Billing is a core v1 goal and requirement (FR-18 to FR-20, M3), not out of scope. Guest access is included through the Viewer/Guest role and is never excluded.\"},{\"status\":\"not_met\",\"note\":\"The metric is '% of active accounts in a workspace with 2+ members, 20% within 6 months'. The requested metric was 20% of paid accounts creating a workspace within 60 days.\"},{\"status\":\"not_met\",\"note\":\"It has 14 sections with many tables and would run well past 2 pages.\"},{\"status\":\"not_met\",\"note\":\"Migration of existing shared notes is not an open question. Instead the PRD includes a detailed migration plan (section 9) and a migration goal.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "not_met",
+        "note": "The PRD says it is written for a generic SaaS app because it has no product details. It never mentions note-taking or B2B notes, and it talks about generic 'resources'."
+      },
+      {
+        "status": "not_met",
+        "note": "It is written as a long general PRD. Nothing frames it for engineering and design leads or for a kickoff."
+      },
+      {
+        "status": "not_met",
+        "note": "Creating a workspace and inviting by email are covered. 'Shared notes' never appears, only generic shared resources, and v1 also takes on a lot more, such as billing, the audit log and resource moves."
+      },
+      {
+        "status": "not_met",
+        "note": "It defines four roles (Owner, Admin, Member, Viewer) plus a Guest persona. v1 was meant to have only admin and member."
+      },
+      {
+        "status": "not_met",
+        "note": "SSO is listed as out of scope. Billing is a core v1 goal and requirement (FR-18 to FR-20, M3), not out of scope. Guest access is included through the Viewer/Guest role and is never excluded."
+      },
+      {
+        "status": "not_met",
+        "note": "The metric is '% of active accounts in a workspace with 2+ members, 20% within 6 months'. The requested metric was 20% of paid accounts creating a workspace within 60 days."
+      },
+      {
+        "status": "not_met",
+        "note": "It has 14 sections with many tables and would run well past 2 pages."
+      },
+      {
+        "status": "not_met",
+        "note": "Migration of existing shared notes is not an open question. Instead the PRD includes a detailed migration plan (section 9) and a migration goal."
+      }
+    ]
+  },
+  "session": "c89b9c86-9083-4b8d-9b9f-1f5b355382a9",
+  "cost_usd": 0.046633,
+  "output_tokens": 553,
+  "denials": []
+}

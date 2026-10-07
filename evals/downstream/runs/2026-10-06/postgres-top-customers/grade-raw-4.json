@@ -1,0 +1,34 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"Valid PostgreSQL that uses only the given columns: customers.id, name and email; orders.id, customer_id, created_at and status; order_items.order_id, quantity and unit_price_cents. Dividing the bigint sum by 100.0 produces numeric, so ROUND(numeric, 2) is valid.\"},{\"pass\":true,\"note\":\"Revenue is SUM(oi.quantity * oi.unit_price_cents), grouped by customer. One weakness: the multiplication runs in int, so a single line with a large quantity and price (product above about 2.1 billion cents) raises an integer overflow error before SUM widens to bigint. Writing oi.quantity::bigint * oi.unit_price_cents would prevent this.\"},{\"pass\":true,\"note\":\"Filters on o.created_at >= now() - interval '90 days', a rolling 90-day window on the right column.\"},{\"pass\":true,\"note\":\"o.status = 'paid' excludes refunded orders and also drops cancelled ones, which is a sensible reading of revenue. The answer states this choice and gives the alternative (<> 'refunded').\"},{\"pass\":true,\"note\":\"ORDER BY revenue_cents DESC LIMIT 5 is present. Notes on ties and a tiebreaker are included.\"}],\"unasked_content\":[\"The note headed 'Cast to bigint' is wrong and gives false reassurance. No cast appears in the query. SUM(int) does return bigint, but quantity * unit_price_cents is computed in int for each row first, so overflow is still possible there. Calling overflow 'not a concern' could lead the user to leave a real failure mode in place.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "Valid PostgreSQL that uses only the given columns: customers.id, name and email; orders.id, customer_id, created_at and status; order_items.order_id, quantity and unit_price_cents. Dividing the bigint sum by 100.0 produces numeric, so ROUND(numeric, 2) is valid."
+      },
+      {
+        "pass": true,
+        "note": "Revenue is SUM(oi.quantity * oi.unit_price_cents), grouped by customer. One weakness: the multiplication runs in int, so a single line with a large quantity and price (product above about 2.1 billion cents) raises an integer overflow error before SUM widens to bigint. Writing oi.quantity::bigint * oi.unit_price_cents would prevent this."
+      },
+      {
+        "pass": true,
+        "note": "Filters on o.created_at >= now() - interval '90 days', a rolling 90-day window on the right column."
+      },
+      {
+        "pass": true,
+        "note": "o.status = 'paid' excludes refunded orders and also drops cancelled ones, which is a sensible reading of revenue. The answer states this choice and gives the alternative (<> 'refunded')."
+      },
+      {
+        "pass": true,
+        "note": "ORDER BY revenue_cents DESC LIMIT 5 is present. Notes on ties and a tiebreaker are included."
+      }
+    ],
+    "unasked_content": [
+      "The note headed 'Cast to bigint' is wrong and gives false reassurance. No cast appears in the query. SUM(int) does return bigint, but quantity * unit_price_cents is computed in int for each row first, so overflow is still possible there. Calling overflow 'not a concern' could lead the user to leave a real failure mode in place."
+    ]
+  },
+  "cost_usd": 0.0346848,
+  "tokens": 3340,
+  "output_tokens": 1044,
+  "denials": []
+}

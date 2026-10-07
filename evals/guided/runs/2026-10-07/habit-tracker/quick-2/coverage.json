@@ -1,0 +1,58 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"\\\"for just me\\\" and \\\"There are no accounts or login.\\\"\"},{\"status\":\"stated\",\"note\":\"Says it's an MVP, the thinnest working slice, with no tests. The \\\"running today\\\" timing isn't stated outright, but the MVP scope covers the intent.\"},{\"status\":\"stated\",\"note\":\"\\\"local web app that runs in the browser\\\", run with the Vite dev server.\"},{\"status\":\"stated\",\"note\":\"\\\"Use React + Vite with TypeScript (I prefer TypeScript)\\\".\"},{\"status\":\"stated\",\"note\":\"\\\"store all data in the browser's localStorage\\\" and \\\"the data stays on this machine\\\".\"},{\"status\":\"stated\",\"note\":\"\\\"Track multiple habits. I can add a habit by name.\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"Daily check-off. I can mark each habit done or not done for today.\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"Current streak shown for each habit.\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"A simple 30-day history per habit\\\".\"},{\"status\":\"stated\",\"note\":\"\\\"Do not build reminders\\\".\"},{\"status\":\"missing\",\"note\":\"Dark mode by default is never mentioned. The prompt leaves look and feel entirely to the receiver, so dark mode isn't guaranteed.\"}],\"invented\":[\"The folder name `habit-tracker` inside the current working directory. The user only said \\\"New folder\\\" and gave no name.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "\"for just me\" and \"There are no accounts or login.\""
+      },
+      {
+        "status": "stated",
+        "note": "Says it's an MVP, the thinnest working slice, with no tests. The \"running today\" timing isn't stated outright, but the MVP scope covers the intent."
+      },
+      {
+        "status": "stated",
+        "note": "\"local web app that runs in the browser\", run with the Vite dev server."
+      },
+      {
+        "status": "stated",
+        "note": "\"Use React + Vite with TypeScript (I prefer TypeScript)\"."
+      },
+      {
+        "status": "stated",
+        "note": "\"store all data in the browser's localStorage\" and \"the data stays on this machine\"."
+      },
+      {
+        "status": "stated",
+        "note": "\"Track multiple habits. I can add a habit by name.\""
+      },
+      {
+        "status": "stated",
+        "note": "\"Daily check-off. I can mark each habit done or not done for today.\""
+      },
+      {
+        "status": "stated",
+        "note": "\"Current streak shown for each habit.\""
+      },
+      {
+        "status": "stated",
+        "note": "\"A simple 30-day history per habit\"."
+      },
+      {
+        "status": "stated",
+        "note": "\"Do not build reminders\"."
+      },
+      {
+        "status": "missing",
+        "note": "Dark mode by default is never mentioned. The prompt leaves look and feel entirely to the receiver, so dark mode isn't guaranteed."
+      }
+    ],
+    "invented": [
+      "The folder name `habit-tracker` inside the current working directory. The user only said \"New folder\" and gave no name."
+    ]
+  },
+  "session": "a1c1436e-1020-4180-ab95-788e360419ba",
+  "cost_usd": 0.0299746,
+  "output_tokens": 729,
+  "denials": []
+}

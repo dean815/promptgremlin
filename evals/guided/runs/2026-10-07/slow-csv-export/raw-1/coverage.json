@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt doesn't say that exports can reach about 2 million rows or that memory use matters.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say to keep the export_orders_csv(db, path) signature unchanged or that three callers use it.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say to keep the exact header and column order.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't rule out new dependencies.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't name the per-row customer lookup (the N+1 query) as the main cause.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't ask for rows to be written as they are produced instead of building one big string.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't mention that customer names can contain commas, so values need proper CSV quoting.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say to verify the fix with the existing tests in tests/test_export.py.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't ask for a minimal change or say not to restructure the module.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say that exports can reach about 2 million rows or that memory use matters."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say to keep the export_orders_csv(db, path) signature unchanged or that three callers use it."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say to keep the exact header and column order."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't rule out new dependencies."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't name the per-row customer lookup (the N+1 query) as the main cause."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't ask for rows to be written as they are produced instead of building one big string."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't mention that customer names can contain commas, so values need proper CSV quoting."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say to verify the fix with the existing tests in tests/test_export.py."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't ask for a minimal change or say not to restructure the module."
+      }
+    ],
+    "invented": []
+  },
+  "session": "459ba775-2cdc-4611-bf7b-8feb801a0b92",
+  "cost_usd": 0.020310599999999998,
+  "output_tokens": 465,
+  "denials": []
+}

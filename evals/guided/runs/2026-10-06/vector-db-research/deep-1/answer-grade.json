@@ -1,0 +1,47 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"It makes a clear call: stay on Postgres with pgvector and don't adopt a dedicated vector database yet. It also lists what would change that call.\"},{\"status\":\"met\",\"note\":\"It sizes for 5M vectors now and about 9M after 12 months at 1536 dimensions, across float32, halfvec, int8 and binary storage, and uses those numbers in the reasoning.\"},{\"status\":\"met\",\"note\":\"The analysis is built around the existing RDS PG16 setup. It covers RDS extension support, RDS instance pricing, and which options can't run on RDS (pgvectorscale).\"},{\"status\":\"met\",\"note\":\"It checks each option against the $500 limit, including instance-size and Multi-AZ effects, and names the budget as a condition that would change the recommendation. Some prices are recalled and marked unverified.\"},{\"status\":\"met\",\"note\":\"It goes into tenant_id filtering in depth: HNSW post-filtering, iterative scan, partitioning or partial indexes, Qdrant's payload index, and namespaces in Pinecone and Turbopuffer.\"},{\"status\":\"met\",\"note\":\"The final comparison table covers exactly 4 options. The broader 8-candidate table belongs to the wide scan the user asked for, and it narrows to a shortlist of 4.\"},{\"status\":\"met\",\"note\":\"It includes a comparison table and one clear recommendation.\"},{\"status\":\"not_met\",\"note\":\"No sources were retrieved, and none are dated or confirmed to be from the last 12 months. It openly flags most facts as recalled and many as older than 12 months, but the preference still isn't met.\"},{\"status\":\"met\",\"note\":\"It runs a wide scan of 8 candidates, shortlists 4, then goes deep on the top 2 (pgvector and Qdrant).\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "It makes a clear call: stay on Postgres with pgvector and don't adopt a dedicated vector database yet. It also lists what would change that call."
+      },
+      {
+        "status": "met",
+        "note": "It sizes for 5M vectors now and about 9M after 12 months at 1536 dimensions, across float32, halfvec, int8 and binary storage, and uses those numbers in the reasoning."
+      },
+      {
+        "status": "met",
+        "note": "The analysis is built around the existing RDS PG16 setup. It covers RDS extension support, RDS instance pricing, and which options can't run on RDS (pgvectorscale)."
+      },
+      {
+        "status": "met",
+        "note": "It checks each option against the $500 limit, including instance-size and Multi-AZ effects, and names the budget as a condition that would change the recommendation. Some prices are recalled and marked unverified."
+      },
+      {
+        "status": "met",
+        "note": "It goes into tenant_id filtering in depth: HNSW post-filtering, iterative scan, partitioning or partial indexes, Qdrant's payload index, and namespaces in Pinecone and Turbopuffer."
+      },
+      {
+        "status": "met",
+        "note": "The final comparison table covers exactly 4 options. The broader 8-candidate table belongs to the wide scan the user asked for, and it narrows to a shortlist of 4."
+      },
+      {
+        "status": "met",
+        "note": "It includes a comparison table and one clear recommendation."
+      },
+      {
+        "status": "not_met",
+        "note": "No sources were retrieved, and none are dated or confirmed to be from the last 12 months. It openly flags most facts as recalled and many as older than 12 months, but the preference still isn't met."
+      },
+      {
+        "status": "met",
+        "note": "It runs a wide scan of 8 candidates, shortlists 4, then goes deep on the top 2 (pgvector and Qdrant)."
+      }
+    ]
+  },
+  "session": "fa7fbada-bb6e-4b59-88eb-775b6f681dd2",
+  "cost_usd": 0.07523300000000001,
+  "output_tokens": 955,
+  "denials": []
+}

@@ -1,0 +1,27 @@
+{
+  "text": "{\"dropped\":[],\"added_harmful\":[\"States as the user's own fact that 'I haven't fixed the dates', then forbids assuming opening hours because of it. The user never said this, and the trip may be soon since it is already October.\"],\"added_neutral\":[\"Asks for an itinerary that is specific and realistic about timing and walking or transit between stops\",\"Sets a fixed meal structure: breakfast, lunch, dinner and one snack or drink stop each day\",\"Requires named restaurants, bakeries, markets and cafes, not categories\",\"Lists Montreal classics to cover (bagels, smoked meat, poutine, Quebecois cooking, pastries) plus some current local favorites\",\"Defines mid budget as mostly casual or mid-priced places with at most one splurge dinner\",\"Wants an approximate cost per meal and a rough total food budget for the 3 days\",\"Fills gaps with October activities: Mont-Royal fall colors, Jean-Talon market, neighborhood walks, indoor options for bad weather\",\"Groups each day by neighborhood to avoid crossing the city repeatedly\",\"Asks which places need reservations and wants likely Sunday/Monday closures flagged\",\"Says to assume one or two adults, staying downtown or in the Plateau, no dietary restrictions, transit and walking, no car\",\"Asks where to check current opening hours\",\"Sets the format: a heading per day, time-ordered bullets with a one-line reason each, a closing reservations list, and nothing after it\"]}",
+  "structured": {
+    "dropped": [],
+    "added_harmful": [
+      "States as the user's own fact that 'I haven't fixed the dates', then forbids assuming opening hours because of it. The user never said this, and the trip may be soon since it is already October."
+    ],
+    "added_neutral": [
+      "Asks for an itinerary that is specific and realistic about timing and walking or transit between stops",
+      "Sets a fixed meal structure: breakfast, lunch, dinner and one snack or drink stop each day",
+      "Requires named restaurants, bakeries, markets and cafes, not categories",
+      "Lists Montreal classics to cover (bagels, smoked meat, poutine, Quebecois cooking, pastries) plus some current local favorites",
+      "Defines mid budget as mostly casual or mid-priced places with at most one splurge dinner",
+      "Wants an approximate cost per meal and a rough total food budget for the 3 days",
+      "Fills gaps with October activities: Mont-Royal fall colors, Jean-Talon market, neighborhood walks, indoor options for bad weather",
+      "Groups each day by neighborhood to avoid crossing the city repeatedly",
+      "Asks which places need reservations and wants likely Sunday/Monday closures flagged",
+      "Says to assume one or two adults, staying downtown or in the Plateau, no dietary restrictions, transit and walking, no car",
+      "Asks where to check current opening hours",
+      "Sets the format: a heading per day, time-ordered bullets with a one-line reason each, a closing reservations list, and nothing after it"
+    ]
+  },
+  "cost_usd": 0.031458,
+  "tokens": 3049,
+  "output_tokens": 999,
+  "denials": []
+}

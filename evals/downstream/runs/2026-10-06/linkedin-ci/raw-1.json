@@ -1,0 +1,9 @@
+{
+  "text": "We just finished moving our CI to a new provider, and the migration itself was the easy part. The surprises were everywhere else.\n\nOur team is small, so we figured we'd port the pipelines in a couple of afternoons. The config translated fine. What didn't translate was everything nobody had written down: flaky tests we'd quietly learned to rerun, env vars that only existed on one old runner, and caching we never set up on purpose but depended on anyway.\n\nThe best one was the Buildbot dashboard. We'd been calling it a legacy thing we were happy to retire, then realized half the team kept it open all day as their way of knowing whether main was healthy. Nobody had planned a replacement, so for a week we were all just guessing.\n\nMy biggest takeaway: before you migrate, ask people what they actually look at, not what the docs say they use.\n\nWhat's something you didn't realize your CI was doing until it stopped?\n\n---\n\nI didn't know the specifics of the Buildbot dashboard story, so I guessed at it (the team relying on it to check build health). If what happened was different, send me the details and I'll rework that paragraph.",
+  "structured": null,
+  "cost_usd": 0.012202000000000001,
+  "tokens": 1703,
+  "output_tokens": 899,
+  "denials": [],
+  "sent": "write a linkedin post about what we learned migrating our small team's CI to a new provider, it should sound like a person not like an ai, about 150 words, mention the buildbot dashboard thing, no hashtags, no emojis, end with a question to get comments"
+}

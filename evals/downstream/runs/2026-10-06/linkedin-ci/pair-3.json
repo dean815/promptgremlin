@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"B\",\"reason\":\"B writes a human-sounding post that mentions the buildbot dashboard, uses no hashtags or emojis and ends with a question. At about 170 words it runs a little over the ~150 asked for. It says clearly that the dashboard detail is made up so the user can fix it. A wrongly says the request arrived as unfilled template brackets and delivers nothing.\"}",
+  "structured": {
+    "winner": "B",
+    "reason": "B writes a human-sounding post that mentions the buildbot dashboard, uses no hashtags or emojis and ends with a question. At about 170 words it runs a little over the ~150 asked for. It says clearly that the dashboard detail is made up so the user can fix it. A wrongly says the request arrived as unfilled template brackets and delivers nothing."
+  },
+  "cost_usd": 0.028324000000000002,
+  "tokens": 2598,
+  "output_tokens": 629,
+  "denials": [],
+  "winner_arm": "raw"
+}

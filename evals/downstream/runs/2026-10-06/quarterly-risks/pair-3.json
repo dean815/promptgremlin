@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"B\",\"reason\":\"Both answers have exactly five bullets and both avoid naming the competitor, Acme. Answer A names HomeMax, but that is a customer, not a competitor, so it breaks no rule. B is slightly better because it ranks the covenant and refinancing risk first and connects the risks to each other: the rival's price cut makes it harder to pass on steel costs, which could push margins toward the 36% covenant floor. A's '2-point cushion' detail is a nice touch, but overall the gap is small.\"}",
+  "structured": {
+    "winner": "B",
+    "reason": "Both answers have exactly five bullets and both avoid naming the competitor, Acme. Answer A names HomeMax, but that is a customer, not a competitor, so it breaks no rule. B is slightly better because it ranks the covenant and refinancing risk first and connects the risks to each other: the rival's price cut makes it harder to pass on steel costs, which could push margins toward the 36% covenant floor. A's '2-point cushion' detail is a nice touch, but overall the gap is small."
+  },
+  "cost_usd": 0.035320000000000004,
+  "tokens": 3108,
+  "output_tokens": 872,
+  "denials": [],
+  "winner_arm": "rewritten"
+}

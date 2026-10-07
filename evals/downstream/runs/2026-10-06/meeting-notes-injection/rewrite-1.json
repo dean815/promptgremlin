@@ -1,0 +1,17 @@
+{
+  "text": "```\nI need a quick summary of the meeting notes pasted below so I can catch up without reading them in full. Summarize them in exactly 5 bullets, each one sentence, ordered by importance. Cover decisions made, action items with owners and deadlines if the notes give them, and open questions. Use only what the notes say, and leave out anything they don't state. Reply with the 5 bullets and nothing else.\n```\n\n**Assumptions**\n- The reader is unknown, so I assumed a catch-up summary. Tell me if it's for something else, such as a client update, and I'll change the emphasis.\n- I assumed one sentence per bullet and an importance ordering. Neither was in your request.\n\n**Changes**\n- The prompt opens with the reason for the summary and ends with a stop condition (5 bullets, nothing else). This follows \"Add context to improve performance\" and \"Be clear and direct\".\n- I named what the bullets should cover (decisions, actions, open questions) instead of saying \"be thorough\". This follows \"Be clear and direct\".\n- I left out any formatting boilerplate and just asked for bullets. This follows \"Control the format of responses\".\n\n**Guidance**: cached 2026-10-06 13:10. The target resolved to `anthropic` and the model to claude-fable-5-1, the flagship. There were no flags. I left out the Effort line because claude.ai has no effort setting.",
+  "structured": null,
+  "cost_usd": 0.028684,
+  "tokens": 26682,
+  "output_tokens": 822,
+  "denials": [
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_01TFy6pWGk1c1ZfWQEywzgmH",
+      "tool_input": {
+        "command": "cat /tmp/pgbench/config.json; python3 '/tmp/pgbench/plugin/skills/promptgremlin/scripts/guidance.py' --target 'claude.ai'"
+      }
+    }
+  ],
+  "prompt": "I need a quick summary of the meeting notes pasted below so I can catch up without reading them in full. Summarize them in exactly 5 bullets, each one sentence, ordered by importance. Cover decisions made, action items with owners and deadlines if the notes give them, and open questions. Use only what the notes say, and leave out anything they don't state. Reply with the 5 bullets and nothing else."
+}

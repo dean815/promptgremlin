@@ -1,0 +1,35 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"The plan covers exactly three days: Day 1 in Mile End, Little Italy and the Plateau; Day 2 in Old Montreal; Day 3 in Saint-Henri and Little Burgundy.\"},{\"pass\":true,\"note\":\"Food is central. Every morning and evening has named food stops, and so do the Day 1 midday and Day 3 afternoon slots. The only part of a day with no food stop is Day 2 afternoon (basilica and Old Port), so most parts of each day are food-led.\"},{\"pass\":true,\"note\":\"The budget is mid-range. Bagels, markets, Schwartz's and poutine come in at about $5\u201328, mid-range dinners at $50\u201380, and there is one Joe Beef splurge at $90\u2013150+ with cheaper backups (Vin Papillon at $45\u201370). It is neither a luxury-only nor a budget-only plan.\"},{\"pass\":true,\"note\":\"It covers October well: fall colours on Mont-Royal and the Lachine Canal, October sunset times, rain swaps, fewer market stalls as the weather cools, and Canadian Thanksgiving on Oct 12, 2026, which is the correct date.\"},{\"pass\":true,\"note\":\"It names specific real places with addresses: St-Viateur, Fairmount, Olimpico, Jean-Talon, Schwartz's, Dieu du Ciel!, La Banquise, Olive et Gourmando, Crew Collective, Le Bremner, Joe Beef, Vin Papillon, Liverpool House, Atwater and others. Most addresses check out, but Hof Kelsten's is wrong (see below).\"}],\"unasked_content\":[\"Hof Kelsten is listed at '4524 Notre-Dame W' as a Saint-Henri stop on the canal walk, but it is actually at 4524 St-Laurent in the Plateau. That puts a Day 3 afternoon food stop in the wrong neighbourhood, which breaks the geographic flow of the day.\",\"The Day 3 evening tells the person to find a nightcap bar themselves ('I haven't named a specific bar') instead of giving a recommendation, which is a small gap in a food- and drink-focused plan.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "The plan covers exactly three days: Day 1 in Mile End, Little Italy and the Plateau; Day 2 in Old Montreal; Day 3 in Saint-Henri and Little Burgundy."
+      },
+      {
+        "pass": true,
+        "note": "Food is central. Every morning and evening has named food stops, and so do the Day 1 midday and Day 3 afternoon slots. The only part of a day with no food stop is Day 2 afternoon (basilica and Old Port), so most parts of each day are food-led."
+      },
+      {
+        "pass": true,
+        "note": "The budget is mid-range. Bagels, markets, Schwartz's and poutine come in at about $5\u201328, mid-range dinners at $50\u201380, and there is one Joe Beef splurge at $90\u2013150+ with cheaper backups (Vin Papillon at $45\u201370). It is neither a luxury-only nor a budget-only plan."
+      },
+      {
+        "pass": true,
+        "note": "It covers October well: fall colours on Mont-Royal and the Lachine Canal, October sunset times, rain swaps, fewer market stalls as the weather cools, and Canadian Thanksgiving on Oct 12, 2026, which is the correct date."
+      },
+      {
+        "pass": true,
+        "note": "It names specific real places with addresses: St-Viateur, Fairmount, Olimpico, Jean-Talon, Schwartz's, Dieu du Ciel!, La Banquise, Olive et Gourmando, Crew Collective, Le Bremner, Joe Beef, Vin Papillon, Liverpool House, Atwater and others. Most addresses check out, but Hof Kelsten's is wrong (see below)."
+      }
+    ],
+    "unasked_content": [
+      "Hof Kelsten is listed at '4524 Notre-Dame W' as a Saint-Henri stop on the canal walk, but it is actually at 4524 St-Laurent in the Plateau. That puts a Day 3 afternoon food stop in the wrong neighbourhood, which breaks the geographic flow of the day.",
+      "The Day 3 evening tells the person to find a nightcap bar themselves ('I haven't named a specific bar') instead of giving a recommendation, which is a small gap in a food- and drink-focused plan."
+    ]
+  },
+  "cost_usd": 0.0610688,
+  "tokens": 5759,
+  "output_tokens": 1630,
+  "denials": []
+}

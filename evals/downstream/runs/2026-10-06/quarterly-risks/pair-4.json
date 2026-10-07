@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"A\",\"reason\":\"Both answers have exactly 5 bullets and neither names the competitor. B adds a meta-note explaining that HomeMax is a customer, which clutters the list. B also states the 38% margin in two bullets, so its points overlap. A covers the same risks more cleanly with no redundancy.\"}",
+  "structured": {
+    "winner": "A",
+    "reason": "Both answers have exactly 5 bullets and neither names the competitor. B adds a meta-note explaining that HomeMax is a customer, which clutters the list. B also states the 38% margin in two bullets, so its points overlap. A covers the same risks more cleanly with no redundancy."
+  },
+  "cost_usd": 0.029755999999999998,
+  "tokens": 2867,
+  "output_tokens": 569,
+  "denials": [],
+  "winner_arm": "raw"
+}

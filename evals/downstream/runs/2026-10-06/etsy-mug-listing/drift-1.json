@@ -1,0 +1,19 @@
+{
+  "text": "{\"dropped\":[],\"added_harmful\":[],\"added_neutral\":[\"Asks for a warm, friendly voice that suits a handmade shop\",\"Asks for plain flowing prose, so no lists or bullets\",\"Widens the don't-invent rule to cover glaze, color, capacity and any other details, and says not to imply them either\",\"Says to use only the facts given (handmade, ceramic, dishwasher safe, not microwave safe)\",\"Asks for only the two paragraphs, with no title, preamble or closing notes\",\"Explains that shoppers on the listing page will read the text and rely on the details\"]}",
+  "structured": {
+    "dropped": [],
+    "added_harmful": [],
+    "added_neutral": [
+      "Asks for a warm, friendly voice that suits a handmade shop",
+      "Asks for plain flowing prose, so no lists or bullets",
+      "Widens the don't-invent rule to cover glaze, color, capacity and any other details, and says not to imply them either",
+      "Says to use only the facts given (handmade, ceramic, dishwasher safe, not microwave safe)",
+      "Asks for only the two paragraphs, with no title, preamble or closing notes",
+      "Explains that shoppers on the listing page will read the text and rely on the details"
+    ]
+  },
+  "cost_usd": 0.018802,
+  "tokens": 2223,
+  "output_tokens": 495,
+  "denials": []
+}

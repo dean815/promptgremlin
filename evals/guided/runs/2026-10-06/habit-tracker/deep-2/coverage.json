@@ -1,0 +1,59 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"\\\"It's just for me: no accounts, no login, no server.\\\"\"},{\"status\":\"stated\",\"note\":\"Says it's an MVP to have running today and not to write tests.\"},{\"status\":\"stated\",\"note\":\"\\\"a web app that runs locally in the browser\\\", run with the dev server only.\"},{\"status\":\"stated\",\"note\":\"\\\"It must be TypeScript, not plain JavaScript.\\\"\"},{\"status\":\"stated\",\"note\":\"\\\"all data in localStorage\\\" and \\\"no server\\\".\"},{\"status\":\"stated\",\"note\":\"Multiple habits are covered by \\\"Add, edit and delete habits\\\" and the per-habit features.\"},{\"status\":\"stated\",\"note\":\"\\\"A daily check-off: a 'done today' toggle per habit.\\\"\"},{\"status\":\"stated\",\"note\":\"A streak counter per habit, with the definition flagged as an assumption.\"},{\"status\":\"stated\",\"note\":\"A simple 30-day history per habit that is not a full calendar.\"},{\"status\":\"stated\",\"note\":\"Reminders and notifications are listed explicitly as out of scope.\"},{\"status\":\"stated\",\"note\":\"\\\"dark mode by default\\\".\"}],\"invented\":[\"Requires edit and delete for habits. The person only said 'a, b and c' plus history, and nothing shows they asked for editing or deleting.\",\"Styling limits: 'minimal clean styling in plain CSS' with no UI library and no light-mode toggle. These are stated as requirements, but the person never mentioned them.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "\"It's just for me: no accounts, no login, no server.\""
+      },
+      {
+        "status": "stated",
+        "note": "Says it's an MVP to have running today and not to write tests."
+      },
+      {
+        "status": "stated",
+        "note": "\"a web app that runs locally in the browser\", run with the dev server only."
+      },
+      {
+        "status": "stated",
+        "note": "\"It must be TypeScript, not plain JavaScript.\""
+      },
+      {
+        "status": "stated",
+        "note": "\"all data in localStorage\" and \"no server\"."
+      },
+      {
+        "status": "stated",
+        "note": "Multiple habits are covered by \"Add, edit and delete habits\" and the per-habit features."
+      },
+      {
+        "status": "stated",
+        "note": "\"A daily check-off: a 'done today' toggle per habit.\""
+      },
+      {
+        "status": "stated",
+        "note": "A streak counter per habit, with the definition flagged as an assumption."
+      },
+      {
+        "status": "stated",
+        "note": "A simple 30-day history per habit that is not a full calendar."
+      },
+      {
+        "status": "stated",
+        "note": "Reminders and notifications are listed explicitly as out of scope."
+      },
+      {
+        "status": "stated",
+        "note": "\"dark mode by default\"."
+      }
+    ],
+    "invented": [
+      "Requires edit and delete for habits. The person only said 'a, b and c' plus history, and nothing shows they asked for editing or deleting.",
+      "Styling limits: 'minimal clean styling in plain CSS' with no UI library and no light-mode toggle. These are stated as requirements, but the person never mentioned them."
+    ]
+  },
+  "session": "bd812a39-d6aa-49bb-bbff-4e59fb121c69",
+  "cost_usd": 0.0360386,
+  "output_tokens": 905,
+  "denials": []
+}

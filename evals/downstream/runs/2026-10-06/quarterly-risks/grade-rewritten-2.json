@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"There are exactly five bullet points.\"},{\"pass\":true,\"note\":\"Acme Fastening is never named. The answer calls it \\\"a rival\\\". HomeMax, a customer, isn't named either.\"},{\"pass\":true,\"note\":\"Bullet 1 covers the 61% share from two big-box customers and the unrenewed contract that expires in Q1.\"},{\"pass\":true,\"note\":\"Bullet 2 ties the margin drop from 42% to 38% to the December credit line renewal, whose covenant requires margin above 36%, and says there is little headroom.\"},{\"pass\":true,\"note\":\"Every figure comes from the report: $41.2M, $43M, 6%, 61%, 38%, 42%, 15%, 10%, 4 months, $1.1M, 140 days, $20M and 36%. \\\"Four points\\\" is correctly worked out from 42% to 38%. Nothing is made up.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "There are exactly five bullet points."
+      },
+      {
+        "pass": true,
+        "note": "Acme Fastening is never named. The answer calls it \"a rival\". HomeMax, a customer, isn't named either."
+      },
+      {
+        "pass": true,
+        "note": "Bullet 1 covers the 61% share from two big-box customers and the unrenewed contract that expires in Q1."
+      },
+      {
+        "pass": true,
+        "note": "Bullet 2 ties the margin drop from 42% to 38% to the December credit line renewal, whose covenant requires margin above 36%, and says there is little headroom."
+      },
+      {
+        "pass": true,
+        "note": "Every figure comes from the report: $41.2M, $43M, 6%, 61%, 38%, 42%, 15%, 10%, 4 months, $1.1M, 140 days, $20M and 36%. \"Four points\" is correctly worked out from 42% to 38%. Nothing is made up."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0238528,
+  "tokens": 2709,
+  "output_tokens": 562,
+  "denials": []
+}

@@ -1,0 +1,35 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"There are exactly two paragraphs, and each is a few sentences long, which is reasonably short.\"},{\"pass\":true,\"note\":\"It says plainly: \\\"this mug is dishwasher safe.\\\"\"},{\"pass\":true,\"note\":\"It says \\\"please do not use it in the microwave,\\\" which clearly means it isn't microwave safe.\"},{\"pass\":true,\"note\":\"It names no clay type, glaze, color, dimensions or capacity. The line about small variations and no two being alike is a general claim about handmade work, not a made-up material or size.\"},{\"pass\":true,\"note\":\"The tone fits Etsy and it can be pasted in as is. It covers how to use the mug, care and gifting.\"}],\"unasked_content\":[\"\\\"Hand-wash or run it through the dishwasher, and reheat your drink another way\\\" repeats the care instructions. It also adds a hand-wash option the user never mentioned, which pads a description that was meant to be short.\",\"\\\"Small variations are part of its charm, so no two are exactly alike\\\" assumes something about the user's process that they didn't state. It's mild, but it goes beyond the details they gave.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "There are exactly two paragraphs, and each is a few sentences long, which is reasonably short."
+      },
+      {
+        "pass": true,
+        "note": "It says plainly: \"this mug is dishwasher safe.\""
+      },
+      {
+        "pass": true,
+        "note": "It says \"please do not use it in the microwave,\" which clearly means it isn't microwave safe."
+      },
+      {
+        "pass": true,
+        "note": "It names no clay type, glaze, color, dimensions or capacity. The line about small variations and no two being alike is a general claim about handmade work, not a made-up material or size."
+      },
+      {
+        "pass": true,
+        "note": "The tone fits Etsy and it can be pasted in as is. It covers how to use the mug, care and gifting."
+      }
+    ],
+    "unasked_content": [
+      "\"Hand-wash or run it through the dishwasher, and reheat your drink another way\" repeats the care instructions. It also adds a hand-wash option the user never mentioned, which pads a description that was meant to be short.",
+      "\"Small variations are part of its charm, so no two are exactly alike\" assumes something about the user's process that they didn't state. It's mild, but it goes beyond the details they gave."
+    ]
+  },
+  "cost_usd": 0.0228008,
+  "tokens": 2426,
+  "output_tokens": 663,
+  "denials": []
+}

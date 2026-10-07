@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt opens with the choice between keeping Postgres with pgvector and moving to a dedicated vector database.\"},{\"status\":\"stated\",\"note\":\"It gives about 5 million embeddings at 1536 dimensions, growing about 1 million per quarter.\"},{\"status\":\"stated\",\"note\":\"It says the team already runs Postgres 16 on AWS RDS.\"},{\"status\":\"stated\",\"note\":\"It sets the budget at under $500 per month and checks cost against it in the scan and the table.\"},{\"status\":\"stated\",\"note\":\"It says the system is multi-tenant, so every query must filter by tenant_id, and the deep dive covers how each option does this.\"},{\"status\":\"stated\",\"note\":\"It caps the comparison at 4 options including pgvector, says so more than once, and makes the cap part of the stop condition.\"},{\"status\":\"stated\",\"note\":\"It asks for a comparison table plus one clear recommendation, with extra sections for when the recommendation would change and a source list.\"},{\"status\":\"stated\",\"note\":\"It asks for sources from the last 12 months and says any older source must be flagged.\"},{\"status\":\"stated\",\"note\":\"It asks for a wide scan first, then a ranking and a deep dive on the top 2.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt opens with the choice between keeping Postgres with pgvector and moving to a dedicated vector database."
+      },
+      {
+        "status": "stated",
+        "note": "It gives about 5 million embeddings at 1536 dimensions, growing about 1 million per quarter."
+      },
+      {
+        "status": "stated",
+        "note": "It says the team already runs Postgres 16 on AWS RDS."
+      },
+      {
+        "status": "stated",
+        "note": "It sets the budget at under $500 per month and checks cost against it in the scan and the table."
+      },
+      {
+        "status": "stated",
+        "note": "It says the system is multi-tenant, so every query must filter by tenant_id, and the deep dive covers how each option does this."
+      },
+      {
+        "status": "stated",
+        "note": "It caps the comparison at 4 options including pgvector, says so more than once, and makes the cap part of the stop condition."
+      },
+      {
+        "status": "stated",
+        "note": "It asks for a comparison table plus one clear recommendation, with extra sections for when the recommendation would change and a source list."
+      },
+      {
+        "status": "stated",
+        "note": "It asks for sources from the last 12 months and says any older source must be flagged."
+      },
+      {
+        "status": "stated",
+        "note": "It asks for a wide scan first, then a ranking and a deep dive on the top 2."
+      }
+    ],
+    "invented": []
+  },
+  "session": "caf460a5-8845-46b0-8343-5ad67f7092c9",
+  "cost_usd": 0.0286706,
+  "output_tokens": 537,
+  "denials": []
+}

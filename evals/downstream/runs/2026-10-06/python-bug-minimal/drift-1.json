@@ -1,0 +1,24 @@
+{
+  "text": "{\"dropped\":[],\"added_harmful\":[\"Invents a reason the user never gave: \\\"because I'm going to diff it against my original\\\"\"],\"added_neutral\":[\"Fixed reply order: cause, then fixed function, then note and call sequence\",\"Limits the explanation of the cause to one to three sentences\",\"Lists likely state-carryover causes (shared default argument, module-level or global variable, accumulator never reset) and asks for the exact line to be named\",\"Says to keep the user's names, structure and style and not to refactor or add features (spells out \\\"change as little as possible\\\")\",\"Asks for a one-line note on what was changed\",\"Asks for a short call sequence with expected totals showing the fix works\",\"Asks for other problems to be listed in one line and left unchanged\",\"Asks for one clarifying question instead of a guess if the cause isn't clear\",\"Says nothing should follow the call sequence and the note on other problems\"]}",
+  "structured": {
+    "dropped": [],
+    "added_harmful": [
+      "Invents a reason the user never gave: \"because I'm going to diff it against my original\""
+    ],
+    "added_neutral": [
+      "Fixed reply order: cause, then fixed function, then note and call sequence",
+      "Limits the explanation of the cause to one to three sentences",
+      "Lists likely state-carryover causes (shared default argument, module-level or global variable, accumulator never reset) and asks for the exact line to be named",
+      "Says to keep the user's names, structure and style and not to refactor or add features (spells out \"change as little as possible\")",
+      "Asks for a one-line note on what was changed",
+      "Asks for a short call sequence with expected totals showing the fix works",
+      "Asks for other problems to be listed in one line and left unchanged",
+      "Asks for one clarifying question instead of a guess if the cause isn't clear",
+      "Says nothing should follow the call sequence and the note on other problems"
+    ]
+  },
+  "cost_usd": 0.022162,
+  "tokens": 2442,
+  "output_tokens": 629,
+  "denials": []
+}

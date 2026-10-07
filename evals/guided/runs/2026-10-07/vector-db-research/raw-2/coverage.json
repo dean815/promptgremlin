@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt doesn't frame the decision as pgvector vs a dedicated vector DB.\"},{\"status\":\"missing\",\"note\":\"It gives no data scale (5M x 1536-dim, +1M per quarter).\"},{\"status\":\"missing\",\"note\":\"It doesn't say the team already runs Postgres 16 on RDS.\"},{\"status\":\"missing\",\"note\":\"It sets no budget (<$500/mo).\"},{\"status\":\"missing\",\"note\":\"It doesn't require filtering by tenant_id for multi-tenant queries.\"},{\"status\":\"missing\",\"note\":\"It sets no limit on how many options to compare (max 4).\"},{\"status\":\"missing\",\"note\":\"It doesn't ask for a comparison table plus one recommendation.\"},{\"status\":\"missing\",\"note\":\"It doesn't ask for sources from the last 12 months.\"},{\"status\":\"missing\",\"note\":\"It doesn't describe the approach (wide scan, then deep on the top 2).\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt doesn't frame the decision as pgvector vs a dedicated vector DB."
+      },
+      {
+        "status": "missing",
+        "note": "It gives no data scale (5M x 1536-dim, +1M per quarter)."
+      },
+      {
+        "status": "missing",
+        "note": "It doesn't say the team already runs Postgres 16 on RDS."
+      },
+      {
+        "status": "missing",
+        "note": "It sets no budget (<$500/mo)."
+      },
+      {
+        "status": "missing",
+        "note": "It doesn't require filtering by tenant_id for multi-tenant queries."
+      },
+      {
+        "status": "missing",
+        "note": "It sets no limit on how many options to compare (max 4)."
+      },
+      {
+        "status": "missing",
+        "note": "It doesn't ask for a comparison table plus one recommendation."
+      },
+      {
+        "status": "missing",
+        "note": "It doesn't ask for sources from the last 12 months."
+      },
+      {
+        "status": "missing",
+        "note": "It doesn't describe the approach (wide scan, then deep on the top 2)."
+      }
+    ],
+    "invented": []
+  },
+  "session": "f7cf4175-5feb-497e-adf5-cd60a9a38004",
+  "cost_usd": 0.0171346,
+  "output_tokens": 387,
+  "denials": []
+}

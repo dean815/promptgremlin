@@ -1,0 +1,47 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"It gives a clear decision: stay on pgvector on RDS, with Qdrant as the runner-up. It also says exactly when to switch.\"},{\"status\":\"met\",\"note\":\"It works out sizing for 1536-dim vectors at 5M, 9M and 13M (5M now, plus about 1M per quarter). It covers float32 vs halfvec storage, HNSW overhead and RAM needs, and costs both options at 5M and 13M.\"},{\"status\":\"met\",\"note\":\"It builds the answer around the team's existing Postgres 16 on RDS. That covers the RDS pgvector version check, which extensions are missing on RDS, RDS instance pricing, and why moving to Aurora isn't worth it.\"},{\"status\":\"met\",\"note\":\"It checks every option against the $500/month limit and says plainly where it goes over (unquantized pgvector without spare capacity on the current instance, ~$750). It also says that staying under budget depends on how much spare RAM the current instance has.\"},{\"status\":\"met\",\"note\":\"Filtering by tenant_id is a column in both the survey and comparison tables. The deep dive covers pgvector's iterative scans and partitioning or partial indexes by tenant size, Qdrant's is_tenant payload index, Pinecone namespaces, and isolation.\"},{\"status\":\"met\",\"note\":\"The final comparison table has exactly 4 options (pgvector, Qdrant, Pinecone, S3 Vectors). The 9-candidate survey was the wide scan the user asked for, and it was cut down to 4.\"},{\"status\":\"met\",\"note\":\"It gives a 7-column comparison table and one clear recommendation (stay on pgvector), with conditions and switch triggers stated.\"},{\"status\":\"not_met\",\"note\":\"No sources from the last 12 months were used. It had no web access, and every cited source is from memory and dated 2024 or undated, while today is Oct 2026. It is open about the gap and marks older sources, but it didn't meet the preference.\"},{\"status\":\"met\",\"note\":\"It runs a wide survey of 9 candidates with short verdicts, picks the top 2 (pgvector and Qdrant), and covers both in depth.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "It gives a clear decision: stay on pgvector on RDS, with Qdrant as the runner-up. It also says exactly when to switch."
+      },
+      {
+        "status": "met",
+        "note": "It works out sizing for 1536-dim vectors at 5M, 9M and 13M (5M now, plus about 1M per quarter). It covers float32 vs halfvec storage, HNSW overhead and RAM needs, and costs both options at 5M and 13M."
+      },
+      {
+        "status": "met",
+        "note": "It builds the answer around the team's existing Postgres 16 on RDS. That covers the RDS pgvector version check, which extensions are missing on RDS, RDS instance pricing, and why moving to Aurora isn't worth it."
+      },
+      {
+        "status": "met",
+        "note": "It checks every option against the $500/month limit and says plainly where it goes over (unquantized pgvector without spare capacity on the current instance, ~$750). It also says that staying under budget depends on how much spare RAM the current instance has."
+      },
+      {
+        "status": "met",
+        "note": "Filtering by tenant_id is a column in both the survey and comparison tables. The deep dive covers pgvector's iterative scans and partitioning or partial indexes by tenant size, Qdrant's is_tenant payload index, Pinecone namespaces, and isolation."
+      },
+      {
+        "status": "met",
+        "note": "The final comparison table has exactly 4 options (pgvector, Qdrant, Pinecone, S3 Vectors). The 9-candidate survey was the wide scan the user asked for, and it was cut down to 4."
+      },
+      {
+        "status": "met",
+        "note": "It gives a 7-column comparison table and one clear recommendation (stay on pgvector), with conditions and switch triggers stated."
+      },
+      {
+        "status": "not_met",
+        "note": "No sources from the last 12 months were used. It had no web access, and every cited source is from memory and dated 2024 or undated, while today is Oct 2026. It is open about the gap and marks older sources, but it didn't meet the preference."
+      },
+      {
+        "status": "met",
+        "note": "It runs a wide survey of 9 candidates with short verdicts, picks the top 2 (pgvector and Qdrant), and covers both in depth."
+      }
+    ]
+  },
+  "session": "93a0168c-3e80-4442-9920-f7f15bd57d50",
+  "cost_usd": 0.083793,
+  "output_tokens": 1089,
+  "denials": []
+}

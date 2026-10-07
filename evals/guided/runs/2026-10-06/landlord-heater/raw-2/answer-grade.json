@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"not_met\",\"note\":\"Uses the placeholder [Landlord's Name] instead of naming Ms. Alvarez.\"},{\"status\":\"not_met\",\"note\":\"Uses the placeholder [address/unit number] instead of Apartment 4B.\"},{\"status\":\"not_met\",\"note\":\"Uses the placeholder [on date / a few days ago] instead of October 2.\"},{\"status\":\"not_met\",\"note\":\"Doesn't mention the October 3 phone call or that nobody responded.\"},{\"status\":\"not_met\",\"note\":\"Only says 'temperatures dropping'. It never says overnight lows are in the 40s \u00b0F.\"},{\"status\":\"not_met\",\"note\":\"Asks for a repair 'as soon as possible', not within 48 hours.\"},{\"status\":\"not_met\",\"note\":\"Doesn't cite lease section 12 or the landlord's duty to provide heat. It only offers to add a lease reference later.\"},{\"status\":\"not_met\",\"note\":\"The tone is polite but not firm. It has no deadline, no note of the ignored call and no lease duty, and reads as a gentle request.\"},{\"status\":\"met\",\"note\":\"It doesn't threaten to withhold rent.\"},{\"status\":\"met\",\"note\":\"The email itself is roughly 140 words, under the limit. The tips after it are outside the letter.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "not_met",
+        "note": "Uses the placeholder [Landlord's Name] instead of naming Ms. Alvarez."
+      },
+      {
+        "status": "not_met",
+        "note": "Uses the placeholder [address/unit number] instead of Apartment 4B."
+      },
+      {
+        "status": "not_met",
+        "note": "Uses the placeholder [on date / a few days ago] instead of October 2."
+      },
+      {
+        "status": "not_met",
+        "note": "Doesn't mention the October 3 phone call or that nobody responded."
+      },
+      {
+        "status": "not_met",
+        "note": "Only says 'temperatures dropping'. It never says overnight lows are in the 40s \u00b0F."
+      },
+      {
+        "status": "not_met",
+        "note": "Asks for a repair 'as soon as possible', not within 48 hours."
+      },
+      {
+        "status": "not_met",
+        "note": "Doesn't cite lease section 12 or the landlord's duty to provide heat. It only offers to add a lease reference later."
+      },
+      {
+        "status": "not_met",
+        "note": "The tone is polite but not firm. It has no deadline, no note of the ignored call and no lease duty, and reads as a gentle request."
+      },
+      {
+        "status": "met",
+        "note": "It doesn't threaten to withhold rent."
+      },
+      {
+        "status": "met",
+        "note": "The email itself is roughly 140 words, under the limit. The tips after it are outside the letter."
+      }
+    ]
+  },
+  "session": "0ded822a-6295-4d18-bcb4-a5a464ad39e7",
+  "cost_usd": 0.026533000000000004,
+  "output_tokens": 782,
+  "denials": []
+}

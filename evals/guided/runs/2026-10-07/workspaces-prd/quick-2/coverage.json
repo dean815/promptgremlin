@@ -1,0 +1,44 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt opens with \\\"a B2B note-taking app that is adding team workspaces.\\\"\"},{\"status\":\"stated\",\"note\":\"It says \\\"The readers are engineering and design leads\\\" and frames the doc as being for a kickoff.\"},{\"status\":\"stated\",\"note\":\"The In list covers creating a workspace, inviting members by email, and shared notes inside a workspace.\"},{\"status\":\"stated\",\"note\":\"It says \\\"Roles: admin and member only.\\\"\"},{\"status\":\"stated\",\"note\":\"The out-of-scope list is billing changes, SSO, and guest access.\"},{\"status\":\"stated\",\"note\":\"It gives the metric exactly as the user did and says to use that wording as given. Any other metric must be labelled \\\"Proposed\\\".\"},{\"status\":\"stated\",\"note\":\"It says \\\"Length: about 2 pages at most.\\\"\"},{\"status\":\"stated\",\"note\":\"Migration goes under Open Questions and must stay open, with the instruction \\\"Do not recommend or decide one.\\\"\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt opens with \"a B2B note-taking app that is adding team workspaces.\""
+      },
+      {
+        "status": "stated",
+        "note": "It says \"The readers are engineering and design leads\" and frames the doc as being for a kickoff."
+      },
+      {
+        "status": "stated",
+        "note": "The In list covers creating a workspace, inviting members by email, and shared notes inside a workspace."
+      },
+      {
+        "status": "stated",
+        "note": "It says \"Roles: admin and member only.\""
+      },
+      {
+        "status": "stated",
+        "note": "The out-of-scope list is billing changes, SSO, and guest access."
+      },
+      {
+        "status": "stated",
+        "note": "It gives the metric exactly as the user did and says to use that wording as given. Any other metric must be labelled \"Proposed\"."
+      },
+      {
+        "status": "stated",
+        "note": "It says \"Length: about 2 pages at most.\""
+      },
+      {
+        "status": "stated",
+        "note": "Migration goes under Open Questions and must stay open, with the instruction \"Do not recommend or decide one.\""
+      }
+    ],
+    "invented": []
+  },
+  "session": "6dd07965-a677-40a1-ac3b-b266d1dbb435",
+  "cost_usd": 0.025518599999999995,
+  "output_tokens": 495,
+  "denials": []
+}

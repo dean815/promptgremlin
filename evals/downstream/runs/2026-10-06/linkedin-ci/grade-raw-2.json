@@ -1,0 +1,36 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"The post body, everything above the '---' separator, comes to about 160 words. That is inside the 120\u2013180 range.\"},{\"pass\":true,\"note\":\"The third paragraph mentions the Buildbot dashboard by name and builds the main story around it.\"},{\"pass\":true,\"note\":\"There are no hashtags anywhere in the post.\"},{\"pass\":true,\"note\":\"There are no emojis in the post.\"},{\"pass\":true,\"note\":\"The post ends with a question meant to draw comments: 'What's something your team relied on that nobody realized until it was gone?' The note after the separator is addressed to the user and is not part of the post.\"},{\"pass\":true,\"note\":\"The language is plain and conversational ('the technical part was the easy bit', 'The one that got us'). It avoids stock AI phrases like 'game-changer', 'delve' or 'fast-paced world'.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "The post body, everything above the '---' separator, comes to about 160 words. That is inside the 120\u2013180 range."
+      },
+      {
+        "pass": true,
+        "note": "The third paragraph mentions the Buildbot dashboard by name and builds the main story around it."
+      },
+      {
+        "pass": true,
+        "note": "There are no hashtags anywhere in the post."
+      },
+      {
+        "pass": true,
+        "note": "There are no emojis in the post."
+      },
+      {
+        "pass": true,
+        "note": "The post ends with a question meant to draw comments: 'What's something your team relied on that nobody realized until it was gone?' The note after the separator is addressed to the user and is not part of the post."
+      },
+      {
+        "pass": true,
+        "note": "The language is plain and conversational ('the technical part was the easy bit', 'The one that got us'). It avoids stock AI phrases like 'game-changer', 'delve' or 'fast-paced world'."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0393488,
+  "tokens": 3362,
+  "output_tokens": 1418,
+  "denials": []
+}

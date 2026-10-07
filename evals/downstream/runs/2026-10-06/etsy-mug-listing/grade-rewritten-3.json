@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"There are exactly two paragraphs, and both are short.\"},{\"pass\":true,\"note\":\"It says plainly: \\\"this mug is dishwasher safe.\\\"\"},{\"pass\":true,\"note\":\"It says plainly: \\\"it is not microwave safe.\\\"\"},{\"pass\":true,\"note\":\"It names no clay type, glaze, color, dimensions or capacity. The only material it mentions is \\\"ceramic\\\", which the user gave. \\\"One-of-a-kind\\\" is a reasonable thing to say about a handmade item, not a made-up specification.\"},{\"pass\":true,\"note\":\"It's warm and focused on the buyer, includes a gift angle and gives clear care instructions, so it could be pasted straight into an Etsy listing.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "There are exactly two paragraphs, and both are short."
+      },
+      {
+        "pass": true,
+        "note": "It says plainly: \"this mug is dishwasher safe.\""
+      },
+      {
+        "pass": true,
+        "note": "It says plainly: \"it is not microwave safe.\""
+      },
+      {
+        "pass": true,
+        "note": "It names no clay type, glaze, color, dimensions or capacity. The only material it mentions is \"ceramic\", which the user gave. \"One-of-a-kind\" is a reasonable thing to say about a handmade item, not a made-up specification."
+      },
+      {
+        "pass": true,
+        "note": "It's warm and focused on the buyer, includes a gift angle and gives clear care instructions, so it could be pasted straight into an Etsy listing."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0181408,
+  "tokens": 2178,
+  "output_tokens": 440,
+  "denials": []
+}

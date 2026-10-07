@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"No mention of the ~2M row scale or memory concerns.\"},{\"status\":\"missing\",\"note\":\"Signature preservation is not mentioned.\"},{\"status\":\"missing\",\"note\":\"Header and column order are not mentioned.\"},{\"status\":\"missing\",\"note\":\"Nothing about avoiding new dependencies.\"},{\"status\":\"missing\",\"note\":\"The N+1 customer lookup is not identified.\"},{\"status\":\"missing\",\"note\":\"Streaming row writes are not mentioned.\"},{\"status\":\"missing\",\"note\":\"CSV quoting for commas is not mentioned.\"},{\"status\":\"missing\",\"note\":\"tests/test_export.py is not referenced.\"},{\"status\":\"missing\",\"note\":\"No constraint asking for a minimal change.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "No mention of the ~2M row scale or memory concerns."
+      },
+      {
+        "status": "missing",
+        "note": "Signature preservation is not mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "Header and column order are not mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "Nothing about avoiding new dependencies."
+      },
+      {
+        "status": "missing",
+        "note": "The N+1 customer lookup is not identified."
+      },
+      {
+        "status": "missing",
+        "note": "Streaming row writes are not mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "CSV quoting for commas is not mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "tests/test_export.py is not referenced."
+      },
+      {
+        "status": "missing",
+        "note": "No constraint asking for a minimal change."
+      }
+    ],
+    "invented": []
+  },
+  "session": "ab84e15b-3deb-4e39-8bc2-f07b6ce18604",
+  "cost_usd": 0.0156506,
+  "output_tokens": 314,
+  "denials": []
+}

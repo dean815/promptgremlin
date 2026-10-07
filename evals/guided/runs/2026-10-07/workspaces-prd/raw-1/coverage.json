@@ -1,0 +1,44 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never says the product is a B2B note-taking app.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't name the readers (engineering and design leads) or say the PRD is for a kickoff.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't define the v1 scope: creating a workspace, inviting members by email, and shared notes.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say v1 has only two roles, admin and member.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't list the out-of-scope items: billing changes, SSO and guest access.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't give the success metric (20% of paid accounts create a workspace within 60 days).\"},{\"status\":\"missing\",\"note\":\"The prompt sets no length limit (about 2 pages at most).\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say to leave migration of existing shared notes as an open question.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never says the product is a B2B note-taking app."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't name the readers (engineering and design leads) or say the PRD is for a kickoff."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't define the v1 scope: creating a workspace, inviting members by email, and shared notes."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say v1 has only two roles, admin and member."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't list the out-of-scope items: billing changes, SSO and guest access."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't give the success metric (20% of paid accounts create a workspace within 60 days)."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt sets no length limit (about 2 pages at most)."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say to leave migration of existing shared notes as an open question."
+      }
+    ],
+    "invented": []
+  },
+  "session": "3da38370-a013-46d6-8a48-e5bbe0a18857",
+  "cost_usd": 0.017138599999999997,
+  "output_tokens": 396,
+  "denials": []
+}

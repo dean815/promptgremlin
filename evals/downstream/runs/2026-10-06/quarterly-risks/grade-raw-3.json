@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"There are exactly 5 bullet points.\"},{\"pass\":true,\"note\":\"Acme Fastening is called \\\"a rival\\\" and is never named. HomeMax is a customer, not a competitor, so naming it is fine.\"},{\"pass\":true,\"note\":\"Bullet 1 covers the 61% revenue concentration in two retailers and HomeMax's unrenewed contract expiring in Q1.\"},{\"pass\":true,\"note\":\"Bullet 2 covers the drop from 42% to 38% driven by steel costs. Bullets 3 and 4 tie it to the 36% covenant on the $20M credit line.\"},{\"pass\":true,\"note\":\"Every figure comes from the report. The '2-point cushion' is correctly derived (38% \u2212 36%). 'Could force price matching' is a reasonable inference, not an invented fact.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "There are exactly 5 bullet points."
+      },
+      {
+        "pass": true,
+        "note": "Acme Fastening is called \"a rival\" and is never named. HomeMax is a customer, not a competitor, so naming it is fine."
+      },
+      {
+        "pass": true,
+        "note": "Bullet 1 covers the 61% revenue concentration in two retailers and HomeMax's unrenewed contract expiring in Q1."
+      },
+      {
+        "pass": true,
+        "note": "Bullet 2 covers the drop from 42% to 38% driven by steel costs. Bullets 3 and 4 tie it to the 36% covenant on the $20M credit line."
+      },
+      {
+        "pass": true,
+        "note": "Every figure comes from the report. The '2-point cushion' is correctly derived (38% \u2212 36%). 'Could force price matching' is a reasonable inference, not an invented fact."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0227088,
+  "tokens": 2611,
+  "output_tokens": 532,
+  "denials": []
+}

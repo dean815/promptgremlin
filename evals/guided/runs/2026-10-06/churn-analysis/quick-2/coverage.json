@@ -1,0 +1,44 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt asks whether the July Pro price increase from 49 to 69 USD drove Pro churn, and says this is not a general churn analysis.\"},{\"status\":\"stated\",\"note\":\"The prompt says to exclude every row where is_trial is yes.\"},{\"status\":\"stated\",\"note\":\"The prompt says to exclude every row whose email ends in @ourco.test, calling them internal test accounts.\"},{\"status\":\"stated\",\"note\":\"The prompt defines churn as an account having a cancel_month.\"},{\"status\":\"stated\",\"note\":\"The prompt names the CEO as the audience.\"},{\"status\":\"stated\",\"note\":\"The prompt asks for a plain-language summary of at most 5 bullets.\"},{\"status\":\"stated\",\"note\":\"The prompt asks for one suggested chart and says what to specify: chart type, x-axis, y-axis and series.\"},{\"status\":\"stated\",\"note\":\"The prompt asks for a short statement of how confident the conclusion is, given the small number of accounts.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt asks whether the July Pro price increase from 49 to 69 USD drove Pro churn, and says this is not a general churn analysis."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to exclude every row where is_trial is yes."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to exclude every row whose email ends in @ourco.test, calling them internal test accounts."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt defines churn as an account having a cancel_month."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt names the CEO as the audience."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks for a plain-language summary of at most 5 bullets."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks for one suggested chart and says what to specify: chart type, x-axis, y-axis and series."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks for a short statement of how confident the conclusion is, given the small number of accounts."
+      }
+    ],
+    "invented": []
+  },
+  "session": "ac1a6baf-4dea-41e8-a923-f2c60f1ac76f",
+  "cost_usd": 0.0400906,
+  "output_tokens": 508,
+  "denials": []
+}

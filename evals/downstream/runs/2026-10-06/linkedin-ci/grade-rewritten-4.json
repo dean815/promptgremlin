@@ -1,0 +1,40 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"Counted as written, it is about 143 words, which is inside 120-180. Roughly 35 of those words are bracketed placeholder instructions, though, so the length of the finished post can't be known yet.\"},{\"pass\":true,\"note\":\"It names the buildbot dashboard twice. What actually happened with it is left as a placeholder, so the post doesn't say anything about it.\"},{\"pass\":true,\"note\":\"No hashtags.\"},{\"pass\":true,\"note\":\"No emojis.\"},{\"pass\":true,\"note\":\"Ends with: 'If you've moved CI providers, what was the thing that caught you completely off guard?'\"},{\"pass\":true,\"note\":\"The written sentences avoid stock AI phrasing and sound casual and first-person, e.g. 'It did not.' and 'just config.'\"}],\"unasked_content\":[\"The user asked for a post but got a fill-in template. The team size, both providers, the buildbot story, all the lessons and the mistake are bracketed placeholders, so this can't be posted as is.\",\"The buildbot dashboard part, the one detail the user specifically asked for, is a placeholder with no content.\",\"It invents details the user never gave: the migration happened 'last quarter', they expected 'a couple of weeks', and the team got something wrong that 'cost us more time than any of the technical problems did'. If these aren't true, the post would misrepresent the user's experience.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "Counted as written, it is about 143 words, which is inside 120-180. Roughly 35 of those words are bracketed placeholder instructions, though, so the length of the finished post can't be known yet."
+      },
+      {
+        "pass": true,
+        "note": "It names the buildbot dashboard twice. What actually happened with it is left as a placeholder, so the post doesn't say anything about it."
+      },
+      {
+        "pass": true,
+        "note": "No hashtags."
+      },
+      {
+        "pass": true,
+        "note": "No emojis."
+      },
+      {
+        "pass": true,
+        "note": "Ends with: 'If you've moved CI providers, what was the thing that caught you completely off guard?'"
+      },
+      {
+        "pass": true,
+        "note": "The written sentences avoid stock AI phrasing and sound casual and first-person, e.g. 'It did not.' and 'just config.'"
+      }
+    ],
+    "unasked_content": [
+      "The user asked for a post but got a fill-in template. The team size, both providers, the buildbot story, all the lessons and the mistake are bracketed placeholders, so this can't be posted as is.",
+      "The buildbot dashboard part, the one detail the user specifically asked for, is a placeholder with no content.",
+      "It invents details the user never gave: the migration happened 'last quarter', they expected 'a couple of weeks', and the team got something wrong that 'cost us more time than any of the technical problems did'. If these aren't true, the post would misrepresent the user's experience."
+    ]
+  },
+  "cost_usd": 0.0424808,
+  "tokens": 3482,
+  "output_tokens": 1599,
+  "denials": []
+}

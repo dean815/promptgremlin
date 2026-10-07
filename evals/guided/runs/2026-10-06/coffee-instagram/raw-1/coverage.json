@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt doesn't name Midjourney or any other tool.\"},{\"status\":\"missing\",\"note\":\"The prompt says Instagram but not that it's a feed post or that it should be 4:5 portrait.\"},{\"status\":\"missing\",\"note\":\"There's no subject: no latte, no leaf latte art, no handmade ceramic cup.\"},{\"status\":\"missing\",\"note\":\"There's no setting. The dark wood counter isn't mentioned.\"},{\"status\":\"missing\",\"note\":\"Lighting isn't covered. Warm early-morning window light isn't mentioned.\"},{\"status\":\"missing\",\"note\":\"There's no film-photo look or any other style.\"},{\"status\":\"missing\",\"note\":\"The single autumn leaf on the counter isn't mentioned.\"},{\"status\":\"missing\",\"note\":\"Nothing says to leave people out of the image.\"},{\"status\":\"missing\",\"note\":\"Nothing says to leave text or logos out of the image.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt doesn't name Midjourney or any other tool."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt says Instagram but not that it's a feed post or that it should be 4:5 portrait."
+      },
+      {
+        "status": "missing",
+        "note": "There's no subject: no latte, no leaf latte art, no handmade ceramic cup."
+      },
+      {
+        "status": "missing",
+        "note": "There's no setting. The dark wood counter isn't mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "Lighting isn't covered. Warm early-morning window light isn't mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "There's no film-photo look or any other style."
+      },
+      {
+        "status": "missing",
+        "note": "The single autumn leaf on the counter isn't mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "Nothing says to leave people out of the image."
+      },
+      {
+        "status": "missing",
+        "note": "Nothing says to leave text or logos out of the image."
+      }
+    ],
+    "invented": []
+  },
+  "session": "8b0882fb-27f1-4997-b78b-b280ced9cfb1",
+  "cost_usd": 0.018114599999999998,
+  "output_tokens": 458,
+  "denials": []
+}

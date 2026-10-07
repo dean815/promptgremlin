@@ -1,0 +1,52 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"The prompt never frames the real decision as keeping Postgres with pgvector versus adopting a dedicated vector database. It says 'we're choosing a vector database' and treats pgvector as just one of six candidates.\"},{\"status\":\"missing\",\"note\":\"The prompt never gives the scale of about 5M embeddings at 1536 dimensions, growing about 1M per quarter. It asks the receiver to infer scale from the repo and to cost at 1M and 100M vectors instead.\"},{\"status\":\"missing\",\"note\":\"The prompt doesn't say the team already runs Postgres 16 on AWS RDS. It only asks the receiver to infer the hosting setup from repo files.\"},{\"status\":\"missing\",\"note\":\"The prompt mentions no budget limit, so the $500/month ceiling is absent.\"},{\"status\":\"missing\",\"note\":\"The prompt asks about filtered-search support in general but never states that queries must filter by tenant_id or that the system is multi-tenant.\"},{\"status\":\"contradicted\",\"note\":\"The person wanted at most 4 options compared. The prompt names six candidates (pgvector, Qdrant, Weaviate, Milvus, Pinecone, Chroma) and allows a seventh.\"},{\"status\":\"contradicted\",\"note\":\"The comparison table is requested, but the prompt asks for 'one to two options' where the person wanted one clear recommendation.\"},{\"status\":\"stated\",\"note\":\"The prompt says to 'prefer sources from the last 12 months because this field changes fast.'\"},{\"status\":\"missing\",\"note\":\"The prompt has no wide-scan-then-deep-dive-on-top-2 approach. It asks for the same flat coverage of every candidate.\"}],\"invented\":[\"The fixed candidate list of pgvector, Qdrant, Weaviate, Milvus, Pinecone and Chroma is presented as the set to research. It comes from neither the request nor any answer.\",\"The cost reference points of 1M and 100M vectors are presented as the relevant scale. They don't match the person's actual ~5M-vector scale.\",\"The framing 'We're choosing a vector database' implies a fresh selection rather than a decision on keeping their existing Postgres/pgvector setup.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "The prompt never frames the real decision as keeping Postgres with pgvector versus adopting a dedicated vector database. It says 'we're choosing a vector database' and treats pgvector as just one of six candidates."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt never gives the scale of about 5M embeddings at 1536 dimensions, growing about 1M per quarter. It asks the receiver to infer scale from the repo and to cost at 1M and 100M vectors instead."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt doesn't say the team already runs Postgres 16 on AWS RDS. It only asks the receiver to infer the hosting setup from repo files."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt mentions no budget limit, so the $500/month ceiling is absent."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt asks about filtered-search support in general but never states that queries must filter by tenant_id or that the system is multi-tenant."
+      },
+      {
+        "status": "contradicted",
+        "note": "The person wanted at most 4 options compared. The prompt names six candidates (pgvector, Qdrant, Weaviate, Milvus, Pinecone, Chroma) and allows a seventh."
+      },
+      {
+        "status": "contradicted",
+        "note": "The comparison table is requested, but the prompt asks for 'one to two options' where the person wanted one clear recommendation."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to 'prefer sources from the last 12 months because this field changes fast.'"
+      },
+      {
+        "status": "missing",
+        "note": "The prompt has no wide-scan-then-deep-dive-on-top-2 approach. It asks for the same flat coverage of every candidate."
+      }
+    ],
+    "invented": [
+      "The fixed candidate list of pgvector, Qdrant, Weaviate, Milvus, Pinecone and Chroma is presented as the set to research. It comes from neither the request nor any answer.",
+      "The cost reference points of 1M and 100M vectors are presented as the relevant scale. They don't match the person's actual ~5M-vector scale.",
+      "The framing 'We're choosing a vector database' implies a fresh selection rather than a decision on keeping their existing Postgres/pgvector setup."
+    ]
+  },
+  "session": "5edb3cdb-16ad-4931-980c-5601bf266dd8",
+  "cost_usd": 0.0392626,
+  "output_tokens": 1239,
+  "denials": []
+}

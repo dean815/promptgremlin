@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Opening line frames the decision as keeping Postgres with pgvector vs adopting a dedicated vector database.\"},{\"status\":\"stated\",\"note\":\"About 5M embeddings at 1536 dimensions, growing about 1M per quarter.\"},{\"status\":\"stated\",\"note\":\"Already runs Postgres 16 on AWS RDS.\"},{\"status\":\"stated\",\"note\":\"Budget under $500 per month, and the prompt asks for cost to be checked against it.\"},{\"status\":\"stated\",\"note\":\"Every query must filter by tenant_id (multi-tenant).\"},{\"status\":\"stated\",\"note\":\"Cut the list to at most 4 options.\"},{\"status\":\"stated\",\"note\":\"Output is a comparison table plus one clear recommendation (and a list of unknowns).\"},{\"status\":\"stated\",\"note\":\"Use only sources from the last 12 months (since 2025-10-07) and flag older ones. This is somewhat stricter than 'prefer', but it is consistent with the stated intent.\"},{\"status\":\"stated\",\"note\":\"Phase 1 is a wide scan and Phase 2 goes deep on the top 2.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Opening line frames the decision as keeping Postgres with pgvector vs adopting a dedicated vector database."
+      },
+      {
+        "status": "stated",
+        "note": "About 5M embeddings at 1536 dimensions, growing about 1M per quarter."
+      },
+      {
+        "status": "stated",
+        "note": "Already runs Postgres 16 on AWS RDS."
+      },
+      {
+        "status": "stated",
+        "note": "Budget under $500 per month, and the prompt asks for cost to be checked against it."
+      },
+      {
+        "status": "stated",
+        "note": "Every query must filter by tenant_id (multi-tenant)."
+      },
+      {
+        "status": "stated",
+        "note": "Cut the list to at most 4 options."
+      },
+      {
+        "status": "stated",
+        "note": "Output is a comparison table plus one clear recommendation (and a list of unknowns)."
+      },
+      {
+        "status": "stated",
+        "note": "Use only sources from the last 12 months (since 2025-10-07) and flag older ones. This is somewhat stricter than 'prefer', but it is consistent with the stated intent."
+      },
+      {
+        "status": "stated",
+        "note": "Phase 1 is a wide scan and Phase 2 goes deep on the top 2."
+      }
+    ],
+    "invented": []
+  },
+  "session": "faf10ac7-7b20-4cf4-b80e-5f660832f589",
+  "cost_usd": 0.027594599999999997,
+  "output_tokens": 536,
+  "denials": []
+}

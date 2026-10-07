@@ -1,0 +1,15 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"It answers the question directly: the data fits the price increase driving Pro churn but can't prove it. It backs this with Pro vs. Basic before/after counts, which I checked: Pro 10 of 19 (53%) cancelled in Aug\u2013Sep vs. Basic 2 of 18 (11%).\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "It answers the question directly: the data fits the price increase driving Pro churn but can't prove it. It backs this with Pro vs. Basic before/after counts, which I checked: Pro 10 of 19 (53%) cancelled in Aug\u2013Sep vs. Basic 2 of 18 (11%)."
+      }
+    ]
+  },
+  "session": "c4bd297d-c25b-485f-8fea-3573d899eb75",
+  "cost_usd": 0.05370900000000001,
+  "output_tokens": 1158,
+  "denials": []
+}

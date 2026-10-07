@@ -1,0 +1,56 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Addresses the landlord as Ms. Alvarez.\"},{\"status\":\"stated\",\"note\":\"Says the user lives in Apartment 4B.\"},{\"status\":\"stated\",\"note\":\"Says the heater stopped working on October 2.\"},{\"status\":\"stated\",\"note\":\"Says it was reported by phone on October 3 with no reply since.\"},{\"status\":\"stated\",\"note\":\"Says overnight temperatures are in the 40s \u00b0F.\"},{\"status\":\"stated\",\"note\":\"Asks for the repair within 48 hours.\"},{\"status\":\"stated\",\"note\":\"Mentions lease section 12 as a mild reminder that the landlord must provide heat.\"},{\"status\":\"stated\",\"note\":\"Asks for a polite but firm tone.\"},{\"status\":\"stated\",\"note\":\"Explicitly rules out mentioning rent withholding, threats or escalation.\"},{\"status\":\"stated\",\"note\":\"Sets the limit at under 150 words, including the greeting and sign-off.\"}],\"invented\":[\"Says the user has no history with Ms. Alvarez beyond this repair. The user only said they had no other details about her.\",\"Requires leaving out any access window or availability. The user said they had no preference, but the prompt makes omission a firm rule.\",\"Gives a reason the user never stated: that threats or escalation would turn the email into a dispute.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Addresses the landlord as Ms. Alvarez."
+      },
+      {
+        "status": "stated",
+        "note": "Says the user lives in Apartment 4B."
+      },
+      {
+        "status": "stated",
+        "note": "Says the heater stopped working on October 2."
+      },
+      {
+        "status": "stated",
+        "note": "Says it was reported by phone on October 3 with no reply since."
+      },
+      {
+        "status": "stated",
+        "note": "Says overnight temperatures are in the 40s \u00b0F."
+      },
+      {
+        "status": "stated",
+        "note": "Asks for the repair within 48 hours."
+      },
+      {
+        "status": "stated",
+        "note": "Mentions lease section 12 as a mild reminder that the landlord must provide heat."
+      },
+      {
+        "status": "stated",
+        "note": "Asks for a polite but firm tone."
+      },
+      {
+        "status": "stated",
+        "note": "Explicitly rules out mentioning rent withholding, threats or escalation."
+      },
+      {
+        "status": "stated",
+        "note": "Sets the limit at under 150 words, including the greeting and sign-off."
+      }
+    ],
+    "invented": [
+      "Says the user has no history with Ms. Alvarez beyond this repair. The user only said they had no other details about her.",
+      "Requires leaving out any access window or availability. The user said they had no preference, but the prompt makes omission a firm rule.",
+      "Gives a reason the user never stated: that threats or escalation would turn the email into a dispute."
+    ]
+  },
+  "session": "15571e3c-b34b-4348-8f98-79b3ad90bf7f",
+  "cost_usd": 0.0310826,
+  "output_tokens": 774,
+  "denials": []
+}

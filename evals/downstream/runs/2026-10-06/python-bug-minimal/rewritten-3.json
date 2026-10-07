@@ -1,0 +1,9 @@
+{
+  "text": "1. **Cause:** The default argument `cart=[]` in the `def` line is evaluated once, when the function is defined, so every call that omits `cart` shares and mutates the same list. I assumed you call it without passing `cart`, as in your two example calls.\n\n2. **Fix:**\n\n```python\ndef add_order(item, price, cart=None):  # changed: default is None instead of a shared list\n    if cart is None:  # added: create a fresh list per call\n        cart = []  # added: new list each call when none is passed\n    cart.append((item, price))\n    return sum(p for _, p in cart)\n```\n\n3. **Example:**\n\n```python\nprint(add_order('pen', 2))    # 2\nprint(add_order('book', 10))  # 10 (previously 12)\n```",
+  "structured": null,
+  "cost_usd": 0.006688000000000001,
+  "tokens": 1304,
+  "output_tokens": 246,
+  "denials": [],
+  "sent": "A function I wrote returns wrong totals when I call it more than once in the same run, though the first call looks right. The function is pasted directly below this message. Find the cause and fix it with the smallest change that works, because I want to keep the rest of my code as it is.\n\nReply with these three parts, in this order:\n1. The cause, in one to three sentences, naming the exact line or construct responsible. If the cause depends on how I call the function, say what you assumed.\n2. The fix, as the corrected function with only the necessary lines changed. Don't rename, reformat, restructure, or add features, and mark each changed line with a short comment.\n3. A two-line example showing two consecutive calls and the totals each should now return.\n\nIf the code doesn't show a clear cause, say so and name the one thing you need from me, rather than guessing. Stop after the third part.\n\ndef add_order(item, price, cart=[]):\n    cart.append((item, price))\n    return sum(p for _, p in cart)\n\nprint(add_order('pen', 2))\nprint(add_order('book', 10))"
+}

@@ -1,0 +1,60 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"Midjourney is never mentioned, and the prompt doesn't use Midjourney syntax or parameters such as --ar or --style. It's written as generic prose.\"},{\"status\":\"missing\",\"note\":\"It says 'Instagram feed photo' but never gives the 4:5 portrait aspect ratio (no --ar 4:5).\"},{\"status\":\"stated\",\"note\":\"A latte with leaf-shaped latte art in a ceramic cup is stated. The 'handmade' quality of the cup is left out.\"},{\"status\":\"contradicted\",\"note\":\"It sets the scene on a 'worn wooden caf\u00e9 table beside a window', not a dark wood counter. Both the surface type and its darkness differ.\"},{\"status\":\"stated\",\"note\":\"'Soft, warm morning window light from the left' matches.\"},{\"status\":\"missing\",\"note\":\"There's no film-photo look. It only asks for 'Photorealistic, a real photograph'.\"},{\"status\":\"missing\",\"note\":\"There's no single autumn leaf on the counter. Scattered coffee beans and a croissant appear instead.\"},{\"status\":\"contradicted\",\"note\":\"It adds 'One hand rests lightly on the cup handle', which puts a person in the image. 'No extra people' implies people may be present.\"},{\"status\":\"stated\",\"note\":\"'No text, no logos, no watermarks' matches.\"}],\"invented\":[\"The shop is an independent coffee shop\",\"The goal is to make followers want to stop in for a drink\",\"A saucer under the cup\",\"A fresh croissant on a small plate behind and to the left\",\"A hand resting on the cup handle\",\"Coffee beans scattered on the wood\",\"A blurred cozy caf\u00e9 interior with plants in the background\",\"The upper third left calm for a caption or sticker added later\",\"Camera angle of 45 degrees from slightly above, cup in lower-center\",\"Steam rising from the cup\",\"A creamy off-white and caramel-brown color palette\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "Midjourney is never mentioned, and the prompt doesn't use Midjourney syntax or parameters such as --ar or --style. It's written as generic prose."
+      },
+      {
+        "status": "missing",
+        "note": "It says 'Instagram feed photo' but never gives the 4:5 portrait aspect ratio (no --ar 4:5)."
+      },
+      {
+        "status": "stated",
+        "note": "A latte with leaf-shaped latte art in a ceramic cup is stated. The 'handmade' quality of the cup is left out."
+      },
+      {
+        "status": "contradicted",
+        "note": "It sets the scene on a 'worn wooden caf\u00e9 table beside a window', not a dark wood counter. Both the surface type and its darkness differ."
+      },
+      {
+        "status": "stated",
+        "note": "'Soft, warm morning window light from the left' matches."
+      },
+      {
+        "status": "missing",
+        "note": "There's no film-photo look. It only asks for 'Photorealistic, a real photograph'."
+      },
+      {
+        "status": "missing",
+        "note": "There's no single autumn leaf on the counter. Scattered coffee beans and a croissant appear instead."
+      },
+      {
+        "status": "contradicted",
+        "note": "It adds 'One hand rests lightly on the cup handle', which puts a person in the image. 'No extra people' implies people may be present."
+      },
+      {
+        "status": "stated",
+        "note": "'No text, no logos, no watermarks' matches."
+      }
+    ],
+    "invented": [
+      "The shop is an independent coffee shop",
+      "The goal is to make followers want to stop in for a drink",
+      "A saucer under the cup",
+      "A fresh croissant on a small plate behind and to the left",
+      "A hand resting on the cup handle",
+      "Coffee beans scattered on the wood",
+      "A blurred cozy caf\u00e9 interior with plants in the background",
+      "The upper third left calm for a caption or sticker added later",
+      "Camera angle of 45 degrees from slightly above, cup in lower-center",
+      "Steam rising from the cup",
+      "A creamy off-white and caramel-brown color palette"
+    ]
+  },
+  "session": "e9ad95b6-db97-4a7e-8b1d-6f31f8784cfa",
+  "cost_usd": 0.034914600000000004,
+  "output_tokens": 1164,
+  "denials": []
+}

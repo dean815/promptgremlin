@@ -1,0 +1,25 @@
+{
+  "text": "{\"dropped\":[],\"added_harmful\":[\"States as fact that the user 'will run it as-is' against the schema. The user never said this.\",\"Invents a purpose ('a revenue report') that the user never mentioned.\",\"Invites special handling of partial refunds 'in the way the schema supports'. This could lead to netting refund amounts out of revenue, which changes the user's plain instruction to exclude refunded orders.\",\"The output cap (at most three short notes, nothing after them) clashes with the instructions to say which refund approach was chosen and to state each ambiguous reading in its own line. If there are several ambiguities, it can't satisfy both.\"],\"added_neutral\":[\"Use only table and column names that appear in the schema, and work out from the schema how refunds are recorded (status value, flag or separate table).\",\"Measure the 90-day window back from the current timestamp.\",\"Return the customer identifier, the customer name if one exists, and total revenue.\",\"Order by revenue descending and break ties deterministically.\",\"When the schema is ambiguous (order date column, refund marking, order total vs line-item sum), pick the most likely reading, state it, and still give the query.\",\"Return the query in a single SQL code block, followed by short assumption notes.\",\"Return a single query.\"]}",
+  "structured": {
+    "dropped": [],
+    "added_harmful": [
+      "States as fact that the user 'will run it as-is' against the schema. The user never said this.",
+      "Invents a purpose ('a revenue report') that the user never mentioned.",
+      "Invites special handling of partial refunds 'in the way the schema supports'. This could lead to netting refund amounts out of revenue, which changes the user's plain instruction to exclude refunded orders.",
+      "The output cap (at most three short notes, nothing after them) clashes with the instructions to say which refund approach was chosen and to state each ambiguous reading in its own line. If there are several ambiguities, it can't satisfy both."
+    ],
+    "added_neutral": [
+      "Use only table and column names that appear in the schema, and work out from the schema how refunds are recorded (status value, flag or separate table).",
+      "Measure the 90-day window back from the current timestamp.",
+      "Return the customer identifier, the customer name if one exists, and total revenue.",
+      "Order by revenue descending and break ties deterministically.",
+      "When the schema is ambiguous (order date column, refund marking, order total vs line-item sum), pick the most likely reading, state it, and still give the query.",
+      "Return the query in a single SQL code block, followed by short assumption notes.",
+      "Return a single query."
+    ]
+  },
+  "cost_usd": 0.027706,
+  "tokens": 2802,
+  "output_tokens": 851,
+  "denials": []
+}

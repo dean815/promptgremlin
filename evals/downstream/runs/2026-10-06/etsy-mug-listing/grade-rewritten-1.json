@@ -1,0 +1,35 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"There are two short paragraphs: the first describes the mug and how it might be used, and the second covers care.\"},{\"pass\":true,\"note\":\"It says plainly: \\\"it's dishwasher safe.\\\"\"},{\"pass\":true,\"note\":\"It says: \\\"Please don't put it in the microwave, as it isn't microwave safe.\\\"\"},{\"pass\":true,\"note\":\"The only material named is ceramic, which the user gave. No glaze, clay type, dimensions or capacity are added.\"},{\"pass\":true,\"note\":\"It has a warm tone and could be pasted into Etsy as is. The microwave sentence repeats itself a bit (\\\"don't put it in the microwave, as it isn't microwave safe\\\"), but it's still usable.\"}],\"unasked_content\":[\"\\\"No two are exactly alike\\\" is a product claim the user didn't provide. It's minor, and most handmade pieces vary anyway, but it goes slightly beyond the facts given.\",\"Calling the microwave warning \\\"one small note\\\" plays down a safety limitation the user wanted stated.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "There are two short paragraphs: the first describes the mug and how it might be used, and the second covers care."
+      },
+      {
+        "pass": true,
+        "note": "It says plainly: \"it's dishwasher safe.\""
+      },
+      {
+        "pass": true,
+        "note": "It says: \"Please don't put it in the microwave, as it isn't microwave safe.\""
+      },
+      {
+        "pass": true,
+        "note": "The only material named is ceramic, which the user gave. No glaze, clay type, dimensions or capacity are added."
+      },
+      {
+        "pass": true,
+        "note": "It has a warm tone and could be pasted into Etsy as is. The microwave sentence repeats itself a bit (\"don't put it in the microwave, as it isn't microwave safe\"), but it's still usable."
+      }
+    ],
+    "unasked_content": [
+      "\"No two are exactly alike\" is a product claim the user didn't provide. It's minor, and most handmade pieces vary anyway, but it goes slightly beyond the facts given.",
+      "Calling the microwave warning \"one small note\" plays down a safety limitation the user wanted stated."
+    ]
+  },
+  "cost_usd": 0.0231928,
+  "tokens": 2418,
+  "output_tokens": 701,
+  "denials": []
+}

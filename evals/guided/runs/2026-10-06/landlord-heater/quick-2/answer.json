@@ -1,0 +1,12 @@
+{
+  "text": "Subject: Broken heater in Apartment 4B, repair needed within 48 hours\n\nDear Ms. Alvarez,\n\nThe heater in Apartment 4B stopped working on October 2. I called you about it on October 3 and haven't heard back.\n\nOvernight temperatures are now in the 40s \u00b0F, and the apartment is getting very cold. Section 12 of my lease requires the landlord to provide heat.\n\nCould you please have the heater repaired within 48 hours of receiving this email? If you can tell me when a technician will come, I'll make sure someone is home to let them in.\n\nI'd like to get this settled quickly and appreciate your help.\n\nSincerely,\n[name]\nApartment 4B",
+  "structured": null,
+  "session": "061d336f-f67c-49fb-8afa-1a0e46f87b92",
+  "cost_usd": 0.012521999999999998,
+  "output_tokens": 247,
+  "denials": [],
+  "follow_up": {
+    "question": "What name would you like me to use in the signature?",
+    "answer": "[name], please."
+  }
+}

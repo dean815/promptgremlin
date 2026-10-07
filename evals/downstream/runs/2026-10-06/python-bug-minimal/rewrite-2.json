@@ -1,0 +1,17 @@
+{
+  "text": "```\nA function I wrote returns wrong totals when I call it more than once in the same run, though the first call looks right. The function is pasted directly below this message. Find the cause and fix it with the smallest change that works, because I want to keep the rest of my code as it is.\n\nReply with these three parts, in this order:\n1. The cause, in one to three sentences, naming the exact line or construct responsible. If the cause depends on how I call the function, say what you assumed.\n2. The fix, as the corrected function with only the necessary lines changed. Don't rename, reformat, restructure, or add features, and mark each changed line with a short comment.\n3. A two-line example showing two consecutive calls and the totals each should now return.\n\nIf the code doesn't show a clear cause, say so and name the one thing you need from me, rather than guessing. Stop after the third part.\n```\nEffort: not settable here (claude.ai has no effort control). Single-function debug, one reply.\n\n**Assumptions**\n- The language isn't stated. The prompt leaves Claude to infer it from the pasted code.\n- Which model or plan you use on claude.ai isn't stated.\n\n**Changes**\n- The prompt opens with the situation and the reason for the minimal-change limit (best-practices#Add context to improve performance).\n- It uses action verbs (\"fix it\", \"find the cause\") and says to act, not only advise (best-practices#Tool usage).\n- It sets the scope as only what was asked, with no refactors, and gives a stop condition (best-practices#Overeagerness).\n- It asks for a short cause explanation rather than written-out reasoning, which suits Sonnet 5.5 (model-pages:claude-sonnet-5-5#Safeguard refusals).\n\n**Guidance**: cached 2026-10-06 13:10. Model: `claude-chat` was flagged UNKNOWN MODEL, so I used the family-wide notes, with flagship claude-fable-5-1. Flags: UNKNOWN MODEL claude-chat.\n\nI couldn't read `/tmp/pgbench/config.json` because the sandbox blocked it. I used the defaults, and the prompt was not copied to the clipboard.",
+  "structured": null,
+  "cost_usd": 0.0330135,
+  "tokens": 27997,
+  "output_tokens": 1171,
+  "denials": [
+    {
+      "tool_name": "Bash",
+      "tool_use_id": "toolu_01B1ou2NWJ68fJcwcRdERJ28",
+      "tool_input": {
+        "command": "cat /tmp/pgbench/config.json; python3 '/tmp/pgbench/plugin/skills/promptgremlin/scripts/guidance.py' --target 'claude-chat'"
+      }
+    }
+  ],
+  "prompt": "A function I wrote returns wrong totals when I call it more than once in the same run, though the first call looks right. The function is pasted directly below this message. Find the cause and fix it with the smallest change that works, because I want to keep the rest of my code as it is.\n\nReply with these three parts, in this order:\n1. The cause, in one to three sentences, naming the exact line or construct responsible. If the cause depends on how I call the function, say what you assumed.\n2. The fix, as the corrected function with only the necessary lines changed. Don't rename, reformat, restructure, or add features, and mark each changed line with a short comment.\n3. A two-line example showing two consecutive calls and the totals each should now return.\n\nIf the code doesn't show a clear cause, say so and name the one thing you need from me, rather than guessing. Stop after the third part."
+}

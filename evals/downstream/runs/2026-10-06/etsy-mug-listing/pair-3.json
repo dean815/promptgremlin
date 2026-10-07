@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"B\",\"reason\":\"Both answers meet every stated constraint: two short paragraphs, dishwasher safe, not microwave safe, and no invented materials or sizes. A's first paragraph repeats itself (\\\"Handmade with care\\\" and then \\\"crafted by hand\\\"). It also adds a small detail the seller didn't give: that each piece differs \\\"from the next,\\\" which suggests several similar mugs. B describes uniqueness more cautiously as a \\\"one-of-a-kind feel\\\" from being handmade, and it reads more smoothly. B is slightly better.\"}",
+  "structured": {
+    "winner": "B",
+    "reason": "Both answers meet every stated constraint: two short paragraphs, dishwasher safe, not microwave safe, and no invented materials or sizes. A's first paragraph repeats itself (\"Handmade with care\" and then \"crafted by hand\"). It also adds a small detail the seller didn't give: that each piece differs \"from the next,\" which suggests several similar mugs. B describes uniqueness more cautiously as a \"one-of-a-kind feel\" from being handmade, and it reads more smoothly. B is slightly better."
+  },
+  "cost_usd": 0.028208,
+  "tokens": 2468,
+  "output_tokens": 706,
+  "denials": [],
+  "winner_arm": "rewritten"
+}

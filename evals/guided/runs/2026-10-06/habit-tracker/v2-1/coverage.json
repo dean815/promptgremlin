@@ -1,0 +1,59 @@
+{
+  "text": "{\"items\":[{\"status\":\"missing\",\"note\":\"Single-user personal use with no accounts is never stated. The prompt leaves 'local only, or a backend and accounts' as an open interview question.\"},{\"status\":\"contradicted\",\"note\":\"The prompt only asks whether they want a minimal first version, so the MVP goal is not stated. It also requires tests for the streak and completion logic, which conflicts with 'no tests required'. It sets no 'running today' urgency.\"},{\"status\":\"missing\",\"note\":\"Platform is left open (web, mobile, desktop or CLI). A local browser web app is never specified.\"},{\"status\":\"missing\",\"note\":\"Language and framework are left as an interview question. TypeScript is not mentioned.\"},{\"status\":\"missing\",\"note\":\"Where data lives is left open. Browser-local storage is not specified.\"},{\"status\":\"missing\",\"note\":\"Tracking multiple habits is never stated. The prompt only mentions creating 'a habit'.\"},{\"status\":\"missing\",\"note\":\"'Daily check-ins' appears only as a candidate feature to ask about, not as a requirement. The verification step's 'mark it done across more than one day' implies it but doesn't require it.\"},{\"status\":\"stated\",\"note\":\"Streaks are listed as a candidate feature, and the verification step requires confirming 'the streak ... update', so streaks are effectively assumed.\"},{\"status\":\"missing\",\"note\":\"Only a vague 'stats or charts' option is listed. A 30-day history for each habit is not specified.\"},{\"status\":\"missing\",\"note\":\"Reminders are offered as a possible core feature, not marked out of scope. This doesn't directly conflict with the intent, but the exclusion is missing.\"},{\"status\":\"missing\",\"note\":\"Dark mode is never mentioned.\"}],\"invented\":[\"Claims the person is 'not sure yet about platform, stack, or feature set', when they actually had clear preferences (a local web app in TypeScript with specific features).\",\"Requires 'stats' to exist and update (in 'confirm the streak and stats update'), which goes beyond the requested 30-day history.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "missing",
+        "note": "Single-user personal use with no accounts is never stated. The prompt leaves 'local only, or a backend and accounts' as an open interview question."
+      },
+      {
+        "status": "contradicted",
+        "note": "The prompt only asks whether they want a minimal first version, so the MVP goal is not stated. It also requires tests for the streak and completion logic, which conflicts with 'no tests required'. It sets no 'running today' urgency."
+      },
+      {
+        "status": "missing",
+        "note": "Platform is left open (web, mobile, desktop or CLI). A local browser web app is never specified."
+      },
+      {
+        "status": "missing",
+        "note": "Language and framework are left as an interview question. TypeScript is not mentioned."
+      },
+      {
+        "status": "missing",
+        "note": "Where data lives is left open. Browser-local storage is not specified."
+      },
+      {
+        "status": "missing",
+        "note": "Tracking multiple habits is never stated. The prompt only mentions creating 'a habit'."
+      },
+      {
+        "status": "missing",
+        "note": "'Daily check-ins' appears only as a candidate feature to ask about, not as a requirement. The verification step's 'mark it done across more than one day' implies it but doesn't require it."
+      },
+      {
+        "status": "stated",
+        "note": "Streaks are listed as a candidate feature, and the verification step requires confirming 'the streak ... update', so streaks are effectively assumed."
+      },
+      {
+        "status": "missing",
+        "note": "Only a vague 'stats or charts' option is listed. A 30-day history for each habit is not specified."
+      },
+      {
+        "status": "missing",
+        "note": "Reminders are offered as a possible core feature, not marked out of scope. This doesn't directly conflict with the intent, but the exclusion is missing."
+      },
+      {
+        "status": "missing",
+        "note": "Dark mode is never mentioned."
+      }
+    ],
+    "invented": [
+      "Claims the person is 'not sure yet about platform, stack, or feature set', when they actually had clear preferences (a local web app in TypeScript with specific features).",
+      "Requires 'stats' to exist and update (in 'confirm the streak and stats update'), which goes beyond the requested 30-day history."
+    ]
+  },
+  "session": "f3a69ab1-4044-47be-995c-c466306a6fc8",
+  "cost_usd": 0.0413066,
+  "output_tokens": 1372,
+  "denials": []
+}

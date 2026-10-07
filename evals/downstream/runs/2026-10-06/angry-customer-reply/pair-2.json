@@ -1,0 +1,12 @@
+{
+  "text": "{\"winner\":\"B\",\"reason\":\"Both meet the constraints: under 120 words, friendly, apologetic, offer a replacement and don't promise a refund. A commits the business to things the person never authorized (upgraded packaging, no return needed) and asks for a photo first, which adds a hurdle for an angry customer. B offers the replacement without invented commitments, includes the order number and only asks Jordan to confirm, so it's the safer draft to send.\"}",
+  "structured": {
+    "winner": "B",
+    "reason": "Both meet the constraints: under 120 words, friendly, apologetic, offer a replacement and don't promise a refund. A commits the business to things the person never authorized (upgraded packaging, no return needed) and asks for a photo first, which adds a hurdle for an angry customer. B offers the replacement without invented commitments, includes the order number and only asks Jordan to confirm, so it's the safer draft to send."
+  },
+  "cost_usd": 0.0345,
+  "tokens": 2872,
+  "output_tokens": 961,
+  "denials": [],
+  "winner_arm": "rewritten"
+}

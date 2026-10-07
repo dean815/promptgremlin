@@ -1,0 +1,50 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The opening states the decision: keep pgvector on Postgres or move to a dedicated vector database.\"},{\"status\":\"stated\",\"note\":\"States about 5M embeddings at 1536 dimensions, growing about 1M per quarter.\"},{\"status\":\"stated\",\"note\":\"States that the team already runs Postgres 16 on AWS RDS.\"},{\"status\":\"stated\",\"note\":\"States a budget under $500/month and makes it a cost criterion.\"},{\"status\":\"stated\",\"note\":\"States that every query must filter by tenant_id (multi-tenant) and makes tenant-filtered search a criterion.\"},{\"status\":\"stated\",\"note\":\"Says to pick at most 4 options including pgvector, and repeats the limit in the stop rules.\"},{\"status\":\"stated\",\"note\":\"Output asks for a comparison table plus one clear recommendation.\"},{\"status\":\"stated\",\"note\":\"Source rules say to prefer sources from the last 12 months and to flag older ones.\"},{\"status\":\"stated\",\"note\":\"Steps 1 and 3 ask for a wide scan first, then a deep look at the top 2.\"}],\"invented\":[\"The budget is described as \\\"all-in for the vector workload\\\". The person only said under $500/month and did not say what the budget covers.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The opening states the decision: keep pgvector on Postgres or move to a dedicated vector database."
+      },
+      {
+        "status": "stated",
+        "note": "States about 5M embeddings at 1536 dimensions, growing about 1M per quarter."
+      },
+      {
+        "status": "stated",
+        "note": "States that the team already runs Postgres 16 on AWS RDS."
+      },
+      {
+        "status": "stated",
+        "note": "States a budget under $500/month and makes it a cost criterion."
+      },
+      {
+        "status": "stated",
+        "note": "States that every query must filter by tenant_id (multi-tenant) and makes tenant-filtered search a criterion."
+      },
+      {
+        "status": "stated",
+        "note": "Says to pick at most 4 options including pgvector, and repeats the limit in the stop rules."
+      },
+      {
+        "status": "stated",
+        "note": "Output asks for a comparison table plus one clear recommendation."
+      },
+      {
+        "status": "stated",
+        "note": "Source rules say to prefer sources from the last 12 months and to flag older ones."
+      },
+      {
+        "status": "stated",
+        "note": "Steps 1 and 3 ask for a wide scan first, then a deep look at the top 2."
+      }
+    ],
+    "invented": [
+      "The budget is described as \"all-in for the vector workload\". The person only said under $500/month and did not say what the budget covers."
+    ]
+  },
+  "session": "deb6b3c4-8bae-49ed-807d-063f62a2dcb8",
+  "cost_usd": 0.0325106,
+  "output_tokens": 759,
+  "denials": []
+}

@@ -1,0 +1,34 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"The query is valid PostgreSQL and uses only customers(id, name), orders(id, customer_id, created_at, status) and order_items(order_id, quantity, unit_price_cents). The joins and GROUP BY are correct. One small risk: quantity * unit_price_cents is int * int, so a single very large line item (over about 2.1 billion cents) would overflow. This is unlikely and does not make the query invalid.\"},{\"pass\":true,\"note\":\"SUM(oi.quantity * oi.unit_price_cents) grouped by customer. Dividing by 100.0 turns cents into currency units without changing the ranking.\"},{\"pass\":true,\"note\":\"o.created_at >= CURRENT_DATE - INTERVAL '90 days' filters on orders.created_at. The answer says the cutoff is midnight in the session time zone.\"},{\"pass\":true,\"note\":\"o.status = 'paid' excludes refunded orders. It also excludes cancelled orders, which goes beyond the literal request. That is still the right revenue logic, and the answer says it does this and why. Filtering on orders before joining items means refunded orders contribute no line items.\"},{\"pass\":true,\"note\":\"ORDER BY total_revenue DESC LIMIT 5. The answer says ties at 5th place are broken arbitrarily.\"}],\"unasked_content\":[\"The bullets on 'Refund status' (no partial refunds) and 'Tax and shipping' (no tax, shipping or discount columns) explain things the schema doesn't have and the person didn't ask about. They add length to a simple query request without changing the result.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "The query is valid PostgreSQL and uses only customers(id, name), orders(id, customer_id, created_at, status) and order_items(order_id, quantity, unit_price_cents). The joins and GROUP BY are correct. One small risk: quantity * unit_price_cents is int * int, so a single very large line item (over about 2.1 billion cents) would overflow. This is unlikely and does not make the query invalid."
+      },
+      {
+        "pass": true,
+        "note": "SUM(oi.quantity * oi.unit_price_cents) grouped by customer. Dividing by 100.0 turns cents into currency units without changing the ranking."
+      },
+      {
+        "pass": true,
+        "note": "o.created_at >= CURRENT_DATE - INTERVAL '90 days' filters on orders.created_at. The answer says the cutoff is midnight in the session time zone."
+      },
+      {
+        "pass": true,
+        "note": "o.status = 'paid' excludes refunded orders. It also excludes cancelled orders, which goes beyond the literal request. That is still the right revenue logic, and the answer says it does this and why. Filtering on orders before joining items means refunded orders contribute no line items."
+      },
+      {
+        "pass": true,
+        "note": "ORDER BY total_revenue DESC LIMIT 5. The answer says ties at 5th place are broken arbitrarily."
+      }
+    ],
+    "unasked_content": [
+      "The bullets on 'Refund status' (no partial refunds) and 'Tax and shipping' (no tax, shipping or discount columns) explain things the schema doesn't have and the person didn't ask about. They add length to a simple query request without changing the result."
+    ]
+  },
+  "cost_usd": 0.0332408,
+  "tokens": 3284,
+  "output_tokens": 961,
+  "denials": []
+}

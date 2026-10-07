@@ -1,0 +1,37 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"There are exactly three days: Day 1 covers Mile End, Mont-Royal and the Plateau, Day 2 covers Old Montreal and Chinatown, and Day 3 covers Little Italy, Jean-Talon and the Plateau. Nothing extra is added.\"},{\"pass\":true,\"note\":\"Food drives every day. Each one has a named breakfast, lunch, snack or drink stop, and dinner. Sightseeing fills the gaps between meals, and the whole plan is built around them.\"},{\"pass\":true,\"note\":\"Most meals are $8-65, and there is one Au Pied de Cochon splurge at about $90-130. The total of about $335-445 CAD per person before tax and tip is a sensible mid-range spend. It leans neither toward luxury nor toward bare-bones budget.\"},{\"pass\":true,\"note\":\"October is handled throughout: peak fall color in early to mid October, wet leafy trails on Mont-Royal, fall produce and maple at Jean-Talon, autumn leaves in Parc La Fontaine, and a rain option for each day.\"},{\"pass\":true,\"note\":\"Almost every stop is a real named place, most with addresses (Fairmount, St-Viateur, Schwartz's, L'Express, Olive & Gourmando, Au Pied de Cochon and others). Some details are off, though. Qing Hua's Chinatown branch is on the 1000 block of Saint-Laurent, not 1676. Maison Christian Faure is on Place Royale, not Place d'Youville.\"}],\"unasked_content\":[\"The Qing Hua Dumplings address (1676 Boul. Saint-Laurent) does not match its Chinatown location, so the Day 2 dinner directions could send the traveler to the wrong place.\",\"The Maison Christian Faure address (355 Place d'Youville) appears wrong. It is on Place Royale.\",\"The Day 2 backup lunch is Olive & Gourmando, which is the same place used for breakfast that morning. That's a weak alternative for a food-focused trip.\",\"The Day 3 rain option, Mus\u00e9e des beaux-arts, is downtown, not in the Plateau where the afternoon is set. It would mean an extra trip that the plan doesn't mention.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "There are exactly three days: Day 1 covers Mile End, Mont-Royal and the Plateau, Day 2 covers Old Montreal and Chinatown, and Day 3 covers Little Italy, Jean-Talon and the Plateau. Nothing extra is added."
+      },
+      {
+        "pass": true,
+        "note": "Food drives every day. Each one has a named breakfast, lunch, snack or drink stop, and dinner. Sightseeing fills the gaps between meals, and the whole plan is built around them."
+      },
+      {
+        "pass": true,
+        "note": "Most meals are $8-65, and there is one Au Pied de Cochon splurge at about $90-130. The total of about $335-445 CAD per person before tax and tip is a sensible mid-range spend. It leans neither toward luxury nor toward bare-bones budget."
+      },
+      {
+        "pass": true,
+        "note": "October is handled throughout: peak fall color in early to mid October, wet leafy trails on Mont-Royal, fall produce and maple at Jean-Talon, autumn leaves in Parc La Fontaine, and a rain option for each day."
+      },
+      {
+        "pass": true,
+        "note": "Almost every stop is a real named place, most with addresses (Fairmount, St-Viateur, Schwartz's, L'Express, Olive & Gourmando, Au Pied de Cochon and others). Some details are off, though. Qing Hua's Chinatown branch is on the 1000 block of Saint-Laurent, not 1676. Maison Christian Faure is on Place Royale, not Place d'Youville."
+      }
+    ],
+    "unasked_content": [
+      "The Qing Hua Dumplings address (1676 Boul. Saint-Laurent) does not match its Chinatown location, so the Day 2 dinner directions could send the traveler to the wrong place.",
+      "The Maison Christian Faure address (355 Place d'Youville) appears wrong. It is on Place Royale.",
+      "The Day 2 backup lunch is Olive & Gourmando, which is the same place used for breakfast that morning. That's a weak alternative for a food-focused trip.",
+      "The Day 3 rain option, Mus\u00e9e des beaux-arts, is downtown, not in the Plateau where the afternoon is set. It would mean an extra trip that the plan doesn't mention."
+    ]
+  },
+  "cost_usd": 0.054160799999999995,
+  "tokens": 5413,
+  "output_tokens": 1285,
+  "denials": []
+}

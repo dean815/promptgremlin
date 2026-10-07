@@ -1,0 +1,9 @@
+{
+  "text": "Handmade with care, this ceramic mug is made to be part of your daily routine. Every piece is crafted by hand, so small variations make each one a little different from the next. It's a cozy companion for your morning coffee, an afternoon tea, or a quiet moment to yourself, and it makes a thoughtful gift for someone special (or for yourself).\n\nCleanup is easy: this mug is dishwasher safe. Please note that it is not microwave safe, so heat your drink separately before pouring it in.",
+  "structured": null,
+  "cost_usd": 0.004758,
+  "tokens": 946,
+  "output_tokens": 163,
+  "denials": [],
+  "sent": "write a short etsy listing description for my handmade ceramic mug, 2 short paragraphs, mention it's dishwasher safe but not microwave safe. don't make up details about materials or size"
+}

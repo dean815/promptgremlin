@@ -1,0 +1,15 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"Close call. The document never says \\\"B2B\\\" or \\\"note-taking app\\\" outright. Still, all of it fits that product: team workspaces, shared notes, paid accounts, inviting members by email.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "Close call. The document never says \"B2B\" or \"note-taking app\" outright. Still, all of it fits that product: team workspaces, shared notes, paid accounts, inviting members by email."
+      }
+    ]
+  },
+  "session": "2424c9df-ba22-4bdc-8466-67716fccad94",
+  "cost_usd": 0.032793,
+  "output_tokens": 573,
+  "denials": []
+}

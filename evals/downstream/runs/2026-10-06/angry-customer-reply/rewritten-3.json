@@ -1,0 +1,9 @@
+{
+  "text": "Subject: Re: Broken on arrival AGAIN\n\nHi Jordan,\n\nI'm so sorry your kettle arrived with a cracked lid, and especially that it's happened twice. After four years as a customer, you deserve much better, and I completely understand your frustration.\n\nI'd like to send you a replacement for order #58213, packed with extra care. To get it moving, just reply to this email with a quick photo of the damage and confirm your shipping address. I'll take it from there right away.\n\nThank you for sticking with us, and again, I'm truly sorry.\n\nWarmly,\n[Your name]",
+  "structured": null,
+  "cost_usd": 0.006026,
+  "tokens": 1218,
+  "output_tokens": 193,
+  "denials": [],
+  "sent": "A customer has written in with a complaint, and I need to answer them today. Their email is pasted directly below these instructions. Draft my reply to it.\n\nApologize sincerely for the problem they describe. Do not promise or hint at a refund, because I can't authorize one. Offer to send a replacement instead and say what they should do next to get it. If the email doesn't make clear what they ordered or what went wrong, keep the wording general rather than inventing details.\n\nKeep the tone warm and friendly, in plain conversational language. The reply must be under 120 words, since it goes straight into an email and short replies get read.\n\nGive me only the email text, ready to send, with a greeting and a sign-off. Put nothing before or after it.\n\nSubject: Broken on arrival AGAIN\n\nThis is the second kettle from you that arrived with a cracked lid. I've been a customer for 4 years and I'm honestly done. I want my money back. Order #58213.\n- Jordan"
+}

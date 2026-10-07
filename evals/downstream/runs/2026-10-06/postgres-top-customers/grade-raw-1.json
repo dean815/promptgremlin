@@ -1,0 +1,32 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"Valid PostgreSQL syntax. It uses only customers(id, name, email), orders(id, customer_id, created_at, status) and order_items(order_id, quantity, unit_price_cents) from the schema. The joins follow the given foreign keys, and GROUP BY includes every selected non-aggregate column.\"},{\"pass\":true,\"note\":\"Revenue is SUM(oi.quantity * oi.unit_price_cents) grouped per customer. Dividing by 100.0 only turns cents into dollars, and the notes say so. The per-row int*int product could in theory overflow int4, but that would need a single line item over about $21M, so it's negligible.\"},{\"pass\":true,\"note\":\"WHERE o.created_at >= now() - interval '90 days' gives a rolling 90-day window on orders.created_at. A calendar-day alternative is offered in the notes.\"},{\"pass\":true,\"note\":\"o.status = 'paid' excludes refunded orders. It also excludes cancelled orders, which is reasonable for revenue. The notes say this openly and give the literal alternative (status <> 'refunded'), so the person can choose.\"},{\"pass\":true,\"note\":\"ORDER BY revenue DESC LIMIT 5. The notes also suggest a tie-breaker for deterministic results.\"}],\"unasked_content\":[]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "Valid PostgreSQL syntax. It uses only customers(id, name, email), orders(id, customer_id, created_at, status) and order_items(order_id, quantity, unit_price_cents) from the schema. The joins follow the given foreign keys, and GROUP BY includes every selected non-aggregate column."
+      },
+      {
+        "pass": true,
+        "note": "Revenue is SUM(oi.quantity * oi.unit_price_cents) grouped per customer. Dividing by 100.0 only turns cents into dollars, and the notes say so. The per-row int*int product could in theory overflow int4, but that would need a single line item over about $21M, so it's negligible."
+      },
+      {
+        "pass": true,
+        "note": "WHERE o.created_at >= now() - interval '90 days' gives a rolling 90-day window on orders.created_at. A calendar-day alternative is offered in the notes."
+      },
+      {
+        "pass": true,
+        "note": "o.status = 'paid' excludes refunded orders. It also excludes cancelled orders, which is reasonable for revenue. The notes say this openly and give the literal alternative (status <> 'refunded'), so the person can choose."
+      },
+      {
+        "pass": true,
+        "note": "ORDER BY revenue DESC LIMIT 5. The notes also suggest a tie-breaker for deterministic results."
+      }
+    ],
+    "unasked_content": []
+  },
+  "cost_usd": 0.0275728,
+  "tokens": 2958,
+  "output_tokens": 706,
+  "denials": []
+}

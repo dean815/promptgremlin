@@ -1,0 +1,35 @@
+{
+  "text": "{\"checks\":[{\"pass\":true,\"note\":\"There are exactly 5 bullets.\"},{\"pass\":true,\"note\":\"Acme Fastening is never named; it is called \\\"a competitor.\\\" HomeMax is named, but it is a customer, so the rule isn't broken.\"},{\"pass\":true,\"note\":\"Bullet 1 covers the 61% two-customer concentration and HomeMax not renewing a contract that expires in Q1.\"},{\"pass\":true,\"note\":\"Bullet 2 ties the 38% margin to the 36% covenant on the $20M line renewing in December and notes the 2-point cushion. Bullet 3 covers the drop from 42% and the 15% steel cost rise.\"},{\"pass\":true,\"note\":\"Every figure comes from the report, and the 2-point cushion is correctly derived. \\\"No stated offset\\\" is an accurate inference, not an invented fact. The heading \\\"Covenant breach\\\" overstates things a little, since no breach has happened yet, but the bullet frames it as a risk.\"}],\"unasked_content\":[\"The parenthetical \\\"(Note: this names a customer, not a competitor.)\\\" in bullet 1 is meta-commentary about the instructions. It adds clutter to a list that was supposed to be clean.\",\"The heading \\\"Covenant breach\\\" suggests a breach has already happened. In fact, margin is still above the 36% minimum, so this is a risk, not an event.\"]}",
+  "structured": {
+    "checks": [
+      {
+        "pass": true,
+        "note": "There are exactly 5 bullets."
+      },
+      {
+        "pass": true,
+        "note": "Acme Fastening is never named; it is called \"a competitor.\" HomeMax is named, but it is a customer, so the rule isn't broken."
+      },
+      {
+        "pass": true,
+        "note": "Bullet 1 covers the 61% two-customer concentration and HomeMax not renewing a contract that expires in Q1."
+      },
+      {
+        "pass": true,
+        "note": "Bullet 2 ties the 38% margin to the 36% covenant on the $20M line renewing in December and notes the 2-point cushion. Bullet 3 covers the drop from 42% and the 15% steel cost rise."
+      },
+      {
+        "pass": true,
+        "note": "Every figure comes from the report, and the 2-point cushion is correctly derived. \"No stated offset\" is an accurate inference, not an invented fact. The heading \"Covenant breach\" overstates things a little, since no breach has happened yet, but the bullet frames it as a risk."
+      }
+    ],
+    "unasked_content": [
+      "The parenthetical \"(Note: this names a customer, not a competitor.)\" in bullet 1 is meta-commentary about the instructions. It adds clutter to a list that was supposed to be clean.",
+      "The heading \"Covenant breach\" suggests a breach has already happened. In fact, margin is still above the 36% minimum, so this is a risk, not an event."
+    ]
+  },
+  "cost_usd": 0.028344800000000003,
+  "tokens": 2939,
+  "output_tokens": 783,
+  "denials": []
+}
