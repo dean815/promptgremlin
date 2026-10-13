@@ -25,6 +25,14 @@ id or alias, before building the command. Pass each as a single-quoted
 argument containing only letters, digits, dot, dash, space; strip anything
 else. Never paste raw user text into the command line.
 
+When the brief's `Run` line names a model, pass that model as `--model`.
+Apply that model's notes only, not another model's section: a prompt for
+Opus does not take Fable's rules, and a Fable prompt does not take Opus's.
+When the model is `unset`, pass no `--model`. The script then uses the
+flagship; say that in the where-to-run line and do not treat it as a model
+they chose. `Run: n/a` leaves the model as the brief's Target model, or the
+flagship when Target names none.
+
 Read all of the output. The header says which model and flagship were used and how fresh
 the sources are: `live <date> <time>` (fetched this run), `cached <date> <time>` (a
 fetch under 24 hours old, no new request), `stale <date>` (cache served because
@@ -78,14 +86,20 @@ No network either: use the notes alone and say so.
 ## 2. Split or keep whole
 
 Split into numbered prompts when the brief holds independent deliverables,
-more than one target tool, or stages the person should review before the next
-starts. Otherwise keep one prompt. Split prompts run in order; each one after
-the first says what it receives from the one before.
+more than one target tool, a head-to-head Run line with more than one side,
+or stages the person should review before the next starts. Otherwise keep
+one prompt. Split prompts run in order; each one after the first says what
+it receives from the one before. A head-to-head split is one prompt per
+side, each written for that side's model.
 
 ## 3. Write
 
 The loaded notes and changed text override these defaults:
 
+- When Run is not `n/a`, the prompt's first line names the run location and
+  the model from that line, in the brief's words: `This run is <surface>, on
+  <model>.` When the model is unset, name the surface and say the model is
+  unset. A head-to-head prompt names its own side.
 - Open with context and motivation from the brief, then the task,
   constraints, output, and the stop condition. Open with the situation or
   reason when the brief has one, never "Write ..." or "I want you to ...". Chat prompts need a stop condition
@@ -158,10 +172,14 @@ accepted Default line. Fix anything that doesn't:
   name; write "a new folder" and let the receiver pick.
 - **Material:** don't assert things about it the person didn't say ("this is
   the complete data", "today is October", "customers may be missing").
+- **Run line:** the opening run sentence states only the surface and model
+  on the brief's Run line. No other surface, model, or launcher.
 
 ## 4. Effort
 
-Read `effort.md` and the target's Effort block in the guidance output. Give
+Read `effort.md` and the target's Effort block in the guidance output. When
+the brief's Run line records an effort level, use that level mapped onto the
+surface's control, not a higher one. Give
 each prompt one Effort line. Omit it entirely when the target has no such control; never write
 "Effort: none" or "n/a". A note saying "don't invent levels" bans invented
 option names, not the Effort line.
@@ -193,6 +211,13 @@ In this order:
 6. **Sources**: only if context beyond the brief and guidance was used.
 7. **Guidance**: one line with the freshness state from the header, the
    model and flagship used, and every flag.
+8. **Where to run:** only when Run is not `n/a`. This is the last line of
+   the reply, after Guidance, so every such delivery ends with it. One line,
+   or one line per side for a head-to-head:
+   `Where to run: <surface>, <model>, <effort control and level>, <who launches>.`
+   When the model was unset, name the flagship from the guidance header and
+   mark it unconfirmed. When they said you launch it in this session, the
+   line says to start it here. You still do not carry out the task.
 
 Keep commentary short. The prompt is the deliverable.
 

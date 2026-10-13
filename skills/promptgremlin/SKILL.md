@@ -33,8 +33,11 @@ asked.
 ## 2. Pick the mode
 
 - **sharpen** (default): interview, then write one or more prompts.
-- **port**: move an existing prompt to another tool. Skip to step 6 with
-  `Mode: port`; the writer reads `modes/port.md`.
+- **port**: move an existing prompt to another tool. When the destination is
+  an agent tool or the request is head-to-head, and depth is quick or deep,
+  ask the run-setup question (step 5) before writing, then go to step 6 with
+  `Mode: port`. Otherwise skip to step 6 with `Mode: port`. The writer reads
+  `modes/port.md`.
 - **autopsy**: explain why a prompt underperforms. Skip to step 6 with
   `Mode: autopsy`; the writer reads `modes/autopsy.md` and uses the type
   file's slots to say what the prompt is missing.
@@ -67,32 +70,94 @@ if it exists (keys: `default_target`, `pin_model`, `context_sources`,
 wins; else `default_target`; else the type file's default target. If the type
 file says the target must be asked (image and video), it's a slot.
 
+An **agent tool** is a target the person launches as an agent session:
+`claude-code`, `codex`, `gemini-cli`, `cursor`, `copilot`, `lovable`,
+`replit`, `manus`. A **head-to-head** request names two or more models or
+tools to run the same prompt, or asks to compare how those models or tools
+do the task. A research comparison of products is not head-to-head. For
+either, also resolve a run setup: surface (where it runs), model and effort,
+and who launches.
+Anything they already named is covered. The rest is a required interview
+slot. Suggest it from the environment this conversation is running in
+(step 5), not from the family's flagship.
+
 ## 4. Find the gaps
 
 Go through the type file's slots in order. Mark each **covered** (the person
 said it), **suggestible** (you can propose an answer from what they said, and
 name the reason), or **open**. Material counts: a pasted CSV covers "where is
-the data".
+the data". Mark run setup the same way when the target is an agent tool or
+the request is head-to-head: covered, suggestible from the environment, or
+open.
 
 ## 5. Interview
 
 Depth, from the person's words or the config's `interview` key:
 
 - **quick** (default): one round, at most 4 questions, only high-impact slots
-  that are open or suggestible. If none are, skip the interview and say in
-  one line that the request was specific enough.
+  that are open or suggestible. If none are, and run setup is covered or not
+  required, skip the interview and say in one line that the request was
+  specific enough.
 - **deep**: when the person says "interview me", "I'm not sure", "help me
   figure it out", or picks it. Walk every slot over up to 4 rounds of at most
   4 questions, briefly explaining the trade-off where they're unsure.
 - **skip**: "just write it" or "no questions". Go straight to step 6; every
-  default is unconfirmed.
+  default is unconfirmed. Do not ask run setup; record its suggestion as
+  unconfirmed.
+
+**Run setup**, for an agent tool or a head-to-head request. Required before step 6
+in quick and deep, before any prompt is written, including when it is
+the only open slot. A request for a Claude Code or Codex prompt therefore
+gets this question before writing. It counts as one of the four questions
+and takes priority if the round would otherwise exceed four. Ask it in the
+first round.
+
+Ask one question covering whichever of these are still open: surface, model
+and effort, and who launches. Put the suggested answer first, taken from the
+environment, and name the reason in a short clause:
+
+- **Surface.** The product this conversation is in, when that product is the
+  target or one side of the comparison (Claude Code's CLI, the Claude
+  desktop app, Cursor, the Codex CLI, or whichever of those you can actually
+  see). If you cannot tell the product, or this session is a different one,
+  say so and suggest that target's usual surface. Do not invent a surface.
+- **Model.** The model named in the request is covered, so don't ask it
+  again. Otherwise suggest the model answering this chat when you can see
+  that it belongs to the target's family. If `pin_model` names a different
+  model, offer the pin as another option, not as the suggestion. If you
+  cannot see a model in the family, do not invent an id and do not quietly
+  pick the flagship: the suggestion asks them to name the model, and the
+  flagship is an option they have to accept.
+- **Effort.** A level from `effort.md` (low, medium, high, or max) for this
+  task. Use a level this session already shows when you can see one. The
+  writer maps the level onto that surface's real control.
+- **Who launches.** The person, in a fresh session, because you stop once
+  they have the prompt.
+
+Give 2–4 options, the suggestion labelled "(Recommended)": accept that
+setup; the same surface with a different model or effort they name; a
+different surface they name (CLI, desktop app, IDE, cloud, or web); you
+launch it in this session once the prompt is delivered. Who launches is
+recorded on the Run line. It does not let you carry out the task: you still
+stop once they have the prompt. On a head-to-head, that one question
+covers every side. The environment suggestion applies only to the
+side that matches this session; the other sides use the same rules, and an
+unseen model stays unset until they accept one.
+
+An accepted suggestion is confirmed. "ok" accepts it. "No preference" on
+surface, model, or effort leaves that part unset. Record the result on the
+brief's `Run` line. In skip mode the same suggestion is recorded
+unconfirmed, still from the environment, so the prompt is not silently
+written for the flagship.
 
 How to ask:
 
 - Each question names the slot plainly and offers a **suggested answer
   first**, with a short reason drawn from the request ("small web app,
-  because a personal tracker needs one screen and local data"). A suggestion
-  is a proposal, never a fact: it enters the brief only when accepted.
+  because a personal tracker needs one screen and local data"). For run
+  setup, draw that reason from the environment instead. A suggestion
+  is a proposal, never a fact: it enters the brief only when accepted, except
+  for an unconfirmed Run line in skip mode.
 - Give 2–4 options; the person can always answer in their own words.
 - When the host has a multiple-choice question tool (for example
   AskUserQuestion), use it: one call per round, suggested option first and
@@ -107,15 +172,19 @@ How to ask:
   answers opened (quick) or the remaining slots (deep).
 - "ok" or "your call" accepts the suggestion; "no preference" leaves the slot
   out of the prompt or lets the receiver decide, whichever the type file says.
+  For run setup, "no preference" leaves that part unset, as that section says.
 
 ## 6. Write
 
-Build the brief:
+Build the brief. When Run names a model, that model is the Target model.
+When the target is not an agent tool and the request is not head-to-head,
+set `Run: n/a`.
 
 ```
 Request: <the person's words>
 Type: <type>   Target: <target> [model <model>]   Skill dir: <base directory of this skill>
 Config: <the config file's contents, or "none">
+Run: <surface> | <model, or unset> | <effort level> | <who launches> (confirmed | unconfirmed) or n/a
 Confirmed:
 - <slot>: <answer, in the person's words where possible>
 Defaults:
@@ -131,6 +200,10 @@ background), and give its reply to the person unchanged, in the same turn: copy 
 verbatim, keeping each prompt inside its fenced code block so it can be
 copied in one go. Don't summarise, reformat, or restate it. Before you send,
 check that each prompt sits inside a fenced code block; if the writer's reply
-lacks one, wrap the prompt in one yourself and change nothing else. Otherwise (for
-example claude.ai), read `writer.md` in this skill's directory and follow it
+lacks one, wrap the prompt in one yourself and change nothing else. When Run
+is not `n/a`, the reply must end with a where-to-run line that starts
+`Where to run:`. If the writer's reply lacks it, append one line from the
+Run line (`Where to run: <surface>, <model>, <effort>, <who launches>.`) and
+change nothing else. If the writer agent is not available (for example
+claude.ai), read `writer.md` in this skill's directory and follow it
 yourself with the brief.

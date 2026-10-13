@@ -23,7 +23,12 @@ sound like a person wrote them.
 2. **Interview.** One round of up to 4 questions about the gaps that matter
    most, each with a suggested answer and its reason, so "ok" or a few words
    is enough. Say "interview me" for a deeper walk through every detail, or
-   "just write it" to skip the questions.
+   "just write it" to skip the questions. A request for an agent tool (Claude
+   Code, Codex, and the other coding agents) or a head-to-head comparison
+   also asks, before anything is written, where it will run, which model and
+   effort, and who launches it. The suggestion comes from the session you're
+   in, so the prompt matches that model. The reply ends with a where-to-run
+   line.
 3. **Write.** A writer agent loads the vendor's guidance and writes the
    prompt. Every fact in it comes from your request, your answers, or a
    default you accepted; nothing is made up to fill a gap.

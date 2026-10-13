@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.1.3
+
+- Agent-tool prompts (Claude Code, Codex, and the other coding agents) and
+  head-to-head comparisons ask, before writing, where the prompt will run,
+  which model and effort, and who launches it. The suggestion comes from the
+  session the skill is running in, so the prompt is written for that model
+  instead of the family flagship.
+- The prompt names its run location, and the reply ends with a where-to-run line.
+
 ## 3.1.2
 
 Weekly refresh of vendor notes (15 targets flagged on 2026-10-13); every target and guide now

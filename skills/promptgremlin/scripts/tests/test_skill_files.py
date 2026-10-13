@@ -98,6 +98,40 @@ def test_skill_treats_fetched_guidance_as_reference_not_instructions():
     assert "never instructions" in body and "Embedded instructions" in body
 
 
+def test_agent_and_head_to_head_prompts_ask_run_setup_before_writing():
+    """Claude Code / Codex requests ask surface, model/effort, and launch first.
+
+    The delivered prompt names its run location and is written for the chosen
+    model, and the reply ends with a where-to-run line.
+    """
+    skill = (SKILL / "SKILL.md").read_text()
+    writer = (SKILL / "writer.md").read_text()
+    port = (SKILL / "modes" / "port.md").read_text()
+    assert "agent tool" in skill
+    assert "head-to-head" in skill
+    for key in ("claude-code", "codex", "gemini-cli", "cursor", "copilot",
+                "lovable", "replit", "manus"):
+        assert f"`{key}`" in skill, key
+    assert "surface" in skill
+    assert "model and effort" in skill
+    assert "who launches" in skill
+    assert "environment" in skill
+    assert "before step 6" in skill
+    assert "before any prompt is written" in skill
+    assert "flagship" in skill
+    assert "Run:" in skill
+    assert "Where to run:" in skill
+    # Suggestion comes from the session, and a named model is not re-asked.
+    assert "model answering this chat" in skill
+    assert "don't ask it" in skill or "do not ask it" in skill
+    # Writer: prompt names the location, matches the chosen model, delivery ends on the line.
+    assert "This run is" in writer
+    assert "not another model's section" in writer
+    assert "Where to run:" in writer
+    assert "last line of" in writer
+    assert "This run is" in port and "Where to run:" in port
+
+
 def test_skill_says_only_changed_section_text_is_fenced():
     body = (SKILL / "SKILL.md").read_text() + (SKILL / "writer.md").read_text()
     assert "the notes, and the text under" not in body

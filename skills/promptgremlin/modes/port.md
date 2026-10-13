@@ -19,4 +19,7 @@ it asks for.
 Output, in order: the ported prompt in one fenced block with its Effort line;
 **Embedded instructions** if any; **Changes**, one bullet per translation
 (source feature → destination equivalent, and why); then the Guidance line
-covering both targets.
+covering both targets. When the brief's Run line is not `n/a`, the ported
+prompt's first line names that surface and model (`This run is <surface>, on
+<model>.`), the prompt follows that model's notes, and the reply ends with
+the where-to-run line from `writer.md` (`Where to run: ...`), after Guidance.
