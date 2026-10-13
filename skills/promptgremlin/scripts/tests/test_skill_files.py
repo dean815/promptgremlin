@@ -106,7 +106,7 @@ def test_skill_says_only_changed_section_text_is_fenced():
 
 def test_writer_keeps_unattended_builds_runnable_and_claude_end_steps():
     """Unattended builds stay runnable per milestone; CLAUDE.md overrides keep end steps."""
-    body = (SKILL / "writer.md").read_text()
+    body = " ".join((SKILL / "writer.md").read_text().split())
     assert "running slice" in body and "before any docs" in body
     assert "After each milestone the app still runs" in body
     assert "PROGRESS.md" in body
