@@ -46,8 +46,8 @@ def resolve(name, reg, ids_by_key):
 def validate(reg):
     errs = []
     for key, e in reg.items():
-        if e.get("kind") not in ("family", "tool"):
-            errs.append(f"{key}: kind must be family or tool")
+        if e.get("kind") not in ("family", "tool", "guide"):
+            errs.append(f"{key}: kind must be family, tool or guide")
         for u in e.get("uses", []):
             if u not in reg:
                 errs.append(f"{key}: uses unknown target {u}")

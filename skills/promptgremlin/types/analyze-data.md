@@ -27,4 +27,4 @@ first, state assumptions) → output shape for the audience → stop line.
 - Separate what the data shows from what it suggests.
 
 ## Sources
-Vendor docs on data analysis features; thin public guidance, so lean on slots.
+No watched public guide yet; the slot list is hand-written.

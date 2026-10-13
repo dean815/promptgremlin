@@ -5,13 +5,16 @@ from pglib import registry
 SKILL = Path(__file__).resolve().parents[2]
 KEYS = ("anthropic openai gemini xai zhipu qwen deepseek mistral meta kimi claude-code codex "
         "gemini-cli cursor copilot lovable replit perplexity manus nano-banana gpt-image midjourney "
-        "google-video sora runway kling higgsfield elevenlabs n8n gamma notion-ai jev grok-bot").split()
+        "google-video sora runway kling higgsfield elevenlabs n8n gamma notion-ai jev grok-bot "
+        "guide-research guide-draft").split()
 
 
 def test_real_registry_is_valid_and_complete():
     reg = registry.load(SKILL / "sources.json")
     assert registry.validate(reg) == []
     assert sorted(reg) == sorted(KEYS)
+    # Task-type guides are watched like targets but are not targets a person picks.
+    assert sorted(k for k, e in reg.items() if e["kind"] == "guide") == ["guide-draft", "guide-research"]
 
 
 def test_every_family_has_a_lineup():

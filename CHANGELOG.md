@@ -1,5 +1,18 @@
 # Changelog
 
+## 3.1.0
+
+- Research and draft prompts now draw on watched public guides, checked for changes like the
+  vendor notes: `guide-research` (Anthropic's multi-agent research write-up, OpenAI's deep
+  research guide) and `guide-draft` (Wikipedia's "Signs of AI writing"). Other task types say
+  which target notes cover them.
+- Stricter source check in the writer: agreements stay as loose as the person left them, bans
+  cover only what was ruled out, no rules for slots nobody raised, no invented folder or file
+  names, no claims about attached material. On the four hardest benchmark tasks, made-up
+  details fell from 9 to 5 and contradictions from 1 to 0.
+- v2's output-contract evals are retired to `evals/v2-contract/` as a record.
+- User agent is now `promptgremlin/3.1`.
+
 ## 3.0.0
 
 Guided sharpening: the skill now interviews before it writes.

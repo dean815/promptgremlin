@@ -1,4 +1,9 @@
-# promptgremlin v2 eval results
+# promptgremlin v2 eval results (retired)
+
+**Retired in 3.0.** These checks test v2's one-shot output format ("Assumptions", rewrite mode),
+which v3 replaced with an interview and a Confirmed / Defaults section. They are kept as a record
+and are no longer run. Current results: `../guided/RESULTS.md`.
+
 
 Date: 2026-10-01 (full run), 2026-10-06 (re-check of evals 2, 4 and 8). Model for runs and
 graders: claude-sonnet-5-5. The 10 evals and their assertions are in `evals.json`; evals 1 and 2
@@ -12,7 +17,7 @@ with several runs each, graded by a model against the fixed assertions in `evals
 not measure whether the rewritten prompts produce better downstream answers. The without-skill
 baseline mostly fails because it does not follow the skill's output format, so the gap is not
 evidence of better prompts. Runs used a personal config, and run artifacts are not published.
-A downstream-quality benchmark is in [downstream/RESULTS.md](downstream/RESULTS.md); on its first run the rewrites showed no measurable gain.
+A downstream-quality benchmark is in [downstream/RESULTS.md](../downstream/RESULTS.md); on its first run the rewrites showed no measurable gain.
 
 ## Method
 

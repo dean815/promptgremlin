@@ -43,6 +43,22 @@ v3.0.0 folds setting, props and exclusions into one quick-mode question for imag
 Deep mode's four flags are framing details stated slightly beyond what was agreed (a 45° angle
 for "a slight angle", "cup filling most of the frame", "cozy mood").
 
+## Source-check rerun (2026-10-12)
+
+3.1.0 extends the writer's source check (agreements stay as loose as they were, bans cover only
+what was ruled out, no rules for slots nobody raised, no invented names, no claims about the
+material). Re-run of the four tasks with the most flags in run 2, quick mode, 2 runs each
+(`runs/2026-10-12-source-check/`):
+
+| | Intent in final prompt | Contradicted | Invented facts | Intent met by answer |
+|---|---|---|---|---|
+| run 2, same 4 tasks | 96% | 1 | 9 | |
+| 3.1.0 | 100% | 0 | 5 | 94% |
+
+The five remaining flags: a ban widened to "any legal action", a required subject line and
+sign-off placeholder in the landlord email, and two statements of when and why the PRD's
+readers will use it.
+
 ## Reading this
 
 - **raw** scores 0% on the prompt by design: the hidden requirements were never typed. Its

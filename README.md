@@ -100,7 +100,7 @@ Full details: [PRIVACY.md](PRIVACY.md).
 
 - Each run fetches the target's vendor documentation pages (and model-list
   pages) over HTTPS with an identifying user agent,
-  `promptgremlin/3.0 (+https://github.com/dean815/promptgremlin)`. It does not
+  `promptgremlin/3.1 (+https://github.com/dean815/promptgremlin)`. It does not
   pretend to be a browser.
 - Responses are cached in `~/.cache/promptgremlin` for 24 hours. Override the
   location with `PROMPTGREMLIN_CACHE`. The briefing header labels each state:
@@ -158,8 +158,8 @@ drifts.
 - **Downstream benchmark** ([evals/downstream/RESULTS.md](evals/downstream/RESULTS.md)): v2's
   one-shot rewrite on simple, complete requests showed no measurable gain and invented
   context; that result led to the v3 interview.
-- **Output-contract evals** ([evals/RESULTS.md](evals/RESULTS.md)): v2-era checks of format
-  and targeted behaviours. They measure contract compliance, not answer quality.
+- **v2 output-contract evals** ([evals/v2-contract/RESULTS.md](evals/v2-contract/RESULTS.md)):
+  retired in 3.0; they checked v2's one-shot output format and are kept as a record.
 
 ## Tests
 

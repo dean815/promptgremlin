@@ -1,0 +1,56 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Landlord named as Ms. Alvarez.\"},{\"status\":\"stated\",\"note\":\"Says the tenant lives in apartment 4B.\"},{\"status\":\"stated\",\"note\":\"Says the heater stopped working on October 2.\"},{\"status\":\"stated\",\"note\":\"Says it was reported by phone on October 3 with no response.\"},{\"status\":\"stated\",\"note\":\"Says overnight temperatures are in the 40s \u00b0F.\"},{\"status\":\"stated\",\"note\":\"Asks for a repair within 48 hours.\"},{\"status\":\"stated\",\"note\":\"Says section 12 of the lease requires the landlord to provide heat.\"},{\"status\":\"stated\",\"note\":\"Tone is polite but firm, not friendly-casual.\"},{\"status\":\"stated\",\"note\":\"Says not to threaten to withhold rent.\"},{\"status\":\"stated\",\"note\":\"Says the email must be under 150 words.\"}],\"invented\":[\"Bans any mention of legal action and gives a reason the user never gave (\\\"because I haven't said I'd take it\\\"). The user only ruled out threatening to withhold rent.\",\"Requires a subject line. The user never asked for one.\",\"Requires a sign-off with a \\\"[Your name]\\\" placeholder line. The user never asked for this.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Landlord named as Ms. Alvarez."
+      },
+      {
+        "status": "stated",
+        "note": "Says the tenant lives in apartment 4B."
+      },
+      {
+        "status": "stated",
+        "note": "Says the heater stopped working on October 2."
+      },
+      {
+        "status": "stated",
+        "note": "Says it was reported by phone on October 3 with no response."
+      },
+      {
+        "status": "stated",
+        "note": "Says overnight temperatures are in the 40s \u00b0F."
+      },
+      {
+        "status": "stated",
+        "note": "Asks for a repair within 48 hours."
+      },
+      {
+        "status": "stated",
+        "note": "Says section 12 of the lease requires the landlord to provide heat."
+      },
+      {
+        "status": "stated",
+        "note": "Tone is polite but firm, not friendly-casual."
+      },
+      {
+        "status": "stated",
+        "note": "Says not to threaten to withhold rent."
+      },
+      {
+        "status": "stated",
+        "note": "Says the email must be under 150 words."
+      }
+    ],
+    "invented": [
+      "Bans any mention of legal action and gives a reason the user never gave (\"because I haven't said I'd take it\"). The user only ruled out threatening to withhold rent.",
+      "Requires a subject line. The user never asked for one.",
+      "Requires a sign-off with a \"[Your name]\" placeholder line. The user never asked for this."
+    ]
+  },
+  "session": "f189d6a4-706c-45e8-8b5d-3bf099e6132e",
+  "cost_usd": 0.027102599999999998,
+  "output_tokens": 651,
+  "denials": []
+}

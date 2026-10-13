@@ -48,5 +48,4 @@ After the prompt, list the 2–3 things to change first if the result misses
 reword the lighting), specific to this prompt and tool.
 
 ## Sources
-The media target notes (midjourney, gpt-image, nano-banana) and their vendor
-pages, already watched.
+Watched through the media target notes (midjourney, gpt-image, nano-banana).

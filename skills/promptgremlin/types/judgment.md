@@ -14,4 +14,4 @@ default_target: jev
 The Jev target notes define the JSON spec; fill it from the brief.
 
 ## Sources
-Jev target notes.
+Watched through the Jev target notes.

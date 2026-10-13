@@ -33,4 +33,4 @@ change size → verification steps → ask-first list → done line.
 - Tell the agent not to change tests to make them pass.
 
 ## Sources
-Claude Code best practices (Anthropic), Codex prompting guide (OpenAI).
+Watched through the target's own notes: Claude Code, Codex, Cursor and Copilot best-practice pages.

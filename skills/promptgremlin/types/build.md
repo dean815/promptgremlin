@@ -45,6 +45,5 @@ to touch → how to verify by running it → when to ask vs decide → done line
   build abstractions; for solid v1, say what quality bar means here.
 - Suggest a stack the receiver can actually scaffold in one session.
 
-## Sources (to wire into the freshness engine)
-Claude Code best practices (Anthropic), Codex prompting guide (OpenAI),
-Cursor rules docs. Vendor target notes already cover wording.
+## Sources
+Watched through the target's own notes: Claude Code, Codex, Cursor and Copilot best-practice pages (run for whichever target the prompt is for).

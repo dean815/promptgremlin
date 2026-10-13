@@ -3130,5 +3130,179 @@
         ]
       }
     }
+  },
+  "guide-research": {
+    "kind": "guide",
+    "aliases": [],
+    "sources": {
+      "multi-agent-research": {
+        "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+        "format": "html",
+        "watch": [
+          "Prompt engineering and evaluations for research agents"
+        ]
+      },
+      "deep-research": {
+        "url": "https://platform.openai.com/docs/guides/deep-research",
+        "format": "html",
+        "watch": [
+          "Prompting deep research models",
+          "Best practices"
+        ]
+      }
+    },
+    "fingerprints": {
+      "multi-agent-research": {
+        "sections": {
+          "Prompt engineering and evaluations for research agents": "sha256:8caad9afc0ecd24d"
+        },
+        "headings": [
+          "Benefits of a multi-agent system",
+          "Architecture overview for Research",
+          "Prompt engineering and evaluations for research agents",
+          "Effective evaluation of agents",
+          "Production reliability and engineering challenges",
+          "Conclusion",
+          "Acknowlegements",
+          "Appendix",
+          "Want to learn more?",
+          "Get the developer newsletter"
+        ]
+      },
+      "deep-research": {
+        "sections": {
+          "Prompting deep research models": "sha256:c837e73f818e6437",
+          "Best practices": "sha256:8e28462890e52ef7"
+        },
+        "headings": [
+          "Migration",
+          "Deep research model workflows",
+          "Output structure",
+          "Best practices",
+          "Prompting deep research models",
+          "Research with your own data",
+          "Prompt text",
+          "Vector stores",
+          "Connectors",
+          "Remote MCP servers",
+          "Supported tools",
+          "Safety risks and mitigations",
+          "Prompt injection and exfiltration",
+          "Ways to control risk",
+          "More examples"
+        ]
+      }
+    }
+  },
+  "guide-draft": {
+    "kind": "guide",
+    "aliases": [],
+    "sources": {
+      "signs-of-ai-writing": {
+        "url": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
+        "format": "html",
+        "watch": [
+          "High density of \"AI vocabulary\" words",
+          "Negative parallelisms",
+          "Rule of three",
+          "Superficial analyses",
+          "Promotional and advertisement-like language",
+          "Collaborative communication"
+        ]
+      }
+    },
+    "fingerprints": {
+      "signs-of-ai-writing": {
+        "sections": {
+          "High density of \"AI vocabulary\" words": "sha256:8e2722539e2630f8",
+          "Negative parallelisms": "sha256:ab47aba826675697",
+          "Rule of three": "sha256:563185190524f816",
+          "Superficial analyses": "sha256:ada847aff9a2bafa",
+          "Promotional and advertisement-like language": "sha256:5984c5337963edda",
+          "Collaborative communication": "sha256:7aa86b6cf4e68acf"
+        },
+        "headings": [
+          "Caveats",
+          "AI detection tools",
+          "Your detection ability",
+          "Content",
+          "Undue emphasis on significance, legacy, and broader trends",
+          "Canned emphasis on notability, attribution, and media coverage",
+          "Superficial analyses",
+          "Promotional and advertisement-like language",
+          "Vague expression of connection or association",
+          "Vague attributions and overgeneralization of opinions",
+          "Outline-like conclusions about challenges and future prospects",
+          "\"Awards and recognition\" section",
+          "Language and grammar",
+          "High density of \"AI vocabulary\" words",
+          "Avoidance of basic copulatives (\"is\"/\"are\" phrases)",
+          "Negative parallelisms",
+          "Leads treating Wikipedia lists or broad article titles as proper nouns",
+          "Rule of three",
+          "Style",
+          "Title case",
+          "Overuse of boldface",
+          "Inline-header vertical lists",
+          "Heading errors",
+          "Emoji as formatting",
+          "Unusual use of tables",
+          "Curly quotation marks and apostrophes",
+          "Communication intended for the user",
+          "Collaborative communication",
+          "Hedging disclaimers about source availability and recommended usage",
+          "Phrasal templates and placeholder text",
+          "Markup",
+          "Use of Markdown",
+          "Broken wikitext",
+          "Internal formatting and reference markup bugs",
+          "Non-existent or out-of-place categories",
+          "Non-existent templates",
+          "Citations",
+          "Broken external links",
+          "Invalid DOI and ISBNs",
+          "DOIs that lead to unrelated articles",
+          "Book citations without page numbers or URLs",
+          "Incorrect or unconventional use of references",
+          "utm_source=",
+          "Named references declared in references section but unused in article body",
+          "Comment-specific indicators",
+          "Edit summaries",
+          "General examples",
+          "Canned assurance of adherence to Wikipedia policies and guidelines",
+          "Specific mentions of \"preserved\" or \"retained\" information, \"avoided\" mistakes, and other procedural statements",
+          "Overemphasis on presence/reliability of citations",
+          "Overemphasis on parameter/template names and markup idiosyncracies",
+          "Reference to AfC review",
+          "Miscellaneous",
+          "Pronounced shift in writing style",
+          "\"Submission statements\" in AfC drafts",
+          "Pre-placed maintenance templates",
+          "Canned user pages",
+          "Permissions gaming",
+          "Differences between LLMs",
+          "Biases in content",
+          "Signs of human writing",
+          "Age of text relative to ChatGPT launch",
+          "Ability to explain one's own editorial choices",
+          "Syntax",
+          "Ineffective indicators",
+          "Historical indicators",
+          "Statements about knowledge cutoffs (2022–2023)",
+          "Didactic disclaimers (November 2022–2024)",
+          "Section summaries",
+          "Prompt refusal",
+          "Overuse of em dashes (2022–September 2026)",
+          "Abrupt cut offs",
+          "Outdated access-date parameters",
+          "Lexical diversity/elegant variation",
+          "See also",
+          "Notes",
+          "References",
+          "Further reading",
+          "External links"
+        ]
+      }
+    }
   }
 }

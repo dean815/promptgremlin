@@ -1,6 +1,7 @@
 ---
 type: draft
 default_target: claude-ai
+guide: guide-draft
 ---
 # draft: prose a person will send or publish
 
@@ -37,5 +38,4 @@ Always add an **edit pass** after the prompt:
    own words; check every fact; read it aloud once.
 
 ## Sources
-Wikipedia "Signs of AI writing" (for the AI-tells list); vendor writing
-guidance.
+Watched as `guide-draft`: Wikipedia's "Signs of AI writing" guide.

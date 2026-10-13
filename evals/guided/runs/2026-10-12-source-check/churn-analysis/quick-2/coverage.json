@@ -1,0 +1,44 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt asks the receiver to tell the CEO whether the July Pro price increase (49 to 69 USD) drove Pro churn.\"},{\"status\":\"stated\",\"note\":\"The prompt says to exclude trials (is_trial = yes) before any calculation.\"},{\"status\":\"stated\",\"note\":\"The prompt says to exclude test accounts with emails ending in @ourco.test.\"},{\"status\":\"stated\",\"note\":\"The prompt defines churn as an account having a cancel_month.\"},{\"status\":\"stated\",\"note\":\"The prompt names the CEO as the audience: 'I need to tell the CEO' and 'Output, for the CEO.'\"},{\"status\":\"stated\",\"note\":\"The prompt asks for a summary of at most 5 bullets.\"},{\"status\":\"stated\",\"note\":\"The prompt asks for one suggested chart, saying only what to plot and not building it.\"},{\"status\":\"stated\",\"note\":\"The prompt asks for a statement of how confident the conclusion is, given the small sample, with the reason.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt asks the receiver to tell the CEO whether the July Pro price increase (49 to 69 USD) drove Pro churn."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to exclude trials (is_trial = yes) before any calculation."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to exclude test accounts with emails ending in @ourco.test."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt defines churn as an account having a cancel_month."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt names the CEO as the audience: 'I need to tell the CEO' and 'Output, for the CEO.'"
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks for a summary of at most 5 bullets."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks for one suggested chart, saying only what to plot and not building it."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks for a statement of how confident the conclusion is, given the small sample, with the reason."
+      }
+    ],
+    "invented": []
+  },
+  "session": "2014dc51-3c04-4b96-b0e6-67d58f4f94d2",
+  "cost_usd": 0.055492,
+  "output_tokens": 463,
+  "denials": []
+}

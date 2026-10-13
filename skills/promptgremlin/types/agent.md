@@ -24,4 +24,4 @@ behaviour → stop condition per run.
 - Give the failure behaviour; agents improvise when a source is down.
 
 ## Sources
-Vendor agent and system-prompt guidance (target notes).
+Watched through the target's own notes (the agent or model the instructions are for).

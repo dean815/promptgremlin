@@ -28,4 +28,4 @@ you had to assume" → stop line.
 - Keep open questions open instead of letting the writer resolve them.
 
 ## Sources
-Vendor long-document writing guidance; slot list carries most of it.
+No watched public guide yet; the slot list is hand-written.

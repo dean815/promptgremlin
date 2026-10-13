@@ -34,4 +34,4 @@ light and style, then audio; settings in the tool's syntax.
 List the 2–3 things to change first if the clip misses, for this tool.
 
 ## Sources
-Video target notes (google-video, runway, kling, sora, higgsfield).
+Watched through the video target notes (google-video, runway, kling, sora, higgsfield).

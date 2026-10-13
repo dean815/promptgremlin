@@ -1,6 +1,7 @@
 ---
 type: research
 default_target: claude-ai
+guide: guide-research
 ---
 # research: find out, compare, survey, recommend
 
@@ -32,5 +33,4 @@ spelled out as steps → source rules → output shape → stop rule.
   merge results.
 
 ## Sources
-Anthropic's multi-agent research system write-up; OpenAI and Google deep
-research docs; Perplexity prompting guide.
+Watched as `guide-research`: Anthropic's multi-agent research write-up and OpenAI's deep research guide.
