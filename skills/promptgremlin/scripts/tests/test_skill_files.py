@@ -102,3 +102,48 @@ def test_skill_says_only_changed_section_text_is_fenced():
     body = (SKILL / "SKILL.md").read_text() + (SKILL / "writer.md").read_text()
     assert "the notes, and the text under" not in body
     assert "only the text under" in body
+
+
+def _section(text, heading):
+    parts = re.split(r"^## ", text, flags=re.M)
+    for part in parts:
+        if part.startswith(heading):
+            return part
+    raise AssertionError(f"missing section {heading}")
+
+
+def _slot(slots, name):
+    match = re.search(
+        rf"\*\*{re.escape(name)}\*\*.*?(?=\n\d+\. \*\*|\Z)", slots, re.S)
+    assert match, name
+    return match.group(0)
+
+
+def test_build_clone_request_suggests_full_feature_set_and_solid_finish():
+    """A clone or 'identical to X' request suggests the whole feature set and a solid v1."""
+    text = (SKILL / "types" / "build.md").read_text()
+    slots = _section(text, "Slots")
+    features = _slot(slots, "v1 features").lower()
+    assert "clone" in features
+    assert "identical" in features
+    assert "full feature set" in features
+    # Thin wording still gets a small suggestion, so scope scales with ambition.
+    assert "2–3" in features or "2-3" in features
+    speed = _slot(slots, "speed").lower()
+    assert "solid v1" in speed
+    assert "clone" in speed and "identical" in speed
+
+
+def test_build_long_run_writes_post_checklist_stretch_phase():
+    """A long-run answer is a run-length slot that adds a stretch phase after the checklist."""
+    text = (SKILL / "types" / "build.md").read_text()
+    slots = _section(text, "Slots")
+    run = _slot(slots, "run length").lower()
+    assert "budget" in run
+    assert "long run" in run
+    skeleton = _section(text, "Prompt skeleton").lower()
+    assert "stretch phase" in skeleton
+    assert "after the checklist" in skeleton
+    guidance = _section(text, "Type guidance").lower()
+    assert "stretch phase" in guidance
+    assert "long run" in guidance
