@@ -1,0 +1,43 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"The PRD describes the feature as part of 'the B2B note-taking app' and frames the problem around teams using it.\"},{\"status\":\"met\",\"note\":\"The header names engineering and design leads as the audience and marks the status as 'Draft for kickoff'. The content suits that audience, with design notes, engineering spikes and schema dependencies.\"},{\"status\":\"met\",\"note\":\"Creating a workspace, inviting members by email and shared notes are each listed in scope and each get their own requirements section (7.1\u20137.3).\"},{\"status\":\"met\",\"note\":\"Only admin and member are defined, and it states 'Only these two roles exist in v1.' Invites can only assign admin or member.\"},{\"status\":\"met\",\"note\":\"Billing changes, SSO and guest access are all listed as out of scope. Billing is mentioned again only as a dependency boundary, not as work to do.\"},{\"status\":\"met\",\"note\":\"The metric is stated exactly: 20% of paid accounts create a workspace within 60 days. Extra metrics are clearly marked as proposed, and there's a note on what tracking is needed to measure it.\"},{\"status\":\"not_met\",\"note\":\"The document is about 1,300+ words, with ten sections, a table and long requirement, risk and assumption lists. Formatted, that's likely about 3 pages, over the 'at most about 2 pages' limit. This is a judgment call, but it's long enough to fail the item.\"},{\"status\":\"met\",\"note\":\"Migration is Open question 1. It lists options without picking one and says 'No other section of this document assumes an answer.' The risks section also tells engineering not to finalize the schema until it's resolved.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "The PRD describes the feature as part of 'the B2B note-taking app' and frames the problem around teams using it."
+      },
+      {
+        "status": "met",
+        "note": "The header names engineering and design leads as the audience and marks the status as 'Draft for kickoff'. The content suits that audience, with design notes, engineering spikes and schema dependencies."
+      },
+      {
+        "status": "met",
+        "note": "Creating a workspace, inviting members by email and shared notes are each listed in scope and each get their own requirements section (7.1\u20137.3)."
+      },
+      {
+        "status": "met",
+        "note": "Only admin and member are defined, and it states 'Only these two roles exist in v1.' Invites can only assign admin or member."
+      },
+      {
+        "status": "met",
+        "note": "Billing changes, SSO and guest access are all listed as out of scope. Billing is mentioned again only as a dependency boundary, not as work to do."
+      },
+      {
+        "status": "met",
+        "note": "The metric is stated exactly: 20% of paid accounts create a workspace within 60 days. Extra metrics are clearly marked as proposed, and there's a note on what tracking is needed to measure it."
+      },
+      {
+        "status": "not_met",
+        "note": "The document is about 1,300+ words, with ten sections, a table and long requirement, risk and assumption lists. Formatted, that's likely about 3 pages, over the 'at most about 2 pages' limit. This is a judgment call, but it's long enough to fail the item."
+      },
+      {
+        "status": "met",
+        "note": "Migration is Open question 1. It lists options without picking one and says 'No other section of this document assumes an answer.' The risks section also tells engineering not to finalize the schema until it's resolved."
+      }
+    ]
+  },
+  "session": "14450359-f278-4a95-b92e-4f5eb9b2690f",
+  "cost_usd": 0.048024,
+  "output_tokens": 884,
+  "denials": []
+}

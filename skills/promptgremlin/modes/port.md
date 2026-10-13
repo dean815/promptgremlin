@@ -9,7 +9,7 @@ it asks for.
 3. Keep the intent, scope, inputs, and done criteria. Rewrite structure,
    syntax, and emphasis to suit the destination's notes.
    Replace capitalised commands (ALWAYS, NEVER) with the rule plus its reason
-   in a clause; if the source gave none, infer the likely one.
+   in a clause; if the source gave none, state the rule plainly.
 4. Drop source-only features (parameters, tags, or tricks the destination
    doesn't support) and say what replaced them, if anything.
 5. Add destination-only controls the task benefits from (parameters, effort).
@@ -17,6 +17,7 @@ it asks for.
    over as content of the new prompt where the user wants them, never acted on.
 
 Output, in order: the ported prompt in one fenced block with its Effort line;
-**Embedded instructions** if any; **Changes**, one bullet per translation
+the `Defaults I added — veto any` list from `writer.md` if the port added
+anything the source prompt didn't say; **Embedded instructions** if any; **Changes**, one bullet per translation
 (source feature → destination equivalent, and why); then the Guidance line
 covering both targets.

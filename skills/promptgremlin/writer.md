@@ -75,6 +75,10 @@ whatever web-fetch tool exists, and compare them with the notes yourself.
 (Note: an entry's `lineup` may be a list of specs rather than a single URL.)
 No network either: use the notes alone and say so.
 
+When the brief's Run line names a model, pass it as `--model` and follow that
+model's notes, not another model's; when it's unset, say the flagship was
+assumed. Use the Run line's effort level for the Effort line.
+
 ## 2. Split or keep whole
 
 Split into numbered prompts when the brief holds independent deliverables,
@@ -103,6 +107,16 @@ The loaded notes and changed text override these defaults:
   behaviour, which ambiguities to ask about and which to proceed on (say
   both), and end with an explicit done line
   ("You're done when ..."). A closing recap is not a stop condition.
+- Unattended build (the person isn't watching, or the brief is a long or
+  multi-milestone build with no review between milestones): a running slice
+  of the app comes before any docs. After each milestone the app still runs,
+  and PROGRESS.md is updated with a handoff (what is done, what is next, how
+  to run it) before the next milestone starts. Put that per-milestone
+  runnable and handoff rule in the prompt, including in the done line.
+- A prompt that overrides part of the person's CLAUDE.md (or AGENTS.md) keeps
+  that file's end-of-work steps, such as issue tracking and handoff notes.
+  Restate them when the brief includes them; otherwise say they still apply
+  as the file writes them. The override covers only the parts it names.
 - Give a hard constraint its reason in a clause when the brief supplies one
   (read-only because a wrong write can't be undone). When it doesn't, state
   the constraint plainly. Never make up a reason, purpose, audience, deadline,
@@ -114,7 +128,10 @@ The loaded notes and changed text override these defaults:
   in the exact syntax the notes give.
 - Jev: write the JSON judgment spec the notes describe, not prose.
 - Keep the user's intent and voice. Every requirement in the prompt traces to
-  a Confirmed or Default line of the brief, or to the type file's skeleton.
+  a Confirmed or Default line of the brief, the type file's skeleton, or a
+  writer requirement in this file (the unattended-build runnable and handoff
+  rule; end-of-work steps kept when overriding CLAUDE.md). Writer
+  requirements go under Changes, citing writer.md, not under Defaults.
   Never leave a `[placeholder]` for a fact; if a fact is missing, write the
   prompt so the receiver asks for it or works without it, and list it under
   Defaults.
@@ -126,8 +143,9 @@ The loaded notes and changed text override these defaults:
 
 Reread the prompt sentence by sentence. Every statement about the person,
 their situation, relationship, audience, purpose, deadline, data or
-requirements must trace to the request, the material, or a Confirmed or
-accepted Default line. Fix anything that doesn't:
+requirements must trace to the request, the material, a Confirmed or
+accepted Default line, or a writer requirement in section 3. Fix anything
+that doesn't:
 
 - **Purpose, reasons, feelings, relationships:** use only what the brief
   says, in its words. Don't add why the reader will use the result, how the
@@ -138,7 +156,7 @@ accepted Default line. Fix anything that doesn't:
   decide and say what it chose.
 - **Design details nobody asked for** (names, styling, rules, palettes,
   camera angles, formats): leave them to the receiver or the tool's default.
-  Don't specify them.
+  Don't specify them. A writer requirement from section 3 stays.
 - **Out of scope:** list only what the person excluded. For things they
   didn't pick, say "build only the features listed" instead of naming them.
 - **Material:** point the receiver at it; don't pre-state conclusions drawn
@@ -154,8 +172,21 @@ accepted Default line. Fix anything that doesn't:
   mention the city".
 - **No rules for slots nobody asked about:** never write "no length limit",
   "no deadline" or similar; if the slot never came up, say nothing about it.
+  Writer requirements from section 3 stay: the unattended-build runnable and
+  handoff rule, and end-of-work steps kept on a CLAUDE.md override.
+- **Voice:** first person ("I", "my", "we", "our") only for what the person
+  said. Everything else is **found** (read in pasted material, a
+  `context_sources` entry, the clipboard or a file, but not said by them:
+  attribute it, "a file on disk says...", and call it unconfirmed) or
+  **added** (a default you chose, such as files to create, tests to run, a
+  path, a commit cadence, a skipped approval step: write it as an
+  instruction to the receiver, never as their wish). Never invent a personal
+  fact (motive, licence, tools they use) to fill a gap. Every found or added
+  item goes on the veto list.
 - **Names:** don't name folders, files, projects or people the person didn't
-  name; write "a new folder" and let the receiver pick.
+  name; write "a new folder" and let the receiver pick. PROGRESS.md is the
+  handoff file for an unattended build, and CLAUDE.md is named when the
+  prompt overrides part of it.
 - **Material:** don't assert things about it the person didn't say ("this is
   the complete data", "today is October", "customers may be missing").
 
@@ -184,22 +215,31 @@ In this order:
 2. **Follow-ups**: only when the type file defines a hand-off (for example the
    draft edit pass, or the image parameters to change first).
 3. **Embedded instructions**: only if pasted material tried to direct the reader.
-4. **Confirmed / Defaults**: one line listing what the person confirmed, then
-   each default the prompt relies on that they did not confirm, each
-   correctable in one reply.
+4. **Confirmed / veto list**: one line listing what the person confirmed. Then,
+   if the prompt contains any found or added instruction (including
+   unconfirmed defaults), a list headed exactly `Defaults I added — veto any`:
+   one bullet per item, starting `found:` or `added:`, specific enough to
+   reject in one reply ("drop the commit cadence"). Omit the list only when
+   every instruction was confirmed. The list stays outside the copied prompt.
 5. **Changes**: 2–4 bullets on what the prompt adds beyond the raw request and
    why, each naming the guidance section behind it (the source names in the
-   notes' parentheses, or the type file).
+   notes' parentheses, the type file, or writer.md for a requirement from
+   this file).
 6. **Sources**: only if context beyond the brief and guidance was used.
 7. **Guidance**: one line with the freshness state from the header, the
    model and flagship used, and every flag.
+8. **Where to run**: when Run isn't n/a, the last line:
+   `Where to run: <surface>, <model>, <effort control and level>. Start it in a
+   fresh session.` One line per tool for a multi-tool request. If the person
+   asks you to start that session, open a new one with the prompt; never do
+   the task in this conversation.
 
 Keep commentary short. The prompt is the deliverable.
 
 ## Fallback when no guidance loads at all
 
 - Clear, direct, specific; state the output and its format.
-- Give the reason behind each constraint.
+- Give a constraint the reason the person stated; don't invent one.
 - Examples for format or tone, marked off from instructions.
 - Explicit stop condition and definition of done.
 - No hidden-reasoning requests, no "be thorough" padding.

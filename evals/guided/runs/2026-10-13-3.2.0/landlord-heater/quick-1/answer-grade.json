@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"It is addressed \\\"Dear Ms. Alvarez.\\\"\"},{\"status\":\"met\",\"note\":\"Apartment 4B appears in the subject line and the body.\"},{\"status\":\"met\",\"note\":\"It says the heater \\\"stopped working on October 2.\\\"\"},{\"status\":\"met\",\"note\":\"It says \\\"I called you on October 3 to report it, and I haven't heard back since.\\\"\"},{\"status\":\"met\",\"note\":\"It says \\\"Overnight temperatures are now in the 40s \u00b0F.\\\"\"},{\"status\":\"met\",\"note\":\"It says \\\"Please repair the heater within 48 hours of receiving this email.\\\" A fallback asks for a written timeline, but the 48-hour request is still clear.\"},{\"status\":\"met\",\"note\":\"It says \\\"Section 12 of our lease requires the landlord to provide heat.\\\"\"},{\"status\":\"met\",\"note\":\"The tone is courteous (\\\"Thank you\\\") and firm (a deadline, a written-record note, and a request for a written timeline).\"},{\"status\":\"met\",\"note\":\"Rent is never mentioned, so there is no threat to withhold it.\"},{\"status\":\"met\",\"note\":\"It is about 105 words including the subject line, well under 150.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "It is addressed \"Dear Ms. Alvarez.\""
+      },
+      {
+        "status": "met",
+        "note": "Apartment 4B appears in the subject line and the body."
+      },
+      {
+        "status": "met",
+        "note": "It says the heater \"stopped working on October 2.\""
+      },
+      {
+        "status": "met",
+        "note": "It says \"I called you on October 3 to report it, and I haven't heard back since.\""
+      },
+      {
+        "status": "met",
+        "note": "It says \"Overnight temperatures are now in the 40s \u00b0F.\""
+      },
+      {
+        "status": "met",
+        "note": "It says \"Please repair the heater within 48 hours of receiving this email.\" A fallback asks for a written timeline, but the 48-hour request is still clear."
+      },
+      {
+        "status": "met",
+        "note": "It says \"Section 12 of our lease requires the landlord to provide heat.\""
+      },
+      {
+        "status": "met",
+        "note": "The tone is courteous (\"Thank you\") and firm (a deadline, a written-record note, and a request for a written timeline)."
+      },
+      {
+        "status": "met",
+        "note": "Rent is never mentioned, so there is no threat to withhold it."
+      },
+      {
+        "status": "met",
+        "note": "It is about 105 words including the subject line, well under 150."
+      }
+    ]
+  },
+  "session": "be885385-baee-41c5-9936-cc62704f3eae",
+  "cost_usd": 0.02926,
+  "output_tokens": 777,
+  "denials": []
+}

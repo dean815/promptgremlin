@@ -1,0 +1,56 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Names the landlord as Ms. Alvarez.\"},{\"status\":\"stated\",\"note\":\"Says the tenant is in Apartment 4B.\"},{\"status\":\"stated\",\"note\":\"Says the heater stopped working on October 2.\"},{\"status\":\"stated\",\"note\":\"Says it was reported by phone on October 3 with no response.\"},{\"status\":\"stated\",\"note\":\"Says overnight temperatures are in the 40s \u00b0F.\"},{\"status\":\"stated\",\"note\":\"Asks for the repair within 48 hours.\"},{\"status\":\"stated\",\"note\":\"Says section 12 of the lease requires the landlord to provide heat, and mentions it twice.\"},{\"status\":\"stated\",\"note\":\"Asks for a polite but firm tone.\"},{\"status\":\"stated\",\"note\":\"Says not to threaten to withhold rent.\"},{\"status\":\"stated\",\"note\":\"Says to keep it under 150 words.\"}],\"invented\":[\"The email asks Ms. Alvarez to reply in writing confirming a repair visit. The person never asked for this.\",\"It forbids mentioning legal action. The person only said not to threaten to withhold rent.\",\"It forbids threatening anything at all, which is broader than the person's single limit about rent.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Names the landlord as Ms. Alvarez."
+      },
+      {
+        "status": "stated",
+        "note": "Says the tenant is in Apartment 4B."
+      },
+      {
+        "status": "stated",
+        "note": "Says the heater stopped working on October 2."
+      },
+      {
+        "status": "stated",
+        "note": "Says it was reported by phone on October 3 with no response."
+      },
+      {
+        "status": "stated",
+        "note": "Says overnight temperatures are in the 40s \u00b0F."
+      },
+      {
+        "status": "stated",
+        "note": "Asks for the repair within 48 hours."
+      },
+      {
+        "status": "stated",
+        "note": "Says section 12 of the lease requires the landlord to provide heat, and mentions it twice."
+      },
+      {
+        "status": "stated",
+        "note": "Asks for a polite but firm tone."
+      },
+      {
+        "status": "stated",
+        "note": "Says not to threaten to withhold rent."
+      },
+      {
+        "status": "stated",
+        "note": "Says to keep it under 150 words."
+      }
+    ],
+    "invented": [
+      "The email asks Ms. Alvarez to reply in writing confirming a repair visit. The person never asked for this.",
+      "It forbids mentioning legal action. The person only said not to threaten to withhold rent.",
+      "It forbids threatening anything at all, which is broader than the person's single limit about rent."
+    ]
+  },
+  "session": "02c7284d-1d95-4420-b41e-77cbf921ccb0",
+  "cost_usd": 0.0265306,
+  "output_tokens": 598,
+  "denials": []
+}

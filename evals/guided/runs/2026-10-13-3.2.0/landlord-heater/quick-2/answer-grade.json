@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"met\",\"note\":\"Addressed 'Dear Ms. Alvarez.'\"},{\"status\":\"met\",\"note\":\"Apartment 4B named in subject and body.\"},{\"status\":\"met\",\"note\":\"States heater stopped working on October 2.\"},{\"status\":\"met\",\"note\":\"'I called you on October 3... haven't heard back since' covers phone report and no response.\"},{\"status\":\"met\",\"note\":\"Says overnight temperatures are in the 40s; \u00b0F not written out but clear in context.\"},{\"status\":\"met\",\"note\":\"Requests repair 'within 48 hours of this email.'\"},{\"status\":\"met\",\"note\":\"Cites Section 12 of the lease requiring the landlord to provide heat.\"},{\"status\":\"met\",\"note\":\"Courteous and offers access and schedule flexibility, while setting a clear deadline and asking for written confirmation.\"},{\"status\":\"met\",\"note\":\"Rent is not mentioned.\"},{\"status\":\"met\",\"note\":\"About 113 words including the subject line.\"}]}",
+  "structured": {
+    "items": [
+      {
+        "status": "met",
+        "note": "Addressed 'Dear Ms. Alvarez.'"
+      },
+      {
+        "status": "met",
+        "note": "Apartment 4B named in subject and body."
+      },
+      {
+        "status": "met",
+        "note": "States heater stopped working on October 2."
+      },
+      {
+        "status": "met",
+        "note": "'I called you on October 3... haven't heard back since' covers phone report and no response."
+      },
+      {
+        "status": "met",
+        "note": "Says overnight temperatures are in the 40s; \u00b0F not written out but clear in context."
+      },
+      {
+        "status": "met",
+        "note": "Requests repair 'within 48 hours of this email.'"
+      },
+      {
+        "status": "met",
+        "note": "Cites Section 12 of the lease requiring the landlord to provide heat."
+      },
+      {
+        "status": "met",
+        "note": "Courteous and offers access and schedule flexibility, while setting a clear deadline and asking for written confirmation."
+      },
+      {
+        "status": "met",
+        "note": "Rent is not mentioned."
+      },
+      {
+        "status": "met",
+        "note": "About 113 words including the subject line."
+      }
+    ]
+  },
+  "session": "2b703cbb-2d18-4c65-8f92-e5f62d2163a6",
+  "cost_usd": 0.032521,
+  "output_tokens": 1141,
+  "denials": []
+}

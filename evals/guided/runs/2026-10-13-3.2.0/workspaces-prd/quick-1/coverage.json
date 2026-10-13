@@ -1,0 +1,46 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Stated as 'our B2B note-taking app'.\"},{\"status\":\"stated\",\"note\":\"Says engineering and design leads will read it at a kickoff.\"},{\"status\":\"stated\",\"note\":\"In-scope list has create a workspace, invite members by email, and shared notes in a workspace.\"},{\"status\":\"stated\",\"note\":\"Says 'Two roles only: admin and member.'\"},{\"status\":\"stated\",\"note\":\"Out-of-scope list has billing changes, SSO and guest access.\"},{\"status\":\"stated\",\"note\":\"Metric given word for word, with an instruction to use it exactly as stated.\"},{\"status\":\"stated\",\"note\":\"Asks for 'about 2 pages' and short sections.\"},{\"status\":\"stated\",\"note\":\"Migration of existing shared notes is kept as an open question, and the prompt says not to propose or assume an answer.\"}],\"invented\":[\"The prompt says the person is a product manager ('I'm a product manager preparing a PRD'). Nothing in the request or the answers says what their role is.\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Stated as 'our B2B note-taking app'."
+      },
+      {
+        "status": "stated",
+        "note": "Says engineering and design leads will read it at a kickoff."
+      },
+      {
+        "status": "stated",
+        "note": "In-scope list has create a workspace, invite members by email, and shared notes in a workspace."
+      },
+      {
+        "status": "stated",
+        "note": "Says 'Two roles only: admin and member.'"
+      },
+      {
+        "status": "stated",
+        "note": "Out-of-scope list has billing changes, SSO and guest access."
+      },
+      {
+        "status": "stated",
+        "note": "Metric given word for word, with an instruction to use it exactly as stated."
+      },
+      {
+        "status": "stated",
+        "note": "Asks for 'about 2 pages' and short sections."
+      },
+      {
+        "status": "stated",
+        "note": "Migration of existing shared notes is kept as an open question, and the prompt says not to propose or assume an answer."
+      }
+    ],
+    "invented": [
+      "The prompt says the person is a product manager ('I'm a product manager preparing a PRD'). Nothing in the request or the answers says what their role is."
+    ]
+  },
+  "session": "4662b6fd-c944-4d3a-87cc-cd7f73d4a725",
+  "cost_usd": 0.0273706,
+  "output_tokens": 584,
+  "denials": []
+}

@@ -59,6 +59,14 @@ The five remaining flags: a ban widened to "any legal action", a required subjec
 sign-off placeholder in the landlord email, and two statements of when and why the PRD's
 readers will use it.
 
+## 3.2.0 rerun (2026-10-13)
+
+After the run-setup question, the veto list, build scope scaling and unattended-build handoffs.
+Quick mode, 4 tasks (habit-tracker, slow-csv-export, landlord-heater, workspaces-prd), 2 runs
+each (`runs/2026-10-13-3.2.0/`): 99% of hidden requirements in the prompt, 0 contradicted,
+6 invented, answers meet 97%, 1.0 rounds, 4.9 questions. Agent tasks asked run setup and ended
+with a where-to-run line; chat tasks did neither.
+
 ## Reading this
 
 - **raw** scores 0% on the prompt by design: the hidden requirements were never typed. Its

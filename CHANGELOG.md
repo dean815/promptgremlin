@@ -1,5 +1,22 @@
 # Changelog
 
+## 3.2.0
+
+From the first weekly review of real runs (TOOL-67 to TOOL-70):
+
+- Agent prompts (Claude Code, Codex, Cursor and other agent tools) get a run-setup question
+  before writing: where it runs, which model and which effort, suggested from the current
+  session. The prompt is tuned to that model, and the reply ends with a `Where to run:` line.
+- Every instruction is stated, found or added. First person only for what the person said;
+  found and added items are listed under `Defaults I added — veto any`, which replaces the
+  old Confirmed / Defaults section.
+- Build: "clone" or "identical to" requests suggest the full feature set and a solid v1; a
+  run-length question; long runs get a stretch phase after the checklist.
+- Unattended builds keep a running app and a PROGRESS.md handoff after each milestone; a
+  prompt that overrides part of CLAUDE.md keeps its end-of-work steps.
+- Guided benchmark, 4 tasks, quick mode: 99% of hidden requirements in the prompt, 0
+  contradictions, answers meet 97% of them, still one round of questions.
+
 ## 3.1.2
 
 Weekly refresh of vendor notes (15 targets flagged on 2026-10-13); every target and guide now

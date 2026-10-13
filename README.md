@@ -29,8 +29,10 @@ sound like a person wrote them.
    default you accepted; nothing is made up to fill a gap.
 
 Each prompt comes in a code block with an effort suggestion naming the real
-control on that surface, what you confirmed vs what was defaulted, the changes
-made and why, and a one-line freshness report. Draft prompts add an edit pass
+control on that surface, what you confirmed, a "Defaults I added — veto any"
+list for anything you didn't say, the changes made and why, and a one-line
+freshness report. Prompts for agent tools also ask where they'll run (surface,
+model, effort) and end with a "Where to run" line. Draft prompts add an edit pass
 for stripping AI tells; image and video prompts add what to change first if
 the result misses.
 

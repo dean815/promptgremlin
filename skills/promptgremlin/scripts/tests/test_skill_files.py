@@ -102,3 +102,87 @@ def test_skill_says_only_changed_section_text_is_fenced():
     body = (SKILL / "SKILL.md").read_text() + (SKILL / "writer.md").read_text()
     assert "the notes, and the text under" not in body
     assert "only the text under" in body
+
+
+def _section(text, heading):
+    parts = re.split(r"^## ", text, flags=re.M)
+    for part in parts:
+        if part.startswith(heading):
+            return part
+    raise AssertionError(f"missing section {heading}")
+
+
+def _slot(slots, name):
+    match = re.search(
+        rf"\*\*{re.escape(name)}\*\*.*?(?=\n\d+\. \*\*|\Z)", slots, re.S)
+    assert match, name
+    return match.group(0)
+
+
+def test_build_clone_request_suggests_full_feature_set_and_solid_finish():
+    """A clone or 'identical to X' request suggests the whole feature set and a solid v1."""
+    text = (SKILL / "types" / "build.md").read_text()
+    slots = _section(text, "Slots")
+    features = _slot(slots, "v1 features").lower()
+    assert "clone" in features
+    assert "identical" in features
+    assert "full feature set" in features
+    # Thin wording still gets a small suggestion, so scope scales with ambition.
+    assert "2–3" in features or "2-3" in features
+    speed = _slot(slots, "speed").lower()
+    assert "solid v1" in speed
+    assert "clone" in speed and "identical" in speed
+
+
+def test_build_long_run_writes_post_checklist_stretch_phase():
+    """A long-run answer is a run-length slot that adds a stretch phase after the checklist."""
+    text = (SKILL / "types" / "build.md").read_text()
+    slots = _section(text, "Slots")
+    run = _slot(slots, "run length").lower()
+    assert "budget" in run
+    assert "long run" in run
+    skeleton = _section(text, "Prompt skeleton").lower()
+    assert "stretch phase" in skeleton
+    assert "after the checklist" in skeleton
+    guidance = _section(text, "Type guidance").lower()
+    assert "stretch phase" in guidance
+    assert "long run" in guidance
+
+
+def test_writer_keeps_unattended_builds_runnable_and_claude_end_steps():
+    """Unattended builds stay runnable per milestone; CLAUDE.md overrides keep end steps."""
+    body = " ".join((SKILL / "writer.md").read_text().split())
+    assert "running slice" in body and "before any docs" in body
+    assert "After each milestone the app still runs" in body
+    assert "PROGRESS.md" in body
+    assert "per-milestone runnable and handoff rule" in body
+    assert "including in the done line" in body
+    assert "overrides part of the person's CLAUDE.md" in body
+    assert "end-of-work steps" in body
+    assert "writer requirement in section 3" in body
+    assert "Writer requirements from section 3 stay" in body
+    assert "A writer requirement from section 3 stays" in body
+    assert "PROGRESS.md is the" in body and "handoff file for an unattended build" in body
+
+
+def test_writer_flags_found_and_added_defaults_for_veto():
+    """TOOL-68: no first person for things the person didn't say; a veto list for found or added items."""
+    body = " ".join((SKILL / "writer.md").read_text().split())
+    assert "first person" in body and "only for what the person said" in body
+    assert "**found**" in body and "**added**" in body
+    assert "Defaults I added — veto any" in body
+    assert "Omit the list only when every instruction was confirmed" in body
+    port = (SKILL / "modes" / "port.md").read_text()
+    assert "Defaults I added — veto any" in port
+
+
+def test_agent_targets_get_a_run_setup_question_and_where_to_run_line():
+    """TOOL-67: run setup is asked before writing for agent tools; delivery ends with where to run."""
+    skill = " ".join((SKILL / "SKILL.md").read_text().split())
+    assert "**Run setup**" in skill and "claude-code, codex" in skill
+    assert "asked in the first round" in skill
+    assert "Never default silently to a flagship" in skill
+    assert "Run: <surface> | <model or unset> | <effort>" in skill
+    writer = " ".join((SKILL / "writer.md").read_text().split())
+    assert "pass it as `--model`" in writer
+    assert "**Where to run**" in writer and "never do the task in this conversation" in writer

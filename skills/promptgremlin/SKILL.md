@@ -67,6 +67,11 @@ if it exists (keys: `default_target`, `pin_model`, `context_sources`,
 wins; else `default_target`; else the type file's default target. If the type
 file says the target must be asked (image and video), it's a slot.
 
+**Run setup** applies when the target is an agent tool (claude-code, codex,
+gemini-cli, cursor, copilot, lovable, replit, manus) or the person wants the
+same prompt run on several tools: where it runs (CLI, desktop app, IDE,
+cloud), which model, and which effort level. It's a high-impact slot.
+
 ## 4. Find the gaps
 
 Go through the type file's slots in order. Mark each **covered** (the person
@@ -101,6 +106,11 @@ How to ask:
   suggestions, or 'interview me' for more detail." Then stop and wait for the
   reply; write nothing else.
 - In quick mode, add "Interview me more" as an option on the vaguest question.
+- Run setup, when it applies and the request hasn't settled it, is asked in
+  the first round as one question. Suggest the product and model this
+  conversation is running in when they match the target; otherwise suggest
+  the target's usual surface and ask them to name the model. Never default
+  silently to a flagship they didn't pick.
 - Never ask what the person already said. Never ask about slots the type
   file marks low impact unless in deep mode.
 - After the answers, ask another round only for a new high-impact gap the
@@ -115,6 +125,7 @@ Build the brief:
 ```
 Request: <the person's words>
 Type: <type>   Target: <target> [model <model>]   Skill dir: <base directory of this skill>
+Run: <surface> | <model or unset> | <effort> (confirmed | unconfirmed), or n/a
 Config: <the config file's contents, or "none">
 Confirmed:
 - <slot>: <answer, in the person's words where possible>

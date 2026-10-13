@@ -1,0 +1,48 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt says exports can reach about 2 million rows and that memory use matters at this size.\"},{\"status\":\"stated\",\"note\":\"The prompt says to keep the signature export_orders_csv(db, path) because three callers use it.\"},{\"status\":\"stated\",\"note\":\"The prompt says the header line id,customer_name,total,created_at and the column order must stay the same.\"},{\"status\":\"stated\",\"note\":\"The prompt says 'Use only the standard library' and 'No new dependencies.'\"},{\"status\":\"stated\",\"note\":\"The prompt names the N+1 query, one customer lookup per order row, as the known main cause.\"},{\"status\":\"stated\",\"note\":\"The prompt says to 'write the file as you go instead of accumulating it in memory.'\"},{\"status\":\"stated\",\"note\":\"The prompt says customer names containing commas must now be properly CSV-quoted, and calls this a deliberate output change.\"},{\"status\":\"missing\",\"note\":\"The prompt never mentions tests/test_export.py and never asks the agent to run the existing tests. It only says not to change or add tests. The checks it lists are ad hoc diff and memory checks.\"},{\"status\":\"stated\",\"note\":\"The prompt asks for a minimal change, says to edit only export_orders_csv, and says not to restructure the module.\"}],\"invented\":[]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt says exports can reach about 2 million rows and that memory use matters at this size."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to keep the signature export_orders_csv(db, path) because three callers use it."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says the header line id,customer_name,total,created_at and the column order must stay the same."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says 'Use only the standard library' and 'No new dependencies.'"
+      },
+      {
+        "status": "stated",
+        "note": "The prompt names the N+1 query, one customer lookup per order row, as the known main cause."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says to 'write the file as you go instead of accumulating it in memory.'"
+      },
+      {
+        "status": "stated",
+        "note": "The prompt says customer names containing commas must now be properly CSV-quoted, and calls this a deliberate output change."
+      },
+      {
+        "status": "missing",
+        "note": "The prompt never mentions tests/test_export.py and never asks the agent to run the existing tests. It only says not to change or add tests. The checks it lists are ad hoc diff and memory checks."
+      },
+      {
+        "status": "stated",
+        "note": "The prompt asks for a minimal change, says to edit only export_orders_csv, and says not to restructure the module."
+      }
+    ],
+    "invented": []
+  },
+  "session": "473ef32d-2cce-439b-9eee-130289e03389",
+  "cost_usd": 0.037196,
+  "output_tokens": 715,
+  "denials": []
+}
