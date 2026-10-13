@@ -1,0 +1,51 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"The prompt never names Midjourney, but it uses Midjourney-only parameters (--ar, --no), so it's clearly written for Midjourney.\"},{\"status\":\"stated\",\"note\":\"--ar 4:5 sets the portrait format the person asked for. Instagram isn't mentioned, but the format matches a feed post.\"},{\"status\":\"stated\",\"note\":\"'latte in a handmade ceramic cup, leaf-shaped latte art clearly visible on the surface'\"},{\"status\":\"stated\",\"note\":\"'dark wood counter'\"},{\"status\":\"stated\",\"note\":\"'warm early-morning window light'\"},{\"status\":\"stated\",\"note\":\"'Close-up film photograph' gives the film-photo look.\"},{\"status\":\"stated\",\"note\":\"'a single autumn leaf resting on the counter'\"},{\"status\":\"stated\",\"note\":\"'--no people'\"},{\"status\":\"stated\",\"note\":\"'--no ... text, logo'\"}],\"invented\":[\"A specific 45\u00b0 camera angle. The person only agreed to 'a slight angle', and 45\u00b0 is more than slight.\",\"'cup filling most of the frame' is a framing detail that goes beyond the agreed 'close-up' (minor).\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "The prompt never names Midjourney, but it uses Midjourney-only parameters (--ar, --no), so it's clearly written for Midjourney."
+      },
+      {
+        "status": "stated",
+        "note": "--ar 4:5 sets the portrait format the person asked for. Instagram isn't mentioned, but the format matches a feed post."
+      },
+      {
+        "status": "stated",
+        "note": "'latte in a handmade ceramic cup, leaf-shaped latte art clearly visible on the surface'"
+      },
+      {
+        "status": "stated",
+        "note": "'dark wood counter'"
+      },
+      {
+        "status": "stated",
+        "note": "'warm early-morning window light'"
+      },
+      {
+        "status": "stated",
+        "note": "'Close-up film photograph' gives the film-photo look."
+      },
+      {
+        "status": "stated",
+        "note": "'a single autumn leaf resting on the counter'"
+      },
+      {
+        "status": "stated",
+        "note": "'--no people'"
+      },
+      {
+        "status": "stated",
+        "note": "'--no ... text, logo'"
+      }
+    ],
+    "invented": [
+      "A specific 45\u00b0 camera angle. The person only agreed to 'a slight angle', and 45\u00b0 is more than slight.",
+      "'cup filling most of the frame' is a framing detail that goes beyond the agreed 'close-up' (minor)."
+    ]
+  },
+  "session": "669e1439-b8c3-4e0e-9679-69e6b8700db2",
+  "cost_usd": 0.0253586,
+  "output_tokens": 703,
+  "denials": []
+}

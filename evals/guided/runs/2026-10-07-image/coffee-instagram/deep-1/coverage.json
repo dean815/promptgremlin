@@ -1,0 +1,50 @@
+{
+  "text": "{\"items\":[{\"status\":\"stated\",\"note\":\"Midjourney syntax is used (--ar, --no), so the prompt is written for the tool they asked for.\"},{\"status\":\"stated\",\"note\":\"--ar 4:5 sets the portrait ratio. The prompt doesn't name Instagram, but the image itself doesn't need that.\"},{\"status\":\"stated\",\"note\":\"'a latte with leaf latte art in a handmade ceramic cup'\"},{\"status\":\"stated\",\"note\":\"'on a dark wood counter'\"},{\"status\":\"stated\",\"note\":\"'warm early-morning window light'\"},{\"status\":\"stated\",\"note\":\"'Film photograph of...'\"},{\"status\":\"stated\",\"note\":\"'a single autumn leaf beside it' on the counter\"},{\"status\":\"stated\",\"note\":\"'--no people'\"},{\"status\":\"stated\",\"note\":\"'--no ... text, logo'\"}],\"invented\":[\"'cup filling most of the frame': they approved a 45\u00b0 close-up but never said how much of the frame the cup should fill\"]}",
+  "structured": {
+    "items": [
+      {
+        "status": "stated",
+        "note": "Midjourney syntax is used (--ar, --no), so the prompt is written for the tool they asked for."
+      },
+      {
+        "status": "stated",
+        "note": "--ar 4:5 sets the portrait ratio. The prompt doesn't name Instagram, but the image itself doesn't need that."
+      },
+      {
+        "status": "stated",
+        "note": "'a latte with leaf latte art in a handmade ceramic cup'"
+      },
+      {
+        "status": "stated",
+        "note": "'on a dark wood counter'"
+      },
+      {
+        "status": "stated",
+        "note": "'warm early-morning window light'"
+      },
+      {
+        "status": "stated",
+        "note": "'Film photograph of...'"
+      },
+      {
+        "status": "stated",
+        "note": "'a single autumn leaf beside it' on the counter"
+      },
+      {
+        "status": "stated",
+        "note": "'--no people'"
+      },
+      {
+        "status": "stated",
+        "note": "'--no ... text, logo'"
+      }
+    ],
+    "invented": [
+      "'cup filling most of the frame': they approved a 45\u00b0 close-up but never said how much of the frame the cup should fill"
+    ]
+  },
+  "session": "1c9af929-d50c-488c-86c0-8a70ab5cd668",
+  "cost_usd": 0.0232066,
+  "output_tokens": 603,
+  "denials": []
+}

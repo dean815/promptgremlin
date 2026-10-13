@@ -30,6 +30,19 @@ Per task, intent in final prompt (and met by answer):
 | coffee-instagram (image) | 0% | 39% | 67% | 100% |
 | landlord-heater (draft) | 0% (20%) | 30% (20%) | 100% (100%) | 100% (100%) |
 
+## Image rerun after the scene question (2026-10-07)
+
+v3.0.0 folds setting, props and exclusions into one quick-mode question for images. Re-run of
+`coffee-instagram` only, 4 runs per arm (`runs/2026-10-07-image/`):
+
+| Arm | Intent in final prompt | Contradicted | Invented facts | Rounds | Words typed |
+|---|---|---|---|---|---|
+| quick | 100% (run 2: 67%) | 0 | 0 | 1.0 | 54 |
+| deep | 100% (run 2: 100%) | 0 | 4 | 2.0 | 96 |
+
+Deep mode's four flags are framing details stated slightly beyond what was agreed (a 45° angle
+for "a slight angle", "cup filling most of the frame", "cozy mood").
+
 ## Reading this
 
 - **raw** scores 0% on the prompt by design: the hidden requirements were never typed. Its
