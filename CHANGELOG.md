@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.1.1
+
+- Anthropic notes refreshed: Claude Haiku 5.5 added (effort replaces the thinking budget, search
+  with today's date, early stopping in long agent prompts, verifying code changes, chatbots
+  holding to their system prompt); Claude Haiku 4.5 retired.
+- Effort guidance updated: Haiku 5.5 defaults to medium like Opus 5.5, per-model starting
+  levels for Sonnet 5.5 and Haiku 5.5, and per-message effort changes that keep the prompt
+  cache.
+
 ## 3.1.0
 
 - Research and draft prompts now draw on watched public guides, checked for changes like the

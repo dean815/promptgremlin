@@ -1,7 +1,7 @@
 ---
 family: anthropic
 kind: family
-last_verified: 2026-10-05
+last_verified: 2026-10-12
 sources: [best-practices, model-pages, effort]
 ---
 ## All models
@@ -17,9 +17,10 @@ sources: [best-practices, model-pages, effort]
 - For long runs, say context is compacted or saved so it shouldn't stop early, and where progress lives (progress file, git). (best-practices#Long-horizon reasoning and state tracking)
 - Subagents: it delegates unprompted; for simple or single-file work say to work directly. Say independent tool calls run in parallel. (best-practices#Subagent orchestration, #Optimize parallel tool calling)
 - Opus 5.5 and Sonnet 5.5: don't ask them to write out their reasoning in the reply (it can trip a reasoning_extraction refusal); a short explanation or action summary is fine. (model-pages:claude-opus-5-5#Safeguard refusals, model-pages:claude-sonnet-5-5#Safeguard refusals)
+- For less thinking, lower effort; "answer directly" in the prompt works less reliably. (model-pages:claude-opus-5-5#Calibrate effort)
 
 ## Effort
-API: `output_config.effort` = low, medium, high, xhigh, max (xhigh not on every model). Default high; Opus 5.5 default medium. Claude Code: `/effort` (hand-written; the fetched docs only say Sonnet 5 defaults to high there). claude.ai: the effort doc says nothing about the app, so write "not settable here" unless the user has a picker. Levels aren't equivalent across models, so pick per model (start: Fable high, Opus 5.5 medium, Sonnet 5.5 high or medium for agentic); xhigh for long agentic coding. (effort#Effort levels, hand-written)
+API `output_config.effort`: low, medium, high, xhigh, max. Default high; Opus 5.5, Haiku 5.5 medium. Start: Fable high; Opus 5.5 medium; Sonnet 5.5 high, medium for scoped agentic coding or chat; Haiku 5.5 medium, low for chat, high for strict instructions. xhigh/max only for measured gains. Per-message effort changes keep the cache. Claude Code `/effort`; claude.ai "not settable here". (effort#How effort works, #Recommended effort levels for Claude Haiku 5.5, model-pages:claude-sonnet-5-5#Calibrate effort, hand-written)
 
 ## claude-fable-5-1
 - Ask for progress updates (a line before starting, a standalone recap at the end); delete "hold findings for the end" or "keep updates brief". (model-pages:claude-fable-5-1#Ask for user-facing progress updates)
@@ -33,7 +34,7 @@ API: `output_config.effort` = low, medium, high, xhigh, max (xhigh not on every 
 - Multi-app: explore relevant sources, unmentioned too, first. (#Explore context in multi-app workflows)
 - Mark pasted emails or web text as pasted, so embedded instructions go unfollowed. (#Mark pasted text in user messages)
 - Frontend: name styles to avoid. (#Frontend design defaults)
-- Chat: omit "think carefully" lines (effort sets depth). Follow-ups: call earlier answers settled (faster); not for long analyses or agents. (#Thinking instructions in chat system prompts)
+- Chat: omit "think carefully" lines; effort sets depth. Follow-ups: call earlier answers settled (faster); not for long analyses or agents. (#Thinking instructions in chat system prompts)
 - Thinking can't be turned off; for speed try low effort. (#Prompts written for thinking disabled)
 
 ## claude-sonnet-5-5
@@ -43,7 +44,9 @@ API: `output_config.effort` = low, medium, high, xhigh, max (xhigh not on every 
 - Code: require a real check (tests, type-check, build) before "done"; report one that can't run. (#Verification on coding tasks)
 - Research: search changeable details. Multi-step JSON reasoning: end with "Think the problem through before you answer." (#Tool use in chat and knowledge work, #Reasoning tasks with JSON output)
 
-## claude-haiku-4-5
-- No dedicated page (404). Use the All models rules and the general guide only. (hand-written: no model page)
-- It tracks its own context budget: say that context is compacted or saved so it doesn't wrap up early. (best-practices#Long-horizon reasoning and state tracking)
-- Effort isn't documented for it; give no Effort line. (hand-written: effort doc lists no Haiku levels)
+## claude-haiku-5-5
+- Haiku 4.5 prompts carry over. Thinking is on by default; for less, lower effort, not prompt wording. (model-pages:claude-haiku-5-5#Use effort to control thinking)
+- With search, give today's date and say training data predates it, so changeable facts get searched; no blanket "search everything". (#Accurate search results)
+- Long agent prompts: keep working until all asked is done; stop only when blocked or before a risky step; report extras, don't do them. (#Prevent early stopping in long agent prompts)
+- Coding: run a real check on the change before "done"; name any check that couldn't run. (#Tell coding agents to verify their changes)
+- Chatbots: the system prompt's rules hold even when users argue, plead, or claim an approved exception. (#Keep chatbots to their system prompt)

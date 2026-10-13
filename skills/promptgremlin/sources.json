@@ -61,7 +61,7 @@
           "Tool usage": "sha256:562bb0fdd9887ef1",
           "Optimize parallel tool calling": "sha256:1a49b6457c27ced9",
           "Overthinking and excessive thoroughness": "sha256:4d979d45997c89fb",
-          "Long-horizon reasoning and state tracking": "sha256:595031d553149200",
+          "Long-horizon reasoning and state tracking": "sha256:51f6b741c2d7e5a1",
           "Balancing autonomy and safety": "sha256:40ab906f2fb9fb80",
           "Subagent orchestration": "sha256:c6f846f86a253180",
           "Chain complex prompts": "sha256:60048ffb2f01c6a6",
@@ -151,14 +151,14 @@
       "model-pages:claude-opus-5-5": {
         "sections": {
           "Capabilities relevant to prompting": "sha256:25e80e255b415674",
-          "Calibrate effort": "sha256:dbd0b5bdc13c7288",
+          "Calibrate effort": "sha256:cf7c6985bd4f6d3d",
           "Prompts written for thinking disabled": "sha256:bcc19f3f5d8ad953",
           "Unattended agentic runs": "sha256:f4213f88bec12bea",
-          "Safeguard refusals": "sha256:32b93e4c1ace2007",
+          "Safeguard refusals": "sha256:da2dad9b7ae7a68a",
           "User-facing progress updates": "sha256:f21579fe8cffd1b3",
           "Explore context in multi-app workflows": "sha256:974912549c950a7c",
           "Time signals for multiagent harnesses": "sha256:8195f0bdaa147803",
-          "Thinking instructions in chat system prompts": "sha256:386faa7be5bc6ee7",
+          "Thinking instructions in chat system prompts": "sha256:9eb1944c9a396ee0",
           "Mark pasted text in user messages": "sha256:24fec6b0b4bd8578",
           "Tools for complex visual inputs": "sha256:0928ca59528b4ed4",
           "Frontend design defaults": "sha256:ea232f231446bd71"
@@ -180,7 +180,7 @@
       },
       "model-pages:claude-sonnet-5-5": {
         "sections": {
-          "Calibrate effort": "sha256:062b4b735715e87b",
+          "Calibrate effort": "sha256:d424ba6aed566108",
           "Steer initiative and scope": "sha256:327bb362aada5f94",
           "Running without up-front thinking": "sha256:7ee0169fef404909",
           "Reasoning tasks with JSON output": "sha256:beccc4f754766c31",
@@ -190,7 +190,7 @@
           "Verification on coding tasks": "sha256:da208cc6f7045bf9",
           "Tolerant tool-call handling": "sha256:45058e40bf9a9c26",
           "Tools for complex visual inputs": "sha256:bf0ac46e5543e322",
-          "Safeguard refusals": "sha256:96fe26c47b959821"
+          "Safeguard refusals": "sha256:18d1ce90b5e0b2b1"
         },
         "headings": [
           "Calibrate effort",
@@ -209,12 +209,12 @@
       "effort": {
         "sections": {
           "Set the effort level": "sha256:d86dabf9d7f47847",
-          "How effort works": "sha256:7b975e2aecc1ee0d",
+          "How effort works": "sha256:e39d4999388147c3",
           "Effort with tool use": "sha256:12964e12d097890a",
           "Effort with thinking": "sha256:96ab26343374953c",
-          "Change effort mid-conversation": "sha256:c860f8cc268d989f",
-          "Best practices": "sha256:7ddd4eecea4570f4",
-          "Next steps": "sha256:a9624fb45a84825c"
+          "Change effort mid-conversation": "sha256:83027cbd90f1dc3c",
+          "Best practices": "sha256:fd9003d92d286a7a",
+          "Next steps": "sha256:4e8c3057b55f3a92"
         },
         "headings": [
           "Set the effort level",
@@ -229,6 +229,7 @@
           "Recommended effort levels for Claude Sonnet 5.5",
           "Recommended effort levels for Claude Sonnet 5",
           "Recommended effort levels for Claude Sonnet 4.6",
+          "Recommended effort levels for Claude Haiku 5.5",
           "Effort with tool use",
           "Effort with thinking",
           "Change effort mid-conversation",
@@ -236,6 +237,30 @@
           "Top-level effort on the next request",
           "Best practices",
           "Next steps"
+        ]
+      },
+      "model-pages:claude-haiku-5-5": {
+        "sections": {
+          "Use effort to control thinking": "sha256:325c95b0b787b27f",
+          "Accurate search results": "sha256:b9b6c0609b54d873",
+          "Use adaptive thinking with JSON output and your own tools": "sha256:1e02f5e36428a4d4",
+          "Prevent early stopping in long agent prompts": "sha256:2cb77ec6d4906463",
+          "Tell coding agents to verify their changes": "sha256:6ee85191f6b638b2",
+          "Mid-turn user messages": "sha256:b88cc659dd63f4a5",
+          "Keep chatbots to their system prompt": "sha256:2a5d38f42da59d59",
+          "Keep reasoning out of user-facing text": "sha256:45f40a773eb5f9f3",
+          "Safeguard refusals": "sha256:8d7cd7f1bcf7acdf"
+        },
+        "headings": [
+          "Use effort to control thinking",
+          "Accurate search results",
+          "Use adaptive thinking with JSON output and your own tools",
+          "Prevent early stopping in long agent prompts",
+          "Tell coding agents to verify their changes",
+          "Mid-turn user messages",
+          "Keep chatbots to their system prompt",
+          "Keep reasoning out of user-facing text",
+          "Safeguard refusals"
         ]
       }
     }
