@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.1.3
+
+- Unattended build prompts require a running slice before docs, and after each
+  milestone a runnable app plus an updated PROGRESS.md handoff, including in
+  the done line.
+- A prompt that overrides part of the person's CLAUDE.md keeps that file's
+  Linear steps and handoff steps. The source check leaves these writer
+  requirements in the prompt.
+
 ## 3.1.2
 
 Weekly refresh of vendor notes (15 targets flagged on 2026-10-13); every target and guide now

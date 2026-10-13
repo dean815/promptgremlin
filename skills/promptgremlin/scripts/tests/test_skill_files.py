@@ -102,3 +102,19 @@ def test_skill_says_only_changed_section_text_is_fenced():
     body = (SKILL / "SKILL.md").read_text() + (SKILL / "writer.md").read_text()
     assert "the notes, and the text under" not in body
     assert "only the text under" in body
+
+
+def test_writer_keeps_unattended_builds_runnable_and_claude_end_steps():
+    """Unattended builds stay runnable per milestone; CLAUDE.md overrides keep end steps."""
+    body = (SKILL / "writer.md").read_text()
+    assert "running slice" in body and "before any docs" in body
+    assert "After each milestone the app still runs" in body
+    assert "PROGRESS.md" in body
+    assert "per-milestone runnable and handoff rule" in body
+    assert "including in the done line" in body
+    assert "overrides part of the person's CLAUDE.md" in body
+    assert "Linear steps and handoff steps" in body
+    assert "writer requirement in section 3" in body
+    assert "Writer requirements from section 3 stay" in body
+    assert "A writer requirement from section 3 stays" in body
+    assert "PROGRESS.md is the" in body and "handoff file for an unattended build" in body

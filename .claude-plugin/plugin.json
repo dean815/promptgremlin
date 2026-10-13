@@ -1,6 +1,6 @@
 {
   "name": "promptgremlin",
-  "version": "3.1.2",
+  "version": "3.1.3",
   "description": "Turn a thin request for real work into a targeted, paste-ready prompt for any AI model or tool: a short interview fills the gaps, then the prompt is written to the vendor's current official guidance.",
   "author": {
     "name": "dean815"
