@@ -1,7 +1,7 @@
 ---
 family: gemini-cli
 kind: tool
-last_verified: 2026-10-01
+last_verified: 2026-10-12
 sources: [gemini-md, plan-mode]
 ---
 ## All models

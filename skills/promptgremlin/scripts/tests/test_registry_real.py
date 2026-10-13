@@ -36,7 +36,7 @@ NEXT_GEN = {
     "mistral": "Mistral Medium 4",
     "meta": "muse-spark-2.0",
     "kimi": "kimi-k4",
-    "nano-banana": "gemini-4-flash-image",
+    "nano-banana": ["gemini-4-flash-image", "gemini-nano-banana-3.0"],
     "gpt-image": "GPT Image 3 Flare",
     "midjourney": "## V9",
     "google-video": ["gemini-omni-2-flash", "veo-4-generate"],

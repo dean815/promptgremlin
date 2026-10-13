@@ -1,7 +1,7 @@
 ---
 family: codex
 kind: tool
-last_verified: 2026-10-06
+last_verified: 2026-10-12
 sources: [best-practices, prompting]
 ---
 ## All models

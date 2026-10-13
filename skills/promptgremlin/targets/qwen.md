@@ -1,7 +1,7 @@
 ---
 family: qwen
 kind: family
-last_verified: 2026-10-01
+last_verified: 2026-10-12
 sources: [prompt-guide, open-weights-card]
 ---
 ## All models
@@ -11,6 +11,7 @@ sources: [prompt-guide, open-weights-card]
 - Add one or two output examples when format, tone, or consistency matters. For JSON extraction, an example plus a JSON template is the guide's top defense against hallucinated fields. (prompt-guide#Tip 1, #Optimization case: Extracting)
 - For multi-stage tasks write numbered task steps under their own label. When a task breaks into a fixed sequence of simpler questions, prompt chaining over several turns beats one big prompt. (prompt-guide#Tip 2, #Tip 4)
 - Separate units (instructions, pasted documents, examples) with rare marker runs such as `###`, `===`, or `>>>`; put long pasted text in its own delimited block, not inside a sentence. (prompt-guide#Tip 3, #Optimization case: Guide AI assistant)
+- For multilingual use, give language handling its own section: which language to search the source material in, and reply in the language of the user's question. (prompt-guide#Optimization case: Guide AI assistant)
 - Prefer direct instructions over associative descriptions, state constraints as a short list (for example prioritize accuracy, do not alter quoted text), and use unambiguous nouns, such as "language type" in place of "language". (prompt-guide#Optimization cases)
 - Asking for the thinking process before the verdict helps on non-reasoning calls. Qwen3.8 thinks by default, so skip chain-of-thought scaffolding unless thinking is switched off. (prompt-guide#Tip 4; open-weights-card#API Usage; hand-written for the combination)
 - Sampling settings go beside the prompt, not in it. The card's values for Qwen3.8: thinking mode `temperature` 1.0, `top_p` 0.95, `top_k` 20; non-thinking `temperature` 0.7, `top_p` 0.8, `presence_penalty` 1.5. Framework support varies. (open-weights-card#Best Practices)

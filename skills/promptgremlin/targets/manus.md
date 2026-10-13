@@ -1,7 +1,7 @@
 ---
 family: manus
 kind: tool
-last_verified: 2026-10-06
+last_verified: 2026-10-12
 sources: [beginner-prompts, projects]
 ---
 ## All models

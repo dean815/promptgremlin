@@ -1,7 +1,7 @@
 ---
 family: zhipu
 kind: family
-last_verified: 2026-10-06
+last_verified: 2026-10-12
 sources: [glm-flagship, glm-flash, migration]
 ---
 ## All models
@@ -22,9 +22,10 @@ sources: [glm-flagship, glm-flash, migration]
 - Strong at security research and vulnerability work; state the authorization and scope in the prompt when that is the job. (glm-flagship#Overview; hand-written for the scope advice)
 
 ## glm-5-3-flash
-- Native multimodal: images (URL preferred, or Base64), video, and files as input. Recommended settings: `temperature` 1, `top_p` 0.95, `reasoning_effort` `max`, `thinking.clear_thinking` `false`. (glm-flash#How to Use)
-- Its documented task prompts share a shape: analyze the inputs first (structure, sources, design system), build, then render or run and compare against the reference, iterate on differences, and end by reporting what is covered, what was verified, and what risks remain. (glm-flash#Best Practices)
-- For reports and models, forbid invented figures, require sources, and ask it to separate disclosed facts, assumptions, and conclusions. For deliverables, name the audience, page count, structure, and style. (glm-flash#Best Practices)
+- Native multimodal: images (URL or Base64), video, and files in. Recommended: `temperature` 1, `top_p` 0.95, `reasoning_effort` `max`, `thinking.clear_thinking` `false`. (glm-flash#How to Use)
+- Its task prompts share a shape: analyze the inputs, build, render or run and compare against the reference, iterate, then report coverage, checks, and open risks. (glm-flash#Best Practices)
+- Attach the real artifacts (screenshots, docs, sheets, dashboards) instead of describing them, and ask it to judge its rendered output visually; it is trained to self-check so. (glm-flash#Key Advancements)
+- For reports, forbid invented figures, require sources, and separate facts, assumptions, and conclusions; for deliverables name audience, length, structure, style. (glm-flash#Best Practices)
 
 ## glm-5-3-flashx
 - Same model behavior and parameters as `glm-5-3-flash`, served faster (about 200 tokens per second); use the Flash notes. (glm-flash#Model Overview, #How to Use)

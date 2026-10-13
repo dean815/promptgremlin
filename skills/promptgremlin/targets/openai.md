@@ -1,7 +1,7 @@
 ---
 family: openai
 kind: family
-last_verified: 2026-10-01
+last_verified: 2026-10-12
 sources: [prompt-engineering, latest-model, chatgpt]
 ---
 ## All models
@@ -14,20 +14,20 @@ sources: [prompt-engineering, latest-model, chatgpt]
 - It's more sensitive to AGENTS.md and skill files: say the user's instructions outrank them, and tell it to name the file when one makes it pause. (latest-model#Instruction following)
 - It defaults to lists, tables, and Markdown, with recurring stock phrases. Specify prose or structure, and name the phrases to avoid. (latest-model#Personality and writing style)
 - Say when and how much to delegate to subagents; it may under-delegate. For coding, say how much testing fits: none for small reversible edits, relevant checks once, then stop. (latest-model#Subagent delegation, #Testing and verification)
-- API requests: with effort above `none`, leave out `temperature`, `top_p`, `top_logprobs`. (latest-model#Update API and model parameters)
+- API requests: with effort above `none`, leave out `temperature`, `top_p`, `top_logprobs` (and `logprobs` in Chat Completions). To change effort mid-conversation, add a `configuration_update` input item rather than editing the prompt, so the cached prefix holds. (latest-model#Update API and model parameters)
 - ChatGPT app prompts: headings for context, instructions, constraints. One deliverable per prompt. For facts, ask for sources, labelled uncertainty, and a list of assumptions. (chatgpt#Scope the problem, #Write the prompt clearly, #Improve accuracy)
 - The GPT-6 guidance was written for Astra; test it on the target model. (latest-model#Prompting best practices)
 
 ## Effort
-API: `reasoning.effort` (Responses) or `reasoning_effort` (Chat Completions); Astra and Sol reject `none` (use `low`), Luna accepts it. Codex: Light (`low`), Medium, High, Extra High. ChatGPT app: write `Effort: <low|medium|high> (ChatGPT app: the model picker's thinking/effort option, pick the nearest; not API reasoning.effort)`, or "not settable here" if the plan has no such option. Levels aren't documented for the app: don't invent option names, but still give the line. (latest-model#Update API and model parameters, codex:best-practices#Strong first use, hand-written)
+API: `reasoning.effort` (Responses) or `reasoning_effort` (Chat Completions); Astra and 6.1 Sol reject `none` (use `low`), Luna accepts it; map `minimal` to `low`. Codex: Light (`low`), Medium, High, Extra High. ChatGPT app: write `Effort: <low|medium|high> (ChatGPT app: the model picker's thinking/effort option, pick the nearest; not API reasoning.effort)`, or "not settable here" if the plan has no such option. Don't invent app option names, but still give the line. (latest-model#Update API and model parameters, codex:best-practices#Strong first use, hand-written)
 
 ## gpt-6-astra
 - Flagship, and the model the GPT-6 prompt advice was written against. (latest-model#Prompting best practices)
-- No `none` effort; tool calling needs Responses (Chat Completions supports the model, not tools). In Codex, start at Light (`low`). (latest-model#Limitations, codex:best-practices#Strong first use)
+- No `none` effort; tool calling needs Responses (Chat Completions supports the model, not tools). In Codex, start at Light (`low`). (latest-model#Limitations, #Update API and model parameters, codex:best-practices#Strong first use)
 
 ## gpt-6-1-sol
 - No dedicated page: apply the Astra advice, then compare. (latest-model#Prompting best practices)
-- No `none` effort (use `low`); tool calling needs Responses. Codex's docs name it the model to use when available. (latest-model#Limitations, codex:best-practices#Strong first use)
+- No `none` effort (use `low`); tool calling needs Responses. Not the same as GPT-6 Sol, which accepts `none`. Codex's docs name 6.1 Sol the model to use when available. (latest-model#Limitations, #Update API and model parameters, codex:best-practices#Strong first use)
 
 ## gpt-6-luna
 - No dedicated page: apply the Astra advice, then compare. (latest-model#Prompting best practices)

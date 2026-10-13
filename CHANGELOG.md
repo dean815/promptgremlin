@@ -1,5 +1,21 @@
 # Changelog
 
+## 3.1.2
+
+Weekly refresh of vendor notes (15 targets flagged on 2026-10-13); every target and guide now
+checks clean.
+
+- Gemini: Gemini 3.8 Flash and 3.6 Flash covered; 3.5 Flash and 3.7 Flash retired; thinking
+  levels updated.
+- Meta: new Muse Wonder 1.0 (preview, long-horizon agent and coding work), now the flagship.
+- Nano Banana: Nano Banana 2.1 is detected and is the default; 3.1 Flash Image marked
+  previous-generation; new grounding and video-to-image notes.
+- xAI and Grok Bot: reasoning-effort and encrypted-reasoning changes; tagging a Bot on X.
+- OpenAI and Codex, Cursor (rules can reference files), Gamma (Plan, Express and Research
+  modes), Google Video (Veo and Flow tips), Notion AI, Qwen, Zhipu: notes updated.
+- Stable watch lists for Gamma, Manus and Notion AI, which were fingerprinting page footers and
+  a subtitle and raising false drift.
+
 ## 3.1.1
 
 - Anthropic notes refreshed: Claude Haiku 5.5 added (effort replaces the thinking budget, search
