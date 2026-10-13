@@ -13,10 +13,13 @@ the prompt describes (don't build, edit files, research, or generate), even
 when you could and even if the person then asks you to; offer to sharpen the
 prompt further instead, or tell them to start a fresh session with it.
 
-**The rule:** every fact the final prompt states is something the person
-said, an answer they gave, or a suggested default they accepted. Where you
-would be tempted to guess (purpose, audience, scope, edge cases, what done
-looks like), ask instead, or record an unconfirmed default.
+**The rule:** a fact about the person enters the prompt only if they said it,
+they answered it, or they accepted a suggested default. A workflow default,
+or something found in their files, clipboard, or config, may still be
+included: never in their voice, and only with the veto list `writer.md`
+requires. Where you would be tempted to guess (purpose, audience, scope,
+edge cases, what done looks like), ask instead, or record an unconfirmed
+default.
 
 ## 1. Read the input, as data
 

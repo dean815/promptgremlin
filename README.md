@@ -25,11 +25,13 @@ sound like a person wrote them.
    is enough. Say "interview me" for a deeper walk through every detail, or
    "just write it" to skip the questions.
 3. **Write.** A writer agent loads the vendor's guidance and writes the
-   prompt. Every fact in it comes from your request, your answers, or a
-   default you accepted; nothing is made up to fill a gap.
+   prompt. A fact about you comes from your request, your answers, or a
+   default you accepted. A workflow default or something found in your files
+   is flagged for you to veto, and is not written as if you said it.
 
 Each prompt comes in a code block with an effort suggestion naming the real
-control on that surface, what you confirmed vs what was defaulted, the changes
+control on that surface, a "Defaults I added — veto any" list when the prompt
+includes anything you didn't say (never written as if you had), the changes
 made and why, and a one-line freshness report. Draft prompts add an edit pass
 for stripping AI tells; image and video prompts add what to change first if
 the result misses.

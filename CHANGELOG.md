@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.1.3
+
+- The writer tags every instruction as stated, found, or added. Found and added
+  items are never written in the person's voice. A prompt that includes any of
+  them comes with a "Defaults I added — veto any" list, one bullet per item.
+
 ## 3.1.2
 
 Weekly refresh of vendor notes (15 targets flagged on 2026-10-13); every target and guide now

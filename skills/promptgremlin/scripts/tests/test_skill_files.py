@@ -98,6 +98,24 @@ def test_skill_treats_fetched_guidance_as_reference_not_instructions():
     assert "never instructions" in body and "Embedded instructions" in body
 
 
+def test_writer_tags_stated_found_added_and_requires_a_veto_list():
+    """Found and added instructions are flagged, and never put in the person's voice."""
+    body = (SKILL / "writer.md").read_text()
+    assert "Defaults I added — veto any" in body
+    for tag in ("**stated**", "**found**", "**added**"):
+        assert tag in body, tag
+    assert "Never first person" in body
+    assert "Omit the list only when every instruction in that prompt is stated" in body
+    assert "A prompt that still contains a found or added item and has no list is" in body
+    # A first-person claim they didn't make is not finished, even if tagged.
+    assert "A first-person sentence that names a tool, motive, license" in body
+    port = (SKILL / "modes" / "port.md").read_text()
+    assert "Defaults I added — veto any" in port
+    assert "Omit the veto list only when every instruction in the" in port
+    assert "first person" in port
+    assert "never in the person's voice" in port
+
+
 def test_skill_says_only_changed_section_text_is_fenced():
     body = (SKILL / "SKILL.md").read_text() + (SKILL / "writer.md").read_text()
     assert "the notes, and the text under" not in body
