@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.2.1
+
+- Fix: prompts sometimes reached the person without a code block. The writer's reply comes
+  back from its subagent with every line indented, and relaying it could strip the fence
+  lines too. The relay now drops the indentation and keeps every fence at the left margin.
+  16 of 16 test runs delivered fenced prompts, including the long-run case that failed before.
+
 ## 3.2.0
 
 From the first weekly review of real runs (TOOL-67 to TOOL-70):

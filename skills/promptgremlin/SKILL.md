@@ -138,10 +138,12 @@ Mode: sharpen | port | autopsy
 
 If the `promptgremlin-writer` agent is available, start it with the brief as
 its whole task, in the foreground (wait for its result; never run it in the
-background), and give its reply to the person unchanged, in the same turn: copy it
-verbatim, keeping each prompt inside its fenced code block so it can be
-copied in one go. Don't summarise, reformat, or restate it. Before you send,
-check that each prompt sits inside a fenced code block; if the writer's reply
-lacks one, wrap the prompt in one yourself and change nothing else. Otherwise (for
+background), and give its reply to the person unchanged, in the same turn. The
+reply comes back inside a hand-back frame with every line indented: drop the
+frame and that indentation, and keep every ``` fence line, at the left margin,
+so each prompt reaches the person inside its own code block. Don't summarise,
+reformat, or restate anything else. Before you send, check that each prompt
+starts with a ``` line and ends with one; if not, add them and change nothing
+else. Otherwise (for
 example claude.ai), read `writer.md` in this skill's directory and follow it
 yourself with the brief.

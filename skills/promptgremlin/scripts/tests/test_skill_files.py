@@ -186,3 +186,10 @@ def test_agent_targets_get_a_run_setup_question_and_where_to_run_line():
     writer = " ".join((SKILL / "writer.md").read_text().split())
     assert "pass it as `--model`" in writer
     assert "**Where to run**" in writer and "never do the task in this conversation" in writer
+
+
+def test_relay_keeps_fences_through_the_hand_back_frame():
+    """The writer's reply is indented in a hand-back frame; the relay must keep its fence lines."""
+    body = " ".join((SKILL / "SKILL.md").read_text().split())
+    assert "hand-back frame with every line indented" in body
+    assert "keep every ``` fence line, at the left margin" in body
