@@ -1,6 +1,6 @@
 # promptgremlin
 
-![promptgremlin: a gremlin turning crumpled notes into structured prompts](assets/promptgremlin-banner.webp)
+![promptgremlin: a gremlin turning crumpled notes into structured prompts](https://github.com/dean815/promptgremlin/releases/download/v3.2.2/promptgremlin-banner.webp)
 
 Turns a thin request for real work into a targeted, paste-ready prompt for any
 registered AI model or tool. It works out what kind of task you're asking for,

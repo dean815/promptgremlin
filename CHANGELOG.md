@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.2.2
+
+Smaller install, for the plugin directory's review ("ship fewer files").
+- The public repo no longer ships benchmark run output (611 files) or the README banner image;
+  both are attached to the GitHub release instead. The repo goes from 708 files to 96.
+- The plugin icon is 512px and 75 KB, down from 1254px and 705 KB; same image.
+- No change to how the skill behaves.
+
 ## 3.2.1
 
 - Fix: prompts sometimes reached the person without a code block. The writer's reply comes

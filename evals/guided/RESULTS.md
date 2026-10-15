@@ -1,5 +1,7 @@
 # Guided benchmark results
 
+Raw run output (every rewrite, interview, answer and grade) is not in the repo, so the plugin stays small; download `promptgremlin-eval-runs.zip` from the [v3.2.2 release](https://github.com/dean815/promptgremlin/releases/tag/v3.2.2). Paths below like `runs/2026-10-06/` are folders inside that zip.
+
 Does the v3 interview get the person's real requirements into the prompt? Seven thin requests
 (build, change-code, research, analyze-data, product-doc, image, draft), each with a hidden
 intent sheet of 8-11 requirements the person has in mind but did not type. A simulated person

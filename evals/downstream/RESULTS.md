@@ -1,5 +1,7 @@
 # Downstream benchmark results
 
+Raw run output (every rewrite, interview, answer and grade) is not in the repo, so the plugin stays small; download `promptgremlin-eval-runs.zip` from the [v3.2.2 release](https://github.com/dean815/promptgremlin/releases/tag/v3.2.2). Paths below like `runs/2026-10-06/` are folders inside that zip.
+
 Target model claude-sonnet-5-5 (tool-less, plain chat system prompt). Rewrites by promptgremlin on claude-sonnet-5-5 with an empty config. Grader claude-opus-5-5, blind to which arm wrote each answer. 8 tasks, 2 rewrites per task, 2 answers per rewrite, 4 raw answers per task.
 
 | Metric | Raw ask | Rewritten |
