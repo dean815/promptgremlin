@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.2.3
+
+- `plugin.json` declares the directory listing icon (`"icon": "./.claude-plugin/icon.png"`), as
+  the plugin reference describes. No change to how the skill behaves.
+
 ## 3.2.2
 
 Smaller install, for the plugin directory's review ("ship fewer files").
