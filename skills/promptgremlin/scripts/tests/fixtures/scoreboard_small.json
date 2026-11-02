@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "built_at": "2026-10-27T05:41:00Z",
+  "sources": {
+    "lmarena": {"licence": "CC BY 4.0", "published": {"text": "2026-10-22", "webdev": "2026-10-23", "agent": "2026-10-23", "document": "2026-09-13"}},
+    "epoch": {"licence": "CC BY 4.0", "zip_built": "2026-10-27"},
+    "models.dev": {"licence": "MIT"},
+    "litellm": {"licence": "MIT"},
+    "openrouter": {"fetched": "2026-10-27"},
+    "livebench": {"release": "20261025", "base": "https://livebench.ai/data/"}
+  },
+  "boards": {
+    "lmarena:webdev": {"top": 1807, "p30": 1612},
+    "lmarena:agent": {"top": 0.208, "p30": 0.051},
+    "lmarena:text": {"top": 1526, "p30": 1472},
+    "epoch:eci": {"top": 171.2, "p30": 156.33}
+  },
+  "models": {
+    "claude-fable-5-1": {
+      "family": "anthropic", "name": "Claude Fable 5.1",
+      "price": {"in": 10.0, "out": 50.0, "from": "majority"},
+      "efforts": {"levels": ["low", "medium", "high", "xhigh", "max"], "default": "high", "default_from": "openrouter"},
+      "metrics": {
+        "lmarena:webdev": [{"effort": "max", "elo": 1780, "lo": 1770, "hi": 1790, "votes": 8598}],
+        "lmarena:agent": [{"effort": "max", "score": 0.208, "lo": 0.19, "hi": 0.23}],
+        "epoch:eci": {"score": 171.2, "lo": 168.0, "hi": 175.1}
+      }
+    },
+    "claude-opus-5-5": {
+      "family": "anthropic", "name": "Claude Opus 5.5",
+      "price": {"in": 4.0, "out": 20.0, "from": "majority"},
+      "efforts": {"levels": ["low", "medium", "high", "xhigh", "max"], "default": "high", "default_from": "openrouter"},
+      "metrics": {
+        "lmarena:webdev": [{"effort": "max", "elo": 1807, "lo": 1794, "hi": 1820, "votes": 3140}],
+        "lmarena:agent": [{"effort": "max", "score": 0.19, "lo": 0.17, "hi": 0.21}],
+        "lmarena:text": [{"effort": "high", "elo": 1516, "lo": 1509, "hi": 1523, "votes": 10322}],
+        "epoch:eci": {"score": 168.83, "lo": 165.25, "hi": 173.95}
+      }
+    },
+    "claude-sonnet-5-5": {
+      "family": "anthropic", "name": "Claude Sonnet 5.5",
+      "price": {"in": 2.0, "out": 10.0, "from": "majority"},
+      "efforts": {"levels": ["low", "medium", "high", "xhigh", "max"], "default": "xhigh", "default_from": "openrouter"},
+      "metrics": {
+        "lmarena:webdev": [{"effort": "xhigh", "elo": 1769, "lo": 1758, "hi": 1781, "votes": 4435},
+                           {"effort": "high", "elo": 1711, "lo": 1702, "hi": 1720, "votes": 6341}],
+        "lmarena:agent": [{"effort": "max", "score": 0.14, "lo": 0.11, "hi": 0.17}],
+        "epoch:eci": {"score": 166.18, "lo": 163.06, "hi": 171.34}
+      }
+    },
+    "claude-haiku-5-5": {
+      "family": "anthropic", "name": "Claude Haiku 5.5",
+      "price": {"in": 0.5, "out": 2.5, "from": "majority"},
+      "efforts": {"levels": ["low", "medium", "high"], "default": "medium", "default_from": "openrouter"},
+      "metrics": {
+        "lmarena:webdev": [{"effort": "high", "elo": 1586, "lo": 1575, "hi": 1597, "votes": 5120}],
+        "lmarena:agent": [{"effort": "high", "score": 0.06, "lo": 0.04, "hi": 0.08}]
+      }
+    },
+    "gpt-6-1-sol": {
+      "family": "openai", "name": "GPT-6.1 Sol",
+      "price": {"in": 2.0, "out": 10.0, "from": "majority"},
+      "efforts": {"levels": ["low", "medium", "high", "xhigh", "max"], "default": "medium", "default_from": "openrouter"},
+      "metrics": {
+        "lmarena:webdev": [{"effort": "max", "elo": 1752, "lo": 1740, "hi": 1763, "votes": 4073}],
+        "lmarena:agent": [{"effort": "max", "score": 0.136, "lo": 0.12, "hi": 0.153}],
+        "epoch:eci": {"score": 168.37, "lo": 165.0, "hi": 174.43}
+      }
+    },
+    "gpt-6-luna": {
+      "family": "openai", "name": "GPT-6 Luna",
+      "price": {"in": 0.25, "out": 2.0, "from": "majority"},
+      "efforts": {"levels": ["minimal", "low", "medium", "high"], "default": "low", "default_from": "openrouter"},
+      "metrics": {
+        "lmarena:webdev": [{"effort": null, "elo": 1650, "lo": 1638, "hi": 1662, "votes": 2210}]
+      }
+    },
+    "gemini-3-8-flash": {
+      "family": "gemini", "name": "Gemini 3.8 Flash",
+      "price": {"in": 0.75, "out": 3.75, "from": "majority"},
+      "efforts": {"levels": ["low", "medium", "high"], "default": "medium", "default_from": "openrouter"},
+      "metrics": {
+        "lmarena:webdev": [{"effort": "high", "elo": 1584, "lo": 1577, "hi": 1591, "votes": 12290}],
+        "lmarena:agent": [{"effort": "high", "score": 0.0317, "lo": 0.021, "hi": 0.0425}]
+      }
+    },
+    "gemini-3-6-flash": {
+      "family": "gemini", "name": "Gemini 3.6 Flash",
+      "price": {"in": 0.3, "out": 2.5, "from": "majority"},
+      "efforts": {"levels": ["low", "medium", "high"], "default": "medium", "default_from": "openrouter"},
+      "metrics": {}
+    }
+  },
+  "flags": ["UNMAPPED lmarena:text MiMo-V2.6-Pro", "SOURCE-STALE lmarena:document 2026-09-13", "PRICE-MISMATCH gpt-6-luna", "PRICE-MISMATCH claude-haiku-5-5"]
+}

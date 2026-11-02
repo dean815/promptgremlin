@@ -1,5 +1,26 @@
 # Changelog
 
+## 3.3.0
+
+Model suggestions.
+- When a request names no model or effort, the interview's model-and-effort question now
+  comes from `guidance.py --suggest`: the best-quality pick for the task type, the best-value
+  option beside it (unless it is the same model), how the session's model compares, and an
+  "Also consider" line when another vendor is clearly better or cheaper. With no target named,
+  every vendor is compared and the option picked sets the target.
+- Every model number in the reply comes from that script's output, with a dated Data line. The
+  writer copies the `Model:` block as it is, before `Where to run`.
+- Sources: LMArena and Epoch AI (CC BY 4.0), models.dev and LiteLLM (MIT) and OpenRouter, joined
+  daily into a `scoreboard.json` snapshot; LiveBench is fetched directly from `livebench.ai`
+  and never republished. A dated copy of the snapshot ships with the skill as a fallback.
+- Cost compares cost per task where LiveBench measures it, list price otherwise, as a ratio.
+- Effort comes from each model's notes; `EFFORT-MISMATCH` flags OpenRouter disagreeing.
+- Cursor and Copilot compare the model families they offer. Vendor pricing pages are watched
+  for drift.
+- New outbound requests: `raw.githubusercontent.com` and `livebench.ai` (see PRIVACY.md).
+  User agent is now `promptgremlin/3.3`.
+- Guided bench gains model-block checks and two tasks.
+
 ## 3.2.3
 
 - `plugin.json` declares the directory listing icon (`"icon": "./.claude-plugin/icon.png"`), as

@@ -4,7 +4,8 @@ import re
 from html.parser import HTMLParser
 
 MARKDOWN_FORMATS = {"md", "md.txt", "text", "github-api"}
-FORMATS = MARKDOWN_FORMATS | {"json-helpcenter", "html"}
+DATA_FORMATS = {"json", "csv"}
+FORMATS = MARKDOWN_FORMATS | DATA_FORMATS | {"json-helpcenter", "html"}
 
 # Mintlify/GitBook pages embed JSX components; the prose between them is what we want.
 JSX_LINE = re.compile(r"^\s*</?[A-Z][A-Za-z0-9.]*\b[^>]*/?>\s*$")
@@ -88,11 +89,33 @@ def _check_bot_challenge(raw, converted):
         raise ValueError("bot challenge page")
 
 
+def _is_html(raw):
+    return raw.lstrip()[:20].lower().startswith(("<!doctype", "<html"))
+
+
+def _check_data(raw, fmt):
+    """Data comes back as-is; a shell or challenge page in its place must fail, not parse as nothing."""
+    if fmt == "json":
+        if _is_html(raw):
+            raise ValueError("got an HTML page where JSON was expected")
+        try:
+            json.loads(raw)
+        except ValueError as x:
+            raise ValueError(f"invalid JSON: {x}") from None
+    else:
+        head = raw.lstrip().split("\n", 1)[0]
+        if "," not in head or "<html" in head.lower() or _is_html(raw):
+            raise ValueError("not CSV: first line has no comma or is HTML")
+    return raw
+
+
 def to_text(raw, fmt):
     if fmt not in FORMATS:
         raise ValueError(f"unknown source format: {fmt}")
+    if fmt in DATA_FORMATS:
+        return _check_data(raw, fmt)
     if fmt in MARKDOWN_FORMATS:
-        if raw.lstrip()[:20].lower().startswith(("<!doctype", "<html")):
+        if _is_html(raw):
             raise ValueError("got an HTML page where markdown was expected")
         return strip_jsx(raw)
     if fmt == "json-helpcenter":

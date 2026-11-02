@@ -1,3 +1,4 @@
+import json
 import re
 from pathlib import Path
 
@@ -179,7 +180,7 @@ def test_writer_flags_found_and_added_defaults_for_veto():
 def test_agent_targets_get_a_run_setup_question_and_where_to_run_line():
     """TOOL-67: run setup is asked before writing for agent tools; delivery ends with where to run."""
     skill = " ".join((SKILL / "SKILL.md").read_text().split())
-    assert "**Run setup**" in skill and "claude-code, codex" in skill
+    assert "**Model and effort**" in skill and "claude-code, codex" in skill
     assert "asked in the first round" in skill
     assert "Never default silently to a flagship" in skill
     assert "Run: <surface> | <model or unset> | <effort>" in skill
@@ -188,8 +189,115 @@ def test_agent_targets_get_a_run_setup_question_and_where_to_run_line():
     assert "**Where to run**" in writer and "never do the task in this conversation" in writer
 
 
+def test_model_and_effort_question_comes_from_suggest():
+    """The model-and-effort question is built from guidance.py --suggest, not from the session."""
+    skill = " ".join((SKILL / "SKILL.md").read_text().split())
+    assert "python3 '<skill dir>/scripts/guidance.py' --suggest --type '<type>'" in skill
+    for needle in ("--session-model", "Also consider", "best value", "Best quality",
+                   "(Recommended)", "pool is `all`", "`impact high`", "copied from the script",
+                   "no candidate has data", "unconfirmed"):
+        assert needle in skill, needle
+    # The script decides high impact; any non-tied lead would make nearly every question round one.
+    assert "without being statistically tied" not in skill and "Don't judge it yourself" in skill
+    # The brief carries the script's output verbatim for the writer.
+    assert "Suggest: <the --suggest output verbatim, fenced, or \"none\">" in skill
+    # The session's model is an option, never the default.
+    assert "Suggest the product and model this conversation is running in" not in skill
+    assert "the model this conversation runs on" in skill
+    assert "never the default" in skill
+
+
+def test_run_line_carries_the_chosen_model_for_every_target():
+    """The writer reads Run for --model, the Model block's chosen line and Where to run, so the
+    picked option must land there for chat targets too, not only agent tools."""
+    skill = " ".join((SKILL / "SKILL.md").read_text().split())
+    assert "**Run line**" in skill and "for every type and target" in skill
+    assert "Run is n/a only when" in skill
+
+
+def test_suggest_gets_the_billing_surface():
+    """Design, Billing surfaces: a subscription plan reads cost as plan usage, which only
+    --surface plan prints; the Suggest block must match the settled surface."""
+    skill = " ".join((SKILL / "SKILL.md").read_text().split())
+    assert "[--surface plan]" in skill
+    assert "subscription plan" in skill and "run `--suggest` again" in skill
+
+
 def test_relay_keeps_fences_through_the_hand_back_frame():
     """The writer's reply is indented in a hand-back frame; the relay must keep its fence lines."""
     body = " ".join((SKILL / "SKILL.md").read_text().split())
     assert "hand-back frame with every line indented" in body
     assert "keep every ``` fence line, at the left margin" in body
+
+
+def test_scoreboard_workflow_is_guarded_pinned_and_never_pushes_main():
+    """No YAML parser in the stdlib, so check the workflow's text. Skipped outside the repo."""
+    wf = SKILL.parents[1] / ".github" / "workflows"
+    if not (wf / "tests.yml").is_file():
+        return
+    text = (wf / "scoreboard.yml").read_text()
+    assert "if: github.repository == 'dean815/promptgremlin'" in text
+    assert 'cron: "41 5 * * *"' in text and "workflow_dispatch:" in text
+    assert "contents: write" in text and "issues: write" in text
+    assert re.search(r"pip install pyarrow==\d+\.\d+\.\d+", text)
+    assert "Scoreboard: unmapped or stale sources" in text
+    pinned = set(re.findall(r"uses: (\S+@[0-9a-f]{40})", (wf / "tests.yml").read_text()))
+    uses = re.findall(r"uses: (\S+)", text)
+    assert uses and set(uses) <= pinned, set(uses) - pinned
+    pushes = [l for l in text.splitlines() if "git push" in l]
+    assert pushes and all("scoreboard" in l for l in pushes), pushes
+    assert not re.search(r"\bmain\b|\bmaster\b", text)
+
+
+def test_writer_copies_a_model_block_verbatim_before_where_to_run():
+    """Every model number the person sees comes from --suggest; the writer copies, never computes."""
+    writer = " ".join((SKILL / "writer.md").read_text().split())
+    contract = writer.split("## 5. Output contract", 1)[1]
+    assert "**Model:**" in contract
+    assert contract.index("**Model:**") < contract.index("**Where to run**")
+    assert "verbatim" in contract and "`Suggest:`" in contract
+    assert "no `Suggest:` block, no Model block" in contract
+    assert "Data line" in contract
+    # Source check: no unsourced model numbers.
+    check = writer.split("## 3b. Source check", 1)[1].split("## 4.", 1)[0]
+    assert ("No number about models, prices, costs, scores or rankings unless it appears "
+            "verbatim in the brief's `Suggest:` block or in the guidance.py output for the target") in check
+    # A limit the target notes give (Jev's 64k tokens per request) is script output too.
+    assert "token limit" in check
+    # Where to run uses the chosen model and effort.
+    assert "chosen model and effort" in contract
+
+
+def test_effort_cites_only_measured_effort_gaps():
+    effort = " ".join((SKILL / "effort.md").read_text().split())
+    assert "measured effort gap" in effort
+    assert "`Suggest:` block" in effort
+    assert "never estimate one" in effort
+
+
+def test_docs_name_model_suggestion_hosts_licences_and_one_version():
+    """Skipped outside the repo (the claude.ai zip has no README, PRIVACY or plugin.json)."""
+    root = SKILL.parents[1]
+    if not (root / ".claude-plugin" / "plugin.json").is_file():
+        return
+    privacy = (root / "PRIVACY.md").read_text()
+    for host in ("raw.githubusercontent.com", "livebench.ai"):
+        assert host in privacy, host
+    readme = " ".join((root / "README.md").read_text().split())
+    assert "## Model suggestions" in (root / "README.md").read_text()
+    assert "LMArena" in readme and "CC BY 4.0" in readme
+    assert "livebench.ai" in readme
+    for state in ("`live`", "`cached`", "`stale`", "`bundled"):
+        assert state in readme, state
+    version = json.loads((root / ".claude-plugin" / "plugin.json").read_text())["version"]
+    top = re.search(r"^## (\d+\.\d+\.\d+)", (root / "CHANGELOG.md").read_text(), re.M).group(1)
+    assert top == version, (top, version)
+    market = json.loads((root / ".claude-plugin" / "marketplace.json").read_text())
+    assert [p.get("version") for p in market["plugins"]] == [version]
+    import sys
+    sys.path.insert(0, str(SKILL / "scripts"))
+    from pglib import fetch
+    major_minor = ".".join(version.split(".")[:2])
+    assert fetch.DEFAULT_UA.startswith(f"promptgremlin/{major_minor} "), fetch.DEFAULT_UA
+    for doc in (privacy, readme):
+        assert fetch.DEFAULT_UA in doc

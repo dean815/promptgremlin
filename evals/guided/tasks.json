@@ -1,5 +1,5 @@
 {
-  "about": "Guided benchmark tasks. 'ask' is what the person types. 'intent' is what they actually want but did not type; only the simulated person sees it.",
+  "about": "Guided benchmark tasks. 'ask' is what the person types. 'intent' is what they actually want but did not type; only the simulated person sees it. 'target', when present, is the tool the request names; the bench uses it only if a run's --suggest call can't be read from the session log.",
   "tasks": [
     {
       "id": "habit-tracker",
@@ -38,6 +38,25 @@
         "Verify with the existing tests in tests/test_export.py",
         "Minimal change; don't restructure the module"
       ]
+    },
+    {
+      "id": "slow-csv-export-cc",
+      "type": "change-code",
+      "ask": "the csv export is slow, fix it. I use Claude Code",
+      "execute": false,
+      "material": "# app/export.py\ndef export_orders_csv(db, path):\n    rows = db.query(\"SELECT id, customer_id, total_cents, created_at FROM orders\")\n    out = \"id,customer_name,total,created_at\\n\"\n    for r in rows:\n        cust = db.query_one(\"SELECT name FROM customers WHERE id = ?\", r.customer_id)\n        out += f\"{r.id},{cust.name},{r.total_cents/100:.2f},{r.created_at.isoformat()}\\n\"\n    with open(path, \"w\") as f:\n        f.write(out)",
+      "intent": [
+        "Exports can reach about 2 million rows, so memory use matters",
+        "Keep the function signature export_orders_csv(db, path) unchanged; three callers use it",
+        "Keep the exact header and column order",
+        "No new dependencies",
+        "The per-row customer lookup (N+1 query) is the known main cause",
+        "Write rows as they are produced instead of building one big string",
+        "Customer names can contain commas, so values must be properly CSV-quoted",
+        "Verify with the existing tests in tests/test_export.py",
+        "Minimal change; don't restructure the module"
+      ],
+      "target": "claude-code"
     },
     {
       "id": "vector-db-research",
@@ -120,12 +139,29 @@
         "Apartment 4B",
         "The heater stopped working on October 2",
         "Reported by phone on October 3 with no response",
-        "Overnight temperatures are in the 40s \u00b0F",
+        "Overnight temperatures are in the 40s °F",
         "Ask for a repair within 48 hours",
         "Mention that the lease (section 12) requires the landlord to provide heat",
         "Polite but firm tone",
         "Do not threaten to withhold rent",
         "Under 150 words"
+      ]
+    },
+    {
+      "id": "cover-letter",
+      "type": "draft",
+      "ask": "write a short cover letter for a product designer job",
+      "material": null,
+      "execute": true,
+      "intent": [
+        "The role is Senior Product Designer at Northwind Health",
+        "Six years of product design experience, the last three in fintech",
+        "Led the redesign of a loan application flow that cut drop-off by 30%",
+        "Wants to move into health care because a parent's hospital stay showed how confusing patient forms are",
+        "Warm but professional tone, no cliches like 'I am writing to express my interest'",
+        "Under 200 words",
+        "Sign off as Sam Rivera",
+        "Do not mention salary"
       ]
     }
   ]

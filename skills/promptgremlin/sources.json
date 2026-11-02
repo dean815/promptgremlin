@@ -45,6 +45,13 @@
       "effort": {
         "url": "https://platform.claude.com/docs/en/build-with-claude/effort.md",
         "format": "md"
+      },
+      "pricing": {
+        "url": "https://platform.claude.com/docs/en/about-claude/pricing.md",
+        "format": "md",
+        "watch": [
+          "##"
+        ]
       }
     },
     "fingerprints": {
@@ -262,6 +269,51 @@
           "Keep reasoning out of user-facing text",
           "Safeguard refusals"
         ]
+      },
+      "pricing": {
+        "sections": {
+          "Model pricing": "sha256:1967a4345067c228",
+          "Cloud platform pricing": "sha256:9a4877a92d6990a0",
+          "Claude Platform on AWS pricing": "sha256:72bdd798245a32bf",
+          "Claude in Microsoft Foundry pricing": "sha256:ebba587de7f38e33",
+          "Feature-specific pricing": "sha256:89a08b23f81af8af",
+          "Claude Managed Agents pricing": "sha256:c9829fea927dd826",
+          "Additional pricing considerations": "sha256:0623a0a8e02ed28d",
+          "Billing and payment": "sha256:176e2df9d311fb2f",
+          "Frequently asked questions": "sha256:119ae40780b23ce6"
+        },
+        "headings": [
+          "Model pricing",
+          "Cloud platform pricing",
+          "Claude Platform on AWS pricing",
+          "Inference geography",
+          "Private offers",
+          "Claude in Microsoft Foundry pricing",
+          "Inference geography",
+          "Feature-specific pricing",
+          "Prompt caching",
+          "Data residency pricing",
+          "Fast mode pricing",
+          "Batch processing",
+          "Long context pricing",
+          "Tool use pricing",
+          "Specific tool pricing",
+          "Claude Managed Agents pricing",
+          "Tokens",
+          "Session runtime",
+          "Worked example",
+          "Additional pricing considerations",
+          "Cost optimization strategies",
+          "Rate limits",
+          "Volume discounts",
+          "Enterprise pricing",
+          "Billing and payment",
+          "Frequently asked questions",
+          "How is token usage calculated?",
+          "Are there free tiers or trials?",
+          "How do discounts stack?",
+          "What payment methods are accepted?"
+        ]
       }
     }
   },
@@ -294,6 +346,13 @@
       "chatgpt": {
         "url": "https://developers.openai.com/cookbook/examples/chatgpt/chatgpt_prompt_guide/chatgpt_prompt_guide.md",
         "format": "md"
+      },
+      "pricing": {
+        "url": "https://developers.openai.com/api/docs/pricing.md",
+        "format": "md",
+        "watch": [
+          "##"
+        ]
       }
     },
     "fingerprints": {
@@ -406,6 +465,29 @@
           "3. Adopt a Persona",
           "4. Research for… (Deep Research)"
         ]
+      },
+      "pricing": {
+        "sections": {
+          "*": "sha256:27a9a8c3c551d8b1"
+        },
+        "headings": [
+          "Standard pricing data",
+          "Batch pricing data",
+          "Fast pricing data",
+          "Ultrafast pricing data",
+          "Standard pricing data",
+          "Grouped Pricing Table data",
+          "Pricing Table data",
+          "Grouped Pricing Table data",
+          "Grouped Pricing Table data",
+          "Grouped Pricing Table data",
+          "Grouped Pricing Table data",
+          "Grouped Pricing Table data",
+          "Grouped Pricing Table data",
+          "Grouped Pricing Table data",
+          "Pricing Table data",
+          "Pricing Table data"
+        ]
       }
     }
   },
@@ -445,6 +527,13 @@
       "thinking": {
         "url": "https://ai.google.dev/gemini-api/docs/thinking.md.txt",
         "format": "md.txt"
+      },
+      "pricing": {
+        "url": "https://ai.google.dev/gemini-api/docs/pricing.md.txt",
+        "format": "md.txt",
+        "watch": [
+          "##"
+        ]
       }
     },
     "fingerprints": {
@@ -640,6 +729,171 @@
           "Best practices",
           "What's next"
         ]
+      },
+      "pricing": {
+        "sections": {
+          "Gemini 4 Argon": "sha256:c40909e8d3790a51",
+          "Gemini 3.8 Flash": "sha256:5d121d2374066d2f",
+          "Gemini 3.6 Flash": "sha256:deae9d6ba497d1c5",
+          "Gemini 3.8 Live, Gemini 3.8 Live Extended Thinking, and Gemini 3.1 Flash Live Preview": "sha256:06cdb972cfcefba5",
+          "Gemini 3.5 Live Translate": "sha256:15d2d4e8f18d0c61",
+          "Gemini 3.5 Transcribe Live": "sha256:e8ff5b55f61849cd",
+          "Gemini 3.5 Transcribe": "sha256:4824a7a74b1a2f36",
+          "Gemini 3.5 Flash-Lite": "sha256:7f5dd05ef768f1f4",
+          "Gemini 3.1 Flash-Lite": "sha256:e7b8ed29d0fb9906",
+          "Gemini Omni Flash": "sha256:f576aab23bf82383",
+          "Gemini 3.1 Pro Preview": "sha256:ffc808faff777b24",
+          "Gemini Nano Banana 2.1 🍌": "sha256:782d24219cb05853",
+          "Gemini 3.1 Flash Image (Nano Banana 2) 🍌": "sha256:278b428ace5e4f06",
+          "Gemini 3.1 Flash Lite Image (Nano Banana 2 Lite) 🍌": "sha256:f810b11c5a91fe98",
+          "Gemini 3.8 Flash TTS": "sha256:3cd4bd03a6fd0303",
+          "Gemini 3.8 Flash-Lite TTS": "sha256:a5b1b164ca95c250",
+          "Gemini 3.1 Flash TTS Preview": "sha256:80e7ab088ddf67bd",
+          "Gemini 3 Flash Preview": "sha256:6793d935b639188a",
+          "Gemini 3 Pro Image (Nano Banana Pro) 🍌": "sha256:018322efe26fd260",
+          "Gemini 2.5 Pro": "sha256:f22c43cf89eed4a7",
+          "Gemini 2.5 Flash": "sha256:454599e02ed12735",
+          "Gemini 2.5 Flash-Lite": "sha256:425f687a84a141d5",
+          "Gemini 2.5 Flash Native Audio (Live API)": "sha256:d7dc594804f789e2",
+          "Gemini 2.5 Flash Image (Nano Banana) 🍌": "sha256:67d6b570f8160281",
+          "Gemini 2.5 Flash Preview TTS": "sha256:d9ef7cd8e0ef1c40",
+          "Gemini 2.5 Pro Preview TTS": "sha256:e16e41cca867e89b",
+          "Lyria 3.5": "sha256:e6305af8ed73c4a9",
+          "Lyria 3": "sha256:278192f9ead7b73d",
+          "Gemini Embedding 2": "sha256:c6c5e964781a3580",
+          "Gemini Embedding": "sha256:039669572edb89e6",
+          "Gemini Robotics ER 2 Preview": "sha256:0380e55503b2d1b4",
+          "Gemini Robotics ER 2 Streaming Preview": "sha256:d33305d214f70bb8",
+          "[Gemma 4](https://ai.google.dev/gemma/docs/core/model_card_4)": "sha256:3d0ed87251a2ce5c",
+          "Pricing for tools": "sha256:82c8ac7ebf76c1cd",
+          "Pricing for agents": "sha256:e5abfb0da18374ab",
+          "Notes": "sha256:d2e7e0eb3e9e31b7"
+        },
+        "headings": [
+          "Free",
+          "Paid",
+          "Enterprise",
+          "Gemini 4 Argon",
+          "Standard",
+          "Batch",
+          "Flex",
+          "Priority",
+          "Contributor",
+          "Gemini 3.8 Flash",
+          "Standard",
+          "Batch",
+          "Flex",
+          "Priority",
+          "Contributor",
+          "Gemini 3.6 Flash",
+          "Standard",
+          "Batch",
+          "Flex",
+          "Priority",
+          "Gemini 3.8 Live, Gemini 3.8 Live Extended Thinking, and Gemini 3.1 Flash Live Preview",
+          "Standard",
+          "Gemini 3.5 Live Translate",
+          "Standard",
+          "Gemini 3.5 Transcribe Live",
+          "Standard",
+          "Gemini 3.5 Transcribe",
+          "Standard",
+          "Gemini 3.5 Flash-Lite",
+          "Standard",
+          "Batch",
+          "Flex",
+          "Priority",
+          "Contributor",
+          "Gemini 3.1 Flash-Lite",
+          "Standard",
+          "Batch",
+          "Flex",
+          "Priority",
+          "Gemini Omni Flash",
+          "Standard",
+          "Gemini 3.1 Pro Preview",
+          "Standard",
+          "Batch",
+          "Flex",
+          "Priority",
+          "Contributor",
+          "Gemini Nano Banana 2.1 🍌",
+          "Standard",
+          "Batch",
+          "Gemini 3.1 Flash Image (Nano Banana 2) 🍌",
+          "Standard",
+          "Batch",
+          "Gemini 3.1 Flash Lite Image (Nano Banana 2 Lite) 🍌",
+          "Standard",
+          "Batch",
+          "Gemini 3.8 Flash TTS",
+          "Standard",
+          "Batch",
+          "Flex",
+          "Priority",
+          "Gemini 3.8 Flash-Lite TTS",
+          "Standard",
+          "Batch",
+          "Flex",
+          "Priority",
+          "Gemini 3.1 Flash TTS Preview",
+          "Standard",
+          "Batch",
+          "Gemini 3 Flash Preview",
+          "Standard",
+          "Batch",
+          "Flex",
+          "Priority",
+          "Gemini 3 Pro Image (Nano Banana Pro) 🍌",
+          "Standard",
+          "Batch",
+          "Flex",
+          "Priority",
+          "Gemini 2.5 Pro",
+          "Standard",
+          "Batch",
+          "Flex",
+          "Priority",
+          "Gemini 2.5 Flash",
+          "Standard",
+          "Batch",
+          "Flex",
+          "Priority",
+          "Gemini 2.5 Flash-Lite",
+          "Standard",
+          "Batch",
+          "Flex",
+          "Priority",
+          "Gemini 2.5 Flash Native Audio (Live API)",
+          "Gemini 2.5 Flash Image (Nano Banana) 🍌",
+          "Standard",
+          "Batch",
+          "Flex",
+          "Priority",
+          "Gemini 2.5 Flash Preview TTS",
+          "Standard",
+          "Batch",
+          "Gemini 2.5 Pro Preview TTS",
+          "Standard",
+          "Batch",
+          "Lyria 3.5",
+          "Lyria 3",
+          "Gemini Embedding 2",
+          "Standard",
+          "Batch",
+          "Gemini Embedding",
+          "Standard",
+          "Batch",
+          "Gemini Robotics ER 2 Preview",
+          "Standard",
+          "Batch",
+          "Gemini Robotics ER 2 Streaming Preview",
+          "Standard",
+          "[Gemma 4](https://ai.google.dev/gemma/docs/core/model_card_4)",
+          "Pricing for tools",
+          "Pricing for agents",
+          "Notes"
+        ]
       }
     }
   },
@@ -664,6 +918,13 @@
       "reasoning": {
         "url": "https://docs.x.ai/developers/model-capabilities/text/reasoning",
         "format": "md"
+      },
+      "pricing": {
+        "url": "https://docs.x.ai/developers/pricing",
+        "format": "md",
+        "watch": [
+          "##"
+        ]
       }
     },
     "fingerprints": {
@@ -701,6 +962,34 @@
           "Summary table",
           "Summarized Reasoning Content",
           "Sample Output"
+        ]
+      },
+      "pricing": {
+        "sections": {
+          "Tools Pricing": "sha256:ffbf678278d4afa5",
+          "Batch API Pricing": "sha256:2b2199b47ce3ed45",
+          "Priority Processing Pricing": "sha256:f32fce090eb41cfc",
+          "Grok 4.7 Fast pricing (Cursor and Grok Build only)": "sha256:dcb0bfa64ebaa173",
+          "US Regional Endpoint Pricing": "sha256:d5ffdc32989d0662",
+          "Files and Collections Pricing": "sha256:19cf3980f6f79055",
+          "Usage Guidelines Violation Fee": "sha256:9c40f6bcd800db58",
+          "Billing and Availability": "sha256:f41fd4e6cbb05289"
+        },
+        "headings": [
+          "Text API Pricing",
+          "Imagine Pricing",
+          "Voice Pricing",
+          "Tools Pricing",
+          "Token Costs",
+          "Tool Invocation Costs",
+          "Batch API Pricing",
+          "Priority Processing Pricing",
+          "Grok 4.7 Fast pricing (Cursor and Grok Build only)",
+          "US Regional Endpoint Pricing",
+          "Files and Collections Pricing",
+          "Download Costs",
+          "Usage Guidelines Violation Fee",
+          "Billing and Availability"
         ]
       }
     }
@@ -1586,6 +1875,12 @@
       "cursor-agent",
       "windsurf"
     ],
+    "offers": [
+      "anthropic",
+      "openai",
+      "gemini",
+      "xai"
+    ],
     "sources": {
       "prompting": {
         "url": "https://cursor.com/docs/agent/prompting",
@@ -1677,6 +1972,11 @@
     "kind": "tool",
     "aliases": [
       "github-copilot"
+    ],
+    "offers": [
+      "anthropic",
+      "openai",
+      "gemini"
     ],
     "sources": {
       "chat": {

@@ -53,3 +53,19 @@ def test_validate_accepts_lineup_list_and_flags_bad_spec():
     assert any(e.startswith("z: lineup[1] regex") for e in errs)
     errs = registry.validate({"z": {**base, "lineup": [good, {"url": "u"}]}})
     assert "z: lineup[1] missing format" in errs
+
+
+def test_validate_accepts_json_and_csv_formats():
+    assert registry.validate({"z": {"kind": "tool", "sources": {
+        "a": {"url": "https://x/models.json", "format": "json"},
+        "b": {"url": "https://x/table.csv", "format": "csv"}}}}) == []
+
+
+def test_validate_checks_offers_are_families():
+    reg = {**REG, "cursor": {"kind": "tool", "offers": ["anthropic", "nope", "claude-code"],
+                             "sources": {"a": {"url": "https://x/a.md", "format": "md"}}}}
+    errs = registry.validate(reg)
+    assert "cursor: offers unknown family nope" in errs
+    assert "cursor: offers claude-code, which is not a family" in errs
+    reg["cursor"]["offers"] = ["anthropic", "openai"]
+    assert not [e for e in registry.validate(reg) if "offers" in e]

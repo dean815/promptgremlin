@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Run every test_* function in tests/test_*.py. Stdlib only. Exit 1 on any failure.
+"""Run every test_* function in tests/test_*.py, and in <repo>/tools/tests and
+<repo>/evals/guided/tests when those folders exist (the snapshot builder's and the bench's). Stdlib only. Exit 1 on any failure.
 
     run_tests.py [filter]   filter matches "<module>.<test name>" as a substring
 """
@@ -11,11 +12,20 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(HERE / "tests"))
+TOOLS = HERE.parents[2] / "tools"
+DIRS = [HERE / "tests"]
+if (TOOLS / "tests").is_dir():
+    sys.path[:0] = [str(TOOLS), str(TOOLS / "tests")]
+    DIRS.append(TOOLS / "tests")
+EVALS = HERE.parents[2] / "evals" / "guided" / "tests"
+if EVALS.is_dir():
+    sys.path.insert(0, str(EVALS))
+    DIRS.append(EVALS)
 
 
 def main(pattern=""):
     fails = 0
-    for path in sorted((HERE / "tests").glob("test_*.py")):
+    for path in [p for d in DIRS for p in sorted(d.glob("test_*.py"))]:
         mod = importlib.import_module(path.stem)
         for name, fn in list(vars(mod).items()):
             if name.startswith("test_") and callable(fn) and pattern in f"{path.stem}.{name}":

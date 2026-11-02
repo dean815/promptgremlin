@@ -9,10 +9,13 @@ sheet, answers whatever the skill asks. Arms:
   deep     v3 skill, with "interview me" added to the request
 Measures: intent coverage of the final prompt, invented facts, the person's effort (rounds,
 questions, words typed), and, for text tasks, how many intent items the target's answer meets.
+Model checks (quick and deep arms): the reply has a Model: block with a dated source, shows both
+best quality and best value unless it says they are the same, and every number in it appears in
+the --suggest output the skill saw (read from the session log, plus a rerun with the same flags).
 
 usage: bench.py OUT_DIR [--reps 2] [--only id,id] [--arms raw,v2,quick,deep] [--v2-ref main]
 """
-import argparse, io, json, os, re, shutil, subprocess, sys, tarfile
+import argparse, glob, io, json, os, re, shlex, shutil, subprocess, sys, tarfile
 from concurrent.futures import ThreadPoolExecutor
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -210,6 +213,153 @@ def grade(out, task, arm, rep):
         print('answer-grade', task['id'], arm, rep, flush=True)
 
 
+# ---- Model block checks -------------------------------------------------------------------
+
+STOP = re.compile(r'\s*(\*\*|#+\s*)?(Where to run|Guidance|Effort|Confirmed|Defaults|Changes|Sources)\b', re.I)
+HEAD = re.compile(r'\s*(?:\*\*|#+\s*)?Model:?(?:\*\*)?:?(?:\*\*)?\s*(.*)$')
+DATED = re.compile(r'\b20\d\d-\d\d-\d\d\b|\((Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2}\)')
+# A bold line ends the block unless it is one of the block's own lines, bolded by the writer.
+OPTION = re.compile(r'\s*\*\*\s*(Best quality|Best value|Session|Also consider|No data|Data|Chosen)\b')
+# A whole number as the writer states it: with its $, decimals, /n, % or x. Digits inside an id
+# or a date (opus-5-5, 2026-10-25) are not numbers, and a number cut short (96 of 96.3) stays
+# whole, so it can't match the start of the sourced one.
+NUM = re.compile(r'(?<![\w.\-/$])\$?\d+(?:\.\d+)?(?:/\d+)?(?:%|x)?(?![\w\-/%]|\.\d)')
+
+
+def model_block(text):
+    """Lines of the writer's Model: block (outside the prompt's fences), or None."""
+    lines, fence, start = text.splitlines(), None, None
+    for i, ln in enumerate(lines):
+        m = re.match(r'[ \t]*(`{3,}|~{3,})', ln)
+        if m:
+            fence = None if fence and ln.strip().startswith(fence) else (fence or m.group(1))
+            continue
+        if fence is None and HEAD.match(ln) and re.match(r'\s*(\*\*|#+\s*)?Model\b', ln):
+            start = i
+            break
+    if start is None:
+        return None
+    out = [HEAD.match(lines[start]).group(1).strip()]
+    for ln in lines[start + 1:]:
+        if STOP.match(ln) or (re.match(r'\s*\*\*[A-Z][^*]{0,40}\*\*', ln) and not OPTION.match(ln)):
+            break
+        if not re.match(r'[ \t]*(`{3,}|~{3,})', ln):
+            out.append(ln.strip())
+    out = [x for x in out if x]
+    return '\n'.join(out) or None
+
+
+def unsourced(block, seen):
+    """Numbers in the block that are not, whole, a number in the --suggest output."""
+    have = set(NUM.findall(seen))
+    return sorted({n for n in NUM.findall(block or '') if n not in have})
+
+
+def verbatim(block, seen):
+    """Every line of the block is a whole line of the --suggest output: not reworded, bolded
+    or merged."""
+    lines = {ln.strip() for ln in seen.splitlines()}
+    return bool(block) and all(ln in lines for ln in block.splitlines())
+
+
+# Claude Code keeps each session's log under its home config directory.
+PROJECTS = os.path.join(os.path.expanduser('~'), '.claude', 'projects')
+
+
+def suggest_calls(session):
+    """(command, output) for every guidance.py --suggest call in the skill's session log."""
+    hits = glob.glob(os.path.join(PROJECTS, '*', f'{session}.jsonl')) if session else []
+    uses, calls = {}, []
+    for line in open(hits[0]) if hits else []:
+        try:
+            content = (json.loads(line).get('message') or {}).get('content')
+        except (json.JSONDecodeError, AttributeError):
+            continue
+        for c in content if isinstance(content, list) else []:
+            cmd = (c.get('input') or {}).get('command', '') if c.get('type') == 'tool_use' else ''
+            if '--suggest' in cmd and 'guidance.py' in cmd:
+                uses[c['id']] = cmd
+            elif c.get('type') == 'tool_result' and c.get('tool_use_id') in uses:
+                r = c.get('content')
+                r = '\n'.join(x.get('text', '') for x in r) if isinstance(r, list) else str(r or '')
+                calls.append((uses[c['tool_use_id']], r))
+    return calls
+
+
+def writer_reply(session):
+    """The writer subagent's last text reply in the skill's session, or None."""
+    hits = glob.glob(os.path.join(PROJECTS, '*', session, 'subagents', 'agent-*.jsonl')) if session else []
+    last = None
+    for path in sorted(hits):
+        for line in open(path):
+            try:
+                m = json.loads(line).get('message') or {}
+            except (json.JSONDecodeError, AttributeError):
+                continue
+            if m.get('role') == 'assistant' and isinstance(m.get('content'), list):
+                for c in m['content']:
+                    if c.get('type') == 'text' and c.get('text', '').strip():
+                        last = c['text']
+    return last
+
+
+def relayed(writer, final):
+    """Share of the writer's non-blank lines that reach the person whole (the skill must pass
+    the reply on unchanged), or None without a writer log."""
+    if not writer:
+        return None
+    lines = [ln.strip() for ln in writer.splitlines() if ln.strip()]
+    got = {ln.strip() for ln in (final or '').splitlines()}
+    return sum(ln in got for ln in lines) / len(lines) if lines else None
+
+
+RELAY_OK = 0.95
+
+
+def rerun_suggest(cmd, task):
+    """Run --suggest again with the flags of the logged command (or the task's type and target)."""
+    args = ['--suggest', '--type', task['type']] + (['--target', task['target']] if task.get('target') else [])
+    if cmd:
+        try:
+            toks = shlex.split(cmd)
+        except ValueError:
+            toks = []
+        at = next((i for i, t in enumerate(toks) if t.endswith('guidance.py')), None)
+        if at is not None:
+            rest = toks[at + 1:]
+            end = next((i for i, t in enumerate(rest) if t in ('&&', ';', '|', '||') or t.startswith('2>')), len(rest))
+            args = rest[:end]
+    script = f'{REPO}/skills/promptgremlin/scripts/guidance.py'
+    p = subprocess.run(['python3', script, *args], capture_output=True, text=True, timeout=120)
+    return ' '.join(args), p.stdout
+
+
+def model_check(out, task, arm, rep):
+    d = f"{out}/{task['id']}/{arm}-{rep}"
+    s = load(f'{d}/session.json')
+    if arm in ('raw', 'v2') or not s or load(f'{d}/model.json'):
+        return
+    finals = [t for who, t in s['transcript'] if who == 'tool' and is_final(t)]
+    block = model_block(finals[0]) if finals else None
+    calls = suggest_calls(s.get('session'))
+    flags, rerun = rerun_suggest(calls[-1][0] if calls else None, task)
+    seen = '\n'.join(r for _, r in calls) + '\n' + rerun
+    nodata = 'no candidate has data' in seen and 'Best value' not in seen
+    missing = unsourced(block, seen)
+    writer = writer_reply(s.get('session'))
+    share = relayed(writer, finals[0] if finals else None)
+    res = {'writer_block': bool(model_block(writer or '')), 'relay': share,
+           'relay_ok': share is not None and share >= RELAY_OK, 'applies': not nodata, 'block': block, 'suggest_logged': [r for _, r in calls],
+           'suggest_flags': flags, 'suggest_rerun': rerun, 'rounds': s['rounds'],
+           'has_block': bool(block), 'verbatim': verbatim(block, seen),
+           'dated': bool(block and DATED.search(block)),
+           'both': bool(block and ('same as best quality' in block.lower()
+                                   or ('best quality' in block.lower() and 'best value' in block.lower()))),
+           'unsourced': missing, 'numbers_ok': bool(block) and not missing}
+    save(f'{d}/model.json', res)
+    print('model', task['id'], arm, rep, 'block' if block else 'NO BLOCK', flush=True)
+
+
 def report(out, tasks, arms, reps):
     rows, agg = [], {a: {'st': 0, 'n': 0, 'contra': 0, 'inv': 0, 'met': 0, 'judged': 0, 'rounds': [],
                          'qs': [], 'words': [], 'cost': 0, 'fail': 0} for a in arms}
@@ -258,8 +408,50 @@ def report(out, tasks, arms, reps):
             st, n, met, judged = per_task[t['id']].get(a, (0, 0, 0, 0))
             cells.append(f"{pct(st, n)}" + (f" ({pct(met, judged)})" if judged else ''))
         L.append(f"| {t['id']} ({t['type']}) | " + ' | '.join(cells) + ' |')
+    L += model_report(out, tasks, arms, reps)
+    os.makedirs(out, exist_ok=True)
     open(f'{out}/RESULTS.md', 'w').write('\n'.join(L) + '\n')
     print('\n'.join(L))
+
+
+MODEL_KEYS = ['writer_block', 'relay_ok', 'has_block', 'verbatim', 'dated', 'both', 'numbers_ok']
+
+
+def model_rows(runs):
+    """{task: {arm: cells}} from {task: {arm: [model.json, ...]}}, runs where --suggest had data.
+    One round is checked for quick only: deep mode asks more rounds by design."""
+    rows = {}
+    for t, by_arm in runs.items():
+        for a, ms in by_arm.items():
+            ms = [m for m in ms if m and m['applies']]
+            if not ms:
+                continue
+            cell = lambda ok: f"{sum(map(bool, ok))}/{len(ms)}"
+            r = {k: cell(m.get(k) for m in ms) for k in MODEL_KEYS}
+            r['one_round'] = cell(m['rounds'] <= 1 for m in ms) if a == 'quick' else '-'
+            r['unsourced'] = ', '.join(sorted({n for m in ms for n in m.get('unsourced', [])})) or '-'
+            rows.setdefault(t, {})[a] = r
+    return rows
+
+
+def model_report(out, tasks, arms, reps):
+    arms = [a for a in arms if a not in ('raw', 'v2')]
+    if not arms:
+        return []
+    L = ['', 'Model checks (runs where --suggest had data): Model block present, its lines copied whole '
+         'from the --suggest output, a dated source in it, '
+         f'(Writer block: the writer\'s own reply had one; Relay: at least {RELAY_OK:.0%} of the writer\'s lines '
+         'reached the person whole) '
+         'best quality and best value both shown (or "same"), every number found in that run\'s --suggest '
+         'output, and one interview round (quick only; deep asks more by design).', '',
+         '| Task | Arm | Writer block | Relay | Block | Verbatim | Dated | Both | Numbers sourced | One round | Unsourced numbers |',
+         '|---|---|---|---|---|---|---|---|---|---|---|']
+    runs = {t['id']: {a: [load(f"{out}/{t['id']}/{a}-{r}/model.json") for r in range(1, reps + 1)] for a in arms}
+            for t in tasks}
+    for t, by_arm in model_rows(runs).items():
+        for a, r in by_arm.items():
+            L.append(f"| {t} | {a} | " + ' | '.join(r[k] for k in MODEL_KEYS) + f" | {r['one_round']} | {r['unsourced']} |")
+    return L
 
 
 def main():
@@ -289,6 +481,10 @@ def main():
         run([(run_session, out, t, arm, r, plugins) for t, arm, r in keys])
         run([(execute, out, t, arm, r) for t, arm, r in keys])
         run([(grade, out, t, arm, r) for t, arm, r in keys])
+    for t in tasks:
+        for arm in arms:
+            for r in range(1, a.reps + 1):
+                model_check(out, t, arm, r)
     scrub(out)
     report(out, tasks, arms, a.reps)
 

@@ -39,6 +39,44 @@ the result misses.
 Other modes: `port` (move a prompt to another target) and `autopsy` (diagnose
 why a prompt underperforms, using the task type's checklist).
 
+## Model suggestions
+
+When your request names no model or effort, promptgremlin suggests one for the
+task from public leaderboard data, always beside the best-value option (unless
+they are the same model). With no target named it compares every vendor; with a
+target it compares that target's current models and adds an "Also consider"
+line when another vendor is clearly better or cheaper. It also says how your
+current session's model compares.
+
+    python3 skills/promptgremlin/scripts/guidance.py --suggest --type build [--target codex]
+
+A script prints every number: scores, voter preference, and cost as a ratio to
+the best-quality option, using cost per task where a benchmark measures it and
+list price otherwise. The writer copies that block into the reply as it is and
+never computes, rounds or adds a number. Each block ends with a dated Data line
+naming its sources. Leaderboards average many tasks, so yours may differ.
+
+Sources:
+
+- [LMArena leaderboard dataset](https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset)
+  (CC BY 4.0): text, WebDev, agent, search, document, image and video boards.
+- [Epoch AI benchmarking data](https://epoch.ai/data) (CC BY 4.0): the Epoch
+  Capabilities Index.
+- [models.dev](https://models.dev) (MIT), [LiteLLM's price list](https://github.com/BerriAI/litellm)
+  (MIT) and [OpenRouter's model list](https://openrouter.ai/models): list prices
+  and which effort levels each model supports.
+- [LiveBench](https://livebench.ai): scores and measured cost per task by suite.
+  LiveBench states no data licence, so its numbers are never republished: the
+  skill fetches the current release's two CSVs from `livebench.ai` on your
+  machine.
+
+A daily job joins the first group into one `scoreboard.json` snapshot on this
+repo's `scoreboard` branch; the skill fetches it from
+`raw.githubusercontent.com` (override with `PROMPTGREMLIN_SCOREBOARD_URL`). A
+copy ships with the skill. The `Suggest:` header labels the snapshot `live`,
+`cached` or `stale` as for vendor pages, or `bundled` (the shipped copy, with
+its build date) when no fetched copy is available.
+
 ## Supported targets
 
 33 targets. Use the key or any alias.
@@ -102,13 +140,16 @@ Full details: [PRIVACY.md](PRIVACY.md).
 
 - Each run fetches the target's vendor documentation pages (and model-list
   pages) over HTTPS with an identifying user agent,
-  `promptgremlin/3.1 (+https://github.com/dean815/promptgremlin)`. It does not
+  `promptgremlin/3.3 (+https://github.com/dean815/promptgremlin)`. It does not
   pretend to be a browser.
 - Responses are cached in `~/.cache/promptgremlin` for 24 hours. Override the
   location with `PROMPTGREMLIN_CACHE`. The briefing header labels each state:
   `live` (fetched this run), `cached` (under 24 hours old, no request made),
   `stale` (cache served after a failed fetch or offline).
-- Nothing you write is sent anywhere: requests carry only the vendor page URLs.
+- Model suggestions add two hosts: `raw.githubusercontent.com` for the
+  scoreboard snapshot and `livebench.ai` for two CSVs. Same user agent, same
+  cache.
+- Nothing you write is sent anywhere: requests carry only the page URLs.
 - The Midjourney and Runway notes are fetched from those vendors' public
   help-center JSON API.
 - Fetched text is treated as reference material, never as instructions.

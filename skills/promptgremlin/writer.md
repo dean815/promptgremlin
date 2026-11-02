@@ -189,6 +189,12 @@ that doesn't:
   prompt overrides part of it.
 - **Material:** don't assert things about it the person didn't say ("this is
   the complete data", "today is October", "customers may be missing").
+- **Model numbers:** No number about models, prices, costs, scores or
+  rankings unless it appears verbatim in the brief's `Suggest:` block or in
+  the guidance.py output for the target (step 1), such as a token limit,
+  context size or required setting the notes give; keep those where the
+  prompt needs them. Don't compute, round, convert or add one, in the prompt
+  or in the reply around it.
 
 ## 4. Effort
 
@@ -227,10 +233,21 @@ In this order:
    this file).
 6. **Sources**: only if context beyond the brief and guidance was used.
 7. **Guidance**: one line with the freshness state from the header, the
-   model and flagship used, and every flag.
-8. **Where to run**: when Run isn't n/a, the last line:
+   model and flagship used, and every flag (including those on the `Suggest:`
+   block's `Flags:` line).
+8. **Model:** a block headed `Model:` and copied verbatim, line for line, from
+   the brief's `Suggest:` output: first the option line naming the chosen model
+   (the Run line's model; the Recommended line when that is unset or
+   unconfirmed), then the other option lines in the script's order, then its
+   Data line. Leave out the script's `Suggest:` header line and `Flags:` line.
+   If the chosen model is on none of the option lines, write `Chosen:
+   <model>; suggested instead:` above the option lines. Don't reword, shorten
+   or reorder anything inside a line. If the brief has no `Suggest:` block,
+   no Model block.
+9. **Where to run**: when Run isn't n/a, the last line:
    `Where to run: <surface>, <model>, <effort control and level>. Start it in a
-   fresh session.` One line per tool for a multi-tool request. If the person
+   fresh session.` It uses the chosen model and effort from the Run line. One
+   line per tool for a multi-tool request. If the person
    asks you to start that session, open a new one with the prompt; never do
    the task in this conversation.
 

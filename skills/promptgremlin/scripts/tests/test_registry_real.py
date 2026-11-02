@@ -102,3 +102,20 @@ def test_combined_briefing_budget_notes_only():
 
 def test_registry_has_no_ua_overrides():
     assert '"ua"' not in (SKILL / "sources.json").read_text()
+
+
+def test_multi_family_tools_offer_families():
+    reg = registry.load(SKILL / "sources.json")
+    assert reg["cursor"]["offers"] == ["anthropic", "openai", "gemini", "xai"]
+    assert reg["copilot"]["offers"] == ["anthropic", "openai", "gemini"]
+
+
+def test_each_suggested_family_watches_its_pricing_page():
+    reg = registry.load(SKILL / "sources.json")
+    hosts = {"anthropic": "platform.claude.com", "openai": "developers.openai.com",
+             "gemini": "ai.google.dev", "xai": "docs.x.ai"}
+    for fam, host in hosts.items():
+        src = reg[fam]["sources"].get("pricing")
+        assert src, fam
+        assert host in src["url"] and src["format"] in ("md", "md.txt"), fam
+        assert src.get("watch") == ["##"], fam

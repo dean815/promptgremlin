@@ -69,6 +69,37 @@ each (`runs/2026-10-13-3.2.0/`): 99% of hidden requirements in the prompt, 0 con
 6 invented, answers meet 97%, 1.0 rounds, 4.9 questions. Agent tasks asked run setup and ended
 with a where-to-run line; chat tasks did neither.
 
+## Model-suggestion checks (3.3.0, 2026-11-01)
+
+`bench.py` now checks each quick and deep run for the writer's `Model:` block: present, with a
+dated source, showing both best quality and best value (or saying they are the same), every
+number in it found in the `--suggest` output that run saw (from the session log, plus a rerun
+with the same flags), and one interview round. Runs where `--suggest` had no data are skipped.
+New tasks with no model named: `slow-csv-export-cc` (change-code, target Claude Code) and
+`cover-letter` (draft); `habit-tracker` and `vector-db-research` already fit.
+
+Against the 3.2.0 runs (`runs/2026-10-13-3.2.0/`, quick, 4 tasks x 2), the checks fail as they
+should: 0/8 runs have a `Model:` block.
+
+3.3.0, quick, 7 tasks x 2 (`runs/2026-11-01-3.3.0/`): the writer wrote the block in 13/14 runs,
+but the skill relayed the writer's reply whole in only 1/14, paraphrasing the rest, so 5/14
+replies kept a block and 1/14 kept it verbatim. Two new columns separate the two: Writer block
+(the writer's own reply had one) and Relay (at least 95% of the writer's lines reached the
+person whole). SKILL.md now says the reply is long on purpose and checks the Model block and
+Where to run line before sending.
+
+Rerun with that fix (`runs/2026-11-01-3.3.0-relay/`):
+
+| Writer block | Relay | Block | Verbatim | Dated | Both | Numbers sourced | One round |
+|---|---|---|---|---|---|---|---|
+| 14/14 | 13/14 | 14/14 | 14/14 | 14/14 | 14/14 | 14/14 | 14/14 |
+
+Intent in the final prompt is 89% (3.2.0 on its own 7 tasks: 93%); answers meet 86% (79%).
+The lowest task is `cover-letter` at 69%: in one run the simulated person left tone, word limit,
+sign-off name and the salary rule unanswered and the prompt left them to the model. With two
+runs per task this is within run-to-run noise; watch it next run. Reproduce with
+`python3 evals/guided/bench.py OUT_DIR --reps 2 --arms quick --only habit-tracker,slow-csv-export,slow-csv-export-cc,vector-db-research,landlord-heater,workspaces-prd,cover-letter`.
+
 ## Reading this
 
 - **raw** scores 0% on the prompt by design: the hidden requirements were never typed. Its

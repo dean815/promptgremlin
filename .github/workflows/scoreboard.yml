@@ -1,0 +1,107 @@
+name: scoreboard
+on:
+  schedule:
+    - cron: "41 5 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: scoreboard
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.repository == 'dean815/promptgremlin'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Install pyarrow (the build's parquet reader only)
+        run: python3 -m pip install pyarrow==26.0.0
+      - name: Unit tests
+        run: python3 skills/promptgremlin/scripts/run_tests.py
+      - name: Fetch the published snapshot as --previous
+        id: prev
+        run: |
+          # First run: no scoreboard branch yet, so no previous snapshot and an orphan commit.
+          if git fetch --depth=1 origin scoreboard; then
+            echo "sha=$(git rev-parse FETCH_HEAD)" >> "$GITHUB_OUTPUT"
+            git show FETCH_HEAD:scoreboard.json > "$RUNNER_TEMP/previous.json"
+          fi
+      - name: Build
+        id: build
+        run: |
+          set +e
+          python3 tools/build_scoreboard.py --out "$RUNNER_TEMP/scoreboard.json" \
+            --previous "$RUNNER_TEMP/previous.json" > build.txt 2>&1
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+          cat build.txt
+          if grep -q '^flag: ' build.txt; then echo "flags=1" >> "$GITHUB_OUTPUT"; fi
+      - name: Publish to the scoreboard branch when the data changed
+        if: steps.build.outputs.code == '0'
+        env:
+          PARENT: ${{ steps.prev.outputs.sha }}
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+        run: |
+          # built_at moves every run; only a change elsewhere is worth a commit.
+          if [ -f "$RUNNER_TEMP/previous.json" ] && python3 - "$RUNNER_TEMP/previous.json" "$RUNNER_TEMP/scoreboard.json" <<'PY'
+          import json, sys
+          a, b = (json.load(open(p)) for p in sys.argv[1:])
+          a.pop("built_at", None); b.pop("built_at", None)
+          sys.exit(0 if a == b else 1)
+          PY
+          then
+            echo "unchanged since the last snapshot; nothing to publish"
+            exit 0
+          fi
+          # A single-file tree built with plumbing, so the checkout never switches branches.
+          blob=$(git hash-object -w "$RUNNER_TEMP/scoreboard.json")
+          tree=$(printf '100644 blob %s\tscoreboard.json\n' "$blob" | git mktree)
+          if [ -n "$PARENT" ]; then
+            commit=$(git commit-tree "$tree" -p "$PARENT" -m "scoreboard $(date -u +%F)")
+          else
+            commit=$(git commit-tree "$tree" -m "scoreboard $(date -u +%F)")
+          fi
+          git push origin "$commit:refs/heads/scoreboard"
+      - name: Open or update the scoreboard issue
+        if: steps.build.outputs.code != '0' || steps.build.outputs.flags == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CODE: ${{ steps.build.outputs.code }}
+        run: |
+          title="Scoreboard: unmapped or stale sources"
+          num=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
+          {
+            if [ "$CODE" = 0 ]; then
+              echo "Daily build $(date -u +%F) published. Map UNMAPPED names in \`skills/promptgremlin/model_aliases.json\`; update \`tools/price_schedule.json\` for PRICE flags."
+            else
+              echo "Daily build $(date -u +%F) failed (exit $CODE). The last good snapshot stays live on the \`scoreboard\` branch."
+            fi
+            echo
+            echo '```'
+            grep -E '^(flag|invalid): ' build.txt || tail -n 40 build.txt
+            echo '```'
+          } > body.md
+          # One open issue, rewritten in place each day (no comment pile-up).
+          if [ -n "$num" ]; then gh issue edit "$num" --body-file body.md
+          else gh issue create --title "$title" --body-file body.md; fi
+      - name: Close the scoreboard issue when clean
+        if: steps.build.outputs.code == '0' && steps.build.outputs.flags != '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Scoreboard: unmapped or stale sources"
+          num=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$num" ]; then
+            gh issue close "$num" --comment "Clean as of $(date -u +%F)."
+          fi
+      - name: Fail the job when the build failed
+        if: steps.build.outputs.code != '0'
+        run: |
+          echo "build_scoreboard.py exited ${{ steps.build.outputs.code }}; the scoreboard branch was left as it was"
+          exit 1

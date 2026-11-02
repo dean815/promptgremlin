@@ -3,3 +3,4 @@ dist/
 evals/workspace/
 .DS_Store
 review/out/
+.venv-sb/

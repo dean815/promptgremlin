@@ -20,6 +20,11 @@ level (low / medium / high) and say "pick the nearest option", without
 inventing option names. Write "not settable here" only when the surface has
 no such control at all (a fixed-effort product).
 
+When the brief's `Suggest:` block shows a measured effort gap (the same model
+scored or priced at two effort levels by a named source), cite it in the
+Effort line's reason, copying its numbers verbatim. If no source measured
+one, never estimate one: no guessed score or cost difference between levels.
+
 Format: `Effort: <level> (<surface>: <exact control>). <one-clause reason>.`
 
 A target that has an Effort block always gets a line, even when the block

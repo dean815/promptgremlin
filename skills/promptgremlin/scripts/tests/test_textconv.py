@@ -114,3 +114,30 @@ def test_long_helpcenter_article_with_phrase_passes():
     body = "<p>Please confirm your identity before continuing.</p>" + "<p>Real documentation sentence.</p>" * 120
     raw = json.dumps({"article": {"title": "T", "body": body}})
     assert "Real documentation" in t.to_text(raw, "json-helpcenter")
+
+
+def test_json_passes_through_unchanged():
+    raw = '{"data": [{"id": "anthropic/claude-opus-5.5", "pricing": {"prompt": "0.000004"}}]}\n'
+    assert t.to_text(raw, "json") == raw
+
+
+def test_html_where_json_expected_raises():
+    _raises("<!DOCTYPE html><html><body>app</body></html>", "json", "HTML page")
+
+
+def test_truncated_json_raises():
+    _raises('{"data": [{"id": "x"', "json", "invalid JSON")
+
+
+def test_csv_header_passes_through_unchanged():
+    raw = "model,average,coding\nclaude-opus-5.5,71.2,80.1\n"
+    assert t.to_text(raw, "csv") == raw
+
+
+def test_html_challenge_page_as_csv_raises():
+    _raises("<html><title>Just a moment...</title></html>", "csv", "not CSV")
+    _raises("  <!DOCTYPE html>\n<html lang=en>,</html>", "csv", "not CSV")
+
+
+def test_csv_without_comma_in_header_raises():
+    _raises("not a table\n", "csv", "not CSV")

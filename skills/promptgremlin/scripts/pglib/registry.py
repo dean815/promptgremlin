@@ -6,7 +6,7 @@ from pathlib import Path
 from . import lineup as L
 from . import notes as N
 
-FORMATS = {"md", "md.txt", "text", "json-helpcenter", "html", "github-api", "none"}
+FORMATS = {"md", "md.txt", "text", "json-helpcenter", "html", "github-api", "json", "csv", "none"}
 
 
 def load(path):
@@ -51,6 +51,11 @@ def validate(reg):
         for u in e.get("uses", []):
             if u not in reg:
                 errs.append(f"{key}: uses unknown target {u}")
+        for f in e.get("offers", []):
+            if f not in reg:
+                errs.append(f"{key}: offers unknown family {f}")
+            elif reg[f].get("kind") != "family":
+                errs.append(f"{key}: offers {f}, which is not a family")
         lus = e.get("lineup") or []
         if isinstance(lus, dict):
             lus = [lus]
