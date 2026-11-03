@@ -1,15 +1,15 @@
 {
  "version": 1,
- "built_at": "2026-11-02T13:49:43Z",
+ "built_at": "2026-11-03T12:59:35Z",
  "sources": {
   "lmarena": {
    "licence": "CC BY 4.0",
-   "published": {"text": "2026-10-28", "webdev": "2026-10-28", "agent": "2026-10-28", "search": "2026-10-13", "document": "2026-09-13", "text_to_image": "2026-10-26", "image_edit": "2026-10-27", "text_to_video": "2026-09-22", "image_to_video": "2026-09-22"}
+   "published": {"text": "2026-10-28", "webdev": "2026-10-28", "agent": "2026-11-02", "search": "2026-10-13", "document": "2026-09-13", "text_to_image": "2026-10-26", "image_edit": "2026-10-27", "text_to_video": "2026-09-22", "image_to_video": "2026-09-22"}
   },
-  "epoch": {"licence": "CC BY 4.0", "zip_built": "2026-11-02"},
+  "epoch": {"licence": "CC BY 4.0", "zip_built": "2026-11-03"},
   "models.dev": {"licence": "MIT"},
   "litellm": {"licence": "MIT"},
-  "openrouter": {"fetched": "2026-11-02"},
+  "openrouter": {"fetched": "2026-11-03"},
   "livebench": {"release": "20261025", "base": "https://livebench.ai/data/"}
  },
  "boards": {
@@ -46,7 +46,7 @@
   "lmarena:webdev/image_to_webdev": {"top": 1753, "p30": 1543},
   "lmarena:webdev/webdev-html": {"top": 1796, "p30": 1597},
   "lmarena:webdev/webdev-react": {"top": 1860, "p30": 1629},
-  "lmarena:agent": {"top": 0.2094, "p30": 0.0049},
+  "lmarena:agent": {"top": 0.2004, "p30": 0.0032},
   "lmarena:search": {"top": 1261, "p30": 1166},
   "lmarena:document": {"top": 1516, "p30": 1444},
   "lmarena:text_to_image": {"top": 1427, "p30": 1156},
@@ -107,7 +107,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "max", "elo": 1722, "lo": 1709, "hi": 1735, "votes": 2907}],
     "lmarena:webdev/webdev-html": [{"effort": "max", "elo": 1683, "lo": 1661, "hi": 1704, "votes": 1028}],
     "lmarena:webdev/webdev-react": [{"effort": "max", "elo": 1792, "lo": 1781, "hi": 1802, "votes": 5734}],
-    "lmarena:agent": [{"effort": "max", "score": 0.1335, "lo": 0.1146, "hi": 0.1525}],
+    "lmarena:agent": [{"effort": "max", "score": 0.1315, "lo": 0.1127, "hi": 0.1502}],
     "lmarena:search": [{"effort": "high", "elo": 1246, "lo": 1239, "hi": 1253, "votes": 12782}],
     "lmarena:document": [{"effort": "max", "elo": 1513, "lo": 1497, "hi": 1528, "votes": 1403}],
     "epoch:eci": {"score": 166.36, "lo": 163.61, "hi": 170.75}
@@ -160,7 +160,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "max", "elo": 1753, "lo": 1729, "hi": 1777, "votes": 781}],
     "lmarena:webdev/webdev-html": [{"effort": "max", "elo": 1753, "lo": 1700, "hi": 1806, "votes": 169}],
     "lmarena:webdev/webdev-react": [{"effort": "max", "elo": 1860, "lo": 1843, "hi": 1876, "votes": 2373}],
-    "lmarena:agent": [{"effort": "max", "score": 0.2094, "lo": 0.1879, "hi": 0.2309}],
+    "lmarena:agent": [{"effort": "max", "score": 0.2004, "lo": 0.1792, "hi": 0.2215}],
     "lmarena:search": [{"effort": "medium", "elo": 1213, "lo": 1206, "hi": 1220, "votes": 10842}],
     "epoch:eci": {"score": 168.4, "lo": 165.37, "hi": 173.03}
    },
@@ -212,7 +212,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "xhigh", "elo": 1737, "lo": 1720, "hi": 1754, "votes": 1551}],
     "lmarena:webdev/webdev-html": [{"effort": "xhigh", "elo": 1739, "lo": 1709, "hi": 1768, "votes": 616}, {"effort": "high", "elo": 1700, "lo": 1678, "hi": 1722, "votes": 983}],
     "lmarena:webdev/webdev-react": [{"effort": "xhigh", "elo": 1817, "lo": 1803, "hi": 1831, "votes": 2869}, {"effort": "high", "elo": 1748, "lo": 1737, "hi": 1759, "votes": 4087}],
-    "lmarena:agent": [{"effort": "max", "score": 0.1384, "lo": 0.1119, "hi": 0.1649}],
+    "lmarena:agent": [{"effort": "max", "score": 0.1462, "lo": 0.1183, "hi": 0.174}],
     "epoch:eci": {"score": 166.74, "lo": 163.58, "hi": 171.34}
    },
    "price": {"in": 2.0, "out": 10.0, "from": "majority"},
@@ -260,7 +260,7 @@
     "lmarena:webdev": [{"effort": "high", "elo": 1589, "lo": 1579, "hi": 1599, "votes": 4758}],
     "lmarena:webdev/webdev-html": [{"effort": "high", "elo": 1568, "lo": 1543, "hi": 1593, "votes": 649}],
     "lmarena:webdev/webdev-react": [{"effort": "high", "elo": 1608, "lo": 1597, "hi": 1620, "votes": 3032}],
-    "lmarena:agent": [{"effort": "high", "score": 0.0143, "lo": 0.0038, "hi": 0.0248}],
+    "lmarena:agent": [{"effort": "high", "score": 0.0065, "lo": -0.0037, "hi": 0.0168}],
     "epoch:eci": {"score": 160.37, "lo": 157.33, "hi": 163.84}
    },
    "price": {"in": 0.1, "out": 0.5, "from": "majority"},
@@ -313,7 +313,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "max", "elo": 1726, "lo": 1714, "hi": 1739, "votes": 3181}],
     "lmarena:webdev/webdev-html": [{"effort": "max", "elo": 1785, "lo": 1764, "hi": 1806, "votes": 1409}],
     "lmarena:webdev/webdev-react": [{"effort": "max", "elo": 1790, "lo": 1778, "hi": 1802, "votes": 4301}],
-    "lmarena:agent": [{"effort": "max", "score": 0.1296, "lo": 0.1094, "hi": 0.1498}],
+    "lmarena:agent": [{"effort": "max", "score": 0.1368, "lo": 0.1167, "hi": 0.1569}],
     "lmarena:search": [{"effort": "max", "elo": 1234, "lo": 1226, "hi": 1241, "votes": 18483}],
     "lmarena:document": [{"effort": "max", "elo": 1468, "lo": 1453, "hi": 1482, "votes": 1621}],
     "epoch:eci": {"score": 169.06, "lo": 165.88, "hi": 174.29}
@@ -366,7 +366,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "max", "elo": 1702, "lo": 1687, "hi": 1717, "votes": 1916}],
     "lmarena:webdev/webdev-html": [{"effort": "max", "elo": 1796, "lo": 1768, "hi": 1824, "votes": 711}],
     "lmarena:webdev/webdev-react": [{"effort": "max", "elo": 1752, "lo": 1738, "hi": 1766, "votes": 2572}],
-    "lmarena:agent": [{"effort": "max", "score": 0.1247, "lo": 0.1139, "hi": 0.1354}],
+    "lmarena:agent": [{"effort": "max", "score": 0.1224, "lo": 0.1115, "hi": 0.1333}],
     "lmarena:search": [{"effort": "max", "elo": 1233, "lo": 1224, "hi": 1242, "votes": 5555}],
     "epoch:eci": {"score": 167.82, "lo": 164.29, "hi": 172.51}
    },
@@ -420,7 +420,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "max", "elo": 1571, "lo": 1561, "hi": 1581, "votes": 4439}],
     "lmarena:webdev/webdev-html": [{"effort": "max", "elo": 1595, "lo": 1584, "hi": 1606, "votes": 4357}],
     "lmarena:webdev/webdev-react": [{"effort": "max", "elo": 1575, "lo": 1568, "hi": 1581, "votes": 17156}],
-    "lmarena:agent": [{"effort": "max", "score": 0.0223, "lo": 0.0182, "hi": 0.0264}, {"effort": "medium", "score": -0.0149, "lo": -0.0215, "hi": -0.0083}, {"effort": "low", "score": -0.0623, "lo": -0.0701, "hi": -0.0546}],
+    "lmarena:agent": [{"effort": "max", "score": 0.0192, "lo": 0.0149, "hi": 0.0234}, {"effort": "medium", "score": -0.0193, "lo": -0.0249, "hi": -0.0137}, {"effort": "low", "score": -0.0587, "lo": -0.066, "hi": -0.0514}],
     "lmarena:search": [{"effort": "max", "elo": 1160, "lo": 1152, "hi": 1167, "votes": 10793}],
     "epoch:eci": {"score": 156.75, "lo": 154.01, "hi": 159.45}
    },
@@ -474,7 +474,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "high", "elo": 1623, "lo": 1614, "hi": 1632, "votes": 5855}],
     "lmarena:webdev/webdev-html": [{"effort": "high", "elo": 1651, "lo": 1637, "hi": 1665, "votes": 2381}],
     "lmarena:webdev/webdev-react": [{"effort": "high", "elo": 1630, "lo": 1623, "hi": 1637, "votes": 11689}],
-    "lmarena:agent": [{"effort": "high", "score": 0.0804, "lo": 0.0694, "hi": 0.0913}],
+    "lmarena:agent": [{"effort": "high", "score": 0.0778, "lo": 0.0666, "hi": 0.0889}],
     "lmarena:search": [{"effort": "high", "elo": 1229, "lo": 1223, "hi": 1236, "votes": 73596}],
     "lmarena:document": [{"effort": null, "elo": 1496, "lo": 1488, "hi": 1504, "votes": 8497}],
     "epoch:eci": {"score": 163.02, "lo": 160.56, "hi": 167.1}
@@ -529,7 +529,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "max", "elo": 1662, "lo": 1652, "hi": 1672, "votes": 4671}],
     "lmarena:webdev/webdev-html": [{"effort": "max", "elo": 1677, "lo": 1663, "hi": 1691, "votes": 2507}, {"effort": "high", "elo": 1649, "lo": 1638, "hi": 1660, "votes": 3875}],
     "lmarena:webdev/webdev-react": [{"effort": "max", "elo": 1714, "lo": 1706, "hi": 1721, "votes": 12696}, {"effort": "high", "elo": 1678, "lo": 1672, "hi": 1684, "votes": 17470}],
-    "lmarena:agent": [{"effort": "max", "score": 0.0757, "lo": 0.0635, "hi": 0.0878}],
+    "lmarena:agent": [{"effort": "max", "score": 0.076, "lo": 0.0636, "hi": 0.0884}],
     "lmarena:search": [{"effort": "high", "elo": 1242, "lo": 1235, "hi": 1248, "votes": 13285}],
     "lmarena:document": [{"effort": "high", "elo": 1516, "lo": 1509, "hi": 1523, "votes": 8794}],
     "epoch:eci": {"score": 164.47, "lo": 161.69, "hi": 168.29}
@@ -584,7 +584,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "high", "elo": 1540, "lo": 1532, "hi": 1547, "votes": 8124}],
     "lmarena:webdev/webdev-html": [{"effort": "high", "elo": 1527, "lo": 1514, "hi": 1541, "votes": 2262}],
     "lmarena:webdev/webdev-react": [{"effort": "high", "elo": 1540, "lo": 1534, "hi": 1547, "votes": 11400}],
-    "lmarena:agent": [{"effort": "high", "score": 0.0294, "lo": 0.0177, "hi": 0.0411}],
+    "lmarena:agent": [{"effort": "high", "score": 0.0284, "lo": 0.0165, "hi": 0.0403}],
     "lmarena:search": [{"effort": null, "elo": 1191, "lo": 1185, "hi": 1197, "votes": 72978}],
     "lmarena:document": [{"effort": "high", "elo": 1466, "lo": 1458, "hi": 1474, "votes": 7411}],
     "epoch:eci": {"score": 157.03, "lo": 154.23, "hi": 159.71}
@@ -680,7 +680,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "max", "elo": 1660, "lo": 1648, "hi": 1672, "votes": 2948}],
     "lmarena:webdev/webdev-html": [{"effort": "max", "elo": 1680, "lo": 1658, "hi": 1701, "votes": 1028}],
     "lmarena:webdev/webdev-react": [{"effort": "max", "elo": 1680, "lo": 1669, "hi": 1692, "votes": 3451}],
-    "lmarena:agent": [{"effort": "max", "score": 0.0796, "lo": 0.0632, "hi": 0.0959}],
+    "lmarena:agent": [{"effort": "max", "score": 0.0695, "lo": 0.0536, "hi": 0.0854}],
     "lmarena:search": [{"effort": "max", "elo": 1175, "lo": 1168, "hi": 1182, "votes": 11313}],
     "epoch:eci": {"score": 163.78, "lo": 161.1, "hi": 167.29}
    },
@@ -734,7 +734,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "xhigh", "elo": 1609, "lo": 1600, "hi": 1618, "votes": 4969}],
     "lmarena:webdev/webdev-html": [{"effort": "xhigh", "elo": 1617, "lo": 1604, "hi": 1630, "votes": 2641}],
     "lmarena:webdev/webdev-react": [{"effort": "xhigh", "elo": 1618, "lo": 1612, "hi": 1625, "votes": 12055}],
-    "lmarena:agent": [{"effort": "xhigh", "score": 0.0479, "lo": 0.0376, "hi": 0.0582}],
+    "lmarena:agent": [{"effort": "xhigh", "score": 0.0456, "lo": 0.0352, "hi": 0.056}],
     "lmarena:search": [{"effort": "xhigh", "elo": 1261, "lo": 1255, "hi": 1267, "votes": 60437}],
     "lmarena:document": [{"effort": "xhigh", "elo": 1483, "lo": 1474, "hi": 1492, "votes": 4818}],
     "epoch:eci": {"score": 162.55, "lo": 159.63, "hi": 166.19}
@@ -842,7 +842,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "high", "elo": 1593, "lo": 1580, "hi": 1605, "votes": 2516}],
     "lmarena:webdev/webdev-html": [{"effort": "high", "elo": 1612, "lo": 1597, "hi": 1628, "votes": 1813}],
     "lmarena:webdev/webdev-react": [{"effort": "high", "elo": 1577, "lo": 1569, "hi": 1585, "votes": 7867}],
-    "lmarena:agent": [{"effort": "high", "score": 0.0265, "lo": 0.0183, "hi": 0.0347}],
+    "lmarena:agent": [{"effort": "high", "score": 0.0256, "lo": 0.0174, "hi": 0.0338}],
     "epoch:eci": {"score": 157.64, "lo": 155.48, "hi": 160.88}
    },
    "price": {"in": 0.75, "out": 3.75, "from": "majority"},
@@ -1046,7 +1046,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": null, "elo": 1481, "lo": 1472, "hi": 1490, "votes": 8219}],
     "lmarena:webdev/webdev-html": [{"effort": null, "elo": 1489, "lo": 1477, "hi": 1501, "votes": 2627}],
     "lmarena:webdev/webdev-react": [{"effort": null, "elo": 1438, "lo": 1432, "hi": 1444, "votes": 18180}],
-    "lmarena:agent": [{"effort": null, "score": -0.0445, "lo": -0.0578, "hi": -0.0312}],
+    "lmarena:agent": [{"effort": null, "score": -0.0461, "lo": -0.06, "hi": -0.0323}],
     "lmarena:search": [{"effort": null, "elo": 1209, "lo": 1204, "hi": 1213, "votes": 151436}],
     "lmarena:document": [{"effort": null, "elo": 1444, "lo": 1439, "hi": 1449, "votes": 49457}],
     "epoch:eci": {"score": 155.24, "lo": 153.31, "hi": 157.73}
@@ -1152,7 +1152,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "high", "elo": 1599, "lo": 1587, "hi": 1612, "votes": 2661}],
     "lmarena:webdev/webdev-html": [{"effort": "high", "elo": 1591, "lo": 1576, "hi": 1605, "votes": 2182}],
     "lmarena:webdev/webdev-react": [{"effort": "high", "elo": 1586, "lo": 1578, "hi": 1594, "votes": 9248}],
-    "lmarena:agent": [{"effort": "high", "score": -0.0135, "lo": -0.0221, "hi": -0.0049}],
+    "lmarena:agent": [{"effort": "high", "score": -0.0163, "lo": -0.0249, "hi": -0.0076}],
     "epoch:eci": {"score": 158.17, "lo": 156.18, "hi": 161.36}
    },
    "price": {"in": 0.75, "out": 3.75, "from": "majority"},
@@ -1297,7 +1297,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "xhigh", "elo": 1586, "lo": 1568, "hi": 1603, "votes": 1191}],
     "lmarena:webdev/webdev-html": [{"effort": "xhigh", "elo": 1629, "lo": 1608, "hi": 1649, "votes": 1106}],
     "lmarena:webdev/webdev-react": [{"effort": "xhigh", "elo": 1663, "lo": 1652, "hi": 1673, "votes": 3995}],
-    "lmarena:agent": [{"effort": "xhigh", "score": 0.0239, "lo": 0.0094, "hi": 0.0385}],
+    "lmarena:agent": [{"effort": "xhigh", "score": 0.0264, "lo": 0.0118, "hi": 0.0411}],
     "epoch:eci": {"score": 154.55, "lo": 152.58, "hi": 157.08}
    },
    "price": {"in": 2.0, "out": 6.0, "from": "majority"},
@@ -1349,7 +1349,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "high", "elo": 1603, "lo": 1592, "hi": 1615, "votes": 3241}],
     "lmarena:webdev/webdev-html": [{"effort": "high", "elo": 1597, "lo": 1582, "hi": 1612, "votes": 1942}],
     "lmarena:webdev/webdev-react": [{"effort": "high", "elo": 1630, "lo": 1622, "hi": 1638, "votes": 7664}],
-    "lmarena:agent": [{"effort": "xhigh", "score": 0.0049, "lo": -0.0065, "hi": 0.0162}],
+    "lmarena:agent": [{"effort": "xhigh", "score": 0.0032, "lo": -0.0082, "hi": 0.0147}],
     "lmarena:document": [{"effort": "high", "elo": 1452, "lo": 1440, "hi": 1464, "votes": 2258}],
     "epoch:eci": {"score": 156.91, "lo": 155.09, "hi": 159.38}
    },
@@ -1401,7 +1401,7 @@
     "lmarena:webdev": [{"effort": "max", "elo": 1623, "lo": 1616, "hi": 1630, "votes": 11150}],
     "lmarena:webdev/webdev-html": [{"effort": "max", "elo": 1597, "lo": 1580, "hi": 1614, "votes": 1517}],
     "lmarena:webdev/webdev-react": [{"effort": "max", "elo": 1643, "lo": 1634, "hi": 1651, "votes": 7177}],
-    "lmarena:agent": [{"effort": "max", "score": 0.0091, "lo": 0.0014, "hi": 0.0168}],
+    "lmarena:agent": [{"effort": "max", "score": 0.0117, "lo": 0.0037, "hi": 0.0196}],
     "epoch:eci": {"score": 156.17, "lo": 154.32, "hi": 158.5}
    },
    "price": {"in": 1.1952, "out": 4.1831, "from": "models.dev"},
@@ -1452,7 +1452,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": null, "elo": 1578, "lo": 1569, "hi": 1587, "votes": 5623}],
     "lmarena:webdev/webdev-html": [{"effort": null, "elo": 1577, "lo": 1565, "hi": 1589, "votes": 3245}],
     "lmarena:webdev/webdev-react": [{"effort": null, "elo": 1624, "lo": 1617, "hi": 1631, "votes": 13687}],
-    "lmarena:agent": [{"effort": null, "score": -0.0233, "lo": -0.03, "hi": -0.0166}],
+    "lmarena:agent": [{"effort": null, "score": -0.0249, "lo": -0.0318, "hi": -0.018}],
     "epoch:eci": {"score": 153.22, "lo": 150.85, "hi": 155.41}
    },
    "price": {"in": 0.1195, "out": 0.4183, "from": "models.dev"},
@@ -1517,7 +1517,7 @@
     "lmarena:webdev": [{"effort": "max", "elo": 1606, "lo": 1600, "hi": 1612, "votes": 17817}],
     "lmarena:webdev/webdev-html": [{"effort": "max", "elo": 1568, "lo": 1554, "hi": 1582, "votes": 2223}],
     "lmarena:webdev/webdev-react": [{"effort": "max", "elo": 1619, "lo": 1612, "hi": 1626, "votes": 12066}],
-    "lmarena:agent": [{"effort": "max", "score": 0.0126, "lo": 0.0049, "hi": 0.0202}],
+    "lmarena:agent": [{"effort": "max", "score": 0.0075, "lo": -0.0002, "hi": 0.0151}],
     "epoch:eci": {"score": 152.07, "lo": 150.13, "hi": 154.11}
    },
    "price": {"in": 1.1952, "out": 4.1831, "from": "models.dev"},
@@ -1567,7 +1567,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": null, "elo": 1637, "lo": 1618, "hi": 1655, "votes": 1163}, {"effort": "max", "elo": 1614, "lo": 1605, "hi": 1624, "votes": 4203}],
     "lmarena:webdev/webdev-html": [{"effort": null, "elo": 1657, "lo": 1645, "hi": 1670, "votes": 3300}, {"effort": "max", "elo": 1626, "lo": 1593, "hi": 1659, "votes": 424}],
     "lmarena:webdev/webdev-react": [{"effort": null, "elo": 1692, "lo": 1684, "hi": 1700, "votes": 10994}, {"effort": "max", "elo": 1682, "lo": 1668, "hi": 1696, "votes": 2461}],
-    "lmarena:agent": [{"effort": "max", "score": 0.0045, "lo": -0.0019, "hi": 0.0109}],
+    "lmarena:agent": [{"effort": "max", "score": 0.004, "lo": -0.0024, "hi": 0.0105}],
     "lmarena:search": [{"effort": "max", "elo": 1261, "lo": 1248, "hi": 1274, "votes": 1870}],
     "epoch:eci": {"score": 157.98, "lo": 155.71, "hi": 160.77}
    },
@@ -1615,7 +1615,7 @@
     "lmarena:text/polish": [{"effort": null, "elo": 1449, "lo": 1429, "hi": 1469, "votes": 807}],
     "lmarena:text/russian": [{"effort": null, "elo": 1458, "lo": 1449, "hi": 1467, "votes": 4651}],
     "lmarena:text/spanish": [{"effort": null, "elo": 1456, "lo": 1439, "hi": 1474, "votes": 1238}],
-    "lmarena:agent": [{"effort": null, "score": -0.0737, "lo": -0.0908, "hi": -0.0566}],
+    "lmarena:agent": [{"effort": null, "score": -0.0737, "lo": -0.0898, "hi": -0.0575}],
     "lmarena:document": [{"effort": null, "elo": 1444, "lo": 1435, "hi": 1453, "votes": 4591}],
     "epoch:eci": {"score": 147.11, "lo": 145.07, "hi": 148.65}
    },
@@ -1666,7 +1666,7 @@
     "lmarena:webdev": [{"effort": null, "elo": 1515, "lo": 1508, "hi": 1523, "votes": 8855}],
     "lmarena:webdev/webdev-html": [{"effort": null, "elo": 1512, "lo": 1493, "hi": 1531, "votes": 1042}],
     "lmarena:webdev/webdev-react": [{"effort": null, "elo": 1513, "lo": 1505, "hi": 1522, "votes": 6663}],
-    "lmarena:agent": [{"effort": "max", "score": -0.0659, "lo": -0.0777, "hi": -0.054}],
+    "lmarena:agent": [{"effort": "max", "score": -0.0667, "lo": -0.0787, "hi": -0.0547}],
     "epoch:eci": {"score": 154.22, "lo": 152.43, "hi": 156.75, "effort": "max"}
    },
    "price": {"in": 2.5, "out": 7.5, "from": "litellm"}
@@ -1766,7 +1766,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "max", "elo": 1606, "lo": 1584, "hi": 1628, "votes": 767}],
     "lmarena:webdev/webdev-html": [{"effort": "max", "elo": 1701, "lo": 1682, "hi": 1719, "votes": 1380}],
     "lmarena:webdev/webdev-react": [{"effort": "max", "elo": 1673, "lo": 1663, "hi": 1683, "votes": 4904}],
-    "lmarena:agent": [{"effort": "max", "score": 0.0267, "lo": 0.0203, "hi": 0.0332}],
+    "lmarena:agent": [{"effort": "max", "score": 0.0213, "lo": 0.0155, "hi": 0.0271}],
     "epoch:eci": {"score": 156.11, "lo": 153.7, "hi": 158.3}
    },
    "price": {"in": 0.15, "out": 0.6, "from": "majority"},
@@ -1864,7 +1864,7 @@
     "lmarena:webdev": [{"effort": null, "elo": 1544, "lo": 1534, "hi": 1555, "votes": 4068}],
     "lmarena:webdev/webdev-html": [{"effort": null, "elo": 1495, "lo": 1468, "hi": 1522, "votes": 629}],
     "lmarena:webdev/webdev-react": [{"effort": null, "elo": 1559, "lo": 1545, "hi": 1572, "votes": 2494}],
-    "lmarena:agent": [{"effort": null, "score": -0.0602, "lo": -0.0815, "hi": -0.039}],
+    "lmarena:agent": [{"effort": null, "score": -0.0641, "lo": -0.0852, "hi": -0.043}],
     "epoch:eci": {"score": 150.59, "lo": 147.4, "hi": 153.49}
    },
    "price": {"in": 0.7, "out": 2.1, "from": "majority"},
@@ -1913,7 +1913,7 @@
     "lmarena:webdev": [{"effort": null, "elo": 1264, "lo": 1249, "hi": 1279, "votes": 2299}],
     "lmarena:webdev/webdev-html": [{"effort": null, "elo": 1308, "lo": 1266, "hi": 1349, "votes": 261}],
     "lmarena:webdev/webdev-react": [{"effort": null, "elo": 1254, "lo": 1238, "hi": 1270, "votes": 1954}],
-    "lmarena:agent": [{"effort": null, "score": -0.1265, "lo": -0.1433, "hi": -0.1097}],
+    "lmarena:agent": [{"effort": null, "score": -0.1322, "lo": -0.1491, "hi": -0.1152}],
     "epoch:eci": {"score": 141.46, "lo": 138.51, "hi": 143.89}
    },
    "price": {"in": 1.5, "out": 7.5, "from": "majority"},
@@ -2001,7 +2001,7 @@
     "lmarena:webdev": [{"effort": "max", "elo": 1652, "lo": 1641, "hi": 1663, "votes": 3724}],
     "lmarena:webdev/webdev-html": [{"effort": "max", "elo": 1670, "lo": 1642, "hi": 1697, "votes": 547}],
     "lmarena:webdev/webdev-react": [{"effort": "max", "elo": 1651, "lo": 1637, "hi": 1664, "votes": 2344}],
-    "lmarena:agent": [{"effort": "max", "score": 0.0314, "lo": 0.0169, "hi": 0.0459}],
+    "lmarena:agent": [{"effort": "max", "score": 0.0251, "lo": 0.0114, "hi": 0.0388}],
     "epoch:eci": {"score": 161.71, "lo": 159.16, "hi": 164.63}
    },
    "price": {"in": 4.0, "out": 20.0, "from": "majority"},
@@ -2055,7 +2055,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "max", "elo": 1640, "lo": 1631, "hi": 1649, "votes": 5679}, {"effort": "xhigh", "elo": 1596, "lo": 1584, "hi": 1608, "votes": 2656}],
     "lmarena:webdev/webdev-html": [{"effort": "max", "elo": 1654, "lo": 1637, "hi": 1672, "votes": 1500}, {"effort": "xhigh", "elo": 1620, "lo": 1603, "hi": 1637, "votes": 1543}],
     "lmarena:webdev/webdev-react": [{"effort": "max", "elo": 1670, "lo": 1661, "hi": 1679, "votes": 6913}, {"effort": "xhigh", "elo": 1631, "lo": 1622, "hi": 1639, "votes": 6478}],
-    "lmarena:agent": [{"effort": "max", "score": 0.0259, "lo": 0.0178, "hi": 0.0341}],
+    "lmarena:agent": [{"effort": "max", "score": 0.0244, "lo": 0.0162, "hi": 0.0326}],
     "lmarena:document": [{"effort": "max", "elo": 1471, "lo": 1452, "hi": 1489, "votes": 1006}],
     "epoch:eci": {"score": 157.37, "lo": 155.42, "hi": 159.9}
    },
@@ -2108,7 +2108,7 @@
     "lmarena:webdev": [{"effort": "xhigh", "elo": 1534, "lo": 1520, "hi": 1547, "votes": 2155}],
     "lmarena:webdev/webdev-html": [{"effort": "xhigh", "elo": 1543, "lo": 1501, "hi": 1585, "votes": 243}],
     "lmarena:webdev/webdev-react": [{"effort": "xhigh", "elo": 1526, "lo": 1509, "hi": 1542, "votes": 1480}],
-    "lmarena:agent": [{"effort": "xhigh", "score": -0.0754, "lo": -0.0838, "hi": -0.067}],
+    "lmarena:agent": [{"effort": "xhigh", "score": -0.0774, "lo": -0.0858, "hi": -0.069}],
     "epoch:eci": {"score": 155.2, "lo": 152.94, "hi": 157.6}
    },
    "price": {"in": 1.25, "out": 4.25, "from": "majority"},
@@ -2161,7 +2161,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": null, "elo": 1540, "lo": 1528, "hi": 1551, "votes": 3120}],
     "lmarena:webdev/webdev-html": [{"effort": null, "elo": 1539, "lo": 1518, "hi": 1561, "votes": 906}],
     "lmarena:webdev/webdev-react": [{"effort": null, "elo": 1532, "lo": 1523, "hi": 1541, "votes": 5321}],
-    "lmarena:agent": [{"effort": null, "score": -0.0767, "lo": -0.0832, "hi": -0.0701}],
+    "lmarena:agent": [{"effort": null, "score": -0.0768, "lo": -0.0833, "hi": -0.0702}],
     "lmarena:document": [{"effort": null, "elo": 1465, "lo": 1456, "hi": 1474, "votes": 4885}],
     "epoch:eci": {"score": 154.18, "lo": 151.27, "hi": 156.36}
    },
@@ -2258,7 +2258,7 @@
     "lmarena:webdev/image_to_webdev": [{"effort": "max", "elo": 1579, "lo": 1569, "hi": 1589, "votes": 3936}],
     "lmarena:webdev/webdev-html": [{"effort": "max", "elo": 1641, "lo": 1628, "hi": 1654, "votes": 3017}],
     "lmarena:webdev/webdev-react": [{"effort": "max", "elo": 1672, "lo": 1665, "hi": 1678, "votes": 13986}],
-    "lmarena:agent": [{"effort": "max", "score": 0.0108, "lo": 0.0051, "hi": 0.0165}],
+    "lmarena:agent": [{"effort": "max", "score": 0.0086, "lo": 0.0028, "hi": 0.0143}],
     "epoch:eci": {"score": 158.33, "lo": 155.79, "hi": 161.35}
    },
    "price": {"in": 3.0, "out": 15.0, "from": "majority"},
@@ -2553,14 +2553,14 @@
   "UNMAPPED lmarena:webdev Hy4 preview @1631",
   "UNMAPPED lmarena:webdev Qwen3.8-Flash-Next @1628",
   "UNMAPPED lmarena:webdev MiMo-V2.6-Pro @1625",
-  "UNMAPPED lmarena:agent Gemini 4 Carbon (High) @0.1604",
-  "UNMAPPED lmarena:agent Gemini 4 Argon (High) @0.1073",
-  "UNMAPPED lmarena:agent GPT-6.1 Terra (Max) @0.1057",
-  "UNMAPPED lmarena:agent Muse Wonder Full (Max) @0.1009",
-  "UNMAPPED lmarena:agent Kimi K3.1 Pro (Max) @0.05956",
-  "UNMAPPED lmarena:agent MiMo-V2.6-Pro @0.02771",
-  "UNMAPPED lmarena:agent Hy4 preview @0.01224",
-  "UNMAPPED lmarena:agent MiMo-V2.6-Flash @0.01002",
+  "UNMAPPED lmarena:agent Gemini 4 Carbon (High) @0.1656",
+  "UNMAPPED lmarena:agent Gemini 4 Argon (High) @0.1061",
+  "UNMAPPED lmarena:agent GPT-6.1 Terra (Max) @0.1019",
+  "UNMAPPED lmarena:agent Muse Wonder Full (Max) @0.09635",
+  "UNMAPPED lmarena:agent Kimi K3.1 Pro (Max) @0.04696",
+  "UNMAPPED lmarena:agent MiMo-V2.6-Pro @0.02441",
+  "UNMAPPED lmarena:agent Hy4 preview @0.009369",
+  "UNMAPPED lmarena:agent MiMo-V2.6-Flash @0.004311",
   "UNMAPPED lmarena:search claude-opus-4-6-search @1251",
   "UNMAPPED lmarena:search gpt-5.5-search @1247",
   "UNMAPPED lmarena:search claude-opus-4-7 @1230",
@@ -2696,7 +2696,6 @@
   "PRICE-MISMATCH deepseek-v4-pro",
   "PRICE-MISMATCH deepseek-flash",
   "PRICE-MISMATCH deepseek-v4-flash",
-  "PRICE-MISMATCH mistral-large-4",
   "PRICE-MISMATCH kimi-k3",
   "PRICE-MISMATCH kimi-k2-7-code",
   "PRICE-MISMATCH kimi-k2-6",
