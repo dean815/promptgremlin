@@ -37,8 +37,8 @@ _HOSTS = None
 
 
 def allowed_hosts():
-    """The hosts the README and PRIVACY.md list: every https host in sources.json, the fixed
-    two, and the host of a scoreboard URL the person set themselves. Nothing else is fetched."""
+    """The hosts the README and PRIVACY.md list: every https host in sources.json and the fixed
+    two. Nothing else is fetched."""
     global _HOSTS
     if _HOSTS is None:
         hosts = set(FIXED_HOSTS)
@@ -57,8 +57,7 @@ def allowed_hosts():
         except (OSError, ValueError):
             pass
         _HOSTS = frozenset(h for h in hosts if h)
-    own = os.environ.get("PROMPTGREMLIN_SCOREBOARD_URL", "")
-    return _HOSTS | ({urllib.parse.urlsplit(own).hostname} if own.startswith("https://") else set())
+    return _HOSTS
 
 
 def _allowed(url):

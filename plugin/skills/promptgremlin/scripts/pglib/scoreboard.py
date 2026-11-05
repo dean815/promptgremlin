@@ -5,7 +5,6 @@ Every model number a person sees is printed here; the writer copies it and never
 import copy
 import datetime as dt
 import json
-import os
 import re
 from pathlib import Path
 from typing import NamedTuple, Optional
@@ -13,16 +12,13 @@ from typing import NamedTuple, Optional
 from . import fetch
 from . import notes as N
 
-ENV = "PROMPTGREMLIN_SCOREBOARD_URL"
-DEFAULT_URL = "https://raw.githubusercontent.com/dean815/promptgremlin/scoreboard/scoreboard.json"
+# Fixed here, never read from the environment. Tests point it at a fixture by setting it.
+SCOREBOARD_URL = "https://raw.githubusercontent.com/dean815/promptgremlin/scoreboard/scoreboard.json"
 
 
 def scoreboard_url():
-    """Read at call time so tests and guidance.py can point it at a fixture."""
-    return os.environ.get(ENV, DEFAULT_URL)
-
-
-SCOREBOARD_URL = scoreboard_url()
+    """Read at call time so tests can point it at a fixture."""
+    return SCOREBOARD_URL
 VALUE_WIN = 0.70        # best value: voters prefer the best pick over it at most this often...
 VALUE_SHARE = 0.85      # ...or, on a scored main metric, it has this share of the best's score
 XV_QUALITY_GAP = 0.05   # cross-vendor line: this much better on the 0-1 scale...

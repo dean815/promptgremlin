@@ -108,7 +108,7 @@ Sources:
 
 A daily job joins the first group into one `scoreboard.json` snapshot on this
 repo's `scoreboard` branch; the skill fetches it from
-`raw.githubusercontent.com` (override with `PROMPTGREMLIN_SCOREBOARD_URL`). A
+`raw.githubusercontent.com`, an address fixed in the code. A
 copy ships with the skill. The `Suggest:` header labels the snapshot `live`,
 `cached` or `stale` as for vendor pages, or `bundled` (the shipped copy, with
 its build date) when no fetched copy is available.
@@ -199,8 +199,8 @@ Full details: [PRIVACY.md](https://github.com/dean815/promptgremlin/blob/main/PR
     `www.anthropic.com`, `www.notion.com`. The Midjourney and
     Runway notes come from those vendors' public help-center JSON API.
   - For model suggestions only: `raw.githubusercontent.com`, for this repo's
-    scoreboard snapshot (`dean815/promptgremlin`, `scoreboard` branch;
-    `PROMPTGREMLIN_SCOREBOARD_URL` overrides it), and `livebench.ai`, for the
+    scoreboard snapshot (`dean815/promptgremlin`, `scoreboard` branch, an
+    address fixed in the code), and `livebench.ai`, for the
     current release's `table.csv` and `cost.csv` under the fixed address
     `https://livebench.ai/data/`.
   - Only https addresses on the hosts above are fetched. If a site redirects a

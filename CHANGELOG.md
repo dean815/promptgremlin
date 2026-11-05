@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.4.1
+
+- The scoreboard snapshot's address is fixed in the code; the `PROMPTGREMLIN_SCOREBOARD_URL`
+  override is gone, so no setting from your environment sits beside an address the skill
+  fetches.
+- A test's sample hostile text no longer spells out a download-and-run command.
+
 ## 3.4.0
 
 Directory resubmission: a smaller install, no network unless you allow it, and fetched data

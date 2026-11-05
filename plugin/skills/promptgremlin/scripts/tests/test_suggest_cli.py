@@ -49,7 +49,7 @@ def _setup(cache=True, livebench=True, bundled=True, config=None, edit=None):
         SNAP = Path(tempfile.mkdtemp()) / "scoreboard.json"
         SNAP.write_text(json.dumps(snap), encoding="utf-8")
     fetch.CACHE = Path(tempfile.mkdtemp())
-    os.environ[S.ENV] = SNAP.as_uri()
+    S.SCOREBOARD_URL = SNAP.as_uri()
     guidance.SKILL_DIR = _skill_dir(bundled)
     guidance.CONFIG = guidance.SKILL_DIR / "config.json"
     if config is not None:
