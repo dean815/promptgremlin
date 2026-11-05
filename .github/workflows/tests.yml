@@ -13,12 +13,12 @@ jobs:
         with:
           python-version: "3.12"
       - name: Unit tests
-        run: python3 skills/promptgremlin/scripts/run_tests.py
+        run: python3 plugin/skills/promptgremlin/scripts/run_tests.py
       - name: Manifest sanity
         run: |
           python3 - <<'PY'
           import json
-          with open(".claude-plugin/plugin.json") as f:
+          with open("plugin/.claude-plugin/plugin.json") as f:
               plugin = json.load(f)
           with open(".claude-plugin/marketplace.json") as f:
               market = json.load(f)

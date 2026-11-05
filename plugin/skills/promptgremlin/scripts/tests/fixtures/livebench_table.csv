@@ -1,0 +1,5 @@
+model,long_agentic,reasoning,coding,browser,data_analysis,research,design
+claude-haiku-5.5,41.5,80.0,90.5,70.0,55.0,80.0,81.0
+claude-opus-5.5,71.0,90.5,95.5,87.0,81.0,84.5,85.5
+gpt-6.1-sol,67.5,91.0,95.0,92.0,81.5,82.0,80.5
+inkling,10.0,75.0,62.0,15.0,70.0,60.0,57.0

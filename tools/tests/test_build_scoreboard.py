@@ -320,19 +320,37 @@ def test_prices_schedule_in_force_and_future():
     orr = {"data": [{"id": "google/gemini-4-argon", "pricing": {"prompt": "0.000002", "completion": "0.00001"}}]}
     sched = [{"model": "gemini-4-argon", "from": "2026-12-01", "in": 4.0, "out": 20.0}]
     price, flags = B.prices({}, {}, orr, A, sched, TODAY)
-    assert price["gemini-4-argon"] == {"in": 2.0, "out": 10.0, "from": "openrouter"}
+    # OpenRouter alone prices it, and its figures are never published.
+    assert "gemini-4-argon" not in price
     assert flags == ["PRICE-CHANGE gemini-4-argon 2026-12-01"]
     price, flags = B.prices({}, {}, orr, A, sched, dt.date(2026, 12, 1))
     assert price["gemini-4-argon"] == {"in": 4.0, "out": 20.0, "from": "schedule 2026-12-01"}
     assert flags == []
 
 
-def test_efforts_levels_from_models_dev_default_from_openrouter():
+def test_efforts_levels_from_models_dev_and_no_openrouter_figures_in_the_snapshot():
     md = json.loads((FIX / "models_dev.json").read_text())
     orr = json.loads((FIX / "openrouter.json").read_text())
-    e = B.efforts(md, orr, ALIASES)["claude-opus-5-5"]
-    assert e == {"levels": ["low", "medium", "high", "xhigh", "max"], "default": "high",
-                 "default_from": "openrouter"}
+    assert B.efforts(md, ALIASES)["claude-opus-5-5"] == {"levels": ["low", "medium", "high", "xhigh", "max"]}
+    assert B.openrouter_defaults(orr, ALIASES)["claude-opus-5-5"] == "high"
+    snap = B.build(_inputs(), ALIASES, [], TODAY)
+    for mid, m in snap["models"].items():
+        assert (m.get("price") or {}).get("from") != "openrouter", mid
+        assert set(m.get("efforts") or {}) <= {"levels"}, mid
+    assert set(snap["sources"]["openrouter"]) == {"fetched"}
+    # The cross-check still runs: the Anthropic notes start Opus at another level than OpenRouter.
+    mism = [f for f in snap["flags"] if f.startswith("EFFORT-MISMATCH")]
+    assert all(f.split()[2] == "notes" and f.split()[4] == "openrouter" for f in mism), mism
+
+
+def test_a_previous_snapshot_carries_no_openrouter_figures():
+    prev = B.build(_inputs(), ALIASES, [], TODAY)
+    opus = prev["models"]["claude-opus-5-5"]
+    opus["price"] = {"in": 1.0, "out": 2.0, "from": "openrouter"}
+    opus["efforts"] = {"levels": ["low", "high"], "default": "high", "default_from": "openrouter"}
+    snap = B.build(_inputs(**{"models.dev": _boom, "litellm": _boom, "openrouter": _boom}), ALIASES, [], TODAY,
+                   previous=prev)
+    assert "price" not in snap["models"]["claude-opus-5-5"] and "efforts" not in snap["models"]["claude-opus-5-5"]
 
 
 def _inputs(**override):
@@ -413,3 +431,10 @@ def test_fixtures_are_small_and_hold_no_livebench_csv():
     files = list(FIX.iterdir())
     assert sum(f.stat().st_size for f in files) < 100_000
     assert not [f for f in files if f.suffix == ".csv" and "livebench" in f.name]
+
+
+def test_recorded_livebench_fixture_keeps_only_the_release_ids():
+    js = 'var a=1,Kt=e=>e,Yt=["20261014","20261025"],Jt="undefined"!==typeof window;'
+    out = B._trim_bundle(js)
+    assert out == 'const releases = ["20261014", "20261025"];\n'
+    assert B.livebench_release(out) == "20261025" and B._trim_bundle("no ids here") == ""

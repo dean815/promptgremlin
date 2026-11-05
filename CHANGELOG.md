@@ -1,5 +1,36 @@
 # Changelog
 
+## 3.4.0
+
+Directory resubmission: a smaller install, no network unless you allow it, and fetched data
+kept to facts.
+- The plugin now lives in `plugin/`, and only that folder installs. The repo's `tools/`,
+  `evals/` and `.github/` folders are maintainer and CI files and are no longer part of the
+  plugin.
+- Offline switch: `"offline": true` in the config, or `PROMPTGREMLIN_OFFLINE=1`, stops all
+  network use. Runs use the cache, the bundled notes and the bundled snapshot.
+- Fetching accepts https addresses on the documented hosts only, and a redirect is followed
+  only to an https address on one of them. LiveBench is always read from
+  `https://livebench.ai/data/`; the scoreboard snapshot can no longer choose that address.
+- Fetched vendor text is treated as facts about the vendor's models and guidance, never as
+  instructions, and model names from fetched data are filtered before they reach the reply.
+  Page headings print only as short plain labels, and all page text sits inside the
+  vendor-text fence.
+- The fetched scoreboard snapshot is shape-checked before use; a malformed one falls back to
+  the bundled copy instead of stopping model suggestions, as does a LiveBench CSV that can't
+  be parsed. Only known flag codes print, and a
+  fetched model name may only use words already in its id or aliases.
+- `"offline"` in the config also accepts `"true"`, `"1"`, `"yes"` and `"on"`.
+- Meta's Llama guide is read from `dev.meta.ai`, the address `www.llama.com` redirects to.
+- Every LiveBench number in the plugin's test fixtures is now invented; none are copied from
+  LiveBench.
+- OpenRouter is only a cross-check: the snapshot carries no price, effort level or default
+  taken from it, and the Data line names models.dev and LiteLLM.
+- README: examples for sharpen, port and autopsy, a Troubleshooting section, the
+  `model_priority` and `offline` config keys, and the full list of hosts the skill contacts.
+  PRIVACY.md links the third-party privacy policies.
+- User agent is now `promptgremlin/3.4`.
+
 ## 3.3.0
 
 Model suggestions.
@@ -23,8 +54,8 @@ Model suggestions.
 
 ## 3.2.3
 
-- `plugin.json` declares the directory listing icon (`"icon": "./.claude-plugin/icon.png"`), as
-  the plugin reference describes. No change to how the skill behaves.
+- plugin.json now declares the directory listing icon, as the plugin reference describes. No
+  change to how the skill behaves.
 
 ## 3.2.2
 

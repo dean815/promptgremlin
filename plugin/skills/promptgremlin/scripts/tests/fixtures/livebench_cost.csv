@@ -1,0 +1,5 @@
+model,design,research,browser,coding,nq_design,nq_research,nq_browser,nq_coding,avg_input_tokens,avg_output_tokens,input_price_per_million,output_price_per_million,out_design,out_research,out_browser,out_coding,long_agentic,nq_long_agentic,out_long_agentic,data_analysis,nq_data_analysis,out_data_analysis,reasoning,nq_reasoning,out_reasoning
+claude-haiku-5.5,12.0,30.0,12.0,20.0,20,20,20,25,8000000,150000,0.2,1,170000,230000,50000,140000,100.0,16,1000000,4.0,120,60000,3.5,200,40000
+claude-opus-5.5,110.0,150.0,300.0,125.0,20,20,20,25,7500000,100000,5,25,150000,130000,30000,85000,600.0,16,460000,100.0,120,40000,40.0,200,12000
+gpt-6.1-sol,8.0,40.0,55.0,12.0,20,20,20,25,2600000,20000,1,8,25000,45000,4500,14000,104.0,16,195000,18.0,120,14000,13.0,200,8000
+inkling,6.0,30.0,50.0,45.0,20,20,20,25,4000000,30000,1,4,27000,34000,27000,30000,160.0,16,145000,18.0,120,35000,17.0,200,25000

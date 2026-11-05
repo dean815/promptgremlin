@@ -25,6 +25,10 @@ GRADER_MODEL = 'claude-opus-5-5'
 BENCH = '/tmp/pgbench'
 CWD = f'{BENCH}/cwd-guided'
 CLEAN = ['--setting-sources', 'project', '--strict-mcp-config']
+# Runs never see the maintainer's own promptgremlin settings: no PROMPTGREMLIN_* variables, and
+# the scripts read the bench's empty config.json (see plugin_copy) instead of ~/.config's.
+ENV = {k: v for k, v in os.environ.items() if not k.startswith('PROMPTGREMLIN_')}
+CONFIG_PY = 'CONFIG = Path.home() / ".config" / "promptgremlin" / "config.json"'
 MAX_TURNS = 6
 
 
@@ -32,7 +36,7 @@ def claude(prompt, model, extra, persist=False):
     cmd = ['claude', '-p', prompt, '--model', model, '--output-format', 'json', *CLEAN, *extra]
     if not persist:
         cmd.append('--no-session-persistence')
-    p = subprocess.run(cmd, cwd=CWD, capture_output=True, text=True, timeout=1200)
+    p = subprocess.run(cmd, cwd=CWD, capture_output=True, text=True, timeout=1200, env=ENV)
     try:
         data = json.loads(p.stdout)
     except json.JSONDecodeError:
@@ -52,17 +56,25 @@ def plugin_copy(ref, name):
     dst = f'{BENCH}/{name}'
     shutil.rmtree(dst, ignore_errors=True)
     os.makedirs(dst)
-    paths = ['.claude-plugin', 'skills'] + (['agents'] if subprocess.run(
-        ['git', '-C', REPO, 'cat-file', '-e', f'{ref}:agents'], capture_output=True).returncode == 0 else [])
-    tar = subprocess.run(['git', '-C', REPO, 'archive', ref, *paths], capture_output=True, check=True).stdout
+    def has(path):
+        return subprocess.run(['git', '-C', REPO, 'cat-file', '-e', f'{ref}:{path}'], capture_output=True).returncode == 0
+    # The plugin lives in plugin/; refs from before that move keep it at the repo root.
+    tree = f'{ref}:plugin' if has('plugin') else ref
+    sub = 'plugin/' if tree != ref else ''
+    paths = ['.claude-plugin', 'skills'] + (['agents'] if has(f'{sub}agents') else [])
+    tar = subprocess.run(['git', '-C', REPO, 'archive', tree, *paths], capture_output=True, check=True).stdout
     tarfile.open(fileobj=io.BytesIO(tar)).extractall(dst)
     for root, _, files in os.walk(f'{dst}/skills'):
         for f in files:
+            p = os.path.join(root, f)
             if f.endswith('.md'):
-                p = os.path.join(root, f)
                 s = open(p).read()
                 if '~/.config/promptgremlin/config.json' in s:
                     open(p, 'w').write(s.replace('~/.config/promptgremlin/config.json', f'{BENCH}/config.json'))
+            elif f.endswith('.py'):
+                s = open(p).read()
+                if CONFIG_PY in s:
+                    open(p, 'w').write(s.replace(CONFIG_PY, f'CONFIG = Path({BENCH!r}) / "config.json"'))
     return dst
 
 
@@ -329,8 +341,12 @@ def rerun_suggest(cmd, task):
             rest = toks[at + 1:]
             end = next((i for i, t in enumerate(rest) if t in ('&&', ';', '|', '||') or t.startswith('2>')), len(rest))
             args = rest[:end]
-    script = f'{REPO}/skills/promptgremlin/scripts/guidance.py'
-    p = subprocess.run(['python3', script, *args], capture_output=True, text=True, timeout=120)
+    script = f'{REPO}/plugin/skills/promptgremlin/scripts/guidance.py'
+    # The rerun uses the dev tree's script; an empty HOME keeps it off the maintainer's config.
+    home = f'{BENCH}/home'
+    os.makedirs(home, exist_ok=True)
+    env = {**ENV, 'HOME': home, 'PROMPTGREMLIN_CACHE': os.path.expanduser('~/.cache/promptgremlin')}
+    p = subprocess.run(['python3', script, *args], capture_output=True, text=True, timeout=120, env=env)
     return ' '.join(args), p.stdout
 
 

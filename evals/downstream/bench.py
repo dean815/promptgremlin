@@ -52,7 +52,7 @@ def setup_plugin():
     plugin = f'{BENCH}/plugin'
     shutil.rmtree(plugin, ignore_errors=True)
     os.makedirs(plugin)
-    tar = subprocess.run(['git', '-C', REPO, 'archive', 'HEAD', '.claude-plugin', 'skills'],
+    tar = subprocess.run(['git', '-C', REPO, 'archive', 'HEAD:plugin', '.claude-plugin', 'skills'],
                          capture_output=True, check=True).stdout
     tarfile.open(fileobj=io.BytesIO(tar)).extractall(plugin)
     skill = f'{plugin}/skills/promptgremlin/SKILL.md'

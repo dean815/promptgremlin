@@ -13,11 +13,11 @@ You can expect an acknowledgement within a week.
 
 In scope:
 
-- **The fetcher** (`skills/promptgremlin/scripts/`): HTTP fetching, the on-disk cache in
+- **The fetcher** (`plugin/skills/promptgremlin/scripts/`): HTTP fetching, the on-disk cache in
   `~/.cache/promptgremlin`, parsing of fetched pages, and the freshness checks. Examples:
   command or path injection, writes outside the cache, unsafe handling of redirects or
   oversized responses.
-- **Prompt-injection posture of `SKILL.md`**: pasted user material and fetched vendor text are
+- **Prompt-injection posture of `SKILL.md` and `writer.md`**: pasted user material and fetched vendor text are
   treated as data, never as instructions. A way to make the skill act on instructions
   embedded in either (reveal context or files, call tools, contact anyone) is in scope.
 - **Shell handling** in `SKILL.md` (arguments passed to `guidance.py`, the clipboard step).

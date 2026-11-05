@@ -4,7 +4,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 mkdir -p dist
 rm -f dist/promptgremlin.zip
-(cd skills && zip -qr ../dist/promptgremlin.zip promptgremlin \
+(cd plugin/skills && zip -qr ../../dist/promptgremlin.zip promptgremlin \
   -x '*/__pycache__/*' 'promptgremlin/scripts/tests/*')
 # claude.ai's validator may reject unknown frontmatter keys: drop `context: fork` from the zip copy only.
 stage=$(mktemp -d)

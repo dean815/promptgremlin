@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Build scoreboard.json: LMArena, Epoch and three price catalogs joined on our model ids.
+"""Build scoreboard.json: LMArena, Epoch and two price catalogs joined on our model ids.
+
+OpenRouter's model list is read only as a cross-check: it can raise PRICE-MISMATCH and
+EFFORT-MISMATCH flags and break a tie between the two catalogs, but no price, effort level or
+default of its own is written to the snapshot (its terms don't license redistribution).
 
 CI only. pyarrow is imported inside the live parquet reader, so tests and fixture builds
 run on the standard library. LiveBench contributes only its current release id; its scores
@@ -21,10 +25,11 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL = ROOT / "skills" / "promptgremlin"
+SKILL = ROOT / "plugin" / "skills" / "promptgremlin"
 sys.path.insert(0, str(SKILL / "scripts"))
 
 from pglib import fetch, lineup, names, registry  # noqa: E402
+from pglib import scoreboard as S  # noqa: E402
 
 ALIASES_PATH = SKILL / "model_aliases.json"
 SCHEDULE_PATH = ROOT / "tools" / "price_schedule.json"
@@ -44,6 +49,8 @@ LIVEBENCH_DATA = "https://livebench.ai/data/"
 
 LICENCES = {"cc-by-4.0": "CC BY 4.0"}
 CATALOGS = ("models.dev", "litellm", "openrouter")
+# The catalogs whose figures may be published (MIT); OpenRouter only votes and cross-checks.
+PUBLISHED_CATALOGS = ("models.dev", "litellm")
 # LiteLLM lists every reseller (Bedrock, Azure, Vertex...); these providers are the vendors
 # themselves, each counted only for its own family (DashScope and Mistral also host GLM and Kimi).
 LITELLM_FIRST_PARTY = {"anthropic": "anthropic", "openai": "openai", "gemini": "gemini", "xai": "xai",
@@ -193,7 +200,7 @@ def _scale(rs):
 
 
 def livebench_release(bundle_js):
-    """Newest v2 release id from the bundle's release array (Yt=["20261014","20261025"])."""
+    """Newest v2 release id from the bundle's release array (["20261014","20261025"])."""
     ids = []
     for m in re.finditer(r'\[\s*"\d{8}"(?:\s*,\s*"\d{8}")*\s*\]', bundle_js):
         ids += re.findall(r"\d{8}", m.group(0))
@@ -270,20 +277,24 @@ def _agree(a, b):
 
 
 def prices(models_dev, litellm, openrouter, aliases, schedule, today, first_party=LITELLM_FIRST_PARTY):
-    """USD per million tokens. A value two catalogs agree on, else models.dev; scheduled prices win."""
+    """USD per million tokens. A value two catalogs agree on, else models.dev's, else LiteLLM's;
+    scheduled prices win. The value is always a published catalog's own figure: OpenRouter only
+    breaks a tie and raises PRICE-MISMATCH, so a model only it prices gets no price."""
     found = _catalog_prices(models_dev, litellm, openrouter, aliases, first_party)
     price, flags = {}, []
     for mid in aliases:
         cats = [(c, found[mid][c]) for c in CATALOGS if c in found.get(mid, {})]
         if cats:
             pairs = [(a, b) for i, a in enumerate(cats) for b in cats[i + 1:] if _agree(a[1], b[1])]
+            # CATALOGS order puts OpenRouter last, so the first of a pair is a published one.
             if pairs:
                 val, src = pairs[0][0][1], "majority"
             else:
                 val, src = cats[0][1], cats[0][0]
             if len(cats) > 1 and not all(_agree(val, v) for _, v in cats):
                 flags.append(f"PRICE-MISMATCH {mid}")
-            price[mid] = {"in": val[0], "out": val[1], "from": src}
+            if cats[0][0] in PUBLISHED_CATALOGS:
+                price[mid] = {"in": val[0], "out": val[1], "from": src}
         for s in sorted((s for s in schedule if s["model"] == mid), key=lambda s: s["from"]):
             if dt.date.fromisoformat(s["from"]) <= today:
                 price[mid] = {"in": s["in"], "out": s["out"], "from": f"schedule {s['from']}"}
@@ -296,26 +307,37 @@ def _ordered(levels):
     return [e for e in EFFORT_ORDER if e in levels]
 
 
-def efforts(models_dev, openrouter, aliases):
-    """Levels from models.dev (OpenRouter's when models.dev has none); default from OpenRouter."""
-    levels, default, or_levels = {}, {}, {}
+def efforts(models_dev, aliases):
+    """Effort levels from models.dev. The starting level comes from each family's notes, on the
+    person's machine."""
+    out = {}
     for m in _first_party_models_dev(models_dev):
         mid = names.canonical("models.dev", m["id"], aliases)
         for opt in m.get("reasoning_options") or []:
-            if mid and opt.get("type") == "effort" and mid not in levels:
-                levels[mid] = _ordered(opt.get("values", []))
+            if mid and opt.get("type") == "effort" and mid not in out and _ordered(opt.get("values", [])):
+                out[mid] = {"levels": _ordered(opt.get("values", []))}
+    return out
+
+
+def openrouter_defaults(openrouter, aliases):
+    """{id: OpenRouter's default effort}, for the EFFORT-MISMATCH cross-check only."""
+    out = {}
     for e in (openrouter or {}).get("data", []):
         mid = names.canonical("openrouter", e["id"], aliases)
-        r = e.get("reasoning") or {}
-        if mid and mid not in default and r:
-            default[mid] = r.get("default_effort")
-            or_levels[mid] = _ordered(r.get("supported_efforts") or [])
-    out = {}
-    for mid in aliases:
-        lv = levels.get(mid) or or_levels.get(mid)
-        if lv:
-            out[mid] = {"levels": lv, "default": default.get(mid), "default_from": "openrouter"}
+        level = (e.get("reasoning") or {}).get("default_effort")
+        if mid and mid not in out and level in EFFORT_ORDER:
+            out[mid] = level
     return out
+
+
+def effort_flags(models, defaults, skill=SKILL):
+    """EFFORT-MISMATCH for each model whose notes start at another level than OpenRouter's
+    default: the skill's own notes reader, run on a throwaway copy that holds the defaults."""
+    tmp = {"models": {mid: {"name": m.get("name", mid), "efforts": {"default": defaults[mid],
+                                                                     "default_from": "openrouter"}}
+                      for mid, m in models.items() if mid in defaults}}
+    reg = registry.load(Path(skill) / "sources.json")
+    return S.add_note_efforts(tmp, reg, Path(skill) / "targets").get("flags", [])
 
 
 # ---- assembly --------------------------------------------------------------------------
@@ -396,15 +418,22 @@ def build(inputs, aliases, schedule, today, previous=None):
     price, pflags = prices(got.get("models.dev"), got.get("litellm"), got.get("openrouter"),
                            aliases, schedule, today)
     flags += pflags
-    eff = efforts(got.get("models.dev"), got.get("openrouter"), aliases)
+    eff = efforts(got.get("models.dev"), aliases)
     display = _display_names(got.get("models.dev"), aliases)
     for mid, m in models.items():
         prev = prev_models.get(mid, {})
-        if mid in price or "price" in prev:
-            m["price"] = price.get(mid, prev.get("price"))
-        if mid in eff or "efforts" in prev:
-            m["efforts"] = eff.get(mid, prev.get("efforts"))
+        # A previous snapshot may predate the cross-check-only rule: carry only published figures.
+        prev_price = prev.get("price") if (prev.get("price") or {}).get("from") != "openrouter" else None
+        if mid in price or prev_price:
+            m["price"] = price.get(mid, prev_price)
+        # Older snapshots marked efforts default_from openrouter, and their levels may be its too.
+        pe = prev.get("efforts") or {}
+        prev_eff = {"levels": pe["levels"]} if pe.get("levels") and "default_from" not in pe else None
+        if mid in eff or prev_eff:
+            m["efforts"] = eff.get(mid, prev_eff)
         m["name"] = display.get(mid) or prev.get("name") or mid
+    if "openrouter" in got:
+        flags += effort_flags(models, openrouter_defaults(got["openrouter"], aliases))
 
     release = livebench_release(got["livebench"]) if "livebench" in got else None
     if release is None and "livebench" in got:
@@ -574,8 +603,9 @@ def _trim_openrouter(orr, interest):
 
 
 def _trim_bundle(js):
-    m = re.search(r'\[\s*"\d{8}"(?:\s*,\s*"\d{8}")*\s*\]', js)
-    return js[max(0, m.start() - 80):m.end() + 80] + "\n" if m else ""
+    """A hand-shaped line holding only the release ids, so no LiveBench code is saved."""
+    ids = re.findall(r"\d{8}", "".join(re.findall(r'\[\s*"\d{8}"(?:\s*,\s*"\d{8}")*\s*\]', js)))
+    return f"const releases = [{', '.join(chr(34) + i + chr(34) for i in ids)}];\n" if ids else ""
 
 
 def record(got, out_dir, aliases, today):

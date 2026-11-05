@@ -21,7 +21,7 @@ jobs:
       - name: Install pyarrow (the build's parquet reader only)
         run: python3 -m pip install pyarrow==26.0.0
       - name: Unit tests
-        run: python3 skills/promptgremlin/scripts/run_tests.py
+        run: python3 plugin/skills/promptgremlin/scripts/run_tests.py
       - name: Fetch the published snapshot as --previous
         id: prev
         run: |
@@ -78,7 +78,7 @@ jobs:
           num=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
           {
             if [ "$CODE" = 0 ]; then
-              echo "Daily build $(date -u +%F) published. Map UNMAPPED names in \`skills/promptgremlin/model_aliases.json\`; update \`tools/price_schedule.json\` for PRICE flags."
+              echo "Daily build $(date -u +%F) published. Map UNMAPPED names in \`plugin/skills/promptgremlin/model_aliases.json\`; update \`tools/price_schedule.json\` for PRICE flags."
             else
               echo "Daily build $(date -u +%F) failed (exit $CODE). The last good snapshot stays live on the \`scoreboard\` branch."
             fi

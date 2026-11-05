@@ -55,3 +55,19 @@ def test_relay_measures_lines_the_skill_dropped():
     short = "\n".join(["```", "Fix the slow CSV export." * 5, "```", "Run this in Claude Code on Opus 5.5."])
     assert B.relayed(writer, short) < B.RELAY_OK
     assert B.relayed(None, short) is None
+
+
+def test_bench_runs_never_read_the_maintainers_settings():
+    import tempfile
+    guidance = Path(B.REPO) / "plugin" / "skills" / "promptgremlin" / "scripts" / "guidance.py"
+    # If this line ever changes, plugin_copy's rewrite would silently stop working.
+    assert B.CONFIG_PY in guidance.read_text(encoding="utf-8")
+    assert not any(k.startswith("PROMPTGREMLIN_") for k in B.ENV)
+    real = B.BENCH
+    B.BENCH = tempfile.mkdtemp()
+    try:
+        dst = B.plugin_copy("HEAD", "plugin-test")
+        copied = Path(dst, "skills", "promptgremlin", "scripts", "guidance.py").read_text(encoding="utf-8")
+        assert B.CONFIG_PY not in copied and f"CONFIG = Path({B.BENCH!r})" in copied
+    finally:
+        B.BENCH = real

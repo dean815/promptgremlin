@@ -15,12 +15,12 @@ jobs:
         with:
           python-version: "3.12"
       - name: Unit tests
-        run: python3 skills/promptgremlin/scripts/run_tests.py
+        run: python3 plugin/skills/promptgremlin/scripts/run_tests.py
       - name: Freshness check
         id: check
         run: |
           set +e
-          python3 skills/promptgremlin/scripts/guidance.py --check-all > report.txt 2>&1
+          python3 plugin/skills/promptgremlin/scripts/guidance.py --check-all > report.txt 2>&1
           echo "code=$?" >> "$GITHUB_OUTPUT"
           cat report.txt
       - name: Open or update the freshness issue
