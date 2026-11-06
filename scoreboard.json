@@ -1,12 +1,12 @@
 {
  "version": 1,
- "built_at": "2026-11-05T13:29:07Z",
+ "built_at": "2026-11-06T13:12:50Z",
  "sources": {
   "lmarena": {
    "licence": "CC BY 4.0",
-   "published": {"text": "2026-10-28", "webdev": "2026-10-28", "agent": "2026-11-04", "search": "2026-10-13", "document": "2026-09-13", "text_to_image": "2026-11-04", "image_edit": "2026-11-04", "text_to_video": "2026-09-22", "image_to_video": "2026-09-22"}
+   "published": {"text": "2026-10-28", "webdev": "2026-10-28", "agent": "2026-11-04", "search": "2026-10-13", "document": "2026-09-13", "text_to_image": "2026-11-04", "image_edit": "2026-11-04", "text_to_video": "2026-11-05", "image_to_video": "2026-11-05"}
   },
-  "epoch": {"licence": "CC BY 4.0", "zip_built": "2026-11-05"},
+  "epoch": {"licence": "CC BY 4.0", "zip_built": "2026-11-06"},
   "models.dev": {"licence": "MIT"},
   "litellm": {"licence": "MIT"},
   "openrouter": {"fetched": "2026-11-04"},
@@ -65,8 +65,8 @@
   "lmarena:image_edit/agentic": {"top": 1537, "p30": 1195},
   "lmarena:image_edit/multi_image_edit": {"top": 1522, "p30": 1221},
   "lmarena:image_edit/multi_image_edit_agentic": {"top": 1541, "p30": 1167},
-  "lmarena:text_to_video": {"top": 1516, "p30": 1207},
-  "lmarena:image_to_video": {"top": 1495, "p30": 1258},
+  "lmarena:text_to_video": {"top": 1541, "p30": 1220},
+  "lmarena:image_to_video": {"top": 1502, "p30": 1274},
   "epoch:eci": {"top": 169.07, "p30": 156.79}
  },
  "models": {
@@ -1983,14 +1983,14 @@
    "family": "openai",
    "name": "sora-2",
    "metrics": {
-    "lmarena:text_to_video": [{"effort": null, "elo": 1343, "lo": 1336, "hi": 1349, "votes": 71947}]
+    "lmarena:text_to_video": [{"effort": null, "elo": 1343, "lo": 1337, "hi": 1349, "votes": 74272}]
    }
   },
   "sora-2-pro": {
    "family": "openai",
    "name": "sora-2-pro",
    "metrics": {
-    "lmarena:text_to_video": [{"effort": null, "elo": 1368, "lo": 1361, "hi": 1375, "votes": 54167}]
+    "lmarena:text_to_video": [{"effort": null, "elo": 1367, "lo": 1361, "hi": 1374, "votes": 56212}]
    }
   },
   "gemini-nano-banana-2-1": {
@@ -2071,26 +2071,20 @@
    "family": "gemini",
    "name": "gemini-omni-1-1-flash",
    "metrics": {
-    "lmarena:text_to_video": [{"effort": null, "elo": 1516, "lo": 1501, "hi": 1532, "votes": 1784}],
-    "lmarena:image_to_video": [{"effort": null, "elo": 1488, "lo": 1478, "hi": 1499, "votes": 3734}]
+    "lmarena:text_to_video": [{"effort": null, "elo": 1514, "lo": 1498, "hi": 1529, "votes": 1803}],
+    "lmarena:image_to_video": [{"effort": null, "elo": 1486, "lo": 1476, "hi": 1497, "votes": 3775}]
    },
    "price": {"in": 1.5, "out": 9.0, "from": "litellm"}
   },
   "veo-3-1-generate-preview": {
    "family": "gemini",
    "name": "veo-3-1-generate-preview",
-   "metrics": {
-    "lmarena:text_to_video": [{"effort": null, "elo": 1364, "lo": 1350, "hi": 1379, "votes": 13741}],
-    "lmarena:image_to_video": [{"effort": null, "elo": 1398, "lo": 1388, "hi": 1409, "votes": 25116}]
-   }
+   "metrics": {}
   },
   "veo-3-1-fast-generate-preview": {
    "family": "gemini",
    "name": "veo-3-1-fast-generate-preview",
-   "metrics": {
-    "lmarena:text_to_video": [{"effort": null, "elo": 1362, "lo": 1351, "hi": 1372, "votes": 39484}],
-    "lmarena:image_to_video": [{"effort": null, "elo": 1385, "lo": 1376, "hi": 1394, "votes": 99804}]
-   }
+   "metrics": {}
   },
   "veo-3-1-lite-generate-preview": {
    "family": "gemini",
@@ -2204,55 +2198,61 @@
   "UNMAPPED lmarena:image_edit UNI-1.1 @1316",
   "UNMAPPED lmarena:image_edit Seedream 4.5 @1303",
   "UNMAPPED lmarena:image_edit Qwen-Image-2.0-Pro (2026-06-22) @1302",
-  "UNMAPPED lmarena:text_to_video gemini-omni-flash @1513",
-  "UNMAPPED lmarena:text_to_video flux-3-video @1493",
-  "UNMAPPED lmarena:text_to_video grok-imagine-video-1.5-agent @1492",
-  "UNMAPPED lmarena:text_to_video dreamina-seedance-2.0-720p @1479",
-  "UNMAPPED lmarena:text_to_video wan3.0 @1476",
-  "UNMAPPED lmarena:text_to_video dreamina-seedance-2.5-720p @1474",
-  "UNMAPPED lmarena:text_to_video minimax-h3 @1460",
-  "UNMAPPED lmarena:text_to_video muse-video @1456",
-  "UNMAPPED lmarena:text_to_video happyhorse-1.0 @1427",
-  "UNMAPPED lmarena:text_to_video veo-3-fast-audio @1348",
-  "UNMAPPED lmarena:text_to_video grok-imagine-video-720p @1342",
-  "UNMAPPED lmarena:text_to_video veo-3-audio @1340",
-  "UNMAPPED lmarena:text_to_video wan2.7-t2v @1337",
-  "UNMAPPED lmarena:text_to_video wan2.6-t2v @1327",
-  "UNMAPPED lmarena:text_to_video seedance-v1.5-pro @1256",
-  "UNMAPPED lmarena:text_to_video veo-3 @1254",
-  "UNMAPPED lmarena:text_to_video veo-3-fast @1248",
-  "UNMAPPED lmarena:text_to_video wan2.5-t2v-preview @1245",
-  "UNMAPPED lmarena:text_to_video pixverse-v5.6 @1240",
-  "UNMAPPED lmarena:text_to_video runway-gen-4.5 @1225",
-  "UNMAPPED lmarena:text_to_video kling-2.5-turbo-1080p @1220",
-  "UNMAPPED lmarena:text_to_video kling-2.6-pro @1216",
-  "UNMAPPED lmarena:text_to_video p-video @1207",
-  "SOURCE-STALE lmarena:text_to_video 2026-09-22",
-  "UNMAPPED lmarena:image_to_video minimax-h3 @1495",
-  "UNMAPPED lmarena:image_to_video wan3.0 @1480",
-  "UNMAPPED lmarena:image_to_video dreamina-seedance-2.5-720p @1477",
-  "UNMAPPED lmarena:image_to_video dreamina-seedance-2.0-720p @1475",
-  "UNMAPPED lmarena:image_to_video gemini-omni-flash @1465",
-  "UNMAPPED lmarena:image_to_video hidream-o1-video-1.0 @1456",
-  "UNMAPPED lmarena:image_to_video grok-imagine-video-1.5-720p @1456",
-  "UNMAPPED lmarena:image_to_video flux-3-video-20260811 @1449",
-  "UNMAPPED lmarena:image_to_video happyhorse-1.0 @1442",
-  "UNMAPPED lmarena:image_to_video wan2.7-i2v @1428",
-  "UNMAPPED lmarena:image_to_video grok-imagine-video-720p @1415",
-  "UNMAPPED lmarena:image_to_video grok-imagine-video-480p @1385",
-  "UNMAPPED lmarena:image_to_video vidu-q3-pro @1363",
-  "UNMAPPED lmarena:image_to_video kling-v3-pro @1354",
-  "UNMAPPED lmarena:image_to_video veo-3-audio @1331",
-  "UNMAPPED lmarena:image_to_video veo-3-fast-audio @1326",
-  "UNMAPPED lmarena:image_to_video wan2.5-i2v-preview @1321",
-  "UNMAPPED lmarena:image_to_video wan2.6-i2v @1310",
-  "UNMAPPED lmarena:image_to_video seedance-v1.5-pro @1307",
-  "UNMAPPED lmarena:image_to_video pixverse-v5.6 @1299",
-  "UNMAPPED lmarena:image_to_video kling-2.6-pro @1294",
-  "UNMAPPED lmarena:image_to_video kling-2.5-turbo-1080p @1276",
-  "UNMAPPED lmarena:image_to_video seedance-v1-pro @1273",
-  "UNMAPPED lmarena:image_to_video hailuo-2.3 @1262",
-  "UNMAPPED lmarena:image_to_video veo-3 @1258",
-  "SOURCE-STALE lmarena:image_to_video 2026-09-22"
+  "UNMAPPED lmarena:text_to_video Gemini Omni 1.2 Flash @1541",
+  "UNMAPPED lmarena:text_to_video gemini-omni-flash @1509",
+  "UNMAPPED lmarena:text_to_video FLUX 3 Video @1491",
+  "UNMAPPED lmarena:text_to_video Grok Imagine Video 1.5 @1486",
+  "UNMAPPED lmarena:text_to_video Dreamina Seedance 2.0 (720p) @1481",
+  "UNMAPPED lmarena:text_to_video Dreamina Seedance 2.5 (720p) @1480",
+  "UNMAPPED lmarena:text_to_video Wan 3.0 @1477",
+  "UNMAPPED lmarena:text_to_video SkyReels V4 @1457",
+  "UNMAPPED lmarena:text_to_video Muse Video @1457",
+  "UNMAPPED lmarena:text_to_video MiniMax H3 @1456",
+  "UNMAPPED lmarena:text_to_video HappyHorse 1.0 @1428",
+  "UNMAPPED lmarena:text_to_video Veo 3.1 (Audio) @1363",
+  "UNMAPPED lmarena:text_to_video Veo 3.1 (Audio, 1080p) @1363",
+  "UNMAPPED lmarena:text_to_video Veo 3.1 Fast (Audio) @1361",
+  "UNMAPPED lmarena:text_to_video Veo 3.1 Fast (Audio, 1080p) @1357",
+  "UNMAPPED lmarena:text_to_video Veo 3 Fast (Audio) @1347",
+  "UNMAPPED lmarena:text_to_video Grok Imagine Video (720p) @1341",
+  "UNMAPPED lmarena:text_to_video Veo 3 (Audio) @1341",
+  "UNMAPPED lmarena:text_to_video Wan 2.7 @1337",
+  "UNMAPPED lmarena:text_to_video Wan 2.6 @1324",
+  "UNMAPPED lmarena:text_to_video Seedance 1.5 Pro @1256",
+  "UNMAPPED lmarena:text_to_video Veo 3 @1255",
+  "UNMAPPED lmarena:text_to_video Veo 3 Fast @1251",
+  "UNMAPPED lmarena:text_to_video Wan 2.5 Preview @1244",
+  "UNMAPPED lmarena:text_to_video PixVerse V5.6 @1238",
+  "UNMAPPED lmarena:text_to_video Runway Gen-4.5 @1223",
+  "UNMAPPED lmarena:text_to_video Kling 2.5 Turbo (1080p) @1220",
+  "UNMAPPED lmarena:image_to_video Gemini Omni 1.2 Flash @1502",
+  "UNMAPPED lmarena:image_to_video MiniMax H3 @1493",
+  "UNMAPPED lmarena:image_to_video Dreamina Seedance 2.5 (720p) @1488",
+  "UNMAPPED lmarena:image_to_video Wan 3.0 @1481",
+  "UNMAPPED lmarena:image_to_video Dreamina Seedance 2.0 (720p) @1478",
+  "UNMAPPED lmarena:image_to_video SkyReels V4 @1476",
+  "UNMAPPED lmarena:image_to_video gemini-omni-flash @1463",
+  "UNMAPPED lmarena:image_to_video HiDream-O1-Video-1.0 @1455",
+  "UNMAPPED lmarena:image_to_video Grok Imagine Video 1.5 (720p) @1454",
+  "UNMAPPED lmarena:image_to_video FLUX 3 Video (20260811) @1451",
+  "UNMAPPED lmarena:image_to_video HappyHorse 1.0 @1443",
+  "UNMAPPED lmarena:image_to_video Wan 2.7 @1428",
+  "UNMAPPED lmarena:image_to_video Grok Imagine Video (720p) @1412",
+  "UNMAPPED lmarena:image_to_video Veo 3.1 (Audio) @1399",
+  "UNMAPPED lmarena:image_to_video Veo 3.1 (Audio, 1080p) @1389",
+  "UNMAPPED lmarena:image_to_video Veo 3.1 Fast (Audio) @1386",
+  "UNMAPPED lmarena:image_to_video Grok Imagine Video (480p) @1385",
+  "UNMAPPED lmarena:image_to_video Veo 3.1 Fast (Audio, 1080p) @1372",
+  "UNMAPPED lmarena:image_to_video Vidu Q3 Pro @1363",
+  "UNMAPPED lmarena:image_to_video Kling 3.0 Pro @1353",
+  "UNMAPPED lmarena:image_to_video Veo 3 (Audio) @1332",
+  "UNMAPPED lmarena:image_to_video Veo 3 Fast (Audio) @1327",
+  "UNMAPPED lmarena:image_to_video Wan 2.5 Preview @1322",
+  "UNMAPPED lmarena:image_to_video Wan 2.6 @1309",
+  "UNMAPPED lmarena:image_to_video Seedance 1.5 Pro @1307",
+  "UNMAPPED lmarena:image_to_video PixVerse V5.6 @1299",
+  "UNMAPPED lmarena:image_to_video Kling 2.6 Pro @1294",
+  "UNMAPPED lmarena:image_to_video Kling 2.5 Turbo (1080p) @1276",
+  "UNMAPPED lmarena:image_to_video Seedance 1.0 Pro @1274"
  ]
 }
