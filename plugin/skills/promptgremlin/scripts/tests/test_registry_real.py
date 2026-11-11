@@ -113,7 +113,7 @@ def test_multi_family_tools_offer_families():
 def test_each_suggested_family_watches_its_pricing_page():
     reg = registry.load(SKILL / "sources.json")
     hosts = {"anthropic": "platform.claude.com", "openai": "developers.openai.com",
-             "gemini": "ai.google.dev", "xai": "docs.x.ai"}
+             "gemini": "aistudio.google.com", "xai": "docs.x.ai"}
     for fam, host in hosts.items():
         src = reg[fam]["sources"].get("pricing")
         assert src, fam

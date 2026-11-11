@@ -1,7 +1,7 @@
 ---
 family: openai
 kind: family
-last_verified: 2026-10-12
+last_verified: 2026-11-11
 sources: [prompt-engineering, latest-model, chatgpt]
 ---
 ## All models
@@ -19,7 +19,7 @@ sources: [prompt-engineering, latest-model, chatgpt]
 - The GPT-6 guidance was written for Astra; test it on the target model. (latest-model#Prompting best practices)
 
 ## Effort
-API: `reasoning.effort` (Responses) or `reasoning_effort` (Chat Completions); Astra and 6.1 Sol reject `none` (use `low`), Luna accepts it; map `minimal` to `low`. Codex: Light (`low`), Medium, High, Extra High. ChatGPT app: write `Effort: <low|medium|high> (ChatGPT app: the model picker's thinking/effort option, pick the nearest; not API reasoning.effort)`, or "not settable here" if the plan has no such option. Don't invent app option names, but still give the line. (latest-model#Update API and model parameters, codex:best-practices#Strong first use, hand-written)
+API: `reasoning.effort` (Responses) or `reasoning_effort` (Chat Completions); Astra and 6.1 Sol reject `none` (use `low`), 6.1 Terra and Luna accept it; map `minimal` to `low`. Codex: Light (`low`), Medium, High, Extra High. ChatGPT app: write `Effort: <low|medium|high> (ChatGPT app: the model picker's thinking/effort option, pick the nearest; not API reasoning.effort)`, or "not settable here" if the plan has no such option. Don't invent app option names, but still give the line. (latest-model#Update API and model parameters, codex:best-practices#Strong first use, hand-written)
 
 ## gpt-6-astra
 - Flagship, and the model the GPT-6 prompt advice was written against. (latest-model#Prompting best practices)
@@ -28,6 +28,10 @@ API: `reasoning.effort` (Responses) or `reasoning_effort` (Chat Completions); As
 ## gpt-6-1-sol
 - No dedicated page: apply the Astra advice, then compare. (latest-model#Prompting best practices)
 - No `none` effort (use `low`); tool calling needs Responses. Not the same as GPT-6 Sol, which accepts `none`. Codex's docs name 6.1 Sol the model to use when available. (latest-model#Limitations, #Update API and model parameters, codex:best-practices#Strong first use)
+
+## gpt-6-1-terra
+- No dedicated page: apply the Astra advice, then compare. (latest-model#Prompting best practices)
+- Accepts `none` effort; tool calling needs Responses (Chat Completions supports the model, not tools). Coming from GPT-5.6 Terra, compare on representative images and workflows at the same effort. Codex's docs give it no starting effort. (latest-model#Limitations, #Update API and model parameters, hand-written)
 
 ## gpt-6-luna
 - No dedicated page: apply the Astra advice, then compare. (latest-model#Prompting best practices)

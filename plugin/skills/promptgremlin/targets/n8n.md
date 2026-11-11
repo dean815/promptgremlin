@@ -1,7 +1,7 @@
 ---
 family: n8n
 kind: tool
-last_verified: 2026-10-01
+last_verified: 2026-11-11
 sources: [tools-agent]
 ---
 ## All models

@@ -187,7 +187,7 @@ Full details: [PRIVACY.md](https://github.com/dean815/promptgremlin/blob/main/PR
     That is vendor documentation and model-list pages, plus two non-vendor
     sites: Wikipedia (`en.wikipedia.org`, for drafts) and Hugging Face
     (`huggingface.co`, for Qwen's model card). The full set of hosts:
-    `ai.google.dev`, `api-docs.deepseek.com`, `code.claude.com`, `cursor.com`,
+    `aistudio.google.com`, `api-docs.deepseek.com`, `code.claude.com`, `cursor.com`,
     `dev.meta.ai`, `developers.gamma.app`, `developers.openai.com`,
     `docs.github.com`, `docs.lovable.dev`, `docs.midjourney.com`,
     `docs.mistral.ai`, `docs.n8n.io`, `docs.perplexity.ai`, `docs.replit.com`,
@@ -195,8 +195,8 @@ Full details: [PRIVACY.md](https://github.com/dean815/promptgremlin/blob/main/PR
     `en.wikipedia.org`, `geminicli.com`, `help.gamma.app`, `help.runwayml.com`,
     `higgsfield.ai`, `huggingface.co`, `kling.ai`, `learn.chatgpt.com`,
     `manus.im`, `platform.claude.com`, `platform.kimi.ai`,
-    `platform.openai.com`, `support.google.com`, `www.alibabacloud.com`,
-    `www.anthropic.com`, `www.notion.com`. The Midjourney and
+    `support.google.com`, `www.alibabacloud.com`, `www.anthropic.com`,
+    `www.notion.com`. The Midjourney and
     Runway notes come from those vendors' public help-center JSON API.
   - For model suggestions only: `raw.githubusercontent.com`, for this repo's
     scoreboard snapshot (`dean815/promptgremlin`, `scoreboard` branch, an

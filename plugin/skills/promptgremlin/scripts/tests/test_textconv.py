@@ -141,3 +141,16 @@ def test_html_challenge_page_as_csv_raises():
 
 def test_csv_without_comma_in_header_raises():
     _raises("not a table\n", "csv", "not CSV")
+
+
+def test_markdoc_tags_leave_headings_and_prose_and_spare_code_fences():
+    src = ('# Models  {% id="models" %}\n{% card-grid columns="2" %}\n'
+           '  {% button href="/x" %}Try it{% /button %}\n{% /card-grid %}\nprose\n'
+           '```\n{% raw %}\n```\n')
+    out = t.to_text(src, "md")
+    assert out.splitlines() == ["# Models", "  Try it", "prose", "```", "{% raw %}", "```"]
+
+
+def test_heading_glued_to_an_image_line_gets_its_own_line():
+    out = t.to_text("![a chart](https://x.test/a)## Features\nbody", "md")
+    assert out.splitlines() == ["![a chart](https://x.test/a)", "", "## Features", "body"]

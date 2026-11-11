@@ -3,6 +3,8 @@ import json
 import re
 from html.parser import HTMLParser
 
+from .sections import fence_step
+
 MARKDOWN_FORMATS = {"md", "md.txt", "text", "github-api"}
 DATA_FORMATS = {"json", "csv"}
 FORMATS = MARKDOWN_FORMATS | DATA_FORMATS | {"json-helpcenter", "html"}
@@ -11,6 +13,31 @@ FORMATS = MARKDOWN_FORMATS | DATA_FORMATS | {"json-helpcenter", "html"}
 JSX_LINE = re.compile(r"^\s*</?[A-Z][A-Za-z0-9.]*\b[^>]*/?>\s*$")
 EXPORT_START = re.compile(r"^export\s+const\s")
 OPENERS = ("{", "(", "=", "[", "=>")
+
+
+# Markdoc pages (Google's AI Studio docs) carry {% tag attr="x" %} markers: on headings as
+# {% id="x" %}, and as wrapper lines around cards, tables and tabs. The prose is what we want.
+MARKDOC_TAG = re.compile(r"\{%.*?%\}")
+
+
+# The same pages sometimes run a heading onto the end of an image line: ![alt](address)## Title
+GLUED_HEADING = re.compile(r"(!\[[^\]]*\]\([^)]*\))(#{1,4} )")
+
+
+def strip_markdoc(text):
+    """Drop Markdoc tags outside code fences; a line that held nothing else goes too. A heading
+    glued to the end of an image line gets its own line."""
+    out, fence = [], None
+    for line in text.splitlines():
+        was, fence = fence, fence_step(line, fence)
+        if was is None and fence is None:
+            if "{%" in line:
+                line = MARKDOC_TAG.sub("", line).rstrip()
+                if not line.strip():
+                    continue
+            line = GLUED_HEADING.sub(r"\1\n\n\2", line)
+        out.append(line)
+    return "\n".join(out)
 
 
 def strip_jsx(text):
@@ -117,7 +144,7 @@ def to_text(raw, fmt):
     if fmt in MARKDOWN_FORMATS:
         if _is_html(raw):
             raise ValueError("got an HTML page where markdown was expected")
-        return strip_jsx(raw)
+        return strip_markdoc(strip_jsx(raw))
     if fmt == "json-helpcenter":
         art = json.loads(raw)["article"]
         out = f"# {art.get('title', '')}\n\n{html_to_md(art.get('body', ''))}"

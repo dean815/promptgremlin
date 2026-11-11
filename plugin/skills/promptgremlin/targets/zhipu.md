@@ -1,7 +1,7 @@
 ---
 family: zhipu
 kind: family
-last_verified: 2026-10-12
+last_verified: 2026-11-11
 sources: [glm-flagship, glm-flash, migration]
 ---
 ## All models
@@ -29,7 +29,4 @@ sources: [glm-flagship, glm-flash, migration]
 
 ## glm-5-3-flashx
 - Same model behavior and parameters as `glm-5-3-flash`, served faster (about 200 tokens per second); use the Flash notes. (glm-flash#Model Overview, #How to Use)
-
-## glm-5-2
-- Predecessor on the same base model; its own page was not fetched, so nothing 5.2-specific is confirmed. Reuse the GLM-5.3 prompt shape, with less reliance on very long unsupervised runs. (glm-flagship#Overview; hand-written)
-- The migration notice implies 5.2 accepted `thinking.type: "disabled"`. Whether 5.2 takes `reasoning_effort` is (unverified); omit it and send only the thinking setting. (migration#Migration Checklist)
+- `glm-5.3-flashx-legal` is a variant tuned for legal research, contract review, and drafting. Give it the source documents, the negotiating position, and the deliverable (working paper, redline, first draft), and run it in an agent setup with legal-data and Word-editing MCP tools where possible. (glm-flash#GLM-5.3-FlashX-Legal; hand-written for the prompt advice)

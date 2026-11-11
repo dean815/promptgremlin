@@ -1,12 +1,12 @@
 ---
 family: codex
 kind: tool
-last_verified: 2026-10-12
+last_verified: 2026-11-11
 sources: [best-practices, prompting]
 ---
 ## All models
 - Build the prompt from four parts: the goal, the context (files, folders, docs, error text), the constraints, and what "done" means (tests passing, bug no longer reproducing). (best-practices#Strong first use: Context and prompts)
-- Point at files: `@path` mentions in the CLI or app; the IDE extension adds open files itself. Spell out any path or line range it won't see. (best-practices#Strong first use, prompting#How to read these examples)
+- Point at files: `@path` mentions in the CLI or app; the IDE extension adds open files itself. Spell out any path or line range it won't see; with a screenshot or diagram, say which area matters. (best-practices#Strong first use, prompting#How to read these examples, #Add useful context)
 - For a bug, give numbered repro steps and the suspected files; these matter more than a summary. Tell it to reproduce first, then patch, then run checks and report commands and results. (prompting#Fix a bug)
 - Name the exact build, test, and lint commands, or it can't check its own work. Ask for tests when needed and a diff review before finishing. (best-practices#Common mistakes, #Improve reliability with testing and review)
 - Keep durable rules (repo layout, run/test/lint commands, conventions, do-not rules, definition of done) in AGENTS.md, not in each prompt. The closest file to the working directory wins. Keep it short; `/init` scaffolds one. (best-practices#Make guidance reusable with AGENTS.md)

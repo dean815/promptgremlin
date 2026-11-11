@@ -1,7 +1,7 @@
 ---
 family: replit
 kind: tool
-last_verified: 2026-10-01
+last_verified: 2026-11-11
 sources: [prompting]
 ---
 ## All models

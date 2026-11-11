@@ -1,7 +1,7 @@
 ---
 family: mistral
 kind: family
-last_verified: 2026-10-06
+last_verified: 2026-11-11
 sources: [prompting, reasoning]
 ---
 ## All models
@@ -19,22 +19,14 @@ sources: [prompting, reasoning]
 - With reasoning on, later turns must carry the whole earlier assistant message, thinking chunk included; dropping it hurts quality. That is code, not prompt text. (reasoning#Multi-turn conversations)
 
 ## Effort
-- API: `reasoning_effort` on chat completions (and inside `completion_args` on the Agents and Conversations endpoints). Documented values are `"high"` (full thinking chunk, so `message.content` becomes a list of thinking and text chunks) and `"none"` (minimal thinking, no chunk, plain string). Map low to `"none"`, high and max to `"high"`; medium has no documented value (unverified). Third-party `zai-glm-5-3` on Mistral's API: `low`/`high`/`max`, never `none`; always a chunk list. (reasoning#Model, #Handling thinking chunks)
+- API: `reasoning_effort` on chat completions (and inside `completion_args` on the Agents and Conversations endpoints). Values depend on the model. `mistral-large-4`: `"low"`, `"medium"`, `"high"` only; map max to `"high"`. `mistral-small-4`: `"high"` (`message.content` becomes a list of thinking and text chunks) or `"none"` (plain string); map low to `"none"`, high and max to `"high"`; medium is undocumented (unverified). (reasoning#Model, #Mistral Large 4 reasoning effort, #Handling thinking chunks)
 - Le Chat and other apps: no control documented. (hand-written)
 
 ## mistral-large-4
 - Current flagship: state-of-the-art open-weight general-purpose multimodal model. (lineup page)
-- The reasoning page lists it as `mistral-large-4-0` with adjustable `reasoning_effort`, no extra setup. Map low to `"none"`, high to `"high"` (see Effort). (reasoning#Model)
+- API id `mistral-large-4` or `mistral-large-4-0`. It rejects `none`, `minimal`, `xhigh`, and `max`; set `high` explicitly as the starting point and step down to `medium` or `low` when tokens or latency matter. The preview's `none` is now `low`. (reasoning#Mistral Large 4 reasoning effort)
 - Nothing model-specific is published on prompting, so use the family-wide rules above; keep prompts self-contained and re-test after switching from Large 3. (hand-written)
 
-## mistral-medium-3-5
-- Frontier multimodal model tuned for agentic and coding work (no longer the flagship). Supports `reasoning_effort`; use `"high"` for agent and code tasks. (lineup page; reasoning#Model)
-- Give agent prompts an explicit finish condition and approval boundaries. (hand-written)
-
 ## mistral-small-4
-- Hybrid model that unifies instruct, reasoning, and coding. The reasoning page documents `reasoning_effort` on `mistral-small-latest`; that this alias is Small 4 is (unverified). (lineup page; reasoning#Model)
+- Hybrid model that unifies instruct, reasoning, and coding. The reasoning page lists it as `mistral-small-2603` with adjustable `reasoning_effort`, no extra setup. (lineup page; reasoning#Model)
 - Keep prompts compact and set `"none"` for simple classification or extraction. (hand-written)
-
-## mistral-large-3
-- Open-weight general-purpose multimodal model. The reasoning page does not list it, so a `reasoning_effort` setting is (unverified); do not rely on one. (lineup page; reasoning#Model)
-- With no documented reasoning control, put the stepwise instructions and worked examples in the prompt. (prompting#Prompting Examples)

@@ -134,13 +134,15 @@ def test_seed_maps_previews_dated_rows_and_router_suffixes():
              ("openrouter", "mistralai/mistral-large-4-0", "mistral-large-4"),
              ("openrouter", "meta/muse-wonder", "muse-wonder-1-0"),
              ("livebench", "deepseek-v4.1-flash-1017", "deepseek-flash"),
-             ("livebench", "muse-wonder-1.0", "muse-wonder-1-0")]
+             ("livebench", "muse-wonder-1.0", "muse-wonder-1-0"),
+             ("lmarena", "GPT-6.1 Terra (Max)", "gpt-6-1-terra"),
+             ("lmarena", "Kimi K3.1 Pro (Max)", "kimi-k3-1-pro")]
     for source, name, want in cases:
         assert N.canonical(source, name, aliases) == want, (source, name)
     # Separate models that share a prefix stay out.
     for source, name in [("lmarena", "Muse Wonder Full (Max)"), ("lmarena", "Muse Spark"),
-                         ("lmarena", "Qwen3.8-Flash-Next"), ("lmarena", "GPT-6.1 Terra (Max)"),
+                         ("lmarena", "Qwen3.8-Flash-Next"),
                          ("lmarena", "gemini-omni-flash"), ("lmarena", "veo-3-audio"),
                          ("openrouter", "qwen/qwen3.8-max-prime"), ("openrouter", "openai/gpt-6-sol-pro"),
-                         ("openrouter", "meta/muse-spark-1.3-contributor"), ("lmarena", "Kimi K3.1 Pro (Max)")]:
+                         ("openrouter", "meta/muse-spark-1.3-contributor")]:
         assert N.canonical(source, name, aliases) is None, (source, name)

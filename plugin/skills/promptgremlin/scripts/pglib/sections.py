@@ -10,6 +10,27 @@ CODE_FENCE_MAX_LINES = 25
 INLINE_TAG = re.compile(r"<[^>]*>")
 
 
+FENCE = re.compile(r"(`{3,})(.*)")
+
+
+def fence_step(line, open_ticks):
+    """Track a code fence across lines: the opener's backtick count while inside one, else None.
+
+    A fence closes on a bare run of at least as many backticks as opened it. A fence line with an
+    info string (```python) met while one is open, and at least as long, starts a new fence: a
+    vendor page with one stray ``` would otherwise read everything after it as code.
+    """
+    m = FENCE.match(line.strip())
+    if not m:
+        return open_ticks
+    ticks, info = len(m.group(1)), m.group(2).strip()
+    if open_ticks is None:
+        return ticks
+    if ticks < open_ticks:
+        return open_ticks
+    return ticks if info else None
+
+
 def _invisible(text):
     """Drop format characters (zero-width spaces and joiners, bidi controls, BOM): vendor pages
     put U+200B in headings, and the keys stored in sources.json must not carry them."""
@@ -34,13 +55,10 @@ def strip_frontmatter(text):
 def sections(text):
     """[(level, title, body)] for every H1-H3; body stops at the next heading of any level."""
     out, level, title, buf = [], None, None, []
-    in_fence = False
+    fence = None
     for line in strip_frontmatter(text).splitlines():
-        if line.strip().startswith("```"):
-            in_fence = not in_fence
-            buf.append(line)
-            continue
-        if in_fence:
+        was, fence = fence, fence_step(line, fence)
+        if was is not None or fence is not None:
             buf.append(line)
             continue
         m = HEADING.match(line)
@@ -58,14 +76,10 @@ def sections(text):
 def h2_blocks(text):
     """{H2 title: everything until the next H2, H3 children included}."""
     out, title, buf = {}, None, []
-    in_fence = False
+    fence = None
     for line in strip_frontmatter(text).splitlines():
-        if line.strip().startswith("```"):
-            in_fence = not in_fence
-            if title is not None:
-                buf.append(line)
-            continue
-        if in_fence:
+        was, fence = fence, fence_step(line, fence)
+        if was is not None or fence is not None:
             if title is not None:
                 buf.append(line)
             continue

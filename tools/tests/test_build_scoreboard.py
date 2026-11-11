@@ -77,8 +77,11 @@ FIXTURE_SPELLINGS = {
         "veo-3-1-fast-generate-preview": ["veo-3.1-fast-audio", "veo-3.1-fast-audio-1080p"],
         "sora-2": ["sora-2"],
         "sora-2-pro": ["sora-2-pro"],
+        "gemini-4-argon": ["Gemini 4 Argon (High)"], "gpt-6-1-terra": ["GPT-6.1 Terra (Max)"],
+        "kimi-k3-1-pro": ["Kimi K3.1 Pro (Max)"],
     },
     "epoch": {
+        "gemini-4-argon": ["Gemini 4 Argon"],
         "claude-opus-5-5": ["Claude Opus 5.5"], "claude-fable-5-1": ["Claude Fable 5.1"],
         "claude-sonnet-5-5": ["Claude Sonnet 5.5"], "claude-haiku-5-5": ["Claude Haiku 5.5"],
         "claude-opus-5": ["Claude Opus 5"], "claude-fable-5": ["Claude Fable 5"],
@@ -126,6 +129,7 @@ FIXTURE_SPELLINGS = {
         "qwen3-7-plus": ["qwen/qwen3.7-plus"], "kimi-k3": ["moonshotai/kimi-k3"],
         "kimi-k2-7-code": ["moonshotai/kimi-k2.7-code"], "kimi-k2-6": ["moonshotai/kimi-k2.6"],
         "mistral-medium-3-5": ["mistralai/mistral-medium-3-5"], "deepseek-v4-pro": ["deepseek/deepseek-v4-pro"],
+        "kimi-k3-1-pro": ["moonshotai/kimi-k3.1-pro"], "gpt-6-1-terra": ["openai/gpt-6.1-terra"],
     },
     "litellm": {
         "gpt-6-astra": ["azure/gpt-6-astra", "gpt-6-astra"], "gpt-6-luna": ["azure/gpt-6-luna", "gpt-6-luna"],
@@ -419,8 +423,13 @@ def test_validate_rejects_missing_flagship_and_changed_licence():
 
 def test_cli_fixture_build_writes_no_livebench_metrics():
     out = Path(tempfile.mkdtemp()) / "sb.json"
-    with contextlib.redirect_stdout(io.StringIO()):
-        assert B.main(["--fixtures", str(FIX), "--out", str(out), "--today", "2026-10-27"]) == 0
+    # The recordings hold the flagships of their day; a later notes refresh must not fail this.
+    live, B.notes_flagships = B.notes_flagships, lambda: RECORDED_FLAGSHIPS
+    try:
+        with contextlib.redirect_stdout(io.StringIO()):
+            assert B.main(["--fixtures", str(FIX), "--out", str(out), "--today", "2026-10-27"]) == 0
+    finally:
+        B.notes_flagships = live
     text = out.read_text(encoding="utf-8")
     snap = json.loads(text)
     assert "livebench:" not in text

@@ -1,7 +1,7 @@
 ---
 family: lovable
 kind: tool
-last_verified: 2026-10-01
+last_verified: 2026-11-11
 sources: [prompting]
 ---
 ## All models
@@ -10,7 +10,7 @@ sources: [prompting]
 - Name the stack and the visible result. State framework or backend preferences if they matter, and describe what should be on screen when done: sections in order, the main call to action, and the states (logged in or out, empty, loading, error). (prompting#Build with the backend in mind; hand-written: stack naming)
 - Write the real copy: actual headlines, button labels, and sample data, not lorem ipsum. Real words expose layout problems early. (prompting#Design with real content)
 - Use small UI nouns (tab bar, chip, dropdown, toast, toggle) rather than "a settings screen". Build one element first, then layer states and interactions on it. (prompting#Speak atomic: buttons, cards, modals)
-- Set the look with opinionated adjectives and concrete properties: mood words plus type, spacing, colour, radius, motion. Specific, opinionated wording beats generic words like "colourful". Say the style once per section, and tell the user to save a settled style in project knowledge instead of restating it. (prompting#Use buzzwords to dial in aesthetic, #Get the design right first; hand-written: the contrast example)
+- Set the look with opinionated adjectives and concrete properties: mood words plus type, spacing, colour, radius, motion. Specific, opinionated wording beats generic words like "colourful". Say the style once per section, and tell the user to save a settled style in project instructions instead of restating it. (prompting#Use buzzwords to dial in aesthetic, #Get the design right first; hand-written: the contrast example)
 - For any change to existing work, give three parts: what to build, where it goes, and what must stay untouched ("only the orders page", "keep the styling", "leave login alone"). (prompting#Say what to change and what to leave alone)
 - Layout prompts follow header, content, action order, with visual parts listed in sequence and styled. For a one-element tweak, suggest the preview toolbar and use verbs like replace, update, adjust. (prompting#Use prompt patterns for layouts, #Point at elements with the preview toolbar)
 - For a vague or large feature, end the prompt by inviting Lovable to ask whatever questions it needs, and suggest Plan mode. (prompting#Make Lovable ask clarifying questions)

@@ -1,5 +1,25 @@
 # Changelog
 
+## 3.4.2
+
+Notes refresh: 30 targets re-read against the vendors' pages of 2026-11-11.
+- New models in the notes: Claude Fable 5.2, Gemini 4 Carbon and Argon, GPT-6.1 Terra, GPT Image
+  2.6 Flare and Sunburst, Gemini Omni 1.2 Flash, Qwen4 Max preview, Kimi K3.1 Pro, Muse Ember
+  and Jev 1.14. Retired: Claude Fable 5.1, Mistral Medium 3.5 and Large 3, GLM-5.2, Qwen3.8 Max,
+  Kimi K2.7 Code and K2.6.
+- Google's API docs moved to `aistudio.google.com` (was `ai.google.dev`); the pages' Markdoc tags
+  are stripped, a heading stuck to the end of an image line is read as a heading, and one stray
+  code fence no longer hides the rest of a page.
+- Alibaba's Model Studio pages are read as HTML, since the markdown copies are gone.
+- OpenAI withdrew its deep research guide, so it is no longer fetched (`platform.openai.com`
+  leaves the host list); the research notes keep that advice as hand-written.
+- Higgsfield's Sora 2 guide now redirects to a product page; its notes follow Higgsfield's own
+  prompt-writing help article.
+- Claude Code's best-practices page was rewritten: the notes drop plan-first and emphasis advice
+  the page no longer gives and add what it now says to stop doing.
+- Mistral Large 4 takes `low`, `medium` and `high` effort only; Jev's choice questions pair with
+  a companion `noul` question in place of an "other" option; Grok Bot's lasting rules go in a chat message.
+
 ## 3.4.1
 
 - The scoreboard snapshot's address is fixed in the code; the `PROMPTGREMLIN_SCOREBOARD_URL`

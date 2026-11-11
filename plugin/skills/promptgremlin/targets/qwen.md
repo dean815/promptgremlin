@@ -1,7 +1,7 @@
 ---
 family: qwen
 kind: family
-last_verified: 2026-10-12
+last_verified: 2026-11-11
 sources: [prompt-guide, open-weights-card]
 ---
 ## All models
@@ -18,16 +18,17 @@ sources: [prompt-guide, open-weights-card]
 - For agent tasks give the model room: the card suggests up to 262,144 reasoning tokens and 131,072 for the final answer where the framework takes separate limits. (open-weights-card#Best Practices)
 
 ## Effort
-- Documented for Qwen3.8 open weights (card): `reasoning_effort` `xhigh` (default), `medium`, `low`. Map low to `low`, medium to `medium`, high and max to `xhigh`; there is no `high` value. Thinking is on by default; on Qwen Cloud switch it off with `"enable_thinking": false` (self-hosted servers nest it in `chat_template_kwargs`). (open-weights-card#API Usage)
+- Documented for Qwen3.8 open weights (card): `reasoning_effort` `xhigh` (default), `medium`, `low`. Map high and max to `xhigh`; there is no `high` value. Thinking is on by default; on Qwen Cloud switch it off with `"enable_thinking": false` (self-hosted servers nest it in `chat_template_kwargs`). (open-weights-card#API Usage)
 - Do not default agents to `low`; retries can lengthen multi-turn runs. (open-weights-card#API Usage)
-- Whether the API models accept these values is (unverified); read only from the card. Chat app: none documented. (hand-written)
+- Whether the API models accept these values is (unverified); read only from the card, which predates Qwen4. Chat app: none documented. (hand-written)
 
-## qwen3-8-max
-- Flagship API model; no model page was fetched. Treat the Qwen3.8 card as its closest reference, with thinking on by default. (open-weights-card#API Usage; hand-written)
-- Spend effort on a full prompt: framework, examples, explicit format. (prompt-guide#Use prompt frameworks)
+## qwen4-max-preview
+- Flagship API model, a preview listed for complex reasoning, coding, and visual understanding; Alibaba publishes no prompting page or card for it yet. (lineup page; hand-written)
+- Spend effort on a full prompt: framework, examples, explicit format; attach images where they carry the task. (prompt-guide#Use prompt frameworks; hand-written)
+- Its thinking default, effort values, and sampling settings are (unverified); the Qwen3.8 card is a different generation, so do not assume `xhigh` or the card's sampling values apply. (hand-written)
 
 ## qwen3-7-plus
-- Previous generation; the Qwen3.8 card does not cover it, so its thinking and effort controls are (unverified). Prefer the generic guide's techniques and do not assume `xhigh`. (hand-written)
+- Older-generation balanced tier (performance, speed, cost), also listed for visual understanding; the Qwen3.8 card does not cover it, so its thinking and effort controls are (unverified). Prefer the generic guide's techniques and do not assume `xhigh`. (lineup page; hand-written)
 
 ## qwen3-8-flash
 - Speed tier; no model page fetched. Keep the prompt short, single-purpose, and explicit about output format, and keep effort at `medium` or `low` for simple work, `xhigh` only for hard reasoning. (hand-written: inferred from Flash positioning)

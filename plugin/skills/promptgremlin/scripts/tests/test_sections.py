@@ -134,3 +134,14 @@ def test_fetched_headings_print_only_as_short_plain_labels():
     assert details and all(len(x) <= len("bp: ") + s.LABEL_CAP for x in details), details
     assert not any(c in x for x in details for c in "<>`~"), details
     assert s.label("Tool Calls") == "Tool Calls" and s.label("*") == "*"
+
+
+def test_a_stray_fence_is_healed_by_the_next_fence_with_an_info_string():
+    text = "## A\n```\nx\n```\n```\nstray\n```none\ncode\n```\n## B\nbody\n"
+    assert [t for _, t, _ in s.sections(text)] == ["A", "B"]
+    assert list(s.h2_blocks(text)) == ["A", "B"]
+
+
+def test_a_longer_fence_holds_shorter_fences_inside_it():
+    text = "## A\n````md\n```python\n## not a heading\n```\n````\n## B\n"
+    assert [t for _, t, _ in s.sections(text)] == ["A", "B"]

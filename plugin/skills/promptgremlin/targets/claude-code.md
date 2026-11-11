@@ -1,17 +1,18 @@
 ---
 family: claude-code
 kind: tool
-last_verified: 2026-10-06
+last_verified: 2026-11-11
 sources: [best-practices]
 ---
 ## All models
-- Name the files, directories, or functions in scope, with `@path` references where the user has them. Say what not to touch or create; "scope the task" cuts corrections. (best-practices#Provide specific context in your prompts, #Provide rich content)
-- Point at an existing pattern to copy ("follow HotDogWidget.php") instead of describing the design; for a "why is it like this" question, name the source to read (e.g. git history). For a bug, give the symptom, the likely location, and what "fixed" looks like. (best-practices#Provide specific context in your prompts)
-- Include a check Claude can run (named tests, build, linter, screenshot diff) and tell it to iterate until it passes. Ask for evidence (test output, the command and its result), not "it works". Fix root causes; don't suppress the error. (best-practices#Give Claude a way to verify its work)
-- Verify against real behaviour, not only unit tests. For an unattended run, say the stop condition is that check passing; a `/goal` condition can enforce that across a session. (best-practices#Give Claude a way to verify its work)
-- Say whether to ask or proceed. For an unclear or large feature, tell it to interview the user with the AskUserQuestion tool, then write a spec to a file. (best-practices#Let Claude interview you)
-- For multi-file or unfamiliar-code changes, ask for a plan before edits, with edits starting after approval. Skip planning when the diff fits in one sentence: say "do it directly". (best-practices#Explore first, then plan, then code)
-- Scope any investigation ("look in src/auth/ for token refresh") or send it to a subagent, so exploration doesn't fill the context. Never write an open-ended "investigate X". (best-practices#Use subagents for investigation, #Avoid common failure patterns)
-- Ask for review in a fresh subagent against named criteria, and tell it to flag only gaps that affect correctness or the stated requirements, so it doesn't push over-engineering. (best-practices#Add an adversarial review step)
-- If the prompt will live in CLAUDE.md, keep each line one Claude can't infer from the code; add IMPORTANT to a single line it keeps skipping, not many. If it must happen every time, say to make it a hook. (best-practices#Write an effective CLAUDE.md, #Set up hooks)
-- If the user already corrected Claude twice on one problem, the prompt should be a fresh restart that folds in what was learned (the user runs `/clear` first). Say if it should commit and open a PR when done. (best-practices#Course-correct early and often)
+- Name the file, the symptom, and what "fixed" looks like; add `@path` references, pasted screenshots, or piped command output the user already has. State any preference between reasonable approaches and what not to add ("no new libraries"). (best-practices#Write a specific prompt)
+- Point at an existing pattern to copy ("follow HotDogWidget.php") instead of describing the design. Spell out only what Claude can't find by reading the repo: team decisions, the env var a test needs. (best-practices#Write a specific prompt, #Tell Claude what it can't see)
+- Claude builds the smallest thing that satisfies a request. For the fuller version say "be ambitious" and list what that covers (empty and error states, edge cases). (best-practices#Write a specific prompt)
+- Leave out "think hard", "be thorough", "keep going until done", and IMPORTANT or ALL CAPS: they don't raise effort and lead to over-work or over-applied rules. Depth comes from `/effort` (medium by default here) or `ultrathink` in one message. (best-practices#What you can stop doing, #Change the model and effort)
+- Include a pass/fail check Claude can run (named tests, build, linter, fixture diff, screenshot against the mockup) and tell it to keep going until it passes. Ask for evidence (the command and its output), not "all tests pass". (best-practices#Give Claude a check to run)
+- For an unattended run, state what done looks like, the check, what it may touch, and where the result goes; a `/goal` condition or Stop hook enforces the check. (best-practices#Let Claude run without you, #Give Claude a check to run)
+- For an unclear feature, tell it to interview the user until it could write the spec, then write it to a file; the build starts from that spec in a fresh session. (best-practices#Brainstorm with Claude first)
+- Ask for review in a fresh subagent against the spec, reporting only gaps that affect correctness and skipping style, so it doesn't push over-engineering. (best-practices#Review against your spec)
+- Ask for subagents only for parallel work, noisy output, or independent review, with short summaries back; delegating doesn't improve the answer. (best-practices#Know what subagents cost)
+- If the prompt will live in CLAUDE.md, keep only lines Claude can't work out from the code. A line it keeps skipping needs a shorter file, not emphasis; if it must happen every time, say to make it a hook or deny rule. (best-practices#Keep CLAUDE.md short, #Enforce the rules that can't have exceptions)
+- If the user already corrected Claude twice on one problem, the prompt should be a fresh restart that folds in what was learned (the user runs `/clear` first). (best-practices#Steer the session)

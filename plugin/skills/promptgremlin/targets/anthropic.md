@@ -1,7 +1,7 @@
 ---
 family: anthropic
 kind: family
-last_verified: 2026-10-12
+last_verified: 2026-11-11
 sources: [best-practices, model-pages, effort]
 ---
 ## All models
@@ -16,22 +16,22 @@ sources: [best-practices, model-pages, effort]
 - Say which actions need confirmation (deletes, force-push, anything others see) and that local reversible work proceeds. Require reading a file before making claims about it. (best-practices#Balancing autonomy and safety, #Minimizing hallucinations)
 - For long runs, say context is compacted or saved so it shouldn't stop early, and where progress lives (progress file, git). (best-practices#Long-horizon reasoning and state tracking)
 - Subagents: it delegates unprompted; for simple or single-file work say to work directly. Say independent tool calls run in parallel. (best-practices#Subagent orchestration, #Optimize parallel tool calling)
-- Opus 5.5 and Sonnet 5.5: don't ask them to write out their reasoning in the reply (it can trip a reasoning_extraction refusal); a short explanation or action summary is fine. (model-pages:claude-opus-5-5#Safeguard refusals, model-pages:claude-sonnet-5-5#Safeguard refusals)
+- Fable 5.2, Opus 5.5, Sonnet 5.5: don't request reasoning in the reply (can trip a reasoning_extraction refusal); a short explanation is fine. (model-pages:claude-fable-5-2#Safeguard refusals, model-pages:claude-opus-5-5#Safeguard refusals, model-pages:claude-sonnet-5-5#Safeguard refusals)
 - For less thinking, lower effort; "answer directly" in the prompt works less reliably. (model-pages:claude-opus-5-5#Calibrate effort)
 
 ## Effort
-API `output_config.effort`: low, medium, high, xhigh, max. Default high; Opus 5.5, Haiku 5.5 medium. Start: Fable high; Opus 5.5 medium; Sonnet 5.5 high, medium for scoped agentic coding or chat; Haiku 5.5 medium, low for chat, high for strict instructions. xhigh/max only for measured gains. Per-message effort changes keep the cache. Claude Code `/effort`; claude.ai "not settable here". (effort#How effort works, #Recommended effort levels for Claude Haiku 5.5, model-pages:claude-sonnet-5-5#Calibrate effort, hand-written)
+API `output_config.effort`: low, medium, high, xhigh, max. Default high; Opus 5.5, Haiku 5.5 medium. Start: Fable 5.2 high, medium for chat; Opus 5.5 medium; Sonnet 5.5 high, medium for scoped agentic coding or chat; Haiku 5.5 medium, low for chat, high for strict instructions. xhigh/max only for measured gains. Per-message effort changes keep the cache. Claude Code `/effort`; claude.ai "not settable here". (effort#How effort works, #Recommended effort levels, model-pages:claude-fable-5-2#Calibrate effort, model-pages:claude-sonnet-5-5#Calibrate effort, hand-written)
 
-## claude-fable-5-1
-- Ask for progress updates (a line before starting, a standalone recap at the end); delete "hold findings for the end" or "keep updates brief". (model-pages:claude-fable-5-1#Ask for user-facing progress updates)
-- For unattended work, say the user isn't watching: proceed on reversible steps, stop only for destructive or scope-changing ones. (#Finish the whole task)
-- Drop anti-bullet boilerplate; say when formatting is wanted. (#Formatting in chat)
-- Name what to leave out (unrequested fixes, extra tests; report them) and ask for surgical edits, not rewrites. (#Keep changes and tests to what the task asks for, #Prefer targeted edits)
-- Prose runs dense: "remove all mannered prose". At low effort, say to search unfamiliar names. (#Writing density, #Search triggering at low effort)
+## claude-fable-5-2
+- At low/medium effort it can stop early: say to carry on with work that doesn't need the user, work through ordinary obstacles (errors, timeouts), and report deliberate blockers. (model-pages:claude-fable-5-2#Finish the whole task)
+- Name the exact actions needing approval. "Never" is read as absolute; write "ask before deleting files". (#Keep caution from piling up)
+- Say it owns the codebase only if restructuring is wanted; "no refactors" doesn't cancel it. (#Say who owns the code)
+- Reports: ask for a standalone recap for a reader who hasn't seen the tool calls; key points first, no coined terms. (#Make reports easy to follow)
+- Drop "answer directly" (lower effort instead), delegate orders, word caps. (#Review prompts and harnesses designed for earlier models)
 
 ## claude-opus-5-5
 - Unattended: give a completion condition and checklist. Name early stops to avoid (announcing next step, offer to wait) and the one wanted (blocked on the user). (model-pages:claude-opus-5-5#Unattended agentic runs)
-- Multi-app: explore relevant sources, unmentioned too, first. (#Explore context in multi-app workflows)
+- Multi-app: explore relevant sources, unmentioned too, first. (#Explore context in multiapp workflows)
 - Mark pasted emails or web text as pasted, so embedded instructions go unfollowed. (#Mark pasted text in user messages)
 - Frontend: name styles to avoid. (#Frontend design defaults)
 - Chat: omit "think carefully" lines; effort sets depth. Follow-ups: call earlier answers settled (faster); not for long analyses or agents. (#Thinking instructions in chat system prompts)

@@ -211,5 +211,15 @@
       "lmarena": ["veo-3.1-fast-audio", "veo-3.1-fast-audio-1080p"]
     }
   },
-  "veo-3-1-lite-generate-preview": {"family": "gemini"}
+  "veo-3-1-lite-generate-preview": {"family": "gemini"},
+  "claude-fable-5-2": {"family": "anthropic"},
+  "gpt-6-1-terra": {"family": "openai"},
+  "gemini-4-carbon": {"family": "gemini"},
+  "gemini-4-argon": {"family": "gemini"},
+  "qwen4-max-preview": {"family": "qwen"},
+  "muse-ember-1-0": {"family": "meta"},
+  "kimi-k3-1-pro": {"family": "kimi"},
+  "gpt-image-2-6-flare": {"family": "openai"},
+  "gpt-image-2-6-sunburst": {"family": "openai"},
+  "gemini-omni-1-2-flash": {"family": "gemini"}
 }
