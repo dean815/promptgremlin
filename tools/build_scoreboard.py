@@ -75,10 +75,10 @@ def _get_bytes(url):
 def _json_source(url, fixture, fixtures):
     if fixtures:
         return json.loads((Path(fixtures) / fixture).read_text(encoding="utf-8"))
-    got = fetch.fetch(url, "json", force=True)
-    if got.state != "live":
-        raise OSError(got.error or got.state)
-    return json.loads(got.text)
+    # CI-only catalogs (models.dev, OpenRouter) are not on the plugin's documented host list,
+    # so read them directly like the Arena, Epoch and LiveBench sources rather than through
+    # pglib.fetch, which refuses any host the installed skill doesn't list.
+    return json.loads(_get_bytes(url))
 
 
 def arena_rows(config, fixtures=None, get=_get_bytes):

@@ -31,7 +31,7 @@ NEXT_GEN = {
     "gemini": "gemini-4-flash",
     "xai": "grok-5",
     "zhipu": "| GLM-6",
-    "qwen": "qwen4-max",
+    "qwen": "qwen5-max",
     "deepseek": "deepseek-v5-flash",
     "mistral": "Mistral Medium 4",
     "meta": "muse-spark-2.0",
