@@ -217,6 +217,7 @@
   "gemini-4-carbon": {"family": "gemini"},
   "gemini-4-argon": {"family": "gemini"},
   "qwen4-max-preview": {"family": "qwen"},
+  "qwen4-max": {"family": "qwen"},
   "muse-ember-1-0": {"family": "meta"},
   "kimi-k3-1-pro": {"family": "kimi"},
   "gpt-image-2-6-flare": {"family": "openai"},

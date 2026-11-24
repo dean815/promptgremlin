@@ -22,8 +22,8 @@ sources: [prompt-guide, open-weights-card]
 - Do not default agents to `low`; retries can lengthen multi-turn runs. (open-weights-card#API Usage)
 - Whether the API models accept these values is (unverified); read only from the card, which predates Qwen4. Chat app: none documented. (hand-written)
 
-## qwen4-max-preview
-- Flagship API model, a preview listed for complex reasoning, coding, and visual understanding; Alibaba publishes no prompting page or card for it yet. (lineup page; hand-written)
+## qwen4-max
+- Flagship API model, the general release of the earlier qwen4-max-preview, listed for complex reasoning, coding, and visual understanding; Alibaba publishes no prompting page or card for it yet. (lineup page; hand-written)
 - Spend effort on a full prompt: framework, examples, explicit format; attach images where they carry the task. (prompt-guide#Use prompt frameworks; hand-written)
 - Its thinking default, effort values, and sampling settings are (unverified); the Qwen3.8 card is a different generation, so do not assume `xhigh` or the card's sampling values apply. (hand-written)
 

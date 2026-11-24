@@ -1,5 +1,16 @@
 # Changelog
 
+## 3.4.3
+
+The daily scoreboard build is green again.
+- Qwen's flagship is now `qwen4-max`, the general release of the `qwen4-max-preview` the notes
+  named. The preview left the Arena, so the build's flagship check failed every day from
+  2026-11-12.
+- The build reads models.dev and OpenRouter again. Since 3.4.0 it fetched them through the
+  plugin's documented-hosts guard, which doesn't list those CI-only hosts, so both were skipped
+  and the last snapshot's prices and efforts were carried forward. The plugin's own host list
+  is unchanged.
+
 ## 3.4.2
 
 Notes refresh: 30 targets re-read against the vendors' pages of 2026-11-11.
