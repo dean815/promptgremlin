@@ -1,15 +1,15 @@
 {
  "version": 1,
- "built_at": "2026-11-24T16:21:29Z",
+ "built_at": "2026-11-26T15:44:55Z",
  "sources": {
   "lmarena": {
    "licence": "CC BY 4.0",
    "published": {"text": "2026-11-22", "webdev": "2026-11-23", "agent": "2026-11-22", "search": "2026-11-19", "document": "2026-11-09", "text_to_image": "2026-11-20", "image_edit": "2026-11-17", "text_to_video": "2026-11-09", "image_to_video": "2026-11-09"}
   },
-  "epoch": {"licence": "CC BY 4.0", "zip_built": "2026-11-24"},
+  "epoch": {"licence": "CC BY 4.0", "zip_built": "2026-11-26"},
   "models.dev": {"licence": "MIT"},
   "litellm": {"licence": "MIT"},
-  "openrouter": {"fetched": "2026-11-24"},
+  "openrouter": {"fetched": "2026-11-26"},
   "livebench": {"release": "20261106", "base": "https://livebench.ai/data/"}
  },
  "boards": {
@@ -1664,7 +1664,7 @@
     "lmarena:agent": [{"effort": "max", "score": 0.0068, "lo": 0.002, "hi": 0.0116}],
     "epoch:eci": {"score": 157.01, "lo": 155.05, "hi": 159.2}
    },
-   "price": {"in": 0.15, "out": 0.6, "from": "models.dev"},
+   "price": {"in": 0.15, "out": 0.6, "from": "majority"},
    "efforts": {
     "levels": [
      "low",
@@ -2567,7 +2567,7 @@
   },
   "qwen4-max": {
    "family": "qwen",
-   "name": "qwen4-max",
+   "name": "Qwen4 Max",
    "metrics": {
     "lmarena:webdev": [{"effort": "xhigh", "elo": 1752, "lo": 1737, "hi": 1768, "votes": 1794}],
     "lmarena:webdev/image_to_webdev": [{"effort": "xhigh", "elo": 1675, "lo": 1659, "hi": 1691, "votes": 1488}],
@@ -2575,7 +2575,14 @@
     "lmarena:webdev/webdev-react": [{"effort": "xhigh", "elo": 1786, "lo": 1766, "hi": 1807, "votes": 1025}],
     "lmarena:agent": [{"effort": "xhigh", "score": 0.073, "lo": 0.0595, "hi": 0.0865}]
    },
-   "price": {"in": 1.5, "out": 4.5, "from": "majority"}
+   "price": {"in": 1.5, "out": 4.5, "from": "majority"},
+   "efforts": {
+    "levels": [
+     "low",
+     "high",
+     "xhigh"
+    ]
+   }
   },
   "muse-ember-1-0": {
    "family": "meta",
