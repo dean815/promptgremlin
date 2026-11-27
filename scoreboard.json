@@ -1,15 +1,15 @@
 {
  "version": 1,
- "built_at": "2026-11-26T15:44:55Z",
+ "built_at": "2026-11-27T15:33:52Z",
  "sources": {
   "lmarena": {
    "licence": "CC BY 4.0",
    "published": {"text": "2026-11-22", "webdev": "2026-11-23", "agent": "2026-11-22", "search": "2026-11-19", "document": "2026-11-09", "text_to_image": "2026-11-20", "image_edit": "2026-11-17", "text_to_video": "2026-11-09", "image_to_video": "2026-11-09"}
   },
-  "epoch": {"licence": "CC BY 4.0", "zip_built": "2026-11-26"},
+  "epoch": {"licence": "CC BY 4.0", "zip_built": "2026-11-27"},
   "models.dev": {"licence": "MIT"},
   "litellm": {"licence": "MIT"},
-  "openrouter": {"fetched": "2026-11-26"},
+  "openrouter": {"fetched": "2026-11-27"},
   "livebench": {"release": "20261106", "base": "https://livebench.ai/data/"}
  },
  "boards": {
